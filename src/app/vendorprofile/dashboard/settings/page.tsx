@@ -5,6 +5,8 @@ import UserNav from "@/components/nav/vendorNav/nav";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import firebase from "@/firebase/firebase";
+import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 import {
 	collection,
 	addDoc,
@@ -82,20 +84,20 @@ export default function Register() {
 	const selectCountry = watch("countrySelect");
 	const selectState = watch("stateSelect");
 
-	const UserEmail =
-		(document.querySelector("#email") as HTMLInputElement)?.value || "";
-	const UserPassword =
-		(document.querySelector("#password") as HTMLInputElement)?.value || "";
-	const UserName =
-		(document.querySelector("#name") as HTMLInputElement)?.value || "";
+	const UserEmail =typeof document !== 'undefined' ?
+		(document.querySelector("#email") as HTMLInputElement)?.value || "": "";
+	const UserPassword =typeof document !== 'undefined' ?
+		(document.querySelector("#password") as HTMLInputElement)?.value || "":"";
+	const UserName =typeof document !== 'undefined' ?
+		(document.querySelector("#name") as HTMLInputElement)?.value || "":"";
 
-	const countryValue =
+	const countryValue =typeof document !== 'undefined' ?
 		(document.querySelector('[name="countrySelect"]') as HTMLInputElement)
-			?.value || "";
+			?.value || "":"";
 
-	const stateValue =
+	const stateValue =typeof document !== 'undefined' ?
 		(document.querySelector('[name="stateSelect"]') as HTMLInputElement)
-			?.value || "";
+			?.value || "":"";
 
 	if (isSubmitSuccessful) {
 		reset();
@@ -236,6 +238,7 @@ export default function Register() {
 	const categoryFieldState = getFieldState("selectCategory");
 
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.mainBody}>
 			<UserNav />
 			<div className={styles.formContainer}>
@@ -367,5 +370,6 @@ export default function Register() {
 				</form>
 			</div>
 		</div>
+		</Suspense>
 	);
 }

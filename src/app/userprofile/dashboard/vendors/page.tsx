@@ -5,12 +5,15 @@ import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import FilterVendorsCategory from "@/components/filters/generalFilters/filterVendorsCategory";
 import UserNav from "@/components/nav/userNav/nav";
+import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 
 export default function Page({ params }: { params: { slug: string } }) {
 	const searchParams = useSearchParams();
 	const src = searchParams.get("src");
 	const name = searchParams.get("name");
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.Main}>
 			<nav className={styles.navHolder}>
 				<UserNav />
@@ -35,5 +38,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 				</div>
 			</div>
 		</div>
+		</Suspense>
 	);
 }

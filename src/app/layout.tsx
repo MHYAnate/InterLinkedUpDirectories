@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import styles from "./styles.module.css";
-import Nav from "@/components/nav/mainNav/nav";
+import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 
 
 
@@ -28,7 +29,9 @@ export default function Layout(props: {
     <html>
       <body>
           <div className={styles.children}>
+          <Suspense fallback={<Loading/>}>
             {props.children}
+            </Suspense>
           </div>
       </body>
     </html>

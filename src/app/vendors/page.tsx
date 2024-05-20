@@ -2,6 +2,8 @@
 import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 import Image from "next/image";
 import FilterVendorsCategory from "@/components/filters/generalFilters/filterVendorsCategory";
 import Nav from "@/components/nav/mainNav/nav";
@@ -11,6 +13,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 	const src = searchParams.get("src");
 	const name = searchParams.get("name");
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.Main}>
 			<nav className={styles.navHolder}>
 				<Nav />
@@ -35,5 +38,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 				</div>
 			</div>
 		</div>
+		</Suspense>
 	);
 }

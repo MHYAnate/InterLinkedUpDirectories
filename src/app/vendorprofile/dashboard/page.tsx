@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 import VendorNav from "@/components/nav/vendorNav/nav";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -175,7 +176,7 @@ useEffect(()=>{
 	
 
 	return (
-		
+		<Suspense fallback={<Loading/>}>
 		<main  className={styles.mainBodyCover}>
 			<VendorNav/>
 			<div className={styles.mainBody}>
@@ -331,5 +332,6 @@ useEffect(()=>{
 			</div>
 			
 		</main>
+		</Suspense>
 	);
 }

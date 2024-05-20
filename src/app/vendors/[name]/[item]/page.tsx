@@ -2,6 +2,8 @@
 import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 import Image from "next/image";
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -9,6 +11,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 	const src = searchParams.get("src");
 	const name = searchParams.get("name");
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.pageBodyCover}>
 			<div className={styles.idBody}>
 				<div className={styles.idName}>{name} Vendors</div>
@@ -26,5 +29,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 			<div className={styles.bodyCover}>
       </div>
 		</div>
+		</Suspense>
 	);
 }

@@ -17,6 +17,8 @@ import { Services } from "@/database/data";
 import { StateData } from "@/database/stateData";
 import Nav from "@/components/nav/mainNav/nav";
 import Loader from "@/components/load/load";
+import { Suspense } from 'react'
+import Loading from "../register/logo";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -89,20 +91,16 @@ export default function Register() {
 	const selectCountry = watch("countrySelect");
 	const selectState = watch("stateSelect");
 
-	const UserEmail =
-		(document.querySelector("#email") as HTMLInputElement)?.value || "";
-	const UserPassword =
-		(document.querySelector("#password") as HTMLInputElement)?.value || "";
-	const UserName =
-		(document.querySelector("#name") as HTMLInputElement)?.value || "";
-
-	const countryValue =
+	const UserEmail =typeof document !== 'undefined' ?
+		(document.querySelector("#email") as HTMLInputElement)?.value || "":"";
+	
+	const countryValue =typeof document !== 'undefined' ?
 		(document.querySelector('[name="countrySelect"]') as HTMLInputElement)
-			?.value || "";
+			?.value || "":"";
 
-	const stateValue =
+	const stateValue =typeof document !== 'undefined' ?
 		(document.querySelector('[name="stateSelect"]') as HTMLInputElement)
-			?.value || "";
+			?.value || "":"";
 
 	if (isSubmitSuccessful) {
 		reset();
@@ -308,6 +306,7 @@ export default function Register() {
 	}
 
 	return (
+		<Suspense fallback={<Loading/>}>
 		<>
 			{loader ? (
 				<Loader />
@@ -862,5 +861,6 @@ export default function Register() {
 				</div>
 			)}
 		</>
+		</Suspense>
 	);
 }

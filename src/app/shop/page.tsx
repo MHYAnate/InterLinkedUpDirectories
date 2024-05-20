@@ -19,6 +19,8 @@ import {
 import firebase from "@/firebase/firebase";
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
+	import { Suspense } from 'react'
+import Loading from "../register/logo";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -281,6 +283,7 @@ export default function FilterVendors() {
 	}
 
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.filterBodyCover}>
 			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 				<div className={styles.filterAndSearch}>Filter and Search </div>
@@ -339,5 +342,6 @@ export default function FilterVendors() {
 				
 			</div>
 		</div>
+		</Suspense>
 	);
 }

@@ -26,6 +26,8 @@ import { MarketStatus } from "@/database/marketStatus";
 import { MarketCondition } from "@/database/marketCondition";
 import FilterItems from "@/components/filters/userFilters/filterItems";
 import FilterUserPostItems from "@/components/filters/filterUserPostItems/filterUserItems";
+import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -336,6 +338,7 @@ export default function Market() {
 	}
 
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.Main}>
 			<VendorNav />
 			<div className={styles.pageBodyCover}>
@@ -491,5 +494,6 @@ export default function Market() {
 				</div>
 			</div>
 		</div>
+		</Suspense>
 	);
 }

@@ -12,20 +12,10 @@ import {
 	sendEmailVerification,
 	sendPasswordResetEmail,
 } from "firebase/auth";
-import {
-	collection,
-	CollectionReference,
-	getFirestore,
-	onSnapshot,
-	query,
-	where,
-	setDoc,
-	doc,
-	addDoc,
-} from "firebase/firestore";
-import { ref, uploadBytes } from "firebase/storage";
+
 import { Services } from "@/database/data";
-import { StateData } from "@/database/stateData";
+import { Suspense } from 'react'
+import Loading from "../register/logo";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -113,7 +103,9 @@ export default function Register() {
 	};
 
 	return (
+		<Suspense fallback={<Loading/>}>
 		<>
+		
 			{loader ? (
 				<Loader />
 			) : (
@@ -293,6 +285,8 @@ export default function Register() {
 					</div>
 				</div>
 			)}
-		</>
+			</>
+			</Suspense>
 	);
+		
 }

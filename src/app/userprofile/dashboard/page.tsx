@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { Suspense } from 'react'
+import Loading from "@/app/register/logo";
 import UserNav from "@/components/nav/userNav/nav";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -173,6 +174,7 @@ export default function Profile() {
 	
 
 	return (
+		<Suspense fallback={<Loading/>}>
 		<main className={styles.mainBodyCover}>
 			<UserNav/>
 			<div className={styles.mainBody}>
@@ -320,5 +322,6 @@ export default function Profile() {
 			</div>
 			</div>
 		</main>
+		</ Suspense>
 	);
 }

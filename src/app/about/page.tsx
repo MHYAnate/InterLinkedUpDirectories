@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Services } from "@/database/vendorsData";
 import styles from "./styles.module.css";
-import Logo from "./logo";
 import Nav from "@/components/nav/mainNav/nav";
+import { Suspense } from 'react'
+import Loading from "../register/logo";
 
 export default function About() {
 	return (
+		<Suspense fallback={<Loading/>}>
 		<div className={styles.Main}>
 			<nav className={styles.navHolder}><Nav/></nav>
 		<main className={styles.aboutUsCover}>
@@ -312,5 +312,6 @@ export default function About() {
 			</div>
 		</main>
 		</div>
+		</Suspense>
 	);
 }
