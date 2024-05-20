@@ -15,7 +15,7 @@ import {
 } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
-import fireBaseApi from "@/firebase/fireBaseApi"; 
+
 import styles from "./styles.module.css";
 import { vendored } from "next/dist/server/future/route-modules/app-page/module.compiled";
 
@@ -46,7 +46,6 @@ type FormValue = {
 
 const { auth, storage, database, Delete } = Firebase;
 
-const {DeleteStock} = fireBaseApi;
 
 export default function FilterUserPostItems() {
 	const {
