@@ -1,0 +1,332 @@
+.Main{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+}
+.formContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98vw;
+  height: max-content;
+  padding-top: 10px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.942), rgba(202, 220, 227, 0.297));
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: max-content;
+}
+
+.innerFormCover{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 68vw;
+  height: max-content;
+}
+
+.formCoverLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  height: 85vh;
+}
+
+.formCoverRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  height: 55vh;
+ }
+
+.selectCover{
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+.selectTitle{
+  width: 24vw;
+  height: 33px;
+  font-size: 11px;
+  text-align: left;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(136, 135, 135);
+  margin: 0;
+}
+
+.select{
+  border: none;
+  width: 24vw;
+  height: 25px;
+}
+
+.option{
+  width: 24vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: flex-start;
+  align-items: center;
+  height: 24px;
+}
+
+.textarea{
+  border: none;
+  width: 24vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: max-content;
+}
+
+.inputCover{
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+
+.inputImageCover{
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+
+.input{
+  border: none;
+  width: 24vw;
+  height: 25px;
+}
+
+.passcodeContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+
+.input1{
+  border: none;
+  width: 37vw;
+  height: 25px;
+}
+
+.svg{
+  width: 25px;
+  height: 25px;
+}
+.passWordVisibilityBtn{
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8vw;
+  height: 25px;
+  background-color: white;
+}
+.RegiterButton{
+  border-radius: 5px;
+  width: 24vw;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+}
+
+@media screen and (max-width: 770px) {
+  .formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 98vw;
+    height: max-content;
+    padding-top: 5px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.942), rgba(202, 220, 227, 0.297));
+  }
+  
+  .titleCover{
+    width: 98vw;
+    height: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .categoryCover{
+    position: relative;
+    width: 98vw;
+    height: 300px;
+  }
+  
+  .categoryImgCover{
+    width: 98vw;
+    height: 300px;
+  }
+  
+  .categoryImg{
+    width: 98vw;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .title{
+    width: 98vw;
+    height: 300px;
+  }
+  .flextitle{
+    width: 98vw;
+    height: 300px;
+  }
+
+  .innerFormCover{
+    width: 98vw;
+    height: max-content;
+    padding-top: 50px;
+  }
+  .selectCover{
+    width:30vw;
+  }
+  .selectTitle{
+    width:30vw;
+  }
+  
+  .select{
+    width:30vw;
+  }
+  
+  .option{
+    width:30vw;
+  }
+  
+  .textarea{
+    width:30vw;
+  }
+  
+  .inputCover{
+    width:30vw;
+  }
+  
+  .inputImageCover{
+    width:30vw;
+  }
+  
+  .input{
+    width:30vw;
+  }
+  
+  .passcodeContainer{
+    width:30vw;
+  }
+  
+  .input1{
+    width: 45vw;
+  }
+  
+  .svg{
+    width: 25px;
+  }
+ 
+  .RegiterButton{ 
+    width: 30vw; 
+  }
+  
+}
+
+@media screen and (max-width: 520px) {
+
+  .flextitle{
+    font-size: 2em;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    height: max-content;
+  }
+  
+  .innerFormCover{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    column-gap: 0;
+    row-gap: 0;
+    align-items: center;
+    width: 98vw;
+    height: max-content;
+  }
+  
+  .formCoverLeft{
+    height: max-content;
+    row-gap: 30px;
+  }
+  
+  .formCoverRight{
+    height: max-content;
+    row-gap: 30px;
+   }
+
+   .selectCover{
+    width:70vw;
+  }
+  .selectTitle{
+    width:70vw;
+  }
+  
+  .select{
+    width:70vw;
+  }
+  
+  .option{
+    width:70vw;
+  }
+  
+  .textarea{
+    width:70vw;
+  }
+  
+  .inputCover{
+    width:70vw;
+  }
+  
+  .inputImageCover{
+    width:70vw;
+  }
+  
+  .input{
+    width:70vw;
+  }
+  
+  .passcodeContainer{
+    width:70vw;
+  }
+  
+  .input1{
+    width: 70vw;
+  }
+  
+  .svg{
+    width: 25px;
+  }
+ 
+  .RegiterButton{ 
+    width: 70vw; 
+  }
+}
+
+
+

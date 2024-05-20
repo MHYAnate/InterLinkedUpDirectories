@@ -1,0 +1,521 @@
+.mainBodyCover{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98vw;
+  height: max-content;
+}
+.mainBody{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98vw;
+  height: max-content;
+ margin-top: 10px;
+}
+.profilePictureFlexControl{
+  width: 30vw;
+  height: 540px;
+  background-color: white;
+}
+
+.profilePictureServiceCover{
+  position: relative;
+  width: 30vw;
+  height: 540px;
+}
+
+.serviceImgCover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 540px;
+}
+
+
+.serviceImg{
+  width: 30vw;
+  height: 540px;
+  opacity: 0.5;
+}
+
+.profilePictureBodyCover{
+  position: absolute;
+  top: 0.001px;
+  width: 30vw;
+  height: 540px;
+}
+
+.profilePictureBodyFlexControl{
+  width: 30vw;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profilePictureCover{
+  width: 30vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profileName{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  height: 50px;
+  font-size: 1.3em;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  margin-bottom: 30px;
+}
+
+.profileImgCover{
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileImg{
+  width: 250px;
+  height: 250px;
+  border-radius: 750px;
+  margin-bottom: 30px;
+}
+
+.profileBodyFlexControl{
+  width: 68vw;
+  height: 540px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileBodyCategoryCover{
+  position: relative;
+  width: 68vw;
+  height: 540px;
+}
+
+
+.profileBodyCover{
+  position: absolute;
+  top: 0.001px;
+  width: 68vw;
+  height: 540px;
+}
+
+.profileBodyFlexControl{
+  width: 60vw;
+  height: 540px;
+  display: flex;
+}
+
+.profileInfoContainer{
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  min-height: 250px;
+  max-height: max-content;
+  align-items: center;
+  justify-content: space-between;
+  background-color: none;
+  align-items: first baseline;
+  justify-content: space-evenly;
+}
+.infoHeaderContainer{
+  width: inherit;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.infoContainer{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: inherit;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+}
+.title{
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: start;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  width: 100px;
+  padding-bottom: 3px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.titleHeaderInfo{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+  height: max-content;
+  color: white;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+
+}
+
+.titleInfo{
+  font-weight: 300;
+  font-size: 1rem;
+  height: max-content;
+  width: 29vw;
+  padding-left: 50px;
+}
+.titleInfoE{
+  font-weight: 300;
+  font-size: 1rem;
+  height: max-content;
+  width: 29vw;
+  padding-left: 50px;
+}
+
+.flexControl{
+  width: 68vw;
+  height: 540px;
+}
+
+
+.categoryCover{
+  position: relative;
+  width: 68vw;
+  height: 540px;
+}
+
+
+.categoryImgCover{
+  display: flex;
+  justify-content: flex-end;
+  align-items: last baseline;
+  width: 68vw;
+  height: 540px;
+}
+
+
+.categoryImg{
+  width: 25vw;
+  height: 180px;
+}
+
+
+.categoryName{
+  position: absolute;
+  top: 0.001px;
+  width: 68vw;
+  height: 540px;
+}
+
+.flexCategoryName{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 68vw;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: flex-start;
+}
+
+.updateCover{
+  border-radius: 5px;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 5px;
+
+}
+
+
+@media screen and (max-width: 1250px) {
+  .idName{
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .idName{
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .idName{
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .idName{
+    font-size: 0.85em;
+  }
+  .profileImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 750px;
+    margin-bottom: 20px;
+  }
+  .profileInfoContainer{
+    width: 50vw;
+    min-height: 250px;
+  }
+
+}
+@media screen and (max-width: 820px) {
+  .idName{
+    font-size: 0.75em;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .pageBodyCover{
+    width: 97.5vw;
+    background-color: white;
+    z-index: 3;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .idBody{
+    width: 94vw;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .idName{
+    height: 50px;
+    font-size: 1.3em;
+    width: 93vw;
+  }
+
+  .idiImg{
+    width: 93vw;
+    height: 300px;
+    border-radius: 5px;
+  }
+
+  .bodyCover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94vw;
+    height: max-content;
+    border-left: none;
+    margin-top: 10px;
+  }
+  .profileImg{
+    width: 180px;
+    height: 180px;
+    border-radius: 750px;
+    margin-bottom: 30px;
+  }
+
+  .profileInfoContainer{
+    width: 60vw;
+    min-height: 250px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .mainBody{
+ 
+    flex-direction: column;
+    
+}
+
+.profilePictureFlexControl{
+  width: 98vw;
+  height: 350px;
+  background-color: white;
+}
+
+.profilePictureServiceCover{
+  position: relative;
+  width: 98vw;
+  height: 350px;
+}
+
+.serviceImgCover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 350px;
+}
+
+
+.serviceImg{
+  width: 98vw;
+  height: 350px;
+  opacity: 0.5;
+}
+
+.profilePictureBodyCover{
+  position: absolute;
+  top: 0.001px;
+  width: 98vw;
+  height: 350px;
+}
+
+.profilePictureBodyFlexControl{
+  width: 98vw;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profilePictureCover{
+  width: 98vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profileName{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  height: 50px;
+  font-size: 1.3em;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  margin-bottom: 30px;
+}
+
+.profileImgCover{
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileBodyFlexControl{
+  width: 98vw;
+  height: 540px;
+  display: flex;
+}
+.categoryImgCover{
+  display: flex;
+  justify-content: flex-end;
+  align-items: last baseline;
+  width: 88vw;
+  height: 540px;
+}
+.profileBodyCategoryCover{
+  position: relative;
+  width: 98vw;
+  height: 540px;
+}
+.flexCategoryName{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 97vw;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: flex-start;
+}
+
+
+.profileInfoContainer{
+  width: 98vw;
+  min-height: 250px;
+}
+.titleInfo{
+  font-weight: 300;
+  font-size: 1rem;
+  height: max-content;
+  width: 70vw;
+  padding-left: 50px;
+}
+.titleInfoE{
+  font-weight: 300;
+  font-size: 1rem;
+  height: max-content;
+  width: 29vw;
+  padding-left: 50px;
+}
+}
+
+@media screen and (max-width: 645px) {
+  .profileImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 750px;
+    margin-bottom: 20px;
+  }
+
+  .titleInfo{
+    font-weight: 300;
+    font-size: 1rem;
+    height: max-content;
+    width: 60vw;
+    padding-left: 50px;
+  }
+  .titleInfoE{
+    font-weight: 300;
+    font-size: 1rem;
+    height: max-content;
+    width: 60vw;
+    padding-left: 50px;
+  }
+  .titleHeaderInfo{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .idName{
+    font-size: 1em;
+  }
+  .titleInfo{
+    font-weight: 300;
+    font-size: 1rem;
+    height: max-content;
+    width: 50vw;
+    padding-left: 50px;
+  }
+  .titleInfoE{
+    font-weight: 300;
+    font-size: 0.7rem;
+    height: max-content;
+    width: 29vw;
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .bodyCover{
+    width: 97.5vw;
+    border-left: none;
+  }
+}

@@ -1,0 +1,118 @@
+.introCover{
+  width: 69vw;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.introBody{
+  width:65.7vw;
+}
+.introHeader{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: green;
+  width: max-content;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.introHeader2{
+  color: white;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 3px;
+  background-image: linear-gradient(to top,rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  width: max-content;
+}
+
+.intro{
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  
+}
+
+.introPCover{
+  text-align: center;
+  width:65.7vw;
+  max-height: max-content;
+  border-radius: 3px;
+  padding-right: 20px;
+}
+
+.introP{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.55em;
+  font-weight: 300;
+}
+
+.imgC{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: max-content;
+  border-radius: 3px;
+}
+
+.introImg{
+  width: inherit;
+  height: 100px;
+  border-radius: 3px;
+}
+.introPInH{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: green;
+}
+.introUl{
+  font-size: 1em;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  gap: 3px;
+}
+
+.introPInF{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  text-shadow: 0.5px 0.5px 1px black, 0 0 2.5px black, 0 0 2.5px black;
+  color: white;
+  font-style: italic;
+  padding-left: 5px;
+}
+
+
+
+
+@media screen and (max-width: 770px) {
+  .imgC{
+    display: none;
+  }
+  
+  .introImg{
+    display: none;
+  }
+  .introPCover{
+    width: inherit;
+  }
+  .introP{
+    font-size: 1.3em;
+  }
+  .introHeader{
+    font-size: 1.5em;
+  }
+  .introCover{
+    width: 98vw;
+     
+  }
+  
+  .introBody{
+    width:97vw;
+  }
+
+}

@@ -1,0 +1,297 @@
+.menuCover{
+  width: 24vw;
+  height: max-content;
+}
+
+.menuBody{
+  width: 24vw;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.flexControl{
+  width: 24vw;
+  height: 180px;
+  cursor: pointer;  
+  border-radius: 3px;
+}
+
+.categoryCover{
+  position: relative;
+  width: 24vw;
+ height: 180px;
+}
+
+
+.categoryImgCover{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 24vw;
+ height: 180px;
+ overflow: hidden;
+}
+
+.imgPositioner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24vw;
+  height: 180px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.categoryImg{
+  width: 17.5vw;
+  height: inherit;
+}
+.vid{
+ border-radius: 5px;
+}
+
+.categoryName{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24vw;
+ height: 180px;
+}
+
+.flexCategoryName{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 24vw;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out, text-shadow 1s ease-in-out;
+  text-align:center;
+}
+.h1{
+  color: green;
+  transition: transform 1s ease-in-out, text-shadow 1s ease-in-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.h1:hover{
+  transform: scale(0.9);
+}
+.flexCategoryName:hover{
+  transform: scale(0.9);
+  color: green;
+}
+@media screen and (max-width: 1230px) {
+  .flexCategoryName{
+    font-size: 0.8rem;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .flexCategoryName{
+    font-size: 0.6rem;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 770px) {
+
+  .menuCover{
+    width: 97vw;
+    height: 180px;
+   display: none;
+  }
+  
+  .menuBody{
+    width: 97vw;
+    height: 180px;
+    flex-direction: row;
+    column-gap: 10px;
+    overflow: auto;
+    justify-content: flex-start;
+  }
+ 
+  .flexControl{
+    width:  97vw;
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  .categoryCover{
+    width:  97vw;
+    height: 180px; 
+    border-radius: 10px;
+  }
+  
+  .categoryImgCover{
+    width:  97vw;
+    height: 180px;
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
+
+  .imgPositioner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 97vw;
+    border-radius: 10px;
+  }
+  
+  .categoryImg{
+   visibility: hidden;
+   display: none;
+  }
+
+
+  .categoryName{
+    width:  97vw;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  
+  .flexCategoryName{
+    font-size: 0.3rem;
+    width:  97vw;
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  
+}
+@media screen and (max-width: 640px) {
+  .flexCategoryName{
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .menuCover{
+    width: 98vw;
+    height: 180px;
+  
+  }
+  
+  .menuBody{
+    width: 98vw;
+    height: 180px;
+    flex-direction: row;
+  }
+ 
+  .flexControl{
+    width: 29.5vw;
+  }
+  
+  .categoryCover{
+    width: 28.5vw; 
+  }
+  
+  .categoryImgCover{
+    width: 28.5vw;
+  }
+  
+  
+  .vid{
+    width: 28.5vw;
+  }
+  .categoryImgP{
+    width: 23.5vw;
+  }
+  
+  
+  .categoryName{
+    width: 28vw;
+  }
+  
+  .flexCategoryName{
+    font-size: 1em;
+    width: 28vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .menuCover{
+    width: 90vw;
+    height: 180px;
+  }
+  
+  .menuBody{
+    width: 90vw;
+    height: 180px;
+    display: flex;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+   
+  }
+
+
+
+  
+  .flexControl{
+    width: 90vw;
+    height: 180px;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px silver, 0 0 2px silver, 0 0 3px silver;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: white;
+    
+  }
+  
+  .flexControl:hover{
+   box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 5px silver;
+   transform: scale(1.01);
+  }
+  
+  .categoryCover{
+    position: relative;
+    width: 67vw;
+    height: 180px;
+  }
+  
+  
+  .categoryImgCover{
+    width: 67vw;
+    height: 180px;
+  }
+  
+  
+  .vid{
+    width: 67vw;
+    height: 180px;
+  }
+
+  
+  .categoryName{
+    position: absolute;
+    top: 0.001px;
+    width: 67vw;
+    height: 180px;
+  }
+  
+  .flexCategoryName{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    width: 67vw;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

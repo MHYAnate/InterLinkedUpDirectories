@@ -1,0 +1,327 @@
+
+  .menuCover{
+    width: 27.5vw;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuBody{
+    width: 24vw;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  
+  .flexControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24vw;
+    height: 67px;
+    cursor: pointer;
+    border-bottom: 1px solid silver;  
+   
+  }
+  
+  
+  
+  .flexControl:hover{
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 5px 
+   silver;
+  }
+  
+  .categoryCover{
+    position: relative;
+    width: 23vw;
+   height: 56px;
+   padding-top: 3px;
+  }
+  
+  
+  .categoryImgCover{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 23vw;
+    height: 50px;
+    overflow: hidden;
+  }
+  
+  
+  .categoryImg{
+    width: 7vw;
+    height: 50px;
+    opacity: 0;
+  }
+  
+  
+  .categoryImgP{
+    width: 7vw;
+    height: 45px;
+    margin-bottom: 5px;
+    opacity: 0;
+  }
+  
+  .categoryImg:hover{
+    width: 17vw;
+    height: 130px;
+    transform: scale(1.1);
+  }
+  
+  
+  .categoryImgP:hover{
+    width: 17vw;
+    height: 84px;
+    margin-bottom: 10px;
+    transform: scale(1.1);
+  }
+  
+  
+  .categoryName{
+    position: absolute;
+    top: 0.001px;
+    width: 23vw;
+    height: 56px;
+  }
+  
+  .flexCategoryName{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 23vw;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+  }
+
+  .flexCategoryName:hover{
+    transform: scale(0.9);
+    text-shadow: 0.5px 0.5px 1px black, 0.5px 0.5px 1px black,  0.5px 0.5px 1pxblack;
+    color: green;
+  }
+  @media screen and (max-width: 1230px) {
+    .flexCategoryName{
+      font-size: 0.7rem;
+    }
+  }
+
+@media screen and (max-width: 950px) {
+  .flexCategoryName{
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 770px) {
+
+  .menuCover{
+    width: 98vw;
+    height: 170px;
+  }
+  
+  .menuBody{
+    width: 98vw;
+    height: 170px;
+    flex-direction: row;
+    column-gap: 10px;
+    overflow: auto;
+    justify-content: flex-start;
+  }
+ 
+  .flexControl{
+    width: 30vw;
+    height: 167px;
+    background-color: white;
+  }
+  
+  .categoryCover{
+    width: 29vw;
+    height: 162px; 
+    padding-top: 0;
+  }
+  
+  .categoryImgCover{
+    width: 29vw;
+    height: 162px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .categoryImg{
+    width: 29vw;
+    height: 162px;
+    display: block;
+    opacity: 1;
+  }
+
+  .categoryImgP{
+    width: 23vw;
+    height: 150px;
+    margin-bottom: 12px;
+    display: block;
+    opacity: 1;
+  }
+  
+  
+  .categoryName{
+    width: 29vw;
+  }
+  
+  .flexCategoryName{
+    font-size: 1.5rem;
+    width: 29vw;
+    height: 162px;
+    color: white;
+    text-shadow: 1px 1px 4px black, 4px 4px 24px black, 1px 1px 5px black;
+  }
+
+  .flexCategoryName:hover{
+    transform: scale(0.9);
+    text-shadow: 1px 1px 4px black, 4px 4px 24px black, 1px 1px 5px black;
+    color: white;
+  }
+  .span{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 640px) {
+  .flexCategoryName{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .menuCover{
+    width: 98vw;
+    height: 170px;
+  
+  }
+  
+  .menuBody{
+    width: 98vw;
+    height: 170px;
+    flex-direction: row;
+  }
+ 
+  .flexControl{
+    width: 29.5vw;
+  }
+  
+  .categoryCover{
+    width: 28.5vw; 
+  }
+  
+  .categoryImgCover{
+    width: 28.5vw;
+  }
+  
+  
+  .categoryImg{
+    width: 28.5vw;
+  }
+  .categoryImgP{
+    width: 23.5vw;
+  }
+  
+  
+  .categoryName{
+    width: 28vw;
+  }
+  
+  .flexCategoryName{
+    font-size: 1rem;
+    width: 28vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .menuCover{
+    width: 90vw;
+    height: 850px;
+  }
+  
+  .menuBody{
+    width: 90vw;
+    height: 850px;
+    display: flex;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+   
+  }
+
+
+
+  
+  .flexControl{
+    width: 90vw;
+    height: 167px;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px silver, 0 0 2px silver, 0 0 3px silver;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: white;
+    
+  }
+  
+  .flexControl:hover{
+   box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 5px silver;
+   transform: scale(1.01);
+  }
+  
+  .categoryCover{
+    position: relative;
+    width: 89vw;
+    height: 162px;
+  }
+  
+  
+  .categoryImgCover{
+    width: 89vw;
+    height: 162px;
+  }
+  
+  
+  .categoryImg{
+    width: 89vw;
+    height: 155px;
+  }
+  .categoryImgP{
+    width: 89vw;
+    height: 140px;
+  }
+  
+  
+  .categoryName{
+    position: absolute;
+    top: 0.001px;
+    width: 89vw;
+    height: 162px;
+  }
+  
+  .flexCategoryName{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 89vw;
+    height: 162px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

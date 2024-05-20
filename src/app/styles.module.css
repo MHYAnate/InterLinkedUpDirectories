@@ -1,0 +1,112 @@
+
+.children{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 98vw;
+  max-height: max-content;
+}
+.Main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 98vw;
+  min-height: 700px;
+  max-height: max-content;
+  margin-top: 10px;
+}
+
+.body{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 98vw;
+  min-height: 530px;
+  max-height: max-content;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(93, 92, 92, 0.165));
+}
+ 
+.carouselBody{
+  width: 69vw;
+  min-height: 530px;
+  max-height: max-content;
+}
+
+.categoryBody{
+  width: 28vw;
+  min-height: 530px;
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categoryImgCover{
+  width: 98vw;
+  height: 150px;
+}
+
+.categoryImg{
+  width: 98vw;
+  height: 150px;
+  opacity: 0.48;
+}
+.newsLetter{
+  width: 98vw;
+  min-height: 170px;
+  max-height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1157px) {
+
+}
+
+@media screen and (max-width: 770px) {
+
+  .Main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 98vw;
+    min-height: max-content;
+    max-height: max-content;
+    margin-top: 10px;
+  }
+  .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+    height: max-content;
+    margin-top: 10px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0.165));
+  }
+  .categoryBody{
+    width: 98vw;
+    min-height: max-content;
+    max-height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carouselBody{
+    width: 98vw;
+    min-height: max-content;
+    max-height: max-content;
+  }
+  .categoryImgCover{
+    width: 98vw;
+    height: 200px;
+  }
+  .categoryImg{
+    width: 98vw;
+    height: 200px;
+    opacity: 0.5;
+  }
+}

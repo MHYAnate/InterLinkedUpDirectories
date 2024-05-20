@@ -1,0 +1,615 @@
+.Main{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+}
+.formContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98vw;
+  height: max-content;
+  padding-top: 5px;
+  background-image: linear-gradient(to right, rgb(241, 243, 241), white);
+}
+
+.titleCover{
+  width: 30vw;
+  height: 85vh;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+
+.categoryCover{
+  position: relative;
+  width: 30vw;
+  height: 85vh;
+}
+
+
+.categoryImgCover{
+  width: 30vw;
+  height: 83vh;
+  transition: transform 1s ease-in-out 0.2s;
+}
+
+
+.categoryImg{
+  width: 30vw;
+  height: 83vh;
+  border-radius: 10px;
+  transition: transform 1s ease-in-out 0.2s;
+}
+
+.categoryImgCover:hover,.categoryImg:hover {
+  transform: scale(0.9);
+}
+
+/* .title{
+  position: absolute;
+  top: 0.001px;
+  width: 30vw;
+  height: 85vh;
+}
+
+.flextitle{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 85vh;
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+} */
+.formCover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: first baseline;
+  width: 68vw;
+  min-height: 530px;
+  height: max-content;
+}
+
+.topSelect{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48vw;
+  height: max-content;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.topSelectBtnLeft{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24vw;
+  color: green;
+  border-right: 1px solid silver; 
+}
+
+.topSelectBtnLeftSelected{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24vw;
+  color: white;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  border-radius: 5px;
+  border-right: 1px solid silver;
+  animation:  0.7s linear appear; 
+}
+
+
+.topSelectBtnRight{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24vw;
+  color: green;
+  border-left: 1px solid silver;
+}
+
+.topSelectBtnRightSelected{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24vw;
+  color: white;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  border-radius: 5px;
+  border-left: 1px solid silver;
+  animation:  0.7s linear appear;
+}
+
+@keyframes appear {
+
+  0%{
+    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7),rgba(3, 135, 3, 0.7));
+  opacity: 0;
+  }
+  100%{
+    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+    opacity: 1;
+  }
+}
+
+
+.tsSpan{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24vw;
+  transition: box-shadow 1s ease-in-out;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+ .tsSpan:hover{
+  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
+  border-radius: 5px;
+  width: 24vw;
+ 
+}
+
+.regContainer{
+  display: flex;
+  width: inherit;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  
+}
+
+.regButton{
+  border-radius: 5px;
+  color: dodgerblue;
+  padding: 5px;
+  text-shadow: none;
+  width: max-content;
+}
+.regButton:hover{
+  box-shadow: 0px 0px 1px silver, 0 0 2px silver, 0 0 3px silver;
+}
+
+.regButtonActive{
+  border-radius: 5px;
+  padding: 5px;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 68vw;
+  height: 78vh;
+}
+
+.innerFormCover{
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 68vw;
+  height: max-content;
+}
+
+.formCoverLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  height: 55vh;
+}
+
+.formCoverRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  height: 55vh;
+ }
+
+.selectCover{
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+.selectTitle{
+  width: 24vw;
+  height: 33px;
+  font-size: 11px;
+  text-align: left;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(136, 135, 135);
+  margin: 0;
+}
+
+.select{
+  border: none;
+  width: 24vw;
+  height: 25px;
+}
+
+.option{
+  width: 24vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: flex-start;
+  align-items: center;
+  height: 24px;
+}
+
+.textarea{
+  border: none;
+  width: 24vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: max-content;
+}
+
+.inputCover{
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+
+.inputImageCover{
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+
+.input{
+  border: none;
+  width: 24vw;
+  height: 25px;
+}
+
+.passcodeContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 24vw;
+  height: max-content;
+  border-bottom: 1px solid silver;
+}
+
+.input1{
+  border: none;
+  width: 37vw;
+  height: 25px;
+}
+
+.svg{
+  width: 25px;
+  height: 25px;
+}
+.passWordVisibilityBtn{
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8vw;
+  height: 25px;
+  background-color: white;
+}
+.RegiterButton{
+  border-radius: 5px;
+  width: 24vw;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+ 
+}
+
+@media screen and (max-width: 770px) {
+  .formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 98vw;
+    height: max-content;
+    padding-top: 5px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.942), rgba(202, 220, 227, 0.297));
+  }
+  
+  .titleCover{
+    width: 98vw;
+    height: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .categoryCover{
+    position: relative;
+    width: 98vw;
+    height: 300px;
+  }
+  
+  .categoryImgCover{
+    width: 98vw;
+    height: 300px;
+  }
+  
+  .categoryImg{
+    width: 98vw;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .title{
+    width: 98vw;
+    height: 300px;
+  }
+  .flextitle{
+    width: 98vw;
+    height: 300px;
+  }
+
+  .formCover{
+    width: 98vw;
+  }
+  
+  .topSelect{
+    width: 78vw;
+  }
+  
+  
+  .topSelectBtnLeft{
+    width: 39vw; 
+  }
+  
+  .topSelectBtnLeftSelected{
+    width: 39vw;
+  }
+  
+  
+  .topSelectBtnRight{
+    width: 39vw;
+  }
+  
+  .topSelectBtnRightSelected{
+    width: 39vw;
+  }
+
+  .innerFormCover{
+    width: 98vw;
+    height: max-content;
+    padding-top: 50px;
+  }
+  .selectCover{
+    width:30vw;
+  }
+  .selectTitle{
+    width:30vw;
+  }
+  
+  .select{
+    width:30vw;
+  }
+  
+  .option{
+    width:30vw;
+  }
+  
+  .textarea{
+    width:30vw;
+  }
+  
+  .inputCover{
+    width:30vw;
+  }
+  
+  .inputImageCover{
+    width:30vw;
+  }
+  
+  .input{
+    width:30vw;
+  }
+  
+  .passcodeContainer{
+    width:30vw;
+  }
+  
+  .input1{
+    width: 45vw;
+  }
+  
+  .svg{
+    width: 25px;
+  }
+ 
+  .RegiterButton{ 
+    width: 30vw; 
+    
+  }
+  
+}
+
+@media screen and (max-width: 520px) {
+
+  .flextitle{
+    font-size: 2em;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    height: max-content;
+  }
+  
+  .innerFormCover{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 0;
+    row-gap: 0;
+    align-items: center;
+    width: 98vw;
+    height: max-content;
+  }
+  
+  .formCoverLeft{
+    height: max-content;
+    row-gap: 30px;
+  }
+  
+  .formCoverRight{
+    height: max-content;
+    row-gap: 30px;
+   }
+
+   .selectCover{
+    width:70vw;
+  }
+  .selectTitle{
+    width:70vw;
+  }
+  
+  .select{
+    width:70vw;
+  }
+  
+  .option{
+    width:70vw;
+  }
+  
+  .textarea{
+    width:70vw;
+  }
+  
+  .inputCover{
+    width:70vw;
+  }
+  
+  .inputImageCover{
+    width:70vw;
+  }
+  
+  .input{
+    width:70vw;
+  }
+  
+  .passcodeContainer{
+    width:70vw;
+  }
+  
+  .input1{
+    width: 70vw;
+  }
+  
+  .svg{
+    width: 25px;
+  }
+ 
+  .RegiterButton{ 
+    width: 70vw; 
+    margin-bottom: 20px;
+  }
+}
+
+
+.ilud{
+  color: green;
+  margin-left: 3%;
+  text-shadow: 1px 1px 1px white, 0 0 5px green, 0 0 1px white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.footerIludSpan{
+  margin-left: -0.3em;
+  max-width: fit-content;
+}
+
+.contain{
+  perspective: 800px;
+  width: 5px;
+  height: 5vh;
+  margin-right: 4vw;
+ }
+
+.iludcover{
+  width: 5px;
+  height: 3vh;
+  padding-right: 5vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  animation: rotate 14s infinite linear;
+}
+
+.front { 
+  transform: translateZ(16.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+ }
+
+.back { 
+  transform: rotateY(180deg) translateZ(16.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+ }
+
+.right { 
+  transform: rotateY(90deg) translateZ(16.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+ }
+
+.left { 
+  transform: rotateY(-90deg) translateZ(16.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+ }
+
+.top { 
+  transform: rotateX(90deg) translateZ(16.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+ }
+
+.bottom { 
+  transform: rotateX(-90deg) translateZ(16.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+ }
+
+ @keyframes rotate {
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(1turn); }
+}
