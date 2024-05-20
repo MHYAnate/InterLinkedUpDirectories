@@ -7,7 +7,6 @@ import { Services } from "@/database/data";
 import Menu from "@/components/menu/menu";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 import Nav from "@/components/nav/mainNav/nav";
-import Intro from "@/components/intro/intro";
 
 export default function Home() {
   
