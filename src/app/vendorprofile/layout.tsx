@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import styles from "./styles.module.css";
 import UserNav from "@/components/nav/vendorNav/nav";
 import { Suspense } from 'react'
-import Loading from "../register/logo";
+import Loader from "@/components/load/load";
 
 
 
@@ -31,7 +31,7 @@ export default function ProfileLayout(props: {
     <html>
       <body>
         <div className={styles.layoutBodyCover}>
-        <Suspense fallback={<Loading/>}>
+        <Suspense fallback={<Loader/>}>
           {props.children}
           </Suspense>
         </div>

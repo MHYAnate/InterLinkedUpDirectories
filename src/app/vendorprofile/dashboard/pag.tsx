@@ -4,7 +4,8 @@ import { Suspense } from 'react'
 import VendorNav from "@/components/nav/vendorNav/nav";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { onAuthStateChanged, reload, updateProfile } from "firebase/auth";
+import dynamic from 'next/dynamic'
 import {
 	collection,
 	setDoc,
@@ -48,7 +49,11 @@ export default function Profile() {
 	const [imageUrl, setImageUrl] = useState("");
 
 	const [tab, setTab] = useState("");
-	const [userA, setUser] = useState<any>(auth);
+	const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
 	const router = useRouter();
 	const user = auth.currentUser;
@@ -159,6 +164,14 @@ export default function Profile() {
 
 				handleGetProfileDetail(); 
 				
+				// Update profile with image URL if user is signed in
+				// updateProfile(user, { photoURL: imageUrl })
+				// 	.then(() => {
+				// 		console.log('Profile picture updated successfully');
+				// 	})
+				// 	.catch((error) => {
+				// 		console.error('Error updating profile picture:', error);
+				// 	});
 			} else {
 			// Redirect to login page if not signed in
 				router.push('/');
@@ -167,16 +180,14 @@ export default function Profile() {
 	
 		// Cleanup function to avoid memory leaks
 		return () => unsubscribe();
-	}, []); // Re-run useEffect when imageUrl or auth changes
-useEffect(()=>{
-	auth.currentUser?.reload();
-},[]);
+	}, [reload]); // Re-run useEffect when imageUrl or auth changes
+
+
 
 	
 
 	return (
-		
-		<main  className={styles.mainBodyCover}>
+		<main className={styles.mainBodyCover}>
 			<VendorNav/>
 			<div className={styles.mainBody}>
 			<div className={styles.profilePictureFlexControl}>
@@ -329,7 +340,6 @@ useEffect(()=>{
 				</div>
 			</div>
 			</div>
-			
 		</main>
 	);
 }

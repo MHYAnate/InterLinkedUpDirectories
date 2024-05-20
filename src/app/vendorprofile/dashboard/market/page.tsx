@@ -1,8 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
-import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
@@ -15,6 +13,9 @@ import {
 	addDoc,
 	CollectionReference,
 	onSnapshot,
+	deleteDoc,
+	updateDoc,
+	deleteField,
 } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
@@ -23,6 +24,8 @@ import VendorNav from "@/components/nav/vendorNav/nav";
 import { MarketTag } from "@/database/marketTag";
 import { MarketStatus } from "@/database/marketStatus";
 import { MarketCondition } from "@/database/marketCondition";
+import FilterItems from "@/components/filters/userFilters/filterItems";
+import FilterUserPostItems from "@/components/filters/filterUserPostItems/filterUserItems";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -46,9 +49,13 @@ type FormValue = {
 	docid: string;
 	shop: string;
 	src: string;
+	inventoryUpDate: string;
+	priceUpDate: string;
 };
 
 const { auth, storage, database } = Firebase;
+
+
 
 export default function Market() {
 	const {
@@ -79,28 +86,118 @@ export default function Market() {
 			picture: "",
 			docid: "",
 			shop: "",
+			inventoryUpDate: "",
+			priceUpDate: "",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
 	});
 
 	const [profileDetails, setProfileDetails] = useState<FormValue | null>(null);
-	const [docStatecId, setDocId] = useState("");
+
+	const [id, setId] = useState("");
 
 	const [imageUrl, setImageUrl] = useState("");
 
 	const [imageUrl2, setImageUrl2] = useState("");
 
 	const [tab, setTab] = useState("");
-	const [userA, setUser] = useState<any>(auth);
 
-	const router = useRouter();
-	const user = auth.currentUser;
 
-	const UserEmail =
-		(document.querySelector("#email") as HTMLInputElement)?.value || "";
 
-	const imageRef = ref(storage, `stock/${user?.email}`);
+
+
+		useEffect(() => {
+			const unsubscribe = onAuthStateChanged(auth, (user) => {
+				if (user === null) {return ;}
+
+				const profileDetailRef = collection(database, `profile`);
+
+				const userQuery = query(
+					profileDetailRef,
+					where("email", "==", `${user?.email}`)
+				);
+
+				const handleGetProfileDetail = async () => {
+					try {
+						const querySnapshot = await getDocs(userQuery);
+
+						if (querySnapshot.empty) {
+							console.log("No profile details found");
+							return;
+						}
+
+						const retrievedData = querySnapshot.docs[0].data() as FormValue;
+						setProfileDetails(retrievedData);
+					} catch (error) {
+						console.error("Error getting profile detail:", error);
+					}
+				};
+
+				handleGetProfileDetail();
+			});
+		
+			// Cleanup function to avoid memory leaks
+			return () => unsubscribe();
+		}, []);
+		
+		useEffect(()=>{
+			auth.currentUser?.reload();
+		},[]);
+
+
+
+	const stockDetailRef = collection(database, "market");
+
+	const handleStockDetails = async (data: FormValue) => {
+		try {
+			const stockDetailRef = collection(database, "market");
+
+			const docRef = await addDoc(stockDetailRef, {
+				image: data.image,
+				image2: data.image2,
+				title: data.title,
+				status: data.status,
+				price: data.price,
+				features: data.features,
+				condition: data.condition,
+				inventory: data.inventory,
+				tag: data.tag,
+				countrySelect: profileDetails?.countrySelect,
+				stateSelect: profileDetails?.stateSelect,
+				areaSelect: profileDetails?.areaSelect,
+				address: profileDetails?.address,
+				email: profileDetails?.email,
+				name: profileDetails?.name,
+				number: profileDetails?.number,
+				picture: profileDetails?.src,
+				userId: profileDetails?.docid,
+				docid: "",
+				shop: "",
+				type: "items",
+			});
+			const docId = docRef.id;
+			setId(docId);
+
+			const setStockDetailRef = collection(database, "market");
+
+			await setDoc(
+				doc(setStockDetailRef, docId),
+				{
+					docid: docId,
+				},
+				{ merge: true }
+			).then(() => {
+				setId(docId);
+			});
+
+			console.log("stock detail added successfully");
+		} catch (error) {
+			console.error("Error adding stock detail:", error);
+		}
+	};
+
+	const imageRef = ref(storage, `${id}1`);
 
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -127,10 +224,9 @@ export default function Market() {
 		}
 	};
 
-	const imageRef2 = ref(storage, `stock2/${user?.email}`);
-
 	const fileInputRef2 = useRef<HTMLInputElement>(null);
 
+	const imageRef2 = ref(storage, `${id}2`);
 	const handleImageUpload2 = () => {
 		const fileInput = fileInputRef2.current;
 		if (fileInput && fileInput.files && fileInput.files.length > 0) {
@@ -154,93 +250,10 @@ export default function Market() {
 		}
 	};
 
-	const profileDetailRef = collection(database, `profile`);
-
-	const userQuery = query(
-		profileDetailRef,
-		where("email", "==", `${user?.email}`)
-	);
-
-	const handleGetProfileDetail = async () => {
-		try {
-			const querySnapshot = await getDocs(userQuery);
-
-			if (querySnapshot.empty) {
-				console.log("No profile details found");
-				return;
-			}
-
-			const retrievedData = querySnapshot.docs[0].data() as FormValue;
-			setProfileDetails(retrievedData);
-		} catch (error) {
-			console.error("Error getting profile detail:", error);
-		}
-	};
-
-	useEffect(() => {
-		const unsubscribe = onAuthStateChanged(auth, (user) => {
-			if (user) {
-				handleGetProfileDetail();
-			} else {
-				// Redirect to login page if not signed in
-				router.push("/");
-			}
-		});
-
-		// Cleanup function to avoid memory leaks
-		return () => unsubscribe();
-	}, []);
-
-	const handleProfileDetail = async (data: FormValue) => {
-		try {
-			const profileDetailRef = collection(database, `market`);
-
-			const docRef = await addDoc(profileDetailRef, {
-				image: data.image,
-				image2: data.image2,
-				title: data.title,
-				status: data.status,
-				price: data.price,
-				features: data.features,
-				condition: data.condition,
-				inventory: data.inventory,
-				tag: data.tag,
-				countrySelect: profileDetails?.countrySelect,
-				stateSelect: profileDetails?.stateSelect,
-				areaSelect: profileDetails?.areaSelect,
-				address: profileDetails?.address,
-				email: profileDetails?.email,
-				name: profileDetails?.name,
-				number: profileDetails?.number,
-				picture: profileDetails?.src,
-				userId: profileDetails?.docid,
-				docid: "",
-				shop: "",
-			});
-			const docId = docRef.id;
-			setDocId(docId);
-
-			const setProfileDetailRef = collection(database, "market");
-
-			await setDoc(
-				doc(setProfileDetailRef, docId),
-				{
-					docid: docId,
-				},
-				{ merge: true }
-			);
-
-			console.log("stock detail added successfully");
-		} catch (error) {
-			console.error("Error adding stock detail:", error);
-		}
-	};
-
 	const handleProfileImageDetail1 = async () => {
 		try {
-			const profileDetailRef = collection(database, "market");
 			await setDoc(
-				doc(profileDetailRef, docStatecId),
+				doc(stockDetailRef, id),
 				{
 					image: imageUrl,
 				},
@@ -254,9 +267,8 @@ export default function Market() {
 
 	const handleProfileImageDetail2 = async () => {
 		try {
-			const profileDetailRef = collection(database, `market`);
 			await setDoc(
-				doc(profileDetailRef, docStatecId),
+				doc(stockDetailRef, id),
 				{
 					image2: imageUrl2,
 				},
@@ -268,16 +280,15 @@ export default function Market() {
 		}
 	};
 
-	useEffect(() => {
-		handleProfileImageDetail1();
-	}, [handleImageUpload1]);
+
 
 	const onSubmit = (data: FormValue) => {
-		handleProfileDetail(data);
+		handleStockDetails(data);
 		handleImageUpload1();
 		handleImageUpload2();
 		handleProfileImageDetail1();
 		handleProfileImageDetail2();
+		reset();
 	};
 
 	function RenderMarketTag() {
@@ -328,24 +339,26 @@ export default function Market() {
 		<div className={styles.Main}>
 			<VendorNav />
 			<div className={styles.pageBodyCover}>
-				<div className={styles.idBody}>
-					<div className={styles.idName}>Market</div>
-					<div>
-						<Image
-							className={styles.idiImg}
-							src="/service/commerce.jpg"
-							alt="Picture of the author"
-							width={500}
-							height={500}
-							unoptimized
-							quality={100}
-						/>
-					</div>
-				</div>
 				<div className={styles.bodyCover}>
+					<div className={styles.idBody}>
+						<div className={styles.idName}>Market</div>
+						<div>
+							<Image
+								className={styles.idiImg}
+								src="/service/commerce.jpg"
+								alt="Picture of the author"
+								width={500}
+								height={500}
+								unoptimized
+								quality={100}
+							/>
+						</div>
+					</div>
 					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 						<div className={styles.innerFormCover}>
+							<div className={styles.post}>Post Items on Market Space</div>
 							<div className={styles.selectCover}>
+								<div className={styles.title}>Select Tag</div>
 								<select
 									className={styles.select}
 									{...register("tag", {
@@ -359,6 +372,7 @@ export default function Market() {
 								</select>
 							</div>
 							<div className={styles.inputCover}>
+								<div className={styles.title}>Enter the Name</div>
 								<input
 									type="text"
 									className={styles.input}
@@ -366,10 +380,11 @@ export default function Market() {
 										required: "Required",
 									})}
 									id="title"
-									placeholder={"Name of Stock"}
+									placeholder={""}
 								/>
 							</div>
 							<div className={styles.selectCover}>
+								<div className={styles.title}>select Status</div>
 								<select
 									className={styles.select}
 									{...register("status", {
@@ -383,6 +398,7 @@ export default function Market() {
 								</select>
 							</div>
 							<div className={styles.inputCover}>
+								<div className={styles.title}>Enter Price</div>
 								<input
 									type="text"
 									className={styles.input}
@@ -390,39 +406,29 @@ export default function Market() {
 										required: "Required",
 									})}
 									id="price"
-									placeholder={"enter price"}
+									placeholder={""}
 								/>
 							</div>
 							<div className={styles.inputCover}>
+								<div className={styles.title}>The features</div>
 								<textarea
 									className={styles.textarea}
 									{...register("features", {
 										required: "Required",
 									})}
 									id="features"
-									placeholder={"features"}
+									placeholder={""}
 									rows={3}
 								/>
 							</div>
 							<div className={styles.selectCover}>
-								<select
-									className={styles.select}
-									{...register("status", {
-										required: "Required",
-									})}
-								>
-									<option className={styles.option} value="select">
-										Select Status
-									</option>
-									{RenderMarketStatus()}
-								</select>
-							</div>
-							<div className={styles.selectCover}>
+								<div className={styles.title}>Select Condition</div>
 								<select
 									className={styles.select}
 									{...register("condition", {
 										required: "Required",
 									})}
+									id="condition"
 								>
 									<option className={styles.option} value="select">
 										Select Stock Condition
@@ -431,6 +437,7 @@ export default function Market() {
 								</select>
 							</div>
 							<div className={styles.inputCover}>
+								<div className={styles.title}>Enter number of stocks</div>
 								<input
 									type="text"
 									className={styles.input}
@@ -438,22 +445,11 @@ export default function Market() {
 										required: "Required",
 									})}
 									id="inventory"
-									placeholder={"Number of Stock"}
+									placeholder={""}
 								/>
 							</div>
-							<div className={styles.inputCover}>
-								<input
-									type="text"
-									className={styles.input}
-									{...register("name", {
-										required: "Required",
-									})}
-									id="name"
-									placeholder={"Vendor's User Name"}
-								/>
-							</div>
-
 							<div className={styles.inputImageCover}>
+								<div className={styles.title}>Select Tag</div>
 								<input
 									type="file"
 									accept="image/*"
@@ -463,6 +459,7 @@ export default function Market() {
 								/>
 							</div>
 							<div className={styles.inputImageCover}>
+								<div className={styles.title}>Select Tag</div>
 								<input
 									type="file"
 									accept="image/*"
@@ -477,7 +474,20 @@ export default function Market() {
 							</button>
 						</div>
 					</form>
-					<div></div>
+					<div className={styles.midBody}>
+						<div className={styles.openShop}>Open a Shop</div>
+						<div className={styles.mySpaceCover}>
+							<div className={styles.mySpace}>
+								List of Items in Market Space
+							</div>
+							<div className={styles.mySpaceRender}>
+								<FilterUserPostItems />
+							</div>
+						</div>
+					</div>
+					<div className={styles.body}>
+						<FilterItems />
+					</div>
 				</div>
 			</div>
 		</div>

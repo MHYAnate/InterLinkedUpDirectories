@@ -140,6 +140,10 @@ export default function Market() {
 			// Cleanup function to avoid memory leaks
 			return () => unsubscribe();
 		}, []);
+		
+		useEffect(()=>{
+			auth.currentUser?.reload();
+		},[]);
 
 
 
