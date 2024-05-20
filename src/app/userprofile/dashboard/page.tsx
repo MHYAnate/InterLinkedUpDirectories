@@ -54,7 +54,7 @@ export default function Profile() {
 
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
-	const handleUpload = () => {
+	const handleUpload = useCallback(() =>  {
 		const fileInput = fileInputRef.current;
 		if (fileInput && fileInput.files && fileInput.files.length > 0) {
 			const file = fileInput.files[0]; // Get the first selected file
@@ -75,7 +75,7 @@ export default function Profile() {
 					console.error(error); // Handle any errors
 				});
 		}
-	};
+	}, [imageRef, fileInputRef,]);
 
 	const profileDetailRef = collection(
 		database,
@@ -136,9 +136,7 @@ export default function Profile() {
 			console.error("Error adding profile detail:", error);
 		}
 	};
-	useEffect(() => {
-		handleProfileDetail();
-	},[handleUpload,handleProfileDetail]);
+	
 		
 	
 	useEffect(() => {
@@ -168,7 +166,7 @@ export default function Profile() {
 	
 		// Cleanup function to avoid memory leaks
 		return () => unsubscribe();
-	}, [handleGetProfileDetail, imageRef,imageUrl,router]); // Re-run useEffect when imageUrl or auth changes
+	}, [ imageRef,imageUrl,router]); // Re-run useEffect when imageUrl or auth changes
 
 
 
