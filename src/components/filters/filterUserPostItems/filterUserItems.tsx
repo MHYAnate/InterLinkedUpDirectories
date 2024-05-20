@@ -147,7 +147,7 @@ export default function FilterUserPostItems() {
 		
 			// Cleanup function to avoid memory leaks
 			return () => unsubscribe();
-		}, []);
+		}, [stockDetailRef]);
 
 
 			

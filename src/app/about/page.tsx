@@ -52,7 +52,7 @@ export default function About() {
 						</p>
 						<p>whether you are in search of job vacancies or posting job vacancies, our platform form follow function design pattern simplify the search process simlessly</p>
 						<p>
-							With That's in Mind, why we've created a comprehensive directory that simplifies
+							With That&lsquo;s in Mind, why we&lsquo;ve created a comprehensive directory that simplifies
 							the search process and connects you with qualified vendors, Available vacancies and a easy to use market Space for a 
 							variety of needs ,tailored to meet your individual needs.
 						</p>
@@ -126,10 +126,10 @@ export default function About() {
 										Personal Service Category:
 									</span>{" "}
 									This category encompasses a wide range of personal services
-									tailored to meet your individual needs. Whether you're looking
+									tailored to meet your individual needs. Whether you&lsquo;re looking
 									for home lessons, maid services, laundry services, or any
 									other personalized service, our directory provides
-									comprehensive listings with vendors' names, addresses, and
+									comprehensive listings with vendors&lsquo; names, addresses, and
 									phone numbers.
 								</p>
 							</li>
@@ -142,7 +142,7 @@ export default function About() {
 									directory. From mechanical services to auto spray, panel
 									beating, and wheel balancing services, we connect you with
 									reputable vendors who are experts in their respective fields.
-									Whether it's routine maintenance or major repairs, you can
+									Whether it&lsquo;s routine maintenance or major repairs, you can
 									rely on our directory to find the right automotive service
 									provider for the job.
 								</p>
@@ -155,7 +155,7 @@ export default function About() {
 									Keeping your property well-maintained is essential for its
 									longevity and functionality. Our maintenance service category
 									includes a diverse range of services such as painting,
-									bricklaying, plumbing, and more. Whether you're renovating
+									bricklaying, plumbing, and more. Whether you&lsquo;re renovating
 									your home or in need of regular maintenance, our directory
 									features trusted vendors who can deliver quality services
 									tailored to your requirements.
@@ -293,7 +293,7 @@ export default function About() {
 							We are continuously working to expand our service categories and
 							enhance our platform to cater to the evolving needs of our users.
 							If you have any questions, suggestions, or need assistance
-							navigating our platform, please don't hesitate to contact us.
+							navigating our platform, please don&lsquo;t hesitate to contact us.
 						</p>
 						<p>
 							<span className={styles.highlighted}>Text only :</span>{" "}

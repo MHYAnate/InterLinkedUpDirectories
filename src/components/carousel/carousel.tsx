@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo, memo, useCallback } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import Intro from "../intro/intro";
-import VidIntro from "../vidIntro/vidIntro";
 import styles from "./styles.module.css";
 
 interface CarouselProps {

@@ -177,5 +177,5 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 		</main>
 	);
 });
-
+Menu.displayName = "Menu";
 export default Menu;

@@ -138,7 +138,7 @@ export default function Profile() {
 	};
 	useEffect(() => {
 		handleProfileDetail();
-	},[handleUpload]);
+	},[handleUpload,handleProfileDetail]);
 		
 	
 	useEffect(() => {
@@ -168,7 +168,7 @@ export default function Profile() {
 	
 		// Cleanup function to avoid memory leaks
 		return () => unsubscribe();
-	}, []); // Re-run useEffect when imageUrl or auth changes
+	}, [handleGetProfileDetail, imageRef,imageUrl,router]); // Re-run useEffect when imageUrl or auth changes
 
 
 
