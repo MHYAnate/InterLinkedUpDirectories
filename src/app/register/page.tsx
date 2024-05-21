@@ -72,7 +72,7 @@ export default function Register() {
 	const [passwordVisibleV, setPasswordVisibleV] = useState(false);
 	const [imageUrl, setImageUrl] = useState("");
 	const [profileDetails, setProfileDetails] = useState("");
-	const [isVendorTab, setIsVendorTab] = useState("");
+	const [isVendorTab, setIsVendorTab] = useState("vendor");
 	const [loader, setLoader] = useState(false);
 
 	const router = useRouter();

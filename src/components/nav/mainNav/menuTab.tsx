@@ -13,8 +13,6 @@ export const MenuTab = () => {
     return (
       <div className={styles.menuCover}>
         <div className={styles.flexMenu}>
-				<div className={styles.menuList} onClick={() => (router.push("/vacancies"), setTab(""))}>VACANCY</div>
-				<div className={styles.menuList} onClick={() => (router.push("/marketing"), setTab(""))}>MARKET</div>
           <div className={styles.menuList} onClick={() => (router.push("/about"), setTab(""))}>ABOUT US</div>
   
           <div className={styles.menuList} onClick={() => (router.push("/login"), setTab(""))}>LOG IN</div>

@@ -47,7 +47,7 @@ export default function Register() {
 
 	const [tab, setTab] = useState("");
 
-	const [isVendorTab, setIsVendorTab] = useState("");
+	const [isVendorTab, setIsVendorTab] = useState("vendor");
 
 	const [loader, setLoader] = useState(false);
 

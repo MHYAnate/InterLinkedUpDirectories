@@ -467,17 +467,23 @@ div.inActiveBtn:hover {
 }
 
 @media screen and (max-width: 490px) {
+	.navBody {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: inherit;
+	}
 	.search {
-		width: 50w;
+		width: 40vw;
 	}
 	.input {
-		width: 50w;
+		width: 50vw;
 	}
 }
 
 @media screen and (max-width: 390px) {
 	.search {
-		width: 40vw;
+		width: 35vw;
 	}
 	.input {
 		width: 40vw;

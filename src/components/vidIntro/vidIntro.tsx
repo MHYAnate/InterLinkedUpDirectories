@@ -54,9 +54,7 @@ const VidIntro =() => {
 										priority={true}
 										unoptimized
 									/>
-              </div>
-             
-							
+              </div>	
 						</div>
 						<div className={styles.categoryName}><div className={styles.flexCategoryName}>
               <div className={styles.h1}>InterLinked 	Up Directories</div>
