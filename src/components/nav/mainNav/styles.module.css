@@ -430,6 +430,7 @@ div.inActiveBtn:hover {
     position: absolute;
     top: 70px;
     right: 0.001px;
+		z-index: 9;
   }
 
   .flexMenu{

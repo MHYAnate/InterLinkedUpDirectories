@@ -152,6 +152,7 @@
   transition: box-shadow 1s ease-in-out;
   padding-bottom: 5px;
   padding-top: 5px;
+  text-align: center;
 }
  .tsSpan:hover{
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
@@ -367,14 +368,11 @@
     height: 300px;
   }
   .title{
-    width: 98vw;
-    height: 300px;
+    display: none;
   }
   .flextitle{
-    width: 98vw;
-    height: 300px;
+    display: none;
   }
-
   .formCover{
     width: 98vw;
   }

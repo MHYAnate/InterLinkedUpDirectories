@@ -209,7 +209,7 @@
   .aboutUsCover{
     display: flex;
     flex-direction: column;
-    width: 98vw;
+    width: 300px;
     justify-content: space-between;
     align-items: center;
     height:max-content;
@@ -242,11 +242,13 @@
   .title{
     width: 94vw;
     height: 300px;
+    display: none;
   }
   .flextitle{
     width: 94vw;
     height: 300px;
-    padding-top: 60px;
+    padding-top: none;
+    display: none;
   }
 
   .aboutUs{
