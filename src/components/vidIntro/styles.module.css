@@ -51,6 +51,8 @@
 }
 .vid{
  border-radius: 5px;
+ width: 24vw;
+ height: 180px;
 }
 
 .categoryName{

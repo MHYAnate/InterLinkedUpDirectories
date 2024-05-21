@@ -43,7 +43,17 @@ const VidIntro =() => {
 					<div className={styles.categoryCover}>
 						<div className={styles.categoryImgCover}>
               <div className={styles.imgPositioner}>
-              <video className={styles.vid} src="/video/intro8.webm" width="100%" height="auto" autoPlay muted loop ></video>
+							<Image
+										object-fit="cover"
+										className={styles.vid}
+										alt="Picture of the author"
+										quality={100}
+										width={100}
+										height={100}
+										src="/service/link.jpg"
+										priority={true}
+										unoptimized
+									/>
               </div>
              
 							

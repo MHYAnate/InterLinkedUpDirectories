@@ -1,43 +1,26 @@
+"use client";
 import styles from "./styles.module.css";
-const Loading = () => {
+ 
+
+
+
+export default function Loader() {
+
+
+
 	return (
-		<div>
-			<div className={styles.contain}>
-								<div className={styles.iludcover}>
-									<div className={styles.front}>
-										<div className={styles.ilud}>
-											ILU<span className={styles.footerIludSpan}>D</span>
-										</div>
-									</div>
-									<div className={styles.back}>
-										<div className={styles.ilud}>
-											ILU<span className={styles.footerIludSpan}>D</span>
-										</div>
-									</div>
-									<div className={styles.right}>
-										<div className={styles.ilud}>
-											ILU<span className={styles.footerIludSpan}>D</span>
-										</div>
-									</div>
-									<div className={styles.left}>
-										<div className={styles.ilud}>
-											ILU<span className={styles.footerIludSpan}>D</span>
-										</div>
-									</div>
-									<div className={styles.top}>
-										<div className={styles.ilud}>
-											ILU<span className={styles.footerIludSpan}>D</span>
-										</div>
-									</div>
-									<div className={styles.bottom}>
-										<div className={styles.ilud}>
-											ILU<span className={styles.footerIludSpan}>D</span>{" "}
-										</div>
-									</div>
-								</div>
-							</div>
+		<div className={styles.loaderContainer}>
+			<svg  viewBox="0 0 400 160" className={styles.svg}>
+			<text x="50%" y="50%" dy=".23em" textAnchor="middle" className={styles.svgTextF}>
+				I
+				</text>
+				<text x="50%" y="50%" dy=".23em" textAnchor="middle" className={styles.svgText}>
+				LU
+				</text>
+				<text x="50%" y="50%" dy=".23em" textAnchor="middle" className={styles.svgTextT}>
+				D
+				</text>
+			</svg>
 		</div>
 	);
-};
-
-export default Loading;
+}
