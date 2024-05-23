@@ -1570,14 +1570,14 @@
   }
   
   .coverDetail{
-    max-width:85vw;
+    max-width:95vw;
     font-size: 0.7rem;
   }
   .coverHeadDetail{
-    max-width:85vw;
+    max-width:95vw;
   }
   .headFootDetailCover{
-    max-width:85vw;
+    max-width:95vw;
   }
   
   .headFootSpan{
@@ -1590,7 +1590,7 @@
   }
   
   .detailTitle{
-    width: 20px;
+    width: max-content;
   }
   
   .detail{
@@ -1598,7 +1598,7 @@
     font-size: 0.6rem;
   }
   .detailHead{
-     width: 85vw;
+     width: 95vw;
    }
 }
 
