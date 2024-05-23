@@ -240,14 +240,9 @@
     border-radius: 10px;
   }
   .title{
-    width: 94vw;
-    height: 300px;
     display: none;
   }
   .flextitle{
-    width: 94vw;
-    height: 300px;
-    padding-top: none;
     display: none;
   }
 

@@ -81,6 +81,8 @@
     z-index: 3;
     height: max-content;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
