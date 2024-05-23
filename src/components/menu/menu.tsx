@@ -62,7 +62,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.categoryName}><div className={styles.flexCategoryName}>{Services[0]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div>
+						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>{Services[0]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
 					</div>
 				</div>
 				<div
@@ -91,7 +91,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.categoryName}><div className={styles.flexCategoryName}>{Services[1]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div>
+						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>{Services[1]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
 					</div>
 				</div>
 				<div
@@ -120,7 +120,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.categoryName}><div className={styles.flexCategoryName}>{Services[2]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div>
+						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>{Services[2]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
 					</div>
 				</div>
 				<div
@@ -145,7 +145,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.categoryName}><div className={styles.flexCategoryName}>Markets</div></div>
+						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>Markets</div></div></div>
 					</div>
 				</div>
 				<div
@@ -170,7 +170,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.categoryName}><div className={styles.flexCategoryName}>Vacancies</div></div>
+						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>Vacancies</div></div></div>
 					</div>
 				</div>
 			</div>

@@ -7,6 +7,8 @@ import MarketingFilter from "@/components/filters/generalFilters/filterMarket";
 import Nav from "@/components/nav/mainNav/nav";
 import { Suspense } from 'react'
 import Loading from "../register/logo";
+
+
 export default function Page({ params }: { params: { slug: string } }) {
 
 	return (

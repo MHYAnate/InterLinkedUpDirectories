@@ -109,47 +109,50 @@ export default function Market() {
 
 
 
-		useEffect(() => {
-			const unsubscribe = onAuthStateChanged(auth, (user) => {
-				if (user === null) {return ;}
+	useEffect(() => {
+		const unsubscribe = onAuthStateChanged(auth, (user) => {
+			if (user === null) {
+				return;
+			}
 
-				const profileDetailRef = collection(database, `profile`);
+			const profileDetailRef = collection(database, `profile`);
 
-				const userQuery = query(
-					profileDetailRef,
-					where("email", "==", `${user?.email}`)
-				);
+			const userQuery = query(
+				profileDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
 
-				const handleGetProfileDetail = async () => {
-					try {
-						const querySnapshot = await getDocs(userQuery);
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(userQuery);
 
-						if (querySnapshot.empty) {
-							console.log("No profile details found");
-							return;
-						}
-
-						const retrievedData = querySnapshot.docs[0].data() as FormValue;
-						setProfileDetails(retrievedData);
-					} catch (error) {
-						console.error("Error getting profile detail:", error);
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
 					}
-				};
 
-				handleGetProfileDetail();
-			});
-		
-			// Cleanup function to avoid memory leaks
-			return () => unsubscribe();
-		}, []);
-		
-		useEffect(()=>{
-			auth.currentUser?.reload();
-		},[]);
+					const retrievedData = querySnapshot.docs[0].data() as FormValue;
+					setProfileDetails(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
 
+			handleGetProfileDetail();
+		});
 
+		// Cleanup function to avoid memory leaks
+		return () => unsubscribe();
+	}, []);
 
-	const stockDetailRef = collection(database, "market");
+	useEffect(() => {
+		auth.currentUser?.reload();
+	}, []);
+
+	const fileInputRef = useRef<HTMLInputElement>(null);
+
+	const fileInputRef2 = useRef<HTMLInputElement>(null);
+
 
 	const handleStockDetails = async (data: FormValue) => {
 		try {
@@ -189,108 +192,59 @@ export default function Market() {
 					docid: docId,
 				},
 				{ merge: true }
-			).then(() => {
-				setId(docId);
-			});
+			);
 
+			const fileInput = fileInputRef.current;
+
+			const imageRef = ref(storage, `${docId}1`);
+
+			if (fileInput && fileInput.files && fileInput.files.length > 0) {
+				const file = fileInput.files[0];
+
+				await uploadBytes(imageRef, file);
+
+				const imageDoc = await getDownloadURL(imageRef);
+
+				setImageUrl(imageDoc);
+
+				await setDoc(
+					doc(stockDetailRef, docId),
+					{
+						image: imageDoc,
+					},
+					{ merge: true }
+				);
+			}
+
+			const fileInput1 = fileInputRef2.current;
+
+			const imageRef2 = ref(storage, `${docId}2`);
+
+			if (fileInput1 && fileInput1.files && fileInput1.files.length > 0) {
+				const file = fileInput1.files[0]; 
+
+				await uploadBytes(imageRef2, file);
+
+				const imageDoc = await getDownloadURL(imageRef2);
+				setImageUrl2(imageDoc);
+				await setDoc(
+					doc(stockDetailRef, docId),
+					{
+						image2: imageDoc,
+					},
+					{ merge: true }
+				);
+			}
+			reset();
 			console.log("stock detail added successfully");
 		} catch (error) {
 			console.error("Error adding stock detail:", error);
 		}
 	};
 
-	const imageRef = ref(storage, `${id}1`);
-
-	const fileInputRef = useRef<HTMLInputElement>(null);
-
-	const handleImageUpload1 = () => {
-		const fileInput = fileInputRef.current;
-		if (fileInput && fileInput.files && fileInput.files.length > 0) {
-			const file = fileInput.files[0]; // Get the first selected file
-
-			// Reference to the root of the default Firebase Storage bucket
-
-			// Upload the file
-			uploadBytes(imageRef, file)
-				.then((snapshot) => {
-					getDownloadURL(imageRef).then((url) => {
-						setImageUrl(url);
-						setTab("");
-					});
-
-					console.log("Uploaded a file!");
-				})
-				.catch((error) => {
-					console.error(error); // Handle any errors
-				});
-		}
-	};
-
-	const fileInputRef2 = useRef<HTMLInputElement>(null);
-
-	const imageRef2 = ref(storage, `${id}2`);
-	const handleImageUpload2 = () => {
-		const fileInput = fileInputRef2.current;
-		if (fileInput && fileInput.files && fileInput.files.length > 0) {
-			const file = fileInput.files[0]; // Get the first selected file
-
-			// Reference to the root of the default Firebase Storage bucket
-
-			// Upload the file
-			uploadBytes(imageRef2, file)
-				.then((snapshot) => {
-					getDownloadURL(imageRef2).then((url) => {
-						setImageUrl2(url);
-						setTab("");
-					});
-
-					console.log("Uploaded a file!");
-				})
-				.catch((error) => {
-					console.error(error); // Handle any errors
-				});
-		}
-	};
-
-	const handleProfileImageDetail1 = async () => {
-		try {
-			await setDoc(
-				doc(stockDetailRef, id),
-				{
-					image: imageUrl,
-				},
-				{ merge: true }
-			);
-			console.log("Profile detail added successfully");
-		} catch (error) {
-			console.error("Error adding profile detail:", error);
-		}
-	};
-
-	const handleProfileImageDetail2 = async () => {
-		try {
-			await setDoc(
-				doc(stockDetailRef, id),
-				{
-					image2: imageUrl2,
-				},
-				{ merge: true }
-			);
-			console.log("Profile detail added successfully");
-		} catch (error) {
-			console.error("Error adding profile detail:", error);
-		}
-	};
-
-
 
 	const onSubmit = (data: FormValue) => {
 		handleStockDetails(data);
-		handleImageUpload1();
-		handleImageUpload2();
-		handleProfileImageDetail1();
-		handleProfileImageDetail2();
-		reset();
 	};
 
 	function RenderMarketTag() {

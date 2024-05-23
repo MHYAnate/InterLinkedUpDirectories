@@ -236,10 +236,11 @@
 
 .showMore{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: first baseline;
+  justify-content: space-around;
   height:max-content;
   animation:  0.1s linear appear;
+  margin-left: 10px;
 }
 
 @keyframes appear {
@@ -769,6 +770,8 @@
   .showMore{
     max-width: 20vw;
     min-width: 310px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -946,7 +949,7 @@
     min-width: 270px;
   }
   .showMore{
-   
+    margin-right: 0;
     min-width: 270px;
   }
 }
