@@ -102,11 +102,23 @@
   }
   .categoryImgCover{
     width: 98vw;
-    height: 200px;
+    height: 125px;
   }
   .categoryImg{
     width: 98vw;
-    height: 200px;
+    height: 125px;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .categoryImgCover{
+    width: 98vw;
+    height: 100px;
+  }
+  .categoryImg{
+    width: 98vw;
+    height: 100px;
     opacity: 0.5;
   }
 }

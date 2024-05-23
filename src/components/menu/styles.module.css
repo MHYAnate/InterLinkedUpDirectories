@@ -130,7 +130,10 @@
 	.flexControl {
 		width: 30vw;
 		height: 167px;
+		border-radius: 5px;
 		background-color: white;
+		border: 1px solid black;
+		box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 5px silver;
 	}
 
 	.categoryCover {
@@ -187,17 +190,12 @@
 		font-weight: 700;
 		width: max-content;
 		height: max-content;
-		color: white;
+		color: rgb(50, 50, 50);
 		padding-left: 4px;
 		padding-right: 4px;
 		padding-bottom: 2px;
 		padding-top: 2px;
 		border-radius: 3px;
-		background-image: linear-gradient(
-			to top,
-			rgba(3, 135, 3, 0.7),
-			rgba(1, 51, 1, 0.7)
-		);
 		margin-top: 3px;
 	}
 
@@ -258,15 +256,10 @@
 		font-weight: 700;
 		width: max-content;
 		height: max-content;
-		color: white;
+		color: rgb(50, 50, 50);
 		padding-left: 4px;
 		padding-right: 4px;
 		border-radius: 3px;
-		background-image: linear-gradient(
-			to top,
-			rgba(3, 135, 3, 0.7),
-			rgba(1, 51, 1, 0.7)
-		);
 		margin-top: 3px;
 	}
 }
@@ -293,7 +286,7 @@
 		width: 91vw;
 		height: 100px;
 		cursor: pointer;
-		box-shadow: 0px 0px 1px silver, 0 0 2px silver, 0 0 3px silver;
+		box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 5px silver;
 		border-radius: 10px;
 		background-color: white;
 		overflow: hidden;
@@ -341,15 +334,10 @@
 		font-weight: 700;
 		width: inherit;
 		height: max-content;
-		color: white;
+		color: rgb(50, 50, 50);
 		padding-left: 17px;
 		padding-right: 17px;
 		border-radius: 3px;
-		background-image: linear-gradient(
-			to top,
-			rgba(3, 135, 3, 0.7),
-			rgba(1, 51, 1, 0.7)
-		);
 		margin-top: 3px;
 	}
 }
