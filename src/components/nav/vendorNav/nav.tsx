@@ -7,7 +7,9 @@ import SignOut from "./signOut";
 import DashBoard from "./dashboard";
 import Vacancies from "./vacancies";
 import Marketing from "./marketing";
-import Vendors from "./vendor";
+import Vendor from "./vendor";
+import Search from "./search";
+import { Vendors } from "@/database/serviceData";
 import { MenuTab } from "./menuTab";
 
 import { usePathname } from "next/navigation";
@@ -20,9 +22,9 @@ export default function VendorNav() {
 				<div className={styles.logo}>
 					<Logo />
 				</div>
-				<div className={styles.search}></div>
+				<div className={styles.search}><Search suggestionsList={Vendors}/></div>
 				<div className={styles.links}>
-					<Vendors />
+					<Vendor />
 					<Vacancies />
 					<Marketing />
 					<Notification />

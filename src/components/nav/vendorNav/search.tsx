@@ -69,7 +69,7 @@ const SearchComponentMain: React.FC<props> = ({ suggestionsList}) => {
     }, [pathname, close,open]);
     useEffect(() => {
       // Reset input value if pathname is not /vendors
-      if (pathname === '/') {
+      if (pathname === '/vendorprofile/dashboard') {
         
         close(true);
 
