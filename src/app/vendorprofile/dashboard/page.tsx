@@ -49,10 +49,11 @@ export default function Profile() {
 	const [imageUrl, setImageUrl] = useState("");
 
 	const [tab, setTab] = useState("");
-	const [userA, setUser] = useState<any>(auth);
+
+	const [user, loading, error] = useAuthState(auth);
 
 	const router = useRouter();
-	const user = auth.currentUser;
+	
 	
 
 
@@ -179,6 +180,8 @@ useEffect(()=>{
 		<Suspense fallback={<Loading/>}>
 		<main  className={styles.mainBodyCover}>
 			<VendorNav/>
+			{loading && <Loading />}
+			{user && (<>
 			<div className={styles.mainBody}>
 			<div className={styles.profilePictureFlexControl}>
 				<div className={styles.profilePictureServiceCover}>
@@ -330,7 +333,7 @@ useEffect(()=>{
 				</div>
 			</div>
 			</div>
-			
+			</>)}
 		</main>
 		</Suspense>
 	);
