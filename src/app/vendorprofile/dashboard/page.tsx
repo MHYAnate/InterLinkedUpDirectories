@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Loading from "@/app/register/logo";
 import VendorNav from "@/components/nav/vendorNav/nav";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
@@ -48,11 +49,20 @@ export default function Profile() {
 	const [imageUrl, setImageUrl] = useState("");
 
 	const [tab, setTab] = useState("");
-	const [userA, setUser] = useState<any>(auth);
 
 	const [user, loading, error] = useAuthState(auth);
 
+	const searchParams = useSearchParams();
 	const router = useRouter();
+	const set = useCallback(
+		(name: string, value: string) => {
+			const params = new URLSearchParams(searchParams.toString());
+			params.set(name, value);
+
+			return params.toString();
+		},
+		[searchParams]
+	);
 
 	onAuthStateChanged(auth, (user) => {
 		if (user) {
@@ -215,7 +225,7 @@ export default function Profile() {
 														<div className={styles.flexFirstcategory}>
 															<div className={styles.infoHeaderContainer}>
 																<span className={styles.titleHeaderInfo}>
-																	{profileDetails?.selectCategory} {"Service"}
+																	{profileDetails?.selectCategory} {"Service Provider"}
 																</span>
 															</div>
 															<div className={styles.infoHeaderContainer}>
@@ -267,6 +277,93 @@ export default function Profile() {
 									<div className={styles.profileBodyCategoryCover}>
 										<div className={styles.profileBodyCover}>
 											<div className={styles.flexControl}>
+											<div
+					className={styles.flexVendorCategoryControl}
+					onClick={() =>
+						router.push(
+							`/vendors` +
+								"?" +
+								set("name", `${Services[0]?.category}`) +
+								"&" +
+								set("src", `${Services[0]?.src}`)
+						)
+					}
+				>
+					<div className={styles.vendorCategory}>
+						<div className={styles.vendorCategoryImgCover}>
+							<Image
+								object-fit="cover"
+								className={styles.vendorsCategoryImg}
+								alt="Picture of the author"
+								quality={100}
+								width={100}
+								height={100}
+								src={Services[0]?.src}
+								priority={true}
+								unoptimized
+							/>
+						</div>
+						<div className={styles.vendorsCategoryName}><div className={styles.flexVendorInfoCover}><div className={styles.flexVendorCategoryName}>{Services[0]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
+					</div>
+				</div>
+				<div
+					className={styles.flexVendorCategoryControl}
+					onClick={() =>
+						router.push(
+							`/vendors` +
+								"?" +
+								set("name", `${Services[1]?.category}`) +
+								"&" +
+								set("src", `${Services[1]?.src}`)
+						)
+					}
+				>
+					<div className={styles.vendorCategory}>
+						<div className={styles.vendorCategoryImgCover}>
+							<Image
+								object-fit="cover"
+								className={styles.vendorsCategoryImg}
+								alt="Picture of the author"
+								quality={100}
+								width={100}
+								height={100}
+								src={Services[1]?.src}
+								priority={true}
+								unoptimized
+							/>
+						</div>
+						<div className={styles.vendorsCategoryName}><div className={styles.flexVendorInfoCover}><div className={styles.flexVendorCategoryName}>{Services[1]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
+					</div>
+				</div>
+				<div
+					className={styles.flexVendorCategoryControl}
+					onClick={() =>
+						router.push(
+							`/vendors` +
+								"?" +
+								set("name", `${Services[2]?.category}`) +
+								"&" +
+								set("src", `${Services[2]?.src}`)
+						)
+					}
+				>
+					<div className={styles.vendorCategory}>
+						<div className={styles.vendorCategoryImgCover}>
+							<Image
+								object-fit="cover"
+								className={styles.vendorsCategoryImgP}
+								alt="Picture of the author"
+								quality={100}
+								width={100}
+								height={100}
+								src={Services[2]?.src}
+								priority={true}
+								unoptimized
+							/>
+						</div>
+						<div className={styles.vendorsCategoryName}><div className={styles.flexVendorInfoCover}><div className={styles.flexVendorCategoryName}>{Services[2]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
+					</div>
+				</div>
 									
 											</div>
 										</div>
