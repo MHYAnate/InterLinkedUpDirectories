@@ -199,7 +199,7 @@
 .categoryCover{
   position: relative;
   width: 300px;
-  height: 540px;
+  height: 110px;
 }
 
 
@@ -210,11 +210,14 @@
   width: 300px;
   height: 540px;
 }
+
 .formImgCover{
   width: 300px;
-  height: 250px;
+  height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 
@@ -322,11 +325,7 @@
   font-weight: 700;
   color: green;
 }
-.categoryCover{
-  position: relative;
-  width: 250px;
-  height: 100px;
-}
+
 
 
 .categoryImgCover{
@@ -349,9 +348,9 @@
 }
 
 .detailImg{
-  width: 556px;
-  height: 370px;
-  opacity: 0.3;
+  width: 300px;
+  height: inherit;
+  opacity: 0.1;
 }
 
 .firstcategory{

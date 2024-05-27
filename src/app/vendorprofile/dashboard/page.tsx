@@ -197,6 +197,37 @@ export default function Profile() {
 																	unoptimized
 																/>
 															</div>
+															<div className={styles.categoryCover}>
+													<div className={styles.formImgCover}>
+														<Image
+															object-fit="cover"
+															className={styles.detailImg}
+															alt="Picture of the author"
+															quality={100}
+															width={100}
+															height={100}
+															src={`${categoryImg}`}
+															priority={true}
+															unoptimized
+														/>
+													</div>
+													<div className={styles.firstcategory}>
+														<div className={styles.flexFirstcategory}>
+															<div className={styles.infoHeaderContainer}>
+																<span className={styles.titleHeaderInfo}>
+																	{profileDetails?.selectCategory} {"Service"}
+																</span>
+															</div>
+															<div className={styles.infoHeaderContainer}>
+																<span className={styles.titleHeaderInfo}>
+																{profileDetails?.selectService}{" "}
+																		{"Specialist"}
+																</span>
+															</div>
+													
+														</div>
+													</div>
+												</div>
 															<div className={styles.updateCover}>
 																<span
 																	onClick={() =>
@@ -236,77 +267,7 @@ export default function Profile() {
 									<div className={styles.profileBodyCategoryCover}>
 										<div className={styles.profileBodyCover}>
 											<div className={styles.flexControl}>
-												<div className={styles.categoryCover}>
-													<div className={styles.formImgCover}>
-														<Image
-															object-fit="cover"
-															className={styles.detailImg}
-															alt="Picture of the author"
-															quality={100}
-															width={100}
-															height={100}
-															src={`${categoryImg}`}
-															priority={true}
-															unoptimized
-														/>
-													</div>
-													<div className={styles.firstcategory}>
-														<div className={styles.flexFirstcategory}>
-															<div className={styles.infoHeaderContainer}>
-																<span className={styles.titleHeaderInfo}>
-																	{profileDetails?.selectCategory} {"Service"}
-																</span>
-															</div>
-															<div className={styles.profileInfoContainer}>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>
-																		Specialty{" "}
-																	</span>
-																	<span className={styles.titleInfo}>
-																		{profileDetails?.selectService}{" "}
-																		{"Specialist"}
-																	</span>
-																</div>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>Country </span>
-																	<span className={styles.titleInfo}>
-																		{profileDetails?.countrySelect}
-																	</span>
-																</div>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>State </span>
-																	<span className={styles.titleInfo}>
-																		{profileDetails?.stateSelect}
-																	</span>
-																</div>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>Area </span>
-																	<span className={styles.titleInfo}>
-																		{profileDetails?.areaSelect}
-																	</span>
-																</div>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>Address </span>
-																	<span className={styles.titleInfo}>
-																		{profileDetails?.address}
-																	</span>
-																</div>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>Contact </span>
-																	<span className={styles.titleInfo}>
-																		{profileDetails?.number}
-																	</span>
-																</div>
-																<div className={styles.infoContainer}>
-																	<span className={styles.title}>Email </span>
-																	<span className={styles.titleInfoE}>
-																		{profileDetails?.email}
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+									
 											</div>
 										</div>
 									</div>
