@@ -23,7 +23,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import VidIntro from "@/components/vidIntro/vidIntro";
+import GifIntro from "@/components/vidIntro/gifIntro";
 import { Services } from "@/database/data";
 import styles from "./styles.module.css";
 
@@ -284,7 +284,7 @@ export default function Profile() {
 									<div className={styles.profileBodyCategoryCover}>
 										<div className={styles.profileBodyCover}>
 											<div className={styles.flexControl}>
-												<VidIntro/>
+												<GifIntro />
 												<div
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>
@@ -482,12 +482,12 @@ export default function Profile() {
 									</div>
 								</div>
 								<div className={styles.body}>
-									<div className={styles.mySpaceCover}>
-										<div className={styles.mySpace}>
+									<div className={styles.myVacancySpaceCover}>
+										<div className={styles.myVacancySpace}>
 											<div onClick={()=>{isVacancy === "job" ? setIsVacancy("" ):setIsVacancy("job");}} className={isVacancy === "job"? styles.isClickLeft : styles.left}>{`Job's`}</div>
 											<div  onClick={()=>{isVacancy === "company" ? setIsVacancy("" ):setIsVacancy("company");}} className={isVacancy === "company" ?styles.isClickRight : styles.right}>{`Companies`}</div>
 										</div>
-										<div className={styles.mySpaceRender}>
+										<div className={styles.mySpaceVacancyRender}>
 										  {isVacancy === "job" && (<JobsFilter/>)}
 											{}
 										</div>

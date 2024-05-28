@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 98vw;
-  height: max-content;
+  height: fit-content;
 }
 .bodyCover{
   display: flex;
@@ -12,7 +12,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   width: 98vw;
-  height: max-content;
+  height: fit-content;
 }
 .profilePictureFlexControl{
   width: 300px;
@@ -59,7 +59,7 @@
 
 .profilePictureCover{
    width: 300px;
-  height: max-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,7 +123,7 @@
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: max-content;
+  height: fit-content;
   align-items: center;
   justify-content: space-between;
   background-color: none;
@@ -132,7 +132,7 @@
 }
 .infoHeaderContainer{
   width: inherit;
-  height: max-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +145,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: left;
   width: 85px;
-  height: max-content;
+  height: fit-content;
   color: white;
   background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
   padding-left: 7px;
@@ -164,7 +164,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  height: max-content;
+  height: fit-content;
   color: white;
   text-transform: uppercase;
   background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
@@ -177,14 +177,14 @@
 .titleInfo{
   font-weight: 300;
   font-size: 1rem;
-  height: max-content;
+  height: fit-content;
   width: 210px;
   padding-left: 5px;
 }
 .titleInfoE{
   font-weight: 700;
   font-size: 1rem;
-  height: max-content;
+  height: fit-content;
   width: 210px;
   padding-left: 5px;
   color: rgb(27, 27, 27);
@@ -380,7 +380,15 @@
   justify-content: flex-start;
   align-items: center;
   width: 310px;
-  height: max-content;
+  height: fit-content;
+  margin-top: 5px;
+}
+.mySpaceVacancyCover{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 310px;
+  height: fit-content;
   margin-top: 5px;
 }
 
@@ -395,11 +403,32 @@
   color: rgb(91, 91, 91);
 }
 
+.myVacancySpace{
+  margin-top: 11px;
+  width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: rgb(91, 91, 91);
+}
+.myVacancySpace{
+  margin-top: 11px;
+  width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: rgb(91, 91, 91);
+}
+
 .left{
   text-align: center;
   cursor: pointer;
   width: 155px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 10px;
 }
 .left:hover{
@@ -411,7 +440,7 @@
   text-align: center;
   cursor: pointer;
   width: 155px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 10px;
 }
 
@@ -424,7 +453,7 @@
   text-align: center;
   cursor: pointer;
   width: 155px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 5px;
   border-bottom: 5px solid green;
   text-transform: uppercase;
@@ -435,7 +464,7 @@
   text-align: center;
   cursor: pointer;
   width: 155px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 5px;
   border-bottom: 5px solid green;
   text-transform: uppercase;
@@ -444,12 +473,22 @@
 
 .mySpaceRender{
   width: 310px;
-  height: max-content;
+  height: fit-content;
   overflow: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.mySpaceVacancyRender{
+  width: 310px;
+  height: fit-content;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .post{
   margin-bottom: 5px;
@@ -494,14 +533,14 @@
   position: absolute;
   top: 0;
   width: 310px;
-  height: max-content;
+  height: fit-content;
 }
 
 .categoryName{
   position: absolute;
   top: 0;
   width: 310px;
-  height: max-content;
+  height: fit-content;
   cursor: pointer;
   transition: box-shadow 700ms ease-in-out, border-radius 700ms ease-in-out ;
 }
@@ -534,13 +573,13 @@
   align-items: center;
   justify-content: flex-start;
   width: 310px;
-  height: max-content;
+  height: fit-content;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .infoHeaderContainer{
   width: 310px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   margin: 0;
@@ -552,14 +591,14 @@
 }
 .profileInfoContainer{
   width: 310px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   margin: 0;
 }
 .infoContainer{
   width: 310px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   margin: 0;
@@ -570,7 +609,7 @@
 
 .titleInfo{
   width: 169px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   margin: 0;
@@ -594,7 +633,7 @@
 .openShopP{
   font-size: 1.5rem;
   font-weight: 900;
-  height: max-content;
+  height: fit-content;
   margin: 0;
   color: rgb(118, 118, 118);
   text-align: center;
@@ -667,12 +706,12 @@
 
 .inventoryCover{
   width: 270px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 10px;
 }
 .inventoryTitle{
   width: 270px;
-  height: max-content;
+  height: fit-content;
   padding-top: 7px;
   padding-bottom: 7px;
   display: flex;
@@ -686,7 +725,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid silver;
@@ -709,7 +748,7 @@
   align-items: center;
   row-gap: 10px;
   width: 200px;
-  height: max-content;
+  height: fit-content;
 }
 .stockImgCover{
   width: 200px;
@@ -740,7 +779,7 @@
 
 .confirmDeleteHeader{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-bottom: 3px;
   padding-top: 3px;
   color: red;
@@ -753,7 +792,7 @@
 
 .confirmDeleteBtnCover{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -761,7 +800,7 @@
 
 .confirmDeleteBtnNo{
   width: 90px;
-  height: max-content;
+  height: fit-content;
   padding-top: 5px;
   padding-bottom: 5px; 
   color: red;
@@ -770,7 +809,7 @@
 }
 .confirmDeleteBtnYes{
   width: 90px;
-  height: max-content;
+  height: fit-content;
   padding-top: 5px;
   padding-bottom: 5px; 
   color: green;
@@ -791,7 +830,7 @@
 
 .imgControl{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -800,7 +839,7 @@
 
 .imgBtn{
   width: 90px;
-  height: max-content;
+  height: fit-content;
   padding-top: 5px;
   padding-bottom: 5px; 
   color: green;
@@ -817,7 +856,7 @@
 
 .imgBtnHighlighted{
   width: 90px;
-  height: max-content;
+  height: fit-content;
   padding-top: 5px;
   padding-bottom: 5px; 
   background-image: linear-gradient(to right, rgba(1, 141, 8, 0.7), rgba(1, 40, 2, 0.7));
@@ -829,7 +868,7 @@
 
 .delete{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 5px;
@@ -848,7 +887,7 @@
 
 .MainDetailCover{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -859,7 +898,7 @@
 
 .detailCover{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   display: flex;
@@ -870,7 +909,7 @@
 
 .detailTitle{
   width: 100px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   display: flex;
@@ -880,7 +919,7 @@
 
 .detail{
   width: 90px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   display: flex;
@@ -889,7 +928,7 @@
 }
 .detailInput{
   width: 90px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   display: flex;
@@ -899,7 +938,7 @@
 
 .upDate{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 5px;
@@ -916,18 +955,18 @@
 
 .showMore{
   width: 200px;
-  height: max-content;
+  height: fit-content;
 }
 
 .contactCover{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px
 }
 .contactTitle{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   color: green;
@@ -937,28 +976,44 @@
 
 .contact{
   width: 200px;
-  height: max-content;
+  height: fit-content;
   padding-top: 3px;
   padding-bottom: 3px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1255px) {
   .bodyCover{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 98.5vw;
-    height: max-content;
+    height: fit-content;
   }
 
   .body{
     width: 98.5vw;
     flex-direction: row;
-    height: max-content;
+    height: fit-content;
   }
+  
+  .mySpaceVacancyRender{
+    width: 98vw;
+    justify-content: flex-start;
+  }
+  .myVacancySpaceCover{
+    flex-direction: row;
+    width: 98vw; 
+    height: fit-content;
+  }
+  .mySpaceVacancyCover{
+    flex-direction: row;
+    width: 98vw;
+  }
+
+
 
  
 }
@@ -967,7 +1022,7 @@
 
   .midBody{
     flex-direction: row;
-    height: max-content;
+    height: fit-content;
     width: 98.5vw;
    } 
  
@@ -1040,7 +1095,7 @@
     width: 97.5vw;
     background-color: white;
     z-index: 3;
-    height: max-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1078,7 +1133,7 @@
     justify-content: center;
     align-items: center;
     width: 94vw;
-    height: max-content;
+    height: fit-content;
     margin-top: 10px;
   }
 
@@ -1094,7 +1149,7 @@
 .body{
   width: 98.5vw;
   flex-direction: row;
-  height: max-content;
+  height: fit-content;
 }
 .midBody{
   flex-direction: column;

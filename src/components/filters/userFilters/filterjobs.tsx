@@ -404,9 +404,11 @@ export default function VacanciesFilter() {
 
 	
 	return (
-		<div className={styles.filterBodyCover}>
-			<div className={styles.post}>Filter Jobs on Vacancy Space</div>
+		<div className={styles.filterVacancyBodyCover}>
+			
 				<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
+					
+				<div className={styles.post}>Filter Jobs on Vacancy Space</div>
 					<div className={styles.selectGroup}>
 						<div className={styles.selectCover}>
 							<select
@@ -453,12 +455,12 @@ export default function VacanciesFilter() {
 				</form>
 		
 
-			<div className={styles.displayFilter}>
+			<div className={styles.displayVacancyFilter}>
 				{isClient && (
 					<div className={styles.renderVacancyInnerCover}>
 						{filteredFirebaseCountryList.length > 0
 							? RenderAvailableVacancy()
-							:(<div className={styles.renderVendorInnerMostCover}>
+							:(<div className={styles.renderVacancyInnerMostCover}>
 								<div className={styles.noPost}>You are seeing this Models, Becouse there are no posted Jobs Yet on the Vacancy Space</div>
 								<div className={styles.renderingVacancy}>{RenderAvailableModelVacancy()}</div></div>)}
 					</div>
