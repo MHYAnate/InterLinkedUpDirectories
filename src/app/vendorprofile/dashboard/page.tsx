@@ -23,6 +23,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import VidIntro from "@/components/vidIntro/vidIntro";
 import { Services } from "@/database/data";
 import styles from "./styles.module.css";
 
@@ -283,7 +284,7 @@ export default function Profile() {
 									<div className={styles.profileBodyCategoryCover}>
 										<div className={styles.profileBodyCover}>
 											<div className={styles.flexControl}>
-												<div className={styles.servicesHeader}>Available 	Linkage</div>
+												<VidIntro/>
 												<div
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>
@@ -325,7 +326,7 @@ export default function Profile() {
 															</div>
 														</div>
 													</div>
-												d</div>
+												dvi</div>
 												<div
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>

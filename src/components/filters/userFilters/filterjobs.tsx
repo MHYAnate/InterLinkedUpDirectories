@@ -39,7 +39,7 @@ type FormValue = {
 	title: string;
 };
 
-export default function JobsFilter() {
+export default function VacanciesFilter() {
 	const {
 		register,
 		handleSubmit,
@@ -405,6 +405,7 @@ export default function JobsFilter() {
 	
 	return (
 		<div className={styles.filterBodyCover}>
+			<div className={styles.post}>Filter Jobs on Vacancy Space</div>
 				<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 					<div className={styles.selectGroup}>
 						<div className={styles.selectCover}>
@@ -457,7 +458,9 @@ export default function JobsFilter() {
 					<div className={styles.renderVacancyInnerCover}>
 						{filteredFirebaseCountryList.length > 0
 							? RenderAvailableVacancy()
-							: RenderAvailableModelVacancy()}
+							:(<div className={styles.renderVendorInnerMostCover}>
+								<div className={styles.noPost}>You are seeing this Models, Becouse there are no posted Jobs Yet on the Vacancy Space</div>
+								<div className={styles.renderingVacancy}>{RenderAvailableModelVacancy()}</div></div>)}
 					</div>
 				)}
 				

@@ -38,7 +38,6 @@ const VidIntro =() => {
 			<div className={styles.menuBody}>
 				<div
 					className={styles.flexControl}
-				
 				>
 					<div className={styles.categoryCover}>
 						<div className={styles.categoryImgCover}>

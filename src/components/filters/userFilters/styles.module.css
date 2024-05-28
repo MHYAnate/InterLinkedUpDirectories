@@ -393,8 +393,6 @@
   justify-content: center;
   width: 290px;
   height:max-content;
-  border-bottom: 1px solid silver;
-  margin-left: 10px;
   padding-bottom: 10px;
   transition: background-image 1s ease-in-out 0.1s;
   font-size: 1rem;
@@ -407,7 +405,7 @@
 
 
 .innerTextVacancyRenderCover{
-  width: 280px;
+  width: 290px;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -427,7 +425,7 @@
   padding-bottom: 30px;
   animation:  0.1s linear appear;
   box-sizing: border-box;
-  width: 280px;
+  width: 290px;
   row-gap: 10px;
 }
 
@@ -445,14 +443,15 @@
 
 
 .coverDetail{
-  width: 280px;
+  width: 290px;
   display: flex;
   justify-content:space-between ;
   align-items: first baseline;
   height: max-content;
+  font-size: 0.7rem;
 }
 .coverHeadDetail{
-  width: 280px;
+  width: 290px;
   max-width: max-content;
   display: flex;
   flex-direction: column;
@@ -462,7 +461,7 @@
   height: max-content;
 }
 .headFootDetailCover{
-  width: 280px;
+  width: 290px;
   font-size: 1rem;
   display: flex;
   justify-content: flex-start;
@@ -484,6 +483,7 @@
   column-gap: 5px;
   font-weight: 500;
   color: rgb(107, 107, 107);
+  font-size: 0.7rem;
 }
 
 .detailTitle{
@@ -498,8 +498,8 @@
 }
 
 .detail{
-  width: 40vw;
-  font-size: 0.8rem;
+  width: 180px;
+  font-size: 0.6rem;
   height: max-content;
   text-align: center;
   text-align: left;
@@ -579,8 +579,8 @@
 
 .renderVacancyInnerCover{
   display: flex;
-  height:260px;
-  width: 310px;
+  height:345px;
+  width: 320px;
   flex-wrap: wrap;
   overflow: auto;
   justify-content: center;
@@ -588,7 +588,6 @@
   justify-self: center;
   margin-top: 10px;
   padding-top: 20px;
-  column-gap: 20px;
   padding-bottom: 10px;
 }
 
@@ -619,6 +618,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+.renderingVacancy{
+  display: flex;
+  flex-direction: column;
 }
 .noPost{
   color: red;
