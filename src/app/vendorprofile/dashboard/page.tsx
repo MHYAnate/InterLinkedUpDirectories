@@ -17,6 +17,8 @@ import {
 	CollectionReference,
 	onSnapshot,
 } from "firebase/firestore";
+import JobsFilter from "@/components/filters/userFilters/filterjobs";
+import FilterItems from "@/components/filters/userFilters/filterItems";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -51,6 +53,10 @@ export default function Profile() {
 	const [tab, setTab] = useState("");
 
 	const [user, loading, error] = useAuthState(auth);
+
+	const [isMarket, setIsMarket] = useState("item");
+
+	const [isVacancy, setIsVacancy] = useState("job");
 
 	const searchParams = useSearchParams();
 	const router = useRouter();
@@ -208,36 +214,36 @@ export default function Profile() {
 																/>
 															</div>
 															<div className={styles.categoryCover}>
-													<div className={styles.formImgCover}>
-														<Image
-															object-fit="cover"
-															className={styles.detailImg}
-															alt="Picture of the author"
-															quality={100}
-															width={100}
-															height={100}
-															src={`${categoryImg}`}
-															priority={true}
-															unoptimized
-														/>
-													</div>
-													<div className={styles.firstcategory}>
-														<div className={styles.flexFirstcategory}>
-															<div className={styles.infoHeaderContainer}>
-																<span className={styles.titleHeaderInfo}>
-																	{profileDetails?.selectCategory} {"Service Provider"}
-																</span>
+																<div className={styles.formImgCover}>
+																	<Image
+																		object-fit="cover"
+																		className={styles.detailImg}
+																		alt="Picture of the author"
+																		quality={100}
+																		width={100}
+																		height={100}
+																		src={`${categoryImg}`}
+																		priority={true}
+																		unoptimized
+																	/>
+																</div>
+																<div className={styles.firstcategory}>
+																	<div className={styles.flexFirstcategory}>
+																		<div className={styles.infoHeaderContainer}>
+																			<span className={styles.titleHeaderInfo}>
+																				{profileDetails?.selectCategory}{" "}
+																				{"Service Provider"}
+																			</span>
+																		</div>
+																		<div className={styles.infoHeaderContainer}>
+																			<span className={styles.titleHeaderInfo}>
+																				{profileDetails?.selectService}{" "}
+																				{"Specialist"}
+																			</span>
+																		</div>
+																	</div>
+																</div>
 															</div>
-															<div className={styles.infoHeaderContainer}>
-																<span className={styles.titleHeaderInfo}>
-																{profileDetails?.selectService}{" "}
-																		{"Specialist"}
-																</span>
-															</div>
-													
-														</div>
-													</div>
-												</div>
 															<div className={styles.updateCover}>
 																<span
 																	onClick={() =>
@@ -277,158 +283,213 @@ export default function Profile() {
 									<div className={styles.profileBodyCategoryCover}>
 										<div className={styles.profileBodyCover}>
 											<div className={styles.flexControl}>
-											<div
-					className={styles.flexVendorCategoryControl}
-					onClick={() =>
-						router.push(
-							`/vendors` +
-								"?" +
-								set("name", `${Services[0]?.category}`) +
-								"&" +
-								set("src", `${Services[0]?.src}`)
-						)
-					}
-				>
-					<div className={styles.vendorCategory}>
-						<div className={styles.vendorCategoryImgCover}>
-							<Image
-								object-fit="cover"
-								className={styles.vendorsCategoryImg}
-								alt="Picture of the author"
-								quality={100}
-								width={100}
-								height={100}
-								src={Services[0]?.src}
-								priority={true}
-								unoptimized
-							/>
-						</div>
-						<div className={styles.vendorsCategoryName}><div className={styles.flexVendorInfoCover}><div className={styles.flexVendorCategoryName}>{Services[0]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
-					</div>
-				</div>
-				<div
-					className={styles.flexVendorCategoryControl}
-					onClick={() =>
-						router.push(
-							`/vendors` +
-								"?" +
-								set("name", `${Services[1]?.category}`) +
-								"&" +
-								set("src", `${Services[1]?.src}`)
-						)
-					}
-				>
-					<div className={styles.vendorCategory}>
-						<div className={styles.vendorCategoryImgCover}>
-							<Image
-								object-fit="cover"
-								className={styles.vendorsCategoryImg}
-								alt="Picture of the author"
-								quality={100}
-								width={100}
-								height={100}
-								src={Services[1]?.src}
-								priority={true}
-								unoptimized
-							/>
-						</div>
-						<div className={styles.vendorsCategoryName}><div className={styles.flexVendorInfoCover}><div className={styles.flexVendorCategoryName}>{Services[1]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
-					</div>
-				</div>
-				<div
-					className={styles.flexVendorCategoryControl}
-					onClick={() =>
-						router.push(
-							`/vendors` +
-								"?" +
-								set("name", `${Services[2]?.category}`) +
-								"&" +
-								set("src", `${Services[2]?.src}`)
-						)
-					}
-				>
-					<div className={styles.vendorCategory}>
-						<div className={styles.vendorCategoryImgCover}>
-							<Image
-								object-fit="cover"
-								className={styles.vendorsCategoryImgP}
-								alt="Picture of the author"
-								quality={100}
-								width={100}
-								height={100}
-								src={Services[2]?.src}
-								priority={true}
-								unoptimized
-							/>
-						</div>
-						<div className={styles.vendorsCategoryName}><div className={styles.flexVendorInfoCover}><div className={styles.flexVendorCategoryName}>{Services[2]?.category}<span className={styles.span}> Service <span className={styles.bright}>Category</span></span></div></div></div>
-					</div>
-				</div>
-									
+												<div className={styles.servicesHeader}>Available 	Linkage</div>
+												<div
+													className={styles.flexVendorCategoryControl}
+													onClick={() =>
+														router.push(
+															`/vendors` +
+																"?" +
+																set("name", `${Services[0]?.category}`) +
+																"&" +
+																set("src", `${Services[0]?.src}`)
+														)
+													}
+												>
+													<div className={styles.vendorCategory}>
+														<div className={styles.vendorCategoryImgCover}>
+															<Image
+																object-fit="cover"
+																className={styles.vendorsCategoryImg}
+																alt="Picture of the author"
+																quality={100}
+																width={100}
+																height={100}
+																src={Services[0]?.src}
+																priority={true}
+																unoptimized
+															/>
+														</div>
+														<div className={styles.vendorsCategoryName}>
+															<div className={styles.flexVendorInfoCover}>
+																<div className={styles.flexVendorCategoryName}>
+																	{Services[0]?.category}
+																	<span className={styles.span}>
+																		{" "}
+																		Service{" "}
+																		<span className={styles.bright}>
+																			Category
+																		</span>
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												d</div>
+												<div
+													className={styles.flexVendorCategoryControl}
+													onClick={() =>
+														router.push(
+															`/vendors` +
+																"?" +
+																set("name", `${Services[1]?.category}`) +
+																"&" +
+																set("src", `${Services[1]?.src}`)
+														)
+													}
+												>
+													<div className={styles.vendorCategory}>
+														<div className={styles.vendorCategoryImgCover}>
+															<Image
+																object-fit="cover"
+																className={styles.vendorsCategoryImg}
+																alt="Picture of the author"
+																quality={100}
+																width={100}
+																height={100}
+																src={Services[1]?.src}
+																priority={true}
+																unoptimized
+															/>
+														</div>
+														<div className={styles.vendorsCategoryName}>
+															<div className={styles.flexVendorInfoCover}>
+																<div className={styles.flexVendorCategoryName}>
+																	{Services[1]?.category}
+																	<span className={styles.span}>
+																		{" "}
+																		Service{" "}
+																		<span className={styles.bright}>
+																			Category
+																		</span>
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													className={styles.flexVendorCategoryControl}
+													onClick={() =>
+														router.push(
+															`/vendors` +
+																"?" +
+																set("name", `${Services[2]?.category}`) +
+																"&" +
+																set("src", `${Services[2]?.src}`)
+														)
+													}
+												>
+													<div className={styles.vendorCategory}>
+														<div className={styles.vendorCategoryImgCover}>
+															<Image
+																object-fit="cover"
+																className={styles.vendorsCategoryImgP}
+																alt="Picture of the author"
+																quality={100}
+																width={100}
+																height={100}
+																src={Services[2]?.src}
+																priority={true}
+																unoptimized
+															/>
+														</div>
+														<div className={styles.vendorsCategoryName}>
+															<div className={styles.flexVendorInfoCover}>
+																<div className={styles.flexVendorCategoryName}>
+																	{Services[2]?.category}
+																	<span className={styles.span}>
+																		{" "}
+																		Service{" "}
+																		<span className={styles.bright}>
+																			Category
+																		</span>
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													className={styles.flexVendorCategoryControl}
+													onClick={() => router.push(`/market`)}
+												>
+													<div className={styles.vendorCategory}>
+														<div className={styles.vendorCategoryImgCover}>
+															<Image
+																object-fit="cover"
+																className={styles.vendorsCategoryImgP}
+																alt="Picture of the author"
+																quality={100}
+																width={100}
+																height={100}
+																src="/service/commerce.jpg"
+																priority={true}
+																unoptimized
+															/>
+														</div>
+														<div className={styles.vendorsCategoryName}>
+															<div className={styles.flexVendorInfoCover}>
+																<div className={styles.flexVendorCategoryName}>
+																	Market Space
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													className={styles.flexVendorCategoryControl}
+													onClick={() => router.push(`/vacancies`)}
+												>
+													<div className={styles.vendorCategory}>
+														<div className={styles.vendorCategoryImgCover}>
+															<Image
+																object-fit="cover"
+																className={styles.vendorsCategoryImgP}
+																alt="Picture of the author"
+																quality={100}
+																width={100}
+																height={100}
+																src="/service/vacancy.jpg"
+																priority={true}
+																unoptimized
+															/>
+														</div>
+														<div className={styles.vendorsCategoryName}>
+															<div className={styles.flexVendorInfoCover}>
+																<div className={styles.flexVendorCategoryName}>
+																	Vacancies
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div className={styles.midBody}>
-									<div className={styles.categoryCover}>
-										<div className={styles.categoryImgCover}>
-											<Image
-												object-fit="cover"
-												className={styles.categoryImg}
-												alt="Picture of the author"
-												quality={100}
-												width={100}
-												height={100}
-												src="/service/commerce.jpg"
-												priority={true}
-												unoptimized
-											/>
-										</div>
-										<div className={styles.SpaceEnter}>
-											{" "}
-											<div className={styles.openShop}>
-												{" "}
-												<p className={styles.openShopP}>Enter</p>
-											</div>
-										</div>
-									</div>
 									<div className={styles.mySpaceCover}>
 										<div className={styles.mySpace}>
-											<div className={styles.left}>{`Item's`}</div>
-											<div className={styles.right}>{`Shop's`}</div>
+											<div onClick={()=>{isMarket === "item" ? setIsMarket("" ):setIsMarket("item");}} className={isMarket === "item"? styles.isClickLeft : styles.left}>{`Item's`}</div>
+											<div onClick={()=>{isMarket === "shop" ? setIsMarket("" ):setIsMarket("shop");}} className={isMarket === "shop" ?styles.isClickRight : styles.right}>{`Shop's`} </div>
 										</div>
-										<div className={styles.mySpaceRender}></div>
+										<div className={styles.mySpaceRender}>
+											{isMarket === "item" && (<FilterItems/>)}
+											{}
+										</div>
 									</div>
 								</div>
 								<div className={styles.body}>
-									<div className={styles.categoryCover}>
-										<div className={styles.categoryImgCover}>
-											<Image
-												object-fit="cover"
-												className={styles.categoryImg}
-												alt="Picture of the author"
-												quality={100}
-												width={100}
-												height={100}
-												src="/service/vacancy.jpg"
-												priority={true}
-												unoptimized
-											/>
-										</div>
-										<div className={styles.SpaceEnter}>
-											{" "}
-											<div className={styles.openShop}>
-												{" "}
-												<p className={styles.openShopP}>Enter</p>
-											</div>
-										</div>
-									</div>
 									<div className={styles.mySpaceCover}>
 										<div className={styles.mySpace}>
-											<div className={styles.left}>{`Job's`}</div>
-											<div className={styles.right}>{`Companies`}</div>
+											<div onClick={()=>{isVacancy === "job" ? setIsVacancy("" ):setIsVacancy("job");}} className={isVacancy === "job"? styles.isClickLeft : styles.left}>{`Job's`}</div>
+											<div  onClick={()=>{isVacancy === "company" ? setIsVacancy("" ):setIsVacancy("company");}} className={isVacancy === "company" ?styles.isClickRight : styles.right}>{`Companies`}</div>
 										</div>
-										<div className={styles.mySpaceRender}></div>
+										<div className={styles.mySpaceRender}>
+										  {isVacancy === "job" && (<JobsFilter/>)}
+											{}
+										</div>
 									</div>
 								</div>
 							</div>

@@ -145,7 +145,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>Markets</div></div></div>
+						<div className={styles.categoryName}><div className={styles.flexCover}><div className={styles.flexCategoryName}>Market Space</div></div></div>
 					</div>
 				</div>
 				<div

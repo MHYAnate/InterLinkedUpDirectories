@@ -594,7 +594,7 @@
 
 .renderVendorInnerCover{
   display: flex;
-  height:350px;
+  height:300px;
   width: 310px;
   flex-direction: column;
   overflow: auto;

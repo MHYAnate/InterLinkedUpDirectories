@@ -101,6 +101,9 @@
 		0.5px 0.5px 1pxblack;
 	color: rgb(69, 69, 69);
 }
+.bright{
+	display: none;
+}
 @media screen and (max-width: 1230px) {
 	.flexCategoryName {
 		font-size: 0.7rem;
