@@ -12,7 +12,7 @@ export default function Marketing() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/vendorprofile/dashboard/market"? styles.activeBtn : styles.inActiveBtn}`}
+			className={`${styles.link} ${pathname === "/vendorprofile/dashboard/market"? styles.activeBtn : styles.none}`}
 			onClick={()=>router.push("/vendorprofile/dashboard/market")} 
 		>
 			MARKET

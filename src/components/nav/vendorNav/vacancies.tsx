@@ -12,7 +12,7 @@ export default function Vacancies() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/vendorprofile/dashboard/vacancies"? styles.activeBtn : styles.inActiveBtn}`}
+			className={`${styles.link} ${pathname === "/vendorprofile/dashboard/vacancies"? styles.activeBtn : styles.none}`}
 			onClick={()=>router.push("/vendorprofile/dashboard/vacancies")} 
 		>
 			VACANCIES

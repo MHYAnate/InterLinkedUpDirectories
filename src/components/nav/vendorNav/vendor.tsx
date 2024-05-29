@@ -12,7 +12,7 @@ export default function  Vendors() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/vendorprofile/dashboard/vendors" ? styles.activeBtn : styles.inActiveBtn}`}
+			className={`${styles.link} ${pathname === "/vendorprofile/dashboard/vendors" ? styles.activeBtn : styles.none}`}
 			onClick={()=>router.push('/vendorprofile/dashboard/vendors')} 
 		>
 			VENDORS

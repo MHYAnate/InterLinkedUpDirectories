@@ -1,3 +1,6 @@
+.none{
+	display: none;
+}
 .navBodyCover {
 	display: flex;
 	justify-content: center;

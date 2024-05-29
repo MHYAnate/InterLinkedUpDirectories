@@ -250,11 +250,7 @@
   .flexCategoryName{
     font-size: 0.5rem;
   }
-  .menuUserCover{
-    width: 310px;
-    height: max-content;
-    display: none;
-  }
+
 }
 
 @media screen and (max-width: 490px) {
