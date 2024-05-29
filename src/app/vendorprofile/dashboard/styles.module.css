@@ -6,6 +6,12 @@
   width: 98vw;
   height: fit-content;
 }
+.pageBodyCover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;height: max-content;
+}
 .bodyCover{
   display: flex;
   justify-content: space-between;
@@ -486,7 +492,7 @@
 }
 
 .mySpaceVacancyRender{
-  width: 310px;
+  width: 320px;
   height: fit-content;
   overflow: auto;
   display: flex;
@@ -1061,6 +1067,8 @@
  
 }
 
+
+
 @media screen and (max-width: 640px) {
 
   .bodyCover{
@@ -1198,3 +1206,4 @@
 }
 
 }
+

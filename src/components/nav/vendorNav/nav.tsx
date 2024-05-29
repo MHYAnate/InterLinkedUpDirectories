@@ -12,9 +12,17 @@ import Search from "./search";
 import { Vendors } from "@/database/serviceData";
 import { MenuTab } from "./menuTab";
 
+
 import { usePathname } from "next/navigation";
+import Company from "./company";
+import Shop from "./shop";
+import About from "./about";
 
 export default function VendorNav() {
+
+
+
+	
 	const pathname = usePathname();
 	return (
 		<div className={styles.navBodyCover}>
@@ -24,15 +32,18 @@ export default function VendorNav() {
 				</div>
 				<div className={styles.search}><Search suggestionsList={Vendors}/></div>
 				<div className={styles.links}>
+					<Shop/>
+					<Company/>
 					<Vendor />
 					<Vacancies />
 					<Marketing />
+					<About/>
 					<Notification />
 					<Settings />
+					{ pathname !== "/vendorprofile/dashboard" ? <DashBoard/> : <></>}
 					<SignOut />
-					{ pathname === "/vendorprofile/dashboard/notification"  || pathname === "/vendorprofile/dashboard/settings"  ? <DashBoard/> : <></>}
 				</div>
-				<div className={styles.menu}><MenuTab/><SignOut /></div>
+				<div className={styles.menu}><MenuTab/></div>
 				
 			</div>
 		</div>

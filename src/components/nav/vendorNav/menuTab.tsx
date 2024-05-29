@@ -1,10 +1,26 @@
+"use client"
 import { useState, useTransition } from "react";
 import { TabButton } from "./tabBtn";
 import { useRouter } from "next/navigation";
+import { getAuth, signOut } from "firebase/auth";
 import styles from "./styles.module.css";
 
 export const MenuTab = () => {
 	const [tab, setTab] = useState("");
+
+	const router = useRouter();
+
+	const auth = getAuth();
+
+	const SingOut = () => {
+			signOut(auth)
+			.then(() => {
+				router.push("/register");
+			})
+			.catch((error) => {
+				// An error happened.
+			});
+		};
 
   function MenuList() {
 
@@ -19,6 +35,7 @@ export const MenuTab = () => {
           <div className={styles.menuList} onClick={() => (router.push("/vendorprofile/dashboard/notification"), setTab(""))}>NOTIFICATION</div>
   
           <div className={styles.menuList} onClick={() => (router.push("/vendorprofile/dashboard/settings"), setTab(""))}>SETTINGS</div>
+					<div className={styles.menuList} onClick={() => SingOut}>SignOut</div>
         </div>
       </div>
     );

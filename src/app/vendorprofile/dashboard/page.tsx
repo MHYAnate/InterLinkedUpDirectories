@@ -6,6 +6,7 @@ import VendorNav from "@/components/nav/vendorNav/nav";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import NewsLetter from "@/components/newsLetter/newsLetter";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
 	collection,
