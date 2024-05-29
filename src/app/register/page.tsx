@@ -232,12 +232,9 @@ export default function Register() {
 				});
 
 				updateEmail(user, `${data.email}`);
-				if (isVendorTab === "vendor") {
+				
 					router.push("vendorprofile/dashboard");
-				}
-				if (isVendorTab === "user") {
-					router.push("userprofile/dashboard");
-				}
+			
 			})
 			.catch((error) => {
 				const errorCode = error.code;

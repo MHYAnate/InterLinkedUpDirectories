@@ -81,12 +81,10 @@ export default function Register() {
 				// Signed up
 				const user = userCredential.user;
 
-				if (isVendorTab === "vendor") {
+			
 					router.push("vendorprofile/dashboard");
-				}
-				if (isVendorTab === "user") {
-					router.push("userprofile/dashboard");
-				}
+			
+			
 
 				setLoader(true);
 			})
@@ -138,21 +136,6 @@ export default function Register() {
 							</div>
 						</div>
 						<div className={styles.formCover}>
-							<div className={styles.topSelect}>
-								<div
-										onClick={() => setIsVendorTab("user")}
-									className={isVendorTab === "user" ? styles.topSelectBtnLeftSelected:styles.topSelectBtnLeft}
-								>
-									<span className={styles.tsSpan}>Log In as User</span>
-								</div>
-								<div
-									onClick={() => setIsVendorTab("vendor")}
-									className={isVendorTab === "vendor" ? styles.topSelectBtnRightSelected:styles.topSelectBtnRight}
-								>
-									<span className={styles.tsSpan}>Log In as Vendor</span>
-								</div>
-							</div>
-							{(isVendorTab === "vendor" || isVendorTab === "user") && (
 								<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 									<div className={styles.innerFormCover}>
 										{tab !== "Reset" && (
@@ -280,7 +263,7 @@ export default function Register() {
 										)}
 									</div>
 								</form>
-							)}
+							
 						</div>
 					</div>
 				</div>

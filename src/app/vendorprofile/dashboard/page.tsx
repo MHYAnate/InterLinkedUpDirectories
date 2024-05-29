@@ -14,7 +14,7 @@ import {
 	doc,
 	getDocs,
 	query,
-	where,
+	where, 
 	CollectionReference,
 	onSnapshot,
 } from "firebase/firestore";
@@ -189,7 +189,7 @@ export default function Profile() {
 												quality={100}
 												width={100}
 												height={100}
-												src={`${serviceImg}`}
+												src={profileDetails?.selectCategory? `${serviceImg}`:"/service/profile.jpg"}
 												priority={true}
 												unoptimized
 											/>
@@ -215,7 +215,7 @@ export default function Profile() {
 																	unoptimized
 																/>
 															</div>
-															<div className={styles.categoryCover}>
+															{profileDetails?.selectCategory && <div className={styles.categoryCover}>
 																<div className={styles.formImgCover}>
 																	<Image
 																		object-fit="cover"
@@ -224,7 +224,7 @@ export default function Profile() {
 																		quality={100}
 																		width={100}
 																		height={100}
-																		src={`${categoryImg}`}
+																		src={profileDetails?.selectCategory?`${categoryImg}`:"/service/suser.jpg"}
 																		priority={true}
 																		unoptimized
 																	/>
@@ -245,7 +245,8 @@ export default function Profile() {
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div>}
+															
 															<div className={styles.updateCover}>
 																<span
 																	onClick={() =>
