@@ -168,9 +168,10 @@
 .form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: first baseline;
   width: 68vw;
   height: max-content;
+  padding-left: 5px;
 }
 
 .innerFormCover{
@@ -307,6 +308,15 @@
 }
 
 @media screen and (max-width: 770px) {
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 68vw;
+    height: max-content;
+    padding-left: 0;
+  }
+
   .formContainer{
     display: flex;
     flex-direction: column;
