@@ -117,17 +117,17 @@
 }
 .hover{
   position: absolute;
-  top: 0.1px;
-  left: 0.01px;
-  width: 68vw;
+  top: 0;
+  left: 0;
+  width: 68.3vw;
   max-height: 400px;
   min-height: max-content;
   overflow-y: auto;
   z-index: 2;
   background-image: linear-gradient(
     to right,
-    rgba(206, 208, 206, 0.5),
-    rgba(134, 134, 134, 0.5)
+    rgba(206, 208, 206, 0.9),
+    rgba(134, 134, 134, 0.9)
   );
   animation:  0.7s linear appear;
 }
