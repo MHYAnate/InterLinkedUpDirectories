@@ -5,17 +5,17 @@ import { useRouter } from 'next/navigation'
  
 
 
-export default function Vacancies() {
+export default function Shop() {
 
 	const pathname = usePathname();
   const router = useRouter();
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/dashboard/vacancies"? styles.activeBtn : styles.none}`}
-			onClick={()=>router.push("/dashboard/vacancies")} 
+			className={`${styles.link} ${pathname === "/dashboard/market/shop"? styles.activeBtn : styles.none}`}
+			onClick={()=>router.push("/dashboard/market/shop")} 
 		>
-			VACANCIES
+			SHOP
 		</div>
 	);
 }

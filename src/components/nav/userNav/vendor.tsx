@@ -5,15 +5,15 @@ import { useRouter } from 'next/navigation'
  
 
 
-export default function Vendors() {
+export default function  Vendors() {
 
 	const pathname = usePathname();
   const router = useRouter();
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/userprofile/dashboard/vendors" ? styles.activeBtn : styles.inActiveBtn}`}
-			onClick={()=>router.push('/userprofile/dashboard/vendors')} 
+			className={`${styles.link} ${pathname === "/dashboard/vendors" ? styles.activeBtn : styles.none}`}
+			onClick={()=>router.push('/dashboard/vendors')} 
 		>
 			VENDORS
 		</div>

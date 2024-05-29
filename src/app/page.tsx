@@ -7,9 +7,12 @@ import { Services } from "@/database/data";
 import Menu from "@/components/menu/menu";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 import Nav from "@/components/nav/mainNav/nav";
+import { useEffect } from "react";
 
 export default function Home() {
-  
+  useEffect(()=>{
+		window.location.pathname;
+	})
 
 	return (
 		<main className={styles.Main}>

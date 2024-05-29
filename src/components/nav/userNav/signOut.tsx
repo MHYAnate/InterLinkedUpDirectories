@@ -23,7 +23,7 @@ export default function SignOut() {
 		
 
 	return (
-		<div className={`${styles.link} ${pathname === "/userprofile/dashboard/settings" ? styles.activeBtn : styles.inActiveBtn}`} onClick={SingOut}>
+		<div className={`${styles.link} ${pathname === "/vendorprofile" ? styles.activeBtn : styles.inActiveSignOutBtn}`} onClick={SingOut}>
 			SIGN OUT
 		</div>
 	);

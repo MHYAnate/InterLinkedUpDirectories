@@ -233,7 +233,7 @@ export default function Register() {
 
 				updateEmail(user, `${data.email}`);
 				
-					router.push("vendorprofile/dashboard");
+					router.push("dashboard");
 			
 			})
 			.catch((error) => {

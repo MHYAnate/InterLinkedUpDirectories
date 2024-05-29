@@ -12,8 +12,8 @@ export default function Marketing() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/userprofile/dashboard/market"? styles.activeBtn : styles.inActiveBtn}`}
-			onClick={()=>router.push("/userprofile/dashboard/market")} 
+			className={`${styles.link} ${pathname === "/dashboard/market"? styles.activeBtn : styles.none}`}
+			onClick={()=>router.push("/dashboard/market")} 
 		>
 			MARKET
 		</div>

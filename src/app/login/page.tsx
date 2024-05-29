@@ -82,7 +82,7 @@ export default function Register() {
 				const user = userCredential.user;
 
 			
-					router.push("vendorprofile/dashboard");
+					router.push("dashboard");
 			
 			
 

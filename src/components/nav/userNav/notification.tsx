@@ -12,8 +12,8 @@ export default function Notification() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/userprofile/dashboard/notification"? styles.activeBtn : styles.inActiveBtn}`}
-			onClick={()=>router.push("/userprofile/dashboard/notification")} 
+			className={`${styles.link} ${pathname === "/dashboard/notification"? styles.activeBtn : styles.inActiveBtn}`}
+			onClick={()=>router.push("/dashboard/notification")} 
 		>
 			NOTIFICATION
 		</div>

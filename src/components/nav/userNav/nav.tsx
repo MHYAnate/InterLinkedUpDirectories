@@ -7,10 +7,20 @@ import SignOut from "./signOut";
 import DashBoard from "./dashboard";
 import Vacancies from "./vacancies";
 import Marketing from "./marketing";
-import Vendors from "./vendor";
+import Vendor from "./vendor";
+import Search from "./search";
+import { Vendors } from "@/database/serviceData";
+import { MenuTab } from "./menuTab";
 import { usePathname } from "next/navigation";
+import Company from "./company";
+import Shop from "./shop";
+import About from "./about";
 
-export default function UserNav() {
+export default function VendorNav() {
+
+
+
+	
 	const pathname = usePathname();
 	return (
 		<div className={styles.navBodyCover}>
@@ -18,17 +28,21 @@ export default function UserNav() {
 				<div className={styles.logo}>
 					<Logo />
 				</div>
-				<div className={styles.search}></div>
+				<div className={styles.search}><Search suggestionsList={Vendors}/></div>
 				<div className={styles.links}>
-					<Vendors />
-          <Vacancies />
-          <Marketing />
+					<Shop/>
+					<Company/>
+					<Vendor />
+					<Vacancies />
+					<Marketing />
+					<About/>
 					<Notification />
 					<Settings />
+					{ pathname !== "/dashboard" ? <DashBoard/> : <></>}
 					<SignOut />
-					{ pathname === "/userprofile/dashboard/notification"  || pathname === "/userprofile/dashboard/settings"  ? <DashBoard/> : <></>}
 				</div>
-				<div className={styles.menu}></div>
+				<div className={styles.menu}><MenuTab/></div>
+				
 			</div>
 		</div>
 	);

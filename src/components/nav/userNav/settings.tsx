@@ -12,8 +12,8 @@ export default function Settings() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/userprofile/dashboard/settings" ? styles.activeBtn : styles.inActiveBtn}`}
-			onClick={()=>router.push('/userprofile/dashboard/settings')} 
+			className={`${styles.link} ${pathname === "/dashboard/settings" ? styles.activeBtn : styles.inActiveBtn}`}
+			onClick={()=>router.push('/dashboard/settings')} 
 		>
 			SETTINGS
 		</div>

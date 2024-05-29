@@ -12,8 +12,8 @@ export default function DashBoard() {
 	
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/userprofile/dashboard/settings" ? styles.activeBtn : styles.inActiveBtn}`}
-			onClick={()=>router.push('/userprofile/dashboard')} 
+			className={`${styles.link} ${pathname === "/dashboard" ? styles.activeBtn : styles.inActiveBtn}`}
+			onClick={()=>router.push('/dashboard')} 
 		>
 			DASHBOARD
 		</div>
