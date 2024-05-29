@@ -291,7 +291,7 @@ export default function Profile() {
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>
 														router.push(
-															`/vendors` +
+															`/dashboard/vendors` +
 																"?" +
 																set("name", `${Services[0]?.category}`) +
 																"&" +
@@ -333,7 +333,7 @@ export default function Profile() {
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>
 														router.push(
-															`/vendors` +
+															`/dashboard/vendors` +
 																"?" +
 																set("name", `${Services[1]?.category}`) +
 																"&" +
@@ -375,7 +375,7 @@ export default function Profile() {
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>
 														router.push(
-															`/vendors` +
+															`/dashboard/vendors` +
 																"?" +
 																set("name", `${Services[2]?.category}`) +
 																"&" +
@@ -415,7 +415,7 @@ export default function Profile() {
 												</div>
 												<div
 													className={styles.flexVendorCategoryControl}
-													onClick={() => router.push(`/market`)}
+													onClick={() => router.push(`/dashboard/market`)}
 												>
 													<div className={styles.vendorCategory}>
 														<div className={styles.vendorCategoryImgCover}>
@@ -442,7 +442,7 @@ export default function Profile() {
 												</div>
 												<div
 													className={styles.flexVendorCategoryControl}
-													onClick={() => router.push(`/vacancies`)}
+													onClick={() => router.push(`/dashboard/vacancies`)}
 												>
 													<div className={styles.vendorCategory}>
 														<div className={styles.vendorCategoryImgCover}>
