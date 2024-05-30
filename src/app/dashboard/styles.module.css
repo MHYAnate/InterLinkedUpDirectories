@@ -1008,6 +1008,15 @@
     flex-direction: row;
     height: fit-content;
   }
+
+  .myVacancySpace{
+    margin-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 98vw;
+    justify-content: center;
+    border-top: 1px solid silver;
+  }
   
   .mySpaceVacancyRender{
     width: 98vw;
@@ -1040,11 +1049,20 @@
   }
   
   .mySpace{
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
     width: 98vw;
-    justify-content: flex-start;
-   
+    justify-content: center;
+    border-top: 1px solid silver;
+  }
+  .myVacancySpace{
+    margin-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 98vw;
+    justify-content: center;
+    border-top: 1px solid silver;
   }
   
   .mySpaceRender{
@@ -1165,7 +1183,6 @@
   .body,
   .midBody{
     margin-top: 20px;
-    border-top: 1px solid silver;
   }
    
   .form{
@@ -1188,6 +1205,14 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.mySpace{
+  justify-content: center;
+}
+
+.myVacancySpace{
+  justify-content: center;
 }
 
 .mySpaceVacancyCover{
