@@ -186,7 +186,7 @@
   .aboutUsCover{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: max-content;
     justify-content: space-between;
     align-items: center;
     height:max-content;

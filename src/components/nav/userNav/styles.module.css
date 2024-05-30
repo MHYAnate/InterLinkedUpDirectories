@@ -415,7 +415,9 @@ div.inActiveSignOutBtn:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 640px) {
 
   .logo{
     width: max-content;
@@ -497,10 +499,10 @@ div.inActiveSignOutBtn:hover {
 
 @media screen and (max-width: 490px) {
 	.search {
-		width: 50w;
+		width: 45vw;
 	}
 	.input {
-		width: 50w;
+		width: 45vw;
 	}
 }
 

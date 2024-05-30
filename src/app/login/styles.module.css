@@ -184,7 +184,6 @@
   max-width: max-content;
   column-gap: 20px;
   height: 55vh;
-  overflow-y: auto;
 }
 .innerFormBody{
   display: flex;
@@ -361,6 +360,7 @@
   }
   .formCover{
     width: 98vw;
+    min-height: 400px;
   }
   
   .topSelect{
@@ -388,23 +388,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 70px;
+    row-gap: 10px;
     align-items: center;
     width: 95vw;
-    height: max-content;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 250px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .innerFormBody{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    row-gap: 70px;
+    row-gap: 10px;
     align-items: center;
     width: 95vw;
-    height: max-content;
-    padding-top: 150px;
-    padding-bottom: 50px;
+    height: 250px;
+    padding-top: 20px;
+    padding-bottom: 0;
   }
 
   .input{
