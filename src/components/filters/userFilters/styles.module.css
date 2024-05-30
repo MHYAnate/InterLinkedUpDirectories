@@ -800,6 +800,12 @@
     justify-content: center;
     text-align: center;
   }
+  .filterBodyCover{
+  overflow-x: hidden;
+  }
+  .filterVacancyBodyCover{
+    overflow-x: hidden;
+  }
 }
 
 @media screen and (max-width: 640px) {
