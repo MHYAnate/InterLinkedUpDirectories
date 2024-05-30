@@ -229,7 +229,7 @@
   border: none;
   width: 24vw;
   height: 25px;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .passcodeContainer{
@@ -247,7 +247,7 @@
   border: none;
   width: 19vw;
   height: 25px;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .svg{
@@ -411,7 +411,7 @@
     border: none;
     width: 50vw;
     height: 25px;
-    font-weight: 900;
+    font-weight: 400;
   }
   .inputCover{
     width: max-content;
@@ -430,7 +430,7 @@
     border: none;
     width: 42vw;
     height: 25px;
-    font-weight: 900;
+    font-weight: 400;
   }
 
   .logInButton{
