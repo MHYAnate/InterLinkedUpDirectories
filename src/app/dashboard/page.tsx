@@ -328,7 +328,7 @@ export default function Profile() {
 															</div>
 														</div>
 													</div>
-												dvi</div>
+												</div>
 												<div
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>

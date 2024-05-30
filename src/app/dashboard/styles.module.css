@@ -1162,6 +1162,16 @@
 }
 
 @media screen and (max-width: 632px) {
+  .body,
+  .midBody{
+    margin-top: 20px;
+    border-top: 1px solid silver;
+  }
+   
+  .form{
+    margin-top: 10px;
+  }
+ 
   .bodyCover{
     display: flex;
     justify-content: center;
@@ -1202,6 +1212,68 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.flexVendorInfoCover{
+  width: 91vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexVendorCategoryControl {
+  width: 91vw;
+  height: 100px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 5px silver;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+.flexControl {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 10px;
+}
+.vendorCategory {
+  position: relative;
+  width: 91vw;
+  height: 100px;
+}
+
+.vendorCategoryImgCover {
+  width: 91vw;
+  height: 162px;
+}
+
+.vendorsCategoryImg {
+  width: 91vw;
+  height: 155px;
+  opacity: 0.3;
+}
+.vendorsCategoryImgP {
+  width: 91vw;
+  height: 200px;
+  opacity: 0.3;
+}
+
+.vendorsCategoryName {
+  position: absolute;
+  top: 0;
+  width: 91vw;
+  height: 100px;
+}
+
+.flexVendorCategoryName {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 91vw;
+  height: 100px;
+  color: rgb(99, 99, 99);
 }
 
 }

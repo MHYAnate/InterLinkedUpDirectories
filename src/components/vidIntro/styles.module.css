@@ -269,6 +269,11 @@
   }
 
 }
+@media screen and (max-width: 632px) {
+  .menuUserCover{
+    display: none;
+  }
+}
 
 @media screen and (max-width: 490px) {
   .menuCover{
