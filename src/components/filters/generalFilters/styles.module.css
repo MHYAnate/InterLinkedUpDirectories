@@ -255,6 +255,10 @@
   }
 }
 
+.showWide{
+  display: none;
+}
+
 .VendorRenderCover:hover{
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
   transform: scale(1.01);
@@ -801,12 +805,14 @@
     max-width: 17vw;
     min-width: 310px;
   }
+ 
   .innerTextVendorRenderCover{
     width: 120px;
   }
-  .innerTextstockRenderCover{
-    width: 50vw;
+  .innerTextStockRenderCover{
+    width: 160px;
     margin-right: 10px;
+    column-gap: 20px;
   }
   .innerTextShopRenderCover{
     width: 120px;
@@ -871,6 +877,10 @@
     width: 24vw;
     justify-content: first baseline;
   }
+  .innerTextstockRenderCover{
+    width: 20vw;
+    margin-right: 10px;
+  }
   .showMore{
     width: 63vw;
     justify-content: flex-start;
@@ -878,22 +888,31 @@
     align-self: center;
     align-items: center;
   }
+   .showWide{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 15px;
+    height:max-content;
+    animation:  0.1s linear appear;
+    margin-left: 10px;
+  }
   .innerTextShowMoreRenderCover{
     width: 34vw;
   }
   
   .contactCover{
     justify-content: flex-start;
-    width: 34vw;
+    width: 17vw;
     font-size: 12px;
     text-align: left;
   }
   .status{
-    width: 34vw;
+    width: 17vw;
   }
 
   .contactTitle{
-    width: 34vw;
+    width: 17vw;
     display: flex;
     justify-content: flex-start;
   }
@@ -901,7 +920,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 34vw;
+    width: 17vw;
     height: max-content;
   }
   .addressTitle{
@@ -911,9 +930,15 @@
     width: 34vw;
   }
   .address{
-    width: 34vw;
+    width: 17vw;
     font-size: 12px;
   }
+  .btn{
+   display: none;
+   }
+   .btnA{
+    display: none;
+   }
 }
 
 
@@ -927,6 +952,52 @@
    width: 40vw;
    font-size: 1rem;
   }
+
+}
+@media screen and (max-width: 1130px) {
+  .btn{
+   display: block;
+   }
+   .btnA{
+    display: block;
+   }
+ 
+.showWide{
+  display: none;
+}
+  
+.contactCover{
+  justify-content: flex-start;
+  width: 34vw;
+  font-size: 12px;
+  text-align: left;
+}
+.status{
+  width: 34vw;
+}
+
+.contactTitle{
+  width: 34vw;
+  display: flex;
+  justify-content: flex-start;
+}
+.contact{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 34vw;
+  height: max-content;
+}
+.addressTitle{
+  width: 34vw;
+}
+.addresCover{
+  width: 34vw;
+}
+.address{
+  width: 34vw;
+  font-size: 12px;
+}
 
 }
 

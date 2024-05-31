@@ -334,7 +334,6 @@ export default function MarketingFilter() {
 			<div className={styles.stockRenderCover} key={stock.id}>
 				<div className={styles.stockName}>{stock.title}</div>
 				<div className={styles.stockSeperatorCover}>
-				
 				<div className={styles.imgCover}>
 					
 					<Image
@@ -363,6 +362,33 @@ export default function MarketingFilter() {
 						<div className={styles.contact}>{stock.phone}</div>
 					</div>
 				</div>
+				<div className={styles.showWide}><div>
+					
+					<Image
+						className={styles.idiImg}
+						src={`${stock.image2}`}
+						alt={`${stock.title}`}
+						quality={100}
+						width={500}
+						height={500}
+						// unoptimized
+					/>
+				</div>
+				<div className={styles.innerTextStockRenderCover}>
+					<div className={styles.contactCover}>
+						<div className={styles.contactTitle}>features</div>
+						<div className={styles.contact}>{stock.features}</div>
+					</div>
+
+					<div className={styles.contactCover}>
+						<div className={styles.contactTitle}>Inventory</div>
+						<div className={styles.address}>{stock.inventory}</div>
+					</div>
+					<div className={styles.contactCover}>
+						<div className={styles.contactTitle}>Condition</div>
+						<div className={styles.contact}>{stock.condition}</div>
+					</div>
+				</div></div>
 				</div>
 				{more ===`${stock.id}` && (<div className={styles.showMore}><div>
 					
