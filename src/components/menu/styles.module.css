@@ -97,11 +97,10 @@
 
 .flexCategoryName:hover {
 	transform: scale(0.9);
-	text-shadow: 0.5px 0.5px 1px black, 0.5px 0.5px 1px black,
-		0.5px 0.5px 1pxblack;
+	text-shadow: 0.5px 0.5px 1px black, 0.5px 0.5px 1px black,0.5px 0.5px 1px black;
 	color: rgb(69, 69, 69);
 }
-.bright{
+.bright {
 	display: none;
 }
 @media screen and (max-width: 1230px) {
@@ -135,8 +134,8 @@
 		height: 167px;
 		border-radius: 2px;
 		background-color: white;
-		border: 1px solid black;
-		box-shadow: 0px 0px 0.2px silver, 0 0 0.3px green, 0 0 0.2px silver;
+		border: 1px solid silver;
+		box-shadow: none;
 	}
 
 	.categoryCover {
@@ -288,13 +287,10 @@
 		width: 91vw;
 		height: 100px;
 		cursor: pointer;
-		box-shadow: 0px 0px 0.2px silver, 0 0 0.3px green, 0 0 0.2px silver;
 		border-radius: 10px;
 		background-color: white;
 		overflow: hidden;
 	}
-
-
 
 	.categoryCover {
 		position: relative;
@@ -329,11 +325,11 @@
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 			sans-serif;
-		font-size: 1.1rem;
-		font-weight: 700;
+		font-size: 0.8rem;
+		font-weight: 400;
 		width: inherit;
 		height: max-content;
-		color:black;
+		color: rgb(132, 132, 132);
 		padding-left: 17px;
 		padding-right: 17px;
 		border-radius: 3px;
