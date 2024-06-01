@@ -35,8 +35,8 @@ export default function VendorNav() {
 					<Vendor />
 					<Vacancies />
 					<Marketing />
-					<About/>
-					<Notification />
+					{(pathname === "/dashboard/vendors" || pathname === "/dashboard/market" || pathname ==="/dashboard/vacancies") ?<></>:<About/>}
+					{(pathname === "/dashboard/vendors" || pathname === "/dashboard/market" || pathname ==="/dashboard/vacancies") ?<></>:<Notification />}
 					<Settings />
 					{ pathname !== "/dashboard" ? <DashBoard/> : <></>}
 					<SignOut />
