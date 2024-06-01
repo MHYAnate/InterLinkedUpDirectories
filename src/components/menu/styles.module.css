@@ -193,7 +193,7 @@
 		font-weight: 700;
 		width: max-content;
 		height: max-content;
-		color: rgb(99, 99, 99);
+		color: black;
 		padding-left: 4px;
 		padding-right: 4px;
 		padding-bottom: 2px;
@@ -258,7 +258,7 @@
 		font-weight: 700;
 		width: max-content;
 		height: max-content;
-		color: rgb(99, 99, 99);
+		color: black;
 		padding-left: 4px;
 		padding-right: 4px;
 		border-radius: 3px;
@@ -310,12 +310,12 @@
 	.categoryImg {
 		width: 85vw;
 		height: 155px;
-		opacity: 0.3;
+		opacity: 0.15;
 	}
 	.categoryImgP {
 		width: 85vw;
 		height: 140px;
-		opacity: 0.3;
+		opacity: 0.15;
 	}
 
 	.categoryName {
@@ -329,11 +329,11 @@
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 			sans-serif;
-		font-size: 2rem;
+		font-size: 1.1rem;
 		font-weight: 700;
 		width: inherit;
 		height: max-content;
-		color: rgb(99, 99, 99);
+		color:black;
 		padding-left: 17px;
 		padding-right: 17px;
 		border-radius: 3px;
