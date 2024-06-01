@@ -2,13 +2,15 @@
 import styles from "./styles.module.css";
 import { redirect } from "next/navigation";
 import { usePathname } from "next/navigation";
-import { getAuth, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
+import Firebase from "@/firebase/firebase";
 
 export default function SignOut() {
 	const pathname = usePathname();
   const router = redirect;
 
-	const auth = getAuth();
+	const { auth } = Firebase;
+
 
 	const SingOut = () => {
 			signOut(auth)
