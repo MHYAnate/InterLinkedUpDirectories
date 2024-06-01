@@ -49,7 +49,7 @@ export default function FilterVendorsCategory() {
 
 	const filteredList = Category?.services.filter((eachItem) => {
 		const text = eachItem.name.toLowerCase();
-		return text.includes(searchInput);
+		return text.includes(searchInput.toLowerCase());
 	});
 
 	function RenderAvailableVendorsCategory() {

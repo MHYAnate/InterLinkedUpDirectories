@@ -725,6 +725,80 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .filterBodyCover{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    padding-top: 0;
+    align-items: center;
+    width: 98.5vw;
+    height: fit-content;
+    max-width: max-content;
+    background-color: white;
+    margin-top: 10px;
+  }
+    
+  .renderVendorInnerCover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 90.5vw;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 0;
+    overflow: auto;
+    overflow-y: hidden;
+  }
+  
+  .renderVendorInnerMostCover{
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+  }
+
+  .rendering{
+    width: 85vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+
+  .noPost{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .displayFilter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: fit-content;
+    padding-bottom: 0;
+    padding-top: 0;
+    overflow-x: auto;
+  }
+  .filterBodyCover{
+  overflow-x: hidden;
+  }
+  .filterVacancyBodyCover{
+    overflow-x: hidden;
+  }
+}
+
 @media screen and (max-width: 934px) {
  
   .filterBodyCover{
