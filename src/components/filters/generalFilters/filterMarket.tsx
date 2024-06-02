@@ -544,7 +544,7 @@ export default function MarketingFilter() {
 				</div>
 				<div className={styles.contactCover}>
 					<div className={styles.contactTitle}>Contact</div>
-					<div className={styles.contact}>{stock.phone}</div>
+					<div className={styles.contact}>{stock.number}</div>
 				</div>
 			</div>
 			<div className={styles.showWide}><div>
