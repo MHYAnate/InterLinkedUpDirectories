@@ -1163,7 +1163,11 @@
     background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
   }
   
+  .filter{
+ 
+    height: max-content;
   
+  }
   
   .filterAndSearch{
     font-size: 1em;
@@ -1172,7 +1176,7 @@
   
   .selectGroup{
     width: 70vw;
-    height: 47px;
+    height: max-content;
   }
 
   .selectGroupC{
@@ -1378,6 +1382,7 @@
     justify-content: space-between;
   }
 }
+
 @media screen and (max-width: 656px) {
 
   .VacancyRenderCover{
