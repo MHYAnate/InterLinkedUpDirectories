@@ -382,7 +382,8 @@ export default function FilterUserPostItems() {
 
 	return (
 		<div className={styles.filterStock}>
-			<div className={styles.inputCover}>
+			<div className={styles.filterInputCover}>
+				<div className={styles.inputCover}>
 				<input
 					type="search"
 					className={styles.inputStock}
@@ -393,7 +394,17 @@ export default function FilterUserPostItems() {
 					placeholder="Name of Items"
 				/>
 			</div>
-			<div className={styles.renderFilterStock}>{RenderUserStock()}</div>
+			</div>
+			
+			<div className={styles.renderFilterStock}>
+			<div className={styles.renderStockInnerCover}>
+						{stockDetails?.length > 0
+							? RenderUserStock()
+							: (<div className={styles.renderStockInnerMostCover}>
+              <div className={styles.noPost}>You are seeing this Models, Becouse You have not posted Items Yet on the Market Space</div>
+             </div>)}
+					</div>
+		</div>
 		</div>
 	);
 }

@@ -7,12 +7,14 @@
 
 
 .filterStock{
-  width: 250px;
-  height: 370px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-top: 5px;
   align-items: center;
+  width: 310px;
+  height: max-content;
+  background-color: white;
 }
 
 
@@ -283,8 +285,57 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
 }
+.renderFilterStock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+  height:fit-content;
+}
 
-/* @media screen and (max-width: 1250px) {
+
+.renderStockInnerCover{
+  display: flex;
+  height:300px;
+  width: 310px;
+  flex-direction: column;
+  overflow: auto;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  justify-self: center;
+  margin-top: 5px;
+  padding-top: 20px;
+  row-gap: 25px;
+  column-gap: 20px;
+  padding-bottom: 10px;
+}
+
+.renderStockInnerMostCover{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.noPost{
+  color: red;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.filterInputCover{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 310px;
+  height: max-content;
+}
+
+@media screen and (max-width: 1250px) {
+
   .bodyCover{
     display: flex;
     justify-content: space-around;
@@ -299,7 +350,7 @@
     flex-direction: row;
     height: max-content;
   }
-
+  
  
 }
 
@@ -313,7 +364,7 @@
  
   .mySpaceCover{
     flex-direction: row;
-    width: 600px;
+    width: 60vw;
   }
   
   .mySpace{
@@ -323,7 +374,7 @@
   }
   
   .mySpaceRender{
-    width: 290px;
+    width: 35vw;
     height: 210px;
     overflow: auto;
     display: flex;
@@ -337,24 +388,72 @@
     justify-content: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
-    width: 250px;
+    width: 50px;
     height: 250px;
     color: red;
     text-align: center;
     font-size: 0.8rem;
   }
   .renderFilterStock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    min-height: 200px;
+    max-height: fit-content;
+    padding-bottom: 0;
+    padding-top: 0;
+    overflow-x: auto;
+  }
+  
+  
+  .renderStockInnerCover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 90.5vw;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 0;
+    overflow: auto;
+    overflow-y: hidden;
+  }
+  
+  .renderStockInnerMostCover{
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+  }
+
+
+
+  .noPost{
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
     width: 250px;
-    height: 190px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .filterStock{
-    width: 250px;
-    height: 190px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items:first baseline;
+    padding-top: 0;
+    width: 70.5vw;
+    height: fit-content;
+    max-width: max-content;
+    background-color: white;
+    overflow-x: hidden;
   }
   .openShop{
     margin-bottom: 5px;
@@ -375,6 +474,25 @@
 
 
 @media screen and (max-width: 770px) {
+
+  .renderFilterStock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height:fit-content;
+  }
+
+  .filterStock{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5px;
+    align-items: center;
+    width: 310px;
+    height: max-content;
+    background-color: white;
+  }
 
  .pageBodyCover{
     width: 97.5vw;
@@ -516,8 +634,70 @@
 
 }
 
+@media screen and (max-width : 640px) {
+
+  .renderFilterStock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height:fit-content;
+  }
+  .renderStockInnerCover{
+    display: flex;
+    height:300px;
+    width: 310px;
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    justify-self: center;
+    margin-top: 5px;
+    padding-top: 20px;
+    row-gap: 25px;
+    column-gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .renderStockInnerMostCover{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+ 
+  .noPost{
+    color: red;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 370px) {
   .idName{
     font-size: 1em;
   }
-} */
+}
+
+@media screen and (max-width: 632px) {
+
+  .noPost{
+    color: red;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  
+}
+
+
+
+
+

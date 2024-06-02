@@ -878,7 +878,7 @@
     justify-content: first baseline;
   }
   .innerTextstockRenderCover{
-    width: 20vw;
+    width: 18vw;
     margin-right: 10px;
   }
   .showMore{
@@ -890,6 +890,7 @@
   }
    .showWide{
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
     column-gap: 15px;
@@ -898,21 +899,21 @@
     margin-left: 10px;
   }
   .innerTextShowMoreRenderCover{
-    width: 34vw;
+    width: 32vw;
   }
   
   .contactCover{
     justify-content: flex-start;
-    width: 17vw;
+    width: 15vw;
     font-size: 12px;
     text-align: left;
   }
   .status{
-    width: 17vw;
+    width: 15vw;
   }
 
   .contactTitle{
-    width: 17vw;
+    width: 15vw;
     display: flex;
     justify-content: flex-start;
   }
@@ -920,7 +921,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 17vw;
+    width: 15vw;
     height: max-content;
   }
   .addressTitle{
@@ -930,7 +931,7 @@
     width: 34vw;
   }
   .address{
-    width: 17vw;
+    width: 15vw;
     font-size: 12px;
   }
   .btn{
