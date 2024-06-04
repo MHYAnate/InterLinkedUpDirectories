@@ -442,6 +442,8 @@ export default function MarketingFilter() {
 
 	const [profileDetails, setProfileDetails] = useState<FormValue[]>([]);
 
+	const [shopProfileDetails, setShopProfileDetails] = useState<FormValue[]>([]);
+
 	const handleGetProfileDetail = async () => {
 		try {
 			const querySnapshot = await getDocs(vendorsQuery);
@@ -628,7 +630,7 @@ export default function MarketingFilter() {
 				const docData = doc.data() as FormValue;
 				retrievedData.push(docData);
 			});
-			setProfileDetails(retrievedData);
+			setShopProfileDetails(retrievedData);
 		} catch (error) {
 			console.error("Error getting profile detail:", error);
 		}
@@ -641,8 +643,8 @@ export default function MarketingFilter() {
 		[];
 
 	const filteredFirebaseCountryShopList =
-		profileDetails?.length > 0
-			? profileDetails.filter((eachItem) => {
+		shopProfileDetails?.length > 0
+			? shopProfileDetails.filter((eachItem) => {
 					const text = eachItem.countrySelect.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
@@ -680,7 +682,7 @@ export default function MarketingFilter() {
 			: [];
 
 	function RenderAvailableShops() {
-		if (profileDetails === null) {
+		if (shopProfileDetails === null) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
 		}
