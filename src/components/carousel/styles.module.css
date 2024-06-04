@@ -592,6 +592,7 @@
     color: green;
     border-right: 1px solid silver; 
     transition: width 1s ease-in-out, border 1s ease-in-out;
+    user-select: none;
   }
 
 
@@ -603,6 +604,7 @@
     color: green;
     border-left: 1px solid silver;
     transition: width 1s ease-in-out, border 1s ease-in-out;
+    user-select: none;
   }
   
 
@@ -614,13 +616,14 @@
     transition: transform 1s ease-in-out, width 1s ease-in-out, border 1s ease-in-out;
     padding-bottom: 5px;
     padding-top: 5px;
+    user-select: none;
   }
    .tsSpan:hover{
     transform: scale(0.975);
     box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
     border-radius: 5px;
     width: 48vw;
-   
+    user-select: none;
   }
 }
 
