@@ -561,11 +561,11 @@
   
   .mySpaceRender{
     width: 70vw;
-    height: 210px;
+    height: fit-content;
     overflow: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: auto;
   }
   .noStock{

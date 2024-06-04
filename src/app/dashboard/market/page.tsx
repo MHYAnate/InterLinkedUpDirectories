@@ -406,7 +406,7 @@ export default function Market() {
 								/>
 							</div>
 							<div className={styles.inputImageCover}>
-								<div className={styles.title}>Select Tag</div>
+								<div className={styles.title}>Upload Front Picture</div>
 								<input
 									type="file"
 									accept="image/*"
@@ -416,7 +416,7 @@ export default function Market() {
 								/>
 							</div>
 							<div className={styles.inputImageCover}>
-								<div className={styles.title}>Select Tag</div>
+								<div className={styles.title}>Upload Side Picture</div>
 								<input
 									type="file"
 									accept="image/*"

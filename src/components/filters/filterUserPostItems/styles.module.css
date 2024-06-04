@@ -1,10 +1,8 @@
-
 .inputStock{
   width: 200px;
   height: 25px;
   border: none;
 }
-
 
 .filterStock{
   display: flex;
@@ -17,21 +15,20 @@
   background-color: white;
 }
 
-
-
-
-
-
 .stockRenderCover{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 200px;
+  width: 250px;
   height: max-content;
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid silver;
+  background-image: linear-gradient(to right,  rgba(255, 255, 255, 0.1), rgba(1, 128, 1, 0.1));
+  box-shadow: 0px 0px 1px silver, 0 0 2px silver, 0 0 5px silver;
+  padding-top: 10px;
+  border-radius: 5px;
 }
 
 .stockName{
@@ -51,22 +48,24 @@
   justify-content: center;
   align-items: center;
   row-gap: 10px;
-  width: 200px;
+  width: 250px;
   height: max-content;
 }
 .stockImgCover{
   width: 200px;
   height: 100px;
-  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px ;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .stockIdImg{
   width: 200px;
   height: 100px;
-  border-radius: 5px;
+  
 }
 
 .hide{
@@ -86,13 +85,14 @@
   height: max-content;
   padding-bottom: 3px;
   padding-top: 3px;
-  color: red;
+  color: white;
   font-weight: 700;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
+  background-image: linear-gradient(to left, rgba(141, 1, 1, 0.7), green);
 }
 
 .confirmDeleteBtnCover{
@@ -101,6 +101,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 3px;
 }
 
 .confirmDeleteBtnNo{
@@ -108,19 +109,21 @@
   height: max-content;
   padding-top: 5px;
   padding-bottom: 5px; 
-  color: red;
+  color: green;
   cursor: pointer;
   text-align: center;
   user-select: none;
+  font-weight: 700;
 }
 .confirmDeleteBtnYes{
   width: 90px;
   height: max-content;
   padding-top: 5px;
   padding-bottom: 5px; 
-  color: green;
+  color: red;
   cursor: pointer;
   text-align: center;
+  font-weight: 700;
 }
 
 .confirmDeleteBtnNo:hover{
@@ -178,7 +181,7 @@
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 5px;
-  border: 1px solid red;
+  box-shadow: 0px 0px 1px red, 0 0 2px red, 0 0 5px red;
   cursor: pointer;
   color: red;
   text-align: center;
@@ -341,8 +344,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 310px;
+  width: 200px;
   height: max-content;
+  border: 1px solid silver;
+  border-radius: 3px;
+
 }
 
 @media screen and (max-width: 1250px) {
@@ -367,55 +373,20 @@
 
 @media screen and (max-width: 934px) {
 
-  .midBody{
-    flex-direction: row;
-    height: max-content;
-    width: 98.5vw;
-   } 
- 
-  .mySpaceCover{
-    flex-direction: row;
-    width: 60vw;
-  }
+
   
-  .mySpace{
-    margin-bottom: 0;
-    margin-top: 0;
-   
-  }
-  
-  .mySpaceRender{
-    width: 35vw;
-    height: 210px;
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-  }
-  .noStock{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 700;
-    width: 50px;
-    height: 250px;
-    color: red;
-    text-align: center;
-    font-size: 0.8rem;
-  }
   .renderFilterStock{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 90vw;
     min-height: 200px;
     max-height: fit-content;
     padding-bottom: 0;
     padding-top: 0;
     overflow-x: auto;
+    margin-left: 5px;
   }
   
   
@@ -425,12 +396,13 @@
     align-items: center;
     justify-content: flex-start;
     overflow-x: auto;
-    width: 90.5vw;
+    width: 90vw;
     height: fit-content;
     margin-top: 0;
-    padding-top: 0;
+    padding-top: 5px;
     overflow: auto;
     overflow-y: hidden;
+    padding-left: 10px;
   }
   
   .renderStockInnerMostCover{
@@ -457,7 +429,7 @@
   .filterStock{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:first baseline;
     padding-top: 0;
     width: 70.5vw;
@@ -466,33 +438,50 @@
     background-color: white;
     overflow-x: hidden;
   }
-  .openShop{
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 250px;
-    height: 250px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 700;
-    color: white;
-    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
-  }
+ 
 }
 
 
 @media screen and (max-width: 770px) {
-
+ 
+  .filterInputCover{
+    margin-left: 0;
+   
+   }
   .renderFilterStock{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 310px;
     height:fit-content;
+    margin-left: 0;
   }
+
+  .renderStockInnerCover{
+    display: flex;
+    height:300px;
+    width: 310px;
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    justify-self: center;
+    margin-top: 5px;
+    padding-top: 20px;
+    row-gap: 25px;
+    column-gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .renderStockInnerMostCover{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+     width: 310px;
+  }
+
 
   .filterStock{
     display: flex;
@@ -549,68 +538,6 @@
     width: 94vw;
     height: max-content;
     margin-top: 10px;
-  }
-
-.midBody,
-.body,
-.form{
-  width: 310px;
-  height: 540px;
-  display: flex;
-  justify-content: center;
-}
-
-.body{
-  width: 98.5vw;
-  flex-direction: row;
-  height: max-content;
-}
-.midBody{
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-  .mySpaceCover{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 310px;
-    height: 370px;
-    margin-top: 5px;
-  }
-  
-  .mySpace{
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 310px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 700;
-    color: green;
-  }
-  
-  .mySpaceRender{
-    width: 290px;
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .noStock{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 700;
-    width: 250px;
-    height: 343px;
-    color: red;
-    text-align: center;
-    font-size: 0.8rem;
   }
   
   .post{

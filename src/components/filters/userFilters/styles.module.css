@@ -777,6 +777,7 @@
     height: fit-content;
     margin-top: 0;
     padding-top: 0;
+    padding-left: 10px;
     overflow: auto;
     overflow-y: hidden;
   }

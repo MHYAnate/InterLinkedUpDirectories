@@ -249,7 +249,7 @@ export default function FilterUserPostItems() {
 											setIsDelete("");
 										}}
 									>
-										No
+										Return
 									</div>
 									<div
 										className={styles.confirmDeleteBtnYes}
@@ -258,7 +258,7 @@ export default function FilterUserPostItems() {
 										  
 										}}
 									>
-										Yes
+										Delete
 									</div>
 								</div>
 							</div>
@@ -271,7 +271,7 @@ export default function FilterUserPostItems() {
 								image === `${stock.docid}` ? styles.imgBtnHighlighted : styles.imgBtn
 							}
 						>
-							ImgI
+							Front View
 						</div>
 						<div
 							onClick={() => setImage(`${stock.title}`)}
@@ -279,7 +279,7 @@ export default function FilterUserPostItems() {
 								image === `${stock.title}` ?styles.imgBtnHighlighted  : styles.imgBtn
 							}
 						>
-							ImgII
+							Side View
 						</div>
 					</div>
 					<div
