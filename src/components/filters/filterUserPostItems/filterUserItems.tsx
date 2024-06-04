@@ -174,7 +174,7 @@ export default function FilterUserPostItems() {
 				},
 				{ merge: true }
 			);
-
+			reset();
 			console.log("Profile detail added successfully");
 		} catch (error) {
 			console.error("Error adding profile detail:", error);
@@ -190,6 +190,7 @@ export default function FilterUserPostItems() {
 				},
 				{ merge: true }
 			).then(() => {});
+			reset();
 			console.log("Profile detail added successfully");
 		} catch (error) {
 			console.error("Error adding profile detail:", error);
