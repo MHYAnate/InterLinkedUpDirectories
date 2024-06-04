@@ -42,6 +42,7 @@
   display: flex;
   align-items: first baseline;
   justify-content: flex-start;
+  user-select: none;
 }
 
 .titleBodyCategorySelector{
@@ -62,6 +63,7 @@
   border-radius: 5px;
   text-align: center;
   animation:  0.7s linear click;
+  user-select: none;
 }
 
 @keyframes click {
@@ -88,6 +90,7 @@
   padding-bottom: 7px;
   border-radius: 5px;
   text-align: center;
+  user-select: none;
 }
 .unHighLighted:hover{
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
@@ -97,6 +100,7 @@
 .catSpan{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
+  user-select: none;
 }
 
 .mainBody{
@@ -194,6 +198,7 @@
   width: max-content;
   font-weight: 500;
   color: white;
+  user-select: none;
 }
 .slider{
   width: 68.3vw;
@@ -239,6 +244,7 @@
   padding-right: 11px;
   border-radius: 3px;
   background-image: linear-gradient(to top,rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  user-select: none;
 }
 
 .linkUpTxt{
@@ -256,6 +262,7 @@
   width: 50px;
   height: 70px;
   text-align: center;
+  user-select: none;
 }
 
 @keyframes heartbeat {
@@ -330,6 +337,7 @@
   width: 120px;
   height: 60px;
   transition:  background-image 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
+  user-select: none;
 }
 
 .next{
@@ -341,6 +349,7 @@
   width: 120px;
   height: 60px;
   transition:  background-image 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
+  user-select: none;
 }
 .positioner{
   position: absolute;

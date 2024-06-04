@@ -44,6 +44,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   color: green;
+  user-select: none;
 }
 
 
@@ -65,6 +66,7 @@
   display: flex;
  justify-content: center;
  align-items: center;
+ user-select: none;
 }
 
 .selectGroup{
@@ -88,6 +90,7 @@
 .select{
   border: none;
   width: 250px;
+  user-select: none;
   
 }
 
@@ -170,6 +173,7 @@
   height:fit-content;
   margin-right: 7px;
   animation:  0.1s linear appear;
+  user-select: none;
 }
 
 @keyframes appear {
@@ -215,6 +219,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  user-select: none;
 }
 
 .vendorName{
@@ -231,6 +236,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  user-select: none;
 }
 .stockName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -246,6 +252,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  user-select: none;
 }
 
 .idiImg{
@@ -323,6 +330,7 @@
   color: green;
   font-weight: 900;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
 }
 .shopContactTitle{
   width: 90px;
@@ -333,6 +341,7 @@
   color: green;
   font-weight: 900;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
 }
 
 .vendoraddressTitle{
@@ -344,6 +353,7 @@
   color: green;
   font-weight: 900;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
 }
 
 .address{
@@ -351,6 +361,7 @@
   height: max-content;
   overflow: auto;
   font-size: 0.7rem;
+  user-select: none;
 }
 .shopAddress{
   height: max-content;
@@ -389,6 +400,7 @@
   color: green;
   font-weight: 900;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
 }
 
 .vendorContact{
@@ -405,6 +417,7 @@
   padding-bottom: 10px;
   transition: background-image 1s ease-in-out 0.1s;
   font-size: 1rem;
+  user-select: none;
 }
 
 .VacancyRenderCover:hover{
@@ -458,6 +471,7 @@
   align-items: first baseline;
   height: max-content;
   font-size: 0.7rem;
+  user-select: none;
 }
 .coverHeadDetail{
   width: 290px;
@@ -478,11 +492,13 @@
   align-items: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
+  user-select: none;
 }
 
 .headFootSpan{
   color: green;
   font-weight: 500;
+  user-select: none;
 }
 
 .headFootDetail{
@@ -493,6 +509,7 @@
   font-weight: 500;
   color: rgb(107, 107, 107);
   font-size: 0.7rem;
+  user-select: none;
 }
 
 .detailTitle{
@@ -503,6 +520,7 @@
   color: green;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
+  user-select: none;
 
 }
 
@@ -515,6 +533,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   color: rgb(75, 75, 75);
+  user-select: none;
 }
 .detailHead{
   width: 280px;
@@ -526,6 +545,7 @@
    font-size: 1rem;
    color: green;
    padding-bottom: 5px;
+   user-select: none;
  }
  .btn{
   border: none;
@@ -536,6 +556,7 @@
   padding-right: 10px;
   border-radius: 5px;
   margin-top: 15px;
+  user-select: none;
  }
  .btnA{
   border: none;
@@ -547,6 +568,7 @@
   border-radius: 5px;
   animation:  0.1s linear appear;
   margin-top: 15px;
+  user-select: none;
  }
  
   
@@ -556,6 +578,7 @@
   text-align: left; 
   color: green;
   font-family: cursive;
+  user-select: none;
 }
 .contactTitle{
   width: 125px;
@@ -567,6 +590,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 900;
   font-size: 0.7rem;
+  user-select: none;
 }
 .contact{
   display: flex;
@@ -575,6 +599,7 @@
   width: 125px;
   height: 30px;
   font-size: 0.7rem;
+  user-select: none;
 }
 
 .displayFilter{
@@ -645,6 +670,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   margin-bottom: 20px;
+  user-select: none;
 }
 
 @media screen and (max-width: 1255px) {

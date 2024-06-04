@@ -93,6 +93,7 @@
 	justify-content: center;
 	column-gap: 10px;
 	transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+	user-select: none;
 }
 
 .flexCategoryName:hover {
