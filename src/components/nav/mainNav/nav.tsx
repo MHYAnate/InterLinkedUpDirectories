@@ -9,12 +9,14 @@ import { Vendors } from "@/database/serviceData";
 import { MenuTab } from "./menuTab";
 import Market from "./marketing";
 import Vacancy from "./vacancy";
+import { usePathname } from "next/navigation";
 
 
 export default function Nav() {
+  const pathname = usePathname();
 
 	return (
-		<div className={styles.navBodyCover}>
+		<div className={`${styles.link} ${pathname === "/register" ? styles.regNavBodyCover : styles.navBodyCover}`}>
       <div className={styles.navBody}>
 		    <div className={styles.logo}><Logo/></div>
         <div className={styles.search}><Search suggestionsList={Vendors}/></div>

@@ -8,14 +8,17 @@ import Menu from "@/components/menu/menu";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 import Nav from "@/components/nav/mainNav/nav";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
   useEffect(()=>{
 		window.location.pathname;
 	})
 
+	const pathname = usePathname();
+
 	return (
-		<main className={styles.Main}>
+		<main  className={`${styles.link} ${pathname === "/register" ? styles.regNavBodyCover : styles.Main}`}>
 			<nav className={styles.navHolder}><Nav/></nav>
 			<div className={styles.body}>
 			<div className={styles.carouselBody}><Carousel Services={Services}/></div>

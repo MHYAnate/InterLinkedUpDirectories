@@ -4,6 +4,16 @@
 	align-items: center;
 	width: 98vw;
 	height: 70px;
+
+}
+
+.regNavBodyCover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 98vw;
+	height: 70px;
+	background-image: linear-gradient(to right, rgb(241, 243, 241), white);
 }
 
 .navBody {

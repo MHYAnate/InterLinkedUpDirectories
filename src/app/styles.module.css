@@ -17,6 +17,18 @@
   margin-top: 10px;
 }
 
+.regNavBodyCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+  margin-top: 10px;
+	background-image: linear-gradient(to right, rgb(241, 243, 241), white);
+}
+
 .body{
   display: flex;
   align-items: center;
@@ -72,6 +84,17 @@
     min-height: max-content;
     max-height: max-content;
     margin-top: 10px;
+  }
+  .regNavBodyCover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 98vw;
+    min-height: max-content;
+    max-height: max-content;
+    margin-top: 10px;
+    background-image: linear-gradient(to right, rgb(241, 243, 241), white);
   }
   .body{
     display: flex;
