@@ -184,7 +184,8 @@ export default function FilterUserPostItems() {
 					inventory: watchUpDateInventory,
 				},
 				{ merge: true }
-			).then(() => {});
+			);
+			reset();
 			console.log("Profile detail added successfully");
 		} catch (error) {
 			console.error("Error adding profile detail:", error);
