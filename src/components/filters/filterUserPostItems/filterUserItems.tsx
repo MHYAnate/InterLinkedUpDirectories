@@ -297,7 +297,7 @@ export default function FilterUserPostItems() {
 								</div>
 								<div className={styles.detailCover}>
 									<div className={styles.detailTitle}>
-										Enter Updated Stock Here
+										Enter New Stock 
 									</div>
 
 									<input
@@ -305,7 +305,7 @@ export default function FilterUserPostItems() {
 										className={styles.detailInput}
 										{...register("inventoryUpDate")}
 										id="inventoryUpDate"
-										placeholder={""}
+										placeholder={"Stock UpDate"}
 									/>
 								</div>
 
@@ -328,7 +328,7 @@ export default function FilterUserPostItems() {
 								</div>
 								<div className={styles.detailCover}>
 									<div className={styles.detailTitle}>
-										Enter Updated Price Here
+										Enter New Price 
 									</div>
 
 									<input
@@ -336,39 +336,34 @@ export default function FilterUserPostItems() {
 										className={styles.detailInput}
 										{...register("priceUpDate")}
 										id="priceUpDate"
-										placeholder={"priceUpDate"}
+										placeholder={"Price UpDate"}
 									/>
 								</div>
 
-								<button
-									type="submit"
+								<div
 									className={styles.upDate}
 									onClick={() => {
 										handleUpDateStockPrice(stock);
 									}}
 								>
 									Update Price
-								</button>
+								</div>
 							</div>
 						</form>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Inventory</div>
-							<div className={styles.contact}>{stock.inventory}</div>
-						</div>
 						<div className={styles.contactCover}>
 							<div className={styles.contactTitle}>Condition</div>
 							<div className={styles.contact}>{stock.condition}</div>
 						</div>
 					</div>
 				)}
-				<button
+				<div
 					className={styles.showDetails}
 					onClick={() => {
 						more === `${stock.docid}` ? setMore("") : setMore(stock.docid);
 					}}
 				>
 					{more === `${stock.docid}` ? "Close" : "Details"}
-				</button>
+				</div>
 			</div>
 		));
 	}
