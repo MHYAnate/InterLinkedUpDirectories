@@ -99,7 +99,7 @@ export default function FilterUserPostItems() {
 
 	const watchUpDatePrice = watch("priceUpDate");
 
-	const watchUpDateInventory = watch("priceUpDate");
+	const watchUpDateInventory = watch("inventoryUpDate");
 
 	const user = auth.currentUser;
 
@@ -149,11 +149,6 @@ export default function FilterUserPostItems() {
 			return () => unsubscribe();
 		}, [stockDetailRef]);
 
-
-			
-
-
-
 	const handleDeleteStock = async (data: FormValue) => {
 		try {
 			await deleteDoc(doc(stockDetailRef, data.docid)).then(() => {
@@ -170,7 +165,7 @@ export default function FilterUserPostItems() {
 			await setDoc(
 				doc(stockDetailRef, data.docid),
 				{
-					price: data.priceUpDate,
+					price: watchUpDatePrice,
 				},
 				{ merge: true }
 			);
@@ -186,11 +181,10 @@ export default function FilterUserPostItems() {
 			await setDoc(
 				doc(stockDetailRef, data.docid),
 				{
-					inventory: data.inventoryUpDate,
+					inventory: watchUpDateInventory,
 				},
 				{ merge: true }
 			).then(() => {});
-			reset();
 			console.log("Profile detail added successfully");
 		} catch (error) {
 			console.error("Error adding profile detail:", error);
@@ -341,8 +335,6 @@ export default function FilterUserPostItems() {
 										type="text"
 										className={styles.detailInput}
 										{...register("priceUpDate")}
-										value={priceInput}
-					          onChange={updatePriceInput}
 										id="priceUpDate"
 										placeholder={"priceUpDate"}
 									/>
