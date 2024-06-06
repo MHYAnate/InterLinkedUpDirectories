@@ -83,13 +83,9 @@ export default function AboutUs() {
 				</div>
 				<div className={styles.cardBody}>
 				<p className={styles.para}>
-						<span className={styles.highlightedTitle}>
-							Comprehensive Categories:
-						</span>{" "}
-						Our directory boasts a diverse range of categories categorized into
+						Our directory boasts of a diverse range of directories categorized into
 						three main sections, Each category further expands into specific
-						subcategories, making it easy to find the exact service you require.
-						as listed below
+						subcategories for easy navigations
 					</p>
 					<ol className={styles.para}>
 						<li>
