@@ -91,7 +91,7 @@ export default function AboutUs() {
 						<li>
 							<p>
 								<span className={styles.highlighted}>
-								Comprehensive Vendor Database:
+								Comprehensive Vendor :
 								</span>{" "}
 							</p>
 						</li>
@@ -305,7 +305,7 @@ export default function AboutUs() {
 						<li>
 							<p>
 								<span className={styles.highlighted}>Expand your network:</span>{" "}
-								Gain access to a wider talent pool beyond traditional channels, allowing you to find the perfect fit for your company's needs.
+								Gain access to a wider talent pool beyond traditional channels, allowing you to find the perfect fit for your company&apos;s needs.
 							</p>
 						</li>
 						<li>
@@ -334,7 +334,7 @@ export default function AboutUs() {
 						<li>
 							<p>
 								<span className={styles.highlighted}>Expand your network:</span>{" "}
-								Gain access to a wider talent pool beyond traditional channels, allowing you to find the perfect fit for your company's needs.
+								Gain access to a wider talent pool beyond traditional channels, allowing you to find the perfect fit for your company&apos;s needs.
 							</p>
 						</li>
 						<li>
@@ -357,7 +357,7 @@ export default function AboutUs() {
 								<span className={styles.highlighted}>
 								Unique Discoveries:
 								</span>{" "}
-								Find local sellers and unique offerings you won't find anywhere else, adding variety and personalization to your shopping experience.  
+								Find local sellers and unique offerings you won&apos;t find anywhere else, adding variety and personalization to your shopping experience.  
 							</p>
 						</li>
 						<li>
