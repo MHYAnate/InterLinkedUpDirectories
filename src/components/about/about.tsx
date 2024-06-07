@@ -18,20 +18,19 @@ export default function AboutUs() {
 					</p>
 					<p className={styles.para}>
 						Inter Linked Up Directories is your one-stop platform designed to
-						streamline your workforce experience. We recognize the significance
-						of strong connections within the professional landscape.
+						streamline your workforce experience.
 					</p>
 					<span className={styles.cardTitleSpan}>Connecting You to What Matters</span>
 					<p className={styles.para}>
 					Whether you require assistance with automotive maintenance and repair, home improvement projects, or personalized services, Inter Linked Up Directories has you covered. We connect you with qualified vendors, available vacancies, and a user-friendly marketplace to address a wide range of needs, all tailored to your specific requirements.
 					</p>
-					<span className={styles.cardTitleSpan}>Our Services</span>
+					<span className={styles.cardTitleSpan}>Our Services Cater for</span>
 					<ol className={styles.para}>
 						<li><span className={styles.highlighted}>Job Seekers</span> Find your perfect position with our extensive job board.</li>
 						<li> <span className={styles.highlighted}>Employers </span>Post job vacancies and connect with top talent.</li>
 						<li><span className={styles.highlighted}>Clients</span> Access to a pool of competative vendors within our extensive service categories.</li>
 						<li><span className={styles.highlighted}>Vendors</span> Showcase your services and reach a wider audience.</li>
-						<li><span className={styles.highlighted}>Buyers, Sellers and leasers</span> Access a convenient marketplace for various goods and services.</li>
+						<li><span className={styles.highlighted}>Buyers, Sellers and leasors</span> Access a convenient marketplace for various goods and services.</li>
 					</ol>
 					<span className={styles.cardTitleSpan}>Experience the Inter Linked Up Advantage</span>
 					<ol className={styles.para}>
@@ -83,29 +82,28 @@ export default function AboutUs() {
 				</div>
 				<div className={styles.cardBody}>
 				<p className={styles.para}>
-						Our directory boasts of a diverse range of directories categorized into
-						three main sections, Each category further expands into specific
-						subcategories for easy navigations
+						We Offer Users a diverse range of directories categorized into
+						three main sections.
 					</p>
 					<ol className={styles.para}>
 						<li>
 							<p>
 								<span className={styles.highlighted}>
-								Comprehensive Vendor :
+								Comprehensive Vendor Database:
 								</span>{" "}
 							</p>
 						</li>
 						<li>
 							<p>
 								<span className={styles.highlighted}>
-									Market space:
+									Comprehensive Market space:
 								</span>{" "}
 							</p>
 						</li>
 						<li>
 							<p>
 								<span className={styles.highlighted}>
-									Vacancy Board:
+									Comprehensive Vacancy Board:
 								</span>{" "}
 							</p>
 						</li>
@@ -159,6 +157,71 @@ export default function AboutUs() {
 								your home or in need of regular maintenance, our directory
 								features trusted vendors who can deliver quality services
 								tailored to your requirements.
+							</p>
+						</li>
+					</ol>
+						<p className={styles.para}>
+						<span className={styles.highlightedTitle}>
+							Comprehensive Market space:
+						</span>{" "}
+						Our Comprehensive Market space empower individuals and businesses to connect and thrive through seamless buying, selling, and leasing experience 
+					</p>
+					<ol className={styles.para}>
+						<li>
+							<p>
+								<span className={styles.highlighted}>
+									Effortless Shop Creation:
+								</span>{" "}
+								Open your own virtual storefront with ease. showcase your brand story, and upload a variety of products
+							</p>
+						</li>
+						<li>
+							<p>
+								<span className={styles.highlighted}>
+									Inventory Management:
+								</span>{" "}
+								Effortlessly add, edit, and manage your product listings within the app. Track inventory levels, adjust pricing, and monitor sales performance.
+							</p>
+						</li>
+						<li>
+							<p>
+								<span className={styles.highlighted}>
+									Flexible Listing Options:
+								</span>{" "}
+								Choose between individual listings for unique items or showcase a curated collection through your shop.
+								either you are selling or leasing a product we gotyou covered
+							</p>
+						</li>
+					</ol>
+					<p className={styles.para}>
+						<span className={styles.highlightedTitle}>
+							Comprehensive Vacancy Board:
+						</span>{" "}
+						We connect talented individuals with exciting opportunities, empowering businesses of all sizes to build their dream teams.
+					</p>
+					<ol className={styles.para}>
+						<li>
+							<p>
+								<span className={styles.highlighted}>
+									Post Individual Vacancies:
+								</span>{" "}
+								Quickly list specific open positions with clear descriptions and requirements.
+							</p>
+						</li>
+						<li>
+							<p>
+								<span className={styles.highlighted}>
+									Build Your Company Profile: 
+								</span>{" "}
+								Showcase your company culture, values, and career opportunities to attract top talent.
+							</p>
+						</li>
+						<li>
+							<p>
+								<span className={styles.highlighted}>
+									Vast Job Search:
+								</span>{" "}
+								Explore a comprehensive database of job opportunities across diverse industries and locations.
 							</p>
 						</li>
 					</ol>
