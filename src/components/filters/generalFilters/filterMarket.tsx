@@ -41,6 +41,7 @@ type FormValue = {
 	shopTag:string;
 	status: string;
 	title: string;
+	docid: string;
 };
 
 export default function MarketingFilter() {
@@ -577,7 +578,7 @@ export default function MarketingFilter() {
 				</div>
 			</div></div>
 			</div>
-			{more ===`${stock.id}` && (<div className={styles.showMore}><div>
+			{more ===`${stock.docid}` && (<div className={styles.showMore}><div>
 				
 				<Image
 					className={styles.idiImg}
@@ -604,7 +605,7 @@ export default function MarketingFilter() {
 					<div className={styles.contact}>{stock.condition}</div>
 				</div>
 			</div></div>)}
-			<button className={more !==`${stock.id}`?styles.btn : styles.btnA} onClick={more!==`${stock.id}`?()=> selectTab(`${stock.id}`):()=> selectTab("")}>{more===`${stock.id}`?"Less":"More Details"}</button>
+			<button className={more !==`${stock.docid}`?styles.btn : styles.btnA} onClick={more!==`${stock.docid}`?()=> selectTab(`${stock.docid}`):()=> selectTab("")}>{more===`${stock.docid}`?"Less":"More Details"}</button>
 		</div>
 		));
 	}
