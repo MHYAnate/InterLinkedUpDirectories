@@ -4,13 +4,13 @@
   justify-content: flex-start;
   padding-top: 5px;
   align-items: center;
-  width: 70vw;
+  width: 60vw;
   height: fit-content;
 }
 
 .Market{
   display: flex;
-  width: 68vw;
+  width: 60vw;
   align-items: center;
   justify-content: center;
   column-gap: 10px;
@@ -97,7 +97,7 @@
   flex-wrap: wrap;
   min-height: 47px;
   max-height: max-content;
-  width: 70vw;
+  width: 60vw;
   background-color: white;
 }
 .filterC{
@@ -123,8 +123,9 @@
   justify-content: center;
   align-items: center;
   column-gap: 5px;
-  width: 70vw;
-  height: 47px;
+  width: 60vw;
+  height: fit-content;
+  padding-bottom: 5px;
   background-color: white;
 }
 .selectGroupC{
@@ -760,14 +761,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 68vw;
+  width: 60vw;
   height:450px;
 }
 .displayFilterC{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 68vw;
+  width: 60vw;
   min-height: max-content;
   height: 450px;
   padding-top: 10px;
@@ -776,7 +777,7 @@
 .renderVacancyInnerCover{
   display: flex;
   height:450px;
-  width: 68vw;
+  width: 60vw;
   flex-wrap: wrap;
   overflow: auto;
   justify-content: center;
@@ -791,7 +792,7 @@
 .renderVendorInnerCover{
   display: flex;
   height:445px;
-  width: 68vw;
+  width: 60vw;
   flex-wrap: wrap;
   overflow: auto;
   justify-content: center;
@@ -1133,7 +1134,7 @@
   }
   
   .selectGroup{
-    width: 70vw;
+    width: 60vw;
     height: max-content;
     
   }
@@ -1161,7 +1162,7 @@
     
   }
   .inputCoverC{
-    width: 70vw;
+    width: 60vw;
     
   }
   .input{
@@ -1169,7 +1170,7 @@
     
   }
   .inputC{
-    width: 70vw;
+    width: 60vw;
     
   }
   .displayFilter{
@@ -1263,7 +1264,7 @@
   }
   
   .detail{
-   max-width: 70vw;
+   max-width: 60vw;
     height: max-content;
     text-align: center;
     text-align: left;
@@ -1502,7 +1503,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 10px;
-    width: 70vw;
+    width: 60vw;
     min-height: 47px;
     max-height: max-content;
   }

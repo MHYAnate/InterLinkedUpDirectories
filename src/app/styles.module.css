@@ -91,7 +91,7 @@
 }
 
 .coverJobsMarket{
-  width: 70vw;
+  width: 60vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@
 }
 
 .coverSelectJobsMarket{
-  width: 70vw;
+  width: 60vw;
   margin-top: 10px;
   padding-left: 5px;
   padding-bottom: 5px;
@@ -113,7 +113,7 @@
 }
 
 .coverSelect{
-  width: 35vw;
+  width: 30vw;
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -125,7 +125,7 @@
 
 .coverSelectTitle{
   user-select: none;
-  width: 35vw;
+  width: 30vw;
   height: 33px;
   display: flex;
   align-items: first baseline;
@@ -144,7 +144,7 @@
 
 .coverSelectTitleHighlighted{
   user-select: none;
-  width: 35vw;
+  width: 30vw;
   height: 33px;
   display: flex;
   align-items: first baseline;
@@ -159,7 +159,7 @@
 
 .coverSelectBtn{
   user-select: none;
-  width: 35vw;
+  width: 30vw;
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
