@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import VacanciesFilter from "@/components/filters/generalFilters/filterVacancies";
+import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies";
 import Nav from "@/components/nav/mainNav/nav";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";

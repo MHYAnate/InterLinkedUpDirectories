@@ -42,6 +42,12 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 		);
 	}, [setActiveIndex, Services.length]);
 
+	const handleResetIndex = useCallback(() => {
+		setInnerActiveIndex((prevIndex) =>
+			prevIndex === Services[activeIndex].services.length === null ? 1 : prevIndex + 1
+		);
+	}, [setActiveIndex, Services.length]);
+
 	const inhandleNext = useCallback(() => {
 		setInnerActiveIndex((prevIndex) =>
 			prevIndex === Services[activeIndex].services.length - 1
@@ -49,6 +55,12 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 				: prevIndex + 1
 		);
 	}, [setInnerActiveIndex, Services, activeIndex]);
+
+	useEffect(()=>{
+		if(Services[activeIndex].services[inneractiveIndex] === (undefined || null)){
+			handleResetIndex();
+		}
+	},[Services[activeIndex].services[inneractiveIndex], inneractiveIndex]);
 
 	const inhandleprev = useCallback(() => {
 		setInnerActiveIndex((prevIndex) =>
@@ -89,6 +101,8 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 
 		return () => clearInterval(interval);
 	}, [inIntervalTime, inhandleNext, serviceTitle, serviceImage]);
+
+
 
 	const autoCategory = Services.find(
 		(category) => category.category === "Automotive"

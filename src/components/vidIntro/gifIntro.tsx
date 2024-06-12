@@ -56,8 +56,7 @@ const GifIntro =() => {
               </div>	
 						</div>
 						<div className={styles.categoryUserName}><div className={styles.flexCategoryUserName}>
-              <div className={styles.h1User}>InterLinked 	Up Directories</div>
-              <p>Global Linkage to Services, Goods and ,Vacancies, tailored to meet your individual Needs.</p>
+             
 							</div></div>
 					</div>
 				</div>

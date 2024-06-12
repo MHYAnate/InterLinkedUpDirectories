@@ -21,8 +21,6 @@ export default function Nav() {
 		    <div className={styles.logo}><Logo/></div>
         <div className={styles.search}><Search suggestionsList={Vendors}/></div>
         <div className={styles.links}>
-          <Vacancy />
-          <Market />
           <About/>
           <LogIn/>
           <Register/>

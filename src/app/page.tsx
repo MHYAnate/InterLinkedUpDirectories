@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
@@ -7,39 +7,156 @@ import { Services } from "@/database/data";
 import Menu from "@/components/menu/menu";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 import Nav from "@/components/nav/mainNav/nav";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import ItemsFilter from "@/components/filters/singularFilter/filterItems";
+import ShopsFilter from "@/components/filters/singularFilter/filterShops";
+import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies";
+import Hero from "@/components/hero/hero";
 
 export default function Home() {
-  useEffect(()=>{
+	useEffect(() => {
 		window.location.pathname;
-	})
+	});
 
 	const pathname = usePathname();
 
+	const [selector, setSelector] = useState("vacancies");
+
 	return (
-		<main  className={`${styles.link} ${pathname === "/register" ? styles.regNavBodyCover : styles.Main}`}>
-			<nav className={styles.navHolder}><Nav/></nav>
+		<main
+			className={`${styles.link} ${
+				pathname === "/register" ? styles.regNavBodyCover : styles.Main
+			}`}
+		>
+			<nav className={styles.navHolder}>
+				<Nav />
+			</nav>
 			<div className={styles.body}>
-			<div className={styles.carouselBody}><Carousel Services={Services}/></div>
-			<div className={styles.categoryBody}><Menu Services={Services}/></div>
-		 </div>
-		 <div className={styles.categoryImgCover}>
-							<Image
-								object-fit="cover"
-								className={styles.categoryImg}
-								alt="Picture of the author"
-								quality={100}
-								width={100}
-								height={100}
-								src="/service/footimg.jpg"
-								priority={true}
-								unoptimized
-							/>
+				<Hero />
+				<div className={styles.categoryCover}>
+					<div className={styles.coverVendors}>
+						<Carousel Services={Services} />
+					</div>
+					<div className={styles.coverJobsMarket}>
+						<div className={styles.coverSelectJobsMarket}>
+							<div className={styles.coverSelect}>
+								<div
+									onClick={
+										selector !== "vacancies"
+											? () => setSelector("vacancies")
+											: () => setSelector("Companies")
+									}
+									className={
+										selector === "vacancies" || selector === "Companies"
+											? styles.coverSelectTitleHighlighted
+											: styles.coverSelectTitle
+									}
+								>
+									Job Board
+								</div>
+								<div className={styles.coverSelectBtn}>
+									<div
+										onClick={
+											selector !== "vacancies"
+												? () => setSelector("vacancies")
+												: () => setSelector("")
+										}
+										className={
+											selector !== "vacancies"
+												? styles.selectBtn
+												: styles.selectBtnHighlighted
+										}
+									>
+										Vacancies
+									</div>
+									<div
+										onClick={
+											selector !== "Companies"
+												? () => setSelector("Companies")
+												: () => setSelector("")
+										}
+										className={
+											selector !== "Companies"
+												? styles.selectBtn
+												: styles.selectBtnHighlighted
+										}
+									>
+										Companies
+									</div>
+								</div>
+							</div>
+							<div className={styles.coverSelect}>
+								<div
+									onClick={
+										selector !== "Items"
+											? () => setSelector("Items")
+											: () => setSelector("Shops")
+									}
+									className={
+										selector === "Items" || selector === "Shops"
+											? styles.coverSelectTitleHighlighted
+											: styles.coverSelectTitle
+									}
+								>
+									Market Place
+								</div>
+								<div className={styles.coverSelectBtn}>
+									<div
+										onClick={
+											selector !== "Items"
+												? () => setSelector("Items")
+												: () => setSelector("")
+										}
+										className={
+											selector !== "Items"
+												? styles.selectBtn
+												: styles.selectBtnHighlighted
+										}
+									>
+										Items
+									</div>
+									<div
+										onClick={
+											selector !== "Shops"
+												? () => setSelector("Shops")
+												: () => setSelector("")
+										}
+										className={
+											selector !== "Shops"
+												? styles.selectBtn
+												: styles.selectBtnHighlighted
+										}
+									>
+										Shops
+									</div>
+								</div>
+							</div>
 						</div>
-		 <div className={styles.newsLetter}>
-			<NewsLetter/>
-		 </div>
+						<div className={styles.coverRenderSelectCategory}>
+							{selector === "Items" && (
+								<>
+									<ItemsFilter />
+								</>
+							)}
+							{selector === "Shops" && (
+								<>
+									<ShopsFilter />
+								</>
+							)}
+							{selector === "vacancies" && (
+								<>
+									<VacanciesFilter />
+								</>
+							)}
+							{}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className={styles.newsLetter}>
+				<NewsLetter />
+			</div>
 		</main>
 	);
 }

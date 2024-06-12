@@ -3,10 +3,7 @@ import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import firebase from "@/firebase/firebase";
 import Image from "next/image";
-import {
-	collection,
-	addDoc,
-} from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import styles from "./styles.module.css";
 
 interface UserData {
@@ -17,7 +14,7 @@ type FormValue = {
 	email: string;
 };
 
-export default function NewsLetter() {
+export default function Hero() {
 	const {
 		register,
 		handleSubmit,
@@ -31,8 +28,7 @@ export default function NewsLetter() {
 		mode: "onChange",
 	});
 
-	const { database } =
-		firebase;
+	const { database } = firebase;
 
 	if (isSubmitSuccessful) {
 		reset();
@@ -63,7 +59,7 @@ export default function NewsLetter() {
 				<div className={styles.titleCover}>
 					<div className={styles.categoryCover}>
 						<div className={styles.categoryImgCover}>
-						<Image
+							<Image
 								object-fit="cover"
 								className={styles.categoryImg}
 								alt="Picture of the author"
@@ -77,35 +73,13 @@ export default function NewsLetter() {
 						</div>
 						<div className={styles.title}>
 							<div className={styles.flextitle}>
-								<div className={styles.cardBody}>
-								<p className={styles.boldP}>
-										Join us on our mission to simplify service discovery and empower individuals by providing a user-friendly platform to find the perfect vendors for everyday tasks!
-									</p>
-									<p className={styles.boldP}>
-										We are continuously working to expand our service categories
-										and enhance our platform to cater to our users evolving needs.
-									</p>				
-								</div>
-								<div className={styles.innerCover}>
-								<div className={styles.boldPSub}>
-										Subscribe to our newsletter and receive exclusive updates.
-									</div>
-									<div className={styles.innerFormCover}>
-									<div className={styles.inputCover}>
-										<input
-											type="text"
-											className={styles.input}
-											{...register("email", {
-												required: "Required",
-											})}
-											id="email"
-											placeholder={"Email"}
-										/>
-									</div>
-									<button className={styles.subscribe} type="submit">
-                  subscribe
-									</button>
-									</div>
+								<div className={styles.header}>
+									<span className={styles.titleHero}>
+										Inter Linked Up Directories
+									</span>
+									<span className={styles.slogan}>
+										Your Simplified Workforce Solution
+									</span>
 								</div>
 							</div>
 						</div>

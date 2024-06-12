@@ -13,25 +13,16 @@
 .categoryImgCover{
   width: 98vw;
   height: 170px;
-  background-color: rgb(248, 248, 248);
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.categorybackground1{
-  width: 49vw;
-  height: inherit;
-  background-image: linear-gradient(to right, rgb(223.5, 223.5, 223.5), rgb(253, 253, 253));
-}
-.categorybackground2{
-  width: 49vw;
-  height: inherit;
-  background-image: linear-gradient(to left, rgb(229, 229, 229), rgb(255, 255, 255));
-}
+
 .categoryImg{
   width: 98vw;
   height: 170px;
-  opacity: 0.5;
+  opacity: 0.09;
 }
 
 .title{
@@ -42,7 +33,7 @@
 }
 
 .flextitle{
-  color: rgb(55, 55, 55);
+  color: green;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
   width: 98vw;
@@ -139,7 +130,7 @@
   .categoryImg{
     width: 98vw;
     height: 200px;
-    opacity: 0.5;
+    opacity: 0.09;
   }
   .flextitle{
     color: rgb(55, 55, 55);
@@ -242,7 +233,7 @@
   .categoryImg{
     width: 98vw;
     height: 220px;
-    opacity: 0.5;
+    opacity: 0.09;
   }
   .flextitle{
     color: rgb(55, 55, 55);

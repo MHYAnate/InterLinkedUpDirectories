@@ -12,8 +12,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
   },
   {
     "id": 2,
@@ -28,8 +28,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
     
   },
   {
@@ -45,8 +45,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
    
   },
 
@@ -63,8 +63,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
     
   },
   {
@@ -80,8 +80,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
     
   },
   {
@@ -97,8 +97,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
     
   },
   {
@@ -114,8 +114,8 @@ export const VacancyData = [
     "addrees":"area 2 section 1 block 30 flat 2 oyo street garki",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "opening":"30-04-2024",
-    "closing":"30-05-2024",
+    "opening":"30-05-2024",
+    "closing":"30-05-2025",
     
   },
 ];
