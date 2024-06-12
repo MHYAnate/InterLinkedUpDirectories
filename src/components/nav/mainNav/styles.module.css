@@ -291,7 +291,7 @@ div.inActiveBtn:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 35vw;
+		width: 55vw;
 	}
 	.input {
 		padding-left: 10px;
@@ -314,7 +314,7 @@ div.inActiveBtn:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 32vw;
+		width: 50vw;
 	}
 	.input {
 		padding-left: 10px;
@@ -329,7 +329,7 @@ div.inActiveBtn:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 30vw;
+		width: 45vw;
 	}
 	.input {
 		padding-left: 10px;
@@ -422,7 +422,7 @@ div.inActiveBtn:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 45vw;
+		width: 69vw;
 	}
 	.input {
 		padding-left: 10px;
@@ -492,7 +492,7 @@ div.inActiveBtn:hover {
 		width: inherit;
 	}
 	.search {
-		width: 40vw;
+		width: 45vw;
 	}
 	.input {
 		width: 50vw;
