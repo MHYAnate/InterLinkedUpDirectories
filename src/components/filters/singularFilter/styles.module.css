@@ -1123,9 +1123,8 @@
   }
   
   .filter{
- 
+    width: 98vw;
     height: max-content;
-  
   }
   
   .filterAndSearch{
@@ -1134,7 +1133,7 @@
   }
   
   .selectGroup{
-    width: 60vw;
+    width: 98vw;
     height: max-content;
     
   }
@@ -1503,7 +1502,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 10px;
-    width: 60vw;
+    width: 98vw;
     min-height: 47px;
     max-height: max-content;
   }
