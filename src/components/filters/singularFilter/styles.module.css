@@ -482,10 +482,12 @@
 
 .shopTagCover{
   display: flex;
-  width: inherit;
+  min-width: 300px;
+  max-width: 80vw;
   justify-content: flex-start;
   column-gap: 10px;
   align-items: center;
+  align-self: first baseline;
 }
 
 .vendoraddressTitle{
