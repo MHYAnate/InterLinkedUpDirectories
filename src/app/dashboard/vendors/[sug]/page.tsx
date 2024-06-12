@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import FilterVendors from "@/components/filters/generalFilters/filterVendor";
+
 import VendorNav from "@/components/nav/userNav/nav";
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -31,7 +31,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 					</div>
 				</div>
 				<div className={styles.bodyCover}>
-					<FilterVendors />
+					
 				</div>
 			</div>
 		</div>

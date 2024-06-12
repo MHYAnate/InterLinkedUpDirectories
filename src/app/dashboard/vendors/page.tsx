@@ -5,7 +5,6 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
 import Image from "next/image";
-import FilterVendorsCategory from "@/components/filters/generalFilters/filterVendorsCategory";
 import VendorNav from "@/components/nav/userNav/nav";
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -34,7 +33,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 					</div>
 				</div>
 				<div className={styles.bodyCover}>
-					<FilterVendorsCategory />
+
 				</div>
 			</div>
 		</div>
