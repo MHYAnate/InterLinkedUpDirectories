@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
 import Image from "next/image";
-import FilterVendors from "@/components/filters/generalFilters/filterVendor";
+import FilterVendors from "@/components/filters/singularFilter/filterVendor";
 import Nav from "@/components/nav/mainNav/nav";
 
 export default function Page({ params }: { params: { slug: string } }) {
