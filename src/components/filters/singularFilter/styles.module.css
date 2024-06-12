@@ -584,7 +584,7 @@
 
 
 .innerTextVacancyRenderCover{
-  width: 60vw;
+  width: 58vw;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -623,7 +623,7 @@
 
 
 .coverDetail{
-  max-width:60vw;
+  max-width:56vw;
   max-width: max-content;
   min-width: 310px;
   display: flex;
@@ -632,7 +632,7 @@
   height: max-content;
 }
 .coverHeadDetail{
-  max-width:60vw;
+  max-width:56vw;
   max-width: max-content;
   min-width: 310px;
   display: flex;
@@ -696,7 +696,7 @@
   user-select: none;
 }
 .detailHead{
-   width: 60vw;
+   width: 56vw;
    height: max-content;
    text-align: center;
    text-align: left;
