@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import MarketingFilter from "@/components/filters/generalFilters/filterMarket";
+
 import Nav from "@/components/nav/mainNav/nav";
 import { Suspense } from 'react'
 import Loading from "../register/logo";
@@ -31,7 +31,6 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
 			</div>
 			<div className={styles.bodyCover}>
-				<MarketingFilter/>
       </div>
 		</div>
 		</div>

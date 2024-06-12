@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import FilterVendorsCategory from "@/components/filters/generalFilters/filterVendorsCategory";
+
 import Nav from "@/components/nav/mainNav/nav";
 
 export default function Page({ params }: { params: { slug: string } }) {
