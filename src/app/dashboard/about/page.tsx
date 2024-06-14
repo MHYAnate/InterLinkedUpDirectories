@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import VendorNav from "@/components/nav/userNav/nav";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
-import AboutUs from "@/components/about/about";
+import AboutUs from "@/components/about/aboutUs";
 
 export default function About() {
 	return (
