@@ -20,6 +20,9 @@
   Min-height: 300px;
   max-height: fit-content;
   border-radius: 10px;
+  animation: appearRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .rightImg1Cover{
@@ -49,6 +52,9 @@
   min-height: 300px;
   max-height: fit-content;
   border-radius: 10px;
+  animation: appearRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .rightImg2Cover{
@@ -79,6 +85,9 @@
   Min-height: 300px;
   max-height: fit-content;
   border-radius: 10px;
+  animation: appearRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .rightImg3Cover{
@@ -110,6 +119,9 @@
   Min-height: 300px;
   max-height: fit-content;
   border-radius: 10px;
+  animation: appearleft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .leftImg1Cover{
@@ -139,7 +151,9 @@
   min-height: 300px;
   max-height: fit-content;
   border-radius: 10px;
-  
+  animation: appearleft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .leftImg2Cover{
@@ -171,6 +185,9 @@
   Min-height: 300px;
   max-height: fit-content;
   border-radius: 10px;
+  animation: appearleft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .leftImg3Cover{
@@ -207,6 +224,9 @@
   justify-content: center;
   font-size: 2rem;
   text-align: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .seperatorDiv2{
   width: 90vw;
@@ -252,6 +272,9 @@
   text-align: center;
   user-select: none;
   color: goldenrod;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .imgMiniDiv{
   width: 200px;
@@ -353,6 +376,39 @@
   text-transform: uppercase;
   color: green;
   font-weight: 700;
+}
+
+@keyframes appearRight {
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+  };
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes appearleft {
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+  };
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+  };
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 999px) {
