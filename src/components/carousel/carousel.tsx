@@ -43,9 +43,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 	}, [setActiveIndex, Services.length]);
 
 	const handleResetIndex = useCallback(() => {
-		setInnerActiveIndex((prevIndex) =>
-			prevIndex === Services[activeIndex].services.length === null ? 1 : prevIndex + 1
-		);
+		setInnerActiveIndex(1);
 	}, [setActiveIndex, Services.length]);
 
 	const inhandleNext = useCallback(() => {
