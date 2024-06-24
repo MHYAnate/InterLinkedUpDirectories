@@ -17,7 +17,7 @@ export const MarketShopTag = [
   },
   {
     "id": 5,
-    "tag": "Home and Building Construction",
+    "tag": "Building and Home Fittings",
   },
   {
     "id": 6,
@@ -37,7 +37,7 @@ export const MarketShopTag = [
   },
   {
     "id": 10,
-    "tag": "Sports, Outdoors And Garden",
+    "tag": "Sports And Garden",
   },
   {
     "id": 11,
@@ -45,7 +45,7 @@ export const MarketShopTag = [
   },
   {
     "id": 12,
-    "tag": "Games, Collectable and Hobbies",
+    "tag": "Collectable and Hobbies",
   },
   {
     "id": 13,

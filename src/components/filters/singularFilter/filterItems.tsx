@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useEffect, useCallback, useTransition } from "react";
+import { useState, useEffect, useCallback, useTransition, useRef } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
@@ -480,7 +480,7 @@ export default function ItemsFilter() {
 		</div>
 		));
 	}
-
+ 
 
 
 	useEffect(() => {
@@ -488,10 +488,6 @@ export default function ItemsFilter() {
 		
 	}),
 		[];
-
-	
-
-	
 
 	return (
 		<div className={styles.filterBodyCover}>
@@ -557,7 +553,7 @@ export default function ItemsFilter() {
 					</div>
 				</form>
 			<div className={styles.displayFilter}>
-				{isClient && market === "space" && (
+				{isClient  && (
 					<div className={styles.renderVendorInnerCover}>
 						{filteredFirebaseCountryList?.length > 0
 							? RenderAvailableGoods()

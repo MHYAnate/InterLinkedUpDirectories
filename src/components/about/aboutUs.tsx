@@ -216,7 +216,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.rightTextCover3}>
-        <span className={styles.cardTitleSpan}>Our Mision</span>
+        <span className={styles.cardTitleSpan}>Our Mission</span>
         <p className={styles.para}>
 						Our mission is to simplify and streamline the process of finding trusted Goods or Service vendors and employers to potential clients and job seakers.
 					</p>
@@ -547,6 +547,9 @@ export default function AboutUs() {
       </div>
     </div>
 
+		
+		<div className={styles.seperatorDiv}> Detailed User profiles</div>
+
 			<div className={styles.leftContainer2}>
 				<div className={styles.leftImg2Cover}>
 					<Image
@@ -562,9 +565,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover2}>
-        <span className={styles.cardTitleSpan}>
-        Detailed User profiles:
-						</span>
+       
             <p className={styles.para}>
             Each User profile within our directory includes essential details
 						like:
