@@ -1259,50 +1259,14 @@
 
 @media screen and (max-width: 770px) {
   
-  .filterBodyCover{
-    width: 98vw;
-    height: max-content;
-    
-  }
 
-  .Market{
-    display: flex;
-    width: 98vw;
-    align-items: center;
-  }
-  
-  .Space{
-   width: 44vw;
-   text-align: center; 
-  }
-  .SpaceHighlighted{
-    color: white;
-    width: 44vw;
-    text-align: center; 
-    background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
-   }
-  
-  .Shop{
-    width: 44vw;
-    text-align: center;
-  }
-
-  .ShopHighlighted{
-    color: white;
-    width: 44vw;
-    text-align: center; 
-    background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
-  }
   
   .filter{
     width: 98vw;
     height: max-content;
   }
   
-  .filterAndSearch{
-    font-size: 1em;
-    height: inherit;
-  }
+
   
   .selectGroup{
     width: 98vw;
@@ -1318,32 +1282,7 @@
     justify-content: center;
     
   }
- 
-  .selectCover{
-    width: 13vw;
-    
-  }
-  .select{
-    width: 13vw;
-    
-  }
-  
-  .inputCover{
-    width: 20vw;
-    
-  }
-  .inputCoverC{
-    width: 60vw;
-    
-  }
-  .input{
-    width: 20vw;
-    
-  }
-  .inputC{
-    width: 60vw;
-    
-  }
+
   .displayFilter{
     width: 98vw;
     height: max-content;
@@ -1378,152 +1317,7 @@
     margin-top: 0;
   }
 
-  .renderVendorInnerCoverNoScroll{
-    width: 98vw; 
-  }
-
-  .VacancyRenderCover{
-    width:95vw;
-  }
-  .innerTextVacancyRenderCover{
-    max-width:95vw;
-    min-width: 310px;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
  
-  .innerTextVendorRenderCover{
-    width: 95vw;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 10px;
-  }
-
-  .innerTextShopRenderCover{
-    width: 95vw;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 10px;
-  }
-  .innerTextShowMoreRenderCover{
-    width: 95vw;
-  }
-  
-  .coverDetail{
-    width:95vw;
-    max-width: max-content;
-    display: flex;
-    justify-content:space-between ;
-    align-items: first baseline;
-    height: max-content;
-    font-size: 1rem;
-    
-  }
-  .detailTitle{
-    width: 20vw;
-    height: inherit;
-    text-align: start;
-    color: green;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .detail{
-   max-width: 60vw;
-    height: max-content;
-    text-align: center;
-    text-align: left;
-  }
-  .innerTextstockRenderCover{
-    min-width: 50vw;
-    justify-content: first baseline;
-  }
-  .innerTextShopRenderCover{
-   width: 50vw;
-    display: flex;
-    flex-direction: column;
-    align-items: first baseline;
-    justify-content: first baseline;
-  }
-  .stockRenderCover{
-    min-width: 90vw;
-  }
-  .stockName{
-    min-width: 90.15vw;
-  }
-  .shopRenderCover{
-    min-width: 90vw;
-  }
-  .VendorRenderCover{
-    width: 310px;
-  }
-  .stockSeperatorCover{
-   
-    min-width: 90vw;
-  }
-  .showMore{
-   
-    min-width: 90vw;
-  }
-
-  .innerTextShowMoreRenderCover{
-    width: 50vw;
-  }
-  
-  .contactCover{
-    justify-content: flex-start;
-    width: 50vw;
-    font-size: 12px;
-    text-align: left;
-  }
-  .status{
-    width: 50vw;
-  }
-
-  .contactTitle{
-    width: 50vw;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .contact{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50vw;
-    height: max-content;
-  }
-  .addressTitle{
-    width: 50vw;
-  }
-  .addresCover{
-    width: 50vw;
-  }
-  .address{
-    width: 50vw;
-    font-size: 12px;
-  }
-  .shopName{
-    
-    width: 90vw;
-   
-  }
-  .shoptitleBodyDivide{
-    width: 87vw;
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    justify-content: flex-start;
-  }
 }
 
 @media screen and (max-width: 656px) {
