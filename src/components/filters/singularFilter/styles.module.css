@@ -867,7 +867,7 @@
 }
 .displayShopItemsFilter{
   display: flex;
-  width: fit-content;
+  width: 300px;
   min-height: fit-content;
   max-height: 300px;
   padding-top: 10px;
