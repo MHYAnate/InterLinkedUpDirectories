@@ -243,7 +243,7 @@ export default function ShopsFilter() {
 							// unoptimized
 						/>
 					</div>
-						<div>
+						<div className={styles.showMoreDetailCover}>
 							<div className={styles.showMoreItemsDetailsBody}>
 							<span className={styles.shopItemsDetailTitle}>Condition</span>
 							<span className={styles.shopItemsBody}>{item.condition}</span>
@@ -379,20 +379,20 @@ export default function ShopsFilter() {
 							// unoptimized
 						/>
 					</div><form>
-					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("tag")}
+					<div className={styles.shopItemSelectCover}>
+						<select className={styles.shopItemSelect} {...register("tag")}
 	
 						>
-							<option className={styles.option} value="Filter Tag">
+							<option className={styles.shopItemOption} value="Filter Tag">
 								Filter Tag
 							</option>
 							{renderAvailableTag()}
 						</select>
 					</div>
-					<div className={styles.inputCover}>
+					<div className={styles.shopItemInputCover}>
 						<input
 							type="search"
-							className={styles.input}
+							className={styles.shopItemInput}
 							{...register("title")}
 							value={shopSearchInput}
 							onChange={updateShopItemSearchInput}
@@ -400,7 +400,6 @@ export default function ShopsFilter() {
 							placeholder="Name of Item"
 						/>
 					</div>
-
 					</form>
 				</div> : <></>}
 

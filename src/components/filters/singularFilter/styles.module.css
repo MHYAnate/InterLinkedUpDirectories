@@ -155,10 +155,36 @@
   background-color: white;
 }
 
+.shopItemSelectCover{
+  border: 1px solid silver;
+  border-radius: 5px;
+  width: 150px;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.shopItemSelect{
+  border: none;
+  width: 150px;
+  user-select: none;
+  background-color: white;
+}
+
 .inputCover{
   border: 1px solid silver;
   border-radius: 5px;
   width: 12vw;
+  padding-left: 3px;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.shopItemInputCover{
+  border: 1px solid silver;
+  border-radius: 5px;
+  width: 150px;
   padding-left: 3px;
   padding: 5px;
   margin-bottom: 5px;
@@ -176,6 +202,12 @@
 .input{
   width: 12vw;
   border: none;
+}
+
+.shopItemInput{
+  width: 150px;
+  border: none;
+  height: 100%;
 }
 
 .inputC{
@@ -946,7 +978,7 @@
 }
 
 .shopItemsBody{
-  font-weight: 700;
+  font-weight: 500;
   color: rgb(45, 45, 45);
 }
 .shopNavBtnCover{
@@ -1008,6 +1040,26 @@
   height: 70px;
 }
 
+.showMoreDetailCover{
+  min-height: 100px;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: flex-start;
+  row-gap: 10px;
+  padding-top: 5px;
+}
+.shopItemsDetailCover{
+  min-height: 100px;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: flex-start;
+  row-gap: 10px;
+  padding-top: 5px;
+}
 
 @media screen and (max-width: 5400px) {
   .stockRenderCover{
