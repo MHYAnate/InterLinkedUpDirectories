@@ -244,7 +244,7 @@ export default function ShopsFilter() {
 						/>
 					</div>
 						<div>
-							<div className={styles.showMoreDetailsBody}>
+							<div className={styles.showMoreItemsDetailsBody}>
 							<span className={styles.shopItemsDetailTitle}>Condition</span>
 							<span className={styles.shopItemsBody}>{item.condition}</span>
 						</div>
