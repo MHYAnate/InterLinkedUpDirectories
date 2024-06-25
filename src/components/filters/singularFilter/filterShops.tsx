@@ -315,33 +315,6 @@ export default function ShopsFilter() {
 		return filteredShopList?.map((shop) => (
 			<div className={styles.shopRenderCover} key={shop.id}>
 				<div className={styles.shopName}>{shop.shopName} </div>
-				<div className={styles.shopTagCover}>
-					<div className={styles.shopTagTitle}> Tag</div>
-					<div className={styles.shopTag}>{shop.shopTag}</div>
-				</div>
-				<div className={more !== `${shop.id}`?styles.shoptitleBodyDivide : styles.hide}>
-					<div className={styles.imgCover}>
-						<Image
-							className={styles.idiImg}
-							src={`${shop.shopPic}`}
-							alt={`${shop.shopName}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-					<div className={styles.innerTextShopRenderCover}>
-						<div className={styles.ShopContactCover}>
-							<div className={styles.shopContactTitle}> Address</div>
-							<div className={styles.shopAddress}>{shop.address}</div>
-						</div>
-						<div className={styles.shopContactCover}>
-							<div className={styles.shopContactTitle}> Contact</div>
-							<div className={styles.shopContact}>{shop.phone}</div>
-						</div>
-					</div>
-				</div>
 				<div className={styles.shopNavBtnCover}>
 				<div
 					className={more !== `${shop.id}` ? styles.btnShop : styles.btnShopA}
@@ -364,6 +337,35 @@ export default function ShopsFilter() {
 					{more === `${shop.shopName}` ? "DETAILS" : "details"}
 				</div>
 				</div>
+	
+				<div className={more !== `${shop.id}`?styles.shoptitleBodyDivide : styles.hide}>
+					<div className={styles.imgCover}>
+						<Image
+							className={styles.idiImg}
+							src={`${shop.shopPic}`}
+							alt={`${shop.shopName}`}
+							quality={100}
+							width={500}
+							height={500}
+							// unoptimized
+						/>
+					</div>
+					<div className={styles.innerTextShopRenderCover}>
+					<div className={styles.contactCover}>
+							<div className={styles .contactTitle}> Tag</div>
+							<div className={styles.contact}>{shop.shopTag}</div>
+						</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}> Address</div>
+							<div className={styles.address}>{shop.address}</div>
+						</div>
+						<div className={styles.contactCover}>
+							<div className={styles .contactTitle}> Contact</div>
+							<div className={styles.contact}>{shop.phone}</div>
+						</div>
+					</div>
+				</div>
+				
 				
 				{more === `${shop.id}` ? <div className={styles.displayShopItemsFilter}>
 				<div className={styles.searchShopImgCover}>
