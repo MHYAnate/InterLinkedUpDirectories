@@ -207,7 +207,6 @@
 .shopItemInput{
   width: 150px;
   border: none;
-  height: 100%;
 }
 
 .inputC{
@@ -263,8 +262,9 @@
 .shoptitleBodyDivide{
   display: flex;
   width: 310px;
-  justify-content: center;
-  column-gap: 2vw;
+  justify-content: flex-start;
+  
+  column-gap: 7px;
   align-items: center;
 }
 .VendorRenderCover{
@@ -282,7 +282,8 @@
 .stockSeperatorCover{
   display: flex;
   align-items: first baseline;
-  justify-content: space-around;
+  justify-content: flex-start;
+  column-gap: 7px;
   height:max-content;
   margin-left: 10px;
  
@@ -291,7 +292,8 @@
 .showMore{
   display: flex;
   align-items: first baseline;
-  justify-content: space-around;
+  justify-content: flex-start;
+  column-gap: 7px;
   height:max-content;
   animation:  0.1s linear appear;
   margin-left: 10px;
@@ -551,8 +553,8 @@
   height: max-content;
   overflow: auto;
   user-select: none;
-  font-weight: 700;
-  color: rgb(45, 45, 45);
+  font-weight: 550;
+  color: rgb(70, 70, 70);
 }
 .shopAddress{
   width: 120px;
@@ -806,8 +808,8 @@
   align-items: center;
   width: 120px;
   height: 30px;
-  font-weight: 700;
-  color: rgb(45, 45, 45);
+  font-weight: 550;
+  color: rgb(70, 70, 70);
 }
 
 .displayFilter{
@@ -896,6 +898,7 @@
   min-height: fit-content;
   max-height: 310px;
   flex-direction: column;
+  row-gap: 3px;
   padding-top: 10px;
   user-select: none;
   overflow: auto;
@@ -1003,6 +1006,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  padding-bottom: 5px;
 }
 
 .btnShop{
@@ -1013,15 +1018,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding-bottom: 5px;
 }
 
 .btnShop:hover{
   color: green;
-  text-transform: uppercase;
+  font-weight: 900;
 }
 .btnShopA:hover{
   color: green;
-  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .searchShopImgCover{
@@ -1074,7 +1082,7 @@
     max-width: 310px;
     min-width: 310px;
     justify-content: flex-start;
-    column-gap: 2vw;
+    column-gap: 7px;
     align-items: center;
     margin-right: 0;
   }
@@ -1094,7 +1102,7 @@
   .showMore{
     width: 310px;
     justify-content: flex-start;
-    column-gap: 2vw;
+    column-gap: 7px;
     align-self: center;
     align-items: center;
     margin-right: 0;

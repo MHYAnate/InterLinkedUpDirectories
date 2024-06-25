@@ -14,6 +14,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Fashion",
     "offers":"whole sales and retail",
+    "market": "Garki Market",
     "items": [
       {
         "id": 1,
@@ -93,6 +94,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Fashion", 
     "offers":"whole sales and retail",
+    "market": "Wuye Market",
     "items": [
       {
         "id": 1,
@@ -173,6 +175,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Super Market",
     "offers":"retail",
+    "market": "Jabi Market",
     "items": [
       {
         "id": 1,
@@ -279,6 +282,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Electronics and Gadgets",
     "offers":"whole sales and retail",
+    "market": "Apo Market",
     "items": [
       {
         "id": 1,
@@ -361,7 +365,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"area 2 section 1 block 30 flat 2 oyo street caro",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only", 
     "name":"David",
@@ -371,6 +375,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Babies and Toys",
     "offers":"retail",
+    "market": "Caro Market",
     "items": [
       {
         "id": 1,
@@ -466,7 +471,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"area 2 section 1 block 30 flat 2 oyo street mararaba",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Moses",
@@ -476,6 +481,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Building and Home Fittings",
     "offers":"whole sales and retail",
+    "market": "Orange Market",
     "items": [
       {
         "id": 1,
@@ -571,7 +577,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"area 2 section 1 block 30 flat 2 oyo street Lafia",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Solomon",
@@ -581,6 +587,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Building and Home Fittings",
     "offers":"whole sales and retail",
+    "market": "Lafia Market",
     "items": [
       {
         "id": 1,

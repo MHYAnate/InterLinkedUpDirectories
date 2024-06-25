@@ -356,13 +356,14 @@ export default function ShopsFilter() {
 							<div className={styles.contact}>{shop.shopTag}</div>
 						</div>
 						<div className={styles.contactCover}>
+							<div className={styles .contactTitle}> Market</div>
+							<div className={styles.contact}>{shop.market}</div>
+						</div>
+						<div className={styles.contactCover}>
 							<div className={styles.contactTitle}> Address</div>
 							<div className={styles.address}>{shop.address}</div>
 						</div>
-						<div className={styles.contactCover}>
-							<div className={styles .contactTitle}> Contact</div>
-							<div className={styles.contact}>{shop.phone}</div>
-						</div>
+					
 					</div>
 				</div>
 				
@@ -409,6 +410,10 @@ export default function ShopsFilter() {
 				<div className={styles.showMoreDetailsBody}>
 							<span className={styles.shopItemsDetailTitle}>Owner</span>
 							<span className={styles.shopItemsBody}>{shop.name}</span>
+						</div>
+						<div>
+							<span className={styles.shopItemsDetailTitle}>Contact</span>
+							<span className={styles.shopItemsBody}>{shop.phone} </span>
 						</div>
 						<div>
 							<span className={styles.shopItemsDetailTitle}>Email</span>
