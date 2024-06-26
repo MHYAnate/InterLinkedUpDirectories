@@ -817,7 +817,7 @@
   align-items: center;
   justify-content: center;
   width: 60vw;
-  height:450px;
+  height:500px;
 }
 .displayFilterC{
   display: flex;
@@ -825,13 +825,13 @@
   justify-content: center;
   width: 60vw;
   min-height: max-content;
-  height: 450px;
+  height: 500px;
   padding-top: 10px;
 }
 
 .renderVacancyInnerCover{
   display: flex;
-  height:450px;
+  height:500px;
   width: 60vw;
   flex-wrap: wrap;
   overflow: auto;
@@ -846,7 +846,7 @@
 
 .renderVendorInnerCover{
   display: flex;
-  height:445px;
+  height:495px;
   width: 60vw;
   flex-wrap: wrap;
   overflow: auto;
@@ -862,7 +862,7 @@
 }
 .renderVendorInnerCoverNoScroll{
   display: flex;
-  height:445px;
+  height:495px;
   width: 60vw;
   flex-wrap: wrap;
   overflow: hidden;
@@ -1370,14 +1370,14 @@
   }
 
   .renderVacancyInnerCover{
-    height:450px;
+    height:500px;
     width: 98vw;
     padding-top: 0;
     margin-top: 0;
   }
   
   .renderVendorInnerCover{
-    height:450px;
+    height:500px;
     width: 98vw;
     padding-top: 0;
     margin-top: 0;
@@ -1535,12 +1535,12 @@
   }
 
   .renderVacancyInnerCover{
-    height:450px;
+    height:500px;
     width: 98vw;
   }
   .renderVendorInnerCover{
     display: flex;
-    height:450px;
+    height:500px;
     width: 98vw;
   }
   .selectGroup{
@@ -1589,12 +1589,12 @@
   }
 
   .renderVacancyInnerCover{
-    height:450px;
+    height:500px;
     width: 98vw;
   }
 
   .renderVendorInnerCover{
-    height:450px;
+    height:500px;
     width: 98vw;   
   }
 
