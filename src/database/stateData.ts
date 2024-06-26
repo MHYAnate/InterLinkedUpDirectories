@@ -46,7 +46,7 @@ export const StateData = [
     "areaList": [
      {
       "id":"1",
-      "name":"Dawaki kodo",
+      "name":"Dawakin kodo",
      },
      {
       "id":"2",

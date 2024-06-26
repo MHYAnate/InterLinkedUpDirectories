@@ -4,7 +4,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"shop 3 block 1 phase 1",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Micheal",
@@ -14,7 +14,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Fashion",
     "offers":"whole sales and retail",
-    "market": "Garki Market",
+    "market": "royal shopping complex",
     "items": [
       {
         "id": 1,
@@ -84,7 +84,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"shop 2 block 4 phase 3",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Faraji",
@@ -94,7 +94,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Fashion", 
     "offers":"whole sales and retail",
-    "market": "Wuye Market",
+    "market": "okene central market",
     "items": [
       {
         "id": 1,
@@ -165,7 +165,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"shop 7 block 3 phase 7 ",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Isaac",
@@ -175,7 +175,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Super Market",
     "offers":"retail",
-    "market": "Jabi Market",
+    "market": "central rail market",
     "items": [
       {
         "id": 1,
@@ -272,7 +272,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street garki",
+    "address":"shop 5 block 8 phase 2 ",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Abraham",
@@ -282,7 +282,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Electronics and Gadgets",
     "offers":"whole sales and retail",
-    "market": "Apo Market",
+    "market": "universal trading complex",
     "items": [
       {
         "id": 1,
@@ -365,7 +365,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street caro",
+    "address":"shop 1 block 2 phase 2",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only", 
     "name":"David",
@@ -375,7 +375,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Babies and Toys",
     "offers":"retail",
-    "market": "Caro Market",
+    "market": "okene central market",
     "items": [
       {
         "id": 1,
@@ -471,7 +471,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street mararaba",
+    "address":"shop 1 block 4 phase 2",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Moses",
@@ -481,7 +481,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Building and Home Fittings",
     "offers":"whole sales and retail",
-    "market": "Orange Market",
+    "market": "royal shopping complex",
     "items": [
       {
         "id": 1,
@@ -577,7 +577,7 @@ export const ShopData = [
     "country": "Nigeria",
     "state":"Kogi",
     "area":"okene",
-    "address":"area 2 section 1 block 30 flat 2 oyo street Lafia",
+    "address":"shop 3 block 1 phase 3",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
     "name":"Solomon",
@@ -587,7 +587,7 @@ export const ShopData = [
     "shopId":"docId" ,
     "shopTag": "Building and Home Fittings",
     "offers":"whole sales and retail",
-    "market": "Lafia Market",
+    "market": "okene central market",
     "items": [
       {
         "id": 1,
