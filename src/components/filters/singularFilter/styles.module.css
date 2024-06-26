@@ -261,9 +261,9 @@
 }
 .shoptitleBodyDivide{
   display: flex;
-  width: 310px;
+  width: 300px;
   justify-content: flex-start;
-  
+  margin-left: 10px;
   column-gap: 7px;
   align-items: center;
 }
