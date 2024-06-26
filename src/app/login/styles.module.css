@@ -187,6 +187,7 @@
   column-gap: 20px;
   height: 70vh;
 }
+
 .innerFormBody{
   display: flex;
   flex-direction: column;
@@ -246,7 +247,7 @@
 .input1{
   border: none;
   width: 19vw;
-  height: 25px;
+  height: 23.5px;
   font-weight: 400;
 }
 
