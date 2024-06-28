@@ -198,7 +198,7 @@
   column-gap: 20px;
   height: 70vh;
   border-radius: 10px;
-  background-image: linear-gradient(to right,   rgb(255, 255, 255), rgb(158, 202, 245));
+  background-image: linear-gradient(to right,   rgb(255, 255, 255), rgb(172, 192, 211));
 }
 
 .resetForm{

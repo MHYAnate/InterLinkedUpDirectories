@@ -669,7 +669,7 @@ export default function ShopsFilter() {
 				</form>
 			</div> : <></>}
 
-			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}>{shopItems(shop.name)}</div> : <></>}
+			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}>{shopItems(shop.name)}</div> : <></>} 
 
 			{more === `${shop.shopName}` ?<div className={styles.displayShopItems}>
 			<div className={styles.showMoreDetailsBody}>
