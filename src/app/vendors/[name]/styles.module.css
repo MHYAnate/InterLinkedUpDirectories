@@ -5,7 +5,7 @@
   height: max-content;
 }
 .pageBodyCover{
-  width: 97.5vw;
+  width: 98vw;
   background-color: white;
   z-index: 3;
   height: max-content;
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 770px) {
   .pageBodyCover{
-    width: 97.5vw;
+    width: 98vw;
     background-color: white;
     z-index: 3;
     height: max-content;
@@ -123,7 +123,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 94vw;
+    width: 98vw;
     height: max-content;
     border-left: none;
     margin-top: 10px;

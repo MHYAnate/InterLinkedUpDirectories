@@ -1360,6 +1360,9 @@
     height: max-content;
   }
   
+  .filterBodyCover{
+    width: 98vw;
+  }
 
   
   .selectGroup{
@@ -1427,6 +1430,8 @@
     padding-top: 10;
     margin-top: 0;
   }
+
+ 
 }
 
 @media screen and (max-width: 656px) {
@@ -1695,7 +1700,7 @@
   
   .detail{
     width: 180px;
-    font-size: 0.9rem;
+    font-size: 0.rem;
   }
   .detailHead{
      width: 95vw;
