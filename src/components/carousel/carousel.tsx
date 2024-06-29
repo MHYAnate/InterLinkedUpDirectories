@@ -342,7 +342,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 								quality={100}
 								width={100}
 								height={100}
-								src={Services[activeIndex]?.services[inneractiveIndex]?.src ? Services[activeIndex]?.services[inneractiveIndex]?.src : '/service/select.jpg'}
+								src={Services[activeIndex]?.services[inneractiveIndex]?.src ? Services[activeIndex]?.services[inneractiveIndex]?.src :'/service/select.jpg'}
 								priority={true}
 								unoptimized
 							/>

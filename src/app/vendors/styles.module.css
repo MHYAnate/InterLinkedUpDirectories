@@ -4,13 +4,17 @@
   width: max-content;
   height: max-content;
 }
+
 .pageBodyCover{
   width: 97.5vw;
   background-color: white;
   z-index: 3;
   height: max-content;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .idBody{
   width: 30vw;
   height: 540px;
@@ -84,10 +88,12 @@
     height: max-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .idBody{
-    width: 94vw;
+    width: 97vw;
     height: 360px;
     display: flex;
     flex-direction: column;
