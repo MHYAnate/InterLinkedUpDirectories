@@ -130,6 +130,8 @@ export default function ShopsFilter() {
 		});
 	}
 
+
+
 	const countryValue =
 		typeof document !== "undefined"
 			? (document.querySelector('[name="countrySelect"]') as HTMLInputElement)
@@ -571,7 +573,115 @@ export default function ShopsFilter() {
 			  })
 			: [];
 
+
+		
+	useEffect(() => {
+		handleGetShopeDetail();
+	}),
+		[];
+
+     const [shopItemDetails, setShopItemDetails] = useState<FormValue[]>([]);
+
+
+			async function renderShopItems(shopId:string) {
+				
+				const shopItemDetailRef = collection(database, `Shop`);
+			
+				const shopItemQuery = query(
+					shopItemDetailRef,
+					where("countrySelect", "==", `${shopId}`)
+				);
+			
+				const handleGetShopItemDetail = async () => {
+					try {
+						const querySnapshot = await getDocs(shopItemQuery);
+			
+						if (querySnapshot.empty) {
+							console.log("No profile details found");
+							return;
+						}
+			
+						const retrievedData: FormValue[] = [];
+						querySnapshot.forEach((doc) => {
+							const docData = doc.data() as FormValue;
+							retrievedData.push(docData);
+						});
+						setShopItemDetails(retrievedData);
+					} catch (error) {
+						console.error("Error getting profile detail:", error);
+					}
+				};
+
+				handleGetShopItemDetail();
+
+
+
+				return shopItemDetails?.map((item:any)=>{
+					<div className={styles.renderCover} key={item.id}>
+					<div className={styles.shopItemsCover}>
+						<div className={styles.shopsItemsImgCover}>
+							<Image
+								className={styles.shopItemImg}
+								src={`${item.image}`}
+								alt={`${item.title}`}
+								quality={100}
+								width={500}
+								height={500}
+								// unoptimized
+							/>
+						</div>
+						<div className={styles.shopItemsDetailCover}>
+							<div className={styles.shopItemsDetailTitleName}>{item.title}</div>
+							<div className={styles.shopItemsBody}>{item.price}</div>
+						</div>
+					</div>
+					{show === `${item.id}` && (
+						<div className={styles.showMoreDetails}>
+							<div className={styles.shopsItemsImgCover}>
+							<Image
+								className={styles.shopItemImg}
+								src={`${item.image2}`}
+								alt={`${item.title}`}
+								quality={100}
+								width={500}
+								height={500}
+								// unoptimized
+							/>
+						</div>
+							<div className={styles.showMoreDetailCover}>
+								<div className={styles.showMoreItemsDetailsBody}>
+								<span className={styles.shopItemsDetailTitle}>Condition</span>
+								<span className={styles.shopItemsBody}>{item.condition}</span>
+							</div>
+							<div>
+								<span className={styles.shopItemsDetailTitle}>Status</span>
+								<span className={styles.shopItemsBody}>{item.status}</span>
+							</div>
+							<div>
+								<span className={styles.shopItemsDetailTitle}>feature</span>
+								<span className={styles.shopItemsBody}>{item.features}</span>
+							</div>
+						</div>
+							
+						</div>
+					)}
+					<div
+						className={show !== `${item.id}` ? styles.btn : styles.btnA}
+						onClick={
+							show !== `${item.id}`
+								? () => setShow(`${item.id}`)
+								: () => setShow("")
+						}
+					>
+						{show === `${item.id}` ? "Less" : "Details"}
+					</div>
+				</div>
+				})
+			
+			}
+
 	function RenderAvailableShops() {
+		
 		if (shopProfileDetails === null) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
@@ -758,7 +868,6 @@ export default function ShopsFilter() {
 					</div>
 				</div>
 			</form>
-
 			<div className={styles.displayFilter}>
 				{isClient && (
 					<div className={styles.renderVendorInnerCover}>

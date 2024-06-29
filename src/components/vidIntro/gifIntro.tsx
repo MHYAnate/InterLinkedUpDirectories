@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 
 import styles from "./styles.module.css";
 
+
 interface CarouselProps {
 	Services: {
 		id: number;
@@ -33,7 +34,11 @@ const GifIntro =() => {
 		[searchParams]
 	);
 
+	
+
 	return (
+
+		
 		<main className={styles.menuUserCover}>
 			<div className={styles.menuUserBody}>
 				<div

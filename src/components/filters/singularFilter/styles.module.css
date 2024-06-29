@@ -1388,24 +1388,40 @@
   }
 
   .renderVacancyInnerCover{
-    height:500px;
+    height:fit-content;
     width: 98vw;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: first baseline;
+    padding-left: 10px;
     padding-top: 0;
     margin-top: 0;
   }
   
   .renderVendorInnerCover{
-    height:500px;
+    height:fit-content;
     width: 98vw;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: first baseline;
+    padding-left: 10px;
     padding-top: 0;
     margin-top: 0;
   }
   
   .renderVendorInnerCoverC{
-    height: max-content;
-    width: 98vw; 
-    justify-content: space-evenly;
-    row-gap: 20px;
+    height:fit-content;
+    width: 98vw;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: first baseline;
+    overflow-x: auto;
+    padding-left: 10px;
     padding-top: 0;
     margin-top: 0;
   }
@@ -1552,15 +1568,7 @@
     height: max-content;
   }
 
-  .renderVacancyInnerCover{
-    height:500px;
-    width: 98vw;
-  }
-  .renderVendorInnerCover{
-    display: flex;
-    height:500px;
-    width: 98vw;
-  }
+ 
   .selectGroup{
     display: flex;
     flex-wrap: wrap;
@@ -1606,15 +1614,7 @@
     height: max-content;
   }
 
-  .renderVacancyInnerCover{
-    height:500px;
-    width: 98vw;
-  }
 
-  .renderVendorInnerCover{
-    height:500px;
-    width: 98vw;   
-  }
 
   .displayFilter{
     width: 98vw;
