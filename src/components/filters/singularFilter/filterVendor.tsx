@@ -272,7 +272,7 @@ export default function FilterVendors() {
 					</div>
 					<div className={styles.vendorContactCover}>
 						<div className={styles.vendorContactTitle}>Contact</div>
-						<div className={styles.vendorContact}>{vendor.contact}</div>
+						<div className={styles.vendorContact}>{vendor.number}</div>
 					</div>
 				</div>
 			</div>
