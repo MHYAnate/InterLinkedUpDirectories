@@ -3,7 +3,7 @@ export const VacancyData = [
     "id": 1,
     "jobTitle" : "Software Engineering",
     "employer": "Soft CraftMan Tech",
-    "responsibility":"development and maintance of web app",
+    "responsibility":"Development and maintance of web app",
     "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
     "salary":"N500K - N1.5M",
     "country": "Nigeria",
