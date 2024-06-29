@@ -256,7 +256,7 @@
     margin-top: 10px;
   }
   .categoryCover{
-   flex-direction: column;
+   flex-direction: column-reverse;
   }
   .coverJobsMarket{
     width: 98vw;

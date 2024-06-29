@@ -1,7 +1,6 @@
 .parent{
   width: 320px;
-  min-height: 530px;
-  max-height: max-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
