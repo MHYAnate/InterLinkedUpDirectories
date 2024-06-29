@@ -1432,12 +1432,12 @@
 @media screen and (max-width: 656px) {
 
   .VacancyRenderCover{
-    width:95vw;
-    font-size: 1rem;
+    width:87vw;
+    font-size: 0.8rem;
   }
  
   .innerTextVacancyRenderCover{
-    width: 95vw;
+    width: 87vw;
     height: max-content;
   }
  
@@ -1659,14 +1659,7 @@
 }
 @media screen and (max-width: 471px) {
 
-  .VacancyRenderCover{
-    width:95vw;
-    font-size: 1rem;
-  }
-  .innerTextVacancyRenderCover{
-    width: 95vw;
-    height: max-content;
-  }
+ 
   .innerTextStockRenderCover{
     width: 50vw;
     height: max-content;
