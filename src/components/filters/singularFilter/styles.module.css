@@ -824,6 +824,7 @@
   justify-content: center;
   width: 60vw;
   height:500px;
+
 }
 .displayFilterC{
   display: flex;
@@ -1379,12 +1380,13 @@
   .displayFilter{
     width: 98vw;
     height: max-content;
-    padding-top: 0;
+    padding-top: 10;
   }
 
   .displayFilterC{
     width: 98vw;
     height: max-content;
+    padding-top: 10;
   }
 
   .renderVacancyInnerCover{
@@ -1396,7 +1398,7 @@
     justify-content: flex-start;
     align-items: first baseline;
     padding-left: 10px;
-    padding-top: 0;
+    padding-top: 10;
     margin-top: 0;
   }
   
@@ -1409,7 +1411,7 @@
     justify-content: flex-start;
     align-items: first baseline;
     padding-left: 10px;
-    padding-top: 0;
+    padding-top: 10;
     margin-top: 0;
   }
   
@@ -1422,7 +1424,7 @@
     align-items: first baseline;
     overflow-x: auto;
     padding-left: 10px;
-    padding-top: 0;
+    padding-top: 10;
     margin-top: 0;
   }
 
