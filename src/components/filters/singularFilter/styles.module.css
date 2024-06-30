@@ -1392,6 +1392,17 @@
     padding-top: 10;
   }
 
+  .VacancyRenderCover{
+    background-image: linear-gradient(to top,white, rgba(214, 245, 192, 0.7));
+    border-bottom-right-radius: 15px;
+    padding-left: 10px;
+    border-radius: 20px;
+    margin-left: 0;
+  }
+  .VacancyRenderCover:hover{
+    background-image: linear-gradient(to top,white, rgba(214, 245, 192, 0.7));
+  }
+
   .renderVacancyInnerCover{
     height:fit-content;
     width: 98vw;
@@ -1400,7 +1411,6 @@
     overflow-x: auto;
     justify-content: flex-start;
     align-items: first baseline;
-    padding-left: 10px;
     padding-top: 10;
     margin-top: 0;
   }
@@ -1468,7 +1478,7 @@
   .headFootDetail{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: first baseline;
     column-gap: 5px;
   }
   
@@ -1675,14 +1685,14 @@
   }
   
   .coverDetail{
-    max-width:95vw;
+    max-width:87vw;
     font-size: 0.8rem;
   }
   .coverHeadDetail{
-    max-width:95vw;
+    max-width:87vw;
   }
   .headFootDetailCover{
-    max-width:95vw;
+    max-width:87vw;
   }
   
   .headFootSpan{
@@ -1703,7 +1713,7 @@
     font-size: 1rem;
   }
   .detailHead{
-     width: 95vw;
+     width: 87vw;
    }
 }
 
