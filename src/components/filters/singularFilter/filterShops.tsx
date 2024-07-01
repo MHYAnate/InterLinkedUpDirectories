@@ -838,7 +838,7 @@ export default function ShopsFilter() {
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("stateSelect")}>
+						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 							<option className={styles.option} value="select State">
 								Filter State
 							</option>
@@ -846,15 +846,15 @@ export default function ShopsFilter() {
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("areaSelect")}>
+						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
 							<option className={styles.option} value="select Area">
 								Filter Area
 							</option>
 							{selectState === `${stateValue}` && renderAvailableAreas()}
 						</select>
 					</div>
-					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("complex")}>
+					<div  className={styles.selectCover}>
+						<select value={selectComplex!==(undefined || null)? selectComplex:(selectArea?"": "select market")} className={styles.select} {...register("complex")}>
 							<option className={styles.option} value="select Area">
 								Filter Market complex
 							</option>
@@ -862,7 +862,7 @@ export default function ShopsFilter() {
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("shopTag")}>
+						<select value={shopTag!==(undefined || null)? shopTag:(selectCountry?"": "select market")} className={styles.select} {...register("shopTag")}>
 							<option className={styles.option} value="select Tag">
 								Filter Tag
 							</option>

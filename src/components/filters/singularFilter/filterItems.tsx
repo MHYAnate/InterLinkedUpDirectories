@@ -508,7 +508,7 @@ export default function ItemsFilter() {
 							</select>
 						</div>
 						<div className={styles.selectCover}>
-							<select className={styles.select} {...register("stateSelect")}>
+							<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 								<option className={styles.option} value="select State">
 									Filter State
 								</option>
@@ -516,7 +516,7 @@ export default function ItemsFilter() {
 							</select>
 						</div>
 						<div className={styles.selectCover}>
-							<select className={styles.select} {...register("areaSelect")}>
+							<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
 								<option className={styles.option} value="select Area">
 									Filter Area
 								</option>
@@ -524,7 +524,7 @@ export default function ItemsFilter() {
 							</select>
 						</div>
 						<div className={styles.selectCover}>
-							<select className={styles.select} {...register("tag")}>
+							<select value={tag!==(undefined || null)? tag:(selectCountry?"": "select area")} className={styles.select} {...register("tag")}>
 								<option className={styles.option} value="select Tag">
 									Filter Tag
 								</option>
@@ -532,7 +532,7 @@ export default function ItemsFilter() {
 							</select>
 						</div>
 						<div className={styles.selectCover}>
-							<select className={styles.select} {...register("status")}>
+							<select value={status!==(undefined || null)? status:(selectCountry?"": "select status")} className={styles.select} {...register("status")}>
 								<option className={styles.option} value="select Status">
 									Filter Status
 								</option>

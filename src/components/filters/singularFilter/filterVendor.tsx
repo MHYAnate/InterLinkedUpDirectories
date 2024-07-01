@@ -299,7 +299,7 @@ export default function FilterVendors() {
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("stateSelect")}>
+						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 							<option className={styles.option} value="select State">
 								Filter State
 							</option>
@@ -307,7 +307,7 @@ export default function FilterVendors() {
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("areaSelect")}>
+						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
 							<option className={styles.option} value="select Area">
 								Filter Area
 							</option>
