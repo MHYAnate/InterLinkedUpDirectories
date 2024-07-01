@@ -428,8 +428,8 @@ export default function ShopsFilter() {
 							// unoptimized
 						/>
 					</div><form>
-					<div className={styles.shopItemSelectCover}>
-						<select className={styles.shopItemSelect} {...register("tag")}
+					<div  className={styles.shopItemSelectCover}>
+						<select  value={tag!==(undefined || null)? tag:(selectCountry?"": "select tag")} className={styles.shopItemSelect} {...register("tag")}
 	
 						>
 							<option className={styles.shopItemOption} value="Filter Tag">

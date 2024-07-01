@@ -524,7 +524,7 @@ export default function ItemsFilter() {
 							</select>
 						</div>
 						<div className={styles.selectCover}>
-							<select value={tag!==(undefined || null)? tag:(selectCountry?"": "select area")} className={styles.select} {...register("tag")}>
+							<select value={tag!==(undefined || null)? tag:(selectCountry?"": "select tag")} className={styles.select} {...register("tag")}>
 								<option className={styles.option} value="select Tag">
 									Filter Tag
 								</option>
