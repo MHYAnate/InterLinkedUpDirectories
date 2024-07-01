@@ -22,7 +22,7 @@
   border-radius: 10px;
   animation: appearRight linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 
 .rightImg1Cover{
@@ -54,7 +54,7 @@
   border-radius: 10px;
   animation: appearRight linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 
 .rightImg2Cover{
@@ -87,7 +87,7 @@
   border-radius: 10px;
   animation: appearRight linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 
 .rightImg3Cover{
@@ -121,7 +121,7 @@
   border-radius: 10px;
   animation: appearleft linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 
 .leftImg1Cover{
@@ -153,7 +153,7 @@
   border-radius: 10px;
   animation: appearleft linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 
 .leftImg2Cover{
@@ -187,7 +187,7 @@
   border-radius: 10px;
   animation: appearleft linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 
 .leftImg3Cover{
@@ -226,7 +226,7 @@
   text-align: center;
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 .seperatorDiv2{
   width: 90vw;
@@ -274,7 +274,7 @@
   color: goldenrod;
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 20%;
 }
 .imgMiniDiv{
   width: 200px;
@@ -386,7 +386,7 @@
 @keyframes appearRight {
   from{
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.9);
   };
   to{
     opacity: 1;
@@ -408,7 +408,7 @@
 @keyframes appear {
   from{
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.9);
   };
   to{
     opacity: 1;
