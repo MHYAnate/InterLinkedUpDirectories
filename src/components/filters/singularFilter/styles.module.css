@@ -823,7 +823,7 @@
   align-items: center;
   justify-content: center;
   width: 60vw;
-  height:500px;
+  height:fit-content;
 
 }
 .displayFilterC{
@@ -838,41 +838,23 @@
 
 .renderVacancyInnerCover{
   display: flex;
-  height:500px;
+  height:fit-content;
   width: 60vw;
   flex-wrap: wrap;
-  overflow: auto;
   justify-content: center;
   align-items: flex-start;
   justify-self: center;
-  margin-top: 30px;
-  padding-top: 30px;
   column-gap: 20px;
   padding-bottom: 10px;
 }
 
 .renderVendorInnerCover{
   display: flex;
-  height:495px;
+  height: fit-content;
   width: 60vw;
   flex-wrap: wrap;
   overflow: auto;
   overflow: auto;
-  justify-content: center;
-  align-items: flex-start;
-  justify-self: center;
-  margin-top: 10px;
-  padding-top: 10px;
-  row-gap: 25px;
-  column-gap: 20px;
-  padding-bottom: 10px; 
-}
-.renderVendorInnerCoverNoScroll{
-  display: flex;
-  height:495px;
-  width: 60vw;
-  flex-wrap: wrap;
-  overflow: hidden;
   justify-content: center;
   align-items: flex-start;
   justify-self: center;
@@ -883,13 +865,13 @@
   padding-bottom: 10px; 
 }
 
+
 .renderVendorInnerCoverC{
   display: flex;
   min-height: max-content;
-  height: 410px;
+  height: fit-content;
   width: 65vw;
   flex-wrap: wrap;
-  overflow: auto;
   justify-self: center;
   justify-content: center;
   align-items: center;

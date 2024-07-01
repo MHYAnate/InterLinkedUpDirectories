@@ -8,6 +8,7 @@ import { MarketTag } from "@/database/marketTag";
 import { MarketShopTag } from "@/database/marketShopTag";
 import { MarketComplex } from "@/database/marketComplexTag";
 import { ShopData } from "@/database/shopData";
+import ShopItemsComponent from "./fBIShopItem";
 
 import {
 	collection,
@@ -56,6 +57,7 @@ type FormValue = {
 	];
 	complex:string;
 	market:string;
+	id:string;
 };
 
 export default function ShopsFilter() {
@@ -577,42 +579,54 @@ export default function ShopsFilter() {
 		
 	useEffect(() => {
 		handleGetShopeDetail();
-	}),
-		[];
+	},[]);
 
      const [shopItemDetails, setShopItemDetails] = useState<FormValue[]>([]);
 
+		 const [isLoading, setIsLoading] = useState(true); // Add loading state
 
-			async function renderShopItems(shopId:string) {
+
+
+		
+		
+		 
+
+			const renderShopItems =  async  (shopId:string) => {
 				
-				const shopItemDetailRef = collection(database, `Shop`);
+	
+				useEffect(() => {
+					const fetchShopItems = async () => {
+						setIsLoading(true);
+						try {
+							const shopItemDetailRef = collection(database, 'Shop');
+							const shopItemQuery = query(shopItemDetailRef, where('shopId', '==', shopId));
+							const querySnapshot = await getDocs(shopItemQuery);
 			
-				const shopItemQuery = query(
-					shopItemDetailRef,
-					where("countrySelect", "==", `${shopId}`)
-				);
-			
-				const handleGetShopItemDetail = async () => {
-					try {
-						const querySnapshot = await getDocs(shopItemQuery);
-			
-						if (querySnapshot.empty) {
-							console.log("No profile details found");
-							return;
+							if (querySnapshot.empty) {
+								console.log('No profile details found');
+								setShopItemDetails([]);
+							} else {
+								const retrievedData: FormValue[] = [];
+								querySnapshot.forEach((doc) => {
+									const docData = doc.data() as FormValue;
+									retrievedData.push({ ...docData, id: doc.id });
+								});
+								setShopItemDetails(retrievedData);
+							}
+						} catch (error) {
+							console.error('Error getting profile detail:', error);
+							setShopItemDetails([]);
+						} finally {
+							setIsLoading(false);
 						}
+					};
 			
-						const retrievedData: FormValue[] = [];
-						querySnapshot.forEach((doc) => {
-							const docData = doc.data() as FormValue;
-							retrievedData.push(docData);
-						});
-						setShopItemDetails(retrievedData);
-					} catch (error) {
-						console.error("Error getting profile detail:", error);
-					}
-				};
-
-				handleGetShopItemDetail();
+					fetchShopItems();
+				}, [shopId]);
+			
+				if (isLoading) return <div>Loading...</div>;
+				
+				
 
 
 
@@ -779,9 +793,9 @@ export default function ShopsFilter() {
 				</form>
 			</div> : <></>}
 
-			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}>{shopItems(shop.name)}</div> : <></>} 
+			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}><ShopItemsComponent shopId={shop.shopId} value={shopSearchInput} tag={tag} /></div> : <></>} 
 
-			{more === `${shop.shopName}` ?<div className={styles.displayShopItems}>
+			{more === `${shop.shopName}` ? <div className={styles.displayShopItems}>
 			<div className={styles.showMoreDetailsBody}>
 						<span className={styles.shopItemsDetailTitle}>Owner</span>
 						<span className={styles.shopItemsBody}>{shop.name}</span>
