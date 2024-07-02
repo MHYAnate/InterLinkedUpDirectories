@@ -237,7 +237,7 @@ export default function ShopsFilter() {
 		
 	const filteredShopItemsTag = items?.items.filter((eachItem) => {
 		const text = eachItem.tag.toLowerCase();
-		return text.includes(tag.toLowerCase());
+		return (tag !==(null || undefined|| "" || "Filter Tag")?text.includes(tag.toLowerCase()):text );
 	});
 
 	const filteredShopItemsName = filteredShopItemsTag.filter((eachItem) => {
@@ -679,7 +679,7 @@ export default function ShopsFilter() {
 					/>
 				</div><form>
 				<div className={styles.shopItemSelectCover}>
-					<select  value={tag!==(undefined || null)? tag: "select tag"} className={styles.shopItemSelect} {...register("tag")}
+					<select  value={tag!==(undefined || null)? tag: ""} className={styles.shopItemSelect} {...register("tag")}
 
 					>
 						<option className={styles.shopItemOption} value="Filter Tag">

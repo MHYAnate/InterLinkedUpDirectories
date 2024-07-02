@@ -265,7 +265,7 @@ export default function AboutUs() {
       <div className={styles.containDiv}>
       
 				<div className={styles.miniDiv}>
-        <span className={styles.highlighted}>Comprehensive Vendor Database</span>
+        <span className={styles.highlighted}>Comprehensive Vendor Space</span>
         
 					<Image
 						object-fit="cover"
@@ -331,7 +331,7 @@ export default function AboutUs() {
 				</div>
 				<div className={styles.rightTextCover1}>
         <span className={styles.cardTitleSpan}>
-							Comprehensive Vendor Database:
+							Comprehensive Vendor Space:
 						</span>
             <p className={styles.para}>
 						Our directory boasts a diverse range of vendors categorized into

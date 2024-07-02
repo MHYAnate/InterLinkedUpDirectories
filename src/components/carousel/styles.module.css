@@ -7,7 +7,16 @@
   align-items: center;
 }
 .vendorConer{
-  display: none;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .topSelect{
@@ -51,6 +60,7 @@
   height: max-content;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .highLighted{
@@ -383,6 +393,7 @@
     font-size: 0.8rem;
     border-top: 1px solid silver;
     font-weight: 700;
+    margin: 0;
   }
   .slider{
     width: 98vw;
@@ -432,6 +443,7 @@
   
   .titleBodyCategorySelector{
     width: 98vw;
+    margin: 0;
   }
 
   .vendorNav{
