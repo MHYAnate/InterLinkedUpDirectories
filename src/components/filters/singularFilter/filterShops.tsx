@@ -9,6 +9,7 @@ import { MarketShopTag } from "@/database/marketShopTag";
 import { MarketComplex } from "@/database/marketComplexTag";
 import { ShopData } from "@/database/shopData";
 import ShopItemsComponent from "./fBIShopItem";
+import Pagination from "./pagination";
 
 import {
 	collection,
@@ -350,6 +351,18 @@ export default function ShopsFilter() {
 			  })
 			: [];
 
+			const [currentPage, setCurrentPage] = useState(1);
+			const [postsPerPage] = useState(4);
+		
+			// Get current posts
+			const indexOfLastPost = currentPage * postsPerPage;
+			const indexOfFirstPost = indexOfLastPost - postsPerPage;
+			const currentPosts = filteredShopList.slice(indexOfFirstPost, indexOfLastPost);
+
+				// Change page
+	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+
 	function RenderAvailableModelShops() {
 		if (filteredShopList.length === 0) {
 			// Return a message or component indicating that the "Maintenance" category is not found
@@ -360,7 +373,7 @@ export default function ShopsFilter() {
 			);
 		}
 
-		return filteredShopList?.map((shop) => (
+		return currentPosts?.map((shop) => (
 			<div className={styles.shopRenderCover} key={shop.id}>
 				<div className={styles.shopName}>{shop.shopName} </div>
 				<div className={styles.shopNavBtnCover}>
@@ -579,7 +592,15 @@ export default function ShopsFilter() {
 		
 	useEffect(() => {
 		handleGetShopeDetail();
-	},[]);		
+	},[]);
+	
+	
+	const indexOfLastFireBasePost = currentPage * postsPerPage;
+	const indexOfFirstFireBasePost = indexOfLastPost - postsPerPage;
+	const currentFireBasePosts = filteredFirebaseShopSearchInputList.slice(
+		indexOfFirstFireBasePost,
+		indexOfLastFireBasePost
+	);
 	
 
 	function RenderAvailableShops() {
@@ -589,7 +610,7 @@ export default function ShopsFilter() {
 			return null;
 		}
 
-		return filteredFirebaseShopSearchInputList?.map((shop: any) => (
+		return currentFireBasePosts?.map((shop: any) => (
 			<div className={styles.shopRenderCover} key={shop.shopId}>
 			<div className={styles.shopName}>{shop.shopName} </div>
 			<div className={styles.shopNavBtnCover}>
@@ -776,8 +797,38 @@ export default function ShopsFilter() {
 						{filteredFirebaseCountryShopList?.length > 0
 							? RenderAvailableShops()
 							: RenderAvailableModelShops()}
+							{filteredFirebaseCountryShopList?.length > 0?<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseCountryShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 					</div>
 				)}
+				{filteredFirebaseCountryShopList?.length > 0?<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseCountryShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 			</div>
 		</div>
 	);

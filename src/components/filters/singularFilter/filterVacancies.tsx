@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { StateData } from "@/database/stateData";
 import { VacancyData } from "@/database/vacancyData";
-
+import Pagination from "./pagination";
 
 import {
 	collection,
@@ -192,6 +192,17 @@ export default function VacanciesFilter() {
 			  })
 			: [];
 
+			const [currentPage, setCurrentPage] = useState(1);
+			const [postsPerPage] = useState(3);
+		
+			// Get current posts
+			const indexOfLastPost = currentPage * postsPerPage;
+			const indexOfFirstPost = indexOfLastPost - postsPerPage;
+			const currentPosts = filteredList.slice(indexOfFirstPost, indexOfLastPost);
+		
+			// Change page
+			const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
 	
 
 	function RenderAvailableModelVacancy() {
@@ -204,7 +215,7 @@ export default function VacanciesFilter() {
 			);
 		}
 
-		return filteredList?.map((vacancy) => (
+		return currentPosts?.map((vacancy) => (
 			<div className={styles.VacancyRenderCover} key={vacancy.id}>
 				<div className={styles.innerTextVacancyRenderCover}>
 				<div className={styles.coverHeadDetail}>
@@ -341,13 +352,21 @@ export default function VacanciesFilter() {
 			  })
 			: [];
 
+			const indexOfLastFireBasePost = currentPage * postsPerPage;
+			const indexOfFirstFireBasePost = indexOfLastPost - postsPerPage;
+			const currentFireBasePosts = filteredFirebaseSearchInputList.slice(
+				indexOfFirstFireBasePost,
+				indexOfLastFireBasePost
+			);
+		
+
 	function RenderAvailableVacancy() {
 		if (profileDetails === null) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
 		}
 
-		return filteredFirebaseSearchInputList?.map((vacancy: any) => (
+		return currentFireBasePosts?.map((vacancy: any) => (
 			<div className={styles.VacancyRenderCover} key={vacancy.id}>
 			<div className={styles.innerTextVacancyRenderCover}>
 			<div className={styles.coverHeadDetail}>
@@ -458,8 +477,39 @@ export default function VacanciesFilter() {
 						{filteredFirebaseCountryList.length > 0
 							? RenderAvailableVacancy()
 							: RenderAvailableModelVacancy()}
+							{filteredFirebaseCountryList?.length > 0?<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseSearchInputList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 					</div>
 				)}
+
+{filteredFirebaseCountryList?.length > 0?<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseSearchInputList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 				
 			</div>
 		</div>

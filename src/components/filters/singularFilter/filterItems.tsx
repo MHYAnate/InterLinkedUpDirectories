@@ -23,6 +23,7 @@ import {
 import firebase from "@/firebase/firebase";
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
+import Pagination from "./pagination";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -36,7 +37,7 @@ type FormValue = {
 	areaSelect: string;
 	src: string;
 	tag: string;
-	shopTag:string;
+	shopTag: string;
 	status: string;
 	title: string;
 	docid: string;
@@ -67,7 +68,7 @@ export default function ItemsFilter() {
 			stateSelect: "",
 			areaSelect: "",
 			tag: "",
-			shopTag:"",
+			shopTag: "",
 			status: "",
 		},
 		shouldUseNativeValidation: true,
@@ -109,7 +110,6 @@ export default function ItemsFilter() {
 			? (document.querySelector('[name="stateSelect"]') as HTMLInputElement)
 					?.value || ""
 			: "";
-
 
 	const AreaList = StateData.find(
 		(areaList) => areaList.name === `${stateValue}`
@@ -155,8 +155,6 @@ export default function ItemsFilter() {
 			</option>
 		));
 	}
-
-
 
 	function renderAvailableStatus() {
 		if (!MarketStatus) {
@@ -217,8 +215,16 @@ export default function ItemsFilter() {
 			  })
 			: [];
 
+	const [currentPage, setCurrentPage] = useState(1);
+	const [postsPerPage] = useState(4);
 
+	// Get current posts
+	const indexOfLastPost = currentPage * postsPerPage;
+	const indexOfFirstPost = indexOfLastPost - postsPerPage;
+	const currentPosts = filteredList.slice(indexOfFirstPost, indexOfLastPost);
 
+	// Change page
+	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
 	function RenderAvailableModelGoods() {
 		if (filteredList.length === 0) {
@@ -230,67 +236,78 @@ export default function ItemsFilter() {
 			);
 		}
 
-		return filteredList?.map((stock) => (
+		return currentPosts?.map((stock) => (
 			<div className={styles.stockRenderCover} key={stock.id}>
 				<div className={styles.stockName}>{stock.title}</div>
 				<div className={styles.stockSeperatorCover}>
-				<div className={styles.imgCover}>
-					
-					<Image
-						className={styles.idiImg}
-						src={`${stock.image}`}
-						alt={`${stock.title}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-				</div>
-				<div className={styles.innerTextStockRenderCover}>
-					<div className={styles.status}>{stock.status}</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>price</div>
-						<div className={styles.contact}>{stock.price}</div>
+					<div className={styles.imgCover}>
+						<Image
+							className={styles.idiImg}
+							src={`${stock.image}`}
+							alt={`${stock.title}`}
+							quality={100}
+							width={500}
+							height={500}
+							// unoptimized
+						/>
 					</div>
+					<div className={styles.innerTextStockRenderCover}>
+						<div className={styles.status}>{stock.status}</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>price</div>
+							<div className={styles.contact}>{stock.price}</div>
+						</div>
 
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Address</div>
-						<div className={styles.address}>{stock.address}</div>
-					</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Contact</div>
-						<div className={styles.contact}>{stock.phone}</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Address</div>
+							<div className={styles.address}>{stock.address}</div>
+						</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Contact</div>
+							<div className={styles.contact}>{stock.phone}</div>
+						</div>
 					</div>
 				</div>
-				</div>
-				{more ===`${stock.id}` && (<div className={styles.showMore}><div>
-					
-					<Image
-						className={styles.idiImg}
-						src={`${stock.image2}`}
-						alt={`${stock.title}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-				</div>
-				<div className={styles.innerTextShowMoreRenderCover}>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>features</div>
-						<div className={styles.contact}>{stock.features}</div>
-					</div>
+				{more === `${stock.id}` && (
+					<div className={styles.showMore}>
+						<div>
+							<Image
+								className={styles.idiImg}
+								src={`${stock.image2}`}
+								alt={`${stock.title}`}
+								quality={100}
+								width={500}
+								height={500}
+								// unoptimized
+							/>
+						</div>
+						<div className={styles.innerTextShowMoreRenderCover}>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>features</div>
+								<div className={styles.contact}>{stock.features}</div>
+							</div>
 
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Inventory</div>
-						<div className={styles.address}>{stock.inventory}</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Inventory</div>
+								<div className={styles.address}>{stock.inventory}</div>
+							</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Condition</div>
+								<div className={styles.contact}>{stock.condition}</div>
+							</div>
+						</div>
 					</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Condition</div>
-						<div className={styles.contact}>{stock.condition}</div>
-					</div>
-				</div></div>)}
-				<button className={more !==`${stock.id}`?styles.btn : styles.btnA} onClick={more!==`${stock.id}`?()=> selectTab(`${stock.id}`):()=> selectTab("")}>{more===`${stock.id}`?"Less":"More Details"}</button>
+				)}
+				<button
+					className={more !== `${stock.id}` ? styles.btn : styles.btnA}
+					onClick={
+						more !== `${stock.id}`
+							? () => selectTab(`${stock.id}`)
+							: () => selectTab("")
+					}
+				>
+					{more === `${stock.id}` ? "Less" : "More Details"}
+				</button>
 			</div>
 		));
 	}
@@ -309,12 +326,9 @@ export default function ItemsFilter() {
 
 	const profileDetailRef = collection(database, "market");
 
-	const vendorsQuery = query(
-		profileDetailRef
-	);
+	const vendorsQuery = query(profileDetailRef);
 
 	const [profileDetails, setProfileDetails] = useState<FormValue[]>([]);
-
 
 	const handleGetProfileDetail = async () => {
 		try {
@@ -383,183 +397,270 @@ export default function ItemsFilter() {
 			  })
 			: [];
 
+	const indexOfLastFireBasePost = currentPage * postsPerPage;
+	const indexOfFirstFireBasePost = indexOfLastPost - postsPerPage;
+	const currentFireBasePosts = filteredFirebaseSearchInputList.slice(
+		indexOfFirstFireBasePost,
+		indexOfLastFireBasePost
+	);
+
 	function RenderAvailableGoods() {
 		if (profileDetails === null) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
 		}
 
-		return filteredFirebaseSearchInputList?.map((stock: any) => (
+		return currentFireBasePosts?.map((stock: any) => (
 			<div className={styles.stockRenderCover} key={stock.id}>
-			<div className={styles.stockName}>{stock.title}</div>
-			<div className={styles.stockSeperatorCover}>
-			<div className={styles.imgCover}>
-				
-				<Image
-					className={styles.idiImg}
-					src={`${stock.image}`}
-					alt={`${stock.title}`}
-					quality={100}
-					width={500}
-					height={500}
-					// unoptimized
-				/>
-			</div>
-			<div className={styles.innerTextStockRenderCover}>
-				<div className={styles.status}>{stock.status}</div>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>price</div>
-					<div className={styles.contact}>{stock.price}</div>
-				</div>
+				<div className={styles.stockName}>{stock.title}</div>
+				<div className={styles.stockSeperatorCover}>
+					<div className={styles.imgCover}>
+						<Image
+							className={styles.idiImg}
+							src={`${stock.image}`}
+							alt={`${stock.title}`}
+							quality={100}
+							width={500}
+							height={500}
+							// unoptimized
+						/>
+					</div>
+					<div className={styles.innerTextStockRenderCover}>
+						<div className={styles.status}>{stock.status}</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>price</div>
+							<div className={styles.contact}>{stock.price}</div>
+						</div>
 
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Address</div>
-					<div className={styles.address}>{stock.address}</div>
-				</div>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Contact</div>
-					<div className={styles.contact}>{stock.number}</div>
-				</div>
-			</div>
-			<div className={styles.showWide}><div>
-				
-				<Image
-					className={styles.idiImg}
-					src={`${stock.image2}`}
-					alt={`${stock.title}`}
-					quality={100}
-					width={500}
-					height={500}
-					// unoptimized
-				/>
-			</div>
-			<div className={styles.innerTextStockRenderCover}>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>features</div>
-					<div className={styles.contact}>{stock.features}</div>
-				</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Address</div>
+							<div className={styles.address}>{stock.address}</div>
+						</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Contact</div>
+							<div className={styles.contact}>{stock.number}</div>
+						</div>
+					</div>
+					<div className={styles.showWide}>
+						<div>
+							<Image
+								className={styles.idiImg}
+								src={`${stock.image2}`}
+								alt={`${stock.title}`}
+								quality={100}
+								width={500}
+								height={500}
+								// unoptimized
+							/>
+						</div>
+						<div className={styles.innerTextStockRenderCover}>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>features</div>
+								<div className={styles.contact}>{stock.features}</div>
+							</div>
 
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Inventory</div>
-					<div className={styles.address}>{stock.inventory}</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Inventory</div>
+								<div className={styles.address}>{stock.inventory}</div>
+							</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Condition</div>
+								<div className={styles.contact}>{stock.condition}</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Condition</div>
-					<div className={styles.contact}>{stock.condition}</div>
-				</div>
-			</div></div>
-			</div>
-			{more ===`${stock.docid}` && (<div className={styles.showMore}><div>
-				
-				<Image
-					className={styles.idiImg}
-					src={`${stock.image2}`}
-					alt={`${stock.title}`}
-					quality={100}
-					width={500}
-					height={500}
-					// unoptimized
-				/>
-			</div>
-			<div className={styles.innerTextShowMoreRenderCover}>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>features</div>
-					<div className={styles.contact}>{stock.features}</div>
-				</div>
+				{more === `${stock.docid}` && (
+					<div className={styles.showMore}>
+						<div>
+							<Image
+								className={styles.idiImg}
+								src={`${stock.image2}`}
+								alt={`${stock.title}`}
+								quality={100}
+								width={500}
+								height={500}
+								// unoptimized
+							/>
+						</div>
+						<div className={styles.innerTextShowMoreRenderCover}>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>features</div>
+								<div className={styles.contact}>{stock.features}</div>
+							</div>
 
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Inventory</div>
-					<div className={styles.address}>{stock.inventory}</div>
-				</div>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Condition</div>
-					<div className={styles.contact}>{stock.condition}</div>
-				</div>
-			</div></div>)}
-			<button className={more !==`${stock.docid}`?styles.btn : styles.btnA} onClick={more!==`${stock.docid}`?()=> selectTab(`${stock.docid}`):()=> selectTab("")}>{more===`${stock.docid}`?"Less":"More Details"}</button>
-		</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Inventory</div>
+								<div className={styles.address}>{stock.inventory}</div>
+							</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Condition</div>
+								<div className={styles.contact}>{stock.condition}</div>
+							</div>
+						</div>
+					</div>
+				)}
+				<button
+					className={more !== `${stock.docid}` ? styles.btn : styles.btnA}
+					onClick={
+						more !== `${stock.docid}`
+							? () => selectTab(`${stock.docid}`)
+							: () => selectTab("")
+					}
+				>
+					{more === `${stock.docid}` ? "Less" : "More Details"}
+				</button>
+			</div>
 		));
 	}
- 
-
 
 	useEffect(() => {
 		handleGetProfileDetail();
-		
 	}),
 		[];
 
 	return (
 		<div className={styles.filterBodyCover}>
-				<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
-					<div className={styles.selectGroup}>
-						<div className={styles.selectCover}>
-							<select
-								className={styles.select}
-								{...register("countrySelect")}
-								value={countryValue}
-							>
-								<option className={styles.option} value="select Country">
-									Filter Country
-								</option>
-								<option className={styles.option} value="Nigeria">
-									Nigeria
-								</option>
-							</select>
-						</div>
-						<div className={styles.selectCover}>
-							<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
-								<option className={styles.option} value="select State">
-									Filter State
-								</option>
-								{selectCountry === "Nigeria" && renderAvailableStates()}
-							</select>
-						</div>
-						<div className={styles.selectCover}>
-							<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
-								<option className={styles.option} value="select Area">
-									Filter Area
-								</option>
-								{selectState === `${stateValue}` && renderAvailableAreas()}
-							</select>
-						</div>
-						<div className={styles.selectCover}>
-							<select value={tag!==(undefined || null)? tag:(selectCountry?"": "select tag")} className={styles.select} {...register("tag")}>
-								<option className={styles.option} value="select Tag">
-									Filter Tag
-								</option>
-								{renderAvailableTag()}
-							</select>
-						</div>
-						<div className={styles.selectCover}>
-							<select value={status!==(undefined || null)? status:(selectCountry?"": "select status")} className={styles.select} {...register("status")}>
-								<option className={styles.option} value="select Status">
-									Filter Status
-								</option>
-								{renderAvailableStatus()}
-							</select>
-						</div>
-						<div className={styles.inputCover}>
-							<input
-								type="search"
-								className={styles.input}
-								{...register("address")}
-								value={searchInput}
-								onChange={updateSearchInput}
-								id="vendorAddress"
-								placeholder="Name of Items"
-							/>
-						</div>
+			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
+				<div className={styles.selectGroup}>
+					<div className={styles.selectCover}>
+						<select
+							className={styles.select}
+							{...register("countrySelect")}
+							value={countryValue}
+						>
+							<option className={styles.option} value="select Country">
+								Filter Country
+							</option>
+							<option className={styles.option} value="Nigeria">
+								Nigeria
+							</option>
+						</select>
 					</div>
-				</form>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								selectState !== (undefined || null)
+									? selectState
+									: selectCountry === "Nigeria"
+									? ""
+									: "select state"
+							}
+							className={styles.select}
+							{...register("stateSelect")}
+						>
+							<option className={styles.option} value="select State">
+								Filter State
+							</option>
+							{selectCountry === "Nigeria" && renderAvailableStates()}
+						</select>
+					</div>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								selectArea !== (undefined || null)
+									? selectArea
+									: selectState
+									? ""
+									: "select area"
+							}
+							className={styles.select}
+							{...register("areaSelect")}
+						>
+							<option className={styles.option} value="select Area">
+								Filter Area
+							</option>
+							{selectState === `${stateValue}` && renderAvailableAreas()}
+						</select>
+					</div>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								tag !== (undefined || null)
+									? tag
+									: selectCountry
+									? ""
+									: "select tag"
+							}
+							className={styles.select}
+							{...register("tag")}
+						>
+							<option className={styles.option} value="select Tag">
+								Filter Tag
+							</option>
+							{renderAvailableTag()}
+						</select>
+					</div>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								status !== (undefined || null)
+									? status
+									: selectCountry
+									? ""
+									: "select status"
+							}
+							className={styles.select}
+							{...register("status")}
+						>
+							<option className={styles.option} value="select Status">
+								Filter Status
+							</option>
+							{renderAvailableStatus()}
+						</select>
+					</div>
+					<div className={styles.inputCover}>
+						<input
+							type="search"
+							className={styles.input}
+							{...register("address")}
+							value={searchInput}
+							onChange={updateSearchInput}
+							id="vendorAddress"
+							placeholder="Name of Items"
+						/>
+					</div>
+				</div>
+			</form>
 			<div className={styles.displayFilter}>
-				{isClient  && (
+				{isClient && (
 					<div className={styles.renderVendorInnerCover}>
 						{filteredFirebaseCountryList?.length > 0
 							? RenderAvailableGoods()
 							: RenderAvailableModelGoods()}
+						{filteredFirebaseCountryList?.length > 0?<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseSearchInputList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 					</div>
 				)}
+				{filteredFirebaseCountryList?.length > 0?<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseSearchInputList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
+				
 			</div>
 		</div>
 	);
