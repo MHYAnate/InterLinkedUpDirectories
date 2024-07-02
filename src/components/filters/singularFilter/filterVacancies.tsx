@@ -165,20 +165,20 @@ export default function VacanciesFilter() {
 
 	const filteredListcountry = VacancyData.filter((eachItem) => {
 		const text = eachItem.country.toLowerCase();
-		return text.includes(selectCountry.toLowerCase());
+		return (selectCountry !==(null || undefined|| "" || "Select Country")?text.includes(selectCountry.toLowerCase()):text );
 	});
 	const filteredListstate =
 		filteredListcountry.length > 0
 			? filteredListcountry.filter((eachItem) => {
 					const text = eachItem.state.toLowerCase();
-					return text.includes(selectState.toLowerCase());
+					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
 			  })
 			: [];
 	const filteredListarea =
 		filteredListstate.length > 0
 			? filteredListstate.filter((eachItem) => {
 					const text = eachItem.area.toLowerCase();
-					return text.includes(selectArea.toLowerCase());
+					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
 			  })
 			: [];
 
@@ -309,7 +309,7 @@ export default function VacanciesFilter() {
 		profileDetails?.length > 0
 			? profileDetails.filter((eachItem) => {
 					const text = eachItem.countrySelect.toLowerCase();
-					return text.includes(searchInput.toLowerCase());
+					return (selectCountry !==(null || undefined|| "" || "Select Country")?text.includes(selectCountry.toLowerCase()):text );
 			  })
 			: [];
 
@@ -317,36 +317,21 @@ export default function VacanciesFilter() {
 		filteredFirebaseCountryList.length > 0
 			? filteredFirebaseCountryList.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
-					return text.includes(selectState.toLowerCase());
+					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
 			  })
 			: [];
 	const filteredFirebaseaAreaList =
 		filteredFirebaseStateList.length > 0
 			? filteredFirebaseStateList.filter((eachItem) => {
 					const text = eachItem.areaSelect.toLowerCase();
-					return text.includes(selectArea.toLowerCase());
+					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
 			  })
 			: [];
 
-	const filteredFirebaseTagList =
-		filteredFirebaseaAreaList.length > 0
-			? filteredFirebaseaAreaList.filter((eachItem) => {
-					const text = eachItem.tag.toLowerCase();
-					return text.includes(tag.toLowerCase());
-			  })
-			: [];
-
-	const filteredFirebasetStatusList =
-		filteredFirebaseTagList.length > 0
-			? filteredFirebaseTagList.filter((eachItem) => {
-					const text = eachItem.status.toLowerCase();
-					return text.includes(status.toLowerCase());
-			  })
-			: [];
 
 	const filteredFirebaseSearchInputList =
-		filteredFirebasetStatusList.length > 0
-			? filteredFirebasetStatusList.filter((eachItem) => {
+		filteredFirebaseaAreaList.length > 0
+			? filteredFirebaseaAreaList.filter((eachItem) => {
 					const text = eachItem.title.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
@@ -433,7 +418,7 @@ export default function VacanciesFilter() {
 								value={countryValue}
 							>
 								<option className={styles.option} value="select Country">
-									Filter Country
+									Select Country
 								</option>
 								<option className={styles.option} value="Nigeria">
 									Nigeria
@@ -443,7 +428,7 @@ export default function VacanciesFilter() {
 						<div className={styles.selectCover}>
 							<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 								<option className={styles.option} value="select State">
-									Filter State
+									Select State
 								</option>
 								{selectCountry === "Nigeria" && renderAvailableStates()}
 							</select>
@@ -451,7 +436,7 @@ export default function VacanciesFilter() {
 						<div className={styles.selectCover}>
 							<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
 								<option className={styles.option} value="select Area">
-									Filter Area
+									Select Area
 								</option>
 								{selectState === `${stateValue}` && renderAvailableAreas()}
 							</select>

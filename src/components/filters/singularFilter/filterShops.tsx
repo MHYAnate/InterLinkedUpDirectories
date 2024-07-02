@@ -317,21 +317,21 @@ export default function ShopsFilter() {
 		filteredShopListcountry.length > 0
 			? filteredShopListcountry.filter((eachItem) => {
 					const text = eachItem.state.toLowerCase();
-					return text.includes(selectState.toLowerCase());
+					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
 			  })
 			: [];
 	const filteredShopListarea =
 		filteredShopListstate.length > 0
 			? filteredShopListstate.filter((eachItem) => {
 					const text = eachItem.area.toLowerCase();
-					return text.includes(selectArea.toLowerCase());
+					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
 			  })
 			: [];
 			const filteredShopMarket =
 			filteredShopListarea.length > 0
 				? filteredShopListarea.filter((eachItem) => {
 						const text = eachItem.market.toLowerCase();
-						return text.includes(selectComplex.toLowerCase());
+						return (selectComplex !==(null || undefined|| "" || "Select Market complex")?text.includes(selectComplex.toLowerCase()):text );
 					})
 				: [];
 
@@ -339,7 +339,7 @@ export default function ShopsFilter() {
 		filteredShopMarket .length > 0
 			? filteredShopMarket .filter((eachItem) => {
 					const text = eachItem.shopTag.toLowerCase();
-					return text.includes(shopTag.toLowerCase());
+					return (shopTag !==(null || undefined|| "" || "Select Tag")?text.includes(shopTag.toLowerCase()):text );
 			  })
 			: [];
 
@@ -749,7 +749,7 @@ export default function ShopsFilter() {
 					<div className={styles.selectCover}>
 						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 							<option className={styles.option} value="select State">
-								Filter State
+							Select State
 							</option>
 							{selectCountry === "Nigeria" && renderAvailableStates()}
 						</select>
@@ -757,7 +757,7 @@ export default function ShopsFilter() {
 					<div className={styles.selectCover}>
 						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
 							<option className={styles.option} value="select Area">
-								Filter Area
+								Select Area
 							</option>
 							{selectState === `${stateValue}` && renderAvailableAreas()}
 						</select>
@@ -765,7 +765,7 @@ export default function ShopsFilter() {
 					<div  className={styles.selectCover}>
 						<select value={selectComplex!==(undefined || null)? selectComplex:(selectArea?"": "select market")} className={styles.select} {...register("complex")}>
 							<option className={styles.option} value="select Area">
-								Filter Market complex
+								Select Market complex
 							</option>
 							{selectArea === `${areaValue}` && renderAvailableMarketComplexTag()}
 						</select>
@@ -773,7 +773,7 @@ export default function ShopsFilter() {
 					<div className={styles.selectCover}>
 						<select value={shopTag!==(undefined || null)? shopTag:(selectCountry?"": "select market")} className={styles.select} {...register("shopTag")}>
 							<option className={styles.option} value="select Tag">
-								Filter Tag
+								Select Tag
 							</option>
 							{renderAvailablShopTag()}
 						</select>
