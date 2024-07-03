@@ -22,7 +22,7 @@
 .categoryImg{
   width: 98vw;
   height: 170px;
-  opacity: 0.09;
+  opacity: 1;
 }
 
 .title{
@@ -233,7 +233,7 @@
   .categoryImg{
     width: 98vw;
     height: 220px;
-    opacity: 0.09;
+    opacity: 1;
   }
   .flextitle{
     color: rgb(55, 55, 55);

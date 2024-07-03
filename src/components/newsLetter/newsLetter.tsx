@@ -70,7 +70,7 @@ export default function NewsLetter() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/footimg.jpg"
+								src="/service/heroImg.jpg"
 								priority={true}
 								unoptimized
 							/>

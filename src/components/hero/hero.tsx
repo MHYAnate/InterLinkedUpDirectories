@@ -66,7 +66,7 @@ export default function Hero() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/footimg.jpg"
+								src="/service/imgHero.jpg"
 								priority={true}
 								unoptimized
 							/>
