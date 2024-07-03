@@ -644,6 +644,7 @@
   height:max-content;
   margin-left: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
   transition: background-image 1s ease-in-out 0.1s;
   font-size: 1rem;
   user-select: none;
@@ -697,16 +698,14 @@
 
 .coverDetail{
   max-width:56vw;
-  
-  min-width: 310px;
   display: flex;
   justify-content:space-between ;
   align-items: first baseline;
   height: max-content;
 }
 .coverHeadDetail{
-  max-width:56vw;
-  min-width: 310px;
+ width:56vw;
+  
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -1498,7 +1497,7 @@
     max-width:85vw;
   }
   .coverHeadDetail{
-    max-width:85vw;
+    width:85vw;
   }
   .headFootDetailCover{
     max-width:85vw;
@@ -1526,11 +1525,15 @@
   }
   .detailHead{
      width: 85vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
    }
    .VacancyRenderCover{
     width:87vw;
     font-size: 0.8rem;
-    padding-left: 10px;
+    box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+    border-radius: 15px;
   }
   .innerTextVacancyRenderCover{
     width: 87vw;
@@ -1560,7 +1563,7 @@
     max-width:85vw;
   }
   .coverHeadDetail{
-    max-width:85vw;
+    width:85vw;
   }
   .headFootDetailCover{
     max-width:85vw;
@@ -1589,6 +1592,7 @@
   }
   .detailHead{
      width: 85vw;
+     margin-left: -10px;
    }
 }
 @media screen and (max-width: 630px) {
@@ -1773,7 +1777,7 @@
 @media screen and (max-width: 480px) {
 
   .coverHeadDetail{
-    max-width: 100%;
+    width: 87vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1786,11 +1790,10 @@
     min-width: 47%;
   }
   .headFootDetailCover{
-    max-width:100%;
+    max-width:87vw;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
     margin-bottom: 20px;
+    min-width: 280px;
   }
   .headFootSpan{
     font-size: 0.7rem;
@@ -1820,6 +1823,14 @@
  
 
 }
+
+@media screen and (max-width: 410px) {
+  .detail{
+  width: 45vw;
+}
+}
+
+
 
 
 

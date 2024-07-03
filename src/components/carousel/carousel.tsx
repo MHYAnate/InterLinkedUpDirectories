@@ -348,7 +348,28 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div className={styles.serviceDetailCover}>
+						<div 
+						onClick={() =>
+							router.push(
+								`/vendors/${Services[activeIndex]?.services[inneractiveIndex]?.name}` +
+									"?" +
+									set(
+										"name",
+										`${Services[activeIndex]?.services[inneractiveIndex]?.name}`
+									) +
+									"&" +
+									set(
+										"isrc",
+										`${Services[activeIndex]?.services[inneractiveIndex]?.src}`
+									) +
+									"&" +
+									set(
+										"name",
+										`${Services[activeIndex]?.services[inneractiveIndex]?.name}`
+									)
+							)
+						}
+						className={styles.serviceDetailCover}>
 							<div className={styles.serviceDetail}>
 								<span className={styles.titleTopSpan}>
 									{Services[activeIndex]?.services[inneractiveIndex]?.name}

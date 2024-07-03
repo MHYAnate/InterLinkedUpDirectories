@@ -78,6 +78,10 @@
   font-weight: 400;
   color: goldenrod;
   text-align: center;
+  background-color: rgba(235, 235, 231, 0.7);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
 }
 @media screen and (max-width: 770px) {
   .titleCover{
