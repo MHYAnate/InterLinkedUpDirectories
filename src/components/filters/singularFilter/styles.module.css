@@ -697,7 +697,7 @@
 
 .coverDetail{
   max-width:56vw;
-  max-width: max-content;
+  
   min-width: 310px;
   display: flex;
   justify-content:space-between ;
@@ -730,9 +730,11 @@
 }
 
 .headFootSpan{
+  font-size: 1rem;
   color: green;
   font-weight: 500;
   user-select: none;
+  text-transform: uppercase;
 }
 
 .headFootDetail{
@@ -747,14 +749,14 @@
 
 .detailTitle{
   width: 130px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   height: inherit;
   text-align: start;
   color: green;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   user-select: none;
-
+  text-transform: uppercase;
 }
 
 .detail{
@@ -767,6 +769,8 @@
   font-weight: 400;
   color: rgb(75, 75, 75);
   user-select: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .detailHead{
    width: 56vw;
@@ -775,10 +779,11 @@
    text-align: left;
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    font-weight: 500;
-   font-size: 1.5rem;
+   font-size: 1.3rem;
    color: green;
    padding-bottom: 5px;
    user-select: none;
+   text-transform: uppercase;
  }
  .btn{
   border: none;
@@ -791,6 +796,9 @@
   user-select: none;
   margin-top: 10px;
   width: fit-content;
+  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  cursor: pointer;
+  user-select: none;
  }
 
  .btnUn{
@@ -803,6 +811,12 @@
   user-select: none;
   margin-top: 10px;
   width: fit-content;
+  cursor: pointer;
+  user-select: none;
+ }
+
+ .btnUn:hover{
+  font-weight: 700;
  }
 
  .btnA{
@@ -1190,7 +1204,7 @@
 @media screen and (max-width: 1200px) {
  
   .detailTitle{
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   
   .detail{
@@ -1438,8 +1452,16 @@
     padding-top: 10;
     margin-top: 10px;
     padding-left: 10px;
+    padding-right: 10px;
   }
   
+  .vBtnCover{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .renderVendorInnerCover{
     height:fit-content;
     width: 98vw;
@@ -1465,6 +1487,8 @@
     padding-top: 10;
     margin-top: 0;
   }
+
+  
 
   .selectCover{
     width: 120px;
@@ -1743,14 +1767,7 @@
     font-size: 0.8rem;
   }
   
-  .detailTitle{
-    width: max-content;
-  }
-  
-  .detail{
-    width: 180px;
-    font-size: 1rem;
-  }
+
   .detailHead{
      width: 87vw;
    }
@@ -1774,5 +1791,32 @@
  
 
 }
+
+@media screen and (max-width: 360px) {
+  .headFootSpan{
+    font-size: 0.75rem;
+    color: green;
+    font-weight: 500;
+    user-select: none;
+    text-transform: uppercase;
+  }
+
+  .detailTitle{
+    width: 40vw;
+    font-size: 0.8rem;
+ 
+  }
+
+  .coverDetail{
+    max-width: 50vw;
+    justify-content: flex-start;
+  }
+
+    .detail{
+    width: 40vw;
+    }
+
+}
+
 
 
