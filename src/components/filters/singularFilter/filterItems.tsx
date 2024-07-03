@@ -172,17 +172,13 @@ export default function ItemsFilter() {
 		));
 	}
 
-	const filteredListcountry = MarketData.filter((eachItem) => {
-		const text = eachItem.country.toLowerCase();
-		return (selectCountry !==(null || undefined|| "" || "Select Country")?text.includes(selectCountry.toLowerCase()):text );
-	});
+
 	const filteredListstate =
-		filteredListcountry.length > 0
-			? filteredListcountry.filter((eachItem) => {
+	MarketData.filter((eachItem) => {
 					const text = eachItem.state.toLowerCase();
 					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
-			  })
-			: [];
+			  });
+
 	const filteredListarea =
 		filteredListstate.length > 0
 			? filteredListstate.filter((eachItem) => {
@@ -350,17 +346,11 @@ export default function ItemsFilter() {
 		}
 	};
 
-	const filteredFirebaseCountryList =
-		profileDetails?.length > 0
-			? profileDetails.filter((eachItem) => {
-					const text = eachItem.countrySelect.toLowerCase();
-					return (selectCountry !==(null || undefined|| "" || "Select Country")?text.includes(selectCountry.toLowerCase()):text );
-			  })
-			: [];
+
 
 	const filteredFirebaseStateList =
-		filteredFirebaseCountryList.length > 0
-			? filteredFirebaseCountryList.filter((eachItem) => {
+	profileDetails?.length > 0
+	? profileDetails.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
 					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
 			  })
@@ -525,49 +515,33 @@ export default function ItemsFilter() {
 				<div className={styles.selectGroup}>
 					<div className={styles.selectCover}>
 						<select
-							className={styles.select}
-							{...register("countrySelect")}
-							value={countryValue}
-						>
-							<option className={styles.option} value="select Country">
-								Select Country
-							</option>
-							<option className={styles.option} value="Nigeria">
-								Nigeria
-							</option>
-						</select>
-					</div>
-					<div className={styles.selectCover}>
-						<select
 							value={
 								selectState !== (undefined || null)
 									? selectState
-									: selectCountry === "Nigeria"
-									? ""
-									: "select state"
+									: "Select State"
 							}
 							className={styles.select}
 							{...register("stateSelect")}
 						>
-							<option className={styles.option} value="select State">
+							<option className={styles.option} value="Select State">
 								Select State
 							</option>
-							{selectCountry === "Nigeria" && renderAvailableStates()}
+							{renderAvailableStates()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
 						<select
 							value={
-								selectArea !== (undefined || null)
+								selectArea !== (undefined || null )
 									? selectArea
 									: selectState
 									? ""
-									: "select area"
+									: "Select Area"
 							}
 							className={styles.select}
 							{...register("areaSelect")}
 						>
-							<option className={styles.option} value="select Area">
+							<option className={styles.option} value="Select Area">
 								Select Area
 							</option>
 							{selectState === `${stateValue}` && renderAvailableAreas()}
@@ -580,12 +554,12 @@ export default function ItemsFilter() {
 									? tag
 									: selectCountry
 									? ""
-									: "select tag"
+									: "Select Tag"
 							}
 							className={styles.select}
 							{...register("tag")}
 						>
-							<option className={styles.option} value="select Tag">
+							<option className={styles.option} value="Select Tag">
 								Select Tag
 							</option>
 							{renderAvailableTag()}
@@ -598,12 +572,12 @@ export default function ItemsFilter() {
 									? status
 									: selectCountry
 									? ""
-									: "select status"
+									: "Select Status"
 							}
 							className={styles.select}
 							{...register("status")}
 						>
-							<option className={styles.option} value="select Status">
+							<option className={styles.option} value="Select Status">
 								Select Status
 							</option>
 							{renderAvailableStatus()}
@@ -625,10 +599,10 @@ export default function ItemsFilter() {
 			<div className={styles.displayFilter}>
 				{isClient && (
 					<div className={styles.renderVendorInnerCover}>
-						{filteredFirebaseCountryList?.length > 0
+						{profileDetails?.length > 0
 							? RenderAvailableGoods()
 							: RenderAvailableModelGoods()}
-						{filteredFirebaseCountryList?.length > 0?<div className={styles.pagi}>
+						{profileDetails?.length > 0?<div className={styles.pagi}>
 					<Pagination
 						postsPerPage={postsPerPage}
 						totalPosts={filteredFirebaseSearchInputList.length}
@@ -645,7 +619,7 @@ export default function ItemsFilter() {
 				</div>}
 					</div>
 				)}
-				{filteredFirebaseCountryList?.length > 0?<div className={styles.pagiMid}>
+				{profileDetails?.length > 0?<div className={styles.pagiMid}>
 					<Pagination
 						postsPerPage={postsPerPage}
 						totalPosts={filteredFirebaseSearchInputList.length}

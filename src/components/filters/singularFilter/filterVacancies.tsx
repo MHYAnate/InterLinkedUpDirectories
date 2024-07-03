@@ -163,22 +163,17 @@ export default function VacanciesFilter() {
 
 	
 
-	const filteredListcountry = VacancyData.filter((eachItem) => {
-		const text = eachItem.country.toLowerCase();
-		return (selectCountry !==(null || undefined|| "" || "Select Country")?text.includes(selectCountry.toLowerCase()):text );
-	});
 	const filteredListstate =
-		filteredListcountry.length > 0
-			? filteredListcountry.filter((eachItem) => {
+	VacancyData.filter((eachItem) => {
 					const text = eachItem.state.toLowerCase();
-					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
-			  })
-			: [];
+					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):VacancyData);
+			  });
+
 	const filteredListarea =
 		filteredListstate.length > 0
 			? filteredListstate.filter((eachItem) => {
 					const text = eachItem.area.toLowerCase();
-					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
+					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):filteredListstate );
 			  })
 			: [];
 
@@ -308,26 +303,20 @@ export default function VacanciesFilter() {
 		}
 	};
 
-	const filteredFirebaseCountryList =
-		profileDetails?.length > 0
-			? profileDetails.filter((eachItem) => {
-					const text = eachItem.countrySelect.toLowerCase();
-					return (selectCountry !==(null || undefined|| "" || "Select Country")?text.includes(selectCountry.toLowerCase()):text );
-			  })
-			: [];
+
 
 	const filteredFirebaseStateList =
-		filteredFirebaseCountryList.length > 0
-			? filteredFirebaseCountryList.filter((eachItem) => {
+	profileDetails?.length > 0
+	? profileDetails.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
-					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
+					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):profileDetails );
 			  })
 			: [];
 	const filteredFirebaseaAreaList =
 		filteredFirebaseStateList.length > 0
 			? filteredFirebaseStateList.filter((eachItem) => {
 					const text = eachItem.areaSelect.toLowerCase();
-					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
+					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):filteredFirebaseStateList );
 			  })
 			: [];
 
@@ -415,30 +404,16 @@ export default function VacanciesFilter() {
 				<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 					<div className={styles.selectGroup}>
 						<div className={styles.selectCover}>
-							<select
-								className={styles.select}
-								{...register("countrySelect")}
-								value={countryValue}
-							>
-								<option className={styles.option} value="select Country">
-									Select Country
-								</option>
-								<option className={styles.option} value="Nigeria">
-									Nigeria
-								</option>
-							</select>
-						</div>
-						<div className={styles.selectCover}>
 							<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
-								<option className={styles.option} value="select State">
+								<option className={styles.option} value="Select State">
 									Select State
 								</option>
-								{selectCountry === "Nigeria" && renderAvailableStates()}
+								 {renderAvailableStates()}
 							</select>
 						</div>
 						<div className={styles.selectCover}>
 							<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
-								<option className={styles.option} value="select Area">
+								<option className={styles.option} value="Select Area">
 									Select Area
 								</option>
 								{selectState === `${stateValue}` && renderAvailableAreas()}
@@ -462,10 +437,10 @@ export default function VacanciesFilter() {
 			<div className={styles.displayFilter}>
 				{isClient && (
 					<div className={styles.renderVacancyInnerCover}>
-						{filteredFirebaseCountryList.length > 0
+						{	profileDetails?.length > 0
 							? RenderAvailableVacancy()
 							: RenderAvailableModelVacancy()}
-							{filteredFirebaseCountryList?.length > 0?<div className={styles.pagi}>
+							{	profileDetails?.length > 0?<div className={styles.pagi}>
 					<Pagination
 						postsPerPage={postsPerPage}
 						totalPosts={filteredFirebaseSearchInputList.length}
@@ -483,7 +458,7 @@ export default function VacanciesFilter() {
 					</div>
 				)}
 
-{filteredFirebaseCountryList?.length > 0?<div className={styles.pagiMid}>
+{	profileDetails?.length > 0?<div className={styles.pagiMid}>
 					<Pagination
 						postsPerPage={postsPerPage}
 						totalPosts={filteredFirebaseSearchInputList.length}

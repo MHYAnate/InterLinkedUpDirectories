@@ -18,6 +18,7 @@ import {
 import firebase from "@/firebase/firebase";
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
+import Pagination from "./pagination";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -76,6 +77,8 @@ export default function FilterVendors() {
 
 	const selectArea = watch("areaSelect");
 
+	const selectAddress = watch("address");
+
 	const countryValue =
 		typeof document !== "undefined"
 			? (document.querySelector('[name="countrySelect"]') as HTMLInputElement)
@@ -132,25 +135,31 @@ export default function FilterVendors() {
 	}
 
 
-
-	const filteredListcountry = VendorsList?.vendorsList ? VendorsList.vendorsList.filter((eachItem) => {
-		const text = eachItem.country.toLowerCase();
-		return text.includes(selectCountry.toLowerCase());
-	}):[];
-	const filteredListstate=  filteredListcountry.length > 0 ? filteredListcountry.filter((eachItem) => {
+	const filteredListstate= VendorsList?.vendorsList ? VendorsList.vendorsList.filter((eachItem) => {
 		const text = eachItem.state.toLowerCase();
-		return text.includes(selectState.toLowerCase());
+		return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
 	}):[];
 
 	const filteredListarea = filteredListstate.length > 0 ?filteredListstate.filter((eachItem) => {
 		const text = eachItem.area.toLowerCase();
-		return text.includes(selectArea.toLowerCase());
+		return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
 	}):[];
 
 	const filteredList = filteredListarea.length > 0 ?filteredListarea.filter((eachItem) => {
 		const text = eachItem.address.toLowerCase();
 		return text.includes(searchInput.toLowerCase());
 	}):[];
+
+	const [currentPage, setCurrentPage] = useState(1);
+	const [postsPerPage] = useState(4);
+
+	// Get current posts
+	const indexOfLastPost = currentPage * postsPerPage;
+	const indexOfFirstPost = indexOfLastPost - postsPerPage;
+	const currentPosts = filteredList.slice(indexOfFirstPost, indexOfLastPost);
+
+	// Change page
+	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
 	function RendeAvailabeVendors() {
 		if (filteredList.length === 0) {
@@ -162,7 +171,7 @@ export default function FilterVendors() {
 			);
 		}
 
-		return filteredList?.map((vendor) => (
+		return currentPosts?.map((vendor) => (
 			<div className={styles.VendorRenderCover} key={vendor.id}>
 				<div className={styles.vendorName}>{vendor.name}</div>
 				<div className={styles.imgCover}>
@@ -237,13 +246,31 @@ export default function FilterVendors() {
 	}),
 		[];
 
+		const filteredFireBaseListstate= profileDetails?.length > 0
+		? profileDetails.filter((eachItem) => {
+			const text = eachItem.stateSelect.toLowerCase();
+			return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
+		}):[];
+	
+		const filteredFireBaseListarea = filteredFireBaseListstate?.length > 0 ?filteredFireBaseListstate.filter((eachItem) => {
+			const text = eachItem.areaSelect.toLowerCase();
+			return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
+		}):[];
+
 	const filteredFirebaseList =
-		profileDetails?.length > 0
-			? profileDetails.filter((eachItem) => {
+		filteredFireBaseListarea?.length > 0
+			? filteredFireBaseListarea.filter((eachItem) => {
 					const text = eachItem.address.toLowerCase();
 					return text.includes(searchInput);
 			  })
 			: [];
+
+			const indexOfLastFireBasePost = currentPage * postsPerPage;
+			const indexOfFirstFireBasePost = indexOfLastPost - postsPerPage;
+			const currentFireBasePosts = filteredFirebaseList.slice(
+				indexOfFirstFireBasePost,
+				indexOfLastFireBasePost
+			);
 
 	function RenderAvailabeVendors() {
 		if (!profileDetails) {
@@ -251,7 +278,7 @@ export default function FilterVendors() {
 			return null;
 		}
 
-		return filteredFirebaseList?.map((vendor: any) => (
+		return currentFireBasePosts?.map((vendor: any) => (
 			<div className={styles.VendorRenderCover} key={vendor?.name}>
 				<div className={styles.imgCover}>
 					<div className={styles.vendorName}>{vendor.name}</div>
@@ -284,32 +311,19 @@ export default function FilterVendors() {
 			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 				<div className={styles.filterAndSearch}>Filter and Search </div>
 				<div className={styles.selectGroup}>
+					
 					<div className={styles.selectCover}>
-						<select
-							className={styles.select}
-							{...register("countrySelect")}
-							value={countryValue}
-						>
-							<option className={styles.option} value="select Country">
-								Filter Country
+						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "Select State")} className={styles.select} {...register("stateSelect")}>
+							<option className={styles.option} value="Select State">
+							Select State
 							</option>
-							<option className={styles.option} value="Nigeria">
-								Nigeria
-							</option>
+							{renderAvailableStates()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
-							<option className={styles.option} value="select State">
-								Filter State
-							</option>
-							{selectCountry === "Nigeria" && renderAvailableStates()}
-						</select>
-					</div>
-					<div className={styles.selectCover}>
-						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
-							<option className={styles.option} value="select Area">
-								Filter Area
+						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "Select Area")} className={styles.select} {...register("areaSelect")}>
+							<option className={styles.option} value="Select Area">
+							Select Area
 							</option>
 							{selectState === `${stateValue}` && renderAvailableAreas()}
 						</select>
@@ -331,10 +345,40 @@ export default function FilterVendors() {
 				
 			{ isClient && (
 					<div className={styles.renderVendorInnerCover}>
-						{RenderAvailabeVendors()}
-						{RendeAvailabeVendors()}
+						{profileDetails?.length > 0 ? RenderAvailabeVendors() :RendeAvailabeVendors()}
+						
+						{profileDetails?.length > 0?<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={profileDetails?.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 					</div>
 				)}
+				{profileDetails?.length > 0?<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={profileDetails?.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 				
 			</div>
 		</div>

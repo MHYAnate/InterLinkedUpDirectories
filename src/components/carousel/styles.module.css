@@ -17,6 +17,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 20px;
+  user-select: none;
 }
 
 .topSelect{

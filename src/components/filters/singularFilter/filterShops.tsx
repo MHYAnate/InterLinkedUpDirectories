@@ -234,13 +234,8 @@ export default function ShopsFilter() {
 
 		if (!items) return null;
 
-		
-	const filteredShopItemsTag = items?.items.filter((eachItem) => {
-		const text = eachItem.tag.toLowerCase();
-		return (tag !==(null || undefined|| "" || "Filter Tag")?text.includes(tag.toLowerCase()):text );
-	});
 
-	const filteredShopItemsName = filteredShopItemsTag.filter((eachItem) => {
+	const filteredShopItemsName =  items?.items.filter((eachItem) => {
 		const text = eachItem.title.toLowerCase();
 		return text.includes(shopSearchInput.toLowerCase());
 	});
@@ -308,18 +303,12 @@ export default function ShopsFilter() {
 		));
 	}
 
-
-	const filteredShopListcountry = ShopData.filter((eachItem) => {
-		const text = eachItem.country.toLowerCase();
-		return text.includes(selectCountry.toLowerCase());
-	});
 	const filteredShopListstate =
-		filteredShopListcountry.length > 0
-			? filteredShopListcountry.filter((eachItem) => {
+	ShopData.filter((eachItem) => {
 					const text = eachItem.state.toLowerCase();
 					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
-			  })
-			: [];
+			  });
+
 	const filteredShopListarea =
 		filteredShopListstate.length > 0
 			? filteredShopListstate.filter((eachItem) => {
@@ -327,11 +316,12 @@ export default function ShopsFilter() {
 					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
 			  })
 			: [];
+
 			const filteredShopMarket =
 			filteredShopListarea.length > 0
 				? filteredShopListarea.filter((eachItem) => {
 						const text = eachItem.market.toLowerCase();
-						return (selectComplex !==(null || undefined|| "" || "Select Market complex")?text.includes(selectComplex.toLowerCase()):text );
+						return (selectComplex !==(null || undefined|| "" || "Select Market Complex")?text.includes(selectComplex.toLowerCase()):text );
 					})
 				: [];
 
@@ -441,16 +431,6 @@ export default function ShopsFilter() {
 							// unoptimized
 						/>
 					</div><form>
-					<div  className={styles.shopItemSelectCover}>
-						<select  value={tag!==(undefined || null)? tag:(selectCountry?"": "select tag")} className={styles.shopItemSelect} {...register("tag")}
-	
-						>
-							<option className={styles.shopItemOption} value="Filter Tag">
-								Filter Tag
-							</option>
-							{renderAvailableTag()}
-						</select>
-					</div>
 					<div className={styles.shopItemInputCover}>
 						<input
 							type="search"
@@ -541,17 +521,10 @@ export default function ShopsFilter() {
 	}),
 		[];
 
-	const filteredFirebaseCountryShopList =
-		shopProfileDetails?.length > 0
-			? shopProfileDetails.filter((eachItem) => {
-					const text = eachItem.countrySelect.toLowerCase();
-					return text.includes(searchInput.toLowerCase());
-			  })
-			: [];
 
 	const filteredFirebaseStateShopList =
-		filteredFirebaseCountryShopList.length > 0
-			? filteredFirebaseCountryShopList.filter((eachItem) => {
+	shopProfileDetails?.length > 0
+	? shopProfileDetails.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
 					return text.includes(selectState.toLowerCase());
 			  })
@@ -682,8 +655,8 @@ export default function ShopsFilter() {
 					<select  value={tag!==(undefined || null)? tag: ""} className={styles.shopItemSelect} {...register("tag")}
 
 					>
-						<option className={styles.shopItemOption} value="Filter Tag">
-							Filter Tag
+						<option className={styles.shopItemOption} value="Select Tag">
+							Select Tag
 						</option>
 						{renderAvailableTag()}
 					</select>
@@ -733,30 +706,16 @@ export default function ShopsFilter() {
 			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 				<div className={styles.selectGroup}>
 					<div className={styles.selectCover}>
-						<select
-							className={styles.select}
-							{...register("countrySelect")}
-							value={countryValue}
-						>
-							<option className={styles.option} value="select Country">
-								Filter Country
-							</option>
-							<option className={styles.option} value="Nigeria">
-								Nigeria
-							</option>
-						</select>
-					</div>
-					<div className={styles.selectCover}>
 						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 							<option className={styles.option} value="select State">
 							Select State
 							</option>
-							{selectCountry === "Nigeria" && renderAvailableStates()}
+							{renderAvailableStates()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "select area")} className={styles.select} {...register("areaSelect")}>
-							<option className={styles.option} value="select Area">
+						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "Select Area")} className={styles.select} {...register("areaSelect")}>
+							<option className={styles.option} value="Select Area">
 								Select Area
 							</option>
 							{selectState === `${stateValue}` && renderAvailableAreas()}
@@ -764,15 +723,15 @@ export default function ShopsFilter() {
 					</div>
 					<div  className={styles.selectCover}>
 						<select value={selectComplex!==(undefined || null)? selectComplex:(selectArea?"": "select market")} className={styles.select} {...register("complex")}>
-							<option className={styles.option} value="select Area">
-								Select Market complex
+							<option className={styles.option} value="Select Market Complex">
+								Select Market Complex
 							</option>
 							{selectArea === `${areaValue}` && renderAvailableMarketComplexTag()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
 						<select value={shopTag!==(undefined || null)? shopTag:(selectCountry?"": "select market")} className={styles.select} {...register("shopTag")}>
-							<option className={styles.option} value="select Tag">
+							<option className={styles.option} value="Select Tag">
 								Select Tag
 							</option>
 							{renderAvailablShopTag()}
@@ -794,13 +753,13 @@ export default function ShopsFilter() {
 			<div className={styles.displayFilter}>
 				{isClient && (
 					<div className={styles.renderVendorInnerCover}>
-						{filteredFirebaseCountryShopList?.length > 0
+						{shopProfileDetails?.length > 0
 							? RenderAvailableShops()
 							: RenderAvailableModelShops()}
-							{filteredFirebaseCountryShopList?.length > 0?<div className={styles.pagi}>
+							{shopProfileDetails?.length > 0?<div className={styles.pagi}>
 					<Pagination
 						postsPerPage={postsPerPage}
-						totalPosts={filteredFirebaseCountryShopList.length}
+						totalPosts={filteredFirebaseStateShopList.length}
 						paginate={paginate}
 						currentpage={currentPage}
 					/>{" "}
@@ -814,10 +773,10 @@ export default function ShopsFilter() {
 				</div>}
 					</div>
 				)}
-				{filteredFirebaseCountryShopList?.length > 0?<div className={styles.pagiMid}>
+				{shopProfileDetails?.length > 0?<div className={styles.pagiMid}>
 					<Pagination
 						postsPerPage={postsPerPage}
-						totalPosts={filteredFirebaseCountryShopList.length}
+						totalPosts={filteredFirebaseStateShopList.length}
 						paginate={paginate}
 						currentpage={currentPage}
 					/>{" "}
