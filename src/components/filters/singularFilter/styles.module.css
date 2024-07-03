@@ -1787,7 +1787,7 @@
     flex-direction: column;
     align-items: first baseline;
     justify-content: first baseline;
-    min-width: 47%;
+    min-width: 40vw;
   }
   .headFootDetailCover{
     max-width:87vw;
