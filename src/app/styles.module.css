@@ -15,7 +15,7 @@
   min-height: 700px;
   max-height: fit-content;
   margin-top: 10px;
-  background-image: linear-gradient(to top, rgb(249, 249, 249), white);
+ background-color: white;
 }
 
 .regNavBodyCover {
