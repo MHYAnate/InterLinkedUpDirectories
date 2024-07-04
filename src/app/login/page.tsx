@@ -12,7 +12,7 @@ import {
 	sendEmailVerification,
 	sendPasswordResetEmail,
 	GoogleAuthProvider,
-	signInWithPopup,
+	signInWithRedirect,
 } from "firebase/auth";
 
 import { Services } from "@/database/data";
@@ -57,25 +57,38 @@ export default function Register() {
 
 	const provider = new GoogleAuthProvider();
 
-	// const SignInWithGoogle = () => {
-	// 	signInWithPopup(auth, new GoogleAuthProvider())
-	// 		.then((result) => {
+	const SignInWithGoogle = () => {
+		signInWithRedirect(auth, new GoogleAuthProvider())
+			.then((result) => {
 
-	// 			router.push("dashboard");
+				router.push("dashboard");
 
-	// 			setLoader(true);
-	// 		})
-	// 		.catch((error) => {
-	// 			const errorCode = error.code;
-	// 			const errorMessage = error.message;
-	// 			setLoader(false);
-	// 			// ..
-	// 		});
-	// 	// Use userCred here
-	// };
+				setLoader(true);
+			})
+			.catch((error) => {
+				const errorCode = error.code;
+				const errorMessage = error.message;
+				setLoader(false);
+				// ..
+			});
+		// Use userCred here
+	};
 
- // State for loader visibility
+//  State for loader visibility
 
+//   const SignInWithGoogle = async () => {
+//     try {
+//       setLoader(true); // Show loader before sign-in attempt
+//       const result = await signInWithRedirect(auth, new GoogleAuthProvider());
+//       router.push("dashboard"); // Use useNavigate for navigation with slash
+//     } catch (error) {
+//       console.error("Error signing in with Google:", error);
+//       setLoader(false); // Hide loader on error
+//       // Handle errors as needed (e.g., display error message to user)
+//     } finally {
+//       setLoader(false); // Hide loader in any case (success or error)
+//     }
+//   };
 
 	const handleTogglePassword = () => {
 		setPasswordVisible((prevPasswordVisible) => !prevPasswordVisible);
@@ -204,13 +217,34 @@ export default function Register() {
 											</button>
 										</div>
 
-									
+										<div className={styles.logInCover}>
 											<button className={styles.logInButton} type="submit">
 												Log In
 											</button>
 
+											<div
+												className={styles.logInWithGoogle}
+												onClick={() => {
+													SignInWithGoogle();
+												}}
+											>
+												<div className={styles.gImgHolder}>
+													<Image
+														object-fit="cover"
+														className={styles.gImg}
+														alt="Picture of the author"
+														quality={100}
+														width={100}
+														height={100}
+														src="/service/google.jpg"
+														priority={true}
+														unoptimized
+													/>
+												</div>
+												<div className={styles.googleLogIn}> logIn with Google</div>
+											</div>
 											
-										
+										</div>
 
 										<div className={styles.forgotPassword}>
 											Forgot Password{" "}
