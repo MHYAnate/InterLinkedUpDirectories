@@ -709,7 +709,6 @@
 }
 .coverHeadDetail{
  width:56vw;
-  
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -1500,6 +1499,9 @@
   }
   .coverHeadDetail{
     width:85vw;
+    padding-bottom: 3px;
+    border-bottom: 1px solid green;
+    margin-bottom: 7px;
   }
   .headFootDetailCover{
     max-width:85vw;
@@ -1530,6 +1532,9 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     padding-bottom: 3px;
+     margin-bottom: 10px;
+     border-bottom: 1px solid green;
    }
    .VacancyRenderCover{
     width:87vw;
