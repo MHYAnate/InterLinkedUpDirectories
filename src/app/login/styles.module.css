@@ -6,186 +6,11 @@
 }
 .formContainer{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 98vw;
-  height: max-content;
+  height: 80vh;
   padding-top: 5px;
-}
-
-.titleCover{
-  width: 30vw;
-  height: 85vh;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.categoryCover{
-  position: relative;
-  width: 30vw;
-  height: 85vh;
-}
-
-.categoryImgCover{
-  width: 30vw;
-  height: 83vh;
-  transition: transform 1s ease-in-out 0.2s;
-}
-
-
-.categoryImg{
-  width: 30vw;
-  height: 83vh;
-  border-radius: 10px;
-  transition: transform 1s ease-in-out 0.2s;
-}
-
-.categoryImgCover:hover,.categoryImg:hover {
-  transform: scale(0.9);
-}
-
-.formCover{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: first baseline;
-  width: 68vw;
-  min-height: 530px;
-  height: max-content;
-}
-
-.topSelect{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48vw;
-  height: max-content;
-  margin-bottom: 10px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-  user-select: none;
-}
-
-
-.topSelectBtnLeft{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24vw;
-  color: green;
-  border-right: 1px solid silver; 
-}
-
-.topSelectBtnLeftSelected{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24vw;
-  color: white;
-  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
-  border-radius: 5px;
-  border-right: 1px solid silver;
-  animation:  0.7s linear appear; 
-}
-
-
-.topSelectBtnRight{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24vw;
-  color: green;
-  border-left: 1px solid silver;
-}
-
-.topSelectBtnRightSelected{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24vw;
-  color: white;
-  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
-  border-radius: 5px;
-  border-left: 1px solid silver;
-  animation:  0.7s linear appear;
-}
-
-@keyframes appear {
-
-  0%{
-    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7),rgba(3, 135, 3, 0.7));
-  opacity: 0;
-  }
-  100%{
-    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
-    opacity: 1;
-  }
-}
-
-
-.tsSpan{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24vw;
-  transition: box-shadow 1s ease-in-out;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  text-align: center;
-}
- .tsSpan:hover{
-  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
-  border-radius: 5px;
-  width: 24vw;
- 
-}
-
-
-.regContainer{
-  display: flex;
-  width: inherit;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: 300;
-  user-select: none;
-  
-}
-
-.regButton{
-  border-radius: 5px;
-  padding: 5px;
-  
-}
-.regButton:hover{
-  box-shadow: 0px 0px 1px silver, 0 0 2px silver, 0 0 3px silver;
-}
-
-.regButtonActive{
-  border-radius: 5px;
-  padding: 5px;
-  background-image: linear-gradient(to right, rgba(228, 234, 228, 0.7), rgba(46, 47, 46, 0.7));
-}
-.form{
-  display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  justify-content: center;
-  width: 68vw;
-  height: max-content;
-  padding-left: 5px;
-}
-
-.innerFormCover{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  min-width: 48vw;
-  max-width: max-content;
-  column-gap: 20px;
-  height: 70vh;
 }
 
 .innerFormBody{
@@ -198,7 +23,7 @@
   column-gap: 20px;
   height: 70vh;
   border-radius: 10px;
-  background-image: linear-gradient(to right,   rgb(255, 255, 255), rgb(172, 192, 211));
+  
 }
 
 .resetForm{
@@ -214,23 +39,19 @@
 
 .inputCover{
   overflow: hidden;
-  width: 24vw;
-  height: max-content;
+  width: 300px;
+  height: 35px;
   border: 1px solid silver;
-  border-radius: 5px;
-}
-
-.inputImageCover{
-  width: 24vw;
-  height: max-content;
-  border-bottom: 1px solid silver;
+  border-radius: 15px;
 }
 
 .input{
   border: none;
-  width: 24vw;
-  height: 25px;
+  width: 300px;
+  height: 35px;
+  padding-left: 10px;
   font-weight: 400;
+  border-radius: 15px;
 }
 
 .passcodeContainer{
@@ -238,38 +59,54 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  width: 24vw;
+  width: 300px;
   height: max-content;
   border: 1px solid silver;
-  border-radius: 5px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-left: -3px;
 }
 
 .input1{
   border: none;
-  width: 19vw;
-  height: 23.5px;
+  width: 285px;
+  height: 35px;
   font-weight: 400;
+  padding-left: 10px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .svg{
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
+  transform: translateX(-3px);
 }
+
 .passWordVisibilityBtn{
   border: none;
-  width: 8vw;
-  height: 25px;
+  width: 30px;
+  height: 35px;
   background-color: white;
+}
+
+.logInCover{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 120px;
 }
 .logInButton{
   border-radius: 5px;
-  width: 24vw;
+  width: 300px;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: linear-gradient(to right, dodgerblue, rgb(30, 45, 255));
+  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
   border: none;
 }
 
@@ -277,9 +114,48 @@
   box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
 }
 
+.logInWithGoogle{
+  width: 300px;
+  height: 70px;
+  border-radius: 15px;
+  position: relative;
+  top: 15px;
+  left: 0;
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+.googleLogIn{
+  width: 140px;
+  height: fit-content;
+  border-radius: 15px;
+  position: absolute;
+  top: 13px;
+  left: 90px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: green;
+  background-color: rgb(186, 217, 249);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.gImgHolder{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 15px;
+  left: 10px;
+}
+.gImg{
+  width: 70px;
+  height: 70px;
+}
+
 .forgotPassword{
   border-radius: 5px;
-  width: 24vw;
+  width: 300px;
   height: 35px;
   display: flex;
   align-items: center;
@@ -320,173 +196,3 @@
  user-select: none;
 }
 
-@media screen and (max-width: 770px) {
-  .form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 68vw;
-    height: max-content;
-    padding-left: 0;
-  }
-
-  .formContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 98vw;
-    height: max-content;
-    padding-top: 5px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.942), rgba(202, 220, 227, 0.297));
-  }
-  
-  .titleCover{
-    width: 98vw;
-    height: 300px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  
-  .categoryCover{
-    position: relative;
-    width: 98vw;
-    height: 300px;
-  }
-  
-  .categoryImgCover{
-    width: 98vw;
-    height: 300px;
-  }
-  
-  .categoryImg{
-    width: 98vw;
-    height: 300px;
-    border-radius: 10px;
-  }
-  .title{
-    display: none;
-  }
-  .flextitle{
-    display: none;
-  }
-  .formCover{
-    width: 98vw;
-    min-height: 400px;
-  }
-  
-  .topSelect{
-    width: 78vw;
-  }
-  
-  
-  .topSelectBtnLeft{
-    width: 39vw; 
-  }
-  
-  .topSelectBtnLeftSelected{
-    width: 39vw;
-  }
-  
-  
-  .topSelectBtnRight{
-    width: 39vw;
-  }
-  
-  .topSelectBtnRightSelected{
-    width: 39vw;
-  }
-  .innerFormCover{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 10px;
-    align-items: center;
-    width: 95vw;
-    height: 250px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .innerFormBody{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    row-gap: 10px;
-    align-items: center;
-    width: 95vw;
-    height: 250px;
-    padding-top: 20px;
-    padding-bottom: 0;
-  }
-
-  .input{
-    border: none;
-    width: 50vw;
-    height: 25px;
-    font-weight: 400;
-  }
-  .inputCover{
-    width: max-content;
-    height: max-content;
-  }
-  .passcodeContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: max-content;
-    height: max-content;
-    border-bottom: 1px solid silver;
-  }
-  
-  .input1{
-    border: none;
-    width: 42vw;
-    height: 23.5px;
-    font-weight: 400;
-  }
-
-  .logInButton{
-    border-radius: 5px;
-    width: 50vw;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-image: linear-gradient(to right, dodgerblue, rgb(30, 45, 255));
-    border: none;
-  }
-
-  .forgotPassword{
-    border-radius: 5px;
-    width: 70vw;
-    height: 35px;
-    justify-content: space-around;
-  }
-  .resetCover{
-    color: green;
-    width: max-content;
-    height: max-content;
-    font-weight: 300;
-    padding-bottom: 1px;
-    border-bottom: 1px solid green;
-    cursor: pointer;
-  }
-  .logInClickCover{
-    color: green;
-    width: max-content;
-    height: max-content;
-    font-weight: 300;
-    padding-bottom: 1px;
-    border-bottom: 1px solid green;
-    cursor: pointer;
-  }
-  .clickToReset{
-    width: max-content;
-    font-size: 0.7em;
-  }
-  .clickToLogIn{
-    width: max-content;
-   font-size: 0.7em;
-  }
-}

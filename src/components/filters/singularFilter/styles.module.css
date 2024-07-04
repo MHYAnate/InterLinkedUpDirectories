@@ -256,6 +256,9 @@
   border-radius: 15px;
 }
 
+.stockRenderCover:hover{
+  box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
+}
 .shopRenderCover{
   display: flex;
   flex-direction: column;
@@ -269,6 +272,10 @@
   background-color: rgb(255, 255, 255);
   padding-bottom: 10px;
   border-radius: 15px;
+}
+
+.shopRenderCover:hover{
+  box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
 }
 .shoptitleBodyDivide{
   display: flex;
@@ -328,11 +335,9 @@
 }
 
 .VendorRenderCover:hover{
-  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
+  box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
 }
-.shopRenderCover:hover{
-  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
-}
+
 .VendorRenderCoverC{
   display: flex;
   align-items: center;
