@@ -75,6 +75,21 @@ export default function Register() {
 				if (isMobileDevice()) {
 					// For mobile devices, use redirect
 					await signInWithRedirect(auth, provider);
+					const checkRedirectResult = async () => {
+						try {
+							const result = await getRedirectResult(auth);
+							if (result) {
+								router.push("/dashboard");
+							}
+						} catch (error) {
+							console.error("Error getting redirect result:", error);
+							// Handle errors appropriately
+						}
+					};
+			
+					if (isMobileDevice()) {
+						checkRedirectResult();
+					}
 				} else {
 					// For desktops, use popup
 					await signInWithPopup(auth, provider);
