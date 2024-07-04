@@ -13,6 +13,7 @@ import {
 	sendPasswordResetEmail,
 	GoogleAuthProvider,
 	signInWithRedirect,
+	signInWithPopup,
 } from "firebase/auth";
 
 import { Services } from "@/database/data";
@@ -58,7 +59,7 @@ export default function Register() {
 	const provider = new GoogleAuthProvider();
 
 	const SignInWithGoogle = () => {
-		signInWithRedirect(auth, new GoogleAuthProvider())
+		signInWithPopup(auth, new GoogleAuthProvider())
 			.then((result) => {
 
 				router.push("dashboard");
@@ -74,21 +75,20 @@ export default function Register() {
 		// Use userCred here
 	};
 
-//  State for loader visibility
 
-//   const SignInWithGoogle = async () => {
-//     try {
-//       setLoader(true); // Show loader before sign-in attempt
-//       const result = await signInWithRedirect(auth, new GoogleAuthProvider());
-//       router.push("dashboard"); // Use useNavigate for navigation with slash
-//     } catch (error) {
-//       console.error("Error signing in with Google:", error);
-//       setLoader(false); // Hide loader on error
-//       // Handle errors as needed (e.g., display error message to user)
-//     } finally {
-//       setLoader(false); // Hide loader in any case (success or error)
-//     }
-//   };
+  // const SignInWithGoogle = async () => {
+  //   try {
+  //     setLoader(true); // Show loader before sign-in attempt
+  //     const result = await signInWithPopup(auth, new GoogleAuthProvider());
+  //     router.push("dashboard"); // Use useNavigate for navigation with slash
+  //   } catch (error) {
+  //     console.error("Error signing in with Google:", error);
+  //     setLoader(false); // Hide loader on error
+  //     // Handle errors as needed (e.g., display error message to user)
+  //   } finally {
+  //     setLoader(false); // Hide loader in any case (success or error)
+  //   }
+  // };
 
 	const handleTogglePassword = () => {
 		setPasswordVisible((prevPasswordVisible) => !prevPasswordVisible);
