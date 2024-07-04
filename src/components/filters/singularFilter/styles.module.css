@@ -1792,6 +1792,11 @@
     justify-content: flex-start;
     align-items: center;
   }
+
+  .detailHead{
+    width: 87vw;
+    transform: translateX(5px);
+  }
   .headFootDetail{
     display: flex;
     flex-direction: column;
