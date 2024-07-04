@@ -60,7 +60,12 @@ export default function Register() {
 	const provider = new GoogleAuthProvider();
 
 	const isMobileDevice = () => {
-		return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+	
+		// Regular expressions for common mobile OS and browser user agents
+		const mobilePattern = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Opera Mini|Fennec|Mobile|Windows Phone|Kindle|Silk|CriOS|Googlebot-Mobile|Opera Mobi/i;
+	
+		return mobilePattern.test(userAgent);
 	};
 
 	const SignInWithGoogle = () => {
