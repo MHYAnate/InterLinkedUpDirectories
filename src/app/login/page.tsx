@@ -55,21 +55,27 @@ export default function Register() {
 
 	const router = useRouter();
 
-	const SignInWithGoogle = () => {
-		signInWithPopup(auth, new GoogleAuthProvider())
-			.then((cred) => {
-				router.push("dashboard");
+	const provider = new GoogleAuthProvider();
 
-				setLoader(true);
-			})
-			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
-				setLoader(false);
-				// ..
-			});
-		// Use userCred here
-	};
+	// const SignInWithGoogle = () => {
+	// 	signInWithPopup(auth, new GoogleAuthProvider())
+	// 		.then((result) => {
+
+	// 			router.push("dashboard");
+
+	// 			setLoader(true);
+	// 		})
+	// 		.catch((error) => {
+	// 			const errorCode = error.code;
+	// 			const errorMessage = error.message;
+	// 			setLoader(false);
+	// 			// ..
+	// 		});
+	// 	// Use userCred here
+	// };
+
+ // State for loader visibility
+
 
 	const handleTogglePassword = () => {
 		setPasswordVisible((prevPasswordVisible) => !prevPasswordVisible);
@@ -198,34 +204,13 @@ export default function Register() {
 											</button>
 										</div>
 
-										<div className={styles.logInCover}>
+									
 											<button className={styles.logInButton} type="submit">
 												Log In
 											</button>
 
-											<div
-												className={styles.logInWithGoogle}
-												onClick={() => {
-													SignInWithGoogle();
-												}}
-											>
-												<div className={styles.gImgHolder}>
-													<Image
-														object-fit="cover"
-														className={styles.gImg}
-														alt="Picture of the author"
-														quality={100}
-														width={100}
-														height={100}
-														src="/service/google.jpg"
-														priority={true}
-														unoptimized
-													/>
-												</div>
-												<div className={styles.googleLogIn}> logIn with Google</div>
-											</div>
 											
-										</div>
+										
 
 										<div className={styles.forgotPassword}>
 											Forgot Password{" "}
