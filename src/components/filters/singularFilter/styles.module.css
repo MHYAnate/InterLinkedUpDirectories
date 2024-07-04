@@ -1502,6 +1502,7 @@
     padding-bottom: 3px;
     border-bottom: 1px solid green;
     margin-bottom: 7px;
+    transform: translateX(-5px);
   }
   .headFootDetailCover{
     max-width:85vw;
