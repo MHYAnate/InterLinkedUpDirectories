@@ -14,7 +14,7 @@ import {
 	GoogleAuthProvider,
 	signInWithRedirect,
 	signInWithPopup,
-	
+	getRedirectResult,
 } from "firebase/auth";
 
 import { Services } from "@/database/data";
@@ -59,13 +59,22 @@ export default function Register() {
 
 	const provider = new GoogleAuthProvider();
 
+	const isMobileDevice = () => {
+		return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	};
+
 	const SignInWithGoogle = () => {
 		
-	
 		const handleSignIn = async () => {
 			try {
-				await signInWithPopup(auth, provider);
-				router.push("dashboard");
+				if (isMobileDevice()) {
+					// For mobile devices, use redirect
+					await signInWithRedirect(auth, provider);
+				} else {
+					// For desktops, use popup
+					await signInWithPopup(auth, provider);
+					router.push("/dashboard");
+				}
 			} catch (error) {
 				console.error("Error signing in with Google:", error);
 				// Handle errors appropriately (e.g., display an error message)
@@ -75,6 +84,24 @@ export default function Register() {
 	};
 
 
+	useEffect(() => {
+    // Check for redirect result on component mount for mobile devices
+    const checkRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        if (result) {
+          router.push("/dashboard");
+        }
+      } catch (error) {
+        console.error("Error getting redirect result:", error);
+        // Handle errors appropriately
+      }
+    };
+
+    if (isMobileDevice()) {
+      checkRedirectResult();
+    }
+  }, []);
   
 
 	const handleTogglePassword = () => {
