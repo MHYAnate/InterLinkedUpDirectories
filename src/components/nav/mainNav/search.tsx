@@ -85,7 +85,7 @@ const SearchComponentMain: React.FC<props> = ({ suggestionsList}) => {
               value={searchInput}
               onChange={updateSearchInput}
 							src='@/features/try/svg.svg'
-							placeholder="Quick Vendors Category"
+							placeholder="Search Vendors Space"
               id='sid'
             />
           </div>
