@@ -653,16 +653,14 @@
   transition: background-image 1s ease-in-out 0.1s;
   font-size: 1rem;
   user-select: none;
-  border: 1px solid #d6e7f6; /* Dark Green */
-  border-radius: 15px;
-  box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
-  margin-bottom: 15px;
 }
 
 .VacancyRenderCover:hover{
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
   box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, rgba(222, 255, 222, 0.7), rgba(107, 203, 107, 0.7));
 }
 
 
@@ -1450,7 +1448,9 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  
+  .VacancyRenderCover:hover{
+    background-image: none;
+  }
   .vBtnCover{
     width: 100%;
     display: flex;
