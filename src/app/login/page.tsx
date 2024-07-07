@@ -75,21 +75,21 @@ export default function Register() {
 				if (isMobileDevice()) {
 					// For mobile devices, use redirect
 					await signInWithRedirect(auth, provider);
-					const checkRedirectResult = async () => {
-						try {
-							const result = await getRedirectResult(auth);
-							if (result) {
-								router.push("/dashboard");
-							}
-						} catch (error) {
-							console.error("Error getting redirect result:", error);
-							// Handle errors appropriately
-						}
-					};
-			
-					if (isMobileDevice()) {
-						checkRedirectResult();
-					}
+					 const checkRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        if (result) {
+          router.push("/dashboard");
+        }
+      } catch (error) {
+        console.error("Error getting redirect result:", error);
+        // Handle errors appropriately
+      }
+    };
+
+    if (isMobileDevice()) {
+      checkRedirectResult();
+    }
 				} else {
 					// For desktops, use popup
 					await signInWithPopup(auth, provider);
@@ -185,10 +185,10 @@ export default function Register() {
 							>
 								{tab !== "Reset" && (
 									<>
-										<div className={styles.inputCover}>
+										<div className={styles.emailContain}>
 											<input
 												type="text"
-												className={styles.input}
+												className={styles.email}
 												{...register("email", {
 													required: "Required",
 												})}
@@ -298,10 +298,10 @@ export default function Register() {
 
 								{tab === "Reset" && (
 									<div className={styles.resetForm}>
-										<div className={styles.inputCover}>
+										<div className={styles.emailContain}>
 											<input
 												type="text"
-												className={styles.input}
+												className={styles.email}
 												{...register("email", {
 													required: "Required",
 												})}
