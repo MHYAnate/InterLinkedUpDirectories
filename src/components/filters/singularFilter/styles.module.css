@@ -258,6 +258,7 @@
 
 .stockRenderCover:hover{
   box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
+  background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
 }
 .shopRenderCover{
   display: flex;
@@ -276,6 +277,7 @@
 
 .shopRenderCover:hover{
   box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
+  background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
 }
 .shoptitleBodyDivide{
   display: flex;
@@ -336,6 +338,7 @@
 
 .VendorRenderCover:hover{
   box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
+  background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
 }
 
 .VendorRenderCoverC{
@@ -353,6 +356,7 @@
 }
 .VendorRenderCoverC:hover{
   box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 7px silver;
+  background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
 }
 .imgCover{
   display: flex;
@@ -656,11 +660,10 @@
 }
 
 .VacancyRenderCover:hover{
-  background-color: rgb(255, 255, 255);
   border-radius: 15px;
   box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
   border-radius: 15px;
-  background-image: linear-gradient(to right, rgba(222, 255, 222, 0.7), rgba(107, 203, 107, 0.7));
+  background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
 }
 
 
@@ -840,10 +843,11 @@
   
 .status{
   height: max-content;
-  Min-width: 15vw; 
+  width: 100px; 
   text-align: left; 
   color: green;
-  font-family: cursive;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
   user-select: none;
 }
 .contactTitle{
@@ -852,10 +856,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: green;
+  color: rgb(146, 105, 2);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   user-select: none;
+  text-transform: uppercase;
 }
 .contact{
   display: flex;
@@ -1448,8 +1453,11 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  .VacancyRenderCover{
+    background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
+  }
   .VacancyRenderCover:hover{
-    background-image: none;
+    background-image:  none;
   }
   .vBtnCover{
     width: 100%;
