@@ -1454,10 +1454,10 @@
     padding-right: 10px;
   }
   .VacancyRenderCover{
-    background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgba(212, 252, 212, 0.7));
+    background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgb(237, 255, 237));
   }
   .VacancyRenderCover:hover{
-    background-image:  none;
+    background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgb(237, 255, 237));  
   }
   .vBtnCover{
     width: 100%;
