@@ -37,11 +37,12 @@
 }
 
 .emailContain{
-  width: 250px;
-  height: max-content;
+  width: 247px;
+  height: 45px;
   overflow: hidden;
   border-radius: 35px;
-  border: 2px solid black;
+  box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
+  padding-left: -3px;
 }
 
 .email{
@@ -50,23 +51,24 @@ height: 45px;
 border: none;
 border-radius: 35px;
 padding-left: 15px;
+transform: translateY(-1px);
 }
 
 .passcodeContainer{
   position: relative;
   overflow: hidden;
-  width: 250px;
+  width: 247px;
   height: 45px;
-  border: 2px solid black;
+  box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
   border-radius: 35px;
-  overflow: hidden;
   padding-left: -3px;
+  background-color: white;
 }
 
 .input1{
   position: absolute;
-  left: 0;
-  top: -1px;
+  left: -1px;
+  top: -2px;
   border: none;
   width: 255px;
   height: 45px;
