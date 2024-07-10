@@ -136,7 +136,7 @@
 }
 
  .tsSpan:hover{
-  text-transform: uppercase;
+  color: green;
   border-radius: 5px;
   width: 300px;
  
@@ -211,7 +211,7 @@
 
 .selectCover{
   width: 300px;
-  height: 40px;
+  height: 45px;
   border-radius: 5px;
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
   background-color: white;
@@ -266,7 +266,7 @@
 
 .inputCover{
   width: 300px;
-  height: 40px;
+  height: 45px;
   border-radius: 5px;
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
   background-color: white;
@@ -278,8 +278,9 @@
 
 .inputImageCover{
   width: 300px;
-  height: max-content;
-  border-bottom: 1px solid silver;
+  height: 50px;
+  border: 1px solid silver;
+  border-radius: 5px;
 }
 
 .input{
@@ -294,7 +295,7 @@
   position: relative;
   overflow: hidden;
   width: 295px;
-  height: 40px;
+  height: 45px;
   box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
   border-radius: 5px;
   padding-left: -3px;
@@ -310,22 +311,7 @@
   height: 49px;
   font-weight: 400;
   padding-left: 15px;
-}
-
-.svg{
-  width: 20px;
-  height: 20px;
-  transform: translateX(-3px) translateY(3px);
-}
-
-.passWordVisibilityBtn{
-  border: none;
-  width: 30px;
-  height: 35px;
-  background-color: white;
-  position: absolute;
-  top: 7px;
-  right: 7px;
+  transform: translateY(-2px);
 }
 
 .RegiterButton{
@@ -340,6 +326,15 @@
  
 }
 
+.upLoadDp{
+  color: rgb(81, 81, 81);
+  font-weight: 400;
+  font-weight: 0.6rem;
+  margin-bottom: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-left: 5px;
+}
+
 @media screen and (max-width: 950px) {
   .formContainer{
     display: flex;
@@ -350,6 +345,9 @@
     height: max-content;
     padding-top: 5px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.942), rgba(202, 220, 227, 0.297));
+  }
+  .formCoverLeft{
+    margin-bottom: 25px;
   }
 
   .innerFormCover{

@@ -15,7 +15,7 @@ import { collection, addDoc, setDoc, doc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { Services } from "@/database/data";
 import { StateData } from "@/database/stateData";
-import VisibilityBtn from "./visibilitiyBtn";
+import VisibilityBtn from "@/components/btn/visibilityBtn";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -360,6 +360,18 @@ const User : React.FC<any> = ({ state })=>{
             </select>
           </div>
 
+					<div className={styles.inputCover}>
+            <input
+              type="text"
+              className={styles.input}
+              {...register("name", {
+                required: "Required",
+              })}
+              id="name"
+              placeholder={"Enter User Name"}
+            />
+          </div>
+
           <div className={styles.textCover}>
             <textarea
               className={styles.textarea}
@@ -384,19 +396,10 @@ const User : React.FC<any> = ({ state })=>{
           </div>
         </div>
         <div className={styles.formCoverRight}>
-          <div className={styles.inputCover}>
-            <input
-              type="text"
-              className={styles.input}
-              {...register("name", {
-                required: "Required",
-              })}
-              id="name"
-              placeholder={"Enter User Name"}
-            />
-          </div>
+         
 
           <div className={styles.inputImageCover}>
+					<div className={styles.upLoadDp}>Up Load Display Picture Here</div>
             <input
               type="file"
               accept="image/*"

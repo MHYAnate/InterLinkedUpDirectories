@@ -19,7 +19,7 @@ import Nav from "@/components/nav/mainNav/nav";
 import Loader from "@/components/load/load";
 import { Suspense } from "react";
 import Loading from "../register/logo";
-import VisibilityBtn from "./visibilitiyBtn";
+import VisibilityBtn from "@/components/btn/visibilityBtn";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -91,6 +91,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 	const selectCountry = watch("countrySelect");
 	const selectState = watch("stateSelect");
 	const selectArea = watch("areaSelect");
+	
 
 	const UserEmail =
 		typeof document !== "undefined"
@@ -437,6 +438,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 					</div>
 
 					<div className={styles.inputImageCover}>
+						<div className={styles.upLoadDp}>Up Load your Display Picture Here</div>
 						<input
 							type="file"
 							accept="image/*"
