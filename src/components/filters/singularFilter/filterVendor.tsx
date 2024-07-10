@@ -315,7 +315,7 @@ export default function FilterVendors() {
 					<div className={styles.selectCover}>
 						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "Select State")} className={styles.select} {...register("stateSelect")}>
 							<option className={styles.option} value="Select State">
-							Select State
+							 Select State
 							</option>
 							{renderAvailableStates()}
 						</select>

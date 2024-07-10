@@ -88,6 +88,7 @@ transform: translateY(-2px) translateX(-2px);
   width: 30px;
   height: 35px;
   background-color: white;
+  color: silver;
   position: absolute;
   top: 7px;
   right: 7px;

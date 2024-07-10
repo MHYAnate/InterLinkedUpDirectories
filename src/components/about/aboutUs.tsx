@@ -4,9 +4,7 @@ import styles from "./styles.module.css";
 export default function AboutUs() {
 	return (
 		<div className={styles.aboutUsBodyCover}>
-			<div className={styles.seperatorDiv}>
-			WHO WE ARE
-			</div>
+	
 			<div className={styles.rightContainer1}>
 				<div className={styles.rightImg1Cover}>
 					<Image
@@ -95,35 +93,31 @@ export default function AboutUs() {
 					<span className={styles.cardTitleSpan}>Our Services Cater for</span>
 					<ol className={styles.para}>
 						<li>
-							<span className={styles.highlighted}>Job Seekers</span> Find your
+							<span className={styles.highlightedi}>Job Seekers</span> Find your
 							perfect position with our extensive job board.
 						</li>
 						<li>
 							{" "}
-							<span className={styles.highlighted}>Employers </span>Post job
+							<span className={styles.highlightedi}>Employers </span>Post job
 							vacancies and connect with top talent.
 						</li>
 						<li>
-							<span className={styles.highlighted}>Clients</span> Access to a
+							<span className={styles.highlightedi}>Clients</span> Access to a
 							pool of competative vendors within our extensive service
 							categories.
 						</li>
 						<li>
-							<span className={styles.highlighted}>Vendors</span> Showcase your
+							<span className={styles.highlightedi}>Vendors</span> Showcase your
 							services and reach a wider audience.
 						</li>
 						<li>
-							<span className={styles.highlighted}>
+							<span className={styles.highlightedi}>
 								Buyers, Sellers and leasors
 							</span>{" "}
 							Access a convenient marketplace for various goods and services.
 						</li>
 					</ol>
 				</div>
-			</div>
-
-			<div className={styles.seperatorDiv}>
-				Experience the Inter Linked Up Advantage
 			</div>
 
 			<div className={styles.containDiv}>
@@ -173,10 +167,6 @@ export default function AboutUs() {
 						unoptimized
 					/>
 				</div>
-			</div>
-
-      <div className={styles.seperatorDiv}>
-      Inter Linked Up Directories is your comprehensive platform for a seamless and connected workforce experience.
 			</div>
 
 			<div className={styles.leftContainer2}>
@@ -260,8 +250,7 @@ export default function AboutUs() {
 			</div>
 
 			<div className={styles.seperatorDiv}>What We Offer</div>
-     
-
+	
       <div className={styles.containDiv}>
       
 				<div className={styles.miniDiv}>
@@ -310,11 +299,6 @@ export default function AboutUs() {
 					/>
 				</div>
 			</div>
-
-      <div className={styles.seperatorDiv}>We Offer Users a diverse range of directories categorized into three main sections.</div>
-
-      
-
 			<div className={styles.rightContainer1}>
 				<div className={styles.rightImg1Cover}>
 					<Image
@@ -545,59 +529,7 @@ export default function AboutUs() {
           unoptimized
         />
       </div>
-    </div>
-
-		
-		<div className={styles.seperatorDiv}> Detailed User profiles</div>
-
-			<div className={styles.leftContainer2}>
-				<div className={styles.leftImg2Cover}>
-					<Image
-						object-fit="cover"
-						className={styles.img2}
-						alt="Picture of the author"
-						quality={100}
-						width={100}
-						height={100}
-						src="/service/useProfile.jpg"
-						priority={true}
-						unoptimized
-					/>
-				</div>
-				<div className={styles.leftTextCover2}>
-       
-            <p className={styles.para}>
-            Each User profile within our directory includes essential details
-						like:
-					</p>
-          <ol className={styles.para}>
-						<li>
-							<p>
-								<span className={styles.highlighted}>User Name:</span> Clearly
-								identify the individual or business providing the service.
-							</p>
-						</li>
-						<li>
-							<p>
-								<span className={styles.highlighted}>Contact Information:</span>{" "}
-								Each User listing includes their name, contact information and
-								a description of their services to directly contact potential
-								Users.
-							</p>
-						</li>
-						<li>
-							<p>
-								<span className={styles.highlighted}>
-									Service Descriptions:
-								</span>{" "}
-								Gain a comprehensive understanding of the services offered by
-								each User, allowing you to make informed choices.
-							</p>
-						</li>
-					</ol>
-        </div>
-			</div>
-      <div className={styles.seperatorDiv}>Contact Us</div>
+    </div>	
 			<div className={styles.rightContainer2}>
 				<div className={styles.leftImg3Cover}>
 					<Image
@@ -613,6 +545,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover3}>
+				<span className={styles.cardTitleSpan}>Contact Us </span>
         <p className={styles.para}>
 					Join us on our mission to empower individuals and businesses through seamless connections!
 					</p>

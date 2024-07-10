@@ -21,8 +21,8 @@
   max-height: fit-content;
   border-radius: 10px;
   animation: appearRight linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 
 .rightImg1Cover{
@@ -53,8 +53,8 @@
   max-height: fit-content;
   border-radius: 10px;
   animation: appearRight linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 
 .rightImg2Cover{
@@ -86,8 +86,8 @@
   max-height: fit-content;
   border-radius: 10px;
   animation: appearRight linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 
 .rightImg3Cover{
@@ -120,8 +120,8 @@
   max-height: fit-content;
   border-radius: 10px;
   animation: appearleft linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 
 .leftImg1Cover{
@@ -152,8 +152,8 @@
   max-height: fit-content;
   border-radius: 10px;
   animation: appearleft linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 
 .leftImg2Cover{
@@ -186,8 +186,8 @@
   max-height: fit-content;
   border-radius: 10px;
   animation: appearleft linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 
 .leftImg3Cover{
@@ -215,7 +215,6 @@
   max-height: fit-content;
   overflow: hidden;
   border-radius: 5px;
-  background-image: linear-gradient(to right,  rgba(255, 255, 255, 0.1), rgba(1, 128, 1, 0.1));
   user-select: none;
   color: goldenrod;
   display: flex;
@@ -225,8 +224,9 @@
   font-size: 2rem;
   text-align: center;
   animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
+  text-transform: uppercase;
 }
 .seperatorDiv2{
   width: 90vw;
@@ -234,7 +234,6 @@
   max-height: fit-content;
   overflow: hidden;
   border-radius: 5px;
-  background-image: linear-gradient(to right,  rgba(255, 255, 255, 0.1), rgba(1, 128, 1, 0.1));
   user-select: none;
   color: goldenrod;
   display: flex;
@@ -243,7 +242,8 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  text-align: center
+  text-align: center;
+  text-transform: uppercase;
 }
 .noteP{
   margin: 0;
@@ -273,8 +273,8 @@
   user-select: none;
   color: goldenrod;
   animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 7%; */
 }
 .imgMiniDiv{
   width: 200px;
@@ -321,6 +321,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  text-transform: uppercase;
 }
 
 .introHeader{
@@ -328,6 +329,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2rem;
   font-weight: 900;
+  text-transform: uppercase;
 }
 .introText{
   color:goldenrod;
@@ -348,10 +350,15 @@
   line-height: 35px;
 }
 .highlighted{
-  color: green;
-  font-weight: 400;
+  color: rgb(1, 84, 1);
+  font-weight: 500;
   text-transform: uppercase;
 
+}
+.highlightedi{
+  font-weight: 500;
+  text-transform: uppercase;
+  color: goldenrod;
 }
 .inHighligthTextGreen{
   color: green;
