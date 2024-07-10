@@ -18,7 +18,7 @@ import {
 import firebase from "@/firebase/firebase";
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
-import Pagination from "./pagination";
+import Pagination from "@/components/btn/paginationBtn";
 import styles from "./styles.module.css";
 
 type FormValue = {

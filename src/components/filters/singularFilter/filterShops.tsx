@@ -9,7 +9,7 @@ import { MarketShopTag } from "@/database/marketShopTag";
 import { MarketComplex } from "@/database/marketComplexTag";
 import { ShopData } from "@/database/shopData";
 import ShopItemsComponent from "./fBIShopItem";
-import Pagination from "./pagination";
+import Pagination from "@/components/btn/paginationBtn";
 
 import {
 	collection,

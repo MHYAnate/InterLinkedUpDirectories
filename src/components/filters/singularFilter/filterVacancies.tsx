@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { StateData } from "@/database/stateData";
 import { VacancyData } from "@/database/vacancyData";
-import Pagination from "./pagination";
+import Pagination from "@/components/btn/paginationBtn";
 
 import {
 	collection,

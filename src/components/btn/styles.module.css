@@ -1,15 +1,58 @@
-.svg{
-  width: 20px;
-  height: 20px;
-  transform: translateX(-3px) translateY(5px);
+.svg {
+	width: 20px;
+	height: 20px;
+	transform: translateX(-3px) translateY(5px);
 }
 
-.passWordVisibilityBtn{
-  border: none;
-  width: 30px;
-  height: 35px;
-  background-color: white;
-  position: absolute;
-  top: 7px;
-  right: 7px;
+.passWordVisibilityBtn {
+	border: none;
+	width: 30px;
+	height: 35px;
+	background-color: white;
+	position: absolute;
+	top: 7px;
+	right: 7px;
 }
+
+.pagination {
+	width: max-content;
+  height: fit-content;
+  column-gap: 7px;
+	display: flex;
+	justify-content: space-around;
+	align-items: last baseline;
+}
+
+.btn{
+  border: none;
+  color: white;
+  background-color: green;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  user-select: none;
+  margin-top: 10px;
+  width: fit-content;
+  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  cursor: pointer;
+  user-select: none;
+ }
+
+ .btnUn{
+  border: none;
+  color: green;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  user-select: none;
+  margin-top: 10px;
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+ }
+
+ .btnUn:hover{
+  font-weight: 700;
+ }
