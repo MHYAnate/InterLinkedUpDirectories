@@ -638,7 +638,7 @@ export default function ShopsFilter() {
 		
 	useEffect(() => {
 		handleGetShopeDetail();
-	},[]);
+	},[handleGetShopeDetail]);
 	
 	
 	const indexOfLastFireBasePost = currentPage * postsPerPage;

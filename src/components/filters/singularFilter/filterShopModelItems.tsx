@@ -60,6 +60,10 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 
 	const [show, setShow] = useState("");
 
+	const [currentPage, setCurrentPage] = useState(1);
+	
+	const [postsPerPage] = useState(6);
+
 	const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setShopSearchInput(event.target.value);
 		// handleSuggestionClick;
@@ -151,8 +155,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 			  })
 			: [];
 
-	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage] = useState(6);
+
 
 	// Get current posts
 	const indexOfLastPost = currentPage * postsPerPage;
