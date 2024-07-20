@@ -11,7 +11,7 @@ import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
 	collection,
 	setDoc,
-	doc,
+	doc, 
 	getDocs,
 	query,
 	where, 
@@ -61,7 +61,9 @@ export default function Profile() {
 	const [isVacancy, setIsVacancy] = useState("job");
 
 	const searchParams = useSearchParams();
+	
 	const router = useRouter();
+
 	const set = useCallback(
 		(name: string, value: string) => {
 			const params = new URLSearchParams(searchParams.toString());

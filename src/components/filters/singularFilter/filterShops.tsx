@@ -3,13 +3,13 @@ import { useState, useEffect, useCallback, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { StateData } from "@/database/stateData";
-import { MarketStatus } from "@/database/marketStatus";
 import { MarketTag } from "@/database/marketTag";
 import { MarketShopTag } from "@/database/marketShopTag";
 import { MarketComplex } from "@/database/marketComplexTag";
 import { ShopData } from "@/database/shopData";
 import ShopItemsComponent from "./fBIShopItem";
 import Pagination from "@/components/btn/paginationBtn";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import {
 	collection,
@@ -94,6 +94,20 @@ export default function ShopsFilter() {
 		shouldUseNativeValidation: true,
 		mode: "onChange",
 	});
+
+	const searchParams = useSearchParams();
+
+	const router = useRouter();
+
+	const set = useCallback(
+		(name: string, value: string) => {
+			const params = new URLSearchParams(searchParams.toString());
+			params.set(name, value);
+
+			return params.toString();
+		},
+		[searchParams]
+	);
 
 	const [isPending, startTransition] = useTransition();
 
@@ -414,8 +428,9 @@ export default function ShopsFilter() {
 							<div className={styles.contactTitle}> Address</div>
 							<div className={styles.address}>{shop.address}</div>
 						</div>
-					
+						
 					</div>
+					
 				</div>
 				
 				
@@ -465,7 +480,65 @@ export default function ShopsFilter() {
 							<span className={styles.shopItemsBody}>{shop.offers} Services</span>
 						</div>
 				</div>:<></>}
-			
+				<div 
+				onClick={() =>
+					router.push(
+						`/shop/` +
+							"?" +
+							set(
+								"shopName",
+								`${shop.shopName}`
+							) +
+							"&" +
+							set(
+								"shopImg",
+								`${shop.shopPic}`
+							)
+							+
+							"&" +
+							set(
+								"shopAddress",
+								`${shop.address}`
+							)
+							+
+							"&" +
+							set(
+								"shopManager",
+								`${shop.name}`
+							)
+							+
+							"&" +
+							set(
+								"act",
+								`${shop.account}`
+							)
+							+
+							"&" +
+							set(
+								"bnkName",
+								`${shop.bankName}`
+							)
+							+
+							"&" +
+							set(
+								"actName",
+								`${shop.accountName}`
+							)
+							+
+							"&" +
+							set(
+								"contact",
+								`${shop.phone}`
+							)
+							+
+							"&" +
+							set(
+								"complex",
+								`${shop.market}`
+							)
+					)
+				}
+				className={styles.enterShop}>Enter Shop</div>
 			
 			</div>
 		));

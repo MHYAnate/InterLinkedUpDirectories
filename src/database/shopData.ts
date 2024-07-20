@@ -15,6 +15,9 @@ export const ShopData = [
     "shopTag": "Fashion",
     "offers":"whole sales and retail",
     "market": "royal shopping complex",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "MFash-Ionic",
     "items": [
       {
         "id": 1,
@@ -95,6 +98,9 @@ export const ShopData = [
     "shopTag": "Fashion", 
     "offers":"whole sales and retail",
     "market": "okene central market",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "Aura & Styles",
     "items": [
       {
         "id": 1,
@@ -176,6 +182,9 @@ export const ShopData = [
     "shopTag": "Super Market",
     "offers":"retail",
     "market": "central rail market",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "One Mart",
     "items": [
       {
         "id": 1,
@@ -283,6 +292,9 @@ export const ShopData = [
     "shopTag": "Electronics and Gadgets",
     "offers":"whole sales and retail",
     "market": "universal trading complex",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "GoTech",
     "items": [
       {
         "id": 1,
@@ -376,6 +388,9 @@ export const ShopData = [
     "shopTag": "Babies and Toys",
     "offers":"retail",
     "market": "okene central market",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "Kiddies Kind",
     "items": [
       {
         "id": 1,
@@ -482,6 +497,9 @@ export const ShopData = [
     "shopTag": "Building and Home Fittings",
     "offers":"whole sales and retail",
     "market": "royal shopping complex",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "Fit and Finish",
     "items": [
       {
         "id": 1,
@@ -588,6 +606,9 @@ export const ShopData = [
     "shopTag": "Building and Home Fittings",
     "offers":"whole sales and retail",
     "market": "okene central market",
+    "account": "0000000001",
+    "bankName": "xyz Bank",
+    "accountName": "360 Builder",
     "items": [
       {
         "id": 1,

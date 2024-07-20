@@ -21,7 +21,7 @@ export default function Home() {
 
 	const pathname = usePathname();
 
-	const [selector, setSelector] = useState("vacancies");
+	const [selector, setSelector] = useState("Items");
 
 	return (
 		<main

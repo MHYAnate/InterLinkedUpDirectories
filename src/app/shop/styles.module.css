@@ -1,0 +1,144 @@
+.shopContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.shopDetailCover{
+  width: 98vw;
+  height: fit-content;
+  display: flex;
+ 
+}
+.shopDetail{
+  width: 98vw;
+  height: fit-content;
+  display: flex; 
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.shopStockCover{
+  width: 98vw;
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-around;
+}
+
+.heroDatailCover{
+  position: relative;
+  width: 98vw;
+  height: 140px;
+}
+
+.shopBckgrndImgHolder{
+  position: absolute;
+  width: 98vw;
+  height: 140px;
+  top: 0;
+  left: 0;
+}
+
+
+.heroDetailBody{
+  position: absolute;
+  width: 98vw;
+  height: 140px;
+  top: 0;
+  left: 0;
+}
+
+.flexControl{
+  width: 98vw;
+  min-height: 140px;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  user-select: none;
+}
+
+.shopImgHolder{
+  width: 200px;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-left: 10px;
+  box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
+}
+
+.gImg{
+  width: 200px;
+  height: 140px;
+  border-radius: 10px;
+} 
+
+.gImg:hover{
+ animation: 2s forwards zoom;
+}
+
+@keyframes zoom {
+  0%{
+    transform: scale(1);
+  }
+  100% {transform: scale(1.1);}
+}
+
+.detailBody{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  column-gap: 10px; 
+}
+
+.shopDetail{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 200px;
+  font-size: 0.7rem;
+  min-height: 130px;
+  max-height: fit-content;
+  border-radius: 10px;
+  justify-content: flex-start;
+  align-items: first baseline;
+  box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
+  background-color: rgb(23, 23, 23, 0.8);
+  overflow: hidden;
+}
+
+.titleTop{
+  color: green;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: white;
+  width: inherit;
+  text-align: center;
+}
+.detailCover{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 200px;
+  row-gap: 3px;
+}
+
+.detailTitle{
+  width: 200px;
+  max-height: fit-content;
+  color: goldenrod;
+  margin-left: 5px;
+}
+
+.detail{
+  width: 200px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+  max-height: fit-content;
+  color: white;
+  margin-left: 5px;
+}

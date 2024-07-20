@@ -162,4 +162,7 @@ const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => 
   );
 };
 
+
+ShopItemsComponent.displayName = "ShopItemsComponent";
+
 export default ShopItemsComponent;

@@ -1,11 +1,16 @@
-"use client"
-import * as React from "react";
-import { useState, useEffect, useCallback } from "react";
-import { useForm } from "react-hook-form";
+"use client";
+import React, { useRef, useState, useEffect, useCallback } from "react";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { Suspense } from "react";
+import Loading from "../register/logo";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
-import { StateData } from "@/database/stateData";
-import { VendorsData } from "@/database/vendorData";
+import Nav from "@/components/nav/mainNav/nav";
+import VendorNav from "@/components/nav/userNav/nav";
+import { ShopData } from "@/database/shopData";
+import HeroDetail from "./heroDetail";
+
 import {
 	collection,
 	collectionGroup,
@@ -17,331 +22,130 @@ import {
 	where,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
-const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
-	firebase;
-	import { Suspense } from 'react'
-import Loading from "../register/logo";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import Firebase from "@/firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import ShopModelStock from "@/components/filters/singularFilter/filterShopModelItems";
+
 import styles from "./styles.module.css";
 
-type FormValue = {
-	selectCategory: string;
-	selectService: string;
-	name: string;
+type ShopValues = {
+	email: string;
+	shopName: string;
 	address: string;
-	number: string;
-	countrySelect: string;
-	stateSelect: string;
-	areaSelect: string;
+	name: string;
+	contact: string;
+	account: string;
+	accountName: string;
+	bankName: string;
+	shopSrc: string;
 	src: string;
-	country:string;
-	state: string;
-	area:string;
+	shopId: string;
+	market:string;
 };
 
-export default function FilterVendors() {
-	const {
-		register,
-		handleSubmit,
-		watch,
-		reset,
-		unregister,
-		setFocus,
-		setValue,
-		control,
-		formState: {
-			isSubmitSuccessful,
-			errors,
-			isSubmitted,
-			isSubmitting,
-			isDirty,
-			isValid,
-		},
-	} = useForm<FormValue>({
-		defaultValues: {
-			address: "",
-			countrySelect: "",
-			stateSelect: "",
-			areaSelect: "",
-		},
-		shouldUseNativeValidation: true,
-		mode: "onChange",
-	});
+const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+	firebase;
 
-	const [searchInput, setSearchInput] = useState("");
+export default function Shop() {
+	const [user, loading, error] = useAuthState(auth);
+
+	const [profileDetails, setProfileDetails] = useState<ShopValues | null>(null);
+
+	const [imageUrl, setImageUrl] = useState("");
 
 	const searchParams = useSearchParams();
 
-	const Vendors = searchParams.get("name");
+	const router = useRouter();
 
-	const selectCountry = watch("countrySelect");
+	const set = useCallback(
+		(name: string, value: string) => {
+			const params = new URLSearchParams(searchParams.toString());
+			params.set(name, value);
 
-	const selectState = watch("stateSelect");
-
-	const selectArea = watch("areaSelect");
-
-	const countryValue =
-		typeof document !== "undefined"
-			? (document.querySelector('[name="countrySelect"]') as HTMLInputElement)
-					?.value || ""
-			: "";
-
-	const stateValue =
-		typeof document !== "undefined"
-			? (document.querySelector('[name="stateSelect"]') as HTMLInputElement)
-					?.value || ""
-			: "";
-
-	const areaValue =
-		typeof document !== "undefined"
-			? (document.querySelector('[name="areaSelect"]') as HTMLInputElement)
-					?.value || ""
-			: "";
-
-	const AreaList = StateData.find(
-		(areaList) => areaList.name === `${stateValue}`
+			return params.toString();
+		},
+		[searchParams]
 	);
 
-	const VendorsList = VendorsData.find(
-		(vendorList) => vendorList.name === `${Vendors}`
-	);
+	const shopImg = searchParams.get("shopImg");
 
-	function renderAvailableStates() {
-		if (!StateData) {
-			// Return a message or component indicating that the "Maintenance" category is not found
-			return null;
-		}
+	const shopName = searchParams.get("shopName");
 
-		return StateData.map((state) => (
-			<option
-				className={styles.renderCover}
-				key={state.name}
-				value={state.name}
-			>
-				{state.name}
-			</option>
-		));
-	}
+	const shopAddress = searchParams.get("shopAddress");
 
-	function renderAvailableAreas() {
-		if (!AreaList) {
-			// Return a message or component indicating that the "Maintenance" category is not found
-			return null;
-		}
-		return AreaList.areaList.map((area) => (
-			<option className={styles.renderCover} key={area.id} value={area.name}>
-				{area.name}
-			</option>
-		));
-	}
+	const shopManager = searchParams.get("shopManager");
+
+	const shopacct = searchParams.get("act");
+
+	const shopBnk = searchParams.get("bnkName");
+
+	const shopacctName = searchParams.get("actName");
+
+	const shopPhone = searchParams.get("contact");
+
+	const shopComplex = searchParams.get("complex");
 
 
+	const shopId = searchParams.get("shopId");
 
-	const filteredListcountry = VendorsList?.vendorsList ? VendorsList.vendorsList.filter((eachItem) => {
-		const text = eachItem.country.toLowerCase();
-		return text.includes(selectCountry.toLowerCase());
-	}):[];
-	const filteredListstate=  filteredListcountry.length > 0 ? filteredListcountry.filter((eachItem) => {
-		const text = eachItem.state.toLowerCase();
-		return text.includes(selectState.toLowerCase());
-	}):[];
+	const profileDetailRef = collection(database, `shop`);
 
-	const filteredListarea = filteredListstate.length > 0 ?filteredListstate.filter((eachItem) => {
-		const text = eachItem.area.toLowerCase();
-		return text.includes(selectArea.toLowerCase());
-	}):[];
 
-	const filteredList = filteredListarea.length > 0 ?filteredListarea.filter((eachItem) => {
-		const text = eachItem.address.toLowerCase();
-		return text.includes(searchInput.toLowerCase());
-	}):[];
+	
 
-	function RendeAvailabeVendors() {
-		if (filteredList.length === 0) {
-			// Return a message or component indicating that the "Maintenance" category is not found
-			return (
-				<div>
-					<div>No vendors found</div>
-				</div>
-			);
-		}
-
-		return filteredList?.map((vendor) => (
-			<div className={styles.VendorRenderCover} key={vendor.id}>
-				<div className={styles.imgCover}>
-					<div className={styles.vendorName}>{vendor.name}</div>
-					<Image
-						className={styles.idiImg}
-						src={`${vendor.src}`}
-						alt={`${vendor.name}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-				</div>
-				<div className={styles.innerTextVendorRenderCover}>
-					<div className={styles.addresCover}>
-						<div className={styles.addressTitle}>Address</div>
-						<div className={styles.address}>{vendor.address}</div>
-					</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Contact</div>
-						<div className={styles.contact}>{vendor.contact}</div>
-					</div>
-				</div>
-			</div>
-		));
-	}
-
-	const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setSearchInput(event.target.value);
-		// handleSuggestionClick;
-	};
-
-	// to prevent hydration due to typeof document !== 'undefined'?
-	const [isClient, setIsClient] = useState(false);
-
-	useEffect(() => {
-		setIsClient(true);
-	}, []);
-
-	const profileDetailRef = collection(database, `profile`);
-
-	const vendorsQuery = query(
+	const userQuery = query(
 		profileDetailRef,
-		where("selectService", "==", `${Vendors}`),
-		where("areaSelect", "==", `${areaValue}`)
+		where("email", "==", `${user?.email}`)
 	);
 
-	const [profileDetails, setProfileDetails] = useState<FormValue[]>([]);
+	const imageRef = ref(storage, `shopImage/${user?.email}`);
 
-	const handleGetProfileDetail = async () => {
-		try {
-			const querySnapshot = await getDocs(vendorsQuery);
-
-			if (querySnapshot.empty) {
-				console.log("No profile details found");
-				return;
-			}
-
-			const retrievedData: FormValue[] = [];
-			querySnapshot.forEach((doc) => {
-				const docData = doc.data() as FormValue;
-				retrievedData.push(docData);
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+			getDownloadURL(imageRef).then((url) => {
+				setImageUrl(url);
 			});
-			setProfileDetails(retrievedData);
-		} catch (error) {
-			console.error("Error getting profile detail:", error);
+
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(userQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as ShopValues;
+					setProfileDetails(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			// Redirect to login page if not signed in
 		}
-	};
-
-	useEffect(() => {
-		handleGetProfileDetail();
-	}),
-		[];
-
-	const filteredFirebaseList =
-		profileDetails?.length > 0
-			? profileDetails.filter((eachItem) => {
-					const text = eachItem.address.toLowerCase();
-					return text.includes(searchInput);
-			  })
-			: [];
-
-	function RenderAvailabeVendors() {
-		if (!profileDetails) {
-			// Return a message or component indicating that the "Maintenance" category is not found
-			return null;
-		}
-
-		return filteredFirebaseList?.map((vendor: any) => (
-			<div className={styles.VendorRenderCover} key={vendor?.name}>
-				<div className={styles.imgCover}>
-					<div className={styles.vendorName}>{vendor.name}</div>
-					<Image
-						className={styles.idiImg}
-						src={`${vendor.src ? vendor.src : '/placeholder.jpg'}`}
-						alt={`${vendor.name}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-				</div>
-				<div className={styles.innerTextVendorRenderCover}>
-					<div className={styles.addresCover}>
-						<div className={styles.addressTitle}>Address</div>
-						<div className={styles.address}>{vendor.address}</div>
-					</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Contact</div>
-						<div className={styles.contact}>{vendor.number}</div>
-					</div>
-				</div>
-			</div>
-		));
-	}
+	});
 
 	return (
-		<Suspense fallback={<Loading/>}>
-		<div className={styles.filterBodyCover}>
-			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
-				<div className={styles.filterAndSearch}>Filter and Search </div>
-				<div className={styles.selectGroup}>
-					<div className={styles.selectCover}>
-						<select
-							className={styles.select}
-							{...register("countrySelect")}
-							value={countryValue}
-						>
-							<option className={styles.option} value="select Country">
-								Filter Country
-							</option>
-							<option className={styles.option} value="Nigeria">
-								Nigeria
-							</option>
-						</select>
+		<Suspense fallback={<Loading />}>
+			<div>
+				<div className={styles.nav}>{user ? <VendorNav /> : <Nav />}</div>
+				<div className={styles.shopContainer}>
+					<div className={styles.shopDetailCover}>
+						<HeroDetail user={user} imgM={shopImg} img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} addressM={shopAddress} address={profileDetails?.address} shopMgM={shopManager} shopMg={profileDetails?.name}
+						contactM={shopPhone} contact={profileDetails?.contact} actNumM={shopacct}
+						actNum={profileDetails?.account} bnkNameM={shopBnk} bnkName={profileDetails?.bankName} actNameM={shopacctName} actName={profileDetails?.accountName} shopMarketM={ shopComplex} shopMarket={profileDetails?.market} />
 					</div>
-					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("stateSelect")}>
-							<option className={styles.option} value="select State">
-								Filter State
-							</option>
-							{selectCountry === "Nigeria" && renderAvailableStates()}
-						</select>
+					<div className={styles.shopStockCover}>
+					<ShopModelStock shopName={`${shopName}`} />
 					</div>
-					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("areaSelect")}>
-							<option className={styles.option} value="select Area">
-								Filter Area
-							</option>
-							{selectState === `${stateValue}` && renderAvailableAreas()}
-						</select>
-					</div>
-					<div className={styles.inputCover}>
-						<input
-							type="search"
-							className={styles.input}
-							{...register("address")}
-							value={searchInput}
-							onChange={updateSearchInput}
-							id="vendorAddress"
-							placeholder="Search Personal Address"
-						/>
-					</div>
+					
 				</div>
-			</form>
-			<div className={styles.displayFilter}>
-				
-			{ isClient && (
-					<div className={styles.renderVendorInnerCover}>
-						{RenderAvailabeVendors()}
-						{RendeAvailabeVendors()}
-					</div>
-				)}
-				
 			</div>
-		</div>
 		</Suspense>
 	);
 }
