@@ -75,7 +75,7 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 									<span className={styles.titleHero}>
-									   Work-LIFE 
+									   WorkLIFE 
 									</span>
 									<span className={styles.slogan}>
 									Simplified
