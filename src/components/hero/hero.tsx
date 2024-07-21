@@ -66,7 +66,7 @@ export default function Hero() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/backgrnd.jpg"
+								src="/service/background1.jpg"
 								priority={true}
 								unoptimized
 							/>
@@ -75,7 +75,7 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 									<span className={styles.titleHero}>
-									   WORK Life 
+									   Work-LIFE 
 									</span>
 									<span className={styles.slogan}>
 									Simplified

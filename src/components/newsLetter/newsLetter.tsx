@@ -70,7 +70,7 @@ export default function NewsLetter() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/heroImg.jpg"
+								src="/service/background1.jpg"
 								priority={true}
 								unoptimized
 							/>
