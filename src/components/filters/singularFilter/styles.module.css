@@ -311,8 +311,7 @@
 }
 
 .shopRenderCover:hover{
-  box-shadow: 0px 0px 1.5px green, 0 0 2px silver, 0 0 3.5px green;
-  background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgb(237, 255, 237)); 
+  box-shadow: 0px 0px 1.5px black, 0 0 2px silver, 0 0 3.5px black;
 }
 .shoptitleBodyDivide{
   display: flex;
@@ -414,7 +413,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   color: white;
-  background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
+  background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   width: 313px;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
   transform: translateX(-0.5px);
@@ -1169,7 +1168,7 @@
 
 .enterShop{
   color: white;
-  background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
+  background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   width: 290px;
   font-weight: 500;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
