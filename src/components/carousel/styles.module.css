@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transform: translateY(5px);
 }
 .vendorConer{
   display: flex;
@@ -31,6 +32,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+ 
 }
 
 .topTitleContainer{
@@ -61,7 +63,7 @@
   height: max-content;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
 }
 
 .highLighted{
