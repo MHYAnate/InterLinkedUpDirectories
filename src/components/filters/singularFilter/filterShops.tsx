@@ -426,7 +426,7 @@ export default function ShopsFilter() {
 						</div>
 						<div className={styles.contactCover}>
 							<div className={styles.contactTitle}> Address</div>
-							<div className={styles.address}>{shop.address}</div>
+							<div className={styles.addressShop}>{shop.address}</div>
 						</div>
 						
 					</div>
@@ -705,7 +705,7 @@ export default function ShopsFilter() {
 					</div>
 					<div className={styles.contactCover}>
 						<div className={styles.contactTitle}> Address</div>
-						<div className={styles.address}>{shop.address}</div>
+						<div className={styles.addressShop}>{shop.address}</div>
 					</div>
 				
 				</div>

@@ -68,8 +68,10 @@
 
 .highLighted{
   width: 32%;
-  background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+  background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
   height: max-content;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -82,11 +84,11 @@
 @keyframes click {
 
   0%{
-    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7),rgba(3, 135, 3, 0.7));
+    background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   opacity: 0;
   }
   100%{
-    background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
+      background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
     opacity: 1;
   }
 }
@@ -166,6 +168,7 @@
   padding-bottom: 10px;
   padding-top: 10px;
 }
+
 .renderCover{
   width: 280px;
   height:max-content;
@@ -173,16 +176,16 @@
   align-items: center;
   justify-content: flex-start;
   border-radius: 3px;
-  background-image: linear-gradient(to right , rgb(226, 226, 226,0.7), rgba(243, 255, 243, 0.7));
+  background-color:rgb(192, 192, 192, 0.7);
   padding: 5px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out 0.1s, text-shadow 0.3s ease-in-out 0.1s;
-  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 3px silver;
+  text-shadow: 0.5px 0.5px 1px black, 0 0 2.5px black, 0 0 2.5px black;
+  box-shadow: 0px 0px 0.5px black, 0 0 1px black, 0 0 2.5px black;
 }
 
 .renderCover:hover{
   transform: scale(1.05);
-  text-shadow: 0px 0px 0.1px green, 0 0 0.1px green, 0 0 0.1px green;
 }
 
 .imgHover{
@@ -192,11 +195,12 @@
   margin-right: 5px;
 }
 .sname{
-  color: green;
+  color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   user-select: none;
+  text-transform: uppercase;
 }
 .slider{
   width: 310px;
@@ -234,14 +238,15 @@
 }
 
 .titleTopSpan{
-  color: green;
+  color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   padding-left: 11px;
   padding-right: 11px;
   border-radius: 3px;
-  background-image: linear-gradient(to right , rgb(226, 226, 226,0.7), rgba(243, 255, 243, 0.7));
+  background-color:rgb(192, 192, 192, 0.7);
+  text-shadow: 1px 1px 2px black, 0 0 5px black, 0 0 5px black;
   user-select: none;
   text-transform: uppercase;
 }
@@ -250,10 +255,10 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 10px;
   border-radius: 5px;
-  color: green;
+  color: white;
   font-weight: 700;
   font-size: 0.7rem;
-  background-image: linear-gradient(to right , rgb(226, 226, 226,0.7), rgba(243, 255, 243, 0.9));
+  background-color:rgb(192, 192, 192, 0.7);
   border-radius: 3px;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
 	animation: heartbeat 8s ease-in-out infinite both;

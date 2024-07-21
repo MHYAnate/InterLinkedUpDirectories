@@ -81,6 +81,8 @@ export default function ItemsFilter() {
 
 	const [more, setMore] = useState("");
 
+	const [img, setImg] = useState("");
+
 	const [market, setMarket] = useState("space");
 
 	const selectCountry = watch("countrySelect");
@@ -239,7 +241,7 @@ export default function ItemsFilter() {
 					<div className={styles.imgCover}>
 						<Image
 							className={styles.idiImg}
-							src={`${stock.image}`}
+							src={ img === `${stock.image}` ? `${stock.image}`:img === `${stock.image2}`?`${stock.image2}`:`${stock.image}`}
 							alt={`${stock.title}`}
 							quality={100}
 							width={500}
@@ -247,7 +249,25 @@ export default function ItemsFilter() {
 							// unoptimized
 						/>
 					</div>
-					<div className={styles.innerTextStockRenderCover}>
+					<div className={styles.picSel}>
+						<div className={img === `${stock.image}`?styles.picH : styles.pic} onClick={()=>{setImg(`${stock.image}`)}}>
+							{`FRONT`}
+						</div>
+						<div className={img === `${stock.image2}`?styles.picH:styles.pic} onClick={()=>{setImg(`${stock.image2}`)}}>
+							{`SIDE`}
+						</div>
+					</div>
+					{more !== `${stock.id}` && (<div className={styles.innerTextStockRenderCover}>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>price</div>
+							<div className={styles.contact}>{stock.price}</div>
+						</div>
+					</div>)}
+				</div>
+				{more === `${stock.id}` && (
+					<div className={styles.showMore}>
+						<div className={styles.innerTextShowMoreRenderCover}>
+						
 						<div className={styles.status}>{stock.status}</div>
 						<div className={styles.contactCover}>
 							<div className={styles.contactTitle}>price</div>
@@ -262,30 +282,9 @@ export default function ItemsFilter() {
 							<div className={styles.contactTitle}>Contact</div>
 							<div className={styles.contact}>{stock.phone}</div>
 						</div>
-					</div>
-				</div>
-				{more === `${stock.id}` && (
-					<div className={styles.showMore}>
-						<div>
-							<Image
-								className={styles.idiImg}
-								src={`${stock.image2}`}
-								alt={`${stock.title}`}
-								quality={100}
-								width={500}
-								height={500}
-								// unoptimized
-							/>
-						</div>
-						<div className={styles.innerTextShowMoreRenderCover}>
 							<div className={styles.contactCover}>
 								<div className={styles.contactTitle}>features</div>
 								<div className={styles.contact}>{stock.features}</div>
-							</div>
-
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Inventory</div>
-								<div className={styles.address}>{stock.inventory}</div>
 							</div>
 							<div className={styles.contactCover}>
 								<div className={styles.contactTitle}>Condition</div>
