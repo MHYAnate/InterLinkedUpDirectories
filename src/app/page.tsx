@@ -41,20 +41,7 @@ export default function Home() {
 					<div className={styles.coverJobsMarket}>
 						<div className={styles.coverSelectJobsMarket}>
 							<div className={styles.coverSelect}>
-								<div
-									onClick={
-										selector !== "vacancies"
-											? () => setSelector("vacancies")
-											: () => setSelector("Companies")
-									}
-									className={
-										selector === "vacancies" || selector === "Companies"
-											? styles.coverSelectTitleHighlighted
-											: styles.coverSelectTitle
-									}
-								>
-									Job Board
-								</div>
+							
 								<div className={styles.coverSelectBtn}>
 									<div
 										onClick={
@@ -87,20 +74,7 @@ export default function Home() {
 								</div>
 							</div>
 							<div className={styles.coverSelect}>
-								<div
-									onClick={
-										selector !== "Items"
-											? () => setSelector("Items")
-											: () => setSelector("Shops")
-									}
-									className={
-										selector === "Items" || selector === "Shops"
-											? styles.coverSelectTitleHighlighted
-											: styles.coverSelectTitle
-									}
-								>
-									Market Place
-								</div>
+							
 								<div className={styles.coverSelectBtn}>
 									<div
 										onClick={

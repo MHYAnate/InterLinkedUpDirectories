@@ -202,7 +202,6 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 
 	return (
 		<div className={styles.parent}>
-			<div className={styles.vendorConer}>VENDOR SPACE</div>
 			<div className={styles.topSelect}>
 				<div
 					onClick={() => router.push("/market")}

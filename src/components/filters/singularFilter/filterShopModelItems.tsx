@@ -251,7 +251,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 
 	return (
 		<div className={styles.shopItemBodyCover}>
-			<div className={styles.shopItemsFilterCover}>
+			<div className={styles.InShopItemsFilterCover}>
 				<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 					<div className={styles.selectGroup}>
 						<div className={styles.selectCover}>

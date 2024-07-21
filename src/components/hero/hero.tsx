@@ -66,7 +66,7 @@ export default function Hero() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/imgHero.jpg"
+								src="/service/backgrnd.jpg"
 								priority={true}
 								unoptimized
 							/>
@@ -75,10 +75,10 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 									<span className={styles.titleHero}>
-										Inter Linked Up Directories
+									   WORK Life 
 									</span>
 									<span className={styles.slogan}>
-										Your Simplified Workforce Solution
+									Simplified
 									</span>
 								</div>
 							</div>

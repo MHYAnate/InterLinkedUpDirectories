@@ -23,7 +23,7 @@
 .categoryImg{
   width: 94vw;
   height: 114px;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .title{
@@ -61,25 +61,28 @@
   user-select: none;
   font-size: 2.5rem;
   font-weight: 500;
-  color: green;
+  color: white;
   /* background-color: rgba(235, 235, 231, 0.7); */
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-family: 'Times New Roman', Times, serif;
+  border-radius: 3px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+  background-color:silver;
+  margin-bottom: 10px;
 }
 .slogan{
   user-select: none;
   font-size: 1.5rem;
   font-weight: 400;
-  color: goldenrod;
+  color:white;
   text-align: center;
   /* background-color: rgba(235, 235, 231, 0.7); */
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:silver;
 }
 @media screen and (max-width: 770px) {
   .titleCover{

@@ -375,7 +375,7 @@
 }
 .shopName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 900;
+  font-weight: 500;
   color: white;
   background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
   width: 313px;
@@ -397,7 +397,7 @@
 
 .vendorName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 900;
+  font-weight: 500;
   color: white;
   background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
   width: 313px;
@@ -416,7 +416,7 @@
 }
 .stockName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 900;
+  font-weight: 500;
   color: white;
   background-image: linear-gradient(to right, rgba(1, 141, 1, 0.7), rgba(1, 40, 1, 0.7));
   width: 313.5px;
@@ -1163,6 +1163,14 @@
 }
 
 .shopItemsFilterCover{
+  width: 60vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: flex-start;
+}
+.InShopItemsFilterCover{
   width: 60vw;
   min-width: 300px;
   display: flex;

@@ -26,17 +26,11 @@
 }
 
 .heroDatailCover{
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 98vw;
-  height: 140px;
-}
-
-.shopBckgrndImgHolder{
-  position: absolute;
-  width: 98vw;
-  height: 140px;
-  top: 0;
-  left: 0;
+  height: fit-content;
 }
 
 
@@ -49,9 +43,12 @@
 }
 
 .flexControl{
-  width: 98vw;
+  width: 95vw;
   min-height: 140px;
+  flex-wrap: wrap;
   max-height: fit-content;
+  column-gap: 5vw;
+  row-gap: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -60,7 +57,7 @@
 }
 
 .shopImgHolder{
-  width: 200px;
+  width: 300px;
   height: 130px;
   border-radius: 10px;
   overflow: hidden;
@@ -70,7 +67,7 @@
 }
 
 .gImg{
-  width: 200px;
+  width: 300px;
   height: 140px;
   border-radius: 10px;
 } 
@@ -88,10 +85,13 @@
 
 .detailBody{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: fit-content;
-  column-gap: 10px; 
+  column-gap: 20px; 
+  row-gap: 10px;
+  height: fit-content;
 }
 
 .shopDetail{
@@ -142,3 +142,4 @@
   color: white;
   margin-left: 5px;
 }
+
