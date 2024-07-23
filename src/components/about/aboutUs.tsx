@@ -27,10 +27,10 @@ export default function AboutUs() {
 						We are your one-stop platform designed to streamline your workforce
 						experience.
 					</p>
-					<span className={styles.inHighligthTextGold}>
+					<div className={styles.inHighligthTextGold}>
 						{" "}
 						Your Simplified Workforce Solution.
-					</span>
+					</div>
 				</div>
 			</div>
 			<div className={styles.leftContainer1}>

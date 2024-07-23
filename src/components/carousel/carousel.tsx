@@ -240,7 +240,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					>
 						<span className={styles.catSpan}>
 							{" "}
-							{Services[0].category} Service Category
+							{Services[0].category} Services
 						</span>
 					</div>
 					<div
@@ -258,7 +258,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					>
 						<span className={styles.catSpan}>
 							{" "}
-							{Services[1].category} Service Category
+							{Services[1].category} Services 
 						</span>
 					</div>
 					<div
@@ -276,7 +276,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					>
 						<span className={styles.catSpan}>
 							{" "}
-							{Services[2].category} Service Category
+							{Services[2].category} Services 
 						</span>
 					</div>
 				</div>
