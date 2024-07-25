@@ -77,9 +77,6 @@ export default function Hero() {
 									<span className={styles.titleHero}>
 									Connecting You to What Matters
 									</span>
-									{/* <span className={styles.slogan}>
-									YOUR SIMPLIFIED WORKFORCE SOLUTION
-									</span> */}
 								</div>
 							</div>
 						</div>
