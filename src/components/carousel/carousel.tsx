@@ -112,7 +112,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 	);
 
 	const personalCategory = Services.find(
-		(category) => category.category === "Personal"
+		(category) => category.category === "Others"
 	);
 
 	function RenderAutomotiveServices() {
@@ -215,7 +215,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 				>
 					<span className={styles.tsSpan}>Vacancies</span>
 				</div>
-			d</div>
+			</div>
 			<div
 				onMouseLeave={() => {
 					setAutomativeHover(false);
@@ -240,7 +240,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					>
 						<span className={styles.catSpan}>
 							{" "}
-							{Services[0].category} Services
+							{Services[0].category} 
 						</span>
 					</div>
 					<div
@@ -258,7 +258,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					>
 						<span className={styles.catSpan}>
 							{" "}
-							{Services[1].category} Services 
+							{Services[1].category} 
 						</span>
 					</div>
 					<div
@@ -276,7 +276,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					>
 						<span className={styles.catSpan}>
 							{" "}
-							{Services[2].category} Services 
+							{Services[2].category} 
 						</span>
 					</div>
 				</div>

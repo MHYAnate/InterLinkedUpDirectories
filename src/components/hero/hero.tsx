@@ -75,11 +75,11 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 									<span className={styles.titleHero}>
-									   WorkLIFE 
+									Connecting You to What Matters
 									</span>
-									<span className={styles.slogan}>
-									Simplified
-									</span>
+									{/* <span className={styles.slogan}>
+									YOUR SIMPLIFIED WORKFORCE SOLUTION
+									</span> */}
 								</div>
 							</div>
 						</div>

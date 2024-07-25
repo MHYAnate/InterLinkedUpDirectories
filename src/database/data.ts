@@ -160,7 +160,7 @@ export const Services = [
   },
   {
     "id": 3,
-    "category": "Personal",
+    "category": "Others",
     "src": "/service/personal.jpg",
     "services": [
       {

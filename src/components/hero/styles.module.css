@@ -1,9 +1,10 @@
 .titleCover{
-  width: 94vw;
+  width: 98vw;
   height: 114px;
   cursor: pointer;
-  border-radius: 10px;
   overflow: hidden;
+  border-bottom: 1px solid silver;
+  padding-bottom: 20px;
 }
 
 .categoryCover{
@@ -13,10 +14,10 @@
 }
 
 .categoryImgCover{
-  width: 94vw;
+  width: 70vw;
   height: 114px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .categoryImg{
@@ -52,24 +53,25 @@
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 .titleHero{
   user-select: none;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
-  color: white;
+  color: green;
   /* background-color: rgba(235, 235, 231, 0.7); */
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 3px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
-  background-color:rgb(192, 192, 192, 0.7);
+  text-align: left;
+  /* background-color:rgb(192, 192, 192, 0.7); */
   margin-bottom: 10px;
+  width: 50%;
+  margin-left: 1.5vw;
 }
 .slogan{
   user-select: none;
@@ -83,6 +85,24 @@
   border-radius: 3px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color:silver;
+}
+@media screen and (max-width: 832px) {
+.titleHero{
+  user-select: none;
+  font-size: 3rem;
+  font-weight: 500;
+  color: green;
+  /* background-color: rgba(235, 235, 231, 0.7); */
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+  /* background-color:rgb(192, 192, 192, 0.7); */
+  margin-bottom: 10px;
+  width: 70%;
+  margin-left: 1vw;
+  }
 }
 @media screen and (max-width: 770px) {
   .titleCover{
@@ -119,6 +139,13 @@
     justify-content: center;
   }
   
+}
+@media screen and (max-width: 453px) {
+.titleHero{
+  width: 90%;
+  font-size: 2.8rem;
+  background-color:rgba(237, 237, 237, 0.7); 
+  }
 }
 @media screen and (max-width: 330px) {
   .boldP{

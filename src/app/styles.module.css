@@ -40,6 +40,10 @@
   min-height: 530px;
   max-height: fit-content;
 }
+/* .navHolder{
+  padding-bottom: 10px;
+  border-bottom: 1px solid silver;
+} */
 
 .header{
   margin-top: 20px;
@@ -86,12 +90,13 @@
   width: 320px;
   height: fit-content;
   display: flex;
-  justify-content: first baseline;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .coverJobsMarket{
-  width: 60vw;
+  width: 67vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -99,12 +104,12 @@
   justify-content: flex-start;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-left: 1px solid silver;
 }
 
 .coverSelectJobsMarket{
   width: 60vw;
   margin-top: 10px;
-  padding-left: 5px;
   padding-bottom: 5px;
   height: fit-content;
   display: flex;
@@ -174,7 +179,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid silver;
+  border-bottom: 1.8px solid silver;
   color: rgb(102, 102, 102);
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -196,7 +201,7 @@
   align-items: center;
   justify-content: center;
   color: green;
-  border-bottom: 3px solid green;
+  border-bottom: 1.8px solid green;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -299,6 +304,10 @@
     width: 98vw;
     height: 125px;
     opacity: 0.5;
+  }
+  .coverVendors{
+    width: 98vw;
+
   }
 }
 

@@ -286,13 +286,26 @@ div.inActiveBtn:hover {
 .VendorRenderCover:hover{
 	transform: scale(1.1);
 } 
-@media screen and (max-width: 1092px) {
-  .search {
+
+@media screen and (max-width: 1192px) {
+	.search {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 55vw;
 	}
+}
+
+@media screen and (max-width: 1111px) {
+	.search {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 52vw;
+	}
+}
+@media screen and (max-width: 1092px) {
+  
 	.input {
 		padding-left: 10px;
 		width: 40vw;
@@ -329,7 +342,7 @@ div.inActiveBtn:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 45vw;
+		width: 40vw;
 	}
 	.input {
 		padding-left: 10px;
@@ -405,6 +418,12 @@ div.inActiveBtn:hover {
 }
 
 @media screen and (max-width: 600px) {
+	.search {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 55vw;
+	}
 
   .logo{
     width: max-content;
@@ -418,12 +437,7 @@ div.inActiveBtn:hover {
     display: flex;
     border: none;
   }
-  .search {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 69vw;
-	}
+ 
 	.input {
 		padding-left: 10px;
 		width: 55vw;

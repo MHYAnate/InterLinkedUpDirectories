@@ -33,7 +33,7 @@ export default function Home() {
 				<Nav />
 			</nav>
 			<div className={styles.body}>
-				<Hero />
+			<Hero />	
 				<div className={styles.categoryCover}>
 					<div className={styles.coverVendors}>
 						<Carousel Services={Services} />
