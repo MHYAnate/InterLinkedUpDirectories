@@ -143,7 +143,8 @@
 @media screen and (max-width: 453px) {
 .titleHero{
   width: 90%;
-  font-size: 2.8rem; 
+  font-size: 2.8rem;
+  background-color:rgba(255, 252, 252, 0.7); 
   text-align: center;
   }
 }
