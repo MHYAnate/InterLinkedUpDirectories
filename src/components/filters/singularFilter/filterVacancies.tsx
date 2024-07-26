@@ -252,7 +252,7 @@ export default function VacanciesFilter() {
 					
 						</div>)}	
 						<div className={styles.vBtnCover}>
-							<button className={more !==`${vacancy.id}`?styles.btn : styles.btnA} onClick={more!==`${vacancy.id}`?()=> selectTab(`${vacancy.id}`):()=> selectTab("")}>{more===`${vacancy.id}`?"Show Less":"More Details"}</button>
+							<button className={more !==`${vacancy.id}`?styles.vBtn : styles.vBtn} onClick={more!==`${vacancy.id}`?()=> selectTab(`${vacancy.id}`):()=> selectTab("")}>{more===`${vacancy.id}`?"Show Less":"More Details"}</button>
 						</div>
 						
 				</div>

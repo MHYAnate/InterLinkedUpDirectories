@@ -304,7 +304,7 @@ export default function ShopsFilter() {
 					</div>
 				)}
 				<div
-					className={show !== `${item.id}` ? styles.btn : styles.btnA}
+					className={show !== `${item.id}` ? styles.qShopbtn : styles.qShopbtn}
 					onClick={
 						show !== `${item.id}`
 							? () => setShow(`${item.id}`)
@@ -417,15 +417,15 @@ export default function ShopsFilter() {
 					</div>
 					<div className={styles.innerTextShopRenderCover}>
 					<div className={styles.contactCover}>
-							<div className={styles .contactTitle}> Tag</div>
-							<div className={styles.contact}>{shop.shopTag}</div>
+							<div className={styles .contactShopTitle}> Tag</div>
+							<div className={styles.shopcontact}>{shop.shopTag}</div>
 						</div>
 						<div className={styles.contactCover}>
-							<div className={styles .contactTitle}> Market</div>
-							<div className={styles.contact}>{shop.market}</div>
+							<div className={styles .contactShopTitle}> Market</div>
+							<div className={styles.shopcontact}>{shop.market}</div>
 						</div>
 						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}> Address</div>
+							<div className={styles.contactShopTitle}> Address</div>
 							<div className={styles.addressShop}>{shop.address}</div>
 						</div>
 						
@@ -696,15 +696,15 @@ export default function ShopsFilter() {
 				</div>
 				<div className={styles.innerTextShopRenderCover}>
 				<div className={styles.contactCover}>
-						<div className={styles .contactTitle}> Tag</div>
+						<div className={styles .contactShopTitle}> Tag</div>
 						<div className={styles.contact}>{shop.shopTag}</div>
 					</div>
 					<div className={styles.contactCover}>
-						<div className={styles .contactTitle}> Market</div>
+						<div className={styles .contactShopTitle}> Market</div>
 						<div className={styles.contact}>{shop.market}</div>
 					</div>
 					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}> Address</div>
+						<div className={styles.contactShopTitle}> Address</div>
 						<div className={styles.addressShop}>{shop.address}</div>
 					</div>
 				

@@ -15,6 +15,7 @@ import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies
 import Hero from "@/components/hero/hero";
 
 export default function Home() {
+	
 	useEffect(() => {
 		window.location.pathname;
 	});

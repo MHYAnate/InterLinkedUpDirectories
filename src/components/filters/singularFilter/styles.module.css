@@ -267,8 +267,8 @@
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   background-color: rgb(255, 255, 255);
-  padding-bottom: 10px;
-  border-radius: 15px;
+  padding-bottom: 7px;
+  border-radius: 5px;
 }
 
 .stockRenderCover:hover{
@@ -418,11 +418,11 @@
   font-weight: 500;
   color: white;
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
-  width: 313px;
+  width: 295px;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
-  transform: translateX(-0.5px);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  margin-top: 7px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   min-height: 25px;
   max-height: max-content;
   display: flex;
@@ -567,6 +567,8 @@
   user-select: none;
 }
 
+
+
 .shopTag{
   display: flex;
   align-items: center;
@@ -663,7 +665,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: first baseline;
   height: max-content;
   user-select: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -856,6 +858,32 @@
   user-select: none;
  }
 
+ .vBtn{
+  border: none;
+  color: white;
+  background-image: linear-gradient(to right , rgba(9, 133, 1, 0.7), rgba(143, 145, 143, 0.7));
+  user-select: none;
+  margin-top: 10px;
+  width: 100px;
+ border-radius: 3px;
+  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  cursor: pointer;
+  user-select: none;
+ }
+
+ .qShopbtn{
+  border: none;
+  color: white;
+  background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
+  user-select: none;
+  width: 100px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+ }
+
  .btnUn{
   border: none;
   color: green;
@@ -915,6 +943,19 @@
   user-select: none;
   text-transform: uppercase;
 }
+.contactShopTitle{
+  width: 140px;
+  height: max-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  user-select: none;
+  text-transform: uppercase;
+}
 .contact{
   display: flex;
   justify-content: flex-start;
@@ -925,7 +966,16 @@
   color: rgb(33, 33, 33);
   
 }
-
+.shopcontact{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 140px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+  
+}
 .displayFilter{
   display: flex;
   align-items: center;
@@ -1059,7 +1109,8 @@
   display: flex;
   width: 100px;
   height: 100px;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   overflow: hidden;
   user-select: none;
 }
@@ -1174,12 +1225,12 @@
 .enterShop{
   color: white;
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
-  width: 290px;
+  width: 295px;
   font-weight: 500;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  margin-top: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 7px;
   text-align: center;
   padding-bottom: 3px;
   user-select: none;
