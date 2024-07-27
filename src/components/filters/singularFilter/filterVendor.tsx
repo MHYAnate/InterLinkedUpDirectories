@@ -34,6 +34,7 @@ type FormValue = {
 	country:string;
 	state: string;
 	area:string;
+	specialty:string;
 };
 
 export default function FilterVendors() {
@@ -187,6 +188,10 @@ export default function FilterVendors() {
 					/>
 				</div>
 				<div className={styles.innerTextVendorRenderCover}>
+				<div className={styles.vendorAddresCover}>
+						<div className={styles.vendoraddressTitle}>Specialty</div>
+						<div className={styles.vendorAddress}>{vendor.specialty}</div>
+					</div>
 					<div className={styles.vendorAddresCover}>
 						<div className={styles.vendoraddressTitle}>Address</div>
 						<div className={styles.vendorAddress}>{vendor.address}</div>
@@ -293,6 +298,10 @@ export default function FilterVendors() {
 					/>
 				</div>
 				<div className={styles.innerTextVendorRenderCover}>
+				<div className={styles.vendorAddresCover}>
+						<div className={styles.vendoraddressTitle}>Specialty</div>
+						<div className={styles.vendorAddress}>{vendor.specialty}</div>
+					</div>
 					<div className={styles.vendorAddresCover}>
 						<div className={styles.vendoraddressTitle}>Address</div>
 						<div className={styles.vendorAddress}>{vendor.address}</div>
@@ -309,7 +318,7 @@ export default function FilterVendors() {
 	return (
 		<div className={styles.filterBodyCover}>
 			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
-				<div className={styles.filterAndSearch}>Filter and Search </div>
+			
 				<div className={styles.selectGroup}>
 					
 					<div className={styles.selectCover}>

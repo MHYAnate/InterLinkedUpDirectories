@@ -14,6 +14,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and bikes",
 			},
 			{
 				id: 2,
@@ -25,6 +26,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and bikes",
 			},
 			{
 				id: 3,
@@ -36,6 +38,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars, bikes and Trucks",
 			},
 			{
 				id: 4,
@@ -47,6 +50,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and bikes",
 			},
 			{
 				id: 5,
@@ -58,6 +62,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and bikes",
 			},
 			{
 				id: 6,
@@ -69,6 +74,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and bikes",
 			},
 			{
 				id: 7,
@@ -80,6 +86,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars, bikes and Trucks",
 			},
 		],
 	},
@@ -98,6 +105,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All Cars",
 			},
 			{
 				id: 2,
@@ -109,6 +117,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 3,
@@ -120,6 +129,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 4,
@@ -131,6 +141,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 5,
@@ -142,6 +153,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 6,
@@ -153,6 +165,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 7,
@@ -164,6 +177,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 		],
 	},
@@ -182,6 +196,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Benz and Bmw",
 			},
 			{
 				id: 2,
@@ -193,6 +208,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "toyota and honda",
 			},
 			{
 				id: 3,
@@ -204,6 +220,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "American Cars",
 			},
 			{
 				id: 4,
@@ -215,6 +232,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Chines Cars",
 			},
 			{
 				id: 5,
@@ -226,6 +244,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Electrical Cars",
 			},
 			{
 				id: 6,
@@ -237,6 +256,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "trucks",
 			},
 			{
 				id: 7,
@@ -248,6 +268,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "peugot",
 			},
 		],
 	},
@@ -266,6 +287,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 			{
 				id: 2,
@@ -277,6 +299,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 			{
 				id: 3,
@@ -288,6 +311,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 			{
 				id: 4,
@@ -299,6 +323,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 			{
 				id: 5,
@@ -310,6 +335,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 			{
 				id: 6,
@@ -321,6 +347,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 			{
 				id: 7,
@@ -332,6 +359,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Cars",
 			},
 		],
 	},
@@ -350,6 +378,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "benz and bmw",
 			},
 			{
 				id: 2,
@@ -361,6 +390,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "peugot",
 			},
 			{
 				id: 3,
@@ -372,6 +402,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Chines Car",
 			},
 			{
 				id: 4,
@@ -383,6 +414,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "German Cars",
 			},
 			{
 				id: 5,
@@ -394,6 +426,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "American Cars",
 			},
 			{
 				id: 6,
@@ -405,6 +438,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "French Cars",
 			},
 			{
 				id: 7,
@@ -416,6 +450,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "toyota, lexus, honda, hynda",
 			},
 		],
 	},
@@ -434,6 +469,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 2,
@@ -445,6 +481,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 3,
@@ -456,6 +493,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 4,
@@ -467,6 +505,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and Truck",
 			},
 			{
 				id: 5,
@@ -478,6 +517,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 			{
 				id: 6,
@@ -489,6 +529,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and Trailers",
 			},
 			{
 				id: 7,
@@ -500,6 +541,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars",
 			},
 		],
 	},
@@ -518,6 +560,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 			{
 				id: 2,
@@ -529,6 +572,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 			{
 				id: 3,
@@ -540,6 +584,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 			{
 				id: 4,
@@ -551,6 +596,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 			{
 				id: 5,
@@ -562,6 +608,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 			{
 				id: 6,
@@ -573,6 +620,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 			{
 				id: 7,
@@ -584,6 +632,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All tyres",
 			},
 		],
 	},
@@ -602,6 +651,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 2,
@@ -613,6 +663,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 3,
@@ -624,6 +675,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 4,
@@ -635,6 +687,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 5,
@@ -646,6 +699,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
@@ -657,6 +711,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 7,
@@ -668,6 +723,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 		],
 	},
@@ -687,6 +743,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Ac and Fridge",
 			},
 			{
 				id: 2,
@@ -698,6 +755,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cookers",
 			},
 			{
 				id: 3,
@@ -709,6 +767,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cookers",
 			},
 			{
 				id: 4,
@@ -720,6 +779,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Ac And Fridge",
 			},
 			{
 				id: 5,
@@ -731,6 +791,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
@@ -742,6 +803,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Fridges",
 			},
 			{
 				id: 7,
@@ -753,6 +815,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 		],
 	},
@@ -771,6 +834,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 2,
@@ -782,6 +846,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 3,
@@ -793,6 +858,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 4,
@@ -804,6 +870,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 5,
@@ -815,6 +882,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
@@ -826,6 +894,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 7,
@@ -837,6 +906,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 		],
 	},
@@ -855,6 +925,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General repair",
 			},
 			{
 				id: 2,
@@ -866,6 +937,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General repair",
 			},
 			{
 				id: 3,
@@ -877,6 +949,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General repair",
 			},
 			{
 				id: 4,
@@ -888,6 +961,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "MacBooks",
 			},
 			{
 				id: 5,
@@ -899,6 +973,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
@@ -910,6 +985,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 7,
@@ -921,6 +997,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 		],
 	},
@@ -939,6 +1016,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "starLinks",
 			},
 			{
 				id: 2,
@@ -950,6 +1028,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Dish Installations",
 			},
 			{
 				id: 3,
@@ -961,6 +1040,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Dish Installations",
 			},
 			{
 				id: 4,
@@ -972,6 +1052,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Dish Installations",
 			},
 			{
 				id: 5,
@@ -983,6 +1064,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Dish Installations",
 			},
 			{
 				id: 6,
@@ -994,6 +1076,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Dish Installations",
 			},
 			{
 				id: 7,
@@ -1005,6 +1088,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Dish Installations",
 			},
 		],
 	},
@@ -1023,6 +1107,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Smart Flat Screen Tvs and General repair",
 			},
 			{
 				id: 2,
@@ -1034,6 +1119,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Android Tvs and General repairs",
 			},
 			{
 				id: 3,
@@ -1045,6 +1131,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general repairs",
 			},
 			{
 				id: 4,
@@ -1056,6 +1143,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "touch Screen tv and General repairs",
 			},
 			{
 				id: 5,
@@ -1067,6 +1155,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Wiring and maintainance",
 			},
 			{
 				id: 6,
@@ -1078,6 +1167,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Wiring and maintainance",
 			},
 			{
 				id: 7,
@@ -1089,6 +1179,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Wiring and maintainance",
 			},
 		],
 	},
@@ -1107,6 +1198,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 			{
 				id: 2,
@@ -1118,6 +1210,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 			{
 				id: 3,
@@ -1129,6 +1222,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 			{
 				id: 4,
@@ -1140,6 +1234,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 			{
 				id: 5,
@@ -1151,6 +1246,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 			{
 				id: 6,
@@ -1162,6 +1258,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 			{
 				id: 7,
@@ -1173,6 +1270,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "weeds, pest and rodent",
 			},
 		],
 	},
@@ -1191,6 +1289,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 			{
 				id: 2,
@@ -1202,6 +1301,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 			{
 				id: 3,
@@ -1213,6 +1313,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 			{
 				id: 4,
@@ -1224,6 +1325,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 			{
 				id: 5,
@@ -1235,6 +1337,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 			{
 				id: 6,
@@ -1246,6 +1349,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 			{
 				id: 7,
@@ -1257,6 +1361,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Scale",
 			},
 		],
 	},
@@ -1275,6 +1380,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 			{
 				id: 2,
@@ -1286,6 +1392,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 			{
 				id: 3,
@@ -1297,6 +1404,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 			{
 				id: 4,
@@ -1308,6 +1416,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 			{
 				id: 5,
@@ -1319,6 +1428,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 			{
 				id: 6,
@@ -1330,6 +1440,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 			{
 				id: 7,
@@ -1341,6 +1452,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Block Worker",
 			},
 		],
 	},
@@ -1359,6 +1471,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 			{
 				id: 2,
@@ -1370,6 +1483,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 			{
 				id: 3,
@@ -1381,6 +1495,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 			{
 				id: 4,
@@ -1392,6 +1507,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 			{
 				id: 5,
@@ -1403,6 +1519,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 			{
 				id: 6,
@@ -1414,6 +1531,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 			{
 				id: 7,
@@ -1425,6 +1543,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General House Painting",
 			},
 		],
 	},
@@ -1443,6 +1562,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Iphones",
 			},
 			{
 				id: 2,
@@ -1454,6 +1574,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Andriod and Iphones",
 			},
 			{
 				id: 3,
@@ -1465,6 +1586,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Phones Repair",
 			},
 			{
 				id: 4,
@@ -1476,6 +1598,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Phones Repair",
 			},
 			{
 				id: 5,
@@ -1487,6 +1610,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Phones Repair",
 			},
 			{
 				id: 6,
@@ -1498,6 +1622,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Phones Repair",
 			},
 			{
 				id: 7,
@@ -1509,6 +1634,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Phones Repair",
 			},
 		],
 	},
@@ -1527,6 +1653,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 			{
 				id: 2,
@@ -1538,6 +1665,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 			{
 				id: 3,
@@ -1549,6 +1677,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 			{
 				id: 4,
@@ -1560,6 +1689,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 			{
 				id: 5,
@@ -1571,6 +1701,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 			{
 				id: 6,
@@ -1582,6 +1713,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 			{
 				id: 7,
@@ -1593,6 +1725,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Plumbing Issues",
 			},
 		],
 	},
@@ -1611,6 +1744,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Plastics and mental",
 			},
 			{
 				id: 2,
@@ -1622,6 +1756,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Plastic, Metals and Electronics",
 			},
 			{
 				id: 3,
@@ -1633,6 +1768,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Carton, Plastic, metal and electronics",
 			},
 			{
 				id: 4,
@@ -1644,6 +1780,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Carton, Plastic, metal and electronics",
 			},
 			{
 				id: 5,
@@ -1655,6 +1792,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Carton, Plastic, metal and electronics",
 			},
 			{
 				id: 6,
@@ -1666,6 +1804,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Carton, Plastic, metal and electronics",
 			},
 			{
 				id: 7,
@@ -1677,6 +1816,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Carton, Plastic, metal and electronics",
 			},
 		],
 	},
@@ -1696,6 +1836,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 2,
@@ -1707,6 +1848,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 3,
@@ -1718,6 +1860,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 4,
@@ -1729,6 +1872,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 5,
@@ -1740,6 +1884,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
@@ -1751,6 +1896,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 7,
@@ -1762,6 +1908,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 		],
 	},
@@ -1780,6 +1927,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 			{
 				id: 2,
@@ -1791,6 +1939,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 			{
 				id: 3,
@@ -1802,6 +1951,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 			{
 				id: 4,
@@ -1813,6 +1963,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 			{
 				id: 5,
@@ -1824,6 +1975,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 			{
 				id: 6,
@@ -1835,6 +1987,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 			{
 				id: 7,
@@ -1846,6 +1999,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Large and Small Unit Maintainace",
 			},
 		],
 	},
@@ -1864,6 +2018,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 2,
@@ -1875,6 +2030,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 3,
@@ -1886,6 +2042,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 4,
@@ -1897,6 +2054,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 5,
@@ -1908,6 +2066,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
@@ -1919,6 +2078,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 7,
@@ -1930,6 +2090,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 		],
 	},
@@ -1948,6 +2109,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All iron works",
 			},
 			{
 				id: 2,
@@ -1959,6 +2121,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "iron work",
 			},
 			{
 				id: 3,
@@ -1970,6 +2133,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "iron",
 			},
 			{
 				id: 4,
@@ -1981,6 +2145,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All iron and alluminium",
 			},
 			{
 				id: 5,
@@ -1992,6 +2157,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "iron works",
 			},
 			{
 				id: 6,
@@ -2003,6 +2169,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Alluminiun iron works",
 			},
 			{
 				id: 7,
@@ -2014,6 +2181,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "All iron works",
 			},
 		],
 	},
@@ -2033,6 +2201,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 			{
 				id: 2,
@@ -2044,6 +2213,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 			{
 				id: 3,
@@ -2055,6 +2225,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 			{
 				id: 4,
@@ -2066,6 +2237,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 			{
 				id: 5,
@@ -2077,6 +2249,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 			{
 				id: 6,
@@ -2088,6 +2261,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 			{
 				id: 7,
@@ -2099,6 +2273,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Design",
 			},
 		],
 	},
@@ -2117,6 +2292,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 			{
 				id: 2,
@@ -2128,6 +2304,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 			{
 				id: 3,
@@ -2139,6 +2316,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 			{
 				id: 4,
@@ -2150,6 +2328,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 			{
 				id: 5,
@@ -2161,6 +2340,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 			{
 				id: 6,
@@ -2172,6 +2352,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 			{
 				id: 7,
@@ -2183,6 +2364,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home Services",
 			},
 		],
 	},
@@ -2201,6 +2383,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 			{
 				id: 2,
@@ -2212,6 +2395,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 			{
 				id: 3,
@@ -2223,6 +2407,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 			{
 				id: 4,
@@ -2234,6 +2419,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 			{
 				id: 5,
@@ -2245,6 +2431,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 			{
 				id: 6,
@@ -2256,6 +2443,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 			{
 				id: 7,
@@ -2267,6 +2455,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Home and Outdoor Servies",
 			},
 		],
 	},
@@ -2285,6 +2474,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "photo shot",
 			},
 			{
 				id: 2,
@@ -2296,6 +2486,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "photo and video shots",
 			},
 			{
 				id: 3,
@@ -2307,6 +2498,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "video recording service and photo shots",
 			},
 			{
 				id: 4,
@@ -2318,6 +2510,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "photo shots",
 			},
 			{
 				id: 5,
@@ -2329,6 +2522,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "photography and video camera man",
 			},
 			{
 				id: 6,
@@ -2340,6 +2534,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "photography",
 			},
 			{
 				id: 7,
@@ -2351,6 +2546,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "photograohy",
 			},
 		],
 	},
@@ -2369,6 +2565,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General car wash",
 			},
 			{
 				id: 2,
@@ -2380,6 +2577,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General car wash",
 			},
 			{
 				id: 3,
@@ -2391,6 +2589,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General car wash",
 			},
 			{
 				id: 4,
@@ -2402,6 +2601,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and truck",
 			},
 			{
 				id: 5,
@@ -2413,6 +2613,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and truck",
 			},
 			{
 				id: 6,
@@ -2424,6 +2625,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Cars and truck",
 			},
 			{
 				id: 7,
@@ -2435,6 +2637,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Bikes,cars and trucks",
 			},
 		],
 	},
@@ -2446,80 +2649,87 @@ export const VendorsData = [
 		vendorsList: [
 			{
 				id: 1,
-				name: "Ochieng",
-				src: "/service/13.jpg",
+				name: "Blessing",
+				src: "/service/w1.jpg",
 				address:
 					"shop 68 across the main hospital entrance opposite the bank block, Zone 29",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Calabar dishes",
 			},
 			{
 				id: 2,
-				name: "Odhiambo",
-				src: "/service/12.jpg",
+				name: "Precious",
+				src: "/service/w2.jpg",
 				address:
 					"shop 95 across the main secretariate entrance opposite the bank block, Area 77",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "pastries and cakes",
 			},
 			{
 				id: 3,
-				name: "Otieno",
-				src: "/service/11.jpg",
+				name: "Favor",
+				src: "/service/w3.jpg",
 				address:
 					"shop 21 across the main office block entrance opposite the bank block, Zone 46",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Nigeria quisen",
 			},
 			{
 				id: 4,
-				name: "Otobong",
-				src: "/service/1.jpg",
+				name: "Gift",
+				src: "/service/w4.jpg",
 				address:
 					"shop 53 across the main school entrance opposite the bank block, Area 83",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 5,
-				name: "Oumar",
-				src: "/service/2.jpg",
+				name: "Beauty",
+				src: "/service/w5.jpg",
 				address:
 					"shop 77 across the main hospital entrance opposite the bank block, Zone 14",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 6,
-				name: "Ousmane",
-				src: "/service/3.jpg",
+				name: "Lovely",
+				src: "/service/w6.jpg",
 				address:
 					"shop 36 across the main office block entrance opposite the bank block, Area 92",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 			{
 				id: 7,
-				name: "Oyibo",
-				src: "/service/4.jpg",
+				name: "Peaceful",
+				src: "/service/w7.jpg",
 				address:
 					"shop 89 across the main secretariate entrance opposite the bank block, Zone 61",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General",
 			},
 		],
 	},
@@ -2538,6 +2748,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Bike delivery",
 			},
 			{
 				id: 2,
@@ -2549,6 +2760,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "trycycle delivery",
 			},
 			{
 				id: 3,
@@ -2560,6 +2772,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "car delivery",
 			},
 			{
 				id: 4,
@@ -2571,6 +2784,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "bus delivery",
 			},
 			{
 				id: 5,
@@ -2582,6 +2796,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "trailer delivery",
 			},
 			{
 				id: 6,
@@ -2593,6 +2808,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "wheel barow",
 			},
 			{
 				id: 7,
@@ -2604,6 +2820,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "bicycle dilevery",
 			},
 		],
 	},
@@ -2614,80 +2831,87 @@ export const VendorsData = [
 		vendorsList: [
 			{
 				id: 1,
-				name: "Itri",
-				src: "/service/13.jpg",
+				name: "Blessing",
+				src: "/service/w1.jpg",
 				address:
 					"shop 57 across the main secretariate entrance opposite the bank block, Area 22",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 			{
 				id: 2,
-				name: "Jatau",
-				src: "/service/11.jpg",
+				name: "Precious",
+				src: "/service/w2.jpg",
 				address:
 					"shop 84 across the main school entrance opposite the bank block, Zone 79",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 			{
 				id: 3,
-				name: "Kelechi",
-				src: "/service/7.jpg",
+				name: "Favor",
+				src: "/service/w3.jpg",
 				address:
 					"shop 32 across the main hospital entrance opposite the bank block, Area 66",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 			{
 				id: 4,
-				name: "Kgosi",
-				src: "/service/8.jpg",
+				name: "Gift",
+				src: "/service/w4.jpg",
 				address:
 					"shop 69 across the main office block entrance opposite the bank block, Zone 47",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 			{
 				id: 5,
-				name: "Kidist",
-				src: "/service/3.jpg",
+				name: "Beauty",
+				src: "/service/w5.jpg",
 				address:
 					"shop 45 across the main market entrance opposite the bank block, Area 13",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 			{
 				id: 6,
-				name: "Kirabo",
-				src: "/service/4.jpg",
+				name: "Lovely",
+				src: "/service/w6.jpg",
 				address:
 					"shop 78 across the main secretariate entrance opposite the bank block, Zone 58",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 			{
 				id: 7,
-				name: "Kofi",
-				src: "/service/9.jpg",
+				name: "Peaceful",
+				src: "/service/w7.jpg",
 				address:
 					"shop 51 across the main school entrance opposite the bank block, Area 91",
 				contact: "07012345678",
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General planning and rentals",
 			},
 		],
 	},
@@ -2706,6 +2930,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 			{
 				id: 2,
@@ -2717,6 +2942,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 			{
 				id: 3,
@@ -2728,6 +2954,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 			{
 				id: 4,
@@ -2739,6 +2966,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 			{
 				id: 5,
@@ -2750,6 +2978,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 			{
 				id: 6,
@@ -2761,6 +2990,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 			{
 				id: 7,
@@ -2772,6 +3002,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General home and office delivery",
 			},
 		],
 	},
@@ -2790,6 +3021,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Arabic and Quran",
 			},
 			{
 				id: 2,
@@ -2801,6 +3033,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Arabic and Hadith",
 			},
 			{
 				id: 3,
@@ -2812,6 +3045,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Arabic",
 			},
 			{
 				id: 4,
@@ -2823,6 +3057,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Quran",
 			},
 			{
 				id: 5,
@@ -2834,6 +3069,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Hadith",
 			},
 			{
 				id: 6,
@@ -2845,6 +3081,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Quran",
 			},
 			{
 				id: 7,
@@ -2856,6 +3093,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Arabic Language and text",
 			},
 		],
 	},
@@ -2874,6 +3112,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Maths and Physic",
 			},
 			{
 				id: 2,
@@ -2885,6 +3124,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Chemistry and Biology",
 			},
 			{
 				id: 3,
@@ -2896,6 +3136,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "English, History and Government",
 			},
 			{
 				id: 4,
@@ -2907,6 +3148,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Accounting and Commerce",
 			},
 			{
 				id: 5,
@@ -2918,6 +3160,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Maths, english, physics, chemistry and biology",
 			},
 			{
 				id: 6,
@@ -2929,6 +3172,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Maths, technical drawing, physics, chemistry and biology",
 			},
 			{
 				id: 7,
@@ -2940,6 +3184,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Maths, technical drawing, physics, chemistry, biology and fine art",
 			},
 		],
 	},
@@ -2958,6 +3203,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 2,
@@ -2969,6 +3215,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 3,
@@ -2980,6 +3227,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 4,
@@ -2991,6 +3239,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 5,
@@ -3002,6 +3251,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 6,
@@ -3013,6 +3263,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 			{
 				id: 7,
@@ -3024,6 +3275,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "general",
 			},
 		],
 	},
@@ -3042,6 +3294,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General consultant",
 			},
 			{
 				id: 2,
@@ -3053,6 +3306,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Consultant",
 			},
 			{
 				id: 3,
@@ -3064,6 +3318,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Herbals",
 			},
 			{
 				id: 4,
@@ -3075,6 +3330,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Practioner",
 			},
 			{
 				id: 5,
@@ -3086,6 +3342,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Practioner",
 			},
 			{
 				id: 6,
@@ -3097,6 +3354,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Practioner",
 			},
 			{
 				id: 7,
@@ -3108,6 +3366,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Herbal Consultant",
 			},
 		],
 	},
@@ -3126,6 +3385,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "9 - 8",
 			},
 			{
 				id: 2,
@@ -3137,6 +3397,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 3,
@@ -3148,6 +3409,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "9 - 8",
 			},
 			{
 				id: 4,
@@ -3159,6 +3421,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time maid",
 			},
 			{
 				id: 5,
@@ -3170,6 +3433,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time maid",
 			},
 			{
 				id: 6,
@@ -3181,6 +3445,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "9 - 8",
 			},
 			{
 				id: 7,
@@ -3192,6 +3457,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time maid",
 			},
 		],
 	},
@@ -3210,6 +3476,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 			{
 				id: 2,
@@ -3221,6 +3488,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 			{
 				id: 3,
@@ -3232,6 +3500,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 			{
 				id: 4,
@@ -3243,6 +3512,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 			{
 				id: 5,
@@ -3254,6 +3524,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 			{
 				id: 6,
@@ -3265,6 +3536,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 			{
 				id: 7,
@@ -3276,6 +3548,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "General Care",
 			},
 		],
 	},
@@ -3295,6 +3568,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 2,
@@ -3306,6 +3580,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 3,
@@ -3317,6 +3592,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 4,
@@ -3328,6 +3604,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 5,
@@ -3339,6 +3616,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 6,
@@ -3350,6 +3628,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 			{
 				id: 7,
@@ -3361,6 +3640,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "full time",
 			},
 		],
 	},
@@ -3379,6 +3659,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Driver, and security",
 			},
 			{
 				id: 2,
@@ -3390,6 +3671,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "security and driver",
 			},
 			{
 				id: 3,
@@ -3401,6 +3683,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "security",
 			},
 			{
 				id: 4,
@@ -3412,6 +3695,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "bouncer and security",
 			},
 			{
 				id: 5,
@@ -3423,6 +3707,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "bouncer, gym instructor and security",
 			},
 			{
 				id: 6,
@@ -3434,6 +3719,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "security",
 			},
 			{
 				id: 7,
@@ -3445,6 +3731,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "security",
 			},
 		],
 	},
@@ -3463,6 +3750,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "Suits",
 			},
 			{
 				id: 2,
@@ -3474,6 +3762,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "mens and women",
 			},
 			{
 				id: 3,
@@ -3485,6 +3774,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "women",
 			},
 			{
 				id: 4,
@@ -3496,6 +3786,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "men",
 			},
 			{
 				id: 5,
@@ -3507,6 +3798,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "suits and native",
 			},
 			{
 				id: 6,
@@ -3518,6 +3810,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "women",
 			},
 			{
 				id: 7,
@@ -3529,6 +3822,7 @@ export const VendorsData = [
 				country:"Nigeria",
 	      state: "kogi",
 	      area:"okene",
+				specialty: "men, women, suits and natives",
 			},
 		],
 	},

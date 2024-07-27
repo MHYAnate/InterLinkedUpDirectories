@@ -38,9 +38,19 @@
   user-select: none;
 }
 
-.idiImg{
-  width: 27vw;
+.imgCover{
+   width: 27vw;
   height: 480px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.idiImg{
+  width: 33vw;
+  height: 590px;
   border-radius: 5px;
   transition: transform 1s ease-in-out 0.2s;
 }
@@ -111,10 +121,13 @@
     font-size: 1.3em;
     width: 93vw;
   }
-
-  .idiImg{
+  .imgCover{
     width: 93vw;
     height: 300px;
+  }
+  .idiImg{
+    width: 98vw;
+    height: 390px;
     border-radius: 5px;
   }
 

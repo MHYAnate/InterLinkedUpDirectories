@@ -226,7 +226,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 			>
 				<div className={styles.titleBodyCategorySelector}>
 					<div
-						onClick={() => setActiveIndex(0)}
+						onClick={() => {setActiveIndex(0), setInnerActiveIndex(0)}}
 						className={
 							Services[activeIndex].category === Services[0].category
 								? styles.highLighted
@@ -244,7 +244,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 						</span>
 					</div>
 					<div
-						onClick={() => setActiveIndex(1)}
+						onClick={() => {setActiveIndex(1), setInnerActiveIndex(0)}}
 						className={
 							Services[activeIndex].category === Services[1].category
 								? styles.highLighted
@@ -262,7 +262,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 						</span>
 					</div>
 					<div
-						onClick={() => setActiveIndex(2)}
+						onClick={() => {setActiveIndex(2), setInnerActiveIndex(0)}}
 						className={
 							Services[activeIndex].category === Services[2].category
 								? styles.highLighted

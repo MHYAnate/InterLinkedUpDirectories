@@ -7,6 +7,8 @@ import Loading from "@/app/register/logo";
 import Image from "next/image";
 import FilterVendors from "@/components/filters/singularFilter/filterVendor";
 import Nav from "@/components/nav/mainNav/nav";
+import Hero from "@/components/hero/hero";
+import NewsLetter from "@/components/newsLetter/newsLetter";
 
 export default function Page({ params }: { params: { slug: string } }) {
 	const searchParams = useSearchParams();
@@ -18,10 +20,13 @@ export default function Page({ params }: { params: { slug: string } }) {
 			<nav className={styles.navHolder}>
 				<Nav />
 			</nav>
+			<div>
+				<Hero/>
+			</div>
 			<div className={styles.pageBodyCover}>
 				<div className={styles.idBody}>
 					<div className={styles.idName}>{name} Vendors</div>
-					<div>
+					<div className={styles.imgCover}>
 						<Image
 							className={styles.idiImg}
 							src={`${src}`}
@@ -37,6 +42,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 					<FilterVendors />
 				</div>
 			</div>
+			<NewsLetter/>
 		</div>
 		</Suspense>
 	);
