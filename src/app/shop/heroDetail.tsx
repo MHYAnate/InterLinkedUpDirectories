@@ -29,9 +29,10 @@ const HeroDetail: React.FC<any> = ({
 			
 				<div className={styles.flexControl}>
 					<div className={styles.shopImgHolder}>
+
 						<Image
 							object-fit="cover"
-							className={styles.gImg}
+							className={styles.shopPic}
 							alt="Picture of the author"
 							quality={100}
 							width={100}

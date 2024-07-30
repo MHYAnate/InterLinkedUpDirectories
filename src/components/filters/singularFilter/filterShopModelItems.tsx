@@ -60,8 +60,10 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 
 	const [show, setShow] = useState("");
 
+	const [img, setImg] = useState("");
+
 	const [currentPage, setCurrentPage] = useState(1);
-	
+
 	const [postsPerPage] = useState(6);
 
 	const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -155,8 +157,6 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 			  })
 			: [];
 
-
-
 	// Get current posts
 	const indexOfLastPost = currentPage * postsPerPage;
 	const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -178,10 +178,19 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 		return currentPosts?.map((item) => (
 			<div className={styles.InRenderItemCover} key={item.id}>
 				<div className={styles.InShopItemsCover}>
+				<div className={styles.InShopItemsDetailTitleName}>
+								{item.title}
+							</div>
 					<div className={styles.InShopsItemsImgCover}>
 						<Image
 							className={styles.InShopItemImg}
-							src={`${item.image}`}
+							src={
+								img === `${item.image}`
+									? `${item.image}`
+									: img === `${item.image2}`
+									? `${item.image2}`
+									: `${item.image}`
+							}
 							alt={`${item.title}`}
 							quality={100}
 							width={500}
@@ -189,35 +198,40 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 							// unoptimized
 						/>
 					</div>
-					{show === `${item.id}` ? (
+			
+				
+						<div className={styles.InShopItemsDetailCover}>
+							
+							<div className={styles.picSel}>
+							<div
+								className={img === `${item.image}` ? styles.picH : styles.pic}
+								onClick={() => {
+									setImg(`${item.image}`);
+								}}
+							>
+								{`FRONT`}
+							</div>
+							<div
+								className={img === `${item.image2}` ? styles.picH : styles.pic}
+								onClick={() => {
+									setImg(`${item.image2}`);
+								}}
+							>
+								{`SIDE`}
+							</div>
+						</div>
+							{show === `${item.id}` ? (
 						<></>
 					) : (
-						<div className={styles.InShopItemsDetailCover}>
-							<div className={styles.InShopItemsDetailTitleName}>
-								{item.title}
-							</div>
 							<div className={styles.InShopItemsBody}>{item.price}</div>
+							)}
 						</div>
-					)}
+					
 				</div>
 				{show === `${item.id}` && (
-					<div className={styles.InShowMoreDetails}>
-						<div className={styles.InShopsItemsImgCover}>
-							<Image
-								className={styles.InShopItemImg}
-								src={`${item.image2}`}
-								alt={`${item.title}`}
-								quality={100}
-								width={500}
-								height={500}
-								// unoptimized
-							/>
-						</div>
+					<div className={styles.InShowMoreDetails}>	
 						<div className={styles.InShowMoreDetailCover}>
 							<div className={styles.InShopItemsDetailCover}>
-								<div className={styles.InShopItemsDetailTitleName}>
-									{item.title}
-								</div>
 								<div className={styles.InShopItemsBody}>{item.price}</div>
 							</div>
 							<div className={styles.InShowMoreItemsDetailsBody}>
@@ -236,7 +250,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 					</div>
 				)}
 				<div
-					className={show !== `${item.id}` ? styles.InBtn : styles.InBtnA}
+					className={show !== `${item.id}` ? styles.InBtn : styles.InBtn}
 					onClick={
 						show !== `${item.id}`
 							? () => setShow(`${item.id}`)
@@ -251,84 +265,81 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 
 	return (
 		<div className={styles.shopItemBodyCover}>
-			<div className={styles.InShopItemsFilterCover}>
-				<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
-					<div className={styles.selectGroup}>
-						<div className={styles.selectCover}>
-							<select
-								value={tag !== (undefined || null) ? tag : "Select Tag"}
-								className={styles.select}
-								{...register("tag")}
-							>
-								<option className={styles.option} value="Select Tag">
-									Select Tag
-								</option>
-								{renderAvailablStockTag()}
-							</select>
-						</div>
-						<div className={styles.selectCover}>
-							<select
-								value={
-									status !== (undefined || null)
-										? status
-										: tag
-										? ""
-										: "Select Status"
-								}
-								className={styles.select}
-								{...register("status")}
-							>
-								<option className={styles.option} value="Select Status">
-									Select Status
-								</option>
-								{renderAvailablStockStatus()}
-							</select>
-						</div>
-						<div className={styles.selectCover}>
-							<select
-								value={
-									condition !== (undefined || null)
-										? condition
-										: tag
-										? ""
-										: "Select Condition"
-								}
-								className={styles.select}
-								{...register("condition")}
-							>
-								<option className={styles.option} value="Select condition">
-									Select Condition
-								</option>
-								{renderAvailablStockCondition()}
-							</select>
-						</div>
-						<div className={styles.inputCover}>
-							<input
-								type="search"
-								className={styles.input}
-								{...register("title")}
-								value={shopSearchInput}
-								onChange={updateSearchInput}
-								id="vendorAddress"
-								placeholder="Name of Items"
-							/>
-						</div>
+			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
+				<div className={styles.selectGroup}>
+					<div className={styles.selectCover}>
+						<select
+							value={tag !== (undefined || null) ? tag : "Select Tag"}
+							className={styles.select}
+							{...register("tag")}
+						>
+							<option className={styles.option} value="Select Tag">
+								Select Tag
+							</option>
+							{renderAvailablStockTag()}
+						</select>
 					</div>
-				</form>
-				<div className={styles.renderAvModStock}>
-					{RenderAvailableModelStocks()}
+					<div className={styles.selectCover}>
+						<select
+							value={
+								status !== (undefined || null)
+									? status
+									: tag
+									? ""
+									: "Select Status"
+							}
+							className={styles.select}
+							{...register("status")}
+						>
+							<option className={styles.option} value="Select Status">
+								Select Status
+							</option>
+							{renderAvailablStockStatus()}
+						</select>
+					</div>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								condition !== (undefined || null)
+									? condition
+									: tag
+									? ""
+									: "Select Condition"
+							}
+							className={styles.select}
+							{...register("condition")}
+						>
+							<option className={styles.option} value="Select condition">
+								Select Condition
+							</option>
+							{renderAvailablStockCondition()}
+						</select>
+					</div>
+					<div className={styles.inputCover}>
+						<input
+							type="search"
+							className={styles.input}
+							{...register("title")}
+							value={shopSearchInput}
+							onChange={updateSearchInput}
+							id="vendorAddress"
+							placeholder="Name of Items"
+						/>
+					</div>
 				</div>
-
-				<div>
-					<Pagination
-						postsPerPage={postsPerPage}
-						totalPosts={filteredList.length}
-						paginate={paginate}
-						currentpage={currentPage}
-					/>
-				</div>
+			</form>
+			<div className={styles.renderAvModStock}>
+				{RenderAvailableModelStocks()}
 			</div>
-			<div className={styles.shopItemsTranscation}></div>
+
+			<div>
+				<Pagination
+					postsPerPage={postsPerPage}
+					totalPosts={filteredList.length}
+					paginate={paginate}
+					currentpage={currentPage}
+				/>
+			</div>
 		</div>
 	);
 };

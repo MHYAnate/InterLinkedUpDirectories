@@ -27,7 +27,6 @@ export default function Nav() {
 					<Search suggestionsList={Vendors} />
 				</div>
 				<div className={styles.links}>
-					{pathname === "/shop" && <Shop />}
 					<About />
 					<LogIn />
 					<Register />

@@ -2,6 +2,7 @@
   width: 98vw;
   height: 170px;
   cursor: pointer;
+  border-top: 1px solid silver;
 }
 
 .categoryCover{

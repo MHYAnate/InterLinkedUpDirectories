@@ -10,6 +10,8 @@ import Nav from "@/components/nav/mainNav/nav";
 import VendorNav from "@/components/nav/userNav/nav";
 import { ShopData } from "@/database/shopData";
 import HeroDetail from "./heroDetail";
+import Hero from "@/components/hero/hero";
+import NewsLetter from "@/components/newsLetter/newsLetter";
 
 import {
 	collection,
@@ -134,6 +136,9 @@ export default function Shop() {
 		<Suspense fallback={<Loading />}>
 			<div>
 				<div className={styles.nav}>{user ? <VendorNav /> : <Nav />}</div>
+				<div>
+					<Hero/>
+				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
 						<HeroDetail user={user} imgM={shopImg} img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} addressM={shopAddress} address={profileDetails?.address} shopMgM={shopManager} shopMg={profileDetails?.name}
@@ -143,7 +148,9 @@ export default function Shop() {
 					<div className={styles.shopStockCover}>
 					<ShopModelStock shopName={`${shopName}`} />
 					</div>
-					
+				</div>
+				<div>
+					<NewsLetter/>
 				</div>
 			</div>
 		</Suspense>

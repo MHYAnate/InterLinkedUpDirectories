@@ -2,77 +2,67 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 98vw;
 }
 
 .shopDetailCover{
-  width: 98vw;
+  width: 310px;
   height: fit-content;
   display: flex;
- 
-}
-.shopDetail{
-  width: 98vw;
-  height: fit-content;
-  display: flex; 
-  flex-direction: column;
-  flex-wrap: wrap;
+ flex-direction: column;
+ padding-top: 20px;
+
 }
 
 .shopStockCover{
-  width: 98vw;
+  width: 70vw;
   display: flex;
   align-items: first baseline;
   justify-content: space-around;
+  border-left: 1px solid silver;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .heroDatailCover{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 98vw;
+  width: 310px;
   height: fit-content;
 }
 
-
-.heroDetailBody{
-  position: absolute;
-  width: 98vw;
-  height: 140px;
-  top: 0;
-  left: 0;
-}
-
 .flexControl{
-  width: 95vw;
-  min-height: 140px;
-  flex-wrap: wrap;
-  max-height: fit-content;
-  column-gap: 5vw;
-  row-gap: 20px;
+  width: 310px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
   user-select: none;
+  background-image: linear-gradient(to right, rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
+  border-radius: 5px;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 .shopImgHolder{
-  width: 300px;
-  height: 130px;
-  border-radius: 10px;
+  width: 280px;
+  height: 150px;
+  border-radius: 5px;
   overflow: hidden;
-  margin-right: 20px;
-  margin-left: 10px;
   box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.gImg{
-  width: 300px;
-  height: 140px;
-  border-radius: 10px;
+.shopPic{
+  width: 280px;
+  height: 150px;
 } 
 
-.gImg:hover{
+.shopPic:hover{
  animation: 2s forwards zoom;
 }
 
@@ -80,25 +70,25 @@
   0%{
     transform: scale(1);
   }
-  100% {transform: scale(1.1);}
+  100% {transform: scale(1.09);}
 }
 
 .detailBody{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: fit-content;
-  column-gap: 20px; 
+  justify-content: flex-start;
+  width: 310px;
   row-gap: 10px;
   height: fit-content;
+  margin-top: 10px;
 }
 
 .shopDetail{
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
-  width: 200px;
+  row-gap: 10px;
+  width: 280px;
   font-size: 0.7rem;
   min-height: 130px;
   max-height: fit-content;
@@ -106,18 +96,21 @@
   justify-content: flex-start;
   align-items: first baseline;
   box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
-  background-color: rgb(23, 23, 23, 0.8);
+  background-image: linear-gradient(to right, rgb(226, 226, 226, 0.7), rgba(243, 255, 243, 0.7));
   overflow: hidden;
+  padding-bottom: 10px;
+
 }
 
 .titleTop{
-  color: green;
+  color: rgb(53, 53, 53);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
-  background-color: white;
   width: inherit;
   text-align: center;
+ background-color: white;
+ text-transform: uppercase;
 }
 .detailCover{
   display: flex;
@@ -130,16 +123,20 @@
 .detailTitle{
   width: 200px;
   max-height: fit-content;
-  color: goldenrod;
+  color: rgb(61, 61, 61);
   margin-left: 5px;
+  font-size: 0.55rem;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
 }
 
 .detail{
-  width: 200px;
+  width: 250px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   max-height: fit-content;
-  color: white;
+  color: rgb(86, 86, 86);
   margin-left: 5px;
 }
 

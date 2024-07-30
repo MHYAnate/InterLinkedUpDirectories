@@ -26,6 +26,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 
 	const searchParams = useSearchParams();
 	const router = useRouter();
+	
 	const set = useCallback(
 		(name: string, value: string) => {
 			const params = new URLSearchParams(searchParams.toString());

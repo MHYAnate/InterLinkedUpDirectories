@@ -80,7 +80,6 @@
 .categoryCover{
   width: 98vw;
   height: fit-content;
-  padding-bottom: 10px;
   display: flex;
   align-items: first baseline;
   justify-content: space-around;
