@@ -41,15 +41,15 @@
   cursor: pointer;
   user-select: none;
   background-image: linear-gradient(to right, rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
-  border-radius: 5px;
+  border-radius: 10px;
   padding-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 17px;
 }
 
 .shopImgHolder{
   width: 280px;
   height: 150px;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
   display: flex;
@@ -138,5 +138,57 @@
   max-height: fit-content;
   color: rgb(86, 86, 86);
   margin-left: 5px;
+}
+
+@media screen and (max-width: 1110px) {
+  .shopDetailCover{
+    width: 98vw;
+    flex-direction: row;
+    overflow-x: auto;
+    border-radius: 5px;
+  }
+
+  .heroDatailCover{
+    width: fit-content;
+    flex-direction: row;
+  }
+  
+  .flexControl{
+    width: fit-content;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    overflow-x: auto;
+    height: 170px;
+    border-radius: 5px;
+  }
+
+  .detailBody{
+    width: fit-content;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-left: 10px;
+    align-items: first baseline;
+    overflow-x: auto;
+  }
+
+  .shopImgHolder{
+    transform: translateY(5px);
+  }
+
+  .shopStockCover{
+    width: 98vw;
+    display: flex;
+    border-left: none;
+    border-top: 1px solid silver;
+    margin-top: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 560px) {
+  
 }
 

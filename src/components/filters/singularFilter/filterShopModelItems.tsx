@@ -178,9 +178,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 		return currentPosts?.map((item) => (
 			<div className={styles.InRenderItemCover} key={item.id}>
 				<div className={styles.InShopItemsCover}>
-				<div className={styles.InShopItemsDetailTitleName}>
-								{item.title}
-							</div>
+					<div className={styles.InShopItemsDetailTitleName}>{item.title}</div>
 					<div className={styles.InShopsItemsImgCover}>
 						<Image
 							className={styles.InShopItemImg}
@@ -198,11 +196,9 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 							// unoptimized
 						/>
 					</div>
-			
-				
-						<div className={styles.InShopItemsDetailCover}>
-							
-							<div className={styles.picSel}>
+
+					<div className={styles.InShopItemsDetailCover}>
+						<div className={styles.picSel}>
 							<div
 								className={img === `${item.image}` ? styles.picH : styles.pic}
 								onClick={() => {
@@ -220,16 +216,15 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 								{`SIDE`}
 							</div>
 						</div>
-							{show === `${item.id}` ? (
-						<></>
-					) : (
+						{show === `${item.id}` ? (
+							<></>
+						) : (
 							<div className={styles.InShopItemsBody}>{item.price}</div>
-							)}
-						</div>
-					
+						)}
+					</div>
 				</div>
 				{show === `${item.id}` && (
-					<div className={styles.InShowMoreDetails}>	
+					<div className={styles.InShowMoreDetails}>
 						<div className={styles.InShowMoreDetailCover}>
 							<div className={styles.InShopItemsDetailCover}>
 								<div className={styles.InShopItemsBody}>{item.price}</div>
@@ -328,11 +323,13 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 					</div>
 				</div>
 			</form>
-			<div className={styles.renderAvModStock}>
-				{RenderAvailableModelStocks()}
+			<div className={styles.renderAvModStockoverFlow}>
+				<div className={styles.renderAvModStock}>
+					{RenderAvailableModelStocks()}
+				</div>
 			</div>
 
-			<div>
+			<div className={styles.renderAvModpagi}>
 				<Pagination
 					postsPerPage={postsPerPage}
 					totalPosts={filteredList.length}

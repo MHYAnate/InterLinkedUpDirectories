@@ -345,6 +345,7 @@
   justify-content: flex-start;
   align-items: center;
   max-height: fit-content;
+  width: 170px;
 }
 
 .showMore{
@@ -407,6 +408,7 @@
   overflow: hidden;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  width: 160px;
 }
 .imgCoverC{
   display: flex;
@@ -1094,10 +1096,7 @@
   overflow: auto;
 }
 
-.renderAvModStock{
-  display: flex;
-  width: 310px;
-}
+
 
 .displaySearchShopItems{
    display: flex;
@@ -1499,6 +1498,25 @@
 
 }
 
+@media screen and (max-width: 1110px) {
+  .renderAvModStock{
+    width: 98vw;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: first baseline;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-top: 10px;
+  }
+  .shopItemBodyCover{
+    width: 98vw;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 
 @media screen and (max-width: 1080px) {
 
@@ -1736,6 +1754,13 @@
     height: max-content;
   }
 
+  .shopItemBodyCover{
+    width: 98vw;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+
  
 }
 
@@ -1878,7 +1903,48 @@
     width: 30vw;
   }
 
+  .shopItemBodyCover{
+    width: 98vw;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+  .renderAvModStockoverFlow{
+    max-width: 98vw;
+    height: fit-content;
+    overflow-x: auto;
+  }
+
+  .renderAvModStock{
+    width: fit-content;
+    min-width: 98vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    row-gap: 30px;
+    column-gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .renderAvModpagi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+   
+  }
+
 }
+
 @media screen and (max-width: 480px) {
 
   .coverHeadDetail{
