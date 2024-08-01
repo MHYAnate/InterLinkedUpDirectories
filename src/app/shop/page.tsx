@@ -1,14 +1,12 @@
 "use client";
-import React, { useRef, useState, useEffect, useCallback } from "react";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
-import { usePathname, useSearchParams } from "next/navigation";
+import React, {  useState,  useCallback } from "react";
+import { onAuthStateChanged} from "firebase/auth";
+import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { Suspense } from "react";
 import Loading from "../register/logo";
-import Image from "next/image";
 import Nav from "@/components/nav/mainNav/nav";
 import VendorNav from "@/components/nav/userNav/nav";
-import { ShopData } from "@/database/shopData";
 import HeroDetail from "./heroDetail";
 import Hero from "@/components/hero/hero";
 import NewsLetter from "@/components/newsLetter/newsLetter";
@@ -24,11 +22,12 @@ import {
 	where,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import ShopModelStock from "@/components/filters/singularFilter/filterShopModelItems";
+import ShopStock from "@/components/filters/singularFilter/flterFireBaseShopItems";
 
 import styles from "./styles.module.css";
 
@@ -146,7 +145,7 @@ export default function Shop() {
 						actNum={profileDetails?.account} bnkNameM={shopBnk} bnkName={profileDetails?.bankName} actNameM={shopacctName} actName={profileDetails?.accountName} shopMarketM={ shopComplex} shopMarket={profileDetails?.market} />
 					</div>
 					<div className={styles.shopStockCover}>
-					<ShopModelStock shopName={`${shopName}`} />
+						{user ? <ShopStock shopId={`${shopId}`} />: <ShopModelStock shopName={`${shopName}`} />}
 					</div>
 				</div>
 				<div>

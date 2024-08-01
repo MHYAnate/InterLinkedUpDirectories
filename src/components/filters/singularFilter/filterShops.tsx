@@ -768,8 +768,14 @@ export default function ShopsFilter() {
 						<span className={styles.shopItemsBody}>{shop.offers} Services</span>
 					</div>
 			</div>:<></>}
-		
-		
+			<div 	onClick={() =>
+					router.push(
+						`/shop/` +
+							"?" +
+							set(
+								"shopId",
+								`${shop.shopId}`
+							) )} className={styles.enterShop}>Enter Shop</div>
 		</div>
 		));
 	}
