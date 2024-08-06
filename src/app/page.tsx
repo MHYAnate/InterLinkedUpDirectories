@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import ItemsFilter from "@/components/filters/singularFilter/filterItems";
 import ShopsFilter from "@/components/filters/singularFilter/filterShops";
+import CompanyFilter from "@/components/filters/singularFilter/filterCompany";
 import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies";
 import Hero from "@/components/hero/hero";
 
@@ -124,7 +125,11 @@ export default function Home() {
 									<VacanciesFilter />
 								</>
 							)}
-							{}
+							{selector === "Companies" && (
+								<>
+								<CompanyFilter/>
+								</>
+							)}
 						</div>
 					</div>
 				</div>

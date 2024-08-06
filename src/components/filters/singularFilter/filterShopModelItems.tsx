@@ -198,7 +198,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 					</div>
 
 					<div className={styles.InShopItemsDetailCover}>
-						<div className={styles.picSel}>
+						<div className={styles.inShopPicSel}>
 							<div
 								className={img === `${item.image}` ? styles.picH : styles.pic}
 								onClick={() => {

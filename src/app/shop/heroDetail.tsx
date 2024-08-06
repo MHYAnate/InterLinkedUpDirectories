@@ -29,7 +29,7 @@ const HeroDetail: React.FC<any> = ({
 			
 				<div className={styles.flexControl}>
 					<div className={styles.shopImgHolder}>
-
+						<div className={styles.titleTop} >SHOP DISPLAY PICTURE</div>
 						<Image
 							object-fit="cover"
 							className={styles.shopPic}

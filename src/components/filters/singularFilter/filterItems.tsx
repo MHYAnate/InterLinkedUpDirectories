@@ -214,7 +214,7 @@ export default function ItemsFilter() {
 			: [];
 
 	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage] = useState(8);
+	const [postsPerPage] = useState(6);
 
 	// Get current posts
 	const indexOfLastPost = currentPage * postsPerPage;
@@ -273,15 +273,6 @@ export default function ItemsFilter() {
 							<div className={styles.contactTitle}>price</div>
 							<div className={styles.contact}>{stock.price}</div>
 						</div>
-
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Address</div>
-							<div className={styles.address}>{stock.address}</div>
-						</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Contact</div>
-							<div className={styles.contact}>{stock.phone}</div>
-						</div>
 							<div className={styles.contactCover}>
 								<div className={styles.contactTitle}>features</div>
 								<div className={styles.contact}>{stock.features}</div>
@@ -290,6 +281,15 @@ export default function ItemsFilter() {
 								<div className={styles.contactTitle}>Condition</div>
 								<div className={styles.contact}>{stock.condition}</div>
 							</div>
+
+							<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Contact</div>
+							<div className={styles.contact}>{stock.phone}</div>
+						</div>
+							<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Address</div>
+							<div className={styles.address}>{stock.address}</div>
+						</div>
 						</div>
 					</div>
 				)}
@@ -406,7 +406,7 @@ export default function ItemsFilter() {
 					<div className={styles.imgCover}>
 						<Image
 							className={styles.idiImg}
-							src={`${stock.image}`}
+							src={ img === `${stock.image}` ? `${stock.image}`:img === `${stock.image2}`?`${stock.image2}`:`${stock.image}`}
 							alt={`${stock.title}`}
 							quality={100}
 							width={500}
@@ -414,80 +414,49 @@ export default function ItemsFilter() {
 							// unoptimized
 						/>
 					</div>
-					<div className={styles.innerTextStockRenderCover}>
-						<div className={styles.status}>{stock.status}</div>
+					<div className={styles.picSel}>
+						<div className={img === `${stock.image}`?styles.picH : styles.pic} onClick={()=>{setImg(`${stock.image}`)}}>
+							{`FRONT`}
+						</div>
+						<div className={img === `${stock.image2}`?styles.picH:styles.pic} onClick={()=>{setImg(`${stock.image2}`)}}>
+							{`SIDE`}
+						</div>
+					</div>
+					{more !== `${stock.docid}` && (<div className={styles.innerTextStockRenderCover}>
 						<div className={styles.contactCover}>
 							<div className={styles.contactTitle}>price</div>
 							<div className={styles.contact}>{stock.price}</div>
 						</div>
-
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Address</div>
-							<div className={styles.address}>{stock.address}</div>
-						</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Contact</div>
-							<div className={styles.contact}>{stock.number}</div>
-						</div>
-					</div>
-					<div className={styles.showWide}>
-						<div>
-							<Image
-								className={styles.idiImg}
-								src={`${stock.image2}`}
-								alt={`${stock.title}`}
-								quality={100}
-								width={500}
-								height={500}
-								// unoptimized
-							/>
-						</div>
-						<div className={styles.innerTextStockRenderCover}>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>features</div>
-								<div className={styles.contact}>{stock.features}</div>
-							</div>
-
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Inventory</div>
-								<div className={styles.address}>{stock.inventory}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Condition</div>
-								<div className={styles.contact}>{stock.condition}</div>
-							</div>
-						</div>
-					</div>
+					</div>)}
 				</div>
 				{more === `${stock.docid}` && (
 					<div className={styles.showMore}>
-						<div>
-							<Image
-								className={styles.idiImg}
-								src={`${stock.image2}`}
-								alt={`${stock.title}`}
-								quality={100}
-								width={500}
-								height={500}
-								// unoptimized
-							/>
-						</div>
-						<div className={styles.innerTextShowMoreRenderCover}>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>features</div>
-								<div className={styles.contact}>{stock.features}</div>
-							</div>
-
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Inventory</div>
-								<div className={styles.address}>{stock.inventory}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Condition</div>
-								<div className={styles.contact}>{stock.condition}</div>
-							</div>
-						</div>
+					<div className={styles.innerTextShowMoreRenderCover}>
+					
+					<div className={styles.status}>{stock.status}</div>
+					<div className={styles.contactCover}>
+						<div className={styles.contactTitle}>price</div>
+						<div className={styles.contact}>{stock.price}</div>
 					</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>features</div>
+							<div className={styles.contact}>{stock.features}</div>
+						</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Condition</div>
+							<div className={styles.contact}>{stock.condition}</div>
+						</div>
+
+						<div className={styles.contactCover}>
+						<div className={styles.contactTitle}>Contact</div>
+						<div className={styles.contact}>{stock.phone}</div>
+					</div>
+						<div className={styles.contactCover}>
+						<div className={styles.contactTitle}>Address</div>
+						<div className={styles.address}>{stock.address}</div>
+					</div>
+					</div>
+				</div>
 				)}
 				<button
 					className={more !== `${stock.docid}` ? styles.btn : styles.btnA}

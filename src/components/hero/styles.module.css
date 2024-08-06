@@ -61,7 +61,8 @@
   user-select: none;
   font-size: 3rem;
   font-weight: 500;
-  color: green;
+  /* color:  rgb(102, 102, 102); */
+   color: darkolivegreen;
   /* background-color: rgba(235, 235, 231, 0.7); */
   padding-left: 10px;
   padding-right: 10px;
@@ -70,8 +71,45 @@
   text-align: left;
   /* background-color:rgb(192, 192, 192, 0.7); */
   margin-bottom: 10px;
-  width: 50%;
+  width: 100%;
   margin-left: 1.5vw;
+  /* text-decoration: underline; */
+}
+.titleHero2{
+  user-select: none;
+  font-size: 3rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 1.5vw;
+}
+.you{
+  color: green;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 2.8rem;
+  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
+}
+.toWhat{
+  color: darkolivegreen;
+  font-weight: 500;
+}
+.matters{
+  color: darkseagreen;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 500;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
 }
 .slogan{
   user-select: none;
@@ -87,11 +125,22 @@
   background-color:silver;
 }
 @media screen and (max-width: 832px) {
+  .header{
+    margin-top: 20px;
+    width: 94vw;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: first baseline;
+    height: 100%;
+    flex-wrap: wrap;
+  }
 .titleHero{
   user-select: none;
   font-size: 3rem;
   font-weight: 500;
-  color: green;
   /* background-color: rgba(235, 235, 231, 0.7); */
   padding-left: 10px;
   padding-right: 10px;
@@ -100,9 +149,24 @@
   text-align: left;
   /* background-color:rgb(192, 192, 192, 0.7); */
   margin-bottom: 10px;
-  width: 70%;
   margin-left: 1vw;
   }
+
+  .titleHero2{
+    user-select: none;
+    font-size: 3rem;
+    font-weight: 500;
+    /* background-color: rgba(235, 235, 231, 0.7); */
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    /* background-color:rgb(192, 192, 192, 0.7); */
+    margin-bottom: 10px;
+    margin-left: 1vw;
+    }
+  
 }
 @media screen and (max-width: 770px) {
   .titleCover{
@@ -142,11 +206,17 @@
 }
 @media screen and (max-width: 453px) {
 .titleHero{
-  width: 90%;
   font-size: 2.8rem;
-  background-color:rgba(255, 252, 252, 0.7); 
   text-align: center;
   }
+  .titleHero2{
+    font-size: 2.8rem;
+    text-align: center;
+    }
+    .header{
+      margin-top: 20px;
+      background-color: rgba(235, 235, 231, 0.7);
+    }
 }
 @media screen and (max-width: 330px) {
   .boldP{

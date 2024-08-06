@@ -403,10 +403,10 @@ export default function ShopsFilter() {
 				</div>
 				</div>
 	
-				<div className={more !== `${shop.id}`?styles.shoptitleBodyDivide : styles.hide}>
-					<div className={styles.imgCover}>
+				<div className={more !== `${shop.id}`?styles.companyBodyDivied : styles.hide}>
+					<div className={styles.shopImgCover}>
 						<Image
-							className={styles.idiImg}
+							className={styles.shopImg}
 							src={`${shop.shopPic}`}
 							alt={`${shop.shopName}`}
 							quality={100}
@@ -415,21 +415,10 @@ export default function ShopsFilter() {
 							// unoptimized
 						/>
 					</div>
-					<div className={styles.innerTextShopRenderCover}>
-					<div className={styles.contactCover}>
-							<div className={styles .contactShopTitle}> Tag</div>
-							<div className={styles.shopcontact}>{shop.shopTag}</div>
+					<div className={styles.showCompanyVacanciesTag}>
+							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
+							<div className={styles.companyVacancyDetail}>{shop.shopTag}</div>
 						</div>
-						<div className={styles.contactCover}>
-							<div className={styles .contactShopTitle}> Market</div>
-							<div className={styles.shopcontact}>{shop.market}</div>
-						</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactShopTitle}> Address</div>
-							<div className={styles.addressShop}>{shop.address}</div>
-						</div>
-						
-					</div>
 					
 				</div>
 				
@@ -463,22 +452,38 @@ export default function ShopsFilter() {
 				{more === `${shop.id}` ? <div className={styles.displayShopItems}>{shopItems(shop.name)}</div> : <></>}
 
 				{more === `${shop.shopName}` ?<div className={styles.displayShopItems}>
-				<div className={styles.showMoreDetailsBody}>
-							<span className={styles.shopItemsDetailTitle}>Owner</span>
-							<span className={styles.shopItemsBody}>{shop.name}</span>
+
+				<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Market</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.market} </span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>Contact</span>
-							<span className={styles.shopItemsBody}>{shop.phone} </span>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.address} </span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>Email</span>
-							<span className={styles.shopItemsBody}>{shop.email}</span>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Owner</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.name} </span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>Offer</span>
-							<span className={styles.shopItemsBody}>{shop.offers} Services</span>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.phone} </span>
 						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.email} </span>
+						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Offer</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.offers} </span>
+						</div>
+
+						
 				</div>:<></>}
 				<div 
 				onClick={() =>
@@ -682,33 +687,22 @@ export default function ShopsFilter() {
 			</div>
 			</div>
 
-			<div className={more !== `${shop.shopId}`?styles.shoptitleBodyDivide : styles.hide}>
-				<div className={styles.imgCover}>
-					<Image
-						className={styles.idiImg}
-						src={`${shop.shopPic}`}
-						alt={`${shop.shopName}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-				</div>
-				<div className={styles.innerTextShopRenderCover}>
-				<div className={styles.contactCover}>
-						<div className={styles .contactShopTitle}> Tag</div>
-						<div className={styles.contact}>{shop.shopTag}</div>
+			<div className={more !== `${shop.shopId}`?styles.companyBodyDivied  : styles.hide}>
+			<div className={styles.shopImgCover}>
+						<Image
+							className={styles.shopImg}
+							src={`${shop.shopPic}`}
+							alt={`${shop.shopName}`}
+							quality={100}
+							width={500}
+							height={500}
+							// unoptimized
+						/>
 					</div>
-					<div className={styles.contactCover}>
-						<div className={styles .contactShopTitle}> Market</div>
-						<div className={styles.contact}>{shop.market}</div>
-					</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactShopTitle}> Address</div>
-						<div className={styles.addressShop}>{shop.address}</div>
-					</div>
-				
-				</div>
+					<div className={styles.showCompanyVacanciesTag}>
+							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
+							<div className={styles.companyVacancyDetail}>{shop.shopTag}</div>
+						</div>
 			</div>
 			
 			
@@ -724,49 +718,53 @@ export default function ShopsFilter() {
 						// unoptimized
 					/>
 				</div><form>
-				<div className={styles.shopItemSelectCover}>
-					<select  value={tag!==(undefined || null)? tag: ""} className={styles.shopItemSelect} {...register("tag")}
-
-					>
-						<option className={styles.shopItemOption} value="Select Tag">
-							Select Tag
-						</option>
-						{renderAvailableTag()}
-					</select>
-				</div>
-				<div className={styles.shopItemInputCover}>
-					<input
-						type="search"
-						className={styles.shopItemInput}
-						{...register("title")}
-						value={shopSearchInput}
-						onChange={updateShopItemSearchInput}
-						id="vendorAddress"
-						placeholder="Name of Item"
-					/>
-				</div>
-				</form>
+					<div className={styles.shopItemInputCover}>
+						<input
+							type="search"
+							className={styles.shopItemInput}
+							{...register("title")}
+							value={shopSearchInput}
+							onChange={updateShopItemSearchInput}
+							id="vendorAddress"
+							placeholder="Name of Item"
+						/>
+					</div>
+					</form>
 			</div> : <></>}
 
 			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}><ShopItemsComponent shopId={shop.shopId} value={shopSearchInput} tag={tag} /></div> : <></>} 
 
 			{more === `${shop.shopName}` ? <div className={styles.displayShopItems}>
-			<div className={styles.showMoreDetailsBody}>
-						<span className={styles.shopItemsDetailTitle}>Owner</span>
-						<span className={styles.shopItemsBody}>{shop.name}</span>
-					</div>
-					<div>
-						<span className={styles.shopItemsDetailTitle}>Contact</span>
-						<span className={styles.shopItemsBody}>{shop.phone} </span>
-					</div>
-					<div>
-						<span className={styles.shopItemsDetailTitle}>Email</span>
-						<span className={styles.shopItemsBody}>{shop.email}</span>
-					</div>
-					<div>
-						<span className={styles.shopItemsDetailTitle}>Offer</span>
-						<span className={styles.shopItemsBody}>{shop.offers} Services</span>
-					</div>
+			<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Market</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.market} </span>
+						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.address} </span>
+						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Owner</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.name} </span>
+						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.phone} </span>
+						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.email} </span>
+						</div>
+
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Offer</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{shop.offers} </span>
+						</div>
+
 			</div>:<></>}
 			<div 	onClick={() =>
 					router.push(

@@ -238,7 +238,7 @@ export default function VacanciesFilter() {
 					
 						{more ===`${vacancy.id}` && (<div  className={more ===`${vacancy.id}`?styles.dropDown: ""}>
 					<div className={styles.coverDetail}>
-						<div className={styles.detailTitle}>Adress</div>
+						<div className={styles.detailTitle}>Address</div>
 						<div className={styles.detail}>{vacancy.addrees}</div>
 					</div>
 					<div className={styles.coverDetail}>
@@ -369,7 +369,7 @@ export default function VacanciesFilter() {
 				</div>
 
 				
-					{more ===`${vacancy.id}` && (<div  className={more ===`${vacancy.id}`?styles.dropDown: ""}>
+					{more ===`${vacancy.docId}` && (<div  className={more ===`${vacancy.docId}`?styles.dropDown: ""}>
 				<div className={styles.coverDetail}>
 					<div className={styles.detailTitle}>Adress</div>
 					<div className={styles.detail}>{vacancy.addrees}</div>
@@ -384,7 +384,7 @@ export default function VacanciesFilter() {
 				</div>
 				
 					</div>)}	
-					<button className={more !==`${vacancy.id}`?styles.btn : styles.btnA} onClick={more!==`${vacancy.id}`?()=> selectTab(`${vacancy.id}`):()=> selectTab("")}>{more===`${vacancy.id}`?"Less":"More Details"}</button>
+					<button className={more !==`${vacancy.docId}`?styles.btn : styles.btnA} onClick={more!==`${vacancy.docId}`?()=> selectTab(`${vacancy.docId}`):()=> selectTab("")}>{more===`${vacancy.docId}`?"Less":"More Details"}</button>
 			</div>
 		</div>
 		));

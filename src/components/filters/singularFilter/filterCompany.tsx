@@ -3,10 +3,13 @@ import { useState, useEffect, useCallback, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { StateData } from "@/database/stateData";
-import { MarketStatus } from "@/database/marketStatus";
 import { MarketTag } from "@/database/marketTag";
-import { MarketShopTag } from "@/database/marketShopTag";
+import { CompanyTag } from "@/database/companyTag";
 import { ShopData } from "@/database/shopData";
+import { CompanyData } from "@/database/companyData";
+import ShopItemsComponent from "./fBIShopItem";
+import Pagination from "@/components/btn/paginationBtn";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import {
 	collection,
@@ -34,28 +37,29 @@ type FormValue = {
 	countrySelect: string;
 	stateSelect: string;
 	areaSelect: string;
-	src: string;
+	companyPic: string;
 	tag: string;
-	shopTag: string;
+	companyTag: string;
 	status: string;
 	title: string;
 	docid: string;
-	items: [
+	vacancies: [
 		{
 			image: string;
-			image2: string;
-			title: string;
-			status: string;
-			price: string;
-			features: string;
-			condition: string;
-			inventory: string;
-			tag: string;
+			jobTitle: string;
+			responsibility: string;
+			qualification: string;
+			salary: string;
+			opening: string;
+			closing: string;
 		}
 	];
+	complex:string;
+	market:string;
+	id:string;
 };
 
-export default function ShopsFilter() {
+export default function CompanyFilter() {
 	const {
 		register,
 		handleSubmit,
@@ -80,13 +84,28 @@ export default function ShopsFilter() {
 			stateSelect: "",
 			areaSelect: "",
 			tag: "",
-			shopTag: "",
+			companyTag: "",
 			status: "",
 			title: "",
+			complex:"",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
 	});
+
+	const searchParams = useSearchParams();
+
+	const router = useRouter();
+
+	const set = useCallback(
+		(name: string, value: string) => {
+			const params = new URLSearchParams(searchParams.toString());
+			params.set(name, value);
+
+			return params.toString();
+		},
+		[searchParams]
+	);
 
 	const [isPending, startTransition] = useTransition();
 
@@ -106,9 +125,11 @@ export default function ShopsFilter() {
 
 	const selectArea = watch("areaSelect");
 
+	const selectComplex = watch("complex");
+
 	const tag = watch("tag");
 
-	const shopTag = watch("shopTag");
+	const companyTag = watch("companyTag");
 
 	const status = watch("status");
 
@@ -124,6 +145,8 @@ export default function ShopsFilter() {
 		});
 	}
 
+
+
 	const countryValue =
 		typeof document !== "undefined"
 			? (document.querySelector('[name="countrySelect"]') as HTMLInputElement)
@@ -136,9 +159,18 @@ export default function ShopsFilter() {
 					?.value || ""
 			: "";
 
+			const areaValue =
+		typeof document !== "undefined"
+			? (document.querySelector('[name="areaSelect"]') as HTMLInputElement)
+					?.value || ""
+			: "";
+
 	const AreaList = StateData.find(
 		(areaList) => areaList.name === `${stateValue}`
 	);
+
+
+	
 
 	function renderAvailableStates() {
 		if (!StateData) {
@@ -169,6 +201,9 @@ export default function ShopsFilter() {
 		));
 	}
 
+
+
+
 	function renderAvailableTag() {
 		if (!MarketTag) {
 			// Return a message or component indicating that the "Maintenance" category is not found
@@ -181,14 +216,13 @@ export default function ShopsFilter() {
 		));
 	}
 
-	
 
-	function renderAvailablShopTag() {
-		if (!MarketShopTag) {
+	function renderAvailablCompanyTag() {
+		if (!CompanyTag) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
 		}
-		return MarketShopTag.map((tag) => (
+		return CompanyTag.map((tag) => (
 			<option className={styles.renderCover} key={tag.id} value={tag.tag}>
 				{tag.tag}
 			</option>
@@ -196,111 +230,107 @@ export default function ShopsFilter() {
 	}
 
 	function shopItems(shopName: string) {
-		const items = ShopData.find((shop) => shop.name === `${shopName}`);
+		const vacancy = CompanyData.find((company) => company.name === `${shopName}`);
 
-		if (!items) return null;
+		if (!vacancy) return null;
 
-		
-	const filteredShopItemsTag = items?.items.filter((eachItem) => {
-		const text = eachItem.tag.toLowerCase();
-		return text.includes(tag.toLowerCase());
-	});
 
-	const filteredShopItemsName = filteredShopItemsTag.filter((eachItem) => {
-		const text = eachItem.title.toLowerCase();
+	const filteredCompanyVacancies =  vacancy?.vacancies.filter((eachItem) => {
+		const text = eachItem.jobTitle.toLowerCase();
 		return text.includes(shopSearchInput.toLowerCase());
 	});
 
-		return filteredShopItemsName?.map((item) => (
-			<div className={styles.renderCover} key={item.id}>
-				<div className={styles.shopItemsCover}>
-					<div className={styles.shopsItemsImgCover}>
-						<Image
-							className={styles.shopItemImg}
-							src={`${item.image}`}
-							alt={`${item.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-					<div className={styles.shopItemsDetailCover}>
-						<div className={styles.shopItemsDetailTitleName}>{item.title}</div>
-						<div className={styles.shopItemsBody}>{item.price}</div>
-					</div>
+		return filteredCompanyVacancies?.map((vacancy) => (
+			<div className={styles.renderCover} key={vacancy.id}>
+				<div className={styles.showCompanyVacancies}>
+					
+						<div className={styles.CompanyVacancyBodyCover}>
+							<span className={styles.companyVacancyTitle}>Job Title</span>
+							<span className={styles.companyVacancyDetail}>{vacancy.jobTitle}</span>
+						</div>
+						<div className={styles.CompanyVacancyBodyCover}>
+							<span className={styles.companyVacancyTitle}>Salary</span>
+							<span className={styles.companyVacancyDetail}>{vacancy.salary}</span>
+						</div>
+					
 				</div>
-				{show === `${item.id}` && (
-					<div className={styles.showMoreDetails}>
-						<div className={styles.shopsItemsImgCover}>
-						<Image
-							className={styles.shopItemImg}
-							src={`${item.image2}`}
-							alt={`${item.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-						<div>
-							<div className={styles.showMoreDetailsBody}>
-							<span className={styles.shopItemsDetailTitle}>Condition</span>
-							<span className={styles.shopItemsBody}>{item.condition}</span>
+				{show === `${vacancy.id}` && (
+					<div className={styles.showCompanyVacancies}>
+            <div className={styles.CompanyVacancyBodyCover}>
+							<span className={styles.companyVacancyTitle}>Responsibility</span>
+							<span className={styles.companyVacancyDetail}>{vacancy.responsibility}</span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>Status</span>
-							<span className={styles.shopItemsBody}>{item.status}</span>
+						<div className={styles.CompanyVacancyBodyCover}>
+							<span className={styles.companyVacancyTitle}>Qualification</span>
+							<span className={styles.companyVacancyDetail}>{vacancy.qualification}</span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>feature</span>
-							<span className={styles.shopItemsBody}>{item.features}</span>
+
+						<div className={styles.CompanyVacancyBodyCover}>
+							<span className={styles.companyVacancyTitle}>Openning Date</span>
+							<span className={styles.companyVacancyDetail}>{vacancy.opening}</span>
 						</div>
-					</div>
-						
+						<div className={styles.CompanyVacancyBodyCover}>
+							<span className={styles.companyVacancyTitle}>Clossing Date</span>
+							<span className={styles.companyVacancyDetail}>{vacancy.closing}</span>
+						</div>				
 					</div>
 				)}
 				<div
-					className={show !== `${item.id}` ? styles.btn : styles.btnA}
+					className={show !== `${vacancy.id}` ? styles.vShowbtn : styles.vShowbtn}
 					onClick={
-						show !== `${item.id}`
-							? () => setShow(`${item.id}`)
+						show !== `${vacancy.id}`
+							? () => setShow(`${vacancy.id}`)
 							: () => setShow("")
 					}
 				>
-					{show === `${item.id}` ? "Less" : "Details"}
+					{show === `${vacancy.id}` ? "Less" : "Details"}
 				</div>
 			</div>
 		));
 	}
 
-
-	const filteredShopListcountry = ShopData.filter((eachItem) => {
-		const text = eachItem.country.toLowerCase();
-		return text.includes(selectCountry.toLowerCase());
-	});
-	const filteredShopListstate =
-		filteredShopListcountry.length > 0
-			? filteredShopListcountry.filter((eachItem) => {
+	const filteredShopListstate = 
+	CompanyData.filter((eachItem) => {
 					const text = eachItem.state.toLowerCase();
-					return text.includes(selectState.toLowerCase());
-			  })
-			: [];
+					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
+			  });
+
 	const filteredShopListarea =
 		filteredShopListstate.length > 0
 			? filteredShopListstate.filter((eachItem) => {
 					const text = eachItem.area.toLowerCase();
-					return text.includes(selectArea.toLowerCase());
+					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
+			  })
+			: [];
+
+
+			const filteredcompanyTag =
+		filteredShopListarea .length > 0
+			? filteredShopListarea .filter((eachItem) => {
+					const text = eachItem.companyTag.toLowerCase();
+					return (companyTag !==(null || undefined|| "" || "Select Tag")?text.includes(companyTag.toLowerCase()):text );
 			  })
 			: [];
 
 	const filteredShopList =
-		filteredShopListarea.length > 0
-			? filteredShopListarea.filter((eachItem) => {
-					const text = eachItem.shopName.toLowerCase();
+		filteredcompanyTag.length > 0
+			? filteredcompanyTag.filter((eachItem) => {
+					const text = eachItem.companyName.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
 			: [];
+
+			const [currentPage, setCurrentPage] = useState(1);
+			const [postsPerPage] = useState(4);
+		
+			// Get current posts
+			const indexOfLastPost = currentPage * postsPerPage;
+			const indexOfFirstPost = indexOfLastPost - postsPerPage;
+			const currentPosts = filteredShopList.slice(indexOfFirstPost, indexOfLastPost);
+
+				// Change page
+	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
 
 	function RenderAvailableModelShops() {
 		if (filteredShopList.length === 0) {
@@ -312,85 +342,65 @@ export default function ShopsFilter() {
 			);
 		}
 
-		return filteredShopList?.map((shop) => (
-			<div className={styles.shopRenderCover} key={shop.id}>
-				<div className={styles.shopName}>{shop.shopName} </div>
-				<div className={styles.shopTagCover}>
-					<div className={styles.shopTagTitle}> Tag</div>
-					<div className={styles.shopTag}>{shop.shopTag}</div>
+		return currentPosts?.map((company) => (
+			<div className={styles.shopRenderCover} key={company.id}>
+				<div className={styles.shopName}>{company.companyName} </div>
+				<div className={styles.shopNavBtnCover}>
+				<div
+					className={more !== `${company.id}` ? styles.btnShop : styles.btnShopA}
+					onClick={
+						more !== `${company.id}`
+							? () => setMore(`${company.id}`)
+							: () => setMore("")
+					}
+				>
+					{more === `${company.id}` ? "Vacancies" : "Vacancies"}
 				</div>
-				<div className={more !== `${shop.id}`?styles.shoptitleBodyDivide : styles.hide}>
-					<div className={styles.imgCover}>
+				<div
+					className={more !== `${company.companyName}` ? styles.btnShop : styles.btnShopA}
+					onClick={
+						more !== `${company.companyName}`
+							? () => setMore(`${company.companyName}`)
+							: () => setMore("")
+					}
+				>
+					{more === `${company.companyName}` ? "DETAILS" : "details"}
+				</div>
+				</div>
+	
+				<div className={more !== `${company.id}`?styles.companyBodyDivied : styles.hide}>
+					<div className={styles.companyImgCover}>
 						<Image
-							className={styles.idiImg}
-							src={`${shop.shopPic}`}
-							alt={`${shop.shopName}`}
+							className={styles.companyImg}
+							src={`${company.companyPic}`}
+							alt={`${company.companyName}`}
 							quality={100}
 							width={500}
 							height={500}
 							// unoptimized
 						/>
 					</div>
-					<div className={styles.innerTextShopRenderCover}>
-						<div className={styles.ShopContactCover}>
-							<div className={styles.shopContactTitle}> Address</div>
-							<div className={styles.shopAddress}>{shop.address}</div>
-						</div>
-						<div className={styles.shopContactCover}>
-							<div className={styles.shopContactTitle}> Contact</div>
-							<div className={styles.shopContact}>{shop.phone}</div>
+					<div className={styles.showCompanyVacanciesTag}>
+							<div className={styles.companyVacancyTitleAbtUS}> Company Tag</div>
+							<div className={styles.companyVacancyDetail}>{company.companyTag}</div>
 						</div>
 					</div>
-				</div>
-				<div className={styles.shopNavBtnCover}>
-				<div
-					className={more !== `${shop.id}` ? styles.btnShop : styles.btnShopA}
-					onClick={
-						more !== `${shop.id}`
-							? () => setMore(`${shop.id}`)
-							: () => setMore("")
-					}
-				>
-					{more === `${shop.id}` ? "STOCKS" : "stocks"}
-				</div>
-				<div
-					className={more !== `${shop.shopName}` ? styles.btnShop : styles.btnShopA}
-					onClick={
-						more !== `${shop.shopName}`
-							? () => setMore(`${shop.shopName}`)
-							: () => setMore("")
-					}
-				>
-					{more === `${shop.shopName}` ? "DETAILS" : "details"}
-				</div>
-				</div>
-				
-				{more === `${shop.id}` ? <div className={styles.displayShopItemsFilter}>
+				{more === `${company.id}` ? <div className={styles.displayShopItemsFilter}>
 				<div className={styles.searchShopImgCover}>
 						<Image
 							className={styles.searchShopImg}
-							src={`${shop.shopPic}`}
-							alt={`${shop.shopName}`}
+							src={`${company.companyPic}`}
+							alt={`${company.companyName}`}
 							quality={100}
 							width={500}
 							height={500}
 							// unoptimized
 						/>
 					</div><form>
-					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("tag")}
-	
-						>
-							<option className={styles.option} value="Filter Tag">
-								Filter Tag
-							</option>
-							{renderAvailableTag()}
-						</select>
-					</div>
-					<div className={styles.inputCover}>
+					<div className={styles.shopItemInputCover}>
 						<input
 							type="search"
-							className={styles.input}
+							className={styles.shopItemInput}
 							{...register("title")}
 							value={shopSearchInput}
 							onChange={updateShopItemSearchInput}
@@ -398,27 +408,66 @@ export default function ShopsFilter() {
 							placeholder="Name of Item"
 						/>
 					</div>
-
 					</form>
 				</div> : <></>}
 
-				{more === `${shop.id}` ? <div className={styles.displayShopItems}>{shopItems(shop.name)}</div> : <></>}
+				{more === `${company.id}` ? <div className={styles.displayShopItems}>{shopItems(company.name)}</div> : <></>}
 
-				{more === `${shop.shopName}` ?<div className={styles.displayShopItems}>
-				<div className={styles.showMoreDetailsBody}>
-							<span className={styles.shopItemsDetailTitle}>Owner</span>
-							<span className={styles.shopItemsBody}>{shop.name}</span>
+				{more === `${company.companyName}` ?<div className={styles.displayShopItems}>
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>About us</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{company.about} </span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>Email</span>
-							<span className={styles.shopItemsBody}>{shop.email}</span>
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{company.address} </span>
 						</div>
-						<div>
-							<span className={styles.shopItemsDetailTitle}>Offer</span>
-							<span className={styles.shopItemsBody}>{shop.offers} Services</span>
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{company.phone} </span>
+						</div>
+						<div className={styles.showCompanyVacanciesAbtUs}>
+							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
+							<span className={styles.companyVacancyDetailAbtUs}>{company.email} </span>
 						</div>
 				</div>:<></>}
-			
+				<div 
+				onClick={() =>
+					router.push(
+						`/shop/` +
+							"?" +
+							set(
+								"shopName",
+								`${company.companyName}`
+							) +
+							"&" +
+							set(
+								"shopImg",
+								`${company.companyPic}`
+							)
+							+
+							"&" +
+							set(
+								"shopAddress",
+								`${company.address}`
+							)
+							+
+							"&" +
+							set(
+								"shopManager",
+								`${company.name}`
+							)
+							+
+							"&" 
+							+
+							"&" +
+							set(
+								"contact",
+								`${company.phone}`
+							)
+					)
+				}
+				className={styles.enterShop}>{"Enter Company's Page"}</div>
 			
 			</div>
 		));
@@ -442,7 +491,7 @@ export default function ShopsFilter() {
 
 	const [shopProfileDetails, setShopProfileDetails] = useState<FormValue[]>([]);
 
-	const shopDetailRef = collection(database, `MarketShop`);
+	const shopDetailRef = collection(database, `Companies`);
 
 	const shopsquery = query(
 		shopDetailRef,
@@ -474,17 +523,10 @@ export default function ShopsFilter() {
 	}),
 		[];
 
-	const filteredFirebaseCountryShopList =
-		shopProfileDetails?.length > 0
-			? shopProfileDetails.filter((eachItem) => {
-					const text = eachItem.countrySelect.toLowerCase();
-					return text.includes(searchInput.toLowerCase());
-			  })
-			: [];
 
 	const filteredFirebaseStateShopList =
-		filteredFirebaseCountryShopList.length > 0
-			? filteredFirebaseCountryShopList.filter((eachItem) => {
+	shopProfileDetails?.length > 0
+	? shopProfileDetails.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
 					return text.includes(selectState.toLowerCase());
 			  })
@@ -497,57 +539,165 @@ export default function ShopsFilter() {
 			  })
 			: [];
 
-	const filteredFirebaseShopTagList =
-		filteredFirebaseaAreaShopList.length > 0
-			? filteredFirebaseaAreaShopList.filter((eachItem) => {
-					const text = eachItem.shopTag?.toLowerCase();
-					return text?.includes(shopTag.toLowerCase());
+	const filteredFirebasecompanyTagList =
+		filteredFirebaseStateShopList.length > 0
+			? filteredFirebaseStateShopList.filter((eachItem) => {
+					const text = eachItem.companyTag?.toLowerCase();
+					return text?.includes(companyTag.toLowerCase());
 			  })
 			: [];
 
 	const filteredFirebaseShopSearchInputList =
-		filteredFirebaseShopTagList.length > 0
-			? filteredFirebaseShopTagList.filter((eachItem) => {
+		filteredFirebasecompanyTagList.length > 0
+			? filteredFirebasecompanyTagList.filter((eachItem) => {
 					const text = eachItem.title.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
 			: [];
 
+
+		
+	useEffect(() => {
+		handleGetShopeDetail();
+	},[handleGetShopeDetail]);
+	
+	
+	const indexOfLastFireBasePost = currentPage * postsPerPage;
+	const indexOfFirstFireBasePost = indexOfLastPost - postsPerPage;
+	const currentFireBasePosts = filteredFirebaseShopSearchInputList.slice(
+		indexOfFirstFireBasePost,
+		indexOfLastFireBasePost
+	);
+	
+
 	function RenderAvailableShops() {
+		
 		if (shopProfileDetails === null) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
 		}
 
-		return filteredFirebaseShopSearchInputList?.map((vendor: any) => (
-			<div className={styles.stockRenderCover} key={vendor?.name}>
+		return currentFireBasePosts?.map((shop: any) => (
+			<div className={styles.shopRenderCover} key={shop.shopId}>
+			<div className={styles.shopName}>{shop.shopName} </div>
+			<div className={styles.shopNavBtnCover}>
+			<div
+				className={more !== `${shop.shopId}` ? styles.btnShop : styles.btnShopA}
+				onClick={
+					more !== `${shop.shopId}`
+						? () => setMore(`${shop.shopId}`)
+						: () => setMore("")
+				}
+			>
+				{more === `${shop.shopId}` ? "Vacancies" : "Vacancies"}
+			</div>
+			<div
+				className={more !== `${shop.shopName}` ? styles.btnShop : styles.btnShopA}
+				onClick={
+					more !== `${shop.shopName}`
+						? () => setMore(`${shop.shopName}`)
+						: () => setMore("")
+				}
+			>
+				{more === `${shop.shopName}` ? "DETAILS" : "details"}
+			</div>
+			</div>
+
+			<div className={more !== `${shop.shopId}`?styles.shoptitleBodyDivide : styles.hide}>
 				<div className={styles.imgCover}>
-					<div className={styles.vendorName}>{vendor.name}</div>
 					<Image
 						className={styles.idiImg}
-						src={`${vendor.src ? vendor.src : "/placeholder.jpg"}`}
-						alt={`${vendor.name}`}
+						src={`${shop.shopPic}`}
+						alt={`${shop.shopName}`}
 						quality={100}
 						width={500}
 						height={500}
 						// unoptimized
 					/>
 				</div>
-				<div className={styles.innerTextShopkRenderCover}>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Shop Tag</div>
-						<div className={styles.contact}>{vendor.shopTag}</div>
-					</div>
-					<div className={styles.addresCover}>
-						<div className={styles.addressTitle}>Address</div>
-						<div className={styles.address}>{vendor.address}</div>
+				<div className={styles.innerTextShopRenderCover}>
+				<div className={styles.contactCover}>
+						<div className={styles .contactShopTitle}> Tag</div>
+						<div className={styles.contact}>{shop.companyTag}</div>
 					</div>
 					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Contact</div>
-						<div className={styles.contact}>{vendor.number}</div>
+						<div className={styles .contactShopTitle}> Market</div>
+						<div className={styles.contact}>{shop.market}</div>
 					</div>
+					<div className={styles.contactCover}>
+						<div className={styles.contactShopTitle}> Address</div>
+						<div className={styles.addressShop}>{shop.address}</div>
+					</div>
+				
 				</div>
 			</div>
+			
+			
+			{more === `${shop.shopId}` ? <div className={styles.displayShopItemsFilter}>
+			<div className={styles.searchShopImgCover}>
+					<Image
+						className={styles.searchShopImg}
+						src={`${shop.shopPic}`}
+						alt={`${shop.shopName}`}
+						quality={100}
+						width={500}
+						height={500}
+						// unoptimized
+					/>
+				</div><form>
+				<div className={styles.shopItemSelectCover}>
+					<select  value={tag!==(undefined || null)? tag: ""} className={styles.shopItemSelect} {...register("tag")}
+
+					>
+						<option className={styles.shopItemOption} value="Select Tag">
+							Select Tag
+						</option>
+						{renderAvailableTag()}
+					</select>
+				</div>
+				<div className={styles.shopItemInputCover}>
+					<input
+						type="search"
+						className={styles.shopItemInput}
+						{...register("title")}
+						value={shopSearchInput}
+						onChange={updateShopItemSearchInput}
+						id="vendorAddress"
+						placeholder="Name of Item"
+					/>
+				</div>
+				</form>
+			</div> : <></>}
+
+			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}><ShopItemsComponent shopId={shop.shopId} value={shopSearchInput} tag={tag} /></div> : <></>} 
+
+			{more === `${shop.shopName}` ? <div className={styles.displayShopItems}>
+			<div className={styles.showMoreDetailsBody}>
+						<span className={styles.shopItemsDetailTitle}>Owner</span>
+						<span className={styles.shopItemsBody}>{shop.name}</span>
+					</div>
+					<div>
+						<span className={styles.shopItemsDetailTitle}>Contact</span>
+						<span className={styles.shopItemsBody}>{shop.phone} </span>
+					</div>
+					<div>
+						<span className={styles.shopItemsDetailTitle}>Email</span>
+						<span className={styles.shopItemsBody}>{shop.email}</span>
+					</div>
+					<div>
+						<span className={styles.shopItemsDetailTitle}>Offer</span>
+						<span className={styles.shopItemsBody}>{shop.offers} Services</span>
+					</div>
+			</div>:<></>}
+			<div 	onClick={() =>
+					router.push(
+						`/shop/` +
+							"?" +
+							set(
+								"shopId",
+								`${shop.shopId}`
+							) )} className={styles.enterShop}>Enter Shop</div>
+		</div>
 		));
 	}
 
@@ -556,41 +706,27 @@ export default function ShopsFilter() {
 			<form className={styles.filter} onSubmit={handleSubmit(console.log)}>
 				<div className={styles.selectGroup}>
 					<div className={styles.selectCover}>
-						<select
-							className={styles.select}
-							{...register("countrySelect")}
-							value={countryValue}
-						>
-							<option className={styles.option} value="select Country">
-								Filter Country
-							</option>
-							<option className={styles.option} value="Nigeria">
-								Nigeria
-							</option>
-						</select>
-					</div>
-					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("stateSelect")}>
+						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
 							<option className={styles.option} value="select State">
-								Filter State
+							Select State
 							</option>
-							{selectCountry === "Nigeria" && renderAvailableStates()}
+							{renderAvailableStates()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("areaSelect")}>
-							<option className={styles.option} value="select Area">
-								Filter Area
+						<select value={selectArea!==(undefined || null)? selectArea:(selectState?"": "Select Area")} className={styles.select} {...register("areaSelect")}>
+							<option className={styles.option} value="Select Area">
+								Select Area
 							</option>
 							{selectState === `${stateValue}` && renderAvailableAreas()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
-						<select className={styles.select} {...register("shopTag")}>
-							<option className={styles.option} value="select Tag">
-								Filter Tag
+						<select value={companyTag!==(undefined || null)? companyTag:(selectCountry?"": "select market")} className={styles.select} {...register("companyTag")}>
+							<option className={styles.option} value="Select Tag">
+								Select Tag
 							</option>
-							{renderAvailablShopTag()}
+							{renderAvailablCompanyTag()}
 						</select>
 					</div>
 					<div className={styles.inputCover}>
@@ -606,15 +742,44 @@ export default function ShopsFilter() {
 					</div>
 				</div>
 			</form>
-
 			<div className={styles.displayFilter}>
 				{isClient && (
 					<div className={styles.renderVendorInnerCover}>
-						{filteredFirebaseCountryShopList?.length > 0
+						{shopProfileDetails?.length > 0
 							? RenderAvailableShops()
 							: RenderAvailableModelShops()}
+							{shopProfileDetails?.length > 0?<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseStateShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagi}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 					</div>
 				)}
+				{shopProfileDetails?.length > 0?<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredFirebaseStateShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>:<div className={styles.pagiMid}>
+					<Pagination
+						postsPerPage={postsPerPage}
+						totalPosts={filteredShopList.length}
+						paginate={paginate}
+						currentpage={currentPage}
+					/>{" "}
+				</div>}
 			</div>
 		</div>
 	);
