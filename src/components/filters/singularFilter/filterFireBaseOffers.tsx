@@ -148,12 +148,8 @@ const FireBaseOffers: React.FC<companyId> = ({ companyId , vendorId  }) => {
 					/>
 				</div>
 			</div>: <></>}
-				<div className={styles.showMore}>
+				<div className={styles.showMoreOffer}>
 				<div className={styles.innerTextShowMoreRenderCover}>
-          {offer.src?  <></> :<div className={styles.contactCover}>
-					<div className={styles.contactTitle}>Title</div>
-					<div className={styles.contact}>{offer.title}</div>
-				</div>}
         <div className={styles.contactCover}>
 					<div className={styles.contactTitle}>Detail</div>
 					<div className={styles.contact}>{offer.detail}</div>
@@ -176,7 +172,7 @@ const FireBaseOffers: React.FC<companyId> = ({ companyId , vendorId  }) => {
 							value={offerSearchInput}
 							onChange={updateSearchInput}
 							id="vendorAddress"
-							placeholder="Search Job Title"
+							placeholder="Search Title"
 						/>
 					</div>
 				</div>
