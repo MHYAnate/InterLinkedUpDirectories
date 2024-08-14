@@ -241,7 +241,7 @@
   text-shadow: 0.5px 0.5px 1px black, 0 0 2.5px black, 0 0 2.5px black;
   user-select: none;
   text-transform: uppercase;
-  width: 250px;
+  width: 200px;
 }
 
 .imgSlideEnter{
@@ -261,7 +261,7 @@
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
 	animation: heartbeat 7s ease-in-out infinite both;
   margin-top: 5px;
-  width: 50px;
+  width: 100px;
   height: 70px;
   text-shadow: 0px 0px 1px black, 0 0 2.5px black, 0 0 9.5px black;
   text-align: center;
