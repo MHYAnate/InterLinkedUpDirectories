@@ -172,7 +172,7 @@ const FireBaseStaff: React.FC<companyId> = ({ companyId , vendorId }) => {
 							value={staffSearchInput}
 							onChange={updateSearchInput}
 							id="vendorAddress"
-							placeholder="Search Job Title"
+							placeholder="Search Name"
 						/>
 					</div>
 				</div>

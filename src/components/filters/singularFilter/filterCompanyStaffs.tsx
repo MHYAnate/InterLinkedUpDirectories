@@ -128,7 +128,7 @@ const CompanyVacancyModel: React.FC<CompanyName> = ({ companyName }) => {
 							value={staffSearchInput}
 							onChange={updateSearchInput}
 							id="vendorAddress"
-							placeholder="Search Job Title"
+							placeholder="Search Name"
 						/>
 					</div>
 				</div>

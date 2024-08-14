@@ -136,7 +136,7 @@ const VendorStaffModel: React.FC<Vendor> = ({ Vendor, vendorName }) => {
 							value={staffSearchInput}
 							onChange={updateSearchInput}
 							id="vendorAddress"
-							placeholder="Search Job Title"
+							placeholder="Search Name"
 						/>
 					</div>
 				</div>
