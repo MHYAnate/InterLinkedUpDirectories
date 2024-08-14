@@ -98,7 +98,7 @@ const VendorStaffModel: React.FC<Vendor> = ({ Vendor, vendorName }) => {
 
 		return currentPosts?.map((staff) => (
 			<div className={styles.stockRenderCover} key={staff.id}>
-			<div className={styles.stockName}></div>
+			<div className={styles.stockName}>{staff.name}</div>
 			<div className={styles.stockSeperatorCover}>
 				<div className={styles.imgCover}>
 					<Image
@@ -114,10 +114,6 @@ const VendorStaffModel: React.FC<Vendor> = ({ Vendor, vendorName }) => {
 			</div>
 				<div className={styles.showMore}>
 				<div className={styles.innerTextShowMoreRenderCover}>
-				<div className={styles.contactCover}>
-					<div className={styles.contactTitle}></div>
-					<div className={styles.contact}>{staff.name}</div>
-				</div>
 				<div className={styles.contactCover}>
 					<div className={styles.contactTitle}>Position</div>
 					<div className={styles.contact}>{staff.rank}</div>
