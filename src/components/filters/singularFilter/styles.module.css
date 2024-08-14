@@ -910,8 +910,6 @@
   color: white;
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   user-select: none;
-  margin-top: 10px;
-
   width: 220px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
