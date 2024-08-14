@@ -256,7 +256,7 @@
   border-radius: 5px;
   color: white;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 1rem;
   border-radius: 3px;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
 	animation: heartbeat 7s ease-in-out infinite both;
@@ -268,10 +268,11 @@
   user-select: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   box-shadow: 0px 0px 0.5px silver, 0 0 1px black, 0 0 2.5px silver; 
+  transition: all 0.3s ease-in-out 0.1s;
 }
 
 @keyframes heartbeat {
@@ -313,7 +314,8 @@
 
 .linkUpTxt:hover{
   cursor: pointer;
-  animation: 1s forwards hover ;
+  animation: 1s ease-in-out forwards hover ;
+  transform: scale(0.95);
 }
 
 @keyframes hover{
@@ -322,7 +324,7 @@
   }
 
   100%{
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 }
 
