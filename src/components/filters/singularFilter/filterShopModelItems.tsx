@@ -219,28 +219,31 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 						{show === `${item.id}` ? (
 							<></>
 						) : (
-							<div className={styles.InShopItemsBody}>{item.price}</div>
+							<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>price</div>
+							<div className={styles.contact}>{item.price}</div>
+						</div>
 						)}
 					</div>
 				</div>
 				{show === `${item.id}` && (
 					<div className={styles.InShowMoreDetails}>
 						<div className={styles.InShowMoreDetailCover}>
+						<div className={styles.statusInShop}>{item.status}</div>
 							<div className={styles.InShopItemsDetailCover}>
-								<div className={styles.InShopItemsBody}>{item.price}</div>
+							<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>price</div>
+							<div className={styles.contact}>{item.price}</div>
+						</div>
 							</div>
-							<div className={styles.InShowMoreItemsDetailsBody}>
-								<span className={styles.InShopItemsDetailTitle}>Condition</span>
-								<span className={styles.InShopItemsBody}>{item.condition}</span>
-							</div>
-							<div>
-								<span className={styles.InShopItemsDetailTitle}>Status</span>
-								<span className={styles.InShopItemsBody}>{item.status}</span>
-							</div>
-							<div>
-								<span className={styles.InShopItemsDetailTitle}>feature</span>
-								<span className={styles.InShopItemsBody}>{item.features}</span>
-							</div>
+							<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>Condition</div>
+							<div className={styles.contact}>{item.condition}</div>
+						</div>
+						<div className={styles.contactCover}>
+							<div className={styles.contactTitle}>feature</div>
+							<div className={styles.contact}>{item.features}</div>
+						</div>
 						</div>
 					</div>
 				)}
@@ -304,7 +307,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 							className={styles.select}
 							{...register("condition")}
 						>
-							<option className={styles.option} value="Select condition">
+							<option className={styles.option} value="Select Condition">
 								Select Condition
 							</option>
 							{renderAvailablStockCondition()}

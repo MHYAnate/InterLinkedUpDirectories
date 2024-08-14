@@ -23,6 +23,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -31,7 +32,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -41,6 +43,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -50,6 +53,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -58,7 +62,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -68,78 +73,127 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Web applications Development",
+        "src":"",
+        "detail": "Development of Web applications for Personal and Business purposes",
+      },
+      {
+        "id": "2",
+        "title": "Mobile Applications Development",
+        "src":"",
+        "detail": "Development of Mobile Applications for Personal and Business purposes",
+      },
+      {
+        "id": "3",
+        "title": "Opperating System Application Development",
+        "src":"",
+        "detail": "Development of Opperating System Application for Personal and Business purposes",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Aadan",
+        "src":"/service/1.jpg",
+        "rank": "Leed Developer / CEO",
+      },
+      {
+        "id": "2",
+        "name": "Aamadu",
+        "src":"/service/2.jpg",
+        "rank": "SoftWare Developer / Business Executive Director",
+      },
+      {
+        "id": "3",
+        "name": "Abdoulaye",
+        "src":"/service/3.jpg",
+        "rank": "SoftWare Developer / Finance Executive Director",
       },
     ],
   },
@@ -167,6 +221,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -175,7 +230,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -185,6 +241,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -194,6 +251,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -202,7 +260,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -212,6 +271,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -221,69 +281,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Private Security Service",
+        "src":"",
+        "detail": "Security Sevice for both offices and personal residence",
+      },
+      {
+        "id": "2",
+        "title": "Close Security Services",
+        "src":"",
+        "detail": "One on One personal Security Services for VIP and VVIP",
+      },
+      {
+        "id": "3",
+        "title": "Extreme Seciruty Services",
+        "src":"",
+        "detail": "Counter Terror Security Services for persons of interest",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Aboubacar",
+        "src":"/service/4.jpg",
+        "rank": "CSO / CEO",
+      },
+      {
+        "id": "2",
+        "name": "Adamou",
+        "src":"/service/5.jpg",
+        "rank": "Cheif Operational Officer",
+      },
+      {
+        "id": "3",
+        "name": "Ibrahima",
+        "src":"/service/6.jpg",
+        "rank": "Cheif Asset And Maintenance Officer",
       },
     ],
   },
@@ -311,6 +419,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -319,7 +428,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -329,6 +439,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -338,6 +449,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -346,7 +458,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -356,78 +469,127 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Home and Office",
+        "src":"",
+        "detail": "Providing routing Medical Check at Home or Office Enverinment",
+      },
+      {
+        "id": "2",
+        "title": "Emergency Abulance Service",
+        "src":"",
+        "detail": "Provide First Aid and Abulance Services to Our five Star Hospital Complex",
+      },
+      {
+        "id": "3",
+        "title": "Online Consultaion",
+        "src":"",
+        "detail": "Provide One on One Online Consultation for Clients",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Furaha",
+        "src":"/service/7.jpg",
+        "rank": "Cheif Medical Doctor / CEO",
+      },
+      {
+        "id": "2",
+        "name": "Faraji",
+        "src":"/service/8.jpg",
+        "rank": "Head Of Emergency",
+      },
+      {
+        "id": "3",
+        "name": "Eseoghene",
+        "src":"/service/9.jpg",
+        "rank": "Head Of Maintance",
       },
     ],
   },
@@ -455,6 +617,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -463,7 +626,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -473,6 +637,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -482,6 +647,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -490,7 +656,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -500,78 +667,127 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Whole Sales",
+        "src":"",
+        "detail": "Provide a wide range of goods similar to the manufactures prices",
+      },
+      {
+        "id": "2",
+        "title": "Retails Sales",
+        "src":"",
+        "detail": "Our Retails stores provides the best Retail prices accross a whole lot of  variaties of goods",
+      },
+      {
+        "id": "3",
+        "title": "Logistics Supports",
+        "src":"",
+        "detail": "Our Logistic Services Boost Our Onlline Services By bring goods to your door steps",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Enyinnaya",
+        "src":"/service/10.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Emem",
+        "src": "/service/11.jpg",
+        "rank": "Head Of Operations",
+      },
+      {
+        "id": "3",
+        "name": "Ekundayo",
+        "src": "/service/12.jpg",
+        "rank": "Head Of Logistics",
       },
     ],
   },
@@ -599,6 +815,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -607,7 +824,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -617,6 +835,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -626,6 +845,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -634,7 +854,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -644,6 +865,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -653,69 +875,135 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Door",
+        "src":"/service/d44.jpg",
+        "detail": "Home and Offices Doors",
+      },
+      {
+        "id": "2",
+        "title": "Bullet Proof Door",
+        "src":"/service/d33.jpg",
+        "detail": "VIP Bullet Proof Doors in different stles and sizes for all environment",
+      },
+      {
+        "id": "3",
+        "title": "Sink",
+        "src":"/service/bssk1.jpg",
+        "detail": "Home and office Sinks",
+      },
+      {
+        "id": "",
+        "title": "Toilet Setter",
+        "src":"/service/bsst1.jpg",
+        "detail": "Home and office Toilet Setters",
+      },
+      {
+        "id": "",
+        "title":  "window push",
+        "src":"/service/bw1.jpg",
+        "detail": "",
+      },
+      {
+        "id": "",
+        "title": "window open",
+        "src":"/service/bw3.jpg",
+        "detail": "Home and office  Windows",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Ekene",
+        "src":"/service/13.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Faraji",
+        "src":"/service/8.jpg",
+        "rank": "Head Of Productions",
+      },
+      {
+        "id": "3",
+        "name": "Ebrima",
+        "src":"/service/14.jpg",
+        "rank": "Head Of Distributions",
       },
     ],
   },
@@ -743,6 +1031,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -751,7 +1040,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -761,6 +1051,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -770,6 +1061,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -778,7 +1070,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -788,78 +1081,127 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Architechtural Services",
+        "src":"",
+        "detail": "Provide Architectura Services For both avearage Homes and offices to Mega Super Structures",
+      },
+      {
+        "id": "2",
+        "title": "Construction Service",
+        "src":"",
+        "detail": "Transforming Working Design Into Actual Structures",
+      },
+      {
+        "id": "3",
+        "title": "Building Maintances Services",
+        "src":"",
+        "detail": "Providing maintenance Services to Buildings",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Eseoghene",
+        "src": "/service/9.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Dalitso",
+        "src":"/service/6.jpg",
+        "rank": "Head Of Construction",
+      },
+      {
+        "id": "3",
+        "name": "Dakarai",
+        "src":"/service/7.jpg",
+        "rank": "Head Of Designs",
       },
     ],
   },
@@ -887,6 +1229,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -895,7 +1238,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -905,6 +1249,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -914,6 +1259,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -922,7 +1268,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -932,6 +1279,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -941,69 +1289,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Arabic Class",
+        "src":"",
+        "detail": "Teaching Arabic Laguages",
+      },
+      {
+        "id": "2",
+        "title": "Quran and Hadith Class",
+        "src":"",
+        "detail": "Teaching the Quran and it interpretions in the lights of the Hadiths",
+      },
+      {
+        "id": "3",
+        "title": "Business, Sciences and Technology",
+        "src":"",
+        "detail": "Teaching Business, Sciences and Technology Classes in the light of the quran and hadith",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Cusmaan",
+        "src":"/service/8.jpg",
+        "rank": "Principal",
+      },
+      {
+        "id": "2",
+        "name": "Idrissa",
+        "src":"/service/10.jpg",
+        "rank": "Head of Arabic, Quran and Hadith Classes ",
+      },
+      {
+        "id": "3",
+        "name": "Chukwuebuka",
+        "src":"/service/9.jpg",
+        "rank": "Head Of Business, Sciences and Technology Classes",
       },
     ],
   },
@@ -1031,6 +1427,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1039,7 +1436,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -1049,6 +1447,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -1058,6 +1457,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -1066,7 +1466,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -1076,6 +1477,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 7,
@@ -1085,69 +1487,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Hijabs",
+        "src":"",
+        "detail": "Different type of Hijabs like Hijabs with Nikab, with stockings and gloves among other",
+      },
+      {
+        "id": "2",
+        "title": "Abayas",
+        "src":"",
+        "detail": "Different type of Abayas like Abayas with Nikab, with stockings and gloves among other",
+      },
+      {
+        "id": "3",
+        "title": "Vails",
+        "src":"",
+        "detail": "Different type of Vails from Different Part of the world",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Blessing",
+        "src":"/service/w1.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Precious",
+        "src":"/service/w2.jpg",
+        "rank": "Head Of Design",
+      },
+      {
+        "id": "3",
+        "name": "Favor",
+        "src":"/service/w3.jpg",
+        "rank": "Head of Marketing",
       },
     ],
   },
@@ -1175,6 +1625,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1183,7 +1634,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -1193,6 +1645,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -1202,6 +1655,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -1210,7 +1664,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -1220,78 +1675,117 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
-      },
-      {
-        "id": 7,
-        "jobTitle" : "Front Desk Officer",
-        "responsibility":"Office Reception",
-        "qualification":"Human Relationship",
-        "salary":"N500K - N1.5M",
-        "opening":"30-05-2024",
-        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "SunSet New Channel",
+        "src":"",
+        "detail": "SunSet New Channel bring breaking News and also Comprehensive News Report to your Tv Screen",
+      },
+      {
+        "id": "2",
+        "title": "SunSet Radio",
+        "src":"",
+        "detail": "SunSet Radio broadcasting channel is a radio channel that is aimed at making the sun set channel cross platform to all audiance",
+      },
+      {
+        "id": "3",
+        "title": "SunSet Newspaper",
+        "src":"",
+        "detail": "SunSet Newspaper is a third of the sunset trinity reach programe that is aimed at making the sun set channel cross platform to all audiance",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Kondwani",
+        "src":"/service/4.jpg",
+        "rank": "CEO SunSet Groups",
+      },
+      {
+        "id": "2",
+        "name": "Kunto",
+        "src":"/service/5.jpg",
+        "rank": "Cheif Author SunSet Group",
+      },
+      {
+        "id": "3",
+        "name": "Kwaku",
+        "src":"/service/10.jpg",
+        "rank": "Cheif Admin Officer SunSet Groups",
       },
     ],
   },
@@ -1319,6 +1813,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1327,7 +1822,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -1337,6 +1833,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -1346,6 +1843,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -1354,7 +1852,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -1364,6 +1863,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -1373,69 +1873,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Cars and Bikes DealerShip",
+        "src":"",
+        "detail": "Provide access to both New and Fairly Used Cars and Bikes Seamlesly",
+      },
+      {
+        "id": "2",
+        "title": "Car and Bikes Rental Searvice",
+        "src":"",
+        "detail": "Provide both tourist and visitors among other client acces to rental cars",
+      },
+      {
+        "id": "3",
+        "title": "Private Cars and Buses Shuttle Services",
+        "src":"",
+        "detail": "Provide both tourist and visitors among other client acces to Shuttle cars",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Kwame",
+        "src":"/service/11.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Kwasi",
+        "src":"/service/12.jpg",
+        "rank": "Head Of DealerShip Services",
+      },
+      {
+        "id": "3",
+        "name": "Kyauta",
+        "src":"/service/13.jpg",
+        "rank": "Head of Rentals and Shuttle Services",
       },
     ],
   },
@@ -1463,6 +2011,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1471,7 +2020,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -1481,6 +2031,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -1490,6 +2041,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -1498,7 +2050,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -1508,6 +2061,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -1517,69 +2071,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Notores public Sercives",
+        "src":"",
+        "detail": "provide legal assit to the general public",
+      },
+      {
+        "id": "2",
+        "title": "Establishment Legally",
+        "src":"",
+        "detail": "provide legal assit to both government and private Establishment",
+      },
+      {
+        "id": "3",
+        "title": "Marshal Legally consultium",
+        "src":"",
+        "detail": "Provide Marshal Laws adviceses during Marshal court hearing in the military and police force",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Lassana",
+        "src":"/service/14.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Mpho",
+        "src":"/service/6.jpg",
+        "rank": "Cheif Marshal Attorny",
+      },
+      {
+        "id": "3",
+        "name": "Muhammadu",
+        "src":"/service/7.jpg",
+        "rank": "Cheif General Attorny",
       },
     ],
   },
@@ -1607,6 +2209,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1615,7 +2218,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -1625,6 +2229,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -1634,6 +2239,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -1642,7 +2248,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -1652,6 +2259,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -1661,69 +2269,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Express Air Logistic Services",
+        "src":"",
+        "detail": "Provide Express Air Logistic Services to Clients That what to get goods round about the globe in a very short time",
+      },
+      {
+        "id": "2",
+        "title": "Land and Rail Logistic Services",
+        "src":"",
+        "detail": "Provide Losgistic ervices via cars, buses and train in an inter state routing system",
+      },
+      {
+        "id": "3",
+        "title": "Big and Steady Sea Logisic Services",
+        "src":"",
+        "detail": "with connections to all the major Shipping Company Getting Your Goods on sea is a Breeze in a park",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Munyaradzi",
+        "src":"/service/8.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Musa",
+        "src":"/service/9.jpg",
+        "rank": "Head Of Sea and Land Logistics",
+      },
+      {
+        "id": "3",
+        "name": "Nkosana",
+        "src":"/service/10.jpg",
+        "rank": "Head of Express Air Logistic",
       },
     ],
   },
@@ -1751,6 +2407,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1759,7 +2416,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -1769,6 +2427,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -1778,6 +2437,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -1786,7 +2446,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -1796,6 +2457,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -1805,69 +2467,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Asset Managenment Services",
+        "src":"",
+        "detail": "Provides Client With the right form of information on the current Asset environment for proper dicisions on asset managemet and investment",
+      },
+      {
+        "id": "2",
+        "title": "Financial Investment Consultancy Services",
+        "src":"",
+        "detail": "General Financial Investment and Consultancy Services for very wide range of individual from children invesment plan to organisational investment plans",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Nkruma",
+        "src":"/service/11.jpg",
+        "rank": "Founder / CEO",
+      },
+      {
+        "id": "2",
+        "name": "Nsia",
+        "src":"/service/12.jpg",
+        "rank": "Business Executive Officer",
+      },
+      {
+        "id": "3",
+        "name": "Aadan",
+        "src":"/service/1.jpg",
+        "rank": "Head Of Operations",
       },
     ],
   },
@@ -1885,7 +2589,7 @@ export const CompanyData = [
     "companyName":"Asurent",
     "companyId":"docId" ,
     "companyTag": "Consulting",
-    "about":"Asurent property management company is the most advaced property management company in west africa and is aiiming to be the best in africa, leavaraging modern technnology in property management Asurent keeps clients at the forefronts of the properties landscape",
+    "about":"Asurent property management company is the most advaced property management company in west africa and is aiming to be the best in africa, leavaraging modern technnology in property management Asurent keeps clients at the forefronts of the properties landscape",
     "vacancies": [
       {
         "id": 1,
@@ -1895,6 +2599,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -1903,7 +2608,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -1913,6 +2619,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -1922,6 +2629,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -1930,7 +2638,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -1940,6 +2649,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -1949,69 +2659,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Estate Development",
+        "src":"",
+        "detail": "Provide Specialized Estate development processes leveraging technology for realtime decision making",
+      },
+      {
+        "id": "2",
+        "title": "Estate Maintanance",
+        "src":"",
+        "detail": "Provide Specialized Estate mentanance processes leveraging technology for realtime decision making",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Aamadu",
+        "src":"/service/2.jpg",
+        "rank": "CEO",
+      },
+      {
+        "id": "2",
+        "name": "Abdoulaye",
+        "src":"/service/3.jpg",
+        "rank": "Head of Estate Maintanance",
+      },
+      {
+        "id": "3",
+        "name": "Aboubacar",
+        "src":"/service/4.jpg",
+        "rank": "Head of Estate Development",
       },
     ],
   },
@@ -2039,6 +2791,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -2047,7 +2800,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -2057,6 +2811,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -2066,6 +2821,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -2074,7 +2830,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -2084,6 +2841,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -2093,69 +2851,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Training of Security Personal",
+        "src":"",
+        "detail": "Provide Training to third parties Security outfit in our state of the art security Facility",
+      },
+      {
+        "id": "2",
+        "title": "Personal Security Service",
+        "src":"",
+        "detail": "provide Personal Security Services for Residential and officials enveronment",
+      },
+      {
+        "id": "3",
+        "title": "Counter Terror Security Services",
+        "src":"",
+        "detail": "Provide Counter terror Security for Persons Of Interest against Armed and dengerous Personals",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Adamou",
+        "src":"/service/5.jpg",
+        "rank": "CEO FrontLine Security",
+      },
+      {
+        "id": "2",
+        "name": "Ibrahima",
+        "src":"/service/6.jpg",
+        "rank": "Head Counter Terror Unit",
+      },
+      {
+        "id": "3",
+        "name": "Furaha",
+        "src":"/service/7.jpg",
+        "rank": "Head Personal Security Service Unit",
       },
     ],
   },
@@ -2183,6 +2989,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -2191,7 +2998,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -2201,6 +3009,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -2210,6 +3019,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -2218,7 +3028,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -2228,6 +3039,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 7,
@@ -2237,69 +3049,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Development of RealEstate",
+        "src":"",
+        "detail": "Providing building development Services for Large, medium and small estate",
+      },
+      {
+        "id": "2",
+        "title": "Rehabilitation of RealEstate",
+        "src":"",
+        "detail": "Providing building Rehabilitation Services for Large, medium and small estate",
+      },
+      {
+        "id": "3",
+        "title": "Evaluating of RealEstate",
+        "src":"",
+        "detail": "Providing building Evaluating Services for Large, medium and small estate",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Faraji",
+        "src":"/service/8.jpg",
+        "rank": "CEO Builder Brothers Construction",
+      },
+      {
+        "id": "2",
+        "name": "Eseoghene",
+        "src":"/service/9.jpg",
+        "rank": "Development Executive Officer",
+      },
+      {
+        "id": "3",
+        "name": "Enyinnaya",
+        "src":"/service/10.jpg",
+        "rank": "Evaluation Executive Officer",
       },
     ],
   },
@@ -2327,6 +3187,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -2335,7 +3196,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -2345,6 +3207,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -2354,6 +3217,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -2362,7 +3226,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -2372,6 +3237,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 7,
@@ -2381,69 +3247,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Department of Social-Sciences",
+        "src":"",
+        "detail": "Online Classes on Social-sciences such as History, Law and Goverment",
+      },
+      {
+        "id": "2",
+        "title": "Department of Commerce",
+        "src":"",
+        "detail": "Online Classes on commercial courses like Accounting, Economic, Business admin",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Emem",
+        "src":"/service/11.jpg",
+        "rank": "Pricipal / Owner",
+      },
+      {
+        "id": "2",
+        "name": "Ekundayo",
+        "src": "/service/12.jpg",
+        "rank": "Head of Social-Sciences",
+      },
+      {
+        "id": "2",
+        "name": "Ekene",
+        "src": "/service/6.jpg",
+        "rank": "Head of Commerce",
       },
     ],
   },
@@ -2471,6 +3379,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -2479,7 +3388,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -2489,6 +3399,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -2498,6 +3409,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -2506,7 +3418,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -2516,6 +3429,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -2525,69 +3439,117 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Hijabs",
+        "src":"",
+        "detail": "Modern form of islamic moral Hijabs",
+      },
+      {
+        "id": "2",
+        "title": "Abayahs",
+        "src":"",
+        "detail": "Modern form of islamic moral Abayahs",
+      },
+      {
+        "id": "3",
+        "title": "Vails",
+        "src":"",
+        "detail": "Modern form of islamic moral Vails",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Beauty",
+        "src": "/service/w5.jpg",
+        "rank": "CEO Hijab Beauty and Fashion",
+      },
+      {
+        "id": "2",
+        "name": "Lovely",
+        "src": "/service/w6.jpg",
+        "rank": "Head Of Marketing",
+      },
+      {
+        "id": "3",
+        "name": "Peaceful",
+        "src": "/service/w7.jpg",
+        "rank": "Head Of Designs",
       },
     ],
   },
@@ -2615,6 +3577,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -2623,7 +3586,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -2633,6 +3597,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -2642,6 +3607,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -2650,7 +3616,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -2660,6 +3627,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 7,
@@ -2669,69 +3637,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Online Banking Services",
+        "src":"",
+        "detail": "Provide seamless Online Banking Services For Small and Medium Business",
+      },
+      {
+        "id": "2",
+        "title": "FX Trading",
+        "src":"",
+        "detail": "Provide a well informed FX trading Platform for a succesfull clients",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Ebere",
+        "src":"/service/15.jpg",
+        "rank": "Founder Investex",
+      },
+      {
+        "id": "2",
+        "name": "Dumisani",
+        "src":"/service/16.jpg",
+        "rank": "Heading of Banking Services",
+      },
+      {
+        "id": "3",
+        "name": "Dayo",
+        "src":"/service/1.jpg",
+        "rank": "Head of FX Trading Services",
       },
     ],
   },
@@ -2759,6 +3769,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -2767,7 +3778,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -2777,6 +3789,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
@@ -2786,6 +3799,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -2794,7 +3808,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -2804,6 +3819,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 7,
@@ -2813,69 +3829,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Nigerian Dishes",
+        "src":"",
+        "detail": "Provide all Kind of Dishes from the thirty six state of Nigeria",
+      },
+      {
+        "id": "2",
+        "title": "Northern African Dishes",
+        "src":"",
+        "detail": "Provide all Kind of Dishes from the Major Northern African Countries",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Precious",
+        "src":"/service/w2.jpg",
+        "rank": "Founder / Owner Meal Munchies",
+      },
+      {
+        "id": "2",
+        "name": "Blessing",
+        "src": "/service/w1.jpg",
+        "rank": "Head of Nigerian Dishes",
+      },
+      {
+        "id": "3",
+        "name": "Favor",
+        "src": "/service/w3.jpg",
+        "rank": "Head of Northern African Dishes",
       },
     ],
   },
@@ -2903,6 +3961,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 2,
@@ -2911,7 +3970,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 3,
@@ -2921,6 +3981,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -2930,6 +3991,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 5,
@@ -2938,7 +4000,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 6,
@@ -2948,6 +4011,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 7,
@@ -2957,69 +4021,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "South African Dishes",
+        "src":"",
+        "detail": "Providing Special South African Dishes to the world",
+      },
+      {
+        "id": "2",
+        "title": "west African Dishes",
+        "src":"",
+        "detail": "Providing Special west African Dishes to the world",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Gift",
+        "src": "/service/w4.jpg",
+        "rank": "CEO VeneMex Gourment",
+      },
+      {
+        "id": "2",
+        "name": "Beauty",
+        "src":"/service/w5.jpg",
+        "rank": "Head of South African Dishes",
+      },
+      {
+        "id": "3",
+        "name": "Lovely",
+        "src": "/service/w6.jpg",
+        "rank": "Head of west African Dishes",
       },
     ],
   },
@@ -3047,6 +4153,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -3055,7 +4162,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -3065,6 +4173,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -3074,6 +4183,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -3082,7 +4192,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -3092,6 +4203,7 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
@@ -3101,69 +4213,111 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Metal, Carton and Plastic Recycling",
+        "src":"",
+        "detail": "Recycling services for metal cartons and plastic",
+      },
+      {
+        "id": "2",
+        "title": "Electronic Recycling Services",
+        "src":"",
+        "detail": "Recycling services for Electronic devices",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Issouf",
+        "src": "/service/2.jpg",
+        "rank": "Owner Recycle Plex",
+      },
+      {
+        "id": "2",
+        "name": "Imamu",
+        "src": "/service/11.jpg",
+        "rank": "Head of Metal, Carton and Plastic Recycling Units",
+      },
+      {
+        "id": "3",
+        "name": "Idrissa",
+        "src":"/service/1.jpg",
+        "rank": "Head of Electronic Recycling Units",
       },
     ],
   },
@@ -3181,7 +4335,7 @@ export const CompanyData = [
     "companyName":"Lamar Tours",
     "companyId":"docId" ,
     "companyTag": "Eatries and Tourism",
-    "about":"Lamar Tours is africa leading tourism business with effect flight, cruise ships and  buss  booking systems lamar tours hve the highest amount of agencies registeded as third party agent to provide an all inclusive african vacation and travel experience to travellers and tourist",
+    "about":"Lamar Tours is africa leading tourism business with effective flight, cruise ships and  buss  booking systems lamar tours hve the highest amount of agencies registeded as third party agent to provide an all inclusive african vacation and travel experience to travellers and tourist",
     "vacancies": [
       {
         "id": 1,
@@ -3191,6 +4345,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
@@ -3199,7 +4354,8 @@ export const CompanyData = [
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
@@ -3209,6 +4365,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 4,
@@ -3218,6 +4375,7 @@ export const CompanyData = [
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
@@ -3226,7 +4384,8 @@ export const CompanyData = [
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
@@ -3236,78 +4395,133 @@ export const CompanyData = [
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 1,
-        "jobTitle" : "Software Engineering",
+        "jobTitle" : "Junior Software Engineering",
         "responsibility":"Development and maintance of web app",
         "qualification":"Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"full-time"
       },
       {
         "id": 2,
-        "jobTitle" : "Manager",
+        "jobTitle" : "Assistance Manager",
         "responsibility":"Managing software Engineers on project ",
         "qualification":"5years experience on Html, Css, Javascript, React, Typescript, Firebase",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"full-time" 
       },
       {
         "id": 3,
-        "jobTitle" : "Accountant",
+        "jobTitle" : "Assistance Accountant",
         "responsibility":"Financial Accounting",
         "qualification":"Degree in Accounting",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 4,
-        "jobTitle" : "Legal Adviser",
+        "jobTitle" : "Junior Legal Adviser",
         "responsibility":"Legality on every Task",
         "qualification":"Degree in Law",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 5,
-        "jobTitle" : "Admin Officer",
+        "jobTitle" : "Assistance Admin Officer",
         "responsibility":"Registration and Filing",
         "qualification":"Excel and Microsoft word",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
-        "closing":"30-05-2025", 
+        "closing":"30-05-2025",
+        "type":"contract" 
       },
       {
         "id": 6,
-       "jobTitle" : "Customer Care",
+       "jobTitle" : "Customer Care 2",
        "responsibility":"Phone and Email Attendant",
        "qualification":"Human Relationship",
        "salary":"N500K - N1.5M",
        "opening":"30-05-2024",
        "closing":"30-05-2025",
+        "type":"contract"
       },
       {
         "id": 7,
-        "jobTitle" : "Front Desk Officer",
+        "jobTitle" : "Front Desk Officer2",
         "responsibility":"Office Reception",
         "qualification":"Human Relationship",
         "salary":"N500K - N1.5M",
         "opening":"30-05-2024",
         "closing":"30-05-2025",
+        "type":"contract"
+      },
+    ],
+    "offers":[
+      {
+        "id": "1",
+        "title": "Flight booking",
+        "src":"",
+        "detail": "Providing seamless Flight Booking for an all inclusive african vacation and travel experience to travellers and tourist",
+      },
+      {
+        "id": "2",
+        "title": "Cruise Ship booking",
+        "src":"",
+        "detail": "Providing seamless Cruise Ship booking For an all inclusive african vacation and travel experience to travellers and tourist",
+      },
+      {
+        "id": "3",
+        "title": "Buss  booking",
+        "src":"",
+        "detail": "Providing seamless Buss  booking For an all inclusive african vacation and travel experience to travellers and tourist",
+      },
+    ],
+    "staffs":[
+      {
+        "id": "1",
+        "name": "Mahamadou",
+        "src": "/service/13.jpg",
+        "rank": "CEO / Founder Lamar Tours",
+      },
+      {
+        "id": "2",
+        "name": "Mamman",
+        "src":"/service/11.jpg",
+        "rank": "Head of Flight booking ",
+      },
+      {
+        "id": "3",
+        "name": "Mandlenkosi",
+        "src": "/service/6.jpg",
+        "rank": "Head of Cruise Ship booking",
+      },
+      {
+        "id": "4",
+        "name": "Moti",
+        "src":"/service/2.jpg",
+        "rank": "Head of Buss  booking",
       },
     ],
   },

@@ -8,6 +8,7 @@ import { CompanyTag } from "@/database/companyTag";
 import { ShopData } from "@/database/shopData";
 import { CompanyData } from "@/database/companyData";
 import ShopItemsComponent from "./fBIShopItem";
+import CompanyVacanciesComponent from "./fBICompanyVacancy";
 import Pagination from "@/components/btn/paginationBtn";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -43,6 +44,7 @@ type FormValue = {
 	status: string;
 	title: string;
 	docid: string;
+	companyId:string;
 	vacancies: [
 		{
 			image: string;
@@ -540,8 +542,8 @@ export default function CompanyFilter() {
 			: [];
 
 	const filteredFirebasecompanyTagList =
-		filteredFirebaseStateShopList.length > 0
-			? filteredFirebaseStateShopList.filter((eachItem) => {
+		filteredFirebaseaAreaShopList.length > 0
+			? filteredFirebaseaAreaShopList.filter((eachItem) => {
 					const text = eachItem.companyTag?.toLowerCase();
 					return text?.includes(companyTag.toLowerCase());
 			  })
@@ -577,38 +579,38 @@ export default function CompanyFilter() {
 			return null;
 		}
 
-		return currentFireBasePosts?.map((shop: any) => (
-			<div className={styles.shopRenderCover} key={shop.shopId}>
-			<div className={styles.shopName}>{shop.shopName} </div>
+		return currentFireBasePosts?.map((company: any) => (
+			<div className={styles.shopRenderCover} key={company.companyId}>
+			<div className={styles.shopName}>{company.shopName} </div>
 			<div className={styles.shopNavBtnCover}>
 			<div
-				className={more !== `${shop.shopId}` ? styles.btnShop : styles.btnShopA}
+				className={more !== `${company.companyId}` ? styles.btnShop : styles.btnShopA}
 				onClick={
-					more !== `${shop.shopId}`
-						? () => setMore(`${shop.shopId}`)
+					more !== `${company.companyId}`
+						? () => setMore(`${company.companyId}`)
 						: () => setMore("")
 				}
 			>
-				{more === `${shop.shopId}` ? "Vacancies" : "Vacancies"}
+				{more === `${company.companyId}` ? "Vacancies" : "Vacancies"}
 			</div>
 			<div
-				className={more !== `${shop.shopName}` ? styles.btnShop : styles.btnShopA}
+				className={more !== `${company.companyId}` ? styles.btnShop : styles.btnShopA}
 				onClick={
-					more !== `${shop.shopName}`
-						? () => setMore(`${shop.shopName}`)
+					more !== `${company.companyId}`
+						? () => setMore(`${company.companyId}`)
 						: () => setMore("")
 				}
 			>
-				{more === `${shop.shopName}` ? "DETAILS" : "details"}
+				{more === `${company.companyId}` ? "DETAILS" : "details"}
 			</div>
 			</div>
 
-			<div className={more !== `${shop.shopId}`?styles.shoptitleBodyDivide : styles.hide}>
+			<div className={more !== `${company.companyId}`?styles.shoptitleBodyDivide : styles.hide}>
 				<div className={styles.imgCover}>
 					<Image
 						className={styles.idiImg}
-						src={`${shop.shopPic}`}
-						alt={`${shop.shopName}`}
+						src={`${company.shopPic}`}
+						alt={`${company.shopName}`}
 						quality={100}
 						width={500}
 						height={500}
@@ -618,27 +620,27 @@ export default function CompanyFilter() {
 				<div className={styles.innerTextShopRenderCover}>
 				<div className={styles.contactCover}>
 						<div className={styles .contactShopTitle}> Tag</div>
-						<div className={styles.contact}>{shop.companyTag}</div>
+						<div className={styles.contact}>{company.companyTag}</div>
 					</div>
 					<div className={styles.contactCover}>
 						<div className={styles .contactShopTitle}> Market</div>
-						<div className={styles.contact}>{shop.market}</div>
+						<div className={styles.contact}>{company.market}</div>
 					</div>
 					<div className={styles.contactCover}>
 						<div className={styles.contactShopTitle}> Address</div>
-						<div className={styles.addressShop}>{shop.address}</div>
+						<div className={styles.addressShop}>{company.address}</div>
 					</div>
 				
 				</div>
 			</div>
 			
 			
-			{more === `${shop.shopId}` ? <div className={styles.displayShopItemsFilter}>
+			{more === `${company.companyId}` ? <div className={styles.displayShopItemsFilter}>
 			<div className={styles.searchShopImgCover}>
 					<Image
 						className={styles.searchShopImg}
-						src={`${shop.shopPic}`}
-						alt={`${shop.shopName}`}
+						src={`${company.shopPic}`}
+						alt={`${company.shopName}`}
 						quality={100}
 						width={500}
 						height={500}
@@ -669,24 +671,24 @@ export default function CompanyFilter() {
 				</form>
 			</div> : <></>}
 
-			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}><ShopItemsComponent shopId={shop.shopId} value={shopSearchInput} tag={tag} /></div> : <></>} 
+			{more === `${company.companyId}` ? <div className={styles.displayShopItems}><CompanyVacanciesComponent companyId={company.companyId} value={shopSearchInput} tag={tag} /></div> : <></>} 
 
-			{more === `${shop.shopName}` ? <div className={styles.displayShopItems}>
+			{more === `${company.shopName}` ? <div className={styles.displayShopItems}>
 			<div className={styles.showMoreDetailsBody}>
 						<span className={styles.shopItemsDetailTitle}>Owner</span>
-						<span className={styles.shopItemsBody}>{shop.name}</span>
+						<span className={styles.shopItemsBody}>{company.name}</span>
 					</div>
 					<div>
 						<span className={styles.shopItemsDetailTitle}>Contact</span>
-						<span className={styles.shopItemsBody}>{shop.phone} </span>
+						<span className={styles.shopItemsBody}>{company.phone} </span>
 					</div>
 					<div>
 						<span className={styles.shopItemsDetailTitle}>Email</span>
-						<span className={styles.shopItemsBody}>{shop.email}</span>
+						<span className={styles.shopItemsBody}>{company.email}</span>
 					</div>
 					<div>
 						<span className={styles.shopItemsDetailTitle}>Offer</span>
-						<span className={styles.shopItemsBody}>{shop.offers} Services</span>
+						<span className={styles.shopItemsBody}>{company.offers} Services</span>
 					</div>
 			</div>:<></>}
 			<div 	onClick={() =>
@@ -695,8 +697,8 @@ export default function CompanyFilter() {
 							"?" +
 							set(
 								"shopId",
-								`${shop.shopId}`
-							) )} className={styles.enterShop}>Enter Shop</div>
+								`${company.companyId}`
+							) )} className={styles.enterShop}>Enter Companys Page</div>
 		</div>
 		));
 	}
@@ -737,7 +739,7 @@ export default function CompanyFilter() {
 							value={searchInput}
 							onChange={updateSearchInput}
 							id="vendorAddress"
-							placeholder="Name of Shop"
+							placeholder="Search Company Name"
 						/>
 					</div>
 				</div>

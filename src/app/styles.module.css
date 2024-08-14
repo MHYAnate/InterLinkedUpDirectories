@@ -265,6 +265,7 @@
   }
   .coverJobsMarket{
     width: 98vw;
+    border-left: none;
   }
   .coverSelectJobsMarket{
     width: 98vw;

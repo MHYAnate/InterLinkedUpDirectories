@@ -90,6 +90,7 @@ export default function ShopsFilter() {
 			status: "",
 			title: "",
 			complex:"",
+			name: "",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
@@ -112,6 +113,8 @@ export default function ShopsFilter() {
 	const [isPending, startTransition] = useTransition();
 
 	const [searchInput, setSearchInput] = useState("");
+
+	const [searchAddress, setSearchAddress] = useState("");
 
 	const [shopSearchInput, setShopSearchInput] = useState("");
 
@@ -355,13 +358,21 @@ export default function ShopsFilter() {
 			  })
 			: [];
 
+			const filteredShopAddressList =
+		filteredShopList.length > 0
+			? filteredShopList.filter((eachItem) => {
+					const text = eachItem.address.toLowerCase();
+					return text.includes(searchAddress.toLowerCase());
+			  })
+			: [];
+
 			const [currentPage, setCurrentPage] = useState(1);
 			const [postsPerPage] = useState(4);
 		
 			// Get current posts
 			const indexOfLastPost = currentPage * postsPerPage;
 			const indexOfFirstPost = indexOfLastPost - postsPerPage;
-			const currentPosts = filteredShopList.slice(indexOfFirstPost, indexOfLastPost);
+			const currentPosts = filteredShopAddressList.slice(indexOfFirstPost, indexOfLastPost);
 
 				// Change page
 	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -455,32 +466,32 @@ export default function ShopsFilter() {
 
 				<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Market</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.market} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.market} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.address} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.address} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Owner</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.name} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.name} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.phone} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.phone} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.email} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.email} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Offer</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.offers} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.offers} </span>
 						</div>
 
 						
@@ -551,6 +562,11 @@ export default function ShopsFilter() {
 
 	const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchInput(event.target.value);
+		// handleSuggestionClick;
+	};
+
+	const updateSearchInputAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setSearchAddress(event.target.value);
 		// handleSuggestionClick;
 	};
 
@@ -639,6 +655,14 @@ export default function ShopsFilter() {
 			  })
 			: [];
 
+			const filteredFirebaseShopSearchInputAddressList =
+		filteredFirebaseShopSearchInputList.length > 0
+			? filteredFirebaseShopSearchInputList.filter((eachItem) => {
+					const text = eachItem.address.toLowerCase();
+					return text.includes(searchAddress.toLowerCase());
+			  })
+			: [];
+
 
 		
 	useEffect(() => {
@@ -648,7 +672,7 @@ export default function ShopsFilter() {
 	
 	const indexOfLastFireBasePost = currentPage * postsPerPage;
 	const indexOfFirstFireBasePost = indexOfLastPost - postsPerPage;
-	const currentFireBasePosts = filteredFirebaseShopSearchInputList.slice(
+	const currentFireBasePosts = filteredFirebaseShopSearchInputAddressList.slice(
 		indexOfFirstFireBasePost,
 		indexOfLastFireBasePost
 	);
@@ -737,32 +761,32 @@ export default function ShopsFilter() {
 			{more === `${shop.shopName}` ? <div className={styles.displayShopItems}>
 			<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Market</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.market} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.market} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.address} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.address} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Owner</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.name} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.name} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.phone} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.phone} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.email} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.email} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Offer</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{shop.offers} </span>
+							<span className={styles.shopVacancyDetailAbtUs}>{shop.offers} </span>
 						</div>
 
 			</div>:<></>}
@@ -819,12 +843,24 @@ export default function ShopsFilter() {
 							type="search"
 							className={styles.input}
 							{...register("address")}
+							value={searchAddress}
+							onChange={updateSearchInputAddress}
+							id="vendorAddress"
+							placeholder="Search Shop Address"
+						/>
+					</div>
+					<div className={styles.inputCover}>
+						<input
+							type="search"
+							className={styles.input}
+							{...register("name")}
 							value={searchInput}
 							onChange={updateSearchInput}
 							id="vendorAddress"
-							placeholder="Name of Shop"
+							placeholder="Search Shop Name"
 						/>
 					</div>
+					
 				</div>
 			</form>
 			<div className={styles.displayFilter}>

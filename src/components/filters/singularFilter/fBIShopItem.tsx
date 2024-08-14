@@ -71,7 +71,8 @@ const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => 
           const retrievedData: FormValue[] = [];
           querySnapshot.forEach((doc) => {
             const docData = doc.data() as FormValue;
-            retrievedData.push({ ...docData, id: doc.id });
+            retrievedData.push(docData);
+            // retrievedData.push({ ...docData, id: doc.id });
           });
           setShopItemDetails(retrievedData);
         }

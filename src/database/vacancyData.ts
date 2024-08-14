@@ -14,6 +14,7 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
+    "type":"full-time"
   },
   {
     "id": 2,
@@ -30,7 +31,7 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
-    
+    "type":"full-time"
   },
   {
     "id": 3,
@@ -47,7 +48,7 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
-   
+    "type":"full-time"
   },
 
   {
@@ -65,7 +66,7 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
-    
+    "type":"contract"
   },
   {
     "id": 5,
@@ -82,7 +83,7 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
-    
+    "type":"full-time"
   },
   {
     "id": 6,
@@ -99,7 +100,7 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
-    
+    "type":"contract"
   },
   {
     "id": 7,
@@ -116,6 +117,6 @@ export const VacancyData = [
     "phone":"07011111111, whatsapp only",
     "opening":"30-05-2024",
     "closing":"30-05-2025",
-    
+    "type":"contract"
   },
 ];

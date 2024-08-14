@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { StateData } from "@/database/stateData";
 import { VacancyData } from "@/database/vacancyData";
 import Pagination from "@/components/btn/paginationBtn";
+import { VacancyType } from "@/database/vacancyType";
 
 import {
 	collection,
@@ -37,6 +38,7 @@ type FormValue = {
 	tag: string;
 	status: string;
 	title: string;
+	type:string;
 };
 
 export default function VacanciesFilter() {
@@ -65,6 +67,7 @@ export default function VacanciesFilter() {
 			areaSelect: "",
 			tag: "",
 			status: "",
+			type: "",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
@@ -84,7 +87,7 @@ export default function VacanciesFilter() {
 
 	const tag = watch("tag");
 
-	const status = watch("status");
+	const selectType = watch("type");
 
 	function selectTab(nextTab: string) {
 		startTransition(() => {
@@ -161,6 +164,18 @@ export default function VacanciesFilter() {
 		));
 	}
 
+	function renderAvailableVacancyType() {
+		if (!VacancyType) {
+			// Return a message or component indicating that the "Maintenance" category is not found
+			return null;
+		}
+		return VacancyType.map((vacancy) => (
+			<option className={styles.renderCover} key={vacancy.id} value={vacancy.type}>
+				{vacancy.type}
+			</option>
+		));
+	}
+
 	
 
 	const filteredListstate =
@@ -178,10 +193,14 @@ export default function VacanciesFilter() {
 			: [];
 
 
+			const filteredListType= filteredListarea.length > 0 ?filteredListarea.filter((eachItem) => {
+				const text = eachItem.type.toLowerCase();
+				return (selectType !==(null || undefined|| "" || "Select Type")?text.includes(selectType.toLowerCase()):text );
+			}):[];
 
 	const filteredList =
-		filteredListarea.length > 0
-			? filteredListarea.filter((eachItem) => {
+		filteredListType.length > 0
+			? filteredListType.filter((eachItem) => {
 					const text = eachItem.jobTitle.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
@@ -213,7 +232,8 @@ export default function VacanciesFilter() {
 		return currentPosts?.map((vacancy) => (
 			<div className={styles.VacancyRenderCover} key={vacancy.id}>
 				<div className={styles.innerTextVacancyRenderCover}>
-				<div className={styles.coverHeadDetail}>
+				<div className={styles.coverHeadDetail}>			
+						<div className={styles.detailType}>{vacancy.type}</div>
 						<div className={styles.detailHead}>{vacancy.jobTitle}</div>
 						<div className={styles.headFootDetailCover}>
 							<div className={styles.headFootDetail}><span className={styles.headFootSpan}>Opening</span>{vacancy.opening}</div>
@@ -320,6 +340,7 @@ export default function VacanciesFilter() {
 			  })
 			: [];
 
+		
 
 	const filteredFirebaseSearchInputList =
 		filteredFirebaseaAreaList.length > 0
@@ -347,6 +368,7 @@ export default function VacanciesFilter() {
 			<div className={styles.VacancyRenderCover} key={vacancy.id}>
 			<div className={styles.innerTextVacancyRenderCover}>
 			<div className={styles.coverHeadDetail}>
+			<div className={styles.detailType}>{vacancy.type}</div>
 					<div className={styles.detailHead}>{vacancy.jobTitle}</div>
 					<div className={styles.headFootDetailCover}>
 						<div className={styles.headFootDetail}><span className={styles.headFootSpan}>Opening</span>{vacancy.opening}</div>
@@ -419,6 +441,14 @@ export default function VacanciesFilter() {
 								{selectState === `${stateValue}` && renderAvailableAreas()}
 							</select>
 						</div>
+						<div className={styles.selectCover}>
+						<select value={selectType!==(undefined || null)? selectType:(selectState?"": "Select Type")} className={styles.select} {...register("type")}>
+							<option className={styles.option} value="Select Type">
+							Select Type
+							</option>
+							{renderAvailableVacancyType()}
+						</select>
+					</div>
 						<div className={styles.inputCover}>
 							<input
 								type="search"

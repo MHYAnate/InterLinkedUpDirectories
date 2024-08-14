@@ -268,25 +268,25 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 					</div>
 				</div>
 				{show === `${item.id}` && (
-					<div className={styles.InShowMoreDetails}>
-						<div className={styles.InShowMoreDetailCover}>
-							<div className={styles.InShopItemsDetailCover}>
-								<div className={styles.InShopItemsBody}>{item.price}</div>
+							<div className={styles.InShowMoreDetails}>
+							<div className={styles.InShowMoreDetailCover}>
+							<div className={styles.statusInShop}>{item.status}</div>
+								<div className={styles.InShopItemsDetailCover}>
+								<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>price</div>
+								<div className={styles.contact}>{item.price}</div>
 							</div>
-							<div className={styles.InShowMoreItemsDetailsBody}>
-								<span className={styles.InShopItemsDetailTitle}>Condition</span>
-								<span className={styles.InShopItemsBody}>{item.condition}</span>
+								</div>
+								<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Condition</div>
+								<div className={styles.contact}>{item.condition}</div>
 							</div>
-							<div>
-								<span className={styles.InShopItemsDetailTitle}>Status</span>
-								<span className={styles.InShopItemsBody}>{item.status}</span>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>feature</div>
+								<div className={styles.contact}>{item.features}</div>
 							</div>
-							<div>
-								<span className={styles.InShopItemsDetailTitle}>feature</span>
-								<span className={styles.InShopItemsBody}>{item.features}</span>
 							</div>
 						</div>
-					</div>
 				)}
 				<div
 					className={show !== `${item.id}` ? styles.InBtn : styles.InBtn}

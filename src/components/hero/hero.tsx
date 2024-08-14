@@ -75,10 +75,10 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 									<span className={styles.titleHero}>
-									Connections 
+									{":Linkage"} 
 									</span>
 									<div className={styles.titleHero2}>
-									 <span className={styles.toWhat}>To What</span> <span className={styles.matters}>Matters</span>
+									 <span className={styles.toWhat}>To What</span> <span className={styles.matters}>{"!important;"}</span>
 									</div>
 								</div>
 							</div>

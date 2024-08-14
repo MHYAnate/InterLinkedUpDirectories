@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { StateData } from "@/database/stateData";
 import { VendorsData } from "@/database/vendorData";
 import {
@@ -35,6 +35,7 @@ type FormValue = {
 	state: string;
 	area:string;
 	specialty:string;
+	vendorId:string;
 };
 
 export default function FilterVendors() {
@@ -69,6 +70,17 @@ export default function FilterVendors() {
 	const [searchInput, setSearchInput] = useState("");
 
 	const searchParams = useSearchParams();
+	const router = useRouter();
+	
+	const set = useCallback(
+		(name: string, value: string) => {
+			const params = new URLSearchParams(searchParams.toString());
+			params.set(name, value);
+
+			return params.toString();
+		},
+		[searchParams]
+	);
 
 	const Vendors = searchParams.get("name");
 
@@ -201,6 +213,21 @@ export default function FilterVendors() {
 						<div className={styles.vendorContact}>{vendor.contact}</div>
 					</div>
 				</div>
+				<div 	onClick={() =>
+								router.push(
+									`/workSpace` +
+										"?" +
+										set(
+											"name",
+											`${vendor.name}`
+										) +
+										"&" +
+										set(
+											"service",
+											`${Vendors}`
+										)
+								)
+							} className={styles.enterWorkSpace}>Enter Work Space</div>
 			</div>
 		));
 	}
@@ -311,6 +338,16 @@ export default function FilterVendors() {
 						<div className={styles.vendorContact}>{vendor.number}</div>
 					</div>
 				</div>
+				<div 	onClick={() =>
+								router.push(
+									`/workSpace` +
+										"?" +
+										set(
+											"vendorId",
+											`${vendor.vendorId}`
+										)
+								)
+							} className={styles.enterWorkSpace}>Enter Work Space</div>
 			</div>
 		));
 	}

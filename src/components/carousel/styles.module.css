@@ -144,17 +144,8 @@
   overflow-y: auto;
   z-index: 2;
   background-color:  rgba(240, 238, 238, 0.5);
-  animation:  0.7s linear appear;
 }
-@keyframes appear {
 
-  0%{
-  transform: translateY(-7px);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
 
 .flexRenderCoverControl{
   width:310px;
@@ -216,6 +207,7 @@
   border-radius: 5px;
   transform: scale(1.1);
   transition: transform 0.5s ease-in-out 0.2s;
+  opacity: 0.2;
 }
 .imgSlide:hover{
   transform: scale(1);
@@ -252,6 +244,12 @@
   width: 250px;
 }
 
+.imgSlideEnter{
+  /* transform: translateY(-13px); */
+  z-index: -1;
+  border-radius: 3px;
+}
+
 .linkUpTxt{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 10px;
@@ -259,16 +257,21 @@
   color: white;
   font-weight: 700;
   font-size: 0.7rem;
-  background-color:rgb(192, 192, 192, 0.7);
   border-radius: 3px;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
-	animation: heartbeat 8s ease-in-out infinite both;
+	animation: heartbeat 7s ease-in-out infinite both;
   margin-top: 5px;
   width: 50px;
   height: 70px;
-  text-shadow: 0px 0px 1px black, 0 0 9.5px black, 0 0 0.5px black;
+  text-shadow: 0px 0px 1px black, 0 0 2.5px black, 0 0 9.5px black;
   text-align: center;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0.5px silver, 0 0 1px black, 0 0 2.5px silver; 
 }
 
 @keyframes heartbeat {
@@ -281,20 +284,21 @@
             animation-timing-function: ease-out;
   }
   2% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    /* -webkit-transform: scale(0.91);
+            transform: scale(0.91); */
+
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
-  3.03% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+  2.73% {
+    /* -webkit-transform: scale(0.98);
+            transform: scale(0.98); */
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
-  6.03% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+  4.73% {
+    /* -webkit-transform: scale(0.905);
+            transform: scale(0.905); */
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
@@ -304,7 +308,6 @@
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
- 
 
 }
 
@@ -325,9 +328,10 @@
 
 .vendorNav{
   position: absolute;
-  bottom: 0;
+  top: 110px;
   left: 0;
   width:310px;
+  padding-top: 40px;
 }
 .vendorNavHolder{
   display: flex;
@@ -338,27 +342,58 @@
 }
 
 .prev{
-  text-shadow: 1px 1px 2px black, 0 0 5px black, 0 0 5px black;
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  position: relative;
-  width: 120px;
-  height: 60px;
-  transition:  background-image 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
-  user-select: none;
-}
-
-.next{
-  text-shadow: 1px 1px 2px black, 0 0 5px black, 0 0 5px black;
+  text-shadow: 0px 0px 1px black, 0 0 2.5px black, 0 0 9.5px black;
   padding: 10px;
   border-radius: 5px; 
   color: white;
   position: relative;
   width: 120px;
-  height: 60px;
+  height: 100px;
   transition:  background-image 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
   user-select: none;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.next{
+  text-shadow: 0px 0px 1px black, 0 0 2.5px black, 0 0 9.5px black;
+  padding: 10px;
+  border-radius: 5px; 
+  color: white;
+  position: relative;
+  width: 120px;
+  height: 100px;
+  transition:  background-image 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
+  user-select: none;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+
+}
+.pre{
+  color: darkolivegreen;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  font-size: 0.95rem;
+  text-shadow: none;
+}
+.Nex{
+  color: darkolivegreen;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  text-shadow: none;
 }
 .positioner{
   position: absolute;
@@ -384,14 +419,14 @@
 
 .imgCover{
   width: 120px;
-  height: 60px;
+  height: 100px;
   border-radius: 5px;
   border: 1px solid silver;
   overflow: hidden;
 }
 .img{
   width: 120px;
-  height: 60px;
+  height: 100px;
   border-radius: 5px;
 }
 

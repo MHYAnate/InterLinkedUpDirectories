@@ -7,6 +7,7 @@ import { StateData } from "@/database/stateData";
 import { MarketData } from "@/database/marketData";
 import { MarketStatus } from "@/database/marketStatus";
 import { MarketTag } from "@/database/marketTag";
+import { MarketCondition } from "@/database/marketCondition";
 
 import {
 	collection,
@@ -41,6 +42,7 @@ type FormValue = {
 	status: string;
 	title: string;
 	docid: string;
+	condition: string;
 };
 
 export default function ItemsFilter() {
@@ -70,6 +72,7 @@ export default function ItemsFilter() {
 			tag: "",
 			shopTag: "",
 			status: "",
+			condition: "",
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
@@ -78,6 +81,9 @@ export default function ItemsFilter() {
 	const [isPending, startTransition] = useTransition();
 
 	const [searchInput, setSearchInput] = useState("");
+
+	
+	const [searchAddress, setSearchAddress] = useState("");
 
 	const [more, setMore] = useState("");
 
@@ -94,6 +100,8 @@ export default function ItemsFilter() {
 	const tag = watch("tag");
 
 	const status = watch("status");
+
+	const condition = watch("condition");
 
 	function selectTab(nextTab: string) {
 		startTransition(() => {
@@ -174,6 +182,22 @@ export default function ItemsFilter() {
 		));
 	}
 
+	function renderAvailablStockCondition() {
+		if (!MarketCondition) {
+			// Return a message or component indicating that the "Maintenance" category is not found
+			return null;
+		}
+		return MarketCondition.map((condition) => (
+			<option
+				className={styles.renderCover}
+				key={condition.id}
+				value={condition.condition}
+			>
+				{condition.condition}
+			</option>
+		));
+	}
+
 
 	const filteredListstate =
 	MarketData.filter((eachItem) => {
@@ -205,9 +229,28 @@ export default function ItemsFilter() {
 			  })
 			: [];
 
+			
+	const filteredStockCondition =
+	filteredListStatus.length > 0
+		? filteredListStatus.filter((eachItem) => {
+				const text = eachItem.condition.toLowerCase();
+				return condition !== (null || undefined || "" || "Select Condition")
+					? text.includes(condition.toLowerCase())
+					: text;
+			})
+		: [];
+
+		const filteredItemAddressList =
+		filteredStockCondition.length > 0
+			? filteredStockCondition.filter((eachItem) => {
+					const text = eachItem.address.toLowerCase();
+					return text.includes(searchAddress.toLowerCase());
+			  })
+			: [];
+
 	const filteredList =
-		filteredListStatus.length > 0
-			? filteredListStatus.filter((eachItem) => {
+		filteredItemAddressList.length > 0
+			? filteredItemAddressList.filter((eachItem) => {
 					const text = eachItem.title.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
@@ -311,6 +354,10 @@ export default function ItemsFilter() {
 		setSearchInput(event.target.value);
 		// handleSuggestionClick;
 	};
+	const updateSearchInputAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setSearchAddress(event.target.value);
+		// handleSuggestionClick;
+	};
 
 	// to prevent hydration due to typeof document !== 'undefined'?
 	const [isClient, setIsClient] = useState(false);
@@ -378,9 +425,27 @@ export default function ItemsFilter() {
 			  })
 			: [];
 
+			const filteredFireBaseStockCondition =
+			filteredFirebasetStatusList.length > 0
+				? filteredFirebasetStatusList.filter((eachItem) => {
+						const text = eachItem.condition.toLowerCase();
+						return condition !== (null || undefined || "" || "Select Condition")
+							? text.includes(condition.toLowerCase())
+							: text;
+					})
+				: [];
+		
+				const filteredFireBaseItemAddressList =
+				filteredFireBaseStockCondition.length > 0
+					? filteredFireBaseStockCondition.filter((eachItem) => {
+							const text = eachItem.address.toLowerCase();
+							return text.includes(searchAddress.toLowerCase());
+						})
+					: [];
+
 	const filteredFirebaseSearchInputList =
-		filteredFirebasetStatusList.length > 0
-			? filteredFirebasetStatusList.filter((eachItem) => {
+		filteredFireBaseItemAddressList.length > 0
+			? filteredFireBaseItemAddressList.filter((eachItem) => {
 					const text = eachItem.title.toLowerCase();
 					return text.includes(searchInput.toLowerCase());
 			  })
@@ -550,6 +615,35 @@ export default function ItemsFilter() {
 							</option>
 							{renderAvailableStatus()}
 						</select>
+					</div>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								condition !== (undefined || null)
+									? condition
+									: tag
+									? ""
+									: "Select Condition"
+							}
+							className={styles.select}
+							{...register("condition")}
+						>
+							<option className={styles.option} value="Select Condition">
+								Select Condition
+							</option>
+							{renderAvailablStockCondition()}
+						</select>
+					</div>
+					<div className={styles.inputCover}>
+						<input
+							type="search"
+							className={styles.input}
+							{...register("address")}
+							value={searchAddress}
+							onChange={updateSearchInputAddress}
+							id="vendorAddress"
+							placeholder="Search Item Address"
+						/>
 					</div>
 					<div className={styles.inputCover}>
 						<input

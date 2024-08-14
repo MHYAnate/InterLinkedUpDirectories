@@ -79,7 +79,7 @@ export default function NewsLetter() {
 							<div className={styles.flextitle}>
 								<div className={styles.cardBody}>
 								<p className={styles.boldP}>
-										Join us on our mission to simplify service discovery and empower individuals by providing a user-friendly platform to find and showcase the perfect vendors for everyday tasks!
+										Join us on our mission to simplify service discovery and empower individuals by providing a user-friendly platform to find and showcase the perfect vendors Connections to what MATTERS
 									</p>
 									<p className={styles.boldP}>
 										We are continuously working to expand our service categories
