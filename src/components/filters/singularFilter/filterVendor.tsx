@@ -226,6 +226,12 @@ export default function FilterVendors() {
 											"service",
 											`${Vendors}`
 										)
+										+
+										"&" +
+										set(
+											"src",
+											`${vendor.src}`
+										)
 								)
 							} className={styles.enterWorkSpace}>Enter Work Space</div>
 			</div>
@@ -345,6 +351,11 @@ export default function FilterVendors() {
 										set(
 											"vendorId",
 											`${vendor.vendorId}`
+										)+
+										"&" +
+										set(
+											"src",
+											`${vendor.src}`
 										)
 								)
 							} className={styles.enterWorkSpace}>Enter Work Space</div>

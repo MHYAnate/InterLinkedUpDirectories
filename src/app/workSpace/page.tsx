@@ -84,6 +84,8 @@ export default function WorkSpace() {
 
 	const vendorName = searchParams.get("name");
 
+	const src = searchParams.get("src");
+
 	const vendorService = searchParams.get("service");
 
 	const vendorId = searchParams.get("vendorId");
