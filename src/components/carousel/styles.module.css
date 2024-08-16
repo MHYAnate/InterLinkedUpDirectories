@@ -142,7 +142,7 @@
   height: 400px;
   overflow-y: auto;
   z-index: 2;
-  background-color:  rgba(240, 238, 238, 0.5);
+  background-color:  rgba(254, 253, 253, 0.5);
 }
 .carouselPagi{
   width: 310px;
@@ -181,7 +181,7 @@
   cursor: pointer;
   /* box-shadow: 0px 0px 0.5px black, 0 0 1px black, 0 0 2.5px black; */
   border-bottom: 1px solid black;
-  color: white;
+  color: darkolivegreen;
 }
 
 .renderCover:hover{
