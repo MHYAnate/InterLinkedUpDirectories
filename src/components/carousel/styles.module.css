@@ -138,7 +138,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 330px;
+  width: 310px;
   height: 666px;
   overflow-y: auto;
   z-index: 2;
@@ -170,7 +170,7 @@
 }
 
 .renderCover{
-  width: 280px;
+  width: 310px;
   height:max-content;
   display: flex;
   align-items: center;

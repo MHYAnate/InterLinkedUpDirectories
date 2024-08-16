@@ -236,6 +236,12 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 		));
 	}
 
+	useEffect(() => {
+		if (automativeHover === false && maintainaceHover === false && peronalHover === false){
+			setAutomativeHover(true);
+		}
+		},[]);
+
 	return (
 		<div className={styles.parent}>
 			<div
