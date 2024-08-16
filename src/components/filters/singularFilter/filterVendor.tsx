@@ -185,13 +185,13 @@ export default function FilterVendors() {
 		}
 
 		return currentPosts?.map((vendor) => (
-			<div className={styles.VendorRenderCover} key={vendor.id}>
-				<div className={styles.vendorName}>{vendor.name}</div>
+			
+			<div className={styles.VendorRenderCover} key={vendor?.id}>
 				<div className={styles.imgCover}>
-					
+					<div className={styles.vendorName}>{vendor.name}</div>
 					<Image
 						className={styles.idiImg}
-						src={`${vendor.src}`}
+						src={`${vendor.src ? vendor.src : '/placeholder.jpg'}`}
 						alt={`${vendor.name}`}
 						quality={100}
 						width={500}
