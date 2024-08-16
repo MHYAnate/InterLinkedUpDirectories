@@ -31,7 +31,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 
 	const [currentPage, setCurrentPage] = useState(1);
 
-	const [postsPerPage] = useState(7);
+	const [postsPerPage] = useState(5);
 
 	const paginateA = (pageNumber: number) => setCurrentPageA(pageNumber);
 	 
@@ -90,11 +90,11 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 	}, [setInnerActiveIndex, Services, activeIndex]);
 
 	const intervalTime = useMemo(() => {
-		return 17000 * Services[activeIndex].services.length - 1;
+		return 10000 * Services[activeIndex].services.length - 1;
 	}, [activeIndex, Services]);
 
 	const inIntervalTime = useMemo(() => {
-		return 17000;
+		return 10000;
 	}, []);
 
 	const serviceImage = useMemo(() => {
@@ -243,6 +243,10 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 		},[]);
 
 		useEffect(() => {
+			activeIndex === 0 ?(setAutomativeHover(true), setPeronalHover(false)):activeIndex === 1?(setMaintainaceHover(true), setAutomativeHover(false)):activeIndex === 2?(setPeronalHover(true),setMaintainaceHover(false)):activeIndex !== (0 ||1 ||2)?setAutomativeHover(true):setActiveIndex(0);
+			},[activeIndex]);
+
+		useEffect(() => {
 			const interval = setInterval(() => {
 				if (automativeHover === false && maintainaceHover === false && peronalHover === false){
 					activeIndex === 0 ?setAutomativeHover(true):activeIndex === 1?setMaintainaceHover(true):activeIndex === 2?setPeronalHover(true):activeIndex !== (0 ||1 ||2)?setAutomativeHover(true):setActiveIndex(0);
@@ -251,7 +255,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 			}, 10000);
 
 			return () => clearInterval(interval);
-		}, [intervalTime, handleNext,automativeHover, maintainaceHover, peronalHover]);
+		}, [intervalTime, handleNext,automativeHover, maintainaceHover, peronalHover, activeIndex]);
 
 	return (
 		<div className={styles.parent}>
