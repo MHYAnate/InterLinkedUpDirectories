@@ -248,7 +248,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					activeIndex === 0 ?setAutomativeHover(true):activeIndex === 1?setMaintainaceHover(true):activeIndex === 2?setPeronalHover(true):activeIndex !== (0 ||1 ||2)?setAutomativeHover(true):setActiveIndex(0);
 					
 				}
-			}, 2000);
+			}, 10000);
 
 			return () => clearInterval(interval);
 		}, [intervalTime, handleNext,automativeHover, maintainaceHover, peronalHover]);
