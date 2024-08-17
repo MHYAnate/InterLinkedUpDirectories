@@ -264,11 +264,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 	return (
 		<div className={styles.parent}>
 			<div
-				onMouseLeave={() => {
-					setAutomativeHover(false);
-					setMaintainaceHover(false);
-					setPeronalHover(false);
-				}}
+			
 				className={styles.mainCard}
 			>
 				<div className={styles.titleBodyCategorySelector}>
@@ -328,7 +324,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 					<div className={styles.carouselImageCover}>
 						{automativeHover === true && (
 							<div
-							onMouseLeave={() => setAutomativeHover(false)}
+						
 							 className={styles.hover}>
 								<div
 									
@@ -348,7 +344,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 						)}
 						{maintainaceHover === true && (
 							<div
-							onMouseLeave={() => setMaintainaceHover(false)}
+							
 							 className={styles.hover}>
 								<div
 									
@@ -368,7 +364,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 						)}
 						{peronalHover === true && (
 							<div
-							onMouseLeave={() => setPeronalHover(false)}
+						
 							 className={styles.hover}>
 								<div
 									
