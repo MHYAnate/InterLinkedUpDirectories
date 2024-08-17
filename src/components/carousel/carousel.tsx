@@ -243,8 +243,12 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 		},[]);
 
 		useEffect(() => {
-			activeIndex === 0 ?(setAutomativeHover(true), setPeronalHover(false)):activeIndex === 1?(setMaintainaceHover(true), setAutomativeHover(false)):activeIndex === 2?(setPeronalHover(true),setMaintainaceHover(false)):activeIndex !== (0 ||1 ||2)?setAutomativeHover(true):setActiveIndex(0);
+			activeIndex === 0 ?(setAutomativeHover(true), setPeronalHover(false)):activeIndex === 1?(setMaintainaceHover(true), setAutomativeHover(false)):activeIndex === 2?(setPeronalHover(true),setMaintainaceHover(false)):setAutomativeHover(true);
 			},[activeIndex]);
+
+			useEffect(() => {
+			   automativeHover === true? setActiveIndex(0):maintainaceHover === true? setActiveIndex(1):peronalHover === true &&setActiveIndex(2);
+				},[automativeHover,maintainaceHover, peronalHover]);
 
 		useEffect(() => {
 			const interval = setInterval(() => {

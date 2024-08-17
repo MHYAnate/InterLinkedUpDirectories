@@ -186,8 +186,10 @@
 }
 
 .renderCover:hover{
-  color: darkgreen;
-  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  background-image:  linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
+  border-radius: 3px;
 }
 
 .imgHover{
