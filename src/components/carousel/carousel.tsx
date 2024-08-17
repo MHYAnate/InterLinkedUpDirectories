@@ -150,8 +150,26 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 				onClick={() => (
 					setActiveIndex(0),
 					setInnerActiveIndex(service.id - 1),
-					setAutomativeHover(false)
-				)}
+					setAutomativeHover(false),
+					router.push(
+						`/vendors/${Services[activeIndex]?.services[service.id - 1]?.name}` +
+							"?" +
+							set(
+								"name",
+								`${Services[activeIndex]?.services[service.id - 1]?.name}`
+							) +
+							"&" +
+							set(
+								"isrc",
+								`${Services[activeIndex]?.services[service.id - 1]?.src}`
+							) +
+							"&" +
+							set(
+								"name",
+								`${Services[activeIndex]?.services[service.id - 1]?.name}`
+							)
+					))
+				}
 				className={styles.renderCover}
 				key={service.id}
 			>
@@ -184,8 +202,26 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 				onClick={() => (
 					setActiveIndex(1),
 					setInnerActiveIndex(service.id - 1),
-					setMaintainaceHover(false)
-				)}
+					setMaintainaceHover(false),
+					router.push(
+						`/vendors/${Services[activeIndex]?.services[service.id - 1]?.name}` +
+							"?" +
+							set(
+								"name",
+								`${Services[activeIndex]?.services[service.id - 1]?.name}`
+							) +
+							"&" +
+							set(
+								"isrc",
+								`${Services[activeIndex]?.services[service.id - 1]?.src}`
+							) +
+							"&" +
+							set(
+								"name",
+								`${Services[activeIndex]?.services[service.id - 1]?.name}`
+							)
+					))
+				}
 				className={styles.renderCover}
 				key={service.id}
 			>
@@ -218,8 +254,26 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 				onClick={() => (
 					setActiveIndex(2),
 					setInnerActiveIndex(service.id - 1),
-					setPeronalHover(false)
-				)}
+					setPeronalHover(false),
+					router.push(
+						`/vendors/${Services[activeIndex]?.services[service.id - 1]?.name}` +
+							"?" +
+							set(
+								"name",
+								`${Services[activeIndex]?.services[service.id - 1]?.name}`
+							) +
+							"&" +
+							set(
+								"isrc",
+								`${Services[activeIndex]?.services[service.id - 1]?.src}`
+							) +
+							"&" +
+							set(
+								"name",
+								`${Services[activeIndex]?.services[service.id - 1]?.name}`
+							)
+					))
+				}
 				className={styles.renderCover}
 				key={service.id}
 			>
@@ -344,7 +398,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 						)}
 						{maintainaceHover === true && (
 							<div
-							
+							// onMouseLeave={() => setMaintainaceHover(false)}
 							 className={styles.hover}>
 								<div
 									
@@ -421,7 +475,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 								unoptimized
 							/>
 						</div>
-						<div
+						{/* <div
 							onClick={() =>
 								router.push(
 									`/vendors/${Services[activeIndex]?.services[inneractiveIndex]?.name}` +
@@ -497,7 +551,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 													unoptimized
 												/>
 											</div>
-											{/* <svg
+											<svg
 											xmlns="http://www.w3.org/2000/svg"
 											fill="none"
 											viewBox="0 0 24 24"
@@ -510,13 +564,13 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 												strokeLinejoin="round"
 												d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
 											/>
-										</svg> */}
+										</svg>
 										</div>
 									)}
 								</div>
 							</div>
-						</div>
-						<div className={styles.vendorNav}>
+						</div> */}
+						{/* <div className={styles.vendorNav}>
 							<div className={styles.vendorNavHolder}>
 								<div
 									onClick={() =>
@@ -599,7 +653,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 									)}
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
