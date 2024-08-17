@@ -189,6 +189,7 @@ export default function FilterVendors() {
 			<div className={styles.VendorRenderCover} key={vendor?.id}>
 				<div className={styles.imgCover}>
 					<div className={styles.vendorName}>{vendor.name}</div>
+					<div className={styles.imgCover}>
 					<Image
 						className={styles.idiImg}
 						src={`${vendor.src ? vendor.src : '/placeholder.jpg'}`}
@@ -198,6 +199,7 @@ export default function FilterVendors() {
 						height={500}
 						// unoptimized
 					/>
+					</div>
 				</div>
 				<div className={styles.innerTextVendorRenderCover}>
 				<div className={styles.vendorAddresCover}>
@@ -318,8 +320,9 @@ export default function FilterVendors() {
 
 		return currentFireBasePosts?.map((vendor: any) => (
 			<div className={styles.VendorRenderCover} key={vendor?.name}>
+				<div className={styles.vendorName}>{vendor.name}</div>
 				<div className={styles.imgCover}>
-					<div className={styles.vendorName}>{vendor.name}</div>
+					
 					<Image
 						className={styles.idiImg}
 						src={`${vendor.src ? vendor.src : '/placeholder.jpg'}`}

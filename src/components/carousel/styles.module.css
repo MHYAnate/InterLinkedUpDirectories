@@ -449,6 +449,9 @@
 }
 
 @media screen and (max-width: 770px) {
+  .carouselPagi{
+    width: 98vw;
+  }
 
   .vendorConer{
     display: flex;
