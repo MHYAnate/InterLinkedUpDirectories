@@ -66,7 +66,8 @@
   align-items: flex-start;
   width: 69vw;
   min-height: 70vh;
-  margin-top: 10px;
+  padding-top: 5px;
+  border-left: 1px solid silver;
 }
 
 @media screen and (max-width: 1250px) {

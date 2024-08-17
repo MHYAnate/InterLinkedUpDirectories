@@ -31,7 +31,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 
 	const [currentPage, setCurrentPage] = useState(1);
 
-	const [postsPerPage] = useState(5);
+	const [postsPerPage] = useState(7);
 
 	const paginateA = (pageNumber: number) => setCurrentPageA(pageNumber);
 	 

@@ -249,6 +249,7 @@
   width: 230px;
   height:max-content;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  border: 1px solid silver;
   background-image: linear-gradient(to top , rgb(226, 226, 226,0.7), rgba(243, 255, 243, 0.7));
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   padding-bottom: 5px;
@@ -264,6 +265,7 @@
   width: 310px;
   height:max-content;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  border: 1px solid silver;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   background-color: rgb(255, 255, 255);
   padding-bottom: 7px;
@@ -341,9 +343,10 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 310px;
+  width: 230px;
   height:max-content;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  border: 1px solid silver;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   background-image: linear-gradient(to right,  rgba(255, 255, 255, 0.1), rgba(151, 151, 151, 0.1));
   padding-bottom: 10px;
@@ -417,6 +420,7 @@
   min-height: 190px;
   max-height: max-content;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  border: 1px solid silver;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
 }
@@ -500,6 +504,7 @@
   text-align: center;
   user-select: none;
   margin-top: 5px;
+  padding-bottom: 3px;
 }
 
 .idiImg{
@@ -518,7 +523,7 @@
 }
 
 .innerTextVendorRenderCover{
-  min-width: 310px;
+  min-width: 230px;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -568,7 +573,7 @@
 }
 
 .vendorAddresCover{
-  width: 290px;
+  width: 210px;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -642,7 +647,7 @@
 }
 
 .vendoraddressTitle{
-  width: 290px;
+  width: 210px;
   height: 15px;
   display: flex;
   justify-content: flex-start;
@@ -689,7 +694,7 @@
 }
 
 .vendorAddress{
-  width: 290px;
+  width: 210px;
   color: rgb(83, 83, 83);
   font-size: 0.9rem;
   font-weight: 500;
@@ -711,7 +716,7 @@
 }
 
 .vendorContactCover{
-  width: 290px;
+  width: 210px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -720,7 +725,7 @@
 }
 
 .vendorContactTitle{
-  width: 290px;
+  width: 210px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -733,7 +738,7 @@
 }
 
 .vendorContact{
-  width: 290px;
+  width: 210px;
   user-select: none;
   color: rgb(62, 62, 62);
   font-size: 0.9rem;
@@ -742,7 +747,7 @@
 }
 
 .enterWorkSpace{
-  width: 290px;
+  width: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1749,10 +1754,10 @@
 @media screen and (max-width: 1080px) {
 
   .shopRenderCover{
-    min-width: 310px;
+    min-width: 230px;
   }
   .VendorRenderCover{
-    min-width: 310px;
+    min-width: 230px;
   }
 
 }
@@ -1780,7 +1785,7 @@
     margin-bottom: 10px;
   }
   .VendorRenderCover{
-    min-width: 310px;
+    min-width: 230px;
   }
 
   .addressTitle{
