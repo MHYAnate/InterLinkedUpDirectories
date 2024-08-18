@@ -15,6 +15,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and bikes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -93,6 +97,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and bikes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -171,6 +179,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars, bikes and Trucks",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -255,6 +267,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and bikes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -339,6 +355,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and bikes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -417,6 +437,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and bikes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -495,6 +519,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars, bikes and Trucks",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -586,6 +614,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -621,7 +653,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -664,6 +696,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -699,7 +735,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -742,6 +778,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -777,7 +817,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -820,6 +860,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -855,7 +899,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -898,6 +942,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -933,7 +981,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -976,6 +1024,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -1011,7 +1063,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -1054,6 +1106,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -1089,7 +1145,7 @@ export const VendorsData = [
 				offers: [
 					{
 						id: "1",
-						title:"Car A.C Repair",
+						title: "Car A.C Repair",
 						src: "",
 						detail: "Repairing and rewiring of Car A.C ",
 					},
@@ -1139,6 +1195,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Benz and Bmw",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -1217,11 +1277,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "toyota and honda",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of toyota and honda Automobile",
+						responsibility:
+							"Maintanance and repair of toyota and honda Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1231,7 +1296,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of toyota and honda Automobile",
+						responsibility:
+							"Maintanance and repair of toyota and honda Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1241,7 +1307,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of toyota and honda Automobile",
+						responsibility:
+							"Maintanance and repair of toyota and honda Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1295,11 +1362,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "American Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of American Cars Automobile",
+						responsibility:
+							"Maintanance and repair of American Cars Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1309,7 +1381,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of American Cars Automobile",
+						responsibility:
+							"Maintanance and repair of American Cars Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1319,7 +1392,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of American Cars Automobile",
+						responsibility:
+							"Maintanance and repair of American Cars Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1373,6 +1447,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Chines Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -1435,7 +1513,7 @@ export const VendorsData = [
 					{
 						id: "3",
 						name: "Ebrima",
-				    src: "/service/8.jpg",
+						src: "/service/8.jpg",
 						rank: "interm",
 					},
 				],
@@ -1451,11 +1529,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Electrical Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of Electrical Cars Automobile",
+						responsibility:
+							"Maintanance and repair of Electrical Cars Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1465,7 +1548,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of Electrical Cars Automobile",
+						responsibility:
+							"Maintanance and repair of Electrical Cars Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1475,7 +1559,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Mechanical Engineering",
-						responsibility: "Maintanance and repair of Electrical Cars Automobile",
+						responsibility:
+							"Maintanance and repair of Electrical Cars Automobile",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1507,13 +1592,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Rudo",
-				    src: "/service/4.jpg",
+						src: "/service/4.jpg",
 						rank: "Mechanic Assisst",
 					},
 					{
 						id: "3",
 						name: "Refilwe",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "interm",
 					},
 				],
@@ -1529,6 +1614,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "trucks",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -1579,19 +1668,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Rajabu",
-				    src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "Mechanic",
 					},
 					{
 						id: "2",
 						name: "Rabiu",
-				    src: "/service/12.jpg",
+						src: "/service/12.jpg",
 						rank: "Mechanic Assisst",
 					},
 					{
 						id: "3",
 						name: "Pilirani",
-				    src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "interm",
 					},
 				],
@@ -1607,6 +1696,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "peugot",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -1657,19 +1750,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Ebrima",
-				    src: "/service/7.jpg",
+						src: "/service/7.jpg",
 						rank: "Mechanic",
 					},
 					{
 						id: "2",
 						name: "Ekene",
-				    src: "/service/6.jpg",
+						src: "/service/6.jpg",
 						rank: "Mechanic Assisst",
 					},
 					{
 						id: "3",
 						name: "Ekundayo",
-				    src: "/service/12.jpg",
+						src: "/service/12.jpg",
 						rank: "interm",
 					},
 				],
@@ -1692,11 +1785,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1706,7 +1804,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1716,7 +1815,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1754,7 +1854,7 @@ export const VendorsData = [
 					{
 						id: "3",
 						name: "Emem",
-				   src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "Interm Panel Beater",
 					},
 				],
@@ -1770,11 +1870,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1784,7 +1889,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1794,7 +1900,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1820,7 +1927,7 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Faraji",
-				    src: "/service/8.jpg",
+						src: "/service/8.jpg",
 						rank: "Panel Beater",
 					},
 					{
@@ -1832,7 +1939,7 @@ export const VendorsData = [
 					{
 						id: "3",
 						name: "Moustapha",
-				    src: "/service/4.jpg",
+						src: "/service/4.jpg",
 						rank: "Interm Panel Beater",
 					},
 				],
@@ -1848,11 +1955,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1862,7 +1974,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1872,7 +1985,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1904,7 +2018,7 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Moti",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "Assit Panel beater",
 					},
 					{
@@ -1926,11 +2040,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1940,7 +2059,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1950,7 +2070,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -1976,19 +2097,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Mamman",
-				    src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "Panel Beater",
 					},
 					{
 						id: "2",
 						name: "Mahamadou",
-				    src: "/service/13.jpg",
+						src: "/service/13.jpg",
 						rank: "Assit Panel beater",
 					},
 					{
 						id: "3",
 						name: "Issouf",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "Interm Panel Beater",
 					},
 				],
@@ -2004,11 +2125,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2018,7 +2144,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2028,7 +2155,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2054,13 +2182,13 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Imamu",
-				    src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "Panel Beater",
 					},
 					{
 						id: "2",
 						name: "Chukwuebuka",
-				    src: "/service/3.jpg",
+						src: "/service/3.jpg",
 						rank: "Assit Panel beater",
 					},
 					{
@@ -2082,11 +2210,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2096,7 +2229,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2106,7 +2240,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2132,19 +2267,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Cusmaan",
-				    src: "/service/4.jpg",
+						src: "/service/4.jpg",
 						rank: "Panel Beater",
 					},
 					{
 						id: "2",
 						name: "Dakarai",
-				    src: "/service/7.jpg",
+						src: "/service/7.jpg",
 						rank: "Assit Panel beater",
 					},
 					{
 						id: "3",
 						name: "Manicure",
-		        src: "/service/manicure.jpg",
+						src: "/service/manicure.jpg",
 						rank: "Interm Panel Beater",
 					},
 				],
@@ -2160,11 +2295,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Panel Beater",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2174,7 +2314,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Panel Beater Assistant",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2184,7 +2325,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Panel Beater Assistant interm",
-						responsibility: "Panel Beatig Automobile Body Part Back To Factory Shape",
+						responsibility:
+							"Panel Beatig Automobile Body Part Back To Factory Shape",
 						qualification: "Verified 3 years internship",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2216,13 +2358,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Ekene",
-				    src: "/service/6.jpg",
+						src: "/service/6.jpg",
 						rank: "Assit Panel beater",
 					},
 					{
 						id: "3",
 						name: "Ekundayo",
-				    src: "/service/12.jpg",
+						src: "/service/12.jpg",
 						rank: "Interm Panel Beater",
 					},
 				],
@@ -2245,11 +2387,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Benz and BMW",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Benz and BMW Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Benz and BMW Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2259,7 +2406,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Benz and BMW Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Benz and BMW Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2269,7 +2417,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Benz and BMW Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Benz and BMW Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2288,26 +2437,27 @@ export const VendorsData = [
 						id: "2",
 						title: "Re-wire Maintanance",
 						src: "",
-						detail: "Re-wire Maintanance of Benz and BMW Automotive Wiring Sytems",
+						detail:
+							"Re-wire Maintanance of Benz and BMW Automotive Wiring Sytems",
 					},
 				],
 				staffs: [
 					{
 						id: "1",
 						name: "Emem",
-				    src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "Re-wiring 1",
 					},
 					{
 						id: "2",
 						name: "Enyinnaya",
-				    src: "/service/10.jpg",
+						src: "/service/10.jpg",
 						rank: "Re-wiring Assist",
 					},
 					{
 						id: "3",
 						name: "Eseoghene",
-				    src: "/service/9.jpg",
+						src: "/service/9.jpg",
 						rank: "Re-wiring Assist 2",
 					},
 				],
@@ -2323,11 +2473,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "peugot",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of peugot Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of peugot Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2337,7 +2492,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of peugot Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of peugot Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2347,7 +2503,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of peugot Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of peugot Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2385,7 +2542,7 @@ export const VendorsData = [
 					{
 						id: "3",
 						name: "Madalitso",
-				    src: "/service/14.jpg",
+						src: "/service/14.jpg",
 						rank: "Re-wiring Assist 2",
 					},
 				],
@@ -2401,11 +2558,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Chines Car",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Chines Car Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Chines Car Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2415,7 +2577,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Chines Car Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Chines Car Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2425,7 +2588,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Chines Car Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Chines Car Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2444,7 +2608,8 @@ export const VendorsData = [
 						id: "2",
 						title: "Re-wire Maintanance",
 						src: "",
-						detail: "Re-wire Maintanance of Chines Car Automotive Wiring Sytems",
+						detail:
+							"Re-wire Maintanance of Chines Car Automotive Wiring Sytems",
 					},
 				],
 				staffs: [
@@ -2479,11 +2644,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "German Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of German Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of German Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2493,7 +2663,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of German Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of German Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2503,7 +2674,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of German Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of German Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2522,26 +2694,27 @@ export const VendorsData = [
 						id: "2",
 						title: "Re-wire Maintanance",
 						src: "",
-						detail: "Re-wire Maintanance of German Cars Automotive Wiring Sytems",
+						detail:
+							"Re-wire Maintanance of German Cars Automotive Wiring Sytems",
 					},
 				],
 				staffs: [
 					{
 						id: "1",
 						name: "Lelisa",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "Re-wiring 1",
 					},
 					{
 						id: "2",
 						name: "Lebohang",
-				    src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "Re-wiring Assist",
 					},
 					{
 						id: "3",
 						name: "ELebogang",
-				    src: "/service/16.jpg",
+						src: "/service/16.jpg",
 						rank: "Re-wiring Assist 2",
 					},
 				],
@@ -2557,11 +2730,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "American Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of American Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of American Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2571,7 +2749,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of American Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of American Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2581,7 +2760,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of American Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of American Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2600,26 +2780,27 @@ export const VendorsData = [
 						id: "2",
 						title: "Re-wire Maintanance",
 						src: "",
-						detail: "Re-wire Maintanance of American Cars Automotive Wiring Sytems",
+						detail:
+							"Re-wire Maintanance of American Cars Automotive Wiring Sytems",
 					},
 				],
 				staffs: [
 					{
 						id: "1",
 						name: "Lawal",
-				    src: "/service/15.jpg",
+						src: "/service/15.jpg",
 						rank: "Re-wiring 1",
 					},
 					{
 						id: "2",
 						name: "Mphatso",
-				    src: "/service/5.jpg",
+						src: "/service/5.jpg",
 						rank: "Re-wiring Assist",
 					},
 					{
 						id: "3",
 						name: "Moustapha",
-				    src: "/service/4.jpg",
+						src: "/service/4.jpg",
 						rank: "Re-wiring Assist 2",
 					},
 				],
@@ -2635,11 +2816,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "French Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of French Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of French Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2649,7 +2835,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of French Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of French Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2659,7 +2846,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of French Cars Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of French Cars Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2678,26 +2866,27 @@ export const VendorsData = [
 						id: "2",
 						title: "Re-wire Maintanance",
 						src: "",
-						detail: "Re-wire Maintanance of French Cars Automotive Wiring Sytems",
+						detail:
+							"Re-wire Maintanance of French Cars Automotive Wiring Sytems",
 					},
 				],
 				staffs: [
 					{
 						id: "1",
 						name: "Moussa",
-				    src: "/service/3.jpg",
+						src: "/service/3.jpg",
 						rank: "Re-wiring 1",
 					},
 					{
 						id: "2",
 						name: "Moti",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "Re-wiring Assist",
 					},
 					{
 						id: "3",
 						name: "Mandlenkosi",
-				    src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "Re-wiring Assist 2",
 					},
 				],
@@ -2713,11 +2902,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Toyota, Lexus, Honda and Hynda",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Systems",
 						qualification: "Verified 3 years Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2727,7 +2921,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2737,7 +2932,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "Re-Wiring Engineering",
-						responsibility: "Repair and Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Systems",
+						responsibility:
+							"Repair and Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Systems",
 						qualification: "Verified 3 years internship Experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -2750,32 +2946,34 @@ export const VendorsData = [
 						id: "1",
 						title: "Re-wiring Repairs",
 						src: "",
-						detail: "Partial and Total Re-wiring of Toyota, Lexus, Honda and Hynda Automobile",
+						detail:
+							"Partial and Total Re-wiring of Toyota, Lexus, Honda and Hynda Automobile",
 					},
 					{
 						id: "2",
 						title: "Re-wire Maintanance",
 						src: "",
-						detail: "Re-wire Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Sytems",
+						detail:
+							"Re-wire Maintanance of Toyota, Lexus, Honda and Hynda Automotive Wiring Sytems",
 					},
 				],
 				staffs: [
 					{
 						id: "1",
 						name: "Mamman",
-				    src: "/service/16.jpg",
+						src: "/service/16.jpg",
 						rank: "Re-wiring 1",
 					},
 					{
 						id: "2",
 						name: "Mahamadou",
-				    src: "/service/15.jpg",
+						src: "/service/15.jpg",
 						rank: "Re-wiring Assist",
 					},
 					{
 						id: "3",
 						name: "Oyibo",
-				    src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "Re-wiring Assist 2",
 					},
 				],
@@ -2798,6 +2996,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -2848,13 +3050,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Ousmane",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "Driver 2",
 					},
 					{
 						id: "3",
 						name: "Oumar",
-				    src: "/service/3.jpg",
+						src: "/service/3.jpg",
 						rank: "Driver 3",
 					},
 				],
@@ -2870,7 +3072,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
-							vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Towwing Van Driver",
@@ -2942,7 +3148,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
-							vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Towwing Van Driver",
@@ -2986,19 +3196,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Otobong",
-				    src: "/service/4.jpg",
+						src: "/service/4.jpg",
 						rank: "Driver 1",
 					},
 					{
 						id: "2",
 						name: "Otieno",
-				    src: "/service/5.jpg",
+						src: "/service/5.jpg",
 						rank: "Driver 2",
 					},
 					{
 						id: "3",
 						name: "Odhiambo",
-				    src: "/service/6.jpg",
+						src: "/service/6.jpg",
 						rank: "Driver 3",
 					},
 				],
@@ -3014,7 +3224,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and Truck",
-							vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Towwing Van Driver",
@@ -3070,13 +3284,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Ebrima",
-				    src: "/service/7.jpg",
+						src: "/service/7.jpg",
 						rank: "Driver 2",
 					},
 					{
 						id: "3",
 						name: "Ekene",
-				    src: "/service/6.jpg",
+						src: "/service/6.jpg",
 						rank: "Driver 3",
 					},
 				],
@@ -3092,7 +3306,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
-							vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Towwing Van Driver",
@@ -3136,19 +3354,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Ekundayo",
-				    src: "/service/12.jpg",
+						src: "/service/12.jpg",
 						rank: "Driver 1",
 					},
 					{
 						id: "2",
 						name: "Emem",
-				    src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "Driver 2",
 					},
 					{
 						id: "3",
 						name: "Enyinnaya",
-				    src: "/service/10.jpg",
+						src: "/service/10.jpg",
 						rank: "Driver 3",
 					},
 				],
@@ -3164,7 +3382,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and Trailers",
-							vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Towwing Van Driver",
@@ -3207,7 +3429,8 @@ export const VendorsData = [
 						id: "2",
 						title: "Towwing Trailers Services",
 						src: "",
-						detail: "Towwing Trailers From place of Towwing to Place Of Interest",
+						detail:
+							"Towwing Trailers From place of Towwing to Place Of Interest",
 					},
 				],
 				staffs: [
@@ -3220,13 +3443,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Faraji",
-				    src: "/service/8.jpg",
+						src: "/service/8.jpg",
 						rank: "Driver 2",
 					},
 					{
 						id: "3",
 						name: "Pharoq",
-				    src: "/service/7.jpg",
+						src: "/service/7.jpg",
 						rank: "Driver 3",
 					},
 				],
@@ -3242,7 +3465,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars",
-							vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Towwing Van Driver",
@@ -3286,13 +3513,13 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Ɗanjuma",
-				    src: "/service/15.jpg",
+						src: "/service/15.jpg",
 						rank: "Driver 1",
 					},
 					{
 						id: "2",
 						name: "Ɗanladi",
-				    src: "/service/14.jpg",
+						src: "/service/14.jpg",
 						rank: "Driver 2",
 					},
 					{
@@ -3321,6 +3548,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
@@ -3399,7 +3630,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
-						vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Valcanizer",
@@ -3455,13 +3690,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Dayo",
-				    src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "Assist",
 					},
 					{
 						id: "3",
 						name: "Dumisani",
-				    src: "/service/16.jpg",
+						src: "/service/16.jpg",
 						rank: "Interm",
 					},
 				],
@@ -3477,7 +3712,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
-						vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Valcanizer",
@@ -3527,13 +3766,13 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Ebere",
-				    src: "/service/5.jpg",
+						src: "/service/5.jpg",
 						rank: "Vulcaziner 1",
 					},
 					{
 						id: "2",
 						name: "Ebrima",
-				    src: "/service/15.jpg",
+						src: "/service/15.jpg",
 						rank: "Assist",
 					},
 					{
@@ -3555,7 +3794,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
-						vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Valcanizer",
@@ -3611,13 +3854,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Emem",
-				    src: "/service/12.jpg",
+						src: "/service/12.jpg",
 						rank: "Assist",
 					},
 					{
 						id: "3",
 						name: "Enyinnaya",
-				    src: "/service/11.jpg",
+						src: "/service/11.jpg",
 						rank: "Interm",
 					},
 				],
@@ -3633,7 +3876,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
-						vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Valcanizer",
@@ -3683,13 +3930,13 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Eseoghene",
-				    src: "/service/10.jpg",
+						src: "/service/10.jpg",
 						rank: "Vulcaziner 1",
 					},
 					{
 						id: "2",
 						name: "Faraji",
-				    src: "/service/9.jpg",
+						src: "/service/9.jpg",
 						rank: "Assist",
 					},
 					{
@@ -3711,7 +3958,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
-						vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Valcanizer",
@@ -3767,13 +4018,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Rudo",
-				    src: "/service/3.jpg",
+						src: "/service/3.jpg",
 						rank: "Assist",
 					},
 					{
 						id: "3",
 						name: "Refilwe",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "Interm",
 					},
 				],
@@ -3789,7 +4040,11 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All tyres",
-						vacancies: [
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "Valcanizer",
@@ -3874,11 +4129,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Automotive",
 				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -3888,7 +4148,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -3898,7 +4159,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -3946,11 +4208,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
-					vacancies: [
+				category: "Automotive",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -3960,7 +4227,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -3970,7 +4238,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -3990,13 +4259,13 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Rajabu",
-				    src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "Senior Wheel Balacing Operator",
 					},
 					{
 						id: "2",
 						name: "Rabiu",
-				    src: "/service/16.jpg",
+						src: "/service/16.jpg",
 						rank: "Assist Wheel Balacing Operator",
 					},
 					{
@@ -4018,11 +4287,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
-					vacancies: [
+				category: "Automotive",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4032,7 +4306,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4042,7 +4317,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4062,19 +4338,19 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Lassana",
-				    src: "/service/9.jpg",
+						src: "/service/9.jpg",
 						rank: "Senior Wheel Balacing Operator",
 					},
 					{
 						id: "2",
 						name: "Kyauta",
-				    src: "/service/8.jpg",
+						src: "/service/8.jpg",
 						rank: "Assist Wheel Balacing Operator",
 					},
 					{
 						id: "3",
 						name: "Kwasi",
-			    	src: "/service/7.jpg",
+						src: "/service/7.jpg",
 						rank: "interm Wheel Balacing Operator",
 					},
 				],
@@ -4090,11 +4366,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
-					vacancies: [
+				category: "Automotive",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4104,7 +4385,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4114,7 +4396,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4140,13 +4423,13 @@ export const VendorsData = [
 					{
 						id: "2",
 						name: "Kwame",
-				    src: "/service/6.jpg",
+						src: "/service/6.jpg",
 						rank: "Assist Wheel Balacing Operator",
 					},
 					{
 						id: "3",
 						name: "Kwaku",
-				   src: "/service/1.jpg",
+						src: "/service/1.jpg",
 						rank: "interm Wheel Balacing Operator",
 					},
 				],
@@ -4162,11 +4445,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
-					vacancies: [
+				category: "Automotive",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4176,7 +4464,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4186,7 +4475,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4206,7 +4496,7 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Kunto",
-			    	src: "/service/5.jpg",
+						src: "/service/5.jpg",
 						rank: "Senior Wheel Balacing Operator",
 					},
 					{
@@ -4234,11 +4524,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
-					vacancies: [
+				category: "Automotive",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4248,7 +4543,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4258,7 +4554,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4278,7 +4575,7 @@ export const VendorsData = [
 					{
 						id: "1",
 						name: "Ousmane",
-				    src: "/service/8.jpg",
+						src: "/service/8.jpg",
 						rank: "Senior Wheel Balacing Operator",
 					},
 					{
@@ -4306,11 +4603,16 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
-					vacancies: [
+				category: "Automotive",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				vacancies: [
 					{
 						id: 1,
 						jobTitle: "wheel Balancing Expert",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "3 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4320,7 +4622,8 @@ export const VendorsData = [
 					{
 						id: 2,
 						jobTitle: "wheel Balancing Assistant",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "1 years of verified wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4330,7 +4633,8 @@ export const VendorsData = [
 					{
 						id: 3,
 						jobTitle: "wheel Balancing interm",
-						responsibility: "Using Technological means to Balance car wheels alignments",
+						responsibility:
+							"Using Technological means to Balance car wheels alignments",
 						qualification: "Familarity with wheel balancing experience",
 						salary: "N500K - N1.5M",
 						opening: "30-05-2024",
@@ -4362,7 +4666,7 @@ export const VendorsData = [
 					{
 						id: "3",
 						name: "Oumar",
-				    src: "/service/2.jpg",
+						src: "/service/2.jpg",
 						rank: "interm Wheel Balacing Operator",
 					},
 				],
@@ -4386,6 +4690,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Ac and Fridge",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -4465,6 +4773,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cookers",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -4544,6 +4856,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cookers",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -4623,6 +4939,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Ac And Fridge",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -4702,6 +5022,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -4781,6 +5105,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Fridges",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -4860,6 +5188,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -4946,6 +5278,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5025,6 +5361,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5104,6 +5444,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5183,6 +5527,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5262,6 +5610,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5341,6 +5693,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5420,6 +5776,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5506,6 +5866,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5585,6 +5949,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5664,6 +6032,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5743,6 +6115,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "MacBooks",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5822,6 +6198,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5901,6 +6281,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -5980,6 +6364,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6066,6 +6454,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "starLinks",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6145,6 +6537,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Dish Installations",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6224,6 +6620,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Dish Installations",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6303,6 +6703,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Dish Installations",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6382,6 +6786,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Dish Installations",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6461,6 +6869,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Dish Installations",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6540,6 +6952,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Dish Installations",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6626,6 +7042,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Smart Flat Screen Tvs and General repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6705,6 +7125,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Android Tvs and General repairs",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6784,6 +7208,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general repairs",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6863,6 +7291,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "touch Screen tv and General repairs",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -6942,6 +7374,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Wiring and maintainance",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7021,6 +7457,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Wiring and maintainance",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7100,6 +7540,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Wiring and maintainance",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7186,6 +7630,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7265,6 +7713,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7344,6 +7796,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7423,6 +7879,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7502,6 +7962,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7581,6 +8045,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7660,6 +8128,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "weeds, pest and rodent",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7746,6 +8218,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7825,6 +8301,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7904,6 +8384,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -7983,6 +8467,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8062,6 +8550,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8141,6 +8633,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8220,6 +8716,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Scale",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8306,6 +8806,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8385,6 +8889,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8464,6 +8972,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8543,6 +9055,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8622,6 +9138,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8701,6 +9221,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8780,6 +9304,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Block Worker",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8866,6 +9394,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -8945,6 +9477,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9024,6 +9560,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9103,6 +9643,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9182,6 +9726,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9261,6 +9809,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9340,6 +9892,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General House Painting",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9426,6 +9982,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Iphones",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9505,6 +10065,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Andriod and Iphones",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9584,6 +10148,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Phones Repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9663,6 +10231,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Phones Repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9742,6 +10314,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Phones Repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9821,6 +10397,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Phones Repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9900,6 +10480,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Phones Repair",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -9986,6 +10570,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10065,6 +10653,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10144,6 +10736,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10223,6 +10819,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10302,6 +10902,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10381,6 +10985,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10460,6 +11068,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Plumbing Issues",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10546,6 +11158,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Plastics and mental",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10625,6 +11241,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Plastic, Metals and Electronics",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10704,6 +11324,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Carton, Plastic, metal and electronics",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10783,6 +11407,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Carton, Plastic, metal and electronics",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10862,6 +11490,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Carton, Plastic, metal and electronics",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -10941,6 +11573,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Carton, Plastic, metal and electronics",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11020,6 +11656,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Carton, Plastic, metal and electronics",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11107,6 +11747,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11186,6 +11830,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11265,6 +11913,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11344,6 +11996,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11423,6 +12079,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11502,6 +12162,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11581,6 +12245,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11667,6 +12335,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11746,6 +12418,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11825,6 +12501,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11904,6 +12584,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -11983,6 +12667,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12062,6 +12750,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12141,6 +12833,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Large and Small Unit Maintainace",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12227,6 +12923,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12306,6 +13006,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12385,6 +13089,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12464,6 +13172,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12543,6 +13255,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12622,6 +13338,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12701,6 +13421,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12787,6 +13511,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All iron works",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12866,6 +13594,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "iron work",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -12945,6 +13677,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "iron",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -13024,6 +13760,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All iron and alluminium",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -13103,6 +13843,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "iron works",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -13182,6 +13926,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Alluminiun iron works",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -13261,6 +14009,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "All iron works",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Maintenance",
 				vacancies: [
 					{
 						id: 1,
@@ -13348,6 +14100,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13427,6 +14183,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13506,6 +14266,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13585,6 +14349,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13664,6 +14432,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13743,6 +14515,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13822,6 +14598,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Design",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13908,6 +14688,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -13987,6 +14771,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14066,6 +14854,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14145,6 +14937,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14224,6 +15020,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14303,6 +15103,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14382,6 +15186,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home Services",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14468,6 +15276,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14547,6 +15359,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14626,6 +15442,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14705,6 +15525,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14784,6 +15608,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14863,6 +15691,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -14942,6 +15774,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Home and Outdoor Servies",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15028,6 +15864,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "photo shot",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15107,6 +15947,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "photo and video shots",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15186,6 +16030,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "video recording service and photo shots",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15265,6 +16113,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "photo shots",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15344,6 +16196,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "photography and video camera man",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15423,6 +16279,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "photography",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15502,6 +16362,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "photograohy",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15588,6 +16452,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General car wash",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15667,6 +16535,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General car wash",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15746,6 +16618,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General car wash",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15825,6 +16701,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and truck",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15904,6 +16784,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and truck",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -15983,6 +16867,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Cars and truck",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16062,6 +16950,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Bikes,cars and trucks",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16149,6 +17041,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Calabar dishes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16228,6 +17124,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "pastries and cakes",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16307,6 +17207,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Nigeria quisen",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16386,6 +17290,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16465,6 +17373,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16544,6 +17456,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16623,6 +17539,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16709,6 +17629,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Bike delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16788,6 +17712,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "trycycle delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16867,6 +17795,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "car delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -16946,6 +17878,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "bus delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17025,6 +17961,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "trailer delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17104,6 +18044,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "wheel barow",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17183,6 +18127,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "bicycle dilevery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17269,6 +18217,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17348,6 +18300,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17427,6 +18383,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17506,6 +18466,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17585,6 +18549,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17664,6 +18632,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17743,6 +18715,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General planning and rentals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17829,6 +18805,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17908,6 +18888,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -17987,6 +18971,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18066,6 +19054,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18145,6 +19137,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18224,6 +19220,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18303,6 +19303,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General home and office delivery",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18389,6 +19393,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Arabic and Quran",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18468,6 +19476,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Arabic and Hadith",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18547,6 +19559,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Arabic",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18626,6 +19642,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Quran",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18705,6 +19725,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Hadith",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18784,6 +19808,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Quran",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18863,6 +19891,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Arabic Language and text",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -18949,6 +19981,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Maths and Physic",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19028,6 +20064,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Chemistry and Biology",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19107,6 +20147,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "English, History and Government",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19186,6 +20230,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Accounting and Commerce",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19265,6 +20313,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Maths, english, physics, chemistry and biology",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19344,6 +20396,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Maths, technical drawing, physics, chemistry and biology",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19424,6 +20480,10 @@ export const VendorsData = [
 				area: "okene",
 				specialty:
 					"Maths, technical drawing, physics, chemistry, biology and fine art",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19510,6 +20570,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19589,6 +20653,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19668,6 +20736,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19747,6 +20819,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19826,6 +20902,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19905,6 +20985,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -19984,6 +21068,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "general",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20070,6 +21158,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General consultant",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20149,6 +21241,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Consultant",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20228,6 +21324,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Herbals",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20307,6 +21407,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Practioner",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20386,6 +21490,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Practioner",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20465,6 +21573,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Practioner",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20544,6 +21656,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Herbal Consultant",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20630,6 +21746,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "9 - 8",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20709,6 +21829,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20788,6 +21912,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "9 - 8",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20867,6 +21995,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time maid",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -20946,6 +22078,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time maid",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21025,6 +22161,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "9 - 8",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21104,6 +22244,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time maid",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21190,6 +22334,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21269,6 +22417,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21348,6 +22500,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21427,6 +22583,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21506,6 +22666,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21585,6 +22749,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21664,6 +22832,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "General Care",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21751,6 +22923,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21830,6 +23006,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21909,6 +23089,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -21988,6 +23172,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22067,6 +23255,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22146,6 +23338,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22225,6 +23421,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "full time",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22311,6 +23511,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Driver, and security",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22390,6 +23594,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "security and driver",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22469,6 +23677,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "security",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22548,6 +23760,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "bouncer and security",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22627,6 +23843,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "bouncer, gym instructor and security",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22706,6 +23926,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "security",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22785,6 +24009,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "security",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22871,6 +24099,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "Suits",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -22950,6 +24182,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "mens and women",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -23029,6 +24265,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "women",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -23108,6 +24348,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "men",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -23187,6 +24431,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "suits and native",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -23266,6 +24514,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "women",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,
@@ -23345,6 +24597,10 @@ export const VendorsData = [
 				state: "kogi",
 				area: "okene",
 				specialty: "men, women, suits and natives",
+				account: "0000000001",
+				bankName: "xyz Bank",
+				accountName: "MFash-Ionic",
+				category: "Others",
 				vacancies: [
 					{
 						id: 1,

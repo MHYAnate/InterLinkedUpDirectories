@@ -31,38 +31,31 @@ import {
 	query,
 	where,
 } from "firebase/firestore";
-import firebase from "@/firebase/firebase";
-import { ref, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import ShopModelStock from "@/components/filters/singularFilter/filterShopModelItems";
-import ShopStock from "@/components/filters/singularFilter/flterFireBaseShopItems";
-
 import styles from "./styles.module.css";
 
-type ShopValues = {
-	email: string;
-	shopName: string;
+type SpaceValues = {
+	vendorName: string;
 	address: string;
-	name: string;
 	contact: string;
 	account: string;
 	accountName: string;
 	bankName: string;
-	shopSrc: string;
-	src: string;
-	shopId: string;
-	market: string;
+	img: string;
+	serviceCat: string;
+	serviceName: string;
+	speciality:string;
 };
 
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
-	firebase;
+	Firebase;
 
 export default function WorkSpace() {
 	const [user, loading, error] = useAuthState(auth);
 
-	const [profileDetails, setProfileDetails] = useState<ShopValues | null>(null);
+	const [profileDetails, setProfileDetails] = useState<SpaceValues | null>(null);
 
 	const [imageUrl, setImageUrl] = useState("");
 
@@ -88,16 +81,49 @@ export default function WorkSpace() {
 
 	const vendorService = searchParams.get("service");
 
+	const address = searchParams.get("adrs");
+
+	const actNum = searchParams.get("actNum");
+
+	const bnk = searchParams.get("bnk");
+
+	const actName = searchParams.get("actName");
+
+	const spec = searchParams.get("spec");
+
+	const cat = searchParams.get("cat");
+
+	const phone = searchParams.get("phone");
+
 	const vendorId = searchParams.get("vendorId");
 
 	const companyId = searchParams.get("companyId");
 
-	const profileDetailRef = collection(database, `shop`);
+	const profileDetailRef = collection(database, `workSpace`);
 
 	const userQuery = query(
 		profileDetailRef,
-		where("email", "==", `${user?.email}`)
+		where("vendorId", "==", `${vendorId}`)
 	);
+
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(userQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as SpaceValues;
+					setProfileDetails(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		
 
 	return (
 		<Suspense fallback={<Loading />}>
@@ -108,7 +134,7 @@ export default function WorkSpace() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-						
+					<HeroDetail imgM={src} img={profileDetails?.img} vendorNameM={vendorName} vendorName={profileDetails?.vendorName} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.serviceCat} contactM={phone} contact={profileDetails?.contact} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.serviceName} specialityM={spec} speciality={profileDetails?.speciality}  />
 					</div>
 					<div className={styles.shopStockCover}>
 						<div className={styles.coverSelectBtn}>

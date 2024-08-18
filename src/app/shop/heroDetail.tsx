@@ -37,7 +37,7 @@ const HeroDetail: React.FC<any> = ({
 							quality={100}
 							width={100}
 							height={100}
-							src={user ? `${img}` : `${imgM}`}
+							src={`${img}` ? `${img}` : `${imgM}`}
 							priority={true}
 							unoptimized
 						/>
@@ -49,18 +49,18 @@ const HeroDetail: React.FC<any> = ({
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Shop Name</div>
 								<div className={styles.detail}>
-									{user ? shopName : shopNameM}
+									{shopName ? shopName : shopNameM}
 								</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Shop Market Complex</div>
 								<div className={styles.detail}>
-									{user ? shopMarket : shopMarketM}
+									{shopMarket ? shopMarket : shopMarketM}
 								</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}> Shop Address</div>
-								<div className={styles.detail}>{user ? address : addressM}</div>
+								<div className={styles.detail}>{address ? address : addressM}</div>
 							</div>
 						</div>
 
@@ -68,11 +68,11 @@ const HeroDetail: React.FC<any> = ({
 							<div className={styles.titleTop}>Manager Info</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Shop Manager</div>
-								<div className={styles.detail}>{user ? shopMg : shopMgM}</div>
+								<div className={styles.detail}>{shopMg ? shopMg : shopMgM}</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Contact</div>
-								<div className={styles.detail}>{user ? contact : contactM}</div>
+								<div className={styles.detail}>{contact ? contact : contactM}</div>
 							</div>
 						</div>
 
@@ -80,15 +80,15 @@ const HeroDetail: React.FC<any> = ({
 							<div className={styles.titleTop}>Payment Detail</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Account Number</div>
-								<div className={styles.detail}>{user ? actNum : actNumM}</div>
+								<div className={styles.detail}>{actNum ? actNum : actNumM}</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Bank Name</div>
-								<div className={styles.detail}>{user ? bnkName : bnkNameM}</div>
+								<div className={styles.detail}>{bnkName ? bnkName : bnkNameM}</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Account Name</div>
-								<div className={styles.detail}>{user ? actName : actNameM}</div>
+								<div className={styles.detail}>{actName ? actName : actNameM}</div>
 							</div>
 						</div>
 					</div>

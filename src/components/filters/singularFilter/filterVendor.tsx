@@ -234,6 +234,48 @@ export default function FilterVendors() {
 											"src",
 											`${vendor.src}`
 										)
+										+
+										"&" +
+										set(
+											"adrs",
+											`${vendor.address}`
+										)
+										+
+										"&" +
+										set(
+											"actNum",
+											`${vendor.account}`
+										)
+										+
+										"&" +
+										set(
+											"bnk",
+											`${vendor.bankName}`
+										)+
+										"&" +
+										set(
+											"actName",
+											`${vendor.accountName}`
+										)
+										+
+										"&" +
+										set(
+											"spec",
+											`${vendor.specialty}`
+										)
+										+
+										"&" +
+										set(
+											"cat",
+											`${vendor.category}`
+										)
+										+
+										"&" +
+										set(
+											"phone",
+											`${vendor.contact}`
+										)
+										
 								)
 							} className={styles.enterWorkSpace}>Enter Work Space</div>
 			</div>

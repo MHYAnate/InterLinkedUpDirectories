@@ -181,7 +181,7 @@
     justify-content: flex-start;
     padding-left: 10px;
     padding-right: 10px;
-    align-items: center;
+    align-items: first baseline;
     overflow-x: auto;
     height: 170px;
     border-radius: 5px;
@@ -194,10 +194,6 @@
     margin-left: 10px;
     align-items: first baseline;
     overflow-x: auto;
-  }
-
-  .shopImgHolder{
-    transform: translateY(5px);
   }
 
   .shopStockCover{
