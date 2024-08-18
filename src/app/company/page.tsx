@@ -1,15 +1,25 @@
 "use client";
-import React, {  useState,  useCallback } from "react";
-import { onAuthStateChanged} from "firebase/auth";
+import React, { useState, useCallback } from "react";
+import { onAuthStateChanged } from "firebase/auth";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { Suspense } from "react";
 import Loading from "../register/logo";
 import Nav from "@/components/nav/mainNav/nav";
 import VendorNav from "@/components/nav/userNav/nav";
-import HeroDetail from "../shop/heroDetail";
+import HeroDetail from "./heroDetail";
 import Hero from "@/components/hero/hero";
 import NewsLetter from "@/components/newsLetter/newsLetter";
+import VendorStaffModel from "@/components/filters/singularFilter/filterVendorsStaff";
+import VendorOfferModel from "@/components/filters/singularFilter/filterVendorOffer";
+
+import VendorVacancyModel from "@/components/filters/singularFilter/filterVendorVacancy";
+
+import FireBaseOffers from "@/components/filters/singularFilter/filterFireBaseOffers";
+
+import FireBaseStaff from "@/components/filters/singularFilter/filterFireBaseStaff";
+
+import FireBaseVacancy from "@/components/filters/singularFilter/filterFireBaseVacancy";
 
 import {
 	collection,
@@ -21,40 +31,35 @@ import {
 	query,
 	where,
 } from "firebase/firestore";
-import firebase from "@/firebase/firebase";
-import { ref, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import ShopModelStock from "@/components/filters/singularFilter/filterShopModelItems";
-import ShopStock from "@/components/filters/singularFilter/flterFireBaseShopItems";
-
 import styles from "./styles.module.css";
 
-type ShopValues = {
-	email: string;
-	shopName: string;
+type SpaceValues = {
+	vendorName: string;
 	address: string;
-	name: string;
 	contact: string;
 	account: string;
 	accountName: string;
 	bankName: string;
-	shopSrc: string;
-	src: string;
-	shopId: string;
-	market:string;
+	img: string;
+	serviceCat: string;
+	serviceName: string;
+	speciality:string;
 };
 
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
-	firebase;
+	Firebase;
 
-export default function Shop() {
+export default function WorkSpace() {
 	const [user, loading, error] = useAuthState(auth);
 
-	const [profileDetails, setProfileDetails] = useState<ShopValues | null>(null);
+	const [profileDetails, setProfileDetails] = useState<SpaceValues | null>(null);
 
 	const [imageUrl, setImageUrl] = useState("");
+
+	const [selector, setSelector] = useState("vacancy");
 
 	const searchParams = useSearchParams();
 
@@ -70,41 +75,36 @@ export default function Shop() {
 		[searchParams]
 	);
 
-	const shopImg = searchParams.get("shopImg");
+	const vendorName = searchParams.get("name");
 
-	const shopName = searchParams.get("shopName");
+	const src = searchParams.get("src");
 
-	const shopAddress = searchParams.get("shopAddress");
+	const vendorService = searchParams.get("service");
 
-	const shopManager = searchParams.get("shopManager");
+	const address = searchParams.get("adrs");
 
-	const shopacct = searchParams.get("act");
+	const actNum = searchParams.get("actNum");
 
-	const shopBnk = searchParams.get("bnkName");
+	const bnk = searchParams.get("bnk");
 
-	const shopacctName = searchParams.get("actName");
+	const actName = searchParams.get("actName");
 
-	const shopPhone = searchParams.get("contact");
+	const spec = searchParams.get("spec");
 
-	const shopComplex = searchParams.get("complex");
+	const cat = searchParams.get("cat");
 
+	const phone = searchParams.get("phone");
 
-	const shopId = searchParams.get("shopId");
+	const vendorId = searchParams.get("vendorId");
 
-	const profileDetailRef = collection(database, `shop`);
+	const companyId = searchParams.get("companyId");
+
+	const profileDetailRef = collection(database, `workSpace`);
 
 	const userQuery = query(
 		profileDetailRef,
-		where("email", "==", `${user?.email}`)
+		where("vendorId", "==", `${vendorId}`)
 	);
-
-	const imageRef = ref(storage, `shopImage/${user?.email}`);
-
-	onAuthStateChanged(auth, (user) => {
-		if (user) {
-			getDownloadURL(imageRef).then((url) => {
-				setImageUrl(url);
-			});
 
 			const handleGetProfileDetail = async () => {
 				try {
@@ -115,7 +115,7 @@ export default function Shop() {
 						return;
 					}
 
-					const retrievedData = querySnapshot.docs[0].data() as ShopValues;
+					const retrievedData = querySnapshot.docs[0].data() as SpaceValues;
 					setProfileDetails(retrievedData);
 				} catch (error) {
 					console.error("Error getting profile detail:", error);
@@ -123,30 +123,110 @@ export default function Shop() {
 			};
 
 			handleGetProfileDetail();
-		} else {
-			// Redirect to login page if not signed in
-		}
-	});
+		
 
 	return (
 		<Suspense fallback={<Loading />}>
 			<div>
 				<div className={styles.nav}>{user ? <VendorNav /> : <Nav />}</div>
 				<div>
-					<Hero/>
+					<Hero />
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-						<HeroDetail user={user} imgM={shopImg} img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} addressM={shopAddress} address={profileDetails?.address} shopMgM={shopManager} shopMg={profileDetails?.name}
-						contactM={shopPhone} contact={profileDetails?.contact} actNumM={shopacct}
-						actNum={profileDetails?.account} bnkNameM={shopBnk} bnkName={profileDetails?.bankName} actNameM={shopacctName} actName={profileDetails?.accountName} shopMarketM={ shopComplex} shopMarket={profileDetails?.market} />
+					<HeroDetail imgM={src} img={profileDetails?.img} vendorNameM={vendorName} vendorName={profileDetails?.vendorName} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.serviceCat} contactM={phone} contact={profileDetails?.contact} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.serviceName} specialityM={spec} speciality={profileDetails?.speciality}  />
 					</div>
 					<div className={styles.shopStockCover}>
-						{user ? <ShopStock shopId={`${shopId}`} />: <ShopModelStock shopName={`${shopName}`} />}
+						<div className={styles.coverSelectBtn}>
+							<div
+								onClick={
+									selector !== "vacancy"
+										? () => setSelector("vacancy")
+										: () => setSelector("")
+								}
+								className={
+									selector !== "vacancy"
+										? styles.selectBtn
+										: styles.selectBtnHighlighted
+								}
+							>
+								VACANCY
+							</div>
+							<div
+								onClick={
+									selector !== "offer"
+										? () => setSelector("offer")
+										: () => setSelector("")
+								}
+								className={
+									selector !== "offer"
+										? styles.selectBtn
+										: styles.selectBtnHighlighted
+								}
+							>
+								OFFERS
+							</div>
+							<div
+								onClick={
+									selector !== "staff"
+										? () => setSelector("staff")
+										: () => setSelector("")
+								}
+								className={
+									selector !== "staff"
+										? styles.selectBtn
+										: styles.selectBtnHighlighted
+								}
+							>
+								STAFFS
+							</div>
+						</div>
+
+						{selector === "vacancy" && (companyId !== null || vendorId !== null) ? (
+							<FireBaseVacancy
+								companyId={`${companyId}`}
+								vendorId={`${vendorId}`}
+							/>
+						) : selector === "vacancy" ? (
+							<VendorVacancyModel
+								Vendor={`${vendorService}`}
+								vendorName={`${vendorName}`}
+							/>
+						) : (
+							<></>
+						)}
+
+						{selector === "staff" && (companyId !==  null || vendorId !== null) ? (
+							<FireBaseStaff
+								companyId={`${companyId}`}
+								vendorId={`${vendorId}`}
+							/>
+						) : selector === "staff" ? (
+							<VendorStaffModel
+								Vendor={`${vendorService}`}
+								vendorName={`${vendorName}`}
+							/>
+						) : (
+							<></>
+						)}
+
+						{selector === "offer" &&  (companyId !== null || vendorId !== null )? (
+							<FireBaseOffers
+								companyId={`${companyId}`}
+								vendorId={`${vendorId}`}
+							/>
+						) : selector === "offer" ? (
+							<VendorOfferModel
+								Vendor={`${vendorService}`}
+								vendorName={`${vendorName}`}
+							/>
+						) : (
+							<></>
+						)}
 					</div>
 				</div>
 				<div>
-					<NewsLetter/>
+					<NewsLetter />
 				</div>
 			</div>
 		</Suspense>
