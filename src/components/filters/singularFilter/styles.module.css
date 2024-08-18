@@ -448,7 +448,7 @@
 }
 .shopName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   width: 295px;
@@ -470,7 +470,7 @@
 
 .vendorName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
   width: 220px;
@@ -654,7 +654,7 @@
   align-items: center;
   color: green;
   font-size: 0.6rem;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   user-select: none;
   text-transform: uppercase;
@@ -697,7 +697,7 @@
   width: 210px;
   color: rgb(83, 83, 83);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: max-content;
   overflow: auto;
@@ -730,7 +730,7 @@
   justify-content: flex-start;
   align-items: center;
   color: green;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.6rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   user-select: none;
@@ -742,7 +742,7 @@
   user-select: none;
   color: rgb(62, 62, 62);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -903,7 +903,7 @@
    text-align: center;
    text-align: left;
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   font-weight: 500;
+   font-weight: 400;
    font-size: 1.3rem;
    color: rgb(62, 62, 62);
    padding-bottom: 5px;
@@ -1034,7 +1034,7 @@
   color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.6rem;
-  font-weight: 500;
+  font-weight: 400;
   user-select: none;
   text-transform: uppercase;
 }
@@ -1047,7 +1047,7 @@
   color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.6rem;
-  font-weight: 500;
+  font-weight: 400;
   user-select: none;
   text-transform: uppercase;
 }
@@ -1087,7 +1087,7 @@
   justify-content: center;
   width: 60vw;
   min-height: max-content;
-  height: 500px;
+  height: 400px;
   padding-top: 10px;
 }
 
@@ -1230,18 +1230,18 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 290px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .showMoreItemsDetailsBody{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 70px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .shopItemsDetailTitleName{
   margin-right: 10px;
-  font-weight: 500;
+  font-weight: 400;
   color: #28a745;
 }
 .shopItemsDetailTitle{
@@ -1250,7 +1250,7 @@
 }
 
 .shopItemsBody{
-  font-weight: 500;
+  font-weight: 400;
   color: rgb(45, 45, 45);
 }
 .shopNavBtnCover{
@@ -1263,14 +1263,14 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   cursor: pointer;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 7px;
 }
 
 .btnShopA{
   width: 50%;
   height: 20px;
-  border-bottom: 3px solid green;
+  border-bottom: 1px solid green;
   color: green;
   display: flex;
   justify-content: center;
@@ -1282,7 +1282,7 @@
 .btnShop{
   width: 50%;
   height: 20px;
-  border-bottom: 3px solid silver;
+  border-bottom: 1px solid silver;
   color: rgb(97, 97, 97);
   display: flex;
   justify-content: center;
@@ -1294,11 +1294,11 @@
 
 .btnShop:hover{
   color: darkolivegreen;
-  font-weight: 900;
+  font-weight: 500;
 }
 .btnShopA:hover{
   color: green;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .searchShopImgCover{
@@ -1321,7 +1321,7 @@
   color: white;
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   width: 295px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -1476,7 +1476,7 @@
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(143, 145, 143, 0.7));
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   margin-top: 5px;
   border-top-right-radius: 5px;
@@ -1509,7 +1509,7 @@
 }
 .InShopItemsDetailTitle{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.7rem;
   margin-right: 5px;
   color: rgb(45, 45, 45);
@@ -1587,7 +1587,7 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   color: rgb(41, 41, 41);
 }
@@ -1596,7 +1596,7 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   color:darkolivegreen;
   text-align: left;
@@ -1606,7 +1606,7 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .companyVacancyDetailAbtUs{
@@ -1679,7 +1679,7 @@
   text-transform: uppercase;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 5400px) {
