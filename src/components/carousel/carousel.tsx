@@ -81,45 +81,45 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 		}
 	}, [Services[activeIndex].services[inneractiveIndex], inneractiveIndex]);
 
-	const inhandleprev = useCallback(() => {
-		setInnerActiveIndex((prevIndex) =>
-			prevIndex === Services[activeIndex].services.length - 1
-				? 0
-				: prevIndex - 1
-		);
-	}, [setInnerActiveIndex, Services, activeIndex]);
+	// const inhandleprev = useCallback(() => {
+	// 	setInnerActiveIndex((prevIndex) =>
+	// 		prevIndex === Services[activeIndex].services.length - 1
+	// 			? 0
+	// 			: prevIndex - 1
+	// 	);
+	// }, [setInnerActiveIndex, Services, activeIndex]);
 
-	const intervalTime = useMemo(() => {
-		return 5000 * Services[activeIndex].services.length - 1;
-	}, [activeIndex, Services]);
+	// const intervalTime = useMemo(() => {
+	// 	return 5000 * Services[activeIndex].services.length - 1;
+	// }, [activeIndex, Services]);
 
-	const inIntervalTime = useMemo(() => {
-		return 5000;
-	}, []);
+	// const inIntervalTime = useMemo(() => {
+	// 	return 5000;
+	// }, []);
 
-	const serviceImage = useMemo(() => {
-		return Services[activeIndex].services[inneractiveIndex]?.src;
-	}, [activeIndex, inneractiveIndex, Services]);
+	// const serviceImage = useMemo(() => {
+	// 	return Services[activeIndex].services[inneractiveIndex]?.src;
+	// }, [activeIndex, inneractiveIndex, Services]);
 
-	const serviceTitle = useMemo(() => {
-		return Services[activeIndex].services[inneractiveIndex]?.name;
-	}, [activeIndex, inneractiveIndex, Services]);
+	// const serviceTitle = useMemo(() => {
+	// 	return Services[activeIndex].services[inneractiveIndex]?.name;
+	// }, [activeIndex, inneractiveIndex, Services]);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			handleNext();
-		}, intervalTime);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		handleNext();
+	// 	}, intervalTime);
 
-		return () => clearInterval(interval);
-	}, [intervalTime, handleNext]);
+	// 	return () => clearInterval(interval);
+	// }, [intervalTime, handleNext]);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			inhandleNext();
-		}, inIntervalTime);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		inhandleNext();
+	// 	}, inIntervalTime);
 
-		return () => clearInterval(interval);
-	}, [inIntervalTime, inhandleNext, serviceTitle, serviceImage]);
+	// 	return () => clearInterval(interval);
+	// }, [inIntervalTime, inhandleNext, serviceTitle, serviceImage]);
 
 	const autoCategory = Services.find(
 		(category) => category.category === "Automotive"
@@ -304,16 +304,16 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 			   automativeHover === true? setActiveIndex(0):maintainaceHover === true? setActiveIndex(1):peronalHover === true &&setActiveIndex(2);
 				},[automativeHover,maintainaceHover, peronalHover]);
 
-		useEffect(() => {
-			const interval = setInterval(() => {
-				if (automativeHover === false && maintainaceHover === false && peronalHover === false){
-					activeIndex === 0 ?setAutomativeHover(true):activeIndex === 1?setMaintainaceHover(true):activeIndex === 2?setPeronalHover(true):activeIndex !== (0 ||1 ||2)?setAutomativeHover(true):setActiveIndex(0);
+		// useEffect(() => {
+		// 	const display = setInterval(() => {
+		// 		if (automativeHover === false && maintainaceHover === false && peronalHover === false){
+		// 			activeIndex === 0 ?setAutomativeHover(true):activeIndex === 1?setMaintainaceHover(true):activeIndex === 2?setPeronalHover(true):activeIndex !== (0 ||1 ||2)?setAutomativeHover(true):setActiveIndex(0);
 					
-				}
-			}, 10000);
+		// 		}
+		// 	}, 10000);
 
-			return () => clearInterval(interval);
-		}, [intervalTime, handleNext,automativeHover, maintainaceHover, peronalHover, activeIndex]);
+		// 	return () => clearInterval(display);
+		// }, [ handleNext,automativeHover, maintainaceHover, peronalHover, activeIndex]);
 
 	return (
 		<div className={styles.parent}>
