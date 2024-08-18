@@ -37,7 +37,7 @@ const HeroDetail: React.FC<any> = ({
 							quality={100}
 							width={100}
 							height={100}
-							src={`${img}` ? `${img}` : `${imgM}`}
+							src={`${img !== undefined ? img:imgM}` }
 							priority={true}
 							unoptimized
 						/>
