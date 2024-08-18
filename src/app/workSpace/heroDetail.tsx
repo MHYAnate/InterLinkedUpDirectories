@@ -31,7 +31,7 @@ const HeroDetail: React.FC<any> = ({
 				<div className={styles.imgCover}>
 					<div className={styles.vendorName}>{`${
 						vendorName ? vendorName : vendorNameM
-					}`}{`Work Space`}</div>
+					} Work Space`}</div>
 					<Image
 						className={styles.idiImg}
 						src={`${img ? img : imgM}`}

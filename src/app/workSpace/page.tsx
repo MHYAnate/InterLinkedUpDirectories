@@ -37,16 +37,17 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import styles from "./styles.module.css";
 
 type SpaceValues = {
-	vendorName: string;
+	name: string;
 	address: string;
-	contact: string;
+	number: string;
 	account: string;
 	accountName: string;
 	bankName: string;
-	img: string;
-	serviceCat: string;
-	serviceName: string;
+	src: string;
+	selectCategory: string;
+	selectService: string;
 	speciality:string;
+	docid:string;
 };
 
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
@@ -95,15 +96,15 @@ export default function WorkSpace() {
 
 	const phone = searchParams.get("phone");
 
-	const vendorId = searchParams.get("vendorId");
+	const vendorId = searchParams.get("docid");
 
 	const companyId = searchParams.get("companyId");
 
-	const profileDetailRef = collection(database, `workSpace`);
+	const profileDetailRef = collection(database, `profile`);
 
 	const userQuery = query(
 		profileDetailRef,
-		where("vendorId", "==", `${vendorId}`)
+		where("docid", "==", `${vendorId}`)
 	);
 
 			const handleGetProfileDetail = async () => {
@@ -134,7 +135,7 @@ export default function WorkSpace() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-					<HeroDetail imgM={src} img={profileDetails?.img} vendorNameM={vendorName} vendorName={profileDetails?.vendorName} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.serviceCat} contactM={phone} contact={profileDetails?.contact} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.serviceName} specialityM={spec} speciality={profileDetails?.speciality}  />
+					<HeroDetail imgM={src} img={profileDetails?.src} vendorNameM={vendorName} vendorName={profileDetails?.name} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.selectCategory} contactM={phone} contact={profileDetails?.number} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.selectService} specialityM={spec} speciality={profileDetails?.speciality}  />
 					</div>
 					<div className={styles.shopStockCover}>
 						<div className={styles.coverSelectBtn}>

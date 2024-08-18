@@ -35,7 +35,7 @@ type FormValue = {
 	state: string;
 	area:string;
 	specialty:string;
-	vendorId:string;
+	docid:string;
 };
 
 export default function FilterVendors() {
@@ -394,8 +394,8 @@ export default function FilterVendors() {
 									`/workSpace` +
 										"?" +
 										set(
-											"vendorId",
-											`${vendor.vendorId}`
+											"docid",
+											`${vendor.docid}`
 										)+
 										"&" +
 										set(
