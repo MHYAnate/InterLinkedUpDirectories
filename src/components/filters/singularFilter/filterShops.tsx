@@ -294,11 +294,11 @@ export default function ShopsFilter() {
 							<span className={styles.shopItemsDetailTitle}>Condition</span>
 							<span className={styles.shopItemsBody}>{item.condition}</span>
 						</div>
-						<div>
+						<div  className={styles.showMoreItemsDetailsBody}>
 							<span className={styles.shopItemsDetailTitle}>Status</span>
 							<span className={styles.shopItemsBody}>{item.status}</span>
 						</div>
-						<div>
+						<div  className={styles.showMoreItemsDetailsBody}>
 							<span className={styles.shopItemsDetailTitle}>feature</span>
 							<span className={styles.shopItemsBody}>{item.features}</span>
 						</div>
@@ -367,7 +367,7 @@ export default function ShopsFilter() {
 			: [];
 
 			const [currentPage, setCurrentPage] = useState(1);
-			const [postsPerPage] = useState(4);
+			const [postsPerPage] = useState(6);
 		
 			// Get current posts
 			const indexOfLastPost = currentPage * postsPerPage;

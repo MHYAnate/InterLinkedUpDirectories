@@ -137,11 +137,11 @@ const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => 
                     <span className={styles.shopItemsDetailTitle}>Condition</span>
                     <span className={styles.shopItemsBody}>{item.condition}</span>
                   </div>
-                  <div>
+                  <div  className={styles.showMoreItemsDetailsBody}>
                     <span className={styles.shopItemsDetailTitle}>Status</span>
                     <span className={styles.shopItemsBody}>{item.status}</span>
                   </div>
-                  <div>
+                  <div  className={styles.showMoreItemsDetailsBody}>
                     <span className={styles.shopItemsDetailTitle}>Feature</span>
                     <span className={styles.shopItemsBody}>{item.features}</span>
                   </div>

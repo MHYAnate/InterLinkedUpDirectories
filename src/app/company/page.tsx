@@ -10,11 +10,12 @@ import VendorNav from "@/components/nav/userNav/nav";
 import HeroDetail from "./heroDetail";
 import Hero from "@/components/hero/hero";
 import NewsLetter from "@/components/newsLetter/newsLetter";
-import VendorStaffModel from "@/components/filters/singularFilter/filterVendorsStaff";
-import VendorOfferModel from "@/components/filters/singularFilter/filterVendorOffer";
 
-import VendorVacancyModel from "@/components/filters/singularFilter/filterVendorVacancy";
+import CompanyStaffModel from "@/components/filters/singularFilter/filterCompanyStaffs";
 
+import CompanyOfferModel from "@/components/filters/singularFilter/filterCompanyOffers";
+
+import CompanyVacancyModel from "@/components/filters/singularFilter/filterCompanyVacancies";
 import FireBaseOffers from "@/components/filters/singularFilter/filterFireBaseOffers";
 
 import FireBaseStaff from "@/components/filters/singularFilter/filterFireBaseStaff";
@@ -36,17 +37,16 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import styles from "./styles.module.css";
 
-type SpaceValues = {
-	vendorName: string;
+type CompanyValues = {
+	companyName: string;
 	address: string;
 	contact: string;
 	account: string;
 	accountName: string;
-	bankName: string;
+	companyTag: string;
 	img: string;
-	serviceCat: string;
-	serviceName: string;
-	speciality:string;
+	email:string;
+	about:string;
 };
 
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
@@ -55,7 +55,7 @@ const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 export default function WorkSpace() {
 	const [user, loading, error] = useAuthState(auth);
 
-	const [profileDetails, setProfileDetails] = useState<SpaceValues | null>(null);
+	const [profileDetails, setProfileDetails] = useState<CompanyValues | null>(null);
 
 	const [imageUrl, setImageUrl] = useState("");
 
@@ -75,25 +75,19 @@ export default function WorkSpace() {
 		[searchParams]
 	);
 
-	const vendorName = searchParams.get("name");
+	const companyName = searchParams.get("companyName");
 
-	const src = searchParams.get("src");
+	const companyPic = searchParams.get("companyPic");
 
-	const vendorService = searchParams.get("service");
+	const companyTag = searchParams.get("companyTag");
 
-	const address = searchParams.get("adrs");
+	const about = searchParams.get("about");
 
-	const actNum = searchParams.get("actNum");
+	const email = searchParams.get("email");
 
-	const bnk = searchParams.get("bnk");
+	const address = searchParams.get("companyAddress");
 
-	const actName = searchParams.get("actName");
-
-	const spec = searchParams.get("spec");
-
-	const cat = searchParams.get("cat");
-
-	const phone = searchParams.get("phone");
+	const contact = searchParams.get("contact");
 
 	const vendorId = searchParams.get("vendorId");
 
@@ -103,7 +97,7 @@ export default function WorkSpace() {
 
 	const userQuery = query(
 		profileDetailRef,
-		where("vendorId", "==", `${vendorId}`)
+		where("companyId", "==", `${companyId}`)
 	);
 
 			const handleGetProfileDetail = async () => {
@@ -115,7 +109,7 @@ export default function WorkSpace() {
 						return;
 					}
 
-					const retrievedData = querySnapshot.docs[0].data() as SpaceValues;
+					const retrievedData = querySnapshot.docs[0].data() as CompanyValues;
 					setProfileDetails(retrievedData);
 				} catch (error) {
 					console.error("Error getting profile detail:", error);
@@ -134,7 +128,7 @@ export default function WorkSpace() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-					<HeroDetail imgM={src} img={profileDetails?.img} vendorNameM={vendorName} vendorName={profileDetails?.vendorName} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.serviceCat} contactM={phone} contact={profileDetails?.contact} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.serviceName} specialityM={spec} speciality={profileDetails?.speciality}  />
+					<HeroDetail imgM={companyPic} img={profileDetails?.img} companyNameM={companyName} companyName={profileDetails?.companyName} addressM={address} address={profileDetails?.address} companyTagM={companyTag} companyTag={profileDetails?.companyTag} contactM={contact} contact={profileDetails?.contact} emailM={email} email={profileDetails?.email} aboutM={about} 	about={profileDetails?.about}   />
 					</div>
 					<div className={styles.shopStockCover}>
 						<div className={styles.coverSelectBtn}>
@@ -178,7 +172,7 @@ export default function WorkSpace() {
 										: styles.selectBtnHighlighted
 								}
 							>
-								STAFFS
+							RANKS
 							</div>
 						</div>
 
@@ -188,9 +182,8 @@ export default function WorkSpace() {
 								vendorId={`${vendorId}`}
 							/>
 						) : selector === "vacancy" ? (
-							<VendorVacancyModel
-								Vendor={`${vendorService}`}
-								vendorName={`${vendorName}`}
+							<CompanyVacancyModel
+							companyName={`${companyName}`}
 							/>
 						) : (
 							<></>
@@ -202,9 +195,8 @@ export default function WorkSpace() {
 								vendorId={`${vendorId}`}
 							/>
 						) : selector === "staff" ? (
-							<VendorStaffModel
-								Vendor={`${vendorService}`}
-								vendorName={`${vendorName}`}
+							<CompanyStaffModel
+							companyName={`${companyName}`}
 							/>
 						) : (
 							<></>
@@ -216,9 +208,8 @@ export default function WorkSpace() {
 								vendorId={`${vendorId}`}
 							/>
 						) : selector === "offer" ? (
-							<VendorOfferModel
-								Vendor={`${vendorService}`}
-								vendorName={`${vendorName}`}
+							<CompanyOfferModel
+								companyName={`${companyName}`}
 							/>
 						) : (
 							<></>

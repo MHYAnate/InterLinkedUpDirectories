@@ -6,36 +6,30 @@ import { useState, useEffect, useCallback } from "react";
 const HeroDetail: React.FC<any> = ({
 	imgM,
 	img,
-	vendorNameM,
-	vendorName,
+	companyNameM,
+	companyName,
 	addressM,
 	address,
-	serviceCatM,
-	serviceCat,
+	companyTagM,
+	companyTag,
 	contactM,
 	contact,
-	actNumM,
-	actNum,
-	bnkNameM,
-	bnkName,
-	actNameM,
-	actName,
-	serviceNameM,
-	serviceName,
-	specialityM,
-	speciality,
+	emailM,
+	email,
+	aboutM,
+	about,
 }) => {
 	return (
 		<div className={styles.heroDatailCover}>
 			<div className={styles.flexControl}>
 				<div className={styles.imgCover}>
 					<div className={styles.vendorName}>{`${
-						vendorName ? vendorName : vendorNameM
+						companyName ? companyName : companyNameM
 					}`}</div>
 					<Image
 						className={styles.idiImg}
-						src={`${img ? img : imgM}`}
-						alt={`${vendorName ? vendorName : vendorNameM}`}
+						src={`${img !== undefined ? img : imgM}`}
+						alt={`${companyName ? companyName : companyNameM}`}
 						quality={100}
 						width={500}
 						height={500}
@@ -46,62 +40,40 @@ const HeroDetail: React.FC<any> = ({
 				<div className={styles.detailBody}>
 					<div className={styles.shopDetail}>
 						<div className={styles.titleTop}>
-							{`${vendorName ? vendorName : vendorNameM}`} {" Service Details"}
+							{`${companyName !== undefined ? companyName : companyNameM}`} {" Service Details"}
 						</div>
 						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}>Service Category</div>
+							<div className={styles.detailTitle}>Company Tag</div>
 							<div className={styles.detail}>
-								{`${serviceCat ? serviceCat : serviceCatM}`}
+								{`${companyTag !== undefined ? companyTag : companyTagM}`}
 							</div>
 						</div>
 						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}> Service Name</div>
+							<div className={styles.detailTitle}>{"About Us"}</div>
 							<div className={styles.detail}>
-								{`${serviceName ? serviceName : serviceNameM}`}
+								{`${about ? about : aboutM}`}
 							</div>
-						</div>
-						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}> Specialty</div>
-							<div className={styles.detail}>{`${
-								speciality ? speciality : specialityM
-							}`}</div>
 						</div>
 					</div>
 
 					<div className={styles.shopDetail}>
-						<div className={styles.titleTop}>Vendors Contact Info</div>
+						<div className={styles.titleTop}>Contact Info</div>
 						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}>Mobile Number</div>
+							<div className={styles.detailTitle}>Office Line</div>
 							<div className={styles.detail}>{`${
 								contact ? contact : contactM
 							}`}</div>
 						</div>
 						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}>Addres</div>
+							<div className={styles.detailTitle}>Email Address</div>
+							<div className={styles.detail}>{`${
+								email ? email : emailM
+							}`}</div>
+						</div>
+						<div className={styles.detailCover}>
+							<div className={styles.detailTitle}>Address</div>
 							<div className={styles.detail}>{`${
 								address ? address : addressM
-							}`}</div>
-						</div>
-					</div>
-
-					<div className={styles.shopDetail}>
-						<div className={styles.titleTop}>Payment Detail</div>
-						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}>Account Number</div>
-							<div className={styles.detail}>{`${
-								actNum ? actNum : actNumM
-							}`}</div>
-						</div>
-						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}>Bank Name</div>
-							<div className={styles.detail}>{`${
-								bnkName ? bnkName : bnkNameM
-							}`}</div>
-						</div>
-						<div className={styles.detailCover}>
-							<div className={styles.detailTitle}>Account Name</div>
-							<div className={styles.detail}>{`${
-								actName ? actName : actNameM
 							}`}</div>
 						</div>
 					</div>

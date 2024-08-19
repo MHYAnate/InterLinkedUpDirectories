@@ -15,7 +15,7 @@ type CompanyName = {
 	companyName: string;
 };
 
-const CompanyVacancyModel: React.FC<CompanyName> = ({ companyName }) => {
+const CompanyStaffModel: React.FC<CompanyName> = ({ companyName }) => {
 	const {
 		register,
 		handleSubmit,
@@ -151,5 +151,5 @@ const CompanyVacancyModel: React.FC<CompanyName> = ({ companyName }) => {
 	);
 };
 
-CompanyVacancyModel.displayName = "CompanyVacancyModel";
-export default CompanyVacancyModel;
+CompanyStaffModel.displayName = "CompanyStaffModel";
+export default CompanyStaffModel;
