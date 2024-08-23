@@ -45,11 +45,13 @@ type FormValue = {
 	docid: string;
 };
 
-const searchParams = useSearchParams();
-	
-const router = useRouter();
+
 
 export default function Market() {
+
+	const searchParams = useSearchParams();
+	
+const router = useRouter();
 
 	const [profileDetails, setProfileDetails] = useState<FormValue | null>(null);
 	
