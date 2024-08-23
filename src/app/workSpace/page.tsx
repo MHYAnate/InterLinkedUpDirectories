@@ -135,7 +135,7 @@ export default function WorkSpace() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-					<HeroDetail imgM={src} img={profileDetails?.src} vendorNameM={vendorName} vendorName={profileDetails?.name} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.selectCategory} contactM={phone} contact={profileDetails?.number} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.selectService} specialityM={spec} speciality={profileDetails?.speciality}  />
+					<HeroDetail imgM={src} img={profileDetails?.src} vendorNameM={vendorName} vendorName={profileDetails?.name} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.selectCategory} contactM={phone} contact={profileDetails?.number} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.selectService} specialityM={spec} speciality={profileDetails?.speciality} idM={vendorName} id={vendorId} />
 					</div>
 					<div className={styles.shopStockCover}>
 						<div className={styles.coverSelectBtn}>

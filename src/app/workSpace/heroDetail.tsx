@@ -1,5 +1,27 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
+import {
+	collection,
+	collectionGroup,
+	doc,
+	setDoc,
+	addDoc,
+	getDocs,
+	query,
+	where,
+} from "firebase/firestore";
+import firebase from "@/firebase/firebase";
+import RateUs from "@/components/btn/rateUs";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
+
+interface RaterValue {
+	name:string;
+	docid:string;
+	src:string;
+}
+
+const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+	firebase;
 
 import { useState, useEffect, useCallback } from "react";
 
@@ -24,7 +46,42 @@ const HeroDetail: React.FC<any> = ({
 	serviceName,
 	specialityM,
 	speciality,
+	idM,
+	id,
 }) => {
+	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
+
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+
+			const raterDetailRef = collection(database, `profile`);
+
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+			
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			
+		}
+	});
 	return (
 		<div className={styles.heroDatailCover}>
 			<div className={styles.flexControl}>
@@ -41,6 +98,7 @@ const HeroDetail: React.FC<any> = ({
 						height={500}
 						// unoptimized
 					/>
+					<RateUs rateeId={`${id?id:idM}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>
 
 				<div className={styles.detailBody}>

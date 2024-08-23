@@ -128,7 +128,7 @@ export default function WorkSpace() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-					<HeroDetail imgM={companyPic} img={profileDetails?.img} companyNameM={companyName} companyName={profileDetails?.companyName} addressM={address} address={profileDetails?.address} companyTagM={companyTag} companyTag={profileDetails?.companyTag} contactM={contact} contact={profileDetails?.contact} emailM={email} email={profileDetails?.email} aboutM={about} 	about={profileDetails?.about}   />
+					<HeroDetail imgM={companyPic} img={profileDetails?.img} companyNameM={companyName} companyName={profileDetails?.companyName} addressM={address} address={profileDetails?.address} companyTagM={companyTag} companyTag={profileDetails?.companyTag} contactM={contact} contact={profileDetails?.contact} emailM={email} email={profileDetails?.email} aboutM={about} 	about={profileDetails?.about} idM={`${companyName}`} id={`${companyId}`} />
 					</div>
 					<div className={styles.shopStockCover}>
 						<div className={styles.coverSelectBtn}>

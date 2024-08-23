@@ -13,9 +13,11 @@ import { useForm } from "react-hook-form";
 import firebase from "@/firebase/firebase";
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
+	import RateUs from "@/components/btn/rateUs";
+	import { onAuthStateChanged, updateProfile } from "firebase/auth";
 
 type ShopValues = {
-	id: string;
+	itemId: string;
   image: string;
   image2: string;
   title: string;
@@ -25,6 +27,12 @@ type ShopValues = {
   features: string;
   tag:string;
 };
+
+interface RaterValue {
+	name:string;
+	docid:string;
+	src:string;
+}
 
 type shopId = {
 	shopId: string;
@@ -80,6 +88,41 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 
 	const [postsPerPage] = useState(6);
 
+	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
+
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+
+			const raterDetailRef = collection(database, `profile`);
+
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+			
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			
+		}
+	});
+
+
 	const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setShopSearchInput(event.target.value);
 		// handleSuggestionClick;
@@ -133,7 +176,7 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
     const fetchShopItems = async () => {
       setIsLoading(true);
       try {
-        const shopItemDetailRef = collection(database, 'Shop');
+        const shopItemDetailRef = collection(database, 'items');
         const shopItemQuery = query(shopItemDetailRef, where('shopId', '==', shopId));
         const querySnapshot = await getDocs(shopItemQuery);
 
@@ -144,7 +187,7 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
           const retrievedData: ShopValues[] = [];
           querySnapshot.forEach((doc) => {
             const docData = doc.data() as ShopValues;
-            retrievedData.push({ ...docData, id: doc.id });
+            retrievedData.push(docData);
           });
           setShopItemDetails(retrievedData);
         }
@@ -220,7 +263,7 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 		}
 
 		return currentPosts?.map((item) => (
-			<div className={styles.InRenderItemCover} key={item.id}>
+			<div className={styles.InRenderItemCover} key={item.itemId}>
 				<div className={styles.InShopItemsCover}>
 					<div className={styles.InShopItemsDetailTitleName}>{item.title}</div>
 					<div className={styles.InShopsItemsImgCover}>
@@ -260,14 +303,17 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 								{`SIDE`}
 							</div>
 						</div>
-						{show === `${item.id}` ? (
+						<div>
+					<RateUs rateeId={`${item.itemId}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+				</div>
+						{show === `${item.itemId}` ? (
 							<></>
 						) : (
 							<div className={styles.InShopItemsBody}>{item.price}</div>
 						)}
 					</div>
 				</div>
-				{show === `${item.id}` && (
+				{show === `${item.itemId}` && (
 							<div className={styles.InShowMoreDetails}>
 							<div className={styles.InShowMoreDetailCover}>
 							<div className={styles.statusInShop}>{item.status}</div>
@@ -289,14 +335,14 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 						</div>
 				)}
 				<div
-					className={show !== `${item.id}` ? styles.InBtn : styles.InBtn}
+					className={show !== `${item.itemId}` ? styles.InBtn : styles.InBtn}
 					onClick={
-						show !== `${item.id}`
-							? () => setShow(`${item.id}`)
+						show !== `${item.itemId}`
+							? () => setShow(`${item.itemId}`)
 							: () => setShow("")
 					}
 				>
-					{show === `${item.id}` ? "Show Less" : "More Details"}
+					{show === `${item.itemId}` ? "Show Less" : "More Details"}
 				</div>
 			</div>
 		));

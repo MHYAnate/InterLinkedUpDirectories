@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { StateData } from "@/database/stateData";
 import { VendorsData } from "@/database/vendorData";
+import RateUs from "@/components/btn/rateUs";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
 	collection,
 	collectionGroup,
@@ -38,6 +40,12 @@ type FormValue = {
 	docid:string;
 };
 
+interface RaterValue {
+	name:string;
+	docid:string;
+	src:string;
+}
+
 export default function FilterVendors() {
 	const {
 		register,
@@ -65,6 +73,40 @@ export default function FilterVendors() {
 		},
 		shouldUseNativeValidation: true,
 		mode: "onChange",
+	});
+
+	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
+
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+
+			const raterDetailRef = collection(database, `profile`);
+
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+			
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			
+		}
 	});
 
 	const [searchInput, setSearchInput] = useState("");
@@ -200,6 +242,9 @@ export default function FilterVendors() {
 						// unoptimized
 					/>
 					</div>
+					<div>
+					<RateUs rateeId={`${vendor.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+				</div>
 				</div>
 				<div className={styles.innerTextVendorRenderCover}>
 				<div className={styles.vendorAddresCover}>
@@ -361,7 +406,7 @@ export default function FilterVendors() {
 		}
 
 		return currentFireBasePosts?.map((vendor: any) => (
-			<div className={styles.VendorRenderCover} key={vendor?.name}>
+			<div className={styles.VendorRenderCover} key={vendor?.docid}>
 				<div className={styles.vendorName}>{vendor.name}</div>
 				<div className={styles.imgCover}>
 					
@@ -374,6 +419,9 @@ export default function FilterVendors() {
 						height={500}
 						// unoptimized
 					/>
+				</div>
+				<div>
+					<RateUs rateeId={`${vendor.docid}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>
 				<div className={styles.innerTextVendorRenderCover}>
 				<div className={styles.vendorAddresCover}>

@@ -398,16 +398,31 @@ const User : React.FC<any> = ({ state })=>{
         <div className={styles.formCoverRight}>
          
 
-          <div className={styles.inputImageCover}>
-					<div className={styles.upLoadDp}>Up Load Display Picture Here</div>
-            <input
-              type="file"
-              accept="image/*"
-              className={styles.input}
-              ref={fileInputRef}
-              placeholder="Upload Display Picture"
-            />
-          </div>
+				<div className={styles.inputImageCover}>
+				
+				<input
+					type="file"
+					accept="image/*"
+					className={styles.inputImg}
+					ref={fileInputRef}
+					id="file"
+					placeholder="Upload Display Picture"
+				/>
+				<label htmlFor="file">
+				<Image
+				object-fit="cover"
+				className={styles.upLoadPic}
+				alt="Picture of the author"
+				quality={100}
+				width={100}
+				height={100}
+				src="/service/u1.jpg"
+				priority={true}
+				unoptimized
+			/>
+				</label>
+				<span>Upload Display Picture</span>
+			</div>
 
           <div className={styles.inputCover}>
             <input

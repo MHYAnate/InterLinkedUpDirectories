@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState, useEffect, useCallback, useTransition, useRef } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { StateData } from "@/database/stateData";
 import { MarketData } from "@/database/marketData";
 import { MarketStatus } from "@/database/marketStatus";
@@ -24,7 +24,9 @@ import {
 import firebase from "@/firebase/firebase";
 const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
-	import Pagination from "@/components/btn/paginationBtn";
+import Pagination from "@/components/btn/paginationBtn";
+import RateUs from "@/components/btn/rateUs";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -43,7 +45,14 @@ type FormValue = {
 	title: string;
 	docid: string;
 	condition: string;
+	shopId: string;
 };
+
+interface RaterValue {
+	name: string;
+	docid: string;
+	src: string;
+}
 
 export default function ItemsFilter() {
 	const {
@@ -78,18 +87,19 @@ export default function ItemsFilter() {
 		mode: "onChange",
 	});
 
+	const router = useRouter();
+
 	const [isPending, startTransition] = useTransition();
 
 	const [searchInput, setSearchInput] = useState("");
 
-	
 	const [searchAddress, setSearchAddress] = useState("");
 
 	const [more, setMore] = useState("");
 
 	const [img, setImg] = useState("");
 
-	const [market, setMarket] = useState("space");
+	const [raterDetail, setRaterDetail] = useState<RaterValue | null>(null);
 
 	const selectCountry = watch("countrySelect");
 
@@ -103,11 +113,53 @@ export default function ItemsFilter() {
 
 	const condition = watch("condition");
 
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+			const raterDetailRef = collection(database, `profile`);
+
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+		}
+	});
+
 	function selectTab(nextTab: string) {
 		startTransition(() => {
 			setMore(nextTab);
 		});
 	}
+
+	const searchParams = useSearchParams();
+
+	const set = useCallback(
+		(name: string, value: string) => {
+			const params = new URLSearchParams(searchParams.toString());
+			params.set(name, value);
+
+			return params.toString();
+		},
+		[searchParams]
+	);
 
 	const countryValue =
 		typeof document !== "undefined"
@@ -198,18 +250,20 @@ export default function ItemsFilter() {
 		));
 	}
 
-
-	const filteredListstate =
-	MarketData.filter((eachItem) => {
-					const text = eachItem.state.toLowerCase();
-					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
-			  });
+	const filteredListstate = MarketData.filter((eachItem) => {
+		const text = eachItem.state.toLowerCase();
+		return selectState !== (null || undefined || "" || "Select State")
+			? text.includes(selectState.toLowerCase())
+			: text;
+	});
 
 	const filteredListarea =
 		filteredListstate.length > 0
 			? filteredListstate.filter((eachItem) => {
 					const text = eachItem.area.toLowerCase();
-					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
+					return selectArea !== (null || undefined || "" || "Select Area")
+						? text.includes(selectArea.toLowerCase())
+						: text;
 			  })
 			: [];
 
@@ -217,7 +271,9 @@ export default function ItemsFilter() {
 		filteredListarea.length > 0
 			? filteredListarea.filter((eachItem) => {
 					const text = eachItem.tag.toLowerCase();
-					return (tag !==(null || undefined|| "" || "Select Tag")?text.includes(tag.toLowerCase()):text );
+					return tag !== (null || undefined || "" || "Select Tag")
+						? text.includes(tag.toLowerCase())
+						: text;
 			  })
 			: [];
 
@@ -225,22 +281,23 @@ export default function ItemsFilter() {
 		filteredListTag.length > 0
 			? filteredListTag.filter((eachItem) => {
 					const text = eachItem.status.toLowerCase();
-					return (status !==(null || undefined|| "" || "Select Status")?text.includes(status.toLowerCase()):text );
+					return status !== (null || undefined || "" || "Select Status")
+						? text.includes(status.toLowerCase())
+						: text;
 			  })
 			: [];
 
-			
 	const filteredStockCondition =
-	filteredListStatus.length > 0
-		? filteredListStatus.filter((eachItem) => {
-				const text = eachItem.condition.toLowerCase();
-				return condition !== (null || undefined || "" || "Select Condition")
-					? text.includes(condition.toLowerCase())
-					: text;
-			})
-		: [];
+		filteredListStatus.length > 0
+			? filteredListStatus.filter((eachItem) => {
+					const text = eachItem.condition.toLowerCase();
+					return condition !== (null || undefined || "" || "Select Condition")
+						? text.includes(condition.toLowerCase())
+						: text;
+			  })
+			: [];
 
-		const filteredItemAddressList =
+	const filteredItemAddressList =
 		filteredStockCondition.length > 0
 			? filteredStockCondition.filter((eachItem) => {
 					const text = eachItem.address.toLowerCase();
@@ -284,7 +341,13 @@ export default function ItemsFilter() {
 					<div className={styles.imgCover}>
 						<Image
 							className={styles.idiImg}
-							src={ img === `${stock.image}` ? `${stock.image}`:img === `${stock.image2}`?`${stock.image2}`:`${stock.image}`}
+							src={
+								img === `${stock.image}`
+									? `${stock.image}`
+									: img === `${stock.image2}`
+									? `${stock.image2}`
+									: `${stock.image}`
+							}
 							alt={`${stock.title}`}
 							quality={100}
 							width={500}
@@ -292,30 +355,50 @@ export default function ItemsFilter() {
 							// unoptimized
 						/>
 					</div>
+
 					<div className={styles.picSel}>
-						<div className={img === `${stock.image}`?styles.picH : styles.pic} onClick={()=>{setImg(`${stock.image}`)}}>
+						<div
+							className={img === `${stock.image}` ? styles.picH : styles.pic}
+							onClick={() => {
+								setImg(`${stock.image}`);
+							}}
+						>
 							{`FRONT`}
 						</div>
-						<div className={img === `${stock.image2}`?styles.picH:styles.pic} onClick={()=>{setImg(`${stock.image2}`)}}>
+						<div
+							className={img === `${stock.image2}` ? styles.picH : styles.pic}
+							onClick={() => {
+								setImg(`${stock.image2}`);
+							}}
+						>
 							{`SIDE`}
 						</div>
 					</div>
-					{more !== `${stock.id}` && (<div className={styles.innerTextStockRenderCover}>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>price</div>
-							<div className={styles.contact}>{stock.price}</div>
+					<div>
+						<RateUs
+							rateeId={`${stock.id}`}
+							raterId={`${raterDetail?.docid}`}
+							raterName={`${raterDetail?.name}`}
+							raterImg={`${raterDetail?.src}`}
+						/>
+					</div>
+					{more !== `${stock.id}` && (
+						<div className={styles.innerTextStockRenderCover}>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>price</div>
+								<div className={styles.contact}>{stock.price}</div>
+							</div>
 						</div>
-					</div>)}
+					)}
 				</div>
 				{more === `${stock.id}` && (
 					<div className={styles.showMore}>
 						<div className={styles.innerTextShowMoreRenderCover}>
-						
-						<div className={styles.status}>{stock.status}</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>price</div>
-							<div className={styles.contact}>{stock.price}</div>
-						</div>
+							<div className={styles.status}>{stock.status}</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>price</div>
+								<div className={styles.contact}>{stock.price}</div>
+							</div>
 							<div className={styles.contactCover}>
 								<div className={styles.contactTitle}>features</div>
 								<div className={styles.contact}>{stock.features}</div>
@@ -326,13 +409,13 @@ export default function ItemsFilter() {
 							</div>
 
 							<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Contact</div>
-							<div className={styles.contact}>{stock.phone}</div>
-						</div>
+								<div className={styles.contactTitle}>Contact</div>
+								<div className={styles.contact}>{stock.phone}</div>
+							</div>
 							<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Address</div>
-							<div className={styles.address}>{stock.address}</div>
-						</div>
+								<div className={styles.contactTitle}>Address</div>
+								<div className={styles.address}>{stock.address}</div>
+							</div>
 						</div>
 					</div>
 				)}
@@ -354,7 +437,9 @@ export default function ItemsFilter() {
 		setSearchInput(event.target.value);
 		// handleSuggestionClick;
 	};
-	const updateSearchInputAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const updateSearchInputAddress = (
+		event: React.ChangeEvent<HTMLInputElement>
+	) => {
 		setSearchAddress(event.target.value);
 		// handleSuggestionClick;
 	};
@@ -392,20 +477,22 @@ export default function ItemsFilter() {
 		}
 	};
 
-
-
 	const filteredFirebaseStateList =
-	profileDetails?.length > 0
-	? profileDetails.filter((eachItem) => {
+		profileDetails?.length > 0
+			? profileDetails.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
-					return (selectState !==(null || undefined|| "" || "Select State")?text.includes(selectState.toLowerCase()):text );
+					return selectState !== (null || undefined || "" || "Select State")
+						? text.includes(selectState.toLowerCase())
+						: text;
 			  })
 			: [];
 	const filteredFirebaseaAreaList =
 		filteredFirebaseStateList.length > 0
 			? filteredFirebaseStateList.filter((eachItem) => {
 					const text = eachItem.areaSelect.toLowerCase();
-					return (selectArea !==(null || undefined|| "" || "Select Area")?text.includes(selectArea.toLowerCase()):text );
+					return selectArea !== (null || undefined || "" || "Select Area")
+						? text.includes(selectArea.toLowerCase())
+						: text;
 			  })
 			: [];
 
@@ -413,7 +500,9 @@ export default function ItemsFilter() {
 		filteredFirebaseaAreaList.length > 0
 			? filteredFirebaseaAreaList.filter((eachItem) => {
 					const text = eachItem.tag.toLowerCase();
-					return (tag !==(null || undefined|| "" || "Select Tag")?text.includes(tag.toLowerCase()):text );
+					return tag !== (null || undefined || "" || "Select Tag")
+						? text.includes(tag.toLowerCase())
+						: text;
 			  })
 			: [];
 
@@ -421,27 +510,29 @@ export default function ItemsFilter() {
 		filteredFirebaseTagList.length > 0
 			? filteredFirebaseTagList.filter((eachItem) => {
 					const text = eachItem.status.toLowerCase();
-					return (status !==(null || undefined|| "" || "Select Status")?text.includes(status.toLowerCase()):text );
+					return status !== (null || undefined || "" || "Select Status")
+						? text.includes(status.toLowerCase())
+						: text;
 			  })
 			: [];
 
-			const filteredFireBaseStockCondition =
-			filteredFirebasetStatusList.length > 0
-				? filteredFirebasetStatusList.filter((eachItem) => {
-						const text = eachItem.condition.toLowerCase();
-						return condition !== (null || undefined || "" || "Select Condition")
-							? text.includes(condition.toLowerCase())
-							: text;
-					})
-				: [];
-		
-				const filteredFireBaseItemAddressList =
-				filteredFireBaseStockCondition.length > 0
-					? filteredFireBaseStockCondition.filter((eachItem) => {
-							const text = eachItem.address.toLowerCase();
-							return text.includes(searchAddress.toLowerCase());
-						})
-					: [];
+	const filteredFireBaseStockCondition =
+		filteredFirebasetStatusList.length > 0
+			? filteredFirebasetStatusList.filter((eachItem) => {
+					const text = eachItem.condition.toLowerCase();
+					return condition !== (null || undefined || "" || "Select Condition")
+						? text.includes(condition.toLowerCase())
+						: text;
+			  })
+			: [];
+
+	const filteredFireBaseItemAddressList =
+		filteredFireBaseStockCondition.length > 0
+			? filteredFireBaseStockCondition.filter((eachItem) => {
+					const text = eachItem.address.toLowerCase();
+					return text.includes(searchAddress.toLowerCase());
+			  })
+			: [];
 
 	const filteredFirebaseSearchInputList =
 		filteredFireBaseItemAddressList.length > 0
@@ -465,13 +556,19 @@ export default function ItemsFilter() {
 		}
 
 		return currentFireBasePosts?.map((stock: any) => (
-			<div className={styles.stockRenderCover} key={stock.id}>
+			<div className={styles.stockRenderCover} key={stock.docid}>
 				<div className={styles.stockName}>{stock.title}</div>
 				<div className={styles.stockSeperatorCover}>
 					<div className={styles.imgCover}>
 						<Image
 							className={styles.idiImg}
-							src={ img === `${stock.image}` ? `${stock.image}`:img === `${stock.image2}`?`${stock.image2}`:`${stock.image}`}
+							src={
+								img === `${stock.image}`
+									? `${stock.image}`
+									: img === `${stock.image2}`
+									? `${stock.image2}`
+									: `${stock.image}`
+							}
 							alt={`${stock.title}`}
 							quality={100}
 							width={500}
@@ -479,49 +576,85 @@ export default function ItemsFilter() {
 							// unoptimized
 						/>
 					</div>
+
 					<div className={styles.picSel}>
-						<div className={img === `${stock.image}`?styles.picH : styles.pic} onClick={()=>{setImg(`${stock.image}`)}}>
+						<div
+							className={img === `${stock.image}` ? styles.picH : styles.pic}
+							onClick={() => {
+								setImg(`${stock.image}`);
+							}}
+						>
 							{`FRONT`}
 						</div>
-						<div className={img === `${stock.image2}`?styles.picH:styles.pic} onClick={()=>{setImg(`${stock.image2}`)}}>
+						<div
+							className={img === `${stock.image2}` ? styles.picH : styles.pic}
+							onClick={() => {
+								setImg(`${stock.image2}`);
+							}}
+						>
 							{`SIDE`}
 						</div>
 					</div>
-					{more !== `${stock.docid}` && (<div className={styles.innerTextStockRenderCover}>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>price</div>
-							<div className={styles.contact}>{stock.price}</div>
+					<div>
+						<RateUs
+							rateeId={`${stock.docid}`}
+							raterId={`${raterDetail?.docid}`}
+							raterName={`${raterDetail?.name}`}
+							raterImg={`${raterDetail?.src}`}
+						/>
+					</div>
+					{more !== `${stock.docid}` && (
+						<div className={styles.innerTextStockRenderCover}>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>price</div>
+								<div className={styles.contact}>{stock.price}</div>
+							</div>
 						</div>
-					</div>)}
+					)}
 				</div>
 				{more === `${stock.docid}` && (
 					<div className={styles.showMore}>
-					<div className={styles.innerTextShowMoreRenderCover}>
-					
-					<div className={styles.status}>{stock.status}</div>
-					<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>price</div>
-						<div className={styles.contact}>{stock.price}</div>
-					</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>features</div>
-							<div className={styles.contact}>{stock.features}</div>
-						</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Condition</div>
-							<div className={styles.contact}>{stock.condition}</div>
-						</div>
+						<div className={styles.innerTextShowMoreRenderCover}>
+							<div className={styles.status}>{stock.status}</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>price</div>
+								<div className={styles.contact}>{stock.price}</div>
+							</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>features</div>
+								<div className={styles.contact}>{stock.features}</div>
+							</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Condition</div>
+								<div className={styles.contact}>{stock.condition}</div>
+							</div>
 
-						<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Contact</div>
-						<div className={styles.contact}>{stock.phone}</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Contact</div>
+								<div className={styles.contact}>{stock.phone}</div>
+							</div>
+							<div className={styles.contactCover}>
+								<div className={styles.contactTitle}>Address</div>
+								<div className={styles.address}>{stock.address}</div>
+							</div>
+							{stock.shopId && (
+								<div className={styles.contactCover}>
+									<div className={styles.contactTitle}>Shop</div>
+									<div className={styles.address}>{stock.shopId}</div>
+									<div
+										onClick={() =>
+											router.push(
+												`/shop/` + "?" + set("shopId", `${stock.shopId}`)
+											)
+										}
+										className={styles.goToShop}
+									>
+										Go To Shop
+									</div>
+								</div>
+							)}
+						</div>
 					</div>
-						<div className={styles.contactCover}>
-						<div className={styles.contactTitle}>Address</div>
-						<div className={styles.address}>{stock.address}</div>
-					</div>
-					</div>
-				</div>
 				)}
 				<button
 					className={more !== `${stock.docid}` ? styles.btn : styles.btnA}
@@ -565,7 +698,7 @@ export default function ItemsFilter() {
 					<div className={styles.selectCover}>
 						<select
 							value={
-								selectArea !== (undefined || null )
+								selectArea !== (undefined || null)
 									? selectArea
 									: selectState
 									? ""
@@ -664,39 +797,46 @@ export default function ItemsFilter() {
 						{profileDetails?.length > 0
 							? RenderAvailableGoods()
 							: RenderAvailableModelGoods()}
-						{profileDetails?.length > 0?<div className={styles.pagi}>
-					<Pagination
-						postsPerPage={postsPerPage}
-						totalPosts={filteredFirebaseSearchInputList.length}
-						paginate={paginate}
-						currentpage={currentPage}
-					/>{" "}
-				</div>:<div className={styles.pagi}>
-					<Pagination
-						postsPerPage={postsPerPage}
-						totalPosts={filteredList.length}
-						paginate={paginate}
-						currentpage={currentPage}
-					/>{" "}
-				</div>}
+						{profileDetails?.length > 0 ? (
+							<div className={styles.pagi}>
+								<Pagination
+									postsPerPage={postsPerPage}
+									totalPosts={filteredFirebaseSearchInputList.length}
+									paginate={paginate}
+									currentpage={currentPage}
+								/>{" "}
+							</div>
+						) : (
+							<div className={styles.pagi}>
+								<Pagination
+									postsPerPage={postsPerPage}
+									totalPosts={filteredList.length}
+									paginate={paginate}
+									currentpage={currentPage}
+								/>{" "}
+							</div>
+						)}
 					</div>
 				)}
-				{profileDetails?.length > 0?<div className={styles.pagiMid}>
-					<Pagination
-						postsPerPage={postsPerPage}
-						totalPosts={filteredFirebaseSearchInputList.length}
-						paginate={paginate}
-						currentpage={currentPage}
-					/>{" "}
-				</div>:<div className={styles.pagiMid}>
-					<Pagination
-						postsPerPage={postsPerPage}
-						totalPosts={filteredList.length}
-						paginate={paginate}
-						currentpage={currentPage}
-					/>{" "}
-				</div>}
-				
+				{profileDetails?.length > 0 ? (
+					<div className={styles.pagiMid}>
+						<Pagination
+							postsPerPage={postsPerPage}
+							totalPosts={filteredFirebaseSearchInputList.length}
+							paginate={paginate}
+							currentpage={currentPage}
+						/>{" "}
+					</div>
+				) : (
+					<div className={styles.pagiMid}>
+						<Pagination
+							postsPerPage={postsPerPage}
+							totalPosts={filteredList.length}
+							paginate={paginate}
+							currentpage={currentPage}
+						/>{" "}
+					</div>
+				)}
 			</div>
 		</div>
 	);

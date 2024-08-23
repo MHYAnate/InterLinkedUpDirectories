@@ -142,7 +142,7 @@ export default function Shop() {
 					<div className={styles.shopDetailCover}>
 						<HeroDetail user={user} imgM={shopImg} img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} addressM={shopAddress} address={profileDetails?.address} shopMgM={shopManager} shopMg={profileDetails?.name}
 						contactM={shopPhone} contact={profileDetails?.contact} actNumM={shopacct}
-						actNum={profileDetails?.account} bnkNameM={shopBnk} bnkName={profileDetails?.bankName} actNameM={shopacctName} actName={profileDetails?.accountName} shopMarketM={ shopComplex} shopMarket={profileDetails?.market} />
+						actNum={profileDetails?.account} bnkNameM={shopBnk} bnkName={profileDetails?.bankName} actNameM={shopacctName} actName={profileDetails?.accountName} shopMarketM={ shopComplex} shopMarket={profileDetails?.market} idM={`${shopName}`} id={`${shopId}`} />
 					</div>
 					<div className={styles.shopStockCover}>
 						{user ? <ShopStock shopId={`${shopId}`} />: <ShopModelStock shopName={`${shopName}`} />}

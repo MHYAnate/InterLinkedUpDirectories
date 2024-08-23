@@ -9,8 +9,10 @@ import { ShopData } from "@/database/shopData";
 import { CompanyData } from "@/database/companyData";
 import ShopItemsComponent from "./fBIShopItem";
 import CompanyVacanciesComponent from "./fBICompanyVacancy";
+import RateUs from "@/components/btn/rateUs";
 import Pagination from "@/components/btn/paginationBtn";
 import { useRouter, useSearchParams } from "next/navigation";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
 
 import {
 	collection,
@@ -61,6 +63,12 @@ type FormValue = {
 	id:string;
 };
 
+interface RaterValue {
+	name:string;
+	docid:string;
+	src:string;
+}
+
 export default function CompanyFilter() {
 	const {
 		register,
@@ -95,6 +103,7 @@ export default function CompanyFilter() {
 		mode: "onChange",
 	});
 
+
 	const searchParams = useSearchParams();
 
 	const router = useRouter();
@@ -109,8 +118,6 @@ export default function CompanyFilter() {
 		[searchParams]
 	);
 
-	const [isPending, startTransition] = useTransition();
-
 	const [searchInput, setSearchInput] = useState("");
 
 	const [shopSearchInput, setShopSearchInput] = useState("");
@@ -119,7 +126,7 @@ export default function CompanyFilter() {
 
 	const [show, setShow] = useState("");
 
-	const [market, setMarket] = useState("space");
+	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
 
 	const selectCountry = watch("countrySelect");
 
@@ -135,17 +142,38 @@ export default function CompanyFilter() {
 
 	const status = watch("status");
 
-	function selectTab(nextTab: string) {
-		startTransition(() => {
-			setMore(nextTab);
-		});
-	}
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
 
-	function selectShowTab(nextTab: string) {
-		startTransition(() => {
-			setShow(nextTab);
-		});
-	}
+			const raterDetailRef = collection(database, `profile`);
+
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+			
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			
+		}
+	});
+
 
 
 
@@ -381,6 +409,9 @@ export default function CompanyFilter() {
 							height={500}
 							// unoptimized
 						/>
+					</div>
+					<div>
+						<RateUs rateeId={`${company.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
 							<div className={styles.companyVacancyTitleAbtUS}> Company Tag</div>
@@ -627,6 +658,7 @@ export default function CompanyFilter() {
 							// unoptimized
 						/>
 					</div>
+					<RateUs rateeId={`${company.companyId}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 					<div className={styles.showCompanyVacanciesTag}>
 							<div className={styles.companyVacancyTitleAbtUS}> Company Tag</div>
 							<div className={styles.companyVacancyDetail}>{company.companyTag}</div>

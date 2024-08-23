@@ -9,7 +9,9 @@ import { MarketComplex } from "@/database/marketComplexTag";
 import { ShopData } from "@/database/shopData";
 import ShopItemsComponent from "./fBIShopItem";
 import Pagination from "@/components/btn/paginationBtn";
+import RateUs from "@/components/btn/rateUs";
 import { useRouter, useSearchParams } from "next/navigation";
+import { onAuthStateChanged, updateProfile } from "firebase/auth";
 
 import {
 	collection,
@@ -61,6 +63,12 @@ type FormValue = {
 	id:string;
 };
 
+interface RaterValue {
+	name:string;
+	docid:string;
+	src:string;
+}
+
 export default function ShopsFilter() {
 	const {
 		register,
@@ -109,9 +117,6 @@ export default function ShopsFilter() {
 		},
 		[searchParams]
 	);
-
-	const [isPending, startTransition] = useTransition();
-
 	const [searchInput, setSearchInput] = useState("");
 
 	const [searchAddress, setSearchAddress] = useState("");
@@ -122,7 +127,7 @@ export default function ShopsFilter() {
 
 	const [show, setShow] = useState("");
 
-	const [market, setMarket] = useState("space");
+	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
 
 	const selectCountry = watch("countrySelect");
 
@@ -138,25 +143,37 @@ export default function ShopsFilter() {
 
 	const status = watch("status");
 
-	function selectTab(nextTab: string) {
-		startTransition(() => {
-			setMore(nextTab);
-		});
-	}
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
 
-	function selectShowTab(nextTab: string) {
-		startTransition(() => {
-			setShow(nextTab);
-		});
-	}
+			const raterDetailRef = collection(database, `profile`);
 
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+			
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
 
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
 
-	const countryValue =
-		typeof document !== "undefined"
-			? (document.querySelector('[name="countrySelect"]') as HTMLInputElement)
-					?.value || ""
-			: "";
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			return null;
+		}
+	});
 
 	const stateValue =
 		typeof document !== "undefined"
@@ -425,6 +442,9 @@ export default function ShopsFilter() {
 							height={500}
 							// unoptimized
 						/>
+					</div>
+					<div>
+						<RateUs rateeId={`${shop.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
 							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
@@ -700,14 +720,14 @@ export default function ShopsFilter() {
 				{more === `${shop.shopId}` ? "STOCKS" : "stocks"}
 			</div>
 			<div
-				className={more !== `${shop.shopName}` ? styles.btnShop : styles.btnShopA}
+				className={more !== `${shop.shopId}` ? styles.btnShop : styles.btnShopA}
 				onClick={
-					more !== `${shop.shopName}`
-						? () => setMore(`${shop.shopName}`)
+					more !== `${shop.shopId}`
+						? () => setMore(`${shop.shopId}`)
 						: () => setMore("")
 				}
 			>
-				{more === `${shop.shopName}` ? "DETAILS" : "details"}
+				{more === `${shop.shopId}` ? "DETAILS" : "details"}
 			</div>
 			</div>
 
@@ -723,10 +743,13 @@ export default function ShopsFilter() {
 							// unoptimized
 						/>
 					</div>
+					<div>
+					<RateUs rateeId={`${shop.shopId}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+					</div>
 					<div className={styles.showCompanyVacanciesTag}>
 							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
 							<div className={styles.companyVacancyDetail}>{shop.shopTag}</div>
-						</div>
+					</div>
 			</div>
 			
 			
