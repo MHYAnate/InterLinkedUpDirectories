@@ -75,7 +75,7 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 									<div className={styles.titleHero}>
-									{":Link"}<span className={styles.toWhat}>AGE</span> 
+									{":Link"}<span className={styles.age}>AGE</span> 
 									</div>
 									<div className={styles.titleHero2}>
 									 <span className={styles.toWhat}>To What</span> <span className={styles.matters}>{"!important;"}</span>

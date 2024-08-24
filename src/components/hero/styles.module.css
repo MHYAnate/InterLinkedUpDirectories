@@ -62,7 +62,7 @@
   font-size: 3rem;
   font-weight: 500;
   /* color:  rgb(102, 102, 102); */
-   color: darkolivegreen;
+  color: rgb(89, 135, 9);
   /* background-color: rgba(235, 235, 231, 0.7); */
   padding-left: 10px;
   padding-right: 10px;
@@ -80,7 +80,7 @@
   font-size: 3rem;
   font-weight: 500;
   /* color:  rgb(102, 102, 102); */
-   color: darkseagreen;
+   color: darkolivegreen;
   /* background-color: rgba(235, 235, 231, 0.7); */
   border-radius: 3px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -118,7 +118,7 @@
   text-decoration: line-through;
 }
 .matters{
-  color: darkseagreen;
+  color: rgb(89, 135, 9);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
