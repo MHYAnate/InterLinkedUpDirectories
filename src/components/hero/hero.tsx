@@ -78,7 +78,7 @@ export default function Hero() {
 									{":Link"}<span className={styles.age}>AGE</span> 
 									</div>
 									<div className={styles.titleHero2}>
-									 <span className={styles.toWhat}>To What ARE</span> <span className={styles.matters}>{"!important;"}</span>
+									 <span className={styles.toWhat}>{"ToWhat'ARE"}</span> <span className={styles.matters}>{"!important;"}</span>
 									</div>
 								</div>
 							</div>
