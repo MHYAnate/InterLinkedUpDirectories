@@ -177,7 +177,7 @@ const RateUs: React.FC<RateUsProps> = ({
       const docRef = doc(database, "rateUs", docId);
       await updateDoc(docRef, {
         rater: arrayUnion(newRaterData), // Add using arrayUnion
-      }),{ merge: true };
+      });
       console.log("Rater added successfully!");
     } catch (error) {
       console.error("Error adding rater:", error);
