@@ -1994,10 +1994,14 @@
     border-radius: 15px;
     box-shadow: 0px 0px 1px silver, 0 0 1px silver, 0 0 2.5px silver;
     margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+    align-items: center;
   }
   .innerTextVacancyRenderCover{
     width: 87vw;
     height: max-content;
+    align-items: center;
   }
 
   .shopItemBodyCover{
@@ -2193,14 +2197,14 @@
 @media screen and (max-width: 480px) {
 
   .coverHeadDetail{
-    width: 87vw;
+    width: 85vw;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
   .detailHead{
-    width: 87vw;
+    width: 85vw;
   }
   .headFootDetail{
     display: flex;
@@ -2210,7 +2214,7 @@
     min-width: 40vw;
   }
   .headFootDetailCover{
-    max-width:87vw;
+    max-width:85vw;
     justify-content: space-between;
     margin-bottom: 20px;
     min-width: 280px;
