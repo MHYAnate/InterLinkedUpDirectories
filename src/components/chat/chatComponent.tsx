@@ -87,9 +87,9 @@ const Chat: React.FC<ChatProps> = ({
 	const senderQuery = query(
 		chatDetailRef,
 		where("stateName", "==", stateName),
-		where("senderId", "==", senderId),
-		where("roomName", "==", roomName),
 		where("roomLocation", "==", roomLocation),
+		where("roomName", "==", roomName),
+		where("senderId", "==", senderId),
 		orderBy("createdAt"),
 		limit(10000)
 	);

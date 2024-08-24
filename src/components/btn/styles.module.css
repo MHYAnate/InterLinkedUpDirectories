@@ -153,6 +153,7 @@
   align-items: center;
   justify-content: flex-start;
   row-gap: 10px;
+  margin-bottom: 10px;
  }
 
  .currentRate{
@@ -295,4 +296,16 @@
 
  .rateBtn:hover{
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
+ }
+
+ .renderFeedBackBody{
+  min-height: fit-content;
+  max-height: 300px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: fit-content;
+  justify-content: flex-start;
+  align-items: center;
  }

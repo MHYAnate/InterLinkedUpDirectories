@@ -45,13 +45,11 @@ interface RateValue {
 	rating: string;
 	rateeId: string;
   docid:string;
-	rater: {
-		raterId: string;
-		rate: string;
-		feedback: string;
-		raterName: string;
-		raterImg: string;
-	}[];
+	rate: string;
+	feedback: string;
+	raterName: string;
+	raterImg: string;
+	raterId: string;
 }
 
 type FormValue = {
@@ -79,7 +77,7 @@ const RateUs: React.FC<RateUsProps> = ({
 		mode: "onChange",
 	});
 
-	const [profileDetails, setProfileDetails] = useState<RateValue | null>(null);
+	const [profileDetails, setProfileDetails] = useState<RateValue[]>([]);
 
 	const [totalRate, setTotalRate] = useState(Number);
 
@@ -96,17 +94,24 @@ const RateUs: React.FC<RateUsProps> = ({
 				return;
 			}
 
-			const retrievedData = querySnapshot.docs[0].data() as RateValue;
+			// const retrievedData = querySnapshot.docs[0].data() as RateValue;
 
-			const calculateTotalRate = (raters: any) => {
+      const retrievedData: RateValue[] = [];
+
+      querySnapshot.forEach((doc) => {
+				const docData = doc.data() as RateValue;
+				retrievedData.push(docData);
+			});
+
+			const calculateTotalRate = (raters: RateValue[]) => {
 				let total = 0;
-				raters.forEach((rater: any) => {
+				raters.forEach((rater: RateValue) => {
 					total += parseInt(rater.rate);
 				});
 				return total;
 			};
 			calculateTotalRate;
-			const totalRate = calculateTotalRate(retrievedData.rater);
+			const totalRate = calculateTotalRate(retrievedData);
 			setTotalRate(totalRate);
 			console.log(`total rate ${totalRate}`);
 			setProfileDetails(retrievedData);
@@ -119,7 +124,7 @@ const RateUs: React.FC<RateUsProps> = ({
 		handleGetRatingDetails();
 	}, [handleGetRatingDetails]);
 
-	const length = profileDetails?.rater.length;
+	const length = profileDetails?.length;
 
 	const finalRate = Math.round(length ? totalRate / length : 0);
 
@@ -139,15 +144,11 @@ const RateUs: React.FC<RateUsProps> = ({
 				rating: `${finalRate}`,
 				rateeId: `${rateeId}`,
         docid: "",
-				rater: [
-					{
-						raterId: `${raterId}`,
-						rate: `${rate}`,
-						feedback: `${feedback}`,
-						raterImg: `${raterImg}`,
-						raterName: `${raterName}`,
-					},
-				],
+				raterId: `${raterId}`,
+				rate: `${rate}`,
+				feedback: `${feedback}`,
+				raterImg: `${raterImg}`,
+				raterName: `${raterName}`,
 			});
       const docId = docRef.id;
 
@@ -164,40 +165,43 @@ const RateUs: React.FC<RateUsProps> = ({
 		setFeedback("");
 	};
 
-  const newRater = {
-    raterId: `${raterId}`,
-		rate: `${rate}`,
-	  feedback: `${feedback}`,
-	  raterImg: `${raterImg}`,
-		raterName: `${raterName}`,
-  };
+  const target = profileDetails.find(object => object.raterId === `${raterId}`)
 
-  const AddRate = async (docId :any, newRaterData:any) => {
-    try {
-      const docRef = doc(database, "rateUs", docId);
-      await updateDoc(docRef, {
-        rater: arrayUnion(newRaterData), // Add using arrayUnion
-      });
-      console.log("Rater added successfully!");
-    } catch (error) {
-      console.error("Error adding rater:", error);
-    }
-  };
- const Rate = () => {
-  AddRate(profileDetails?.docid,newRater)
-};
+  const upDateRate = async () => {
+		const rateUsDetailRef = collection(database, "rateUs");
+		try {
+      await setDoc(doc(rateUsDetailRef, target?.docid), {
+				rating: `${finalRate}`,
+				rateeId: `${rateeId}`,
+        docid: "",
+				raterId: `${raterId}`,
+				rate: `${rate}`,
+				feedback: `${feedback}`,
+				raterImg: `${raterImg}`,
+				raterName: `${raterName}`,
+			},{ merge: true });
+      
+		} catch (error) {
+			console.error("Error adding profile detail:", error);
+		}
+		setFeedback("");
+	};
+
+  
+
+
 
 
 	useEffect(() => {
 		handleGetRatingDetails();
-	}, [handleGetRatingDetails, NewRate, AddRate]);
+	}, [handleGetRatingDetails, NewRate, upDateRate]);
 
 	function RenderAvailableFeedBacks() {
 		if (profileDetails === null) {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return null;
 		}
-		return profileDetails.rater.map((rater) => (
+		return profileDetails.map((rater) => (
 			<div className={styles.feedBackCover} key={rater.raterId}>
 				<div className={styles.feedBackImgCover}>
 					<Image
@@ -328,7 +332,7 @@ const RateUs: React.FC<RateUsProps> = ({
 							</button>
 						))}
 					</div>
-					<form className={styles.form} onSubmit={handleSubmit(profileDetails?.rateeId === rateeId ? Rate : NewRate )}>
+					<form className={styles.form} onSubmit={handleSubmit(target?.rateeId === rateeId ? upDateRate : NewRate )}>
 						<textarea
 							{...register("feedBack", {})}
 							value={feedback}
@@ -348,12 +352,15 @@ const RateUs: React.FC<RateUsProps> = ({
 				}
 				className={styles.feedBack}
 			>
-				{`${profileDetails?.rater.length}` === `${null || undefined }` ? `No FeedBack Available`:`${openFeedBack }` === `true`?`Hide FeedBacks`:`Show FeedBacks`}
+				{`${profileDetails?.length}` === `${null || undefined || 0}` ? `No FeedBack Available`:`${openFeedBack }` === `true`?`Hide FeedBacks`:`Show FeedBacks`}
 			</button>
-			{openFeedBack && RenderAvailableFeedBacks()}
+			<div className={styles.renderFeedBackBody}>
+				{openFeedBack && RenderAvailableFeedBacks()}
+			</div>
 		</div>
 	);
 };
 
 RateUs.displayName = "RateUs";
 export default RateUs;
+
