@@ -83,7 +83,8 @@ const RateUs: React.FC<RateUsProps> = ({
 
 	const rateUsDetailRef = collection(database, "rateUs");
 
-	const rateeQuery = query(rateUsDetailRef, where("rateeId", "==", rateeId));
+	const rateeQuery = query(rateUsDetailRef, where("rateeId", "==", rateeId),orderBy("createdAt"),
+	limit(1000));
 
 	const handleGetRatingDetails = async () => {
 		try {
@@ -149,6 +150,7 @@ const RateUs: React.FC<RateUsProps> = ({
 				feedback: `${feedback}`,
 				raterImg: `${raterImg}`,
 				raterName: `${raterName}`,
+				createdAt: serverTimestamp(),
 			});
       const docId = docRef.id;
 
@@ -179,6 +181,7 @@ const RateUs: React.FC<RateUsProps> = ({
 				feedback: `${feedback}`,
 				raterImg: `${raterImg}`,
 				raterName: `${raterName}`,
+				createdAt: serverTimestamp(),
 			},{ merge: true });
       
 		} catch (error) {
@@ -310,7 +313,6 @@ const RateUs: React.FC<RateUsProps> = ({
 					<div className={styles.rateHolder}>
 						{[1, 2, 3, 4, 5].map((star) => (
 							<button
-								disabled={!raterId ? true : false}
 								key={star}
 								onClick={() => setRate(star)}
 								className={`${rate >= star ? styles.gold : styles.grey}`}
@@ -354,7 +356,7 @@ const RateUs: React.FC<RateUsProps> = ({
 			>
 				{`${profileDetails?.length}` === `${null || undefined || 0}` ? `No FeedBack Available`:`${openFeedBack }` === `true`?`Hide FeedBacks`:`Show FeedBacks`}
 			</button>
-			<div className={styles.renderFeedBackBody}>
+			<div className={openFeedBack ? styles.renderFeedBackBody : styles.hide}>
 				{openFeedBack && RenderAvailableFeedBacks()}
 			</div>
 		</div>

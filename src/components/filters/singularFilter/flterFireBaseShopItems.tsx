@@ -266,9 +266,9 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 			<div className={styles.InRenderItemCover} key={item.itemId}>
 				<div className={styles.InShopItemsCover}>
 					<div className={styles.InShopItemsDetailTitleName}>{item.title}</div>
-					<div className={styles.InShopsItemsImgCover}>
+					<div className={styles.imgCover}>
 						<Image
-							className={styles.InShopItemImg}
+							className={styles.idiImg}
 							src={
 								img === `${item.image}`
 									? `${item.image}`
@@ -282,27 +282,29 @@ const ShopStock: React.FC<shopId> = ({ shopId }) => {
 							height={500}
 							// unoptimized
 						/>
+						<div className={styles.picSelCover}>
+						<div className={styles.picSel}>
+						<div
+							className={img === `${item.image}` ? styles.picHL : styles.picL}
+							onClick={() => {
+								setImg(`${item.image}`);
+							}}
+						>
+							{`FRONT`}
+						</div>
+						<div
+							className={img === `${item.image2}` ? styles.picHR : styles.picR}
+							onClick={() => {
+								setImg(`${item.image2}`);
+							}}
+						>
+							{`SIDE`}
+						</div>
+					</div>
+					</div>
 					</div>
 
 					<div className={styles.InShopItemsDetailCover}>
-						<div className={styles.picSel}>
-							<div
-								className={img === `${item.image}` ? styles.picH : styles.pic}
-								onClick={() => {
-									setImg(`${item.image}`);
-								}}
-							>
-								{`FRONT`}
-							</div>
-							<div
-								className={img === `${item.image2}` ? styles.picH : styles.pic}
-								onClick={() => {
-									setImg(`${item.image2}`);
-								}}
-							>
-								{`SIDE`}
-							</div>
-						</div>
 						<div>
 					<RateUs rateeId={`${item.itemId}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>

@@ -84,6 +84,8 @@ const Chat: React.FC<ChatProps> = ({
 
 	const chatDetailRef = collection(database, "chat");
 
+	const [imageUrl, setImageUrl] = useState("");
+
 	const senderQuery = query(
 		chatDetailRef,
 		where("stateName", "==", stateName),
@@ -108,6 +110,7 @@ const Chat: React.FC<ChatProps> = ({
 				senderName: `${senderName}`,
 				senderPic: `${senderPic}`,
 				stateName: `${stateName}`,
+				chatPic: "",
 			});
 			const docId = docRef.id;
 			setDocId(docId);
@@ -126,15 +129,58 @@ const Chat: React.FC<ChatProps> = ({
 		}
 	};
 
+	const imageRef = ref(storage, `image/${senderId}`);
 
+	const fileInputRef = useRef<HTMLInputElement>(null);
 
-	const onSubmit = () => {
-		send();
-		setInputValues("");
-		vAssist.current?.scrollIntoView({ behavior: "smooth" });
+	const handleUpload = () => {
+		const fileInput = fileInputRef.current;
+		if (fileInput && fileInput.files && fileInput.files.length > 0) {
+			const file = fileInput.files[0]; // Get the first selected file
+
+			// Reference to the root of the default Firebase Storage bucket
+
+			// Upload the file
+			uploadBytes(imageRef, file)
+				.then((snapshot) => {
+					getDownloadURL(imageRef).then((url) => {
+						setImageUrl(url);
+						handleImageProfileDetail();
+					});
+
+					console.log("Uploaded a file!");
+				})
+				.catch((error) => {
+					console.error(error); // Handle any errors
+				});
+		}
+	};
+
+	const handleImageProfileDetail = async () => {
+		try {
+			const profileDetailRef = collection(database, `profile`);
+			await setDoc(
+				doc(profileDetailRef, docId),
+				{
+					src: imageUrl,
+				},
+				{ merge: true }
+			);
+			console.log("Profile detail added successfully");
+		} catch (error) {
+			console.error("Error adding profile detail:", error);
+		}
 	};
 
 	const vAssist = useRef<HTMLDivElement>(null);
+
+	const onSubmit = () => {
+		handleUpload();
+		handleImageProfileDetail();
+		send();
+		setInputValues("");
+		vAssist.current?.scrollIntoView({ behavior: "smooth" });
+	};	
 
 	return (
 		<div>
@@ -155,7 +201,7 @@ const Chat: React.FC<ChatProps> = ({
 				<div ref={vAssist}> </div>
 			</div>
 			<div className={styles.chatCover}>
-				<div className={styles.inputCover}>
+				<form className={styles.inputCover}  onSubmit={handleSubmit(onSubmit)}>
 					<div className={styles.chatInput}>
 						<input
 							type="text"
@@ -169,8 +215,32 @@ const Chat: React.FC<ChatProps> = ({
 							placeholder={`${roomLocation} ${roomName} Community`}
 						/>
 					</div>
-					<div className={styles.ImgInput}>Img</div>
-				</div>
+					<div className={styles.inputImageCover}>
+				
+				<input
+					type="file"
+					accept="image/*"
+					className={styles.inputImg}
+					ref={fileInputRef}
+					id="file"
+					placeholder="Upload Display Picture"
+				/>
+				<label htmlFor="file">
+				<Image
+				object-fit="cover"
+				className={styles.upLoadPic}
+				alt="Picture of the author"
+				quality={100}
+				width={100}
+				height={100}
+				src="/service/u1.jpg"
+				priority={true}
+				unoptimized
+			/>
+				</label>
+				<span>Upload Display Picture</span>
+			</div>
+				</form>
 				<button
 					onSubmit={handleSubmit(onSubmit)}
 					className={styles.chatBtn}

@@ -338,7 +338,7 @@ export default function ItemsFilter() {
 			<div className={styles.stockRenderCover} key={stock.id}>
 				<div className={styles.stockName}>{stock.title}</div>
 				<div className={styles.stockSeperatorCover}>
-					<div className={styles.imgCover}>
+				<div className={styles.imgCover}>
 						<Image
 							className={styles.idiImg}
 							src={
@@ -354,11 +354,10 @@ export default function ItemsFilter() {
 							height={500}
 							// unoptimized
 						/>
-					</div>
-
-					<div className={styles.picSel}>
+						<div className={styles.picSelCover}>
+						<div className={styles.picSel}>
 						<div
-							className={img === `${stock.image}` ? styles.picH : styles.pic}
+							className={img === `${stock.image}` ? styles.picHL : styles.picL}
 							onClick={() => {
 								setImg(`${stock.image}`);
 							}}
@@ -366,13 +365,15 @@ export default function ItemsFilter() {
 							{`FRONT`}
 						</div>
 						<div
-							className={img === `${stock.image2}` ? styles.picH : styles.pic}
+							className={img === `${stock.image2}` ? styles.picHR : styles.picR}
 							onClick={() => {
 								setImg(`${stock.image2}`);
 							}}
 						>
 							{`SIDE`}
 						</div>
+					</div>
+					</div>
 					</div>
 					<div>
 						<RateUs
@@ -575,9 +576,8 @@ export default function ItemsFilter() {
 							height={500}
 							// unoptimized
 						/>
-					</div>
-
-					<div className={styles.picSel}>
+						<div className={styles.picSelCover}>
+						<div className={styles.picSel}>
 						<div
 							className={img === `${stock.image}` ? styles.picH : styles.pic}
 							onClick={() => {
@@ -594,6 +594,8 @@ export default function ItemsFilter() {
 						>
 							{`SIDE`}
 						</div>
+					</div>
+					</div>
 					</div>
 					<div>
 						<RateUs
