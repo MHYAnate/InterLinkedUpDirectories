@@ -1,32 +1,26 @@
 import * as React from "react";
-import { useState, useEffect, useCallback, useTransition, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import Image from "next/image";
-import { useSearchParams, useRouter } from "next/navigation";
+
 import { StateData } from "@/database/stateData";
 import { MarketData } from "@/database/marketData";
 import { MarketStatus } from "@/database/marketStatus";
 import { MarketTag } from "@/database/marketTag";
 import { MarketCondition } from "@/database/marketCondition";
+import Item from "./itemComponent";
 
 import {
 	collection,
-	collectionGroup,
-	doc,
-	setDoc,
-	addDoc,
 	getDocs,
 	query,
 	where,
-	or,
-	and,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
-const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+const { auth, database} =
 	firebase;
 import Pagination from "@/components/btn/paginationBtn";
-import RateUs from "@/components/btn/rateUs";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+
+import { onAuthStateChanged} from "firebase/auth";
 import styles from "./styles.module.css";
 
 type FormValue = {
@@ -59,18 +53,8 @@ export default function ItemsFilter() {
 		register,
 		handleSubmit,
 		watch,
-		reset,
-		unregister,
-		setFocus,
-		setValue,
-		control,
 		formState: {
-			isSubmitSuccessful,
-			errors,
-			isSubmitted,
-			isSubmitting,
-			isDirty,
-			isValid,
+			
 		},
 	} = useForm<FormValue>({
 		defaultValues: {
@@ -87,17 +71,9 @@ export default function ItemsFilter() {
 		mode: "onChange",
 	});
 
-	const router = useRouter();
-
-	const [isPending, startTransition] = useTransition();
-
 	const [searchInput, setSearchInput] = useState("");
 
 	const [searchAddress, setSearchAddress] = useState("");
-
-	const [more, setMore] = useState("");
-
-	const [img, setImg] = useState("");
 
 	const [raterDetail, setRaterDetail] = useState<RaterValue | null>(null);
 
@@ -142,30 +118,6 @@ export default function ItemsFilter() {
 		} else {
 		}
 	});
-
-	function selectTab(nextTab: string) {
-		startTransition(() => {
-			setMore(nextTab);
-		});
-	}
-
-	const searchParams = useSearchParams();
-
-	const set = useCallback(
-		(name: string, value: string) => {
-			const params = new URLSearchParams(searchParams.toString());
-			params.set(name, value);
-
-			return params.toString();
-		},
-		[searchParams]
-	);
-
-	const countryValue =
-		typeof document !== "undefined"
-			? (document.querySelector('[name="countrySelect"]') as HTMLInputElement)
-					?.value || ""
-			: "";
 
 	const stateValue =
 		typeof document !== "undefined"
@@ -335,101 +287,8 @@ export default function ItemsFilter() {
 		}
 
 		return currentPosts?.map((stock) => (
-			<div className={styles.stockRenderCover} key={stock.id}>
-				<div className={styles.stockName}>{stock.title}</div>
-				<div className={styles.stockSeperatorCover}>
-				<div className={styles.imgCover}>
-						<Image
-							className={styles.idiImg}
-							src={
-								img === `${stock.image}`
-									? `${stock.image}`
-									: img === `${stock.image2}`
-									? `${stock.image2}`
-									: `${stock.image}`
-							}
-							alt={`${stock.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-						<div className={styles.picSelCover}>
-						<div className={styles.picSel}>
-						<div
-							className={img === `${stock.image}` ? styles.picHL : styles.picL}
-							onClick={() => {
-								setImg(`${stock.image}`);
-							}}
-						>
-							{`FRONT`}
-						</div>
-						<div
-							className={img === `${stock.image2}` ? styles.picHR : styles.picR}
-							onClick={() => {
-								setImg(`${stock.image2}`);
-							}}
-						>
-							{`SIDE`}
-						</div>
-					</div>
-					</div>
-					</div>
-					<div>
-						<RateUs
-							rateeId={`${stock.id}`}
-							raterId={`${raterDetail?.docid}`}
-							raterName={`${raterDetail?.name}`}
-							raterImg={`${raterDetail?.src}`}
-						/>
-					</div>
-					{more !== `${stock.id}` && (
-						<div className={styles.innerTextStockRenderCover}>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>price</div>
-								<div className={styles.contact}>{stock.price}</div>
-							</div>
-						</div>
-					)}
-				</div>
-				{more === `${stock.id}` && (
-					<div className={styles.showMore}>
-						<div className={styles.innerTextShowMoreRenderCover}>
-							<div className={styles.status}>{stock.status}</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>price</div>
-								<div className={styles.contact}>{stock.price}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>features</div>
-								<div className={styles.contact}>{stock.features}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Condition</div>
-								<div className={styles.contact}>{stock.condition}</div>
-							</div>
-
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Contact</div>
-								<div className={styles.contact}>{stock.phone}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Address</div>
-								<div className={styles.address}>{stock.address}</div>
-							</div>
-						</div>
-					</div>
-				)}
-				<button
-					className={more !== `${stock.id}` ? styles.btn : styles.btnA}
-					onClick={
-						more !== `${stock.id}`
-							? () => selectTab(`${stock.id}`)
-							: () => selectTab("")
-					}
-				>
-					{more === `${stock.id}` ? "Less" : "More Details"}
-				</button>
+			<div key={stock.id}>
+				<Item title={stock.title} image={stock.image} image2={stock.image2} id={stock.id} price={stock.price} status={stock.status} features={stock.features} condition={stock.condition} phone={stock.phone} address={stock.address} docid={raterDetail?.docid} name={raterDetail?.name} src={raterDetail?.src} />
 			</div>
 		));
 	}
@@ -558,116 +417,7 @@ export default function ItemsFilter() {
 
 		return currentFireBasePosts?.map((stock: any) => (
 			<div className={styles.stockRenderCover} key={stock.docid}>
-				<div className={styles.stockName}>{stock.title}</div>
-				<div className={styles.stockSeperatorCover}>
-					<div className={styles.imgCover}>
-						<Image
-							className={styles.idiImg}
-							src={
-								img === `${stock.image}`
-									? `${stock.image}`
-									: img === `${stock.image2}`
-									? `${stock.image2}`
-									: `${stock.image}`
-							}
-							alt={`${stock.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-						<div className={styles.picSelCover}>
-						<div className={styles.picSel}>
-						<div
-							className={img === `${stock.image}` ? styles.picH : styles.pic}
-							onClick={() => {
-								setImg(`${stock.image}`);
-							}}
-						>
-							{`FRONT`}
-						</div>
-						<div
-							className={img === `${stock.image2}` ? styles.picH : styles.pic}
-							onClick={() => {
-								setImg(`${stock.image2}`);
-							}}
-						>
-							{`SIDE`}
-						</div>
-					</div>
-					</div>
-					</div>
-					<div>
-						<RateUs
-							rateeId={`${stock.docid}`}
-							raterId={`${raterDetail?.docid}`}
-							raterName={`${raterDetail?.name}`}
-							raterImg={`${raterDetail?.src}`}
-						/>
-					</div>
-					{more !== `${stock.docid}` && (
-						<div className={styles.innerTextStockRenderCover}>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>price</div>
-								<div className={styles.contact}>{stock.price}</div>
-							</div>
-						</div>
-					)}
-				</div>
-				{more === `${stock.docid}` && (
-					<div className={styles.showMore}>
-						<div className={styles.innerTextShowMoreRenderCover}>
-							<div className={styles.status}>{stock.status}</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>price</div>
-								<div className={styles.contact}>{stock.price}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>features</div>
-								<div className={styles.contact}>{stock.features}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Condition</div>
-								<div className={styles.contact}>{stock.condition}</div>
-							</div>
-
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Contact</div>
-								<div className={styles.contact}>{stock.phone}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Address</div>
-								<div className={styles.address}>{stock.address}</div>
-							</div>
-							{stock.shopId && (
-								<div className={styles.contactCover}>
-									<div className={styles.contactTitle}>Shop</div>
-									<div className={styles.address}>{stock.shopId}</div>
-									<div
-										onClick={() =>
-											router.push(
-												`/shop/` + "?" + set("shopId", `${stock.shopId}`)
-											)
-										}
-										className={styles.goToShop}
-									>
-										Go To Shop
-									</div>
-								</div>
-							)}
-						</div>
-					</div>
-				)}
-				<button
-					className={more !== `${stock.docid}` ? styles.btn : styles.btnA}
-					onClick={
-						more !== `${stock.docid}`
-							? () => selectTab(`${stock.docid}`)
-							: () => selectTab("")
-					}
-				>
-					{more === `${stock.docid}` ? "Less" : "More Details"}
-				</button>
+				<Item title={stock.title} image={stock.image} image2={stock.image2} id={stock.id} price={stock.price} status={stock.status} features={stock.features} condition={stock.condition} phone={stock.phone} address={stock.address} docid={raterDetail?.docid} name={raterDetail?.name} src={raterDetail?.src} />
 			</div>
 		));
 	}

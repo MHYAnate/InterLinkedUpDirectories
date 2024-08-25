@@ -1,27 +1,21 @@
 "use client";
 import styles from "./styles.module.css";
-import Image from "next/image";
 import { ShopData } from "@/database/shopData";
 import Pagination from "@/components/btn/paginationBtn";
 import { useState, useEffect, useCallback, useTransition } from "react";
-
+import Item from "./itemComponent";
 import { MarketStatus } from "@/database/marketStatus";
 import { MarketTag } from "@/database/marketTag";
 import { MarketCondition } from "@/database/marketCondition";
 import { useForm } from "react-hook-form";
 import {
 	collection,
-	collectionGroup,
-	doc,
-	setDoc,
-	addDoc,
 	getDocs,
 	query,
 	where,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
-import RateUs from "@/components/btn/rateUs";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { onAuthStateChanged} from "firebase/auth";
 
 interface RaterValue {
 	name:string;
@@ -29,7 +23,7 @@ interface RaterValue {
 	src:string;
 }
 
-const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+const { auth,  database} =
 	firebase;
 
 type ShopValues = {
@@ -49,18 +43,7 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 		register,
 		handleSubmit,
 		watch,
-		reset,
-		unregister,
-		setFocus,
-		setValue,
-		control,
 		formState: {
-			isSubmitSuccessful,
-			errors,
-			isSubmitted,
-			isSubmitting,
-			isDirty,
-			isValid,
 		},
 	} = useForm<ShopValues>({
 		defaultValues: {
@@ -80,10 +63,6 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 	const condition = watch("condition");
 
 	const [shopSearchInput, setShopSearchInput] = useState("");
-
-	const [show, setShow] = useState("");
-
-	const [img, setImg] = useState("");
 
 	const [currentPage, setCurrentPage] = useState(1);
 
@@ -234,93 +213,8 @@ const ShopModelStock: React.FC<ShopName> = ({ shopName }) => {
 		}
 
 		return currentPosts?.map((item) => (
-			<div className={styles.InRenderItemCover} key={item.id}>
-				<div className={styles.InShopItemsCover}>
-					<div className={styles.InShopItemsDetailTitleName}>{item.title}</div>
-					<div className={styles.imgCover}>
-						<Image
-							className={styles.idiImg}
-							src={
-								img === `${item.image}`
-									? `${item.image}`
-									: img === `${item.image2}`
-									? `${item.image2}`
-									: `${item.image}`
-							}
-							alt={`${item.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-						<div className={styles.picSelCover}>
-						<div className={styles.picSel}>
-						<div
-							className={img === `${item.image}` ? styles.picHL : styles.picL}
-							onClick={() => {
-								setImg(`${item.image}`);
-							}}
-						>
-							{`FRONT`}
-						</div>
-						<div
-							className={img === `${item.image2}` ? styles.picHR : styles.picR}
-							onClick={() => {
-								setImg(`${item.image2}`);
-							}}
-						>
-							{`SIDE`}
-						</div>
-					</div>
-					</div>
-					</div>
-
-					<div className={styles.InShopItemsDetailCover}>
-					
-						<div>
-					<RateUs rateeId={`${item.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
-				</div>
-						{show === `${item.id}` ? (
-							<></>
-						) : (
-							<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>price</div>
-							<div className={styles.contact}>{item.price}</div>
-						</div>
-						)}
-					</div>
-				</div>
-				{show === `${item.id}` && (
-					<div className={styles.InShowMoreDetails}>
-						<div className={styles.InShowMoreDetailCover}>
-						<div className={styles.statusInShop}>{item.status}</div>
-							<div className={styles.InShopItemsDetailCover}>
-							<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>price</div>
-							<div className={styles.contact}>{item.price}</div>
-						</div>
-							</div>
-							<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>Condition</div>
-							<div className={styles.contact}>{item.condition}</div>
-						</div>
-						<div className={styles.contactCover}>
-							<div className={styles.contactTitle}>feature</div>
-							<div className={styles.contact}>{item.features}</div>
-						</div>
-						</div>
-					</div>
-				)}
-				<div
-					className={show !== `${item.id}` ? styles.InBtn : styles.InBtn}
-					onClick={
-						show !== `${item.id}`
-							? () => setShow(`${item.id}`)
-							: () => setShow("")
-					}
-				>
-					{show === `${item.id}` ? "Show Less" : "More Details"}
-				</div>
+			<div key={item.id}>
+					<Item title={item.title} image={item.image} image2={item.image2} id={item.id} price={item.price} status={item.status} features={item.features} condition={item.condition} phone={``} address={``} docid={raterDetail?.docid} name={raterDetail?.name} src={raterDetail?.src} />
 			</div>
 		));
 	}
