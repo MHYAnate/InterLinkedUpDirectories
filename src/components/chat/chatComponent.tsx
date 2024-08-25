@@ -5,6 +5,8 @@ import Loading from "@/app/register/logo";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import ChatImageBtn from "../btn/chatImgBtn";
+import ChatBtn from "../btn/chatBtn";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
 	collection,
@@ -33,7 +35,7 @@ import styles from "./styles.module.css";
 import ChatMessage from "./chatMessage";
 
 interface ChatProps {
-	stateName:string;
+	stateName: string;
 	roomName: string;
 	roomLocation: string;
 	senderId: string;
@@ -102,7 +104,7 @@ const Chat: React.FC<ChatProps> = ({
 		try {
 			const docRef = await addDoc(chatDetailRef, {
 				chat: `${inputValues}`,
-				createdAt: serverTimestamp(),  
+				createdAt: serverTimestamp(),
 				docid: "",
 				senderId: `${senderId}`,
 				roomLocation: `${roomLocation}`,
@@ -180,14 +182,14 @@ const Chat: React.FC<ChatProps> = ({
 		send();
 		setInputValues("");
 		vAssist.current?.scrollIntoView({ behavior: "smooth" });
-	};	
+	};
 
 	return (
 		<div>
 			<div className={styles.chatMsg}>
 				{massages &&
 					massages.map((msg) => (
-						<ChatMessage 
+						<ChatMessage
 							key={msg.docid}
 							chat={msg.chat}
 							senderId={msg.senderId}
@@ -201,7 +203,7 @@ const Chat: React.FC<ChatProps> = ({
 				<div ref={vAssist}> </div>
 			</div>
 			<div className={styles.chatCover}>
-				<form className={styles.inputCover}  onSubmit={handleSubmit(onSubmit)}>
+				<form className={styles.inputCover} onSubmit={handleSubmit(onSubmit)}>
 					<div className={styles.chatInput}>
 						<input
 							type="text"
@@ -216,37 +218,25 @@ const Chat: React.FC<ChatProps> = ({
 						/>
 					</div>
 					<div className={styles.inputImageCover}>
-				
-				<input
-					type="file"
-					accept="image/*"
-					className={styles.inputImg}
-					ref={fileInputRef}
-					id="file"
-					placeholder="Upload Display Picture"
-				/>
-				<label htmlFor="file">
-				<Image
-				object-fit="cover"
-				className={styles.upLoadPic}
-				alt="Picture of the author"
-				quality={100}
-				width={100}
-				height={100}
-				src="/service/u1.jpg"
-				priority={true}
-				unoptimized
-			/>
-				</label>
-				<span>Upload Display Picture</span>
-			</div>
+						<input
+							type="file"
+							accept="image/*"
+							className={styles.inputImg}
+							ref={fileInputRef}
+							id="file"
+							placeholder="Upload Display Picture"
+						/>
+						<label htmlFor="file">
+							<ChatImageBtn />
+						</label>
+					</div>
 				</form>
 				<button
 					onSubmit={handleSubmit(onSubmit)}
 					className={styles.chatBtn}
 					type="submit"
 				>
-					chat
+					<ChatBtn/>
 				</button>
 			</div>
 		</div>

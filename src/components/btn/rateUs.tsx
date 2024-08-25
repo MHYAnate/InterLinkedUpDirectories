@@ -50,6 +50,7 @@ interface RateValue {
 	raterName: string;
 	raterImg: string;
 	raterId: string;
+	createdAt:any;
 }
 
 type FormValue = {
@@ -83,8 +84,7 @@ const RateUs: React.FC<RateUsProps> = ({
 
 	const rateUsDetailRef = collection(database, "rateUs");
 
-	const rateeQuery = query(rateUsDetailRef, where("rateeId", "==", rateeId),orderBy("createdAt"),
-	limit(1000));
+	const rateeQuery = query(rateUsDetailRef, where("rateeId", "==", rateeId));
 
 	const handleGetRatingDetails = async () => {
 		try {
@@ -166,6 +166,7 @@ const RateUs: React.FC<RateUsProps> = ({
 		}
 		setFeedback("");
 	};
+	
 
   const target = profileDetails.find(object => object.raterId === `${raterId}`)
 
@@ -181,7 +182,6 @@ const RateUs: React.FC<RateUsProps> = ({
 				feedback: `${feedback}`,
 				raterImg: `${raterImg}`,
 				raterName: `${raterName}`,
-				createdAt: serverTimestamp(),
 			},{ merge: true });
       
 		} catch (error) {
