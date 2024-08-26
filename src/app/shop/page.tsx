@@ -58,36 +58,7 @@ export default function Shop() {
 
 	const searchParams = useSearchParams();
 
-	const router = useRouter();
-
-	const set = useCallback(
-		(name: string, value: string) => {
-			const params = new URLSearchParams(searchParams.toString());
-			params.set(name, value);
-
-			return params.toString();
-		},
-		[searchParams]
-	);
-
-	const shopImg = searchParams.get("shopImg");
-
 	const shopName = searchParams.get("shopName");
-
-	const shopAddress = searchParams.get("shopAddress");
-
-	const shopManager = searchParams.get("shopManager");
-
-	const shopacct = searchParams.get("act");
-
-	const shopBnk = searchParams.get("bnkName");
-
-	const shopacctName = searchParams.get("actName");
-
-	const shopPhone = searchParams.get("contact");
-
-	const shopComplex = searchParams.get("complex");
-
 
 	const shopId = searchParams.get("shopId");
 
@@ -140,9 +111,9 @@ export default function Shop() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-						<HeroDetail user={user} imgM={shopImg} img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} addressM={shopAddress} address={profileDetails?.address} shopMgM={shopManager} shopMg={profileDetails?.name}
-						contactM={shopPhone} contact={profileDetails?.contact} actNumM={shopacct}
-						actNum={profileDetails?.account} bnkNameM={shopBnk} bnkName={profileDetails?.bankName} actNameM={shopacctName} actName={profileDetails?.accountName} shopMarketM={ shopComplex} shopMarket={profileDetails?.market} idM={`${shopName}`} id={`${shopId}`} />
+						<HeroDetail user={user}  img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} address={profileDetails?.address}  shopMg={profileDetails?.name}
+						contact={profileDetails?.contact} 
+						actNum={profileDetails?.account} bnkName={profileDetails?.bankName}  actName={profileDetails?.accountName} shopMarket={profileDetails?.market} id={`${shopId}`} />
 					</div>
 					<div className={styles.shopStockCover}>
 						{user ? <ShopStock shopId={`${shopId}`} />: <ShopModelStock shopName={`${shopName}`} />}

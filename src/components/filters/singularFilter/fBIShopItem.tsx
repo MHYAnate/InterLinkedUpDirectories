@@ -8,7 +8,7 @@ const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 	firebase;
 
 // Define the type for your shop item data
-interface FormValue {
+interface ShopItemsValue {
   id: string;
   image: string;
   image2: string;
@@ -23,36 +23,11 @@ interface FormValue {
 interface ShopItemsProps {
   shopId: string;
   value: any;
-  tag: any;
 }
 
-const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => {
-  const {
-		register,
-		handleSubmit,
-		watch,
-		reset,
-		unregister,
-		setFocus,
-		setValue,
-		control,
-		formState: {
-			isSubmitSuccessful,
-			errors,
-			isSubmitted,
-			isSubmitting,
-			isDirty,
-			isValid,
-		},
-	} = useForm<FormValue>({
-		defaultValues: {
-			title: "",
-		},
-		shouldUseNativeValidation: true,
-		mode: "onChange",
-	});
+const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value}) => {
 
-  const [shopItemDetails, setShopItemDetails] = useState<FormValue[]>([]);
+  const [shopItemDetails, setShopItemDetails] = useState<ShopItemsValue[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [show, setShow] = useState<string | null>(null);
 
@@ -68,9 +43,9 @@ const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => 
           console.log('No profile details found');
           setShopItemDetails([]);
         } else {
-          const retrievedData: FormValue[] = [];
+          const retrievedData: ShopItemsValue[] = [];
           querySnapshot.forEach((doc) => {
-            const docData = doc.data() as FormValue;
+            const docData = doc.data() as ShopItemsValue;
             retrievedData.push(docData);
             // retrievedData.push({ ...docData, id: doc.id });
           });
@@ -89,12 +64,7 @@ const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => 
 
   if (isLoading) return <div>Loading...</div>; // Handle loading state
 
-  const filteredShopItemsTag = shopItemDetails?.filter((eachItem) => {
-		const text = eachItem.tag.toLowerCase();
-		return text.includes(tag.toLowerCase());
-	});
-
-	const filteredShopItemsName = filteredShopItemsTag.filter((eachItem) => {
+	const filteredShopItemsName = shopItemDetails?.filter((eachItem) => {
 		const text = eachItem.title.toLowerCase();
 		return text.includes(value.toLowerCase());
 	});
@@ -149,10 +119,14 @@ const ShopItemsComponent: React.FC<ShopItemsProps> = ({ shopId, value,tag }) => 
               </div>
             )}
             <div
-              className={show !== item.id ? styles.btn : styles.btnA}
-              onClick={() => setShow(show !== item.id ? item.id : null)}
+              className={show !== item.id ? styles.qShopbtn : styles.qShopbtn}
+              onClick={
+                show !== `${item.id}`
+                  ? () => setShow(`${item.id}`)
+                  : () => setShow("")
+              }
             >
-              {show === item.id ? 'Less' : 'Details'}
+              {show === `${item.id}` ? 'Less' : 'Details'}
             </div>
           </div>
         ))

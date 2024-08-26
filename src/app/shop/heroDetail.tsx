@@ -13,6 +13,7 @@ import {
 import firebase from "@/firebase/firebase";
 import RateUs from "@/components/btn/rateUs";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { ShopData } from "@/database/shopData";
 
 interface RaterValue {
 	name:string;
@@ -26,28 +27,23 @@ const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 import { useState, useEffect, useCallback } from "react";
 
 const HeroDetail: React.FC<any> = ({
-	user,
-	imgM,
 	img,
 	shopNameM,
 	shopName,
-	addressM,
 	address,
-	shopMgM,
 	shopMg,
-	contactM,
 	contact,
-	actNumM,
 	actNum,
-	bnkNameM,
 	bnkName,
-	actNameM,
 	actName,
-	shopMarketM,
 	shopMarket,
-	idM,
 	id,
 }) => {
+
+	const Shop = ShopData.find(
+		(shop) => shop.shopName === `${shopNameM}`
+	);
+
 
 	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
 
@@ -96,13 +92,13 @@ const HeroDetail: React.FC<any> = ({
 							quality={100}
 							width={100}
 							height={100}
-							src={`${img !== undefined ? img:imgM}` }
+							src={`${img !== undefined ? img:Shop?.shopPic}` }
 							priority={true}
 							unoptimized
 						/>
 					</div>
 					<div>
-					<RateUs rateeId={`${id?id:idM}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+					<RateUs rateeId={`${id?id:Shop?.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>
 					</div>
 
@@ -112,18 +108,18 @@ const HeroDetail: React.FC<any> = ({
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Shop Name</div>
 								<div className={styles.detail}>
-									{shopName ? shopName : shopNameM}
+									{shopName ? shopName : Shop?.shopName}
 								</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Shop Market Complex</div>
 								<div className={styles.detail}>
-									{shopMarket ? shopMarket : shopMarketM}
+									{shopMarket ? shopMarket : Shop?.market}
 								</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}> Shop Address</div>
-								<div className={styles.detail}>{address ? address : addressM}</div>
+								<div className={styles.detail}>{address ? address : Shop?.address}</div>
 							</div>
 						</div>
 
@@ -131,11 +127,11 @@ const HeroDetail: React.FC<any> = ({
 							<div className={styles.titleTop}>Manager Info</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Shop Manager</div>
-								<div className={styles.detail}>{shopMg ? shopMg : shopMgM}</div>
+								<div className={styles.detail}>{shopMg ? shopMg : Shop?.name}</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Contact</div>
-								<div className={styles.detail}>{contact ? contact : contactM}</div>
+								<div className={styles.detail}>{contact ? contact : Shop?.phone}</div>
 							</div>
 						</div>
 
@@ -143,15 +139,15 @@ const HeroDetail: React.FC<any> = ({
 							<div className={styles.titleTop}>Payment Detail</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Account Number</div>
-								<div className={styles.detail}>{actNum ? actNum : actNumM}</div>
+								<div className={styles.detail}>{actNum ? actNum : Shop?.account}</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Bank Name</div>
-								<div className={styles.detail}>{bnkName ? bnkName : bnkNameM}</div>
+								<div className={styles.detail}>{bnkName ? bnkName : Shop?.bankName}</div>
 							</div>
 							<div className={styles.detailCover}>
 								<div className={styles.detailTitle}>Account Name</div>
-								<div className={styles.detail}>{actName ? actName : actNameM}</div>
+								<div className={styles.detail}>{actName ? actName : Shop?.accountName}</div>
 							</div>
 						</div>
 					</div>

@@ -1,32 +1,22 @@
 import * as React from "react";
-import { useState, useEffect, useCallback, useTransition } from "react";
+import { useState, useEffect} from "react";
 import { useForm } from "react-hook-form";
-import Image from "next/image";
 import { StateData } from "@/database/stateData";
-import { MarketTag } from "@/database/marketTag";
 import { MarketShopTag } from "@/database/marketShopTag";
 import { MarketComplex } from "@/database/marketComplexTag";
 import { ShopData } from "@/database/shopData";
-import ShopItemsComponent from "./fBIShopItem";
 import Pagination from "@/components/btn/paginationBtn";
-import RateUs from "@/components/btn/rateUs";
-import { useRouter, useSearchParams } from "next/navigation";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
+import Shop from "./shopComponent";
 
 import {
 	collection,
-	collectionGroup,
-	doc,
-	setDoc,
-	addDoc,
 	getDocs,
 	query,
 	where,
-	or,
-	and,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
-const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+const { auth, database} =
 	firebase;
 import styles from "./styles.module.css";
 
@@ -74,18 +64,8 @@ export default function ShopsFilter() {
 		register,
 		handleSubmit,
 		watch,
-		reset,
-		unregister,
-		setFocus,
-		setValue,
-		control,
 		formState: {
-			isSubmitSuccessful,
-			errors,
-			isSubmitted,
-			isSubmitting,
-			isDirty,
-			isValid,
+		
 		},
 	} = useForm<FormValue>({
 		defaultValues: {
@@ -104,28 +84,13 @@ export default function ShopsFilter() {
 		mode: "onChange",
 	});
 
-	const searchParams = useSearchParams();
-
-	const router = useRouter();
-
-	const set = useCallback(
-		(name: string, value: string) => {
-			const params = new URLSearchParams(searchParams.toString());
-			params.set(name, value);
-
-			return params.toString();
-		},
-		[searchParams]
-	);
 	const [searchInput, setSearchInput] = useState("");
 
 	const [searchAddress, setSearchAddress] = useState("");
 
 	const [shopSearchInput, setShopSearchInput] = useState("");
 
-	const [more, setMore] = useState("");
-
-	const [show, setShow] = useState("");
+	const [shopProfileDetails, setShopProfileDetails] = useState<FormValue[]>([]);
 
 	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
 
@@ -137,11 +102,7 @@ export default function ShopsFilter() {
 
 	const selectComplex = watch("complex");
 
-	const tag = watch("tag");
-
 	const shopTag = watch("shopTag");
-
-	const status = watch("status");
 
 	onAuthStateChanged(auth, (user) => {
 		if (user) {
@@ -238,17 +199,7 @@ export default function ShopsFilter() {
 		));
 	}
 
-	function renderAvailableTag() {
-		if (!MarketTag) {
-			// Return a message or component indicating that the "Maintenance" category is not found
-			return null;
-		}
-		return MarketTag.map((tag) => (
-			<option className={styles.renderCover} key={tag.id} value={tag.tag}>
-				{tag.tag}
-			</option>
-		));
-	}
+
 
 
 	function renderAvailablShopTag() {
@@ -260,80 +211,6 @@ export default function ShopsFilter() {
 			<option className={styles.renderCover} key={tag.id} value={tag.tag}>
 				{tag.tag}
 			</option>
-		));
-	}
-
-	function shopItems(shopName: string) {
-		const items = ShopData.find((shop) => shop.name === `${shopName}`);
-
-		if (!items) return null;
-
-
-	const filteredShopItemsName =  items?.items.filter((eachItem) => {
-		const text = eachItem.title.toLowerCase();
-		return text.includes(shopSearchInput.toLowerCase());
-	});
-
-		return filteredShopItemsName?.map((item) => (
-			<div className={styles.renderCover} key={item.id}>
-				<div className={styles.shopItemsCover}>
-					<div className={styles.shopsItemsImgCover}>
-						<Image
-							className={styles.shopItemImg}
-							src={`${item.image}`}
-							alt={`${item.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-					<div className={styles.shopItemsDetailCover}>
-						<div className={styles.shopItemsDetailTitleName}>{item.title}</div>
-						<div className={styles.shopItemsBody}>{item.price}</div>
-					</div>
-				</div>
-				{show === `${item.id}` && (
-					<div className={styles.showMoreDetails}>
-						<div className={styles.shopsItemsImgCover}>
-						<Image
-							className={styles.shopItemImg}
-							src={`${item.image2}`}
-							alt={`${item.title}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-						<div className={styles.showMoreDetailCover}>
-							<div className={styles.showMoreItemsDetailsBody}>
-							<span className={styles.shopItemsDetailTitle}>Condition</span>
-							<span className={styles.shopItemsBody}>{item.condition}</span>
-						</div>
-						<div  className={styles.showMoreItemsDetailsBody}>
-							<span className={styles.shopItemsDetailTitle}>Status</span>
-							<span className={styles.shopItemsBody}>{item.status}</span>
-						</div>
-						<div  className={styles.showMoreItemsDetailsBody}>
-							<span className={styles.shopItemsDetailTitle}>feature</span>
-							<span className={styles.shopItemsBody}>{item.features}</span>
-						</div>
-					</div>
-						
-					</div>
-				)}
-				<div
-					className={show !== `${item.id}` ? styles.qShopbtn : styles.qShopbtn}
-					onClick={
-						show !== `${item.id}`
-							? () => setShow(`${item.id}`)
-							: () => setShow("")
-					}
-				>
-					{show === `${item.id}` ? "Less" : "Details"}
-				</div>
-			</div>
 		));
 	}
 
@@ -394,6 +271,8 @@ export default function ShopsFilter() {
 				// Change page
 	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
+	const check = shopProfileDetails.length;
+
 
 	function RenderAvailableModelShops() {
 		if (filteredShopList.length === 0) {
@@ -406,176 +285,8 @@ export default function ShopsFilter() {
 		}
 
 		return currentPosts?.map((shop) => (
-			<div className={styles.shopRenderCover} key={shop.id}>
-				<div className={styles.shopName}>{shop.shopName} </div>
-				<div className={styles.shopNavBtnCover}>
-				<div
-					className={more !== `${shop.id}` ? styles.btnShop : styles.btnShopA}
-					onClick={
-						more !== `${shop.id}`
-							? () => setMore(`${shop.id}`)
-							: () => setMore("")
-					}
-				>
-					{more === `${shop.id}` ? "STOCKS" : "stocks"}
-				</div>
-				<div
-					className={more !== `${shop.shopName}` ? styles.btnShop : styles.btnShopA}
-					onClick={
-						more !== `${shop.shopName}`
-							? () => setMore(`${shop.shopName}`)
-							: () => setMore("")
-					}
-				>
-					{more === `${shop.shopName}` ? "DETAILS" : "details"}
-				</div>
-				</div>
-	
-				<div className={more !== `${shop.id}`?styles.companyBodyDivied : styles.hide}>
-					<div className={styles.shopImgCover}>
-						<Image
-							className={styles.shopImg}
-							src={`${shop.shopPic}`}
-							alt={`${shop.shopName}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-					<div>
-						<RateUs rateeId={`${shop.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
-					</div>
-					<div className={styles.showCompanyVacanciesTag}>
-							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
-							<div className={styles.companyVacancyDetail}>{shop.shopTag}</div>
-						</div>
-					
-				</div>
-				
-				
-				{more === `${shop.id}` ? <div className={styles.displayShopItemsFilter}>
-				<div className={styles.searchShopImgCover}>
-						<Image
-							className={styles.searchShopImg}
-							src={`${shop.shopPic}`}
-							alt={`${shop.shopName}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div><form>
-					<div className={styles.shopItemInputCover}>
-						<input
-							type="search"
-							className={styles.shopItemInput}
-							{...register("title")}
-							value={shopSearchInput}
-							onChange={updateShopItemSearchInput}
-							id="vendorAddress"
-							placeholder="Name of Item"
-						/>
-					</div>
-					</form>
-				</div> : <></>}
-
-				{more === `${shop.id}` ? <div className={styles.displayShopItems}>{shopItems(shop.name)}</div> : <></>}
-
-				{more === `${shop.shopName}` ?<div className={styles.displayShopItems}>
-
-				<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Market</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.market} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.address} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Owner</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.name} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.phone} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.email} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Offer</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.offers} </span>
-						</div>
-
-						
-				</div>:<></>}
-				<div 
-				onClick={() =>
-					router.push(
-						`/shop/` +
-							"?" +
-							set(
-								"shopName",
-								`${shop.shopName}`
-							) +
-							"&" +
-							set(
-								"shopImg",
-								`${shop.shopPic}`
-							)
-							+
-							"&" +
-							set(
-								"shopAddress",
-								`${shop.address}`
-							)
-							+
-							"&" +
-							set(
-								"shopManager",
-								`${shop.name}`
-							)
-							+
-							"&" +
-							set(
-								"act",
-								`${shop.account}`
-							)
-							+
-							"&" +
-							set(
-								"bnkName",
-								`${shop.bankName}`
-							)
-							+
-							"&" +
-							set(
-								"actName",
-								`${shop.accountName}`
-							)
-							+
-							"&" +
-							set(
-								"contact",
-								`${shop.phone}`
-							)
-							+
-							"&" +
-							set(
-								"complex",
-								`${shop.market}`
-							)
-					)
-				}
-				className={styles.enterShop}>Enter Shop</div>
-			
+			<div  key={shop.id}>
+				<Shop shopName={shop.shopName} id={shop.id} shopPic={shop.shopPic}  docid={raterDetail?.docid} name={raterDetail?.name} src={raterDetail?.src} shopTag={shop.shopTag} market={shop.market} address={shop.address}  phone={shop. phone} email={shop.email} offers={shop.offers} check={check} value={shopSearchInput} namei={shop.name}/>
 			</div>
 		));
 	}
@@ -601,7 +312,7 @@ export default function ShopsFilter() {
 		setIsClient(true);
 	}, []);
 
-	const [shopProfileDetails, setShopProfileDetails] = useState<FormValue[]>([]);
+
 
 	const shopDetailRef = collection(database, `Shop`);
 
@@ -706,124 +417,12 @@ export default function ShopsFilter() {
 		}
 
 		return currentFireBasePosts?.map((shop: any) => (
-			<div className={styles.shopRenderCover} key={shop.shopId}>
-			<div className={styles.shopName}>{shop.shopName} </div>
-			<div className={styles.shopNavBtnCover}>
-			<div
-				className={more !== `${shop.shopId}` ? styles.btnShop : styles.btnShopA}
-				onClick={
-					more !== `${shop.shopId}`
-						? () => setMore(`${shop.shopId}`)
-						: () => setMore("")
-				}
-			>
-				{more === `${shop.shopId}` ? "STOCKS" : "stocks"}
-			</div>
-			<div
-				className={more !== `${shop.shopId}` ? styles.btnShop : styles.btnShopA}
-				onClick={
-					more !== `${shop.shopId}`
-						? () => setMore(`${shop.shopId}`)
-						: () => setMore("")
-				}
-			>
-				{more === `${shop.shopId}` ? "DETAILS" : "details"}
-			</div>
-			</div>
-
-			<div className={more !== `${shop.shopId}`?styles.companyBodyDivied  : styles.hide}>
-			<div className={styles.shopImgCover}>
-						<Image
-							className={styles.shopImg}
-							src={`${shop.shopPic}`}
-							alt={`${shop.shopName}`}
-							quality={100}
-							width={500}
-							height={500}
-							// unoptimized
-						/>
-					</div>
-					<div>
-					<RateUs rateeId={`${shop.shopId}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
-					</div>
-					<div className={styles.showCompanyVacanciesTag}>
-							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
-							<div className={styles.companyVacancyDetail}>{shop.shopTag}</div>
-					</div>
-			</div>
-			
-			
-			{more === `${shop.shopId}` ? <div className={styles.displayShopItemsFilter}>
-			<div className={styles.searchShopImgCover}>
-					<Image
-						className={styles.searchShopImg}
-						src={`${shop.shopPic}`}
-						alt={`${shop.shopName}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-				</div><form>
-					<div className={styles.shopItemInputCover}>
-						<input
-							type="search"
-							className={styles.shopItemInput}
-							{...register("title")}
-							value={shopSearchInput}
-							onChange={updateShopItemSearchInput}
-							id="vendorAddress"
-							placeholder="Name of Item"
-						/>
-					</div>
-					</form>
-			</div> : <></>}
-
-			{more === `${shop.shopId}` ? <div className={styles.displayShopItems}><ShopItemsComponent shopId={shop.shopId} value={shopSearchInput} tag={tag} /></div> : <></>} 
-
-			{more === `${shop.shopName}` ? <div className={styles.displayShopItems}>
-			<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Market</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.market} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Address</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.address} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Owner</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.name} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Contact</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.phone} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.email} </span>
-						</div>
-
-						<div className={styles.showCompanyVacanciesAbtUs}>
-							<span className={styles.companyVacancyTitleAbtUS}>Offer</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{shop.offers} </span>
-						</div>
-
-			</div>:<></>}
-			<div 	onClick={() =>
-					router.push(
-						`/shop/` +
-							"?" +
-							set(
-								"shopId",
-								`${shop.shopId}`
-							) )} className={styles.enterShop}>Enter Shop</div>
+			<div  key={shop.shopId}>
+			<Shop shopName={shop.shopName} id={shop.shopId} shopPic={shop.shopPic}  docid={raterDetail?.docid} name={raterDetail?.name} src={raterDetail?.src} shopTag={shop.shopTag} market={shop.market} address={shop.address}  phone={shop. phone} email={shop.email} offers={shop.offers} check={check} value={shopSearchInput} namei={shop.name}/>
 		</div>
 		));
 	}
+	
 
 	return (
 		<div className={styles.filterBodyCover}>
