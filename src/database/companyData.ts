@@ -11,7 +11,6 @@ export const CompanyData = [
     "image" :"/service/7.jpg",
     "companyPic":"/service/techlogo2.jpg",
     "companyName":"Royal Tech",
-    "companyId":"docId" ,
     "companyTag": "Technology",
     "about":"we at Royal Tech is are dedicated to bringing about smart web and mobile applications as a tool to bring the dreams of enterprenuears into reality ",
     "vacancies": [
@@ -209,7 +208,6 @@ export const CompanyData = [
     "image" :"/service/8.jpg",
     "companyPic":"/service/seclogo2.jpg",
     "companyName":"Security Capital",
-    "companyId":"docId" ,
     "companyTag": "Security and Protection", 
     "about":"Security Capital is your one stop protection service for both dosmesticand industrial settings, we provide seurity for vip and vvip person of interest and we are the leading security company in nigeria AAA-Rated",
     "vacancies": [
@@ -407,7 +405,6 @@ export const CompanyData = [
     "image" :"/service/6.jpg",
     "companyPic":"/service/cliniclogo.jpg",
     "companyName":"Medi Care Helper",
-    "companyId":"docId" ,
     "companyTag": "Healthcare",
     "about":"Health first is the services you get from us at Medi Care Helpers, with our 24/7 dedicated health practioners, we are ready for both home and outdoors emergency with our state of the art mobile medical kits, calls on us and we respond",
     "vacancies": [
@@ -605,7 +602,6 @@ export const CompanyData = [
     "image" :"/service/5.jpg",
     "companyPic":"/service/retaillogo.jpg",
     "companyName":"Mercellus Trading Company",
-    "companyId":"docId" ,
     "companyTag": "Retail and Whole sales",
     "about":"Mercellus Trading Company bring to our customers in the southern part of the world all the eastern and western goods of high quality, wether you need goods from russia, china or the middle east Mercellus Trading Company bringit to your doors step with ease",
     "vacancies": [
@@ -803,7 +799,6 @@ export const CompanyData = [
     "image" :"/service/3.jpg",
     "companyPic":"/service/manufactor1.jpg",
     "companyName":"Point Manufactoring",   
-    "companyId":"docId" ,
     "companyTag": "Manufacturing",
     "about":"Point Manufactoring company is the leading manufactures of home and offices furnitures and electronic devices, breaching the gap for a complete way of life",
     "vacancies": [
@@ -1019,7 +1014,6 @@ export const CompanyData = [
     "image" :"/service/2.jpg",
     "companyPic":"/service/construct2.jpg",
     "companyName":"Craft Construction",  
-    "companyId":"docId" ,
     "companyTag": "Construction",
     "about":"we at Craft Construction are dedicated to be african number one construction company building smart and realiable afforable homes for millions of african, think home think Craft Construction",
     "vacancies": [
@@ -1217,7 +1211,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/edlogo2.jpg",
     "companyName":"Riazul Jannah Islami Academy",
-    "companyId":"docId" ,
     "companyTag": "Education",
     "about":"Riazul Jannah Islami Academy is your islamic pride it self as one of the leading global institute for learning science fronm as islamic perspective",
     "vacancies": [
@@ -1415,7 +1408,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/fashlogo1.jpg",
     "companyName":"Queen Hijab",
-    "companyId":"docId" ,
     "companyTag": "Fashion",
     "about":"we at Queen Hijab brings the mordern art of fashion in fusion with the islamic stardardof modesty, fashion for the twenty-first lady",
     "vacancies": [
@@ -1609,11 +1601,10 @@ export const CompanyData = [
     "address":"company 3 block 1 phase 3",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "name":"Solomon",
+    "name":"Sule",
     "image" :"/service/1.jpg",
     "companyPic":"/service/media.jpg",
     "companyName":"Media Entertainment",
-    "companyId":"docId" ,
     "companyTag": "Media",
     "about":"Media Entertainment is the parent company of both sunset News channel and papers, Media Entertainment brings reliable information to you with ease",
     "vacancies": [
@@ -1797,11 +1788,10 @@ export const CompanyData = [
     "address":"company 3 block 1 phase 3",
     "email":"softcraftmantech@gmail.com",
     "phone":"07011111111, whatsapp only",
-    "name":"Solomon",
+    "name":"Isaac",
     "image" :"/service/1.jpg",
     "companyPic":"/service/autologo.jpg",
     "companyName":"Divine Automotive",
-    "companyId":"docId" ,
     "companyTag": "Automotive",
     "about":"Divine Automotive is your one stop automotive dealearship and rental service, with a range of simple, executive and exotics cars and bikes Divine Automotive is the leading car and bike dealership in west africa",
     "vacancies": [
@@ -1999,7 +1989,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/lawlogo.jpg",
     "companyName":"Gonzalez law Firm",
-    "companyId":"docId" ,
     "companyTag": "Consulting",
     "about":"Gonzalez law Firm and attornies are specialized in both civil laws and criminal laws with a track record for defending both the high elite from misinterpretation of governmental laws and the defending of the comman man with a ginue cases Gonzalez law Firm is unique for it services covering all acroos the nations populace",
     "vacancies": [
@@ -2197,7 +2186,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/logistic1.jpg",
     "companyName":"Reloaded Dispatching",
-    "companyId":"docId" ,
     "companyTag": "Transportation and Logistics",
     "about":"Reloaded Dispatching is africa leading logistic company, with terminal all over africa cities, we move both heavy and light goods to every corner of the greater africa cities, you call we move",
     "vacancies": [
@@ -2395,7 +2383,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/finlogo1.jpg",
     "companyName":"Capital Consulting and Asset Management",
-    "companyId":"docId" ,
     "companyTag": "finance and Consulting",
     "about":"Capital Consulting and Asset Management is the leading finance and consulting company for both big and average companies and individuals, providing the top notchinsight into the proper investment opportunities within the african market",
     "vacancies": [
@@ -2587,7 +2574,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/consult1.jpg",
     "companyName":"Asurent",
-    "companyId":"docId" ,
     "companyTag": "Consulting",
     "about":"Asurent property management company is the most advaced property management company in west africa and is aiming to be the best in africa, leavaraging modern technnology in property management Asurent keeps clients at the forefronts of the properties landscape",
     "vacancies": [
@@ -2779,7 +2765,6 @@ export const CompanyData = [
     "image" :"/service/8.jpg",
     "companyPic":"/service/seclogo1.jpg",
     "companyName":"FrontLine Security",
-    "companyId":"docId" ,
     "companyTag": "Security and Protection", 
     "about":"FrontLine Security is your vip and vvip protectionservices with the biggest security facilities accross africa FrontLine Security produce the very best personlas in the protection business, FrontLine Security also trains other security outfit within our state of the art faciliies so wether you are looking to train your personal security of hire a personal security FrontLine Security is your number one option",
     "vacancies": [
@@ -2977,7 +2962,6 @@ export const CompanyData = [
     "image" :"/service/2.jpg",
     "companyPic":"/service/construct1.jpg",
     "companyName":"Builder Brothers Construction",  
-    "companyId":"docId" ,
     "companyTag": "Construction",
     "about":"Builder Brothers Construction is africa leading construction company with a long history of developing afforable smart homes for african",
     "vacancies": [
@@ -3175,7 +3159,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/edlogo1.jpg",
     "companyName":"EduCenter Academy",
-    "companyId":"docId" ,
     "companyTag": "Education",
     "about":"EduCenter Academy is african first online academy with africa firstaducation cureculom tha aims at industrializing african youths into global technological leaders ",
     "vacancies": [
@@ -3367,7 +3350,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/fashlogo.jpg",
     "companyName":"Hijab Beauty and Fashion",
-    "companyId":"docId" ,
     "companyTag": "Fashion",
     "about":"Hijab Beauty and Fashion is where beauty meets modesty, fashion trends from hijabs, abayahs, shoes and bags, Hijab Beauty and Fashion got you covered",
     "vacancies": [
@@ -3565,7 +3547,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/finlogo2.jpg",
     "companyName":"Investex",
-    "companyId":"docId" ,
     "companyTag": "finance and Consulting",
     "about":"we at Investex are the number banking and fx trader in west africa and are working the be the leading banking and fx traders in africa, choose victory choose Investex",
     "vacancies": [
@@ -3757,7 +3738,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/eatrylogo1.jpg",
     "companyName":"Meal Munchies",
-    "companyId":"docId" ,
     "companyTag": "Eatries and Tourism",
     "about":"looking for worldclass arican dishes then look no further than Meal Munchies, we are dedicted to providing the dishes for all kind of event",
     "vacancies": [
@@ -3949,7 +3929,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/eatrylogo.jpg",
     "companyName":"VeneMex Gourment",
-    "companyId":"docId" ,
     "companyTag": "Eatries and Tourism",
     "about":"VeneMex Gourment is one of south african leading eatry that aims at taking over the food busines, adoptable to your wishes, you dream of a dish we make it VeneMex Gourment is yourcall",
     "vacancies": [
@@ -4141,7 +4120,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/otherlogo.jpg",
     "companyName":"Recycle Plex",
-    "companyId":"docId" ,
     "companyTag": "others",
     "about":"Recycle Plex is the leading pioner recycling company by africans for africans we are dedicated in turning africans trash to cash for a sustainable developed african communities, Recycle Plex is the sustainable name of afric recycling business ",
     "vacancies": [
@@ -4333,7 +4311,6 @@ export const CompanyData = [
     "image" :"/service/1.jpg",
     "companyPic":"/service/turism2.jpg",
     "companyName":"Lamar Tours",
-    "companyId":"docId" ,
     "companyTag": "Eatries and Tourism",
     "about":"Lamar Tours is africa leading tourism business with effective flight, cruise ships and  buss  booking systems lamar tours hve the highest amount of agencies registeded as third party agent to provide an all inclusive african vacation and travel experience to travellers and tourist",
     "vacancies": [

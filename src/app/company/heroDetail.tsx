@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { CompanyData } from "@/database/companyData";
 import {
 	collection,
 	collectionGroup,
@@ -26,24 +27,21 @@ const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
 import { useState, useEffect, useCallback } from "react";
 
 const HeroDetail: React.FC<any> = ({
-	imgM,
 	img,
 	companyNameM,
 	companyName,
-	addressM,
 	address,
-	companyTagM,
 	companyTag,
-	contactM,
 	contact,
-	emailM,
 	email,
-	aboutM,
 	about,
-	idM,
 	id,
 }) => {
 	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
+
+	const Company = CompanyData.find(
+		(company) => company.companyName === `${companyNameM}`
+	);
 
 	onAuthStateChanged(auth, (user) => {
 		if (user) {
@@ -85,33 +83,33 @@ const HeroDetail: React.FC<any> = ({
 					}`}</div>
 					<Image
 						className={styles.idiImg}
-						src={`${img !== undefined ? img : imgM}`}
-						alt={`${companyName ? companyName : companyNameM}`}
+						src={`${img !== undefined ? img : Company?.companyPic}`}
+						alt={`${companyName ? companyName : Company?.companyName}`}
 						quality={100}
 						width={500}
 						height={500}
 						// unoptimized
 					/>
 					<div>
-					<RateUs rateeId={`${id?id:idM}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+					<RateUs rateeId={`${id?id:Company?.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>
 				</div>
 
 				<div className={styles.detailBody}>
 					<div className={styles.shopDetail}>
 						<div className={styles.titleTop}>
-							{`${companyName !== undefined ? companyName : companyNameM}`} {" Service Details"}
+							{`${companyName !== undefined ? companyName : Company?.companyName}`} {" Service Details"}
 						</div>
 						<div className={styles.detailCover}>
 							<div className={styles.detailTitle}>Company Tag</div>
 							<div className={styles.detail}>
-								{`${companyTag !== undefined ? companyTag : companyTagM}`}
+								{`${companyTag !== undefined ? companyTag : Company?.companyTag}`}
 							</div>
 						</div>
 						<div className={styles.detailCover}>
 							<div className={styles.detailTitle}>{"About Us"}</div>
 							<div className={styles.detail}>
-								{`${about ? about : aboutM}`}
+								{`${about ? about : Company?.about}`}
 							</div>
 						</div>
 					</div>
@@ -121,19 +119,19 @@ const HeroDetail: React.FC<any> = ({
 						<div className={styles.detailCover}>
 							<div className={styles.detailTitle}>Office Line</div>
 							<div className={styles.detail}>{`${
-								contact ? contact : contactM
+								contact ? contact : Company?.phone
 							}`}</div>
 						</div>
 						<div className={styles.detailCover}>
 							<div className={styles.detailTitle}>Email Address</div>
 							<div className={styles.detail}>{`${
-								email ? email : emailM
+								email ? email : Company?.email
 							}`}</div>
 						</div>
 						<div className={styles.detailCover}>
 							<div className={styles.detailTitle}>Address</div>
 							<div className={styles.detail}>{`${
-								address ? address : addressM
+								address ? address : Company?.address
 							}`}</div>
 						</div>
 					</div>

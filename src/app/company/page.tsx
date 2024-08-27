@@ -77,18 +77,6 @@ export default function WorkSpace() {
 
 	const companyName = searchParams.get("companyName");
 
-	const companyPic = searchParams.get("companyPic");
-
-	const companyTag = searchParams.get("companyTag");
-
-	const about = searchParams.get("about");
-
-	const email = searchParams.get("email");
-
-	const address = searchParams.get("companyAddress");
-
-	const contact = searchParams.get("contact");
-
 	const vendorId = searchParams.get("vendorId");
 
 	const companyId = searchParams.get("companyId");
@@ -128,7 +116,7 @@ export default function WorkSpace() {
 				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
-					<HeroDetail imgM={companyPic} img={profileDetails?.img} companyNameM={companyName} companyName={profileDetails?.companyName} addressM={address} address={profileDetails?.address} companyTagM={companyTag} companyTag={profileDetails?.companyTag} contactM={contact} contact={profileDetails?.contact} emailM={email} email={profileDetails?.email} aboutM={about} 	about={profileDetails?.about} idM={`${companyName}`} id={`${companyId}`} />
+					<HeroDetail img={profileDetails?.img} companyNameM={companyName} companyName={profileDetails?.companyName}  address={profileDetails?.address} companyTag={profileDetails?.companyTag}  contact={profileDetails?.contact} email={profileDetails?.email} 	about={profileDetails?.about} id={`${companyId}`} />
 					</div>
 					<div className={styles.shopStockCover}>
 						<div className={styles.coverSelectBtn}>

@@ -162,7 +162,7 @@ const FireBaseVacancy: React.FC<companyId> = ({ companyId , vendorId }) => {
 			// Return a message or component indicating that the "Maintenance" category is not found
 			return (
 				<div>
-					<div>No item found</div>
+					<div>fNo item found</div>
 				</div>
 			);
 		}

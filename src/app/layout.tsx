@@ -25,9 +25,10 @@ export const viewport: Viewport = {
 export default function Layout(props: {
   children: React.ReactNode;
 }) {
+
   return (
     <html>
-      <body>
+     <body>
           <div className={styles.children}>
           <Suspense fallback={<Loading/>}>
             {props.children}

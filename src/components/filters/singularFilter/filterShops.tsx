@@ -8,7 +8,6 @@ import { ShopData } from "@/database/shopData";
 import Pagination from "@/components/btn/paginationBtn";
 import { onAuthStateChanged } from "firebase/auth";
 import Shop from "./shopComponent";
-
 import {
 	collection,
 	getDocs,
