@@ -23,6 +23,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
 import Chat from "@/components/chat/chatComponent";
+import ChatNav from "@/components/chat/chatNav";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
@@ -47,7 +48,7 @@ type FormValue = {
 
 
 
-export default function Market() {
+export default function Community() {
 
 	const searchParams = useSearchParams();
 	
@@ -55,6 +56,12 @@ const router = useRouter();
 
 	const [profileDetails, setProfileDetails] = useState<FormValue | null>(null);
 	
+	const [roomName, setRoomName] = useState("Public");
+
+	const [roomLocation, setRoomLocation] = useState(`${profileDetails?.stateSelect}`);
+
+	const [roomState, setRoomState] = useState(`${profileDetails?.stateSelect}`);
+
 	useEffect(() => {
 		const unsubscribe = 	onAuthStateChanged(auth, (user) => {
 
@@ -99,18 +106,16 @@ const router = useRouter();
 		auth.currentUser?.reload();
 	}, []);
 
-
-
-
-
-
-
-
-
-
 	return (
 		<Suspense fallback={<Loading/>}>
-	
+			<div className={styles.chatContainer}>
+				<div className={styles.chatNav}>
+
+				</div>
+				<div className={styles.chat}>
+				  <Chat stateName={roomState} roomName={roomName} roomLocation={roomLocation} senderId={`${profileDetails?.docid}`} senderName={`${profileDetails?.name}`} senderPic={`${profileDetails?.src}`} user={`${profileDetails?.docid}`} />
+				</div>
+			</div>
 		</Suspense>
 	);
 }

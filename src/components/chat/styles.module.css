@@ -5,3 +5,207 @@
   align-items: center;
   justify-content: center;
 }
+
+.chatMsgContainer{
+  width: calc(98vw - 310px);
+  min-height: 97.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chatMsg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(98vw - 310px);
+  height: calc(97.5vh - 50px);
+  border: 1px solid silver;
+}
+
+.roomDisplayDetails{
+  height: 40px;
+  width: calc(98vw - 310px);
+  border-bottom: 1px solid silver;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.topDetail{
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgHolder{
+  background-color: transparent;
+}
+
+.svgDetail{
+  background-color:  rgb(249, 249, 249);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.massages{
+  height: calc(97.5vh - 90px);
+  width: calc(98vw - 310px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 20px;
+}
+.chatCover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(98vw - 310px);
+  min-height: 50px;
+  background-color: white;
+}
+
+.inputCover{
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  background-color: white;
+  min-height: 50px;
+  width: calc(98vw - 310px);
+}
+
+.chatInput{
+  position: relative;
+  overflow: hidden;
+  width: 295px;
+  height: 45px;
+  box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
+  border-radius: 5px;
+  padding-left: -3px;
+  z-index: 3;
+  width: calc(98vw - 395px);
+}
+.input{
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border: none;
+  width: 300px;
+  height: 49px;
+  font-weight: 400;
+  padding-left: 15px;
+  transform: translateY(-2px);
+  width: calc(98vw - 390px);
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.inputImageCover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputImg{
+  display: none;
+}
+.chatBtn{
+  border: none;
+  background-color: transparent;
+}
+
+.sent{
+  display: flex;
+  flex-direction: row-reverse;
+  width: calc(98vw - 310px);
+  height: fit-content;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+.received{
+  display: flex;
+  width: calc(98vw - 310px);
+  height: fit-content;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+.chtImg{
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.senderPic{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.chatBodyCover{
+  min-width: fit-content;
+  max-width: calc(98vw - 375px);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius:  0px 10px 10px 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nameDisplay{
+  min-width: fit-content;
+  max-width: calc(98vw - 375px);
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  height: fit-content;
+  text-align: left;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+  background-color: rgb(216, 216, 216);
+}
+
+.chatBody{
+  min-width: fit-content;
+  max-width: calc(98vw - 375px);
+  height: fit-content;
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chat{
+  min-width: fit-content;
+  max-width: calc(98vw - 375px);
+  height: fit-content;
+  background-color: rgb(249, 249, 249);
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.chatFooter{
+  min-width: fit-content;
+  max-width: calc(98vw - 375px);
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+}

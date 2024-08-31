@@ -187,7 +187,7 @@
 .shopItemInputCover{
   border: 1px solid silver;
   border-radius: 5px;
-  width: 120px;
+  width: 110px;
   overflow: hidden;
   margin-bottom: 5px;
   background-color: white;
@@ -208,7 +208,7 @@
 }
 
 .shopItemInput{
-  width: 120px;
+  width: 110px;
   height: 25px;
   padding-left: 5px;
   border: none;
@@ -248,7 +248,7 @@
   justify-content: flex-start;
   width: 230px;
   height:max-content;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  /* box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver; */
   border: 1px solid silver;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   padding-bottom: 5px;
@@ -261,25 +261,25 @@
   align-items: center;
   justify-content: flex-start;
   column-gap: 10px;
-  width: 230px;
+  width: 223px;
   height:max-content;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  /* box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver; */
   border: 1px solid silver;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   background-color: rgb(255, 255, 255);
   padding-bottom: 7px;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .stockRenderCover:hover{
-  box-shadow: 0px 0px 1.5px black, 0 0 2px silver, 0 0 3.5px black; 
+  box-shadow: 0px 0px 1.5px black, 0 0 1px silver, 0 0 1.75px black; 
   
 }
 .picSelCover{
  width: 220px;
  height: fit-content;
  position: absolute;
- bottom: 5px;
+ bottom: 1px;
  left: 0;
 }
 .picSel{
@@ -287,9 +287,8 @@
   height: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: 5px;
-  column-gap: 5px;
 }
 
 
@@ -306,78 +305,78 @@
 
 
 .picL{
-   width: 95px;
-  height: 20px;
+   width: 103px;
+  height: 23px;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   cursor: pointer;
-  border-bottom-left-radius: 30px;
-  border-top-left-radius: 30px;
+  border-radius: 5px;
+  /* border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px; */
   background-image: linear-gradient(to left, rgba(155, 154, 154), rgba(111, 111, 111));
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
   color: white;
   border: 1px solid silver;
-  margin-left: 5px;
 }
 
 .picR{
-   width: 95px;
-  height: 20px;
+   width: 103px;
+  height: 23px;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   cursor: pointer;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
+  border-radius: 5px;
+  /* border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px; */
   background-image: linear-gradient(to right, rgba(155, 154, 154), rgba(111, 111, 111));
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
   color: white;
   border: 1px solid silver;
-  margin-right: 5px;
 }
 .picHL{
-  width: 95px;
-  height: 20px;
+  width: 103px;
+  height: 23px;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
-  cursor: pointer;
+  /* cursor: pointer;
   border-bottom-left-radius: 30px;
-  border-top-left-radius: 30px;
+  border-top-left-radius: 30px; */
     background-color: rgb(92,92,92);
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
-  margin-left: 5px;
+  border-radius: 5px;
   border: 1px solid silver;
 }
 
 .picHR{
-  width: 95px;
-  height: 20px;
+  width: 103px;
+  height: 23px;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   cursor: pointer;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
+  /* border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px; */
     background-color: rgb(92,92,92);
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
-  margin-right: 5px;
+  border-radius: 5px;
   border: 1px solid silver;
 }
 
 .shopRenderCover:hover{
-  box-shadow: 0px 0px 1.5px black, 0 0 2px silver, 0 0 3.5px black;
+  box-shadow: 0px 0px 1.5px black, 0 0 1px silver, 0 0 1.75px black;
 }
 .shoptitleBodyDivide{
   display: flex;
@@ -963,9 +962,10 @@
     background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7));
   user-select: none;
   width: 220px;
+  height: 25px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 1.75px silver;
   cursor: pointer;
   user-select: none;
  }
@@ -1216,11 +1216,11 @@
 }
 .displayShopItemsFilter{
   display: flex;
-  width: 230px;
+  width: 223px;
   min-height: fit-content;
   max-height: 300px;
   padding-top: 10px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   overflow: auto;
 }
@@ -1238,7 +1238,7 @@
 }
 .shopItemsCover{
   display: flex;
-  width: 205px;
+  width: 207px;
   height: fit-content;
   justify-content: flex-start;
   align-items: center;
@@ -1377,7 +1377,9 @@
   color: white;
     background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7));
   width: 210px;
+  font-size: 0.8rem;
   font-weight: 400;
+  text-transform: uppercase;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

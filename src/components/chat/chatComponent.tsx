@@ -1,34 +1,28 @@
 "use client";
-import React, { useRef, useState, useEffect, useCallback } from "react";
-import { Suspense } from "react";
-import Loading from "@/app/register/logo";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
+import React, { useRef, useState, useEffect} from "react";
 import ChatImageBtn from "../btn/chatImgBtn";
 import ChatBtn from "../btn/chatBtn";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import PublicSvg from "../btn/publicSvg";
+import RoomSvg from "../btn/roomSvg";
+import StateSvg from "../btn/stateSvg";
+import AreaSvg from "../btn/areaSvg";
+import PrivateSvg from "../btn/privateChatSvg";
+import UserSvg from "../btn/userSvg";
+import ContactSvg from "../btn/contactSvg";
+import Loader from "../load/load";
+import NoticeSvg from "../btn/noticeSvg";
 import {
 	collection,
 	setDoc,
 	doc,
-	getDocs,
 	query,
-	where,
-	CollectionReference,
-	onSnapshot,
 	orderBy,
 	limit,
-	startAt,
-	startAfter,
-	endAt,
-	endBefore,
 	addDoc,
 	serverTimestamp,
 } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
@@ -41,14 +35,14 @@ interface ChatProps {
 	senderId: string;
 	senderName: string;
 	senderPic: string;
-	user: {
-		uid: string;
-	};
+	user: string;
 }
 
 interface FormValue {
 	chat: string;
 }
+
+
 
 const Chat: React.FC<ChatProps> = ({
 	user,
@@ -74,13 +68,14 @@ const Chat: React.FC<ChatProps> = ({
 		mode: "onChange",
 	});
 
-	const chat = watch("chat");
 
 	const { auth, storage, database } = Firebase;
 
 	const [docId, setDocId] = useState("");
 
-	const [nameDisplay, setNameDisplay] = useState(false);
+	const [contactName, setContactNameDisplay] = useState("");
+
+	const [contactContact, setContactContactDisplay] = useState("");
 
 	const [inputValues, setInputValues] = useState("");
 
@@ -88,14 +83,31 @@ const Chat: React.FC<ChatProps> = ({
 
 	const [imageUrl, setImageUrl] = useState("");
 
+	const [timestamp, setTimestamp] = useState(new Date());
+
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setTimestamp(new Date());
+		}, 1000); // Update every second
+
+		return () => clearInterval(intervalId);
+	}, []);
+
+	const date = timestamp;
+
+	const year = date.getFullYear();
+	const month = String(date.getMonth() + 1).padStart(2, "0"); // Zero-pad month
+	const day = String(date.getDate()).padStart(2, "0");
+	const hours = String(date.getHours()).padStart(2, "0");
+	const minutes = String(date.getMinutes()).padStart(2, "0");
+	const seconds = String(date.getSeconds()).padStart(2, "0");
+
+	const clockStamp = `${hours}:${minutes}:${seconds}`;
+
 	const senderQuery = query(
 		chatDetailRef,
-		where("stateName", "==", stateName),
-		where("roomLocation", "==", roomLocation),
-		where("roomName", "==", roomName),
-		where("senderId", "==", senderId),
 		orderBy("createdAt"),
-		limit(10000)
+		limit(1000)
 	);
 
 	const [massages, loading, error] = useCollectionData(senderQuery);
@@ -106,13 +118,20 @@ const Chat: React.FC<ChatProps> = ({
 				chat: `${inputValues}`,
 				createdAt: serverTimestamp(),
 				docid: "",
+				userId: `${senderId}`,
 				senderId: `${senderId}`,
 				roomLocation: `${roomLocation}`,
 				roomName: `${roomName}`,
 				senderName: `${senderName}`,
 				senderPic: `${senderPic}`,
 				stateName: `${stateName}`,
-				chatPic: "",
+				chatImg: "",
+				Yearstamp: `${year}`,
+				monthStamp: `${month}`,
+				dayStamp: `${day}`,
+				minuteStamp: `${minutes}`,
+				timeStamp: `${clockStamp}`,
+				recieverId:"",
 			});
 			const docId = docRef.id;
 			setDocId(docId);
@@ -164,7 +183,7 @@ const Chat: React.FC<ChatProps> = ({
 			await setDoc(
 				doc(profileDetailRef, docId),
 				{
-					src: imageUrl,
+					chatImg: imageUrl,
 				},
 				{ merge: true }
 			);
@@ -184,29 +203,63 @@ const Chat: React.FC<ChatProps> = ({
 		vAssist.current?.scrollIntoView({ behavior: "smooth" });
 	};
 
+	
 	return (
-		<div>
+		<div className={styles.chatMsgContainer}>
 			<div className={styles.chatMsg}>
-				{massages &&
-					massages.map((msg) => (
-						<ChatMessage
-							key={msg.docid}
-							chat={msg.chat}
-							senderId={msg.senderId}
-							senderName={msg.senderName}
-							senderPic={msg.senderPic}
-							createdAt={msg.createdAt}
-							user={user}
-							chatImg={msg.chatImg}
-						/>
-					))}
+				<div className={styles.roomDisplayDetails}>
+					<div className={styles.topDetail}>
+						<div className={styles.svgHolder}>
+							{roomName === "Private"? <PrivateSvg/> : roomName === "Public" ? <PublicSvg /> : <RoomSvg />}
+						</div>
+						<div className={styles.svgDetail}>{roomName}</div>
+					</div>
+					<div className={styles.topDetail}>
+						<div className={styles.svgHolder}>
+							{roomName === "Private"?<UserSvg/>:<StateSvg />}
+							
+						</div>
+						<div className={styles.svgDetail}>{roomName === "Private" ? contactName : stateName}</div>
+					</div>
+					<div className={styles.topDetail}>
+						<div className={styles.svgHolder}>
+							{roomName === "Private"?<ContactSvg/>:<AreaSvg />}
+							
+						</div>
+						<div className={styles.svgDetail}>{roomName === "Private"? contactContact : roomLocation}</div>
+					</div>
+					<div className={styles.topDetail}>
+						<div className={styles.svgHolder}>
+							<NoticeSvg/>
+						</div>
+					</div>
+				</div>
+				<div className={styles.massages}>
+					{loading? <Loader/>:massages &&
+						massages.map((msg) => (
+							<ChatMessage
+								key={msg.docid}
+								chat={msg.chat}
+								senderId={msg.senderId}
+								senderName={msg.senderName}
+								senderPic={msg.senderPic}
+								user={user}
+								chatImg={msg.chatImg}
+								Yearstamp={msg.Yearstamp}
+								monthStamp={msg.monthStamp}
+								dayStamp={msg.dayStamp}
+								minuteStamp={msg.minuteStamp}
+								timeStamp={msg.timeStamp}
+							/>
+						))}
+					
+				</div>
 				<div ref={vAssist}> </div>
 			</div>
 			<div className={styles.chatCover}>
 				<form className={styles.inputCover} onSubmit={handleSubmit(onSubmit)}>
 					<div className={styles.chatInput}>
-						<input
-							type="text"
+						<textarea
 							className={styles.input}
 							{...register("chat", {
 								required: "Required",
@@ -230,14 +283,14 @@ const Chat: React.FC<ChatProps> = ({
 							<ChatImageBtn />
 						</label>
 					</div>
+					<button
+						onSubmit={handleSubmit(onSubmit)}
+						className={styles.chatBtn}
+						type="submit"
+					>
+						<ChatBtn />
+					</button>
 				</form>
-				<button
-					onSubmit={handleSubmit(onSubmit)}
-					className={styles.chatBtn}
-					type="submit"
-				>
-					<ChatBtn/>
-				</button>
 			</div>
 		</div>
 	);

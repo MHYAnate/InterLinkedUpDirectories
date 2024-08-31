@@ -69,6 +69,8 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 	);
   const [more, setMore] = useState("");
 
+	
+
 	return (
 		<div className={styles.shopRenderCover}>
       <div className={styles.shopName}>{props.shopName} </div>

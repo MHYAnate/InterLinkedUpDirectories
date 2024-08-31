@@ -9,8 +9,22 @@ import ShopModelItems from "./modelShopItemQ";
 import CompanyModelVacancy from "./modelCompanyVacancyQ";
 import ShopItemsComponent from "./fBIShopItem";
 import CompanyVacanciesComponent from "./fBICompanyVacancy";
+import { onAuthStateChanged } from "firebase/auth";
+import {
+	collection,
+	getDocs,
+	query,
+	where,
+} from "firebase/firestore";
+import firebase from "@/firebase/firebase";
+const { auth, database} =
+	firebase;
 
-
+interface RaterValue {
+	name:string;
+	docid:string;
+	src:string;
+}
 
 interface CompanyProps {
   companyName:string;
@@ -64,6 +78,40 @@ const CompanyM: React.FC<CompanyProps> = (props:CompanyProps) => {
 	);
   const [more, setMore] = useState("");
 
+	const [raterDetail, setRaterDetail] = useState<RaterValue| null>(null);
+
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+
+			const raterDetailRef = collection(database, `profile`);
+
+			const raterQuery = query(
+				raterDetailRef,
+				where("email", "==", `${user?.email}`)
+			);
+			
+			const handleGetProfileDetail = async () => {
+				try {
+					const querySnapshot = await getDocs(raterQuery);
+
+					if (querySnapshot.empty) {
+						console.log("No profile details found");
+						return;
+					}
+
+					const retrievedData = querySnapshot.docs[0].data() as RaterValue;
+					setRaterDetail(retrievedData);
+				} catch (error) {
+					console.error("Error getting profile detail:", error);
+				}
+			};
+
+			handleGetProfileDetail();
+		} else {
+			
+		}
+	});
+
 	return (
 		<div className={styles.shopRenderCover}>
    			<div className={styles.shopName}>{props.companyName} </div>
@@ -101,6 +149,9 @@ const CompanyM: React.FC<CompanyProps> = (props:CompanyProps) => {
 							height={500}
 							// unoptimized
 						/>
+					</div>
+					<div>
+						<RateUs rateeId={`${props.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
 							<div className={styles.companyVacancyTitleAbtUS}> Company Tag</div>

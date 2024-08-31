@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const ChatBtn: React.FC<any> = () => {
+const ReplySvg: React.FC<any> = () => {
 	return (
 		<div className={styles.chatCoverBtnC}>
 			<svg
@@ -14,12 +14,12 @@ const ChatBtn: React.FC<any> = () => {
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"
-					d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+					d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
 				/>
 			</svg>
 		</div>
 	);
 };
 
-ChatBtn.displayName = "ChatBtn";
-export default ChatBtn;
+ReplySvg.displayName = "ReplySvg";
+export default ReplySvg;

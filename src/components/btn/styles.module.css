@@ -153,6 +153,19 @@
   background-color: none;
 }
 
+.chatCoverBtnC{
+  background-color: none;
+  border: none;
+  color: rgb(84, 84, 84);
+}
+
+.svgSizeC{
+  width: 25px;
+  height: 25px;
+  background-color: none;
+  border: none;
+}
+
  .rateUsContainer{
   width: 210px;
   height: fit-content;
