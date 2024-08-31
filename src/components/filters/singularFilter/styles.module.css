@@ -494,7 +494,6 @@
   color: white;
     background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7));
   width: 210px;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
   margin-top: 7px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -965,7 +964,6 @@
   height: 25px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 1.75px silver;
   cursor: pointer;
   user-select: none;
  }
