@@ -261,7 +261,7 @@
   align-items: center;
   justify-content: flex-start;
   column-gap: 10px;
-  width: 223px;
+  width: 221.5px;
   height:max-content;
   /* box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver; */
   border: 1px solid silver;
@@ -1829,9 +1829,7 @@
 
 @media screen and (max-width: 1080px) {
 
-  .shopRenderCover{
-    min-width: 230px;
-  }
+
   .VendorRenderCover{
     min-width: 230px;
   }
@@ -1842,9 +1840,7 @@
 
 @media screen and (max-width: 925px) {
 
-  .shopRenderCover{
-    width: 120px;
-  }
+ 
 
 
   .shopAddress{
@@ -1856,10 +1852,7 @@
     font-size: 12px;
   }
 
-  .shopRenderCover{
-    min-width: 230px;
-    margin-bottom: 10px;
-  }
+
   .VendorRenderCover{
     min-width: 230px;
   }
