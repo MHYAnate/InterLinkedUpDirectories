@@ -118,6 +118,12 @@
 @media screen and (max-width: 770px) {
   .titleCover{
     width: 98vw;
+    height: 170px;
+    cursor: pointer;
+    border-top: none;
+  }
+  .titleCover{
+    width: 98vw;
     height: 200px;
     cursor: pointer;
   }

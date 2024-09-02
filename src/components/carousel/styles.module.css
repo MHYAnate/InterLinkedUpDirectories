@@ -139,7 +139,7 @@
   top: 0;
   left: 0;
   width: 310px;
-  height: 500px;
+  height: 510px;
   overflow-y: auto;
   z-index: 2;
   background-color:  rgba(254, 253, 253, 0.5);
@@ -147,7 +147,7 @@
 .carouselPagi{
   width: 310px;
   position: absolute;
-  top: 450px;
+  top: 470px;
   left: 0;
   display: flex;
   align-items: center;
@@ -497,6 +497,7 @@
   }  
   .flexRenderCoverControl{
     width: 98vw;
+    row-gap: 7px;
   }
 
   .parent{
@@ -504,7 +505,7 @@
   }
   
   .renderCover{
-    width: 98vw;
+    width: 85vw;
     align-items: center;
     justify-content: flex-start;
     column-gap: 0;
