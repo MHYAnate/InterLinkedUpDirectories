@@ -58,6 +58,10 @@ export default function Hero() {
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.titleCover}>
 					<div className={styles.categoryCover}>
+						<div className={styles.catFlex}>
+							<div className={styles.flexControl}>
+
+							
 						<div className={styles.categoryImgCover}>
 							<Image
 								object-fit="cover"
@@ -74,15 +78,16 @@ export default function Hero() {
 						<div className={styles.title}>
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
-									<div className={styles.titleHero}>
-									{":Link"}<span className={styles.age}>AGE</span> 
+									<div className={styles.titleHero}>C<span className={styles.age}>ONNECTIONS</span> 
 									</div>
 									<div className={styles.titleHero2}>
-									 <span className={styles.toWhat}>{"ToWhat"}</span> <span className={styles.matters}>{"!important;"}</span>
+									 <span className={styles.toWhat}>MADE</span> <span className={styles.matters}>Easy</span>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+					</div>
 					</div>
 				</div>
 			</form>

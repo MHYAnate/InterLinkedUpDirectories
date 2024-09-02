@@ -18,6 +18,7 @@
  background-color: white;
 }
 
+
 .regNavBodyCover {
   display: flex;
   flex-direction: column;
@@ -28,6 +29,7 @@
   max-height: fit-content;
   margin-top: 10px;
 	background-image: linear-gradient(to right, rgb(241, 243, 241), white);
+ 
 }
 
 .body{

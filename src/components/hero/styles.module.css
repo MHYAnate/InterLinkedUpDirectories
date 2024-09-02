@@ -1,45 +1,62 @@
 .titleCover{
   width: 98vw;
-  height: 114px;
+  height: 300px;
   cursor: pointer;
   overflow: hidden;
   border-bottom: 1px solid silver;
-  padding-bottom: 20px;
+  background-color: darkolivegreen;
 }
 
 .categoryCover{
   position: relative;
-  width: 94vw;
-  height: 114px;
+  width: 98vw;
+  height: 300px;
+}
+.catFlex{
+  width: 98vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flexControl{
+  width: 80vw;
+  height: 80%;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .categoryImgCover{
   width: 70vw;
-  height: 114px;
+  height: inherit;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: first baseline;
+  padding-top: 10px;
 }
 .categoryImg{
-  width: 564px;
-  height: 114px;
+  width: 500px;
+  height: 130px;
   opacity: 1;
   border-radius: 5px;
 }
 
 .title{
   position: absolute;
-  top: 0.001px;
-  width: 94vw;
-  height: 114px;
+  top: 0px;
+  width: 100%;
+  height: 300px;
 }
 
 .flextitle{
   color: rgb(55, 55, 55,0.9);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
-  width: 94vw;
-  height: 114px;
+  width: 80vw;
+  height: max-content;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -59,7 +76,7 @@
 }
 .titleHero{
   user-select: none;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 500;
   /* color:  rgb(102, 102, 102); */
   color: rgb(89, 135, 9);
@@ -67,8 +84,8 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 3px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: left;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
   /* background-color:rgb(192, 192, 192, 0.7); */
   width: 100%;
   margin-left: 1.5vw;
@@ -76,22 +93,22 @@
 }
 .age{
   user-select: none;
-  font-size: 2.4rem;
-  font-weight: 500;
+  font-size: 3.3rem;
+  font-weight: 400;
   /* color:  rgb(102, 102, 102); */
   color: rgb(89, 135, 9);
   /* background-color: rgba(235, 235, 231, 0.7); */
   border-radius: 3px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
   /* background-color:rgb(192, 192, 192, 0.7); */
   margin-bottom: 10px;
   width: 100%;
 }
 .titleHero2{
   user-select: none;
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 5rem;
+  font-weight: 400;
   /* color:  rgb(102, 102, 102); */
   color: rgb(103, 105, 98);
   /* background-color: rgba(235, 235, 231, 0.7); */
@@ -99,7 +116,7 @@
   padding-right: 10px;
   border-radius: 3px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: left;
+  text-align: center;
   /* background-color:rgb(192, 192, 192, 0.7); */
   margin-bottom: 10px;
   width: 100%;
@@ -107,31 +124,31 @@
   /* text-decoration: underline; */
   line-height: 60px;
 }
+
 .you{
   color: green;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
 }
+
 .toWhat{
   color: darkolivegreen;
-  font-weight: 500;
-  text-decoration: line-through;
-  font-size: 2.8rem;
+  font-weight: 400;
+  font-size: 3rem;
 }
 .matters{
-  color: rgb(89, 135, 9);
+  color: rgb(66, 104, 2);
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  font-weight: 500;
-  font-size: 2.8rem;
+  font-weight: 400;
+  font-size: 3rem;
   text-transform: uppercase;
-  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
 }
 .slogan{
   user-select: none;
@@ -147,150 +164,100 @@
   background-color:silver;
 }
 @media screen and (max-width: 832px) {
-  .header{
-    margin-top: 20px;
-    width: 94vw;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: first baseline;
-    height: 100%;
-    flex-wrap: wrap;
+ 
+}
+@media screen and (max-width: 620px) {
+  .categoryImgCover{
+    width: calc(80vw-10px);
+   
   }
-.titleHero{
-  user-select: none;
-  font-size: 3rem;
-  font-weight: 500;
-  /* background-color: rgba(235, 235, 231, 0.7); */
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 3px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: left;
-  /* background-color:rgb(192, 192, 192, 0.7); */
-  margin-left: 1vw;
+  .categoryImg{
+    width: 350px;
+    
   }
-
-  .titleHero2{
-    user-select: none;
-    font-size: 2.5rem;
-    font-weight: 500;
-    /* background-color: rgba(235, 235, 231, 0.7); */
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 3px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: left;
-    /* background-color:rgb(192, 192, 192, 0.7); */
-    margin-bottom: 10px;
-    margin-left: 1vw;
-    }
   
 }
-@media screen and (max-width: 770px) {
-  .titleCover{
-    width: 94vw;
-    height: 200px;
-    cursor: pointer;
-  }
-
-  .categoryCover{
-    position: relative;
-    width: 94vw;
-    height: 200px;
-  }
-  
-  .categoryImgCover{
-    width: 94vw;
-    height: 200px;
-  }
-  
+@media screen and (max-width: 500px) {
+ 
   .categoryImg{
-    width: 94vw;
-    height: 200px;
-    opacity: 1;
+    width: 300px;
+    
   }
-  .flextitle{
-    color: rgb(55, 55, 55);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    width: 94vw;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .header{
-    margin-top: 0;
-    padding-top: 0;
-    margin-left: -20px;
-  }
-  
 }
 
 @media screen and (max-width: 453px) {
-.titleHero{
-  font-size: 2.8rem;
-  text-align: center;
+  .header{
+    line-height: 10px;
+  }
+
+  .flextitle{
+   margin-top: 135px;
+  }
+  .categoryImgCover{
+    width: 330px;
+   
+  }
+  .categoryImg{
+    width: 300px;
+    
+  }
+  .titleHero{
+    font-size: 4rem;
+    text-align: left;
+  }
+  .age{
+    font-size: 2.3rem;
   }
   .titleHero2{
-    font-size: 2.4rem;
-    text-align: left;
-    margin-left: 0;
-    }
-    .header{
-      margin-top: 20px;
-      margin-left: 0;
-    }
-    .titleHero{
-      text-align: left;
-      margin-left: 0;
-    }
-    .toWhat{
-      text-align: left;
-    }
+    font-size: 4rem;
+  }
+  
+  .you{
+    font-size: 2.8rem;
+  }
+  
+  .toWhat{
+    font-size: 2rem;
+  }
+  .matters{
+    font-size: 2rem; 
+  }
 }
-@media screen and (max-width: 330px) {
-  .boldP{
-    font-weight: 400;
-    font-size: 13px;
-    padding-left: 7px;
-  }
-  .titleCover{
-    width: 94vw;
-    height: 220px;
-    cursor: pointer;
-  }
-
-  .categoryCover{
-    position: relative;
-    width: 94vw;
-    height: 220px;
-  }
-  
-  .categoryImgCover{
-    width: 94vw;
-    height: 220px;
-  }
-  
+@media screen and (max-width: 430px) {
   .categoryImg{
-    width: 94vw;
-    height: 220px;
-    opacity: 1;
+    width: 300px;
+    
   }
-  .flextitle{
-    color: rgb(55, 55, 55);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    width: 94vw;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .categoryImgCover{
+    width: 320px;
+   
   }
 }
+@media screen and (max-width: 380px) {
 
+  .categoryImgCover{
+    width: 270px;
+   overflow: hidden;
+  }
+  .titleHero{
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  .age{
+    font-size: 2rem;
+  }
+  .titleHero2{
+    font-size: 3.5rem;
+  }
+  
+  .you{
+    font-size: 2rem;
+  }
+  
+  .toWhat{
+    font-size: 2rem;
+  }
+  .matters{
+    font-size: 2rem; 
+  }
+}

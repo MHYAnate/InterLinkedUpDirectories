@@ -101,7 +101,12 @@
   min-height: 47px;
   max-height: max-content;
   width: 60vw;
-  background-color: white;
+  background-color: darkolivegreen;
+  border: 1px solid rgb(154, 154, 154);
+  padding-top: 15px;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 .filterC{
   display: flex;
@@ -117,7 +122,9 @@
   display: flex;
  justify-content: center;
  align-items: center;
+ row-gap: 5px;
  user-select: none;
+ background-color: transparent;
 }
 
 .selectGroup{
@@ -125,11 +132,12 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  column-gap: 5px;
+  column-gap: 10px;
+  row-gap: 5px;
   width: 60vw;
   height: fit-content;
   padding-bottom: 5px;
-  background-color: white;
+  background-color: transparent;
 }
 .selectGroupC{
   display: flex;
@@ -141,7 +149,7 @@
 }
 
 .selectCover{
-  border: 1px solid silver;
+  border: 1px solid black;
   border-radius: 5px;
   width: 10vw;
   margin-bottom: 5px;
@@ -176,7 +184,7 @@
 }
 
 .inputCover{
-  border: 1px solid silver;
+  border: 1px solid black;
   border-radius: 5px;
   width: 12vw;
   margin-bottom: 5px;
@@ -253,6 +261,7 @@
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   padding-bottom: 5px;
   border-radius: 5px;
+  background-color: white;
 }
 
 .shopRenderCover{
@@ -1124,7 +1133,7 @@
   justify-content: center;
   width: 60vw;
   height:fit-content;
-
+  margin-bottom: 10px;
 }
 .displayFilterC{
   display: flex;
@@ -1159,10 +1168,14 @@
   justify-content: center;
   align-items: flex-start;
   justify-self: center;
-  padding-top: 10px;
+  padding-top: 35px;
   row-gap: 20px;
   column-gap: 20px;
-  padding-bottom: 10px; 
+  padding-bottom: 35px; 
+  border: 1px solid silver;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(246, 246, 246);
 }
 
 .pagi{
@@ -2130,7 +2143,7 @@
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid silver;
-    background-color: white;
+   
     padding-bottom: 10px;
     height: max-content;
   }
@@ -2277,7 +2290,7 @@
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid silver;
-    background-color: white;
+    
     padding-bottom: 10px;
     height: fit-content;
   }
