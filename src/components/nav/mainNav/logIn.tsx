@@ -12,7 +12,7 @@ export default function LogIn() {
 	
 	return (
 		<div
-			className={`${pathname === "/login" ? styles.activeBtn :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
+			className={`${pathname === "/login" ? styles.activeBtn :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
 			onClick={()=>router.push('/login')} 
 		>
 			LOG IN

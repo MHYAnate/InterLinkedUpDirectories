@@ -242,11 +242,12 @@ export default function FilterVendors() {
 						// unoptimized
 					/>
 					</div>
-					<div>
-					<RateUs rateeId={`${vendor.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
-				</div>
+				
 				</div>
 				<div className={styles.innerTextVendorRenderCover}>
+				<div>
+					<RateUs rateeId={`${vendor.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+				</div>
 				<div className={styles.vendorAddresCover}>
 						<div className={styles.vendoraddressTitle}>Specialty</div>
 						<div className={styles.vendorAddress}>{vendor.specialty}</div>
@@ -420,10 +421,11 @@ export default function FilterVendors() {
 						// unoptimized
 					/>
 				</div>
+			
+				<div className={styles.innerTextVendorRenderCover}>
 				<div>
 					<RateUs rateeId={`${vendor.docid}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>
-				<div className={styles.innerTextVendorRenderCover}>
 				<div className={styles.vendorAddresCover}>
 						<div className={styles.vendoraddressTitle}>Specialty</div>
 						<div className={styles.vendorAddress}>{vendor.specialty}</div>

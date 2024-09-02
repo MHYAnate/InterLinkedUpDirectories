@@ -402,10 +402,9 @@
   justify-content: center;
   width: 230px;
   height:max-content;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
   border: 1px solid silver;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -524,7 +523,7 @@
   color: white;
   background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7));
   width: 220px;
-  margin-top: 10px;
+  margin-top: 5px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   min-height: 25px;

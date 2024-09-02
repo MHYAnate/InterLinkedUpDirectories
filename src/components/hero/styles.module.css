@@ -122,7 +122,35 @@
   width: 100%;
   margin-left: 1.5vw;
   /* text-decoration: underline; */
-  line-height: 60px;
+  line-height: 40px;
+}
+
+.callToAction{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 50px;
+  font-family: cursive;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: white;
+  background-color: darkolivegreen;
+}
+
+.registerBtn:hover{
+  background-color: white;
+  color: darkolivegreen;
+  border: 1px solid darkolivegreen;
 }
 
 .you{
@@ -186,12 +214,33 @@
 }
 
 @media screen and (max-width: 453px) {
+  .registerBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 30px;
+    margin-top: 3px;
+    border-radius: 50px;
+    font-family: cursive;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: darkolivegreen;
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  .registerBtn:hover{
+    background-color: darkolivegreen;
+    color: white;
+    
+  }
   .header{
     line-height: 10px;
   }
 
   .flextitle{
-   margin-top: 135px;
+   margin-top: 140px;
   }
   .categoryImgCover{
     width: 330px;

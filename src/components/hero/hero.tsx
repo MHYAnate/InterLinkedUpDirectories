@@ -1,61 +1,20 @@
 "use client";
 import React, { useRef } from "react";
-import { useForm } from "react-hook-form";
-import firebase from "@/firebase/firebase";
 import Image from "next/image";
-import { collection, addDoc } from "firebase/firestore";
+import { usePathname } from "next/navigation";
+import { useRouter } from 'next/navigation'
 import styles from "./styles.module.css";
 
-interface UserData {
-	email: string;
-}
 
-type FormValue = {
-	email: string;
-};
 
 export default function Hero() {
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { isSubmitSuccessful },
-	} = useForm<FormValue>({
-		defaultValues: {
-			email: "",
-		},
-		shouldUseNativeValidation: true,
-		mode: "onChange",
-	});
 
-	const { database } = firebase;
-
-	if (isSubmitSuccessful) {
-		reset();
-	}
-
-	const HandleNewsLetter = async (data: FormValue) => {
-		try {
-			const profileDetailRef = collection(
-				database,
-				`newsletter/${data.email}/email`
-			);
-			await addDoc(profileDetailRef, {
-				email: data.email,
-			});
-			console.log("Profile detail added successfully");
-		} catch (error) {
-			console.error("Error adding profile detail:", error);
-		}
-	};
-
-	const onSubmit = (data: FormValue) => {
-		HandleNewsLetter(data);
-	};
-
+	const pathname = usePathname();
+	const router = useRouter()
+	
 	return (
 		<div className={styles.formContainer}>
-			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+			<div >
 				<div className={styles.titleCover}>
 					<div className={styles.categoryCover}>
 						<div className={styles.catFlex}>
@@ -83,6 +42,11 @@ export default function Hero() {
 									<div className={styles.titleHero2}>
 									 <span className={styles.toWhat}>MADE</span> <span className={styles.matters}>Easy</span>
 									</div>
+									<div className={styles.callToAction}>
+										<div onClick={()=>router.push('/register')} className={styles.registerBtn}>
+											{"Register Now!"}
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -90,7 +54,7 @@ export default function Hero() {
 					</div>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 	);
 }

@@ -260,7 +260,6 @@
     justify-content: center;
     width: 98vw;
     height: max-content;
-    margin-top: 10px;
   }
   .categoryCover{
    flex-direction: column-reverse;
