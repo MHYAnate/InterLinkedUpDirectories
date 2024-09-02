@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: linear-gradient(to right , rgba(196, 195, 195, 0.7), rgba(161, 161, 161, 0.7));
+  background-color:darkolivegreen;
   user-select: none;
 }
 

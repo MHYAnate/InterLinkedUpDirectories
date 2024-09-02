@@ -10,7 +10,7 @@ export default function Register() {
   const router = useRouter()
 	return (
 		<div
-			className={`${pathname === "/register" ? styles.activeBtn :pathname !== "/"?  styles.inActiveBtn : styles.inActiveBtnH}`}
+			className={`${pathname === "/register" ? styles.activeBtn :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
 			onClick={()=>router.push('/register')} 
 		>
 			REGISTER
