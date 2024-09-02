@@ -10,7 +10,7 @@ export default function Logo() {
   const router = useRouter()
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/" ? styles.active : styles.inActive}`}
+			className={`${styles.link} ${pathname === "/" ? styles.activeH : styles.active}`}
 			onClick={()=>router.push('/')} 
 		>
 			<div className={styles.logoHead}>ILU</div>

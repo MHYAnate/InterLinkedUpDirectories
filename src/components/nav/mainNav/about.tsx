@@ -10,7 +10,7 @@ export default function About() {
   const router = useRouter()
 	return (
 		<div
-			className={`${styles.link} ${pathname === "/about" ? styles.activeBtn : styles.inActiveBtn}`}
+			className={`${pathname === "/about" ? styles.activeBtn :pathname !== "/"?  styles.inActiveBtn : styles.inActiveBtnH}`}
 			onClick={()=>router.push('/about')} 
 		>
 			ABOUT US

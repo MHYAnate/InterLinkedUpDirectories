@@ -15,8 +15,8 @@ export default function Nav() {
 
 	return (
 		<div
-			className={`${styles.link} ${
-				pathname === "/register" ? styles.regNavBodyCover : styles.navBodyCover
+			className={`${
+				pathname === "/register" ? styles.regNavBodyCover : pathname !== "/" ?styles.navBodyCover:styles.navBodyCoverH
 			}`}
 		>
 			<div className={styles.navBody}>
@@ -24,7 +24,7 @@ export default function Nav() {
 					<Logo />
 				</div>
 				<div className={styles.search}>
-					<Search suggestionsList={Vendors} />
+					{/* <Search suggestionsList={Vendors} /> */}
 				</div>
 				<div className={styles.links}>
 					<About />
