@@ -107,7 +107,7 @@
 }
 .titleHero2{
   user-select: none;
-  font-size: 5rem;
+ 
   font-weight: 400;
   /* color:  rgb(102, 102, 102); */
   color: rgb(103, 105, 98);
@@ -191,49 +191,89 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color:silver;
 }
-@media screen and (max-width: 832px) {
- 
-}
-@media screen and (max-width: 620px) {
-  .categoryImgCover{
-    width: calc(80vw-10px);
-   
+@media screen and (max-width: 1111px) {
+  .titleHero{
+    text-align: left;
   }
-  .categoryImg{
-    width: 350px;
-    
-  }
-  
-}
-@media screen and (max-width: 500px) {
- 
-  .categoryImg{
-    width: 300px;
-    
+
+  .titleHero2{
+    text-align: left;
+    margin-left: 15vw;
   }
 }
 
-@media screen and (max-width: 453px) {
-  .registerBtn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    height: 30px;
-    margin-top: 3px;
-    border-radius: 50px;
-    font-family: cursive;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: darkolivegreen;
-    background-color: white;
-    border: 1px solid black;
+@media screen and (max-width: 832px) {
+  .titleHero{
+    text-align: left;
+  }
+
+  .titleHero2{
+    text-align: left;
+    margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 802px) {
+  
+
+  .titleHero{
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  .age{
+    font-size: 3rem;
+  }
+ 
+  
+  .you{
+    font-size: 2.2rem;
   }
   
-  .registerBtn:hover{
-    background-color: darkolivegreen;
-    color: white; 
+  .toWhat{
+    font-size: 2rem;
   }
+  .matters{
+    font-size: 2rem; 
+  }
+}
+@media screen and (max-width: 620px) {
+  .categoryImgCover{
+  overflow: hidden;
+   
+  }
+ 
+  .header{
+    line-height: 45px;
+  }
+
+  .flextitle{
+   margin-top: 45px;
+  }
+
+
+  .titleHero{
+    font-size: 3rem;
+    text-align: left;
+  }
+  .age{
+    font-size: 1.8rem;
+  }
+ 
+  
+  .you{
+    font-size: 2rem;
+  }
+  
+  .toWhat{
+    font-size: 1.5rem;
+  }
+  .matters{
+    font-size: 1.5rem; 
+  }
+}
+
+
+@media screen and (max-width: 453px) {
 
   .header{
     line-height: 45px;
@@ -243,14 +283,6 @@
    margin-top: 45px;
   }
 
-  .categoryImgCover{
-    width: 330px;
-   
-  }
-  .categoryImg{
-    width: 300px;
-    
-  }
   .titleHero{
     font-size: 3rem;
     text-align: left;
@@ -275,16 +307,7 @@
     font-size: 1.5rem; 
   }
 }
-@media screen and (max-width: 430px) {
-  .categoryImg{
-    width: 300px;
-    
-  }
-  .categoryImgCover{
-    width: 320px;
-   
-  }
-}
+
 @media screen and (max-width: 380px) {
 
   .categoryImgCover{
