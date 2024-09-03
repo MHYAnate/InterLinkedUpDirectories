@@ -232,16 +232,17 @@
   
   .registerBtn:hover{
     background-color: darkolivegreen;
-    color: white;
-    
+    color: white; 
   }
+
   .header{
-    line-height: 10px;
+    line-height: 45px;
   }
 
   .flextitle{
-   margin-top: 140px;
+   margin-top: 45px;
   }
+
   .categoryImgCover{
     width: 330px;
    
@@ -251,25 +252,27 @@
     
   }
   .titleHero{
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: left;
   }
   .age{
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }
   .titleHero2{
-    font-size: 4rem;
+    font-size: 0.5rem;
+    text-align: left;
+    margin-left: 35px;
   }
   
   .you{
-    font-size: 2.8rem;
+    font-size: 2rem;
   }
   
   .toWhat{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .matters{
-    font-size: 2rem; 
+    font-size: 1.5rem; 
   }
 }
 @media screen and (max-width: 430px) {
@@ -288,25 +291,5 @@
     width: 270px;
    overflow: hidden;
   }
-  .titleHero{
-    font-size: 3.5rem;
-    text-align: left;
-  }
-  .age{
-    font-size: 2rem;
-  }
-  .titleHero2{
-    font-size: 3.5rem;
-  }
-  
-  .you{
-    font-size: 2rem;
-  }
-  
-  .toWhat{
-    font-size: 2rem;
-  }
-  .matters{
-    font-size: 2rem; 
-  }
+
 }
