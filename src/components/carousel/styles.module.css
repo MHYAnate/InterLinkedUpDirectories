@@ -187,10 +187,11 @@
   font-size: 0.8rem;
   font-weight: 400;
   border-radius: 3px;
+  background-image: linear-gradient(to right ,white, #F5F5DC);
 }
 
 .renderCover:hover{
-  background-color: rgb(238, 238, 238);
+  background-image: linear-gradient(to right ,white, rgb(238, 238, 238));
   border-radius: 3px;
 }
 
