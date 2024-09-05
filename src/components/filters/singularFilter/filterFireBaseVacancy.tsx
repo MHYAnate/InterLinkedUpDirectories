@@ -255,7 +255,7 @@ const FireBaseVacancy: React.FC<companyId> = ({ companyId , vendorId }) => {
 				</div>
 			</form>
 			<div className={styles.renderAvModStockoverFlow}>
-				<div className={styles.renderAvModStock}>
+				<div className={styles.renderAvModVacancy}>
 					{RenderAvailableVcancy()}
 				</div>
 			</div>
