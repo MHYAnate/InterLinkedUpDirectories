@@ -322,6 +322,7 @@
   font-size: 0.7rem;
   color: white;
   border: 1px solid silver;
+  transition: all 0.3s ease;
 }
 
 .picR{
@@ -341,6 +342,7 @@
   font-size: 0.7rem;
   color: white;
   border: 1px solid silver;
+  transition: all 0.3s ease;
 }
 .picHL{
   width: 103px;
@@ -811,6 +813,7 @@
   margin-bottom: 5px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 20px;
   font-weight: bold;
   text-transform: capitalize;
@@ -819,10 +822,11 @@
   padding-bottom: 2px;
   user-select: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .enterWorkSpace:hover{
-  box-shadow: 0px 0px 1px silver, 0 0 2px  rgba(202, 201, 201, 0.7), 0 0 5px silver;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
  }
 
 
@@ -836,11 +840,11 @@
   height:max-content;
   padding-bottom: 10px;
   padding-left: 10px;
-  transition: background-image 1s ease-in-out 0.1s;
   font-size: 1rem;
   user-select: none;
   background-color:transparent;
   border-bottom: 1px solid #f5f5dc77;
+  transition: all 0.3s ease;
 }
 
 .VacancyRenderCover:hover{
@@ -1042,6 +1046,7 @@
   width: fit-content;
   cursor: pointer;
   user-select: none;
+  transition: all 0.3s ease;
  }
 
  .btnUn:hover{
@@ -1065,6 +1070,7 @@
   cursor: pointer;
   height: 25px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
  }
 
  .btnA:hover{
@@ -1379,6 +1385,7 @@
   text-transform: uppercase;
   margin-top: 3px;
   padding-bottom: 5px;
+  transition: all 0.3s ease;
 }
 
 .btnShop:hover{
@@ -1428,6 +1435,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .enterShop:hover{
