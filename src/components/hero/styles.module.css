@@ -146,6 +146,7 @@
   font-weight: 400;
   color: white;
   background-color:#D9B382;
+  box-shadow: 0px 0px 1px #D9B382, 0 0 1.5px #D9B382, 0 0 1.75px #D9B382;
 }
 
 .registerBtn:hover{

@@ -64,7 +64,7 @@
   height: max-content;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .highLighted{
@@ -177,9 +177,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* border-radius: 3px; */
   background-color:white;
-  border: 1px solid silver;
+  /* border: 1px solid silver; */
+  box-shadow: 0px 0px 1px #F5F5DC, 0 0 1.5px #F5F5DC, 0 0 1.75px #F5F5DC;
   padding: 5px;
   cursor: pointer;
   border-bottom: 1px solid silver;
@@ -528,6 +528,7 @@
   
   .titleBodyCategorySelector{
     width: 98vw;
+    margin-bottom: 15px;
   }
 
   .vendorNav{

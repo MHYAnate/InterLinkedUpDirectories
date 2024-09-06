@@ -3,6 +3,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   width: 98vw;
+  background-color:#f5f5dc33;
 }
 
 .shopDetailCover{
@@ -103,7 +104,7 @@
   background-color:#F5F5DC;
   overflow: hidden;
   padding-bottom: 10px;
-  border: 1px solid silver;
+  box-shadow: 0px 0px 1px #F5F5DC, 0 0 1.5px #F5F5DC, 0 0 1.75px #F5F5DC;
 }
 
 .titleTop{
@@ -119,6 +120,7 @@
  padding-bottom: 2px;
  border-radius: 5px;
  margin-top: 10px;
+ box-shadow: 0px 0px 1px white, 0 0 1.5px white, 0 0 1.75px white;
 }
 
 .titleTopHeader{
@@ -142,7 +144,7 @@
   height: fit-content;
   width: 260px;
   row-gap: 2px;
-  border: 1px solid silver;
+  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 1.75px silver;
   border-radius: 5px;
   background-color: white;
   padding-bottom: 5px;
@@ -150,7 +152,7 @@
 }
 
 .detailTitle{
-  width: 260px;
+  width: 250px;
   max-height: fit-content;
   color: darkolivegreen;
   margin-left: 5px;
@@ -162,7 +164,7 @@
 }
 
 .detail{
-  width: 260px;
+  width: 250px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   max-height: fit-content;

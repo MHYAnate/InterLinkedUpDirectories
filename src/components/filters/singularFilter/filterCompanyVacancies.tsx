@@ -206,7 +206,7 @@ const CompanyVacancyModel: React.FC<CompanyName> = ({ companyName }) => {
 				</div>
 			</form>
 			<div className={styles.renderAvModStockoverFlow}>
-				<div className={styles.renderAvModStock}>
+				<div className={styles.renderAvModVacancy}>
 					{RenderAvailableModelVacancy()}
 				</div>
 			</div>
