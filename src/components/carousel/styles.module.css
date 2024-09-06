@@ -138,8 +138,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 310px;
-  height: 510px;
+  width: 320px;
+  height: 560px;
   overflow-y: auto;
   z-index: 2;
   background-color:  rgba(254, 253, 253, 0.5);
@@ -147,7 +147,7 @@
 .carouselPagi{
   width: 310px;
   position: absolute;
-  top: 470px;
+  top: 510px;
   left: 0;
   display: flex;
   align-items: center;
@@ -160,38 +160,36 @@
 }
 
 .flexRenderCoverControl{
-  width:310px;
+  width:320px;
   height: max-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
-  row-gap: 3px;
-  background-color: white;
+  row-gap: 10px;
+  background-color:#F5F5F5;
 }
 
 .renderCover{
-  width: 310px;
+  width: 290px;
   height:max-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background-color:white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   padding: 5px;
   cursor: pointer;
   color: rgb(75, 95, 42);
   font-size: 0.8rem;
   font-weight: 400;
   border-radius: 3px;
-  background-image: linear-gradient(to right ,white, rgb(238, 238, 238));
-  border: 1px solid rgb(248, 246, 246);
 }
 
 .renderCover:hover{
-  border: 1px solid silver;
-  border-radius: 3px;
+ background-color: none;
+  background-image: linear-gradient(to right ,white, rgb(238, 238, 238));
 }
 
 .imgHover{
@@ -489,15 +487,15 @@
   
   .carouselImageCover{
     width: 98vw;
-    height: 500px;
+    height: 550px;
   }
   .hover{
     width: 98vw;
-    height: 500px;
+    height: 550px;
   }  
   .flexRenderCoverControl{
     width: 98vw;
-    row-gap: 7px;
+    row-gap: 12px;
   }
 
   .parent{
@@ -509,8 +507,10 @@
     align-items: center;
     justify-content: flex-start;
     column-gap: 0;
-
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   }
+
+
  
   
   .mainCard{
