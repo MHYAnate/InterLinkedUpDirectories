@@ -101,10 +101,10 @@
   min-height: 47px;
   max-height: max-content;
   width: 60vw;
-  background-color: darkolivegreen;
-  border: 1px solid rgb(154, 154, 154);
+  background-color: rgb(34, 121, 134);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   padding-top: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
@@ -149,7 +149,7 @@
 }
 
 .selectCover{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 5px;
   width: 10vw;
   margin-bottom: 5px;
@@ -184,7 +184,7 @@
 }
 
 .inputCover{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 5px;
   width: 12vw;
   margin-bottom: 5px;
@@ -256,11 +256,10 @@
   justify-content: flex-start;
   width: 230px;
   height:max-content;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 1.75px silver;
-  transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
   padding-bottom: 5px;
   border-radius: 5px;
   background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .shopRenderCover{
@@ -271,18 +270,12 @@
   column-gap: 10px;
   width: 221.5px;
   height:max-content;
-  /* box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver; */
-  border: 1px solid silver;
-  transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   background-color: rgb(255, 255, 255);
   padding-bottom: 7px;
   border-radius: 7px;
 }
 
-.stockRenderCover:hover{
-  box-shadow: 0px 0px 1.5px black, 0 0 1px silver, 0 0 1.75px black; 
-  
-}
 .picSelCover{
  width: 220px;
  height: fit-content;
@@ -324,7 +317,7 @@
   /* border-bottom-left-radius: 30px;
   border-top-left-radius: 30px; */
   /* background-image: linear-gradient(to left, rgba(155, 154, 154), rgba(111, 111, 111)); */
-  background-color: darkolivegreen;
+  background-color: rgb(124, 123, 123);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
   color: white;
@@ -343,7 +336,7 @@
   /* border-bottom-right-radius: 30px;
   border-top-right-radius: 30px; */
   /* background-image: linear-gradient(to right, rgba(155, 154, 154), rgba(111, 111, 111)); */
-  background-color: darkolivegreen;
+  background-color: rgb(124, 123, 123);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
   color: white;
@@ -361,7 +354,7 @@
   border-top-left-radius: 30px; */
     /* background-color: rgb(92,92,92); */
     background-color: darkolivegreen;
-  color: white;
+    color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
   border-radius: 5px;
@@ -388,7 +381,10 @@
 }
 
 .shopRenderCover:hover{
-  box-shadow: 0px 0px 1.5px black, 0 0 1px silver, 0 0 1.75px black;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.stockRenderCover:hover{
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .shoptitleBodyDivide{
   display: flex;
@@ -405,8 +401,7 @@
   justify-content: center;
   width: 230px;
   height:max-content;
-  border: 1px solid silver;
-  transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   padding-bottom: 5px;
   overflow: hidden;
   border-radius: 5px;
@@ -464,7 +459,7 @@
 }
 
 .VendorRenderCover:hover{
-  box-shadow: 0px 0px 1.5px black, 0 0 2px silver, 0 0 3.5px black; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .VendorRenderCoverC{
@@ -489,8 +484,7 @@
   position: relative;
   height: 200px;
   overflow: hidden;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+ border-radius: 5px;
   width: 220px;
 }
 .imgCoverC{
@@ -503,9 +497,8 @@
 .shopName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  color: white;
-    /* background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7)); */
-    background-color: darkolivegreen;
+  color: #606060;
+    background-color: white;
     font-size: 15px;
   width: 210px;
   margin-top: 7px;
@@ -528,9 +521,9 @@
   font-weight: bold;
   text-transform: capitalize;
   font-size: 15px;
-  color: white;
+  color: #606060;
   /* background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7)); */
-  background-color: darkolivegreen;
+  background-color: white;
   width: 220px;
   margin-top: 5px;
   border-top-right-radius: 5px;
@@ -547,9 +540,9 @@
 .stockName{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  color: white;
+  color: #606060;
     /* background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7)); */
-    background-color: #556B2F;
+    background-color: white;
     font-size: 15px;
   width: 220px;
   border-top-right-radius: 5px;
@@ -712,9 +705,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: darkolivegreen;
+  color: #606060;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   user-select: none;
   text-transform: capitalize;
@@ -725,7 +718,7 @@
   height: max-content;
   overflow: auto;
   user-select: none;
-  font-weight: 500;
+  font-weight: 400;
   color: hsl(180, 100%, 25%);
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -755,9 +748,9 @@
 
 .vendorAddress{
   width: 210px;
-  color:#008080;
+  color:#606060;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: max-content;
   overflow: auto;
@@ -789,8 +782,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: darkolivegreen;
-  font-weight: 500;
+  color: #4CAF50;
+  font-weight: 400;
   font-size: 12px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   user-select: none;
@@ -800,9 +793,9 @@
 .vendorContact{
   width: 210px;
   user-select: none;
-  color: #BF5F36;
+  color: #606060;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -819,7 +812,7 @@
   height: 25px;
   font-weight: bold;
   text-transform: capitalize;
-  background-color: darkolivegreen;
+  background-color: #4CAF50;
   margin-top: 10px;
   padding-bottom: 2px;
   user-select: none;
@@ -844,7 +837,7 @@
   transition: background-image 1s ease-in-out 0.1s;
   font-size: 1rem;
   user-select: none;
-  background-color:#f5f5dc77 ;
+  background-color:transparent;
   border-bottom: 1px solid #f5f5dc77;
 }
 
@@ -935,7 +928,7 @@
   align-items: center;
   column-gap: 5px;
   font-weight: 400;
-  color: #008080;
+  color: #606060;
   user-select: none;
   font-size: 0.9rem;
 }
@@ -960,7 +953,7 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
-  color: #BF5F36;
+  color: #606060;
   user-select: none;
   display: flex;
   flex-wrap: wrap;
@@ -973,7 +966,7 @@
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    font-weight: 500;
    font-size: 1.3rem;
-   color: darkolivegreen;
+   color: #606060;
    padding-bottom: 5px;
    user-select: none;
    text-transform: uppercase;
@@ -982,25 +975,31 @@
   border: none;
   color: white;
     /* background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7)); */
-    background-color: #556B2F;
+    background-color: #4CAF50;
   user-select: none;
-  width: 220px;
+  width: 100px;
   height: 25px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+ border-radius: 35px;
+ margin-bottom: 10px;
   cursor: pointer;
   user-select: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+ }
+ .btn:hover{
+  background-color: #45A049; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
  }
 
  .vBtn{
   border: none;
   color: white;
-  background-color: darkolivegreen;
+  background-color: #4CAF50;
   user-select: none;
   margin-top: 10px;
   width: 100px;
  border-radius: 3px;
- box-shadow: 0px 0px 1px darkolivegreen, 0 0 1.5px darkolivegreen, 0 0 1.75px darkolivegreen;
+ box-shadow: 0px 0px 1px #4CAF50, 0 0 1.5px #4CAF50, 0 0 1.75px #4CAF50;
   cursor: pointer;
   user-select: none;
  }
@@ -1050,18 +1049,24 @@
   border: none;
   color: white;
     /* background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7)); */
-  background-color: darkolivegreen;
+  background-color: #FF7043;
   animation:  0.1s linear appear;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   margin-top: 10px;
-  width: 220px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  margin-bottom: 10px;
+  width: 100px;
+  border-radius: 30px;
   cursor: pointer;
   height: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+ }
+
+ .btnA:hover{
+  background-color: #45A049; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
  }
  
   
@@ -1071,10 +1076,10 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  color: darkolivegreen;
+  color: #4CAF50;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   user-select: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -1129,8 +1134,8 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 200px;
   font-size: 14px;
-  font-weight: 500;
-  color: #008080;
+  font-weight: 400;
+  color: #606060;
   text-transform: capitalize;
   
 }
@@ -1185,14 +1190,11 @@
   justify-content: center;
   align-items: flex-start;
   justify-self: center;
-  padding-top: 35px;
+  padding-top: 10px;
   row-gap: 20px;
   column-gap: 20px;
-  padding-bottom: 35px; 
+  padding-bottom: 10px; 
   margin-top: 10px;
-  border-radius: 5px;
-  background-color:#F5F5DC;
-  box-shadow: 0px 0px 1px #F5F5DC, 0 0 1.5px #F5F5DC, 0 0 1.75px #F5F5DC;
 }
 
 .pagi{
@@ -1320,20 +1322,20 @@
 .shopItemsDetailTitleName{
   margin-right: 10px;
   font-weight: 400;
-  color: darkolivegreen;
+  color: #4CAF50;
   text-transform: capitalize;
   font-size: 14px;
 }
 .shopItemsDetailTitle{
   margin-right: 10px;
-  color: darkolivegreen;
+  color: #4CAF50;
   text-transform: capitalize;
   font-size: 12px;
 }
 
 .shopItemsBody{
-  font-weight: 500;
-  color: #008080;
+  font-weight: 400;
+  color: #606060;
   text-transform: capitalize;
   font-size: 14px;
 }
@@ -1377,12 +1379,12 @@
 }
 
 .btnShop:hover{
-  color: darkolivegreen;
-  font-weight: 500;
+  color: #4CAF50;
+  font-weight: 400;
 }
 .btnShopA:hover{
   color: green;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .searchShopImgCover{
@@ -1403,8 +1405,8 @@
 
 .enterShop{
   color: white;
-    /* background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7)); */
-    background-color: darkolivegreen;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    background-color: #4CAF50;
   width: 210px;
   height: 23px;
   font-size: 0.8rem;
@@ -1421,6 +1423,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.enterShop:hover{
+  background-color: #45A049; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
 }
 
 .goToShop{
@@ -1485,14 +1492,12 @@
   align-items: first baseline;
   flex-wrap: wrap;
   margin-top: 10px;
-  padding-top: 35px;
+  padding-top: 10px;
   row-gap: 20px;
   column-gap: 25px;
-  padding-bottom: 35px; 
+  padding-bottom: 10px; 
   margin-top: 10px;
   border-radius: 5px;
-  background-color:#F5F5DC;
-  box-shadow: 0px 0px 1px #F5F5DC, 0 0 1.5px #F5F5DC, 0 0 1.75px #F5F5DC;
 }
 .renderAvModVacancy{
   width: 60vw;
@@ -1508,7 +1513,7 @@
   padding-bottom: 35px; 
   margin-top: 10px;
   border-radius: 5px;
-  background-color:#f5f5dc77 ;
+  background-color:transparent;
 }
 .filterShop{
   max-width: 700px;
@@ -1719,7 +1724,7 @@
   font-size: 12px;
   font-weight: 400;
   text-transform: capitalize;
-  color: darkolivegreen;
+  color: #606060;
 }
 .companyVacancyTitleAbtUS{
   width: 100%;
@@ -1728,7 +1733,7 @@
   font-size: 0.68rem;
   font-weight: 400;
   text-transform: capitalize;
-  color:darkolivegreen;
+  color:#606060;
   text-align: left;
 }
 .companyVacancyDetail{
@@ -1736,8 +1741,8 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.8rem;
-  font-weight: 500;
-  color: #008080;
+  font-weight: 400;
+  color: #606060;
 }
 
 .companyVacancyDetailAbtUs{
@@ -1745,9 +1750,9 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: capitalize;
-  color: #BF5F36;
+  color: #606060;
 }
 
 .shopVacancyDetailAbtUs{
@@ -1755,8 +1760,8 @@
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
-  color: #008080;
-  font-weight: 500;
+  color: #606060;
+  font-weight: 400;
   text-transform: capitalize;
 }
 

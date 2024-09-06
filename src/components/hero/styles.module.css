@@ -1,331 +1,322 @@
-.titleCover{
-  width: 98vw;
-  height: 300px;
-  cursor: pointer;
-  overflow: hidden;
-  border-bottom: 1px solid silver;
-  background-color: darkolivegreen;
+.titleCover {
+	width: 98vw;
+	height: 300px;
+	cursor: pointer;
+	overflow: hidden;
+	border-bottom: 1px solid silver;
+	background-color: #4caf50;
 }
 
-.categoryCover{
-  position: relative;
-  width: 98vw;
-  height: 300px;
+.categoryCover {
+	position: relative;
+	width: 98vw;
+	height: 300px;
 }
-.catFlex{
-  width: 98vw;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.flexControl{
-  width: 80vw;
-  height: 80%;
-  display: flex;
-  background-color: white;
-  border-radius: 10px;
+.catFlex {
+	width: 98vw;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.categoryImgCover{
-  width: 70vw;
-  height: inherit;
-  display: flex;
-  justify-content: flex-end;
-  align-items: first baseline;
-  padding-top: 10px;
-}
-.categoryImg{
-  width: 500px;
-  height: 130px;
-  opacity: 1;
-  border-radius: 5px;
+.flexControl {
+	width: 80vw;
+	height: 80%;
+	display: flex;
+	background-color: white;
+	border-radius: 10px;
 }
 
-.title{
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 300px;
+.categoryImgCover {
+	width: 70vw;
+	height: inherit;
+	display: flex;
+	justify-content: flex-end;
+	align-items: first baseline;
+	padding-top: 10px;
+}
+.categoryImg {
+	width: 500px;
+	height: 130px;
+	opacity: 1;
+	border-radius: 5px;
 }
 
-.flextitle{
-  color: rgb(55, 55, 55,0.9);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 15px;
-  width: 80vw;
-  height: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  user-select: none;
+.title {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 300px;
 }
 
-.header{
-  margin-top: 20px;
-  width: 94vw;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.titleHero{
-  user-select: none;
-  font-size: 5rem;
-  font-weight: 400;
-  /* color:  rgb(102, 102, 102); */
-  color: rgb(89, 135, 9);
-  /* background-color: rgba(235, 235, 231, 0.7); */
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 3px;
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-  /* background-color:rgb(192, 192, 192, 0.7); */
-  width: 100%;
-  margin-left: 1.5vw;
-  margin-top: 20px;
-  /* text-decoration: underline; */
-}
-.age{
-  user-select: none;
-  font-size: 3.3rem;
-  font-weight: 500;
-  /* color:  rgb(102, 102, 102); */
-  color: rgb(89, 135, 9);
-  /* background-color: rgba(235, 235, 231, 0.7); */
-  border-radius: 3px;
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-  /* background-color:rgb(192, 192, 192, 0.7); */
-  margin-bottom: 10px;
-  width: 100%;
-}
-.titleHero2{
-  user-select: none;
- 
-  font-weight: 400;
-  /* color:  rgb(102, 102, 102); */
-  color: rgb(103, 105, 98);
-  /* background-color: rgba(235, 235, 231, 0.7); */
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 3px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
-  /* background-color:rgb(192, 192, 192, 0.7); */
-  margin-bottom: 10px;
-  width: 100%;
-  margin-left: 1.5vw;
-  /* text-decoration: underline; */
-  line-height: 40px;
+.flextitle {
+	color: rgb(55, 55, 55, 0.9);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 15px;
+	width: 80vw;
+	height: max-content;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	user-select: none;
 }
 
-.callToAction{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header {
+	margin-top: 20px;
+	width: 94vw;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.titleHero {
+	user-select: none;
+	font-size: 5rem;
+	font-weight: 400;
+	/* color:  rgb(102, 102, 102); */
+	color: rgb(89, 135, 9);
+	/* background-color: rgba(235, 235, 231, 0.7); */
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	/* background-color:rgb(192, 192, 192, 0.7); */
+	width: 100%;
+	margin-left: 1.5vw;
+	margin-top: 20px;
+	/* text-decoration: underline; */
+}
+.age {
+	user-select: none;
+	font-size: 3.3rem;
+	font-weight: 500;
+	/* color:  rgb(102, 102, 102); */
+	color: rgb(89, 135, 9);
+	/* background-color: rgba(235, 235, 231, 0.7); */
+	border-radius: 3px;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	/* background-color:rgb(192, 192, 192, 0.7); */
+	margin-bottom: 10px;
+	width: 100%;
+}
+.titleHero2 {
+	user-select: none;
+
+	font-weight: 400;
+	/* color:  rgb(102, 102, 102); */
+	color: rgb(103, 105, 98);
+	/* background-color: rgba(235, 235, 231, 0.7); */
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	text-align: center;
+	/* background-color:rgb(192, 192, 192, 0.7); */
+	margin-bottom: 10px;
+	width: 100%;
+	margin-left: 1.5vw;
+	/* text-decoration: underline; */
+	line-height: 40px;
 }
 
-.registerBtn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 140px;
-  height: 30px;
-  margin-top: 10px;
-  border-radius: 5px;
-  font-family: cursive;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: white;
-  background-color:#D9B382;
-  box-shadow: 0px 0px 1px #D9B382, 0 0 1.5px #D9B382, 0 0 1.75px #D9B382;
+.callToAction {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.registerBtn:hover{
-  background-color: #BF5F36;
-  color: white;
+.registerBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: cursive;
+	background-color: #4caf50; /* Primary Green */
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 25px; /* Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s ease; /* Smooth transition */
 }
 
-.you{
-  color: green;
-  font-weight: 400;
-  text-transform: uppercase;
-  border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 3.8rem;
-  box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
+.registerBtn:hover {
+  background-color: #45A049; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
 }
 
-.toWhat{
-  color: darkolivegreen;
-  font-weight: 400;
-  font-size: 3rem;
+.you {
+	color: green;
+	font-weight: 400;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 3.8rem;
+	box-shadow: 0px 0px 1px silver, 0 0 2px green, 0 0 5px silver;
 }
-.matters{
-  color: rgb(66, 104, 2);
-  border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-weight: 400;
-  font-size: 3rem;
-  text-transform: uppercase;
+
+.toWhat {
+	color: darkolivegreen;
+	font-weight: 400;
+	font-size: 3rem;
 }
-.slogan{
-  user-select: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color:white;
-  text-align: center;
-  /* background-color: rgba(235, 235, 231, 0.7); */
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 3px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color:silver;
+.matters {
+	color: rgb(66, 104, 2);
+	border-radius: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: 400;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+.slogan {
+	user-select: none;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: white;
+	text-align: center;
+	/* background-color: rgba(235, 235, 231, 0.7); */
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	background-color: silver;
 }
 @media screen and (max-width: 1111px) {
-  .titleHero{
-    text-align: left;
-  }
+	.titleHero {
+		text-align: left;
+	}
 
-  .titleHero2{
-    text-align: left;
-    margin-left: 15vw;
-  }
+	.titleHero2 {
+		text-align: left;
+		margin-left: 15vw;
+	}
 }
 
 @media screen and (max-width: 832px) {
-  .titleHero{
-    text-align: left;
-  }
+	.titleHero {
+		text-align: left;
+	}
 
-  .titleHero2{
-    text-align: left;
-    margin-left: 35px;
-  }
+	.titleHero2 {
+		text-align: left;
+		margin-left: 35px;
+	}
 }
 
 @media screen and (max-width: 802px) {
-  
+	.titleHero {
+		font-size: 4.5rem;
+		text-align: left;
+	}
+	.age {
+		font-size: 3rem;
+	}
 
-  .titleHero{
-    font-size: 4.5rem;
-    text-align: left;
-  }
-  .age{
-    font-size: 3rem;
-  }
- 
-  
-  .you{
-    font-size: 2.2rem;
-  }
-  
-  .toWhat{
-    font-size: 2rem;
-  }
-  .matters{
-    font-size: 2rem; 
-  }
+	.you {
+		font-size: 2.2rem;
+	}
+
+	.toWhat {
+		font-size: 2rem;
+	}
+	.matters {
+		font-size: 2rem;
+	}
 }
 @media screen and (max-width: 620px) {
-  .categoryImgCover{
-  overflow: hidden;
-   
-  }
- 
-  .header{
-    line-height: 45px;
-  }
+	.categoryImgCover {
+		overflow: hidden;
+	}
 
-  .flextitle{
-   margin-top: 45px;
-  }
+	.header {
+		line-height: 45px;
+	}
 
+	.flextitle {
+		margin-top: 45px;
+	}
 
-  .titleHero{
-    font-size: 3rem;
-    text-align: left;
-  }
-  .age{
-    font-size: 1.8rem;
-  }
- 
-  
-  .you{
-    font-size: 2rem;
-  }
-  
-  .toWhat{
-    font-size: 1.5rem;
-  }
-  .matters{
-    font-size: 1.5rem; 
-  }
-  .registerBtn{
-    font-size: 1.2rem;
-  }
-  
+	.titleHero {
+		font-size: 3rem;
+		text-align: left;
+	}
+	.age {
+		font-size: 1.8rem;
+	}
+
+	.you {
+		font-size: 2rem;
+	}
+
+	.toWhat {
+		font-size: 1.5rem;
+	}
+	.matters {
+		font-size: 1.5rem;
+	}
+	.registerBtn {
+		font-size: 1.2rem;
+	}
 }
 
 @media screen and (max-width: 500px) {
-  .titleHero2{
-    margin-left: 10px;
-  }
-  .titleHero{
-    margin-top: 5px;
-    margin-left: 0;
-  }
+	.titleHero2 {
+		margin-left: 10px;
+	}
+	.titleHero {
+		margin-top: 5px;
+		margin-left: 0;
+	}
 }
 
-
 @media screen and (max-width: 453px) {
+	.header {
+		line-height: 45px;
+	}
 
-  .header{
-    line-height: 45px;
-  }
+	.flextitle {
+		margin-top: 45px;
+	}
 
-  .flextitle{
-   margin-top: 45px;
-  }
+	.titleHero {
+		font-size: 3rem;
+		text-align: left;
+	}
+	.age {
+		font-size: 1.8rem;
+	}
+	.titleHero2 {
+		font-size: 0.5rem;
+	}
 
-  .titleHero{
-    font-size: 3rem;
-    text-align: left;
-  }
-  .age{
-    font-size: 1.8rem;
-  }
-  .titleHero2{
-    font-size: 0.5rem;
-  }
-  
-  .you{
-    font-size: 1.7rem;
-  }
-  
-  .toWhat{
-    font-size: 1.2rem;
-  }
-  .matters{
-    font-size: 1.2rem; 
-  }
+	.you {
+		font-size: 1.7rem;
+	}
+
+	.toWhat {
+		font-size: 1.2rem;
+	}
+	.matters {
+		font-size: 1.2rem;
+	}
 }
 
 @media screen and (max-width: 380px) {
-
-  .categoryImgCover{
-    width: 270px;
-   overflow: hidden;
-  }
-
+	.categoryImgCover {
+		width: 270px;
+		overflow: hidden;
+	}
 }

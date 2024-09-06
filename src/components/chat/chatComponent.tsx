@@ -11,6 +11,7 @@ import UserSvg from "../btn/userSvg";
 import ContactSvg from "../btn/contactSvg";
 import Loader from "../load/load";
 import NoticeSvg from "../btn/noticeSvg";
+import ConnectionsSvg from "../btn/conntectionsSvg";
 import {
 	collection,
 	setDoc,
@@ -227,11 +228,6 @@ const Chat: React.FC<ChatProps> = ({
 							
 						</div>
 						<div className={styles.svgDetail}>{roomName === "Private"? contactContact : roomLocation}</div>
-					</div>
-					<div className={styles.topDetail}>
-						<div className={styles.svgHolder}>
-							<NoticeSvg/>
-						</div>
 					</div>
 				</div>
 				<div className={styles.massages}>

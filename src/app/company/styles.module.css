@@ -3,7 +3,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   width: 98vw;
-  background-color:#f5f5dc33;
+  background-color:#F5F5F5;
 }
 
 .shopDetailCover{
@@ -114,7 +114,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   color: white;
-  background-color: darkolivegreen;
+  background-color: #4CAF50;
   width: 280px;
   margin-top: 10px;
   border-top-right-radius: 5px;
@@ -151,11 +151,9 @@
   border-radius: 5px;
   justify-content: flex-start;
   align-items: center;
-  background-color:#F5F5DC;
+  background-color: whitesmoke;
   overflow: hidden;
   padding-bottom: 10px;
-  box-shadow: 0px 0px 1px #F5F5DC, 0 0 1.5px #F5F5DC, 0 0 1.75px #F5F5DC;
-
 }
 
 .titleTop{
@@ -165,13 +163,12 @@
   font-weight: 500;
   width: 260px;
   text-align: center;
- background-color:darkolivegreen;
+ background-color:#4CAF50;
  text-transform: uppercase;
  padding-top: 2px;
  padding-bottom: 2px;
  border-radius: 5px;
  margin-top: 10px;
- box-shadow: 0px 0px 1px white, 0 0 1.5px white, 0 0 1.75px white;
 }
 
 .titleTopHeader{
@@ -205,7 +202,7 @@
 .detailTitle{
   width: 250px;
   max-height: fit-content;
-  color: darkolivegreen;
+  color: #606060;
   margin-left: 5px;
   font-size: 12px;
   font-weight: 500;
@@ -219,7 +216,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   max-height: fit-content;
-  color:#008080;
+  color:#606060;
   margin-left: 5px;
   text-transform: capitalize;
   text-align: left;

@@ -61,9 +61,9 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 						<Image
 							className={styles.idiImg}
 							src={
-								img === `${props.image}`
+								img === `${1}`
 									? `${props.image}`
-									: img === `${props.image2}`
+									: img === `${2}`
 									? `${props.image2}`
 									: `${props.image}`
 							}
@@ -76,17 +76,17 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 						<div className={styles.picSelCover}>
 						<div className={styles.picSel}>
 						<div
-							className={img === `${props.image}` ? styles.picHL : styles.picL}
+							className={img === `${1}` ? styles.picHL : styles.picL}
 							onClick={() => {
-								setImg(`${props.image}`);
+								setImg(`${1}`);
 							}}
 						>
 							{`FRONT`}
 						</div>
 						<div
-							className={img === `${props.image2}` ? styles.picHR : styles.picR}
+							className={img === `${2}` ? styles.picHR : styles.picR}
 							onClick={() => {
-								setImg(`${props.image2}`);
+								setImg(`${2}`);
 							}}
 						>
 							{`SIDE`}
