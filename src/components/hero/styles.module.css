@@ -143,6 +143,7 @@
 	color: white;
 	padding: 10px 20px;
 	border: none;
+  height: 20px;
 	border-radius: 25px; /* Rounded corners */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 	cursor: pointer;
