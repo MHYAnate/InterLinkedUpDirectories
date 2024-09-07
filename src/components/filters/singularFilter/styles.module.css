@@ -1069,7 +1069,7 @@
  .btnA{
   border: none;
   color: white;
-  background-color: #00A4E4;
+  background-color: #4CAF50;
   animation:  0.1s linear appear;
   display: flex;
   align-items: center;
@@ -1086,7 +1086,7 @@
  }
 
  .btnA:hover{
-  background-color: #007BFF;
+  background-color: #419844;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
  }
  
