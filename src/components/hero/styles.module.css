@@ -140,7 +140,7 @@
 	justify-content: center;
 	font-family: cursive;
 	font-weight: 700;
-	background-color: #FF7043; /* Primary Green */
+  background-color: rgb(64, 134, 143);/* Primary Green */
 	color: white;
 	padding: 10px 20px;
 	border: none;
@@ -153,7 +153,7 @@
 }
 
 .registerBtn:hover {
-	background-color:  #fd6436; /* Darker shade on hover */
+	background-color:   rgb(36, 74, 79); /* Darker shade on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
 }
 
