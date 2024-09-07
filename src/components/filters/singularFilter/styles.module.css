@@ -1394,11 +1394,13 @@
   align-items: center;
   margin-top: 3px;
   padding-bottom: 5px;
+  font-size: 12px;
 }
 
 .btnShop{
   width: 50%;
   height: 20px;
+  font-size: 12px;
   border-bottom: 1px solid silver;
   color: rgb(97, 97, 97);
   display: flex;
