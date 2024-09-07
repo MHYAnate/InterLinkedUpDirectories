@@ -248,10 +248,9 @@ export default function FilterVendors() {
 				<div>
 					<RateUs rateeId={`${vendor.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 				</div>
-				<div className={styles.vendorAddresCover}>
-						<div className={styles.vendoraddressTitle}>Specialty</div>
-						<div className={styles.vendorAddress}>{vendor.specialty}</div>
-					</div>
+				
+						<div className={styles.price}>{vendor.specialty}</div>
+					
 					<div className={styles.vendorAddresCover}>
 						<div className={styles.vendoraddressTitle}>Address</div>
 						<div className={styles.vendorAddress}>{vendor.address}</div>

@@ -155,8 +155,8 @@ const Company: React.FC<CompanyProps> = (props:CompanyProps) => {
 						<RateUs rateeId={`${props.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
-							<div className={styles.companyVacancyTitleAbtUS}> Company Tag</div>
-							<div className={styles.companyVacancyDetail}>{props.companyTag}</div>
+		
+							<div className={styles.shopTag}>{props.companyTag}</div>
 						</div>
 					</div>
 				{more === `${props.id}` ? <div className={styles.displayShopItemsFilter}>

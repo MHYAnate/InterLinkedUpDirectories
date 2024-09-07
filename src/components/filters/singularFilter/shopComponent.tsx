@@ -113,8 +113,7 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 						<RateUs rateeId={`${props.id}`} raterId={`${props?.docid}`} raterName={`${props?.name}`} raterImg={`${props?.src}`} />
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
-							<div className={styles.companyVacancyTitleAbtUS}> Shop Tag</div>
-							<div className={styles.companyVacancyDetail}>{props.shopTag}</div>
+							<div className={styles.shopTag}>{props.shopTag}</div>
 						</div>
 					
 				</div>

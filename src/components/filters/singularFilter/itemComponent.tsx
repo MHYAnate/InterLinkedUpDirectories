@@ -73,6 +73,9 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 							height={500}
 							// unoptimized
 						/>
+						<div className={styles.condition}>
+								<div>{props.condition}</div>
+						</div>
 						<div className={styles.picSelCover}>
 						<div className={styles.picSel}>
 						<div
@@ -105,8 +108,7 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 					{more !== `${props.id}` && (
 						<div className={styles.innerTextStockRenderCover}>
 							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>price</div>
-								<div className={styles.contact}>{props.price}</div>
+								<div className={styles.price}>{props.price}</div>
 							</div>
 						</div>
 					)}
@@ -116,16 +118,10 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 						<div className={styles.innerTextShowMoreRenderCover}>
 							<div className={styles.status}>{props.status}</div>
 							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>price</div>
-								<div className={styles.contact}>{props.price}</div>
+								<div className={styles.price}>{props.price}</div>
 							</div>
 							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>features</div>
 								<div className={styles.contact}>{props.features}</div>
-							</div>
-							<div className={styles.contactCover}>
-								<div className={styles.contactTitle}>Condition</div>
-								<div className={styles.contact}>{props.condition}</div>
 							</div>
               {props.phone !== `` && <div className={styles.contactCover}>
 								<div className={styles.contactTitle}>Contact</div>
