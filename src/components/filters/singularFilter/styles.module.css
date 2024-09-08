@@ -2090,6 +2090,9 @@
   }
 
 
+  .enterShop{
+    padding-bottom: 0;
+  }
 
   .renderVacancyInnerCover{
     height:fit-content;
