@@ -30,14 +30,12 @@ const CompanyModelVacancy: React.FC<CompanyModelVacancyProps> = ({companyName, v
 
 		return filteredCompanyVacancyName?.map((vacancy) => (
 			<div className={styles.renderCover} key={vacancy.id}>
-				<div className={styles.showCompanyVacancies}>
+				<div className={styles.showCompanyVacanciesT}>
 					
 						<div className={styles.CompanyVacancyBodyCover}>
-							<span className={styles.companyVacancyTitle}>Job Title</span>
-							<span className={styles.companyVacancyDetail}>{vacancy.jobTitle}</span>
+							<span className={styles.companyVacancyDetailT}>{vacancy.jobTitle}</span>
 						</div>
 						<div className={styles.CompanyVacancyBodyCover}>
-							<span className={styles.companyVacancyTitle}>Salary</span>
 							<span className={styles.companyVacancyDetail}>{vacancy.salary}</span>
 						</div>
 					

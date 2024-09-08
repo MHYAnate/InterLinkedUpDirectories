@@ -1039,24 +1039,34 @@
  .qShopbtn{
   border: none;
   color: white;
-  background-color: #45A049;
+  background-color:#FFA500;
   user-select: none;
   width: 70px;
+  height: 20px;
   border-radius: 25px;
   cursor: pointer;
   user-select: none;
   text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
  .vShowbtn{
   border: none;
   color: white;
-    background-image: linear-gradient(to right , rgba(155, 154, 154, 0.7), rgba(111, 111, 111, 0.7));
+  background-color:#FFA500;
   user-select: none;
-  width: 100px;
-  border-radius: 3px;
+  width: 70px;
+  height: 20px;
+  border-radius: 25px;
   cursor: pointer;
   user-select: none;
   text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
 
  .btnUn{
@@ -1718,6 +1728,17 @@
   align-items: center;
   justify-content: center;
 }
+.showCompanyVacanciesT{
+  width: 190px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3px;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 .showCompanyVacancies{
   width: 190px;
@@ -1726,7 +1747,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 10px;
+  row-gap: 15px;
   margin-bottom: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -1738,8 +1759,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -1770,28 +1790,39 @@
   width: fit-content;
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: capitalize;
-  color: #606060;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #333333;
 }
 .companyVacancyTitleAbtUS{
   width: 100%;
-  text-align: left;
+  text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 400;
-  text-transform: capitalize;
-  color:#606060;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:#333333;
   text-align: left;
+  margin-bottom: 2px;
 }
 .companyVacancyDetail{
   width: fit-content;
   text-align: left;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #606060;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.companyVacancyDetailT{
+  width: fit-content;
+  text-align: left;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color:#333333;
+  text-transform:capitalize;
 }
 
 .shopTag{
@@ -1811,7 +1842,7 @@
   font-size: 14px;
   font-weight: 400;
   text-transform: capitalize;
-  color: #606060;
+  color: #333333;
 }
 
 .shopVacancyDetailAbtUs{
