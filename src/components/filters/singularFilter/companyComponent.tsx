@@ -222,7 +222,7 @@ const Company: React.FC<CompanyProps> = (props:CompanyProps) => {
 						
 					)
 				}
-				className={styles.enterShop}>{"Enter Company's Page"}</div>			
+				className={styles.enterShop}>Enter Companys Page</div>			
 		</div>
 	);
 };
