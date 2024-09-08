@@ -1468,6 +1468,7 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+
 }
 
 .enterShop:hover{
@@ -2291,6 +2292,10 @@
     width: 120px;
   }
 
+
+  .enterShop{
+    padding-top: 2.3px;
+  }
 
   
 }
