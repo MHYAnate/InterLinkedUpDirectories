@@ -28,7 +28,6 @@
   width: 100vw;
   min-height: 100vh;
   max-height: fit-content;
-  margin-top: 10px;
 	background-image: linear-gradient(to right, rgb(241, 243, 241), white);
  
 }
@@ -242,7 +241,6 @@
     width: 98vw;
     min-height: max-content;
     max-height: max-content;
-    margin-top: 10px;
   }
   .regNavBodyCover {
     display: flex;
@@ -252,7 +250,6 @@
     width: 98vw;
     min-height: max-content;
     max-height: max-content;
-    margin-top: 10px;
     background-image: linear-gradient(to right, rgb(241, 243, 241), white);
   }
   .body{
