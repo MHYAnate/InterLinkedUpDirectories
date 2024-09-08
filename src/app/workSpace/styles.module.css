@@ -101,9 +101,10 @@
   justify-content: center;
   height: max-content;
   overflow: hidden;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  width: 280px;
+  border-radius: 10px;
+  width: 295px;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 .idiImg{
   width: 280px;
@@ -154,7 +155,7 @@ background-color: #4CAF50;
   background-color: whitesmoke;
   overflow: hidden;
   padding-bottom: 10px;
-  
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .titleTop{
@@ -263,6 +264,7 @@ background-color: #4CAF50;
     margin-left: 10px;
     align-items: first baseline;
     overflow-x: auto;
+    padding: 10px;
   }
 
   .shopStockCover{
