@@ -218,7 +218,7 @@ const Chat: React.FC<ChatProps> = ({
 					</div>
 					<div className={styles.topDetail}>
 						<div className={styles.svgHolder}>
-							{roomName === "Private"?<UserSvg/>:<MaintainanceSvg />}
+							{roomName === "Private"?<UserSvg/>:<StateSvg />}
 							
 						</div>
 						<div className={styles.svgDetail}>{roomName === "Private" ? contactName : stateName}</div>
