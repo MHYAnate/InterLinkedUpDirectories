@@ -14,6 +14,8 @@ interface ContactProps {
 	contact: any;
 	setRoomName: any;
 	roomName: string;
+	setContactNameDisplay:any;
+	setContactContactDisplay:any;
 }
 
 const MyContactComponent: React.FC<ContactProps> = ({
@@ -25,19 +27,23 @@ const MyContactComponent: React.FC<ContactProps> = ({
 	contact,
 	setRoomName,
 	roomName,
+	setContactNameDisplay,
+	setContactContactDisplay,
 }) => {
 	const [isdelete, setIsDelete] = useState(false);
+
+	const [isName, setIsName] = useState(false);
 
 	return (
 		<div
 			className={
-				roomName === `${contactName}`
+				isName
 					? styles.highlightedContact
 					: styles.contactCover
 			}
 		>
 			<div
-				onClick={() => setRoomName(`${contactName}`)}
+				onClick={() => {setRoomName(`Private`), setIsName(true), setContactNameDisplay(contactName), setContactContactDisplay(contactNumber)}}
 				className={styles.enterContainer}
 			>
 				<div className={styles.ContactImgCover}>

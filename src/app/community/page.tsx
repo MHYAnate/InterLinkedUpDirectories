@@ -62,6 +62,10 @@ const router = useRouter();
 
 	const [roomState, setRoomState] = useState(`${profileDetails?.stateSelect}`);
 
+	const [contactName, setContactNameDisplay] = useState("");
+
+	const [contactContact, setContactContactDisplay] = useState("");
+
 	useEffect(() => {
 		const unsubscribe = 	onAuthStateChanged(auth, (user) => {
 
@@ -113,7 +117,7 @@ const router = useRouter();
 
 				</div>
 				<div className={styles.chat}>
-				  <Chat stateName={roomState} roomName={roomName} roomLocation={roomLocation} senderId={`${profileDetails?.docid}`} senderName={`${profileDetails?.name}`} senderPic={`${profileDetails?.src}`} user={`${profileDetails?.docid}`} />
+				  <Chat stateName={roomState} roomName={roomName} roomLocation={roomLocation} senderId={`${profileDetails?.docid}`} senderName={`${profileDetails?.name}`} senderPic={`${profileDetails?.src}`} user={`${profileDetails?.docid}`} contactName={contactName} contactContact={contactContact} />
 				</div>
 			</div>
 		</Suspense>

@@ -26,6 +26,7 @@
 	display: flex;
 	background-color: white;
 	border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
 }
 
 .categoryImgCover {
@@ -281,6 +282,9 @@
 	.titleHero {
 		margin-top: 5px;
 		margin-left: 0;
+	}
+	.flexControl{
+		box-shadow: 6px 12px rgba(0, 0, 0, 0.15); 
 	}
 }
 

@@ -54,6 +54,8 @@ interface ChatProps {
 	senderState:string;
 	senderArea:string;
 	roomName:string;
+	setContactNameDisplay:any;
+	setContactContactDisplay:any;
 }
 
 interface ContactValue {
@@ -97,6 +99,8 @@ const ChatNav: React.FC<ChatProps> = ({
 	senderState,
 	senderArea,
 	roomName,
+	setContactNameDisplay,
+	setContactContactDisplay,
 }) => {
 
 
@@ -266,7 +270,7 @@ const ChatNav: React.FC<ChatProps> = ({
 			}
 			return filteredMyContactName.map((contact)=>{
 				<div id={contact.contactId} className={styles.contactCover}>
-					<MyContactComponent contactNumber={contact.contactNumber} contactImg={contact.contactImg} contactName={contact.contactName} lastMsg={contact.lastMsg} handleDeleteContact={handleDeleteMyContact} contact={contact} setRoomName={setRoomName} roomName={roomName}  />
+					<MyContactComponent contactNumber={contact.contactNumber} contactImg={contact.contactImg} contactName={contact.contactName} lastMsg={contact.lastMsg} handleDeleteContact={handleDeleteMyContact} contact={contact} setRoomName={setRoomName} roomName={roomName} setContactNameDisplay={setContactNameDisplay} setContactContactDisplay={setContactContactDisplay} />
 				</div>
 			})
 		}

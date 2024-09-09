@@ -54,7 +54,7 @@ interface NoticeProps {
   noticeMsg:string;
 }
 
-const MyContactComponent: React.FC<NoticeProps> = ({
+const Notifications: React.FC<NoticeProps> = ({
   noticetId,
   senderId,
   senderArea,
@@ -95,6 +95,7 @@ const MyContactComponent: React.FC<NoticeProps> = ({
 						
 					</div>
 					</div>
+					<div className={styles.acceptBodyCover}></div>
 					<div className={styles.deleteBodyCover}>
 						<div onClick={()=>{
 							setIsDelete(true);
@@ -112,11 +113,11 @@ const MyContactComponent: React.FC<NoticeProps> = ({
 						<div onClick={()=>{
 							setIsDelete(false);
 						}}  className={styles.confirmDeleteNo}>No</div>
-					</div>
+					di</div>
 					
 		</div>
 	);
 };
 
-MyContactComponent.displayName = "MyContactComponent";
-export default MyContactComponent;
+Notifications.displayName = "Notifications";
+export default Notifications;

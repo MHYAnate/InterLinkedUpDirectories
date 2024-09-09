@@ -38,6 +38,8 @@ interface ChatProps {
 	senderName: string;
 	senderPic: string;
 	user: string;
+	contactName:string;
+	contactContact:string;
 }
 
 interface FormValue {
@@ -54,6 +56,8 @@ const Chat: React.FC<ChatProps> = ({
 	senderName,
 	senderPic,
 	stateName,
+	contactName,
+	contactContact,
 }) => {
 	const {
 		register,
@@ -74,10 +78,6 @@ const Chat: React.FC<ChatProps> = ({
 	const { auth, storage, database } = Firebase;
 
 	const [docId, setDocId] = useState("");
-
-	const [contactName, setContactNameDisplay] = useState("");
-
-	const [contactContact, setContactContactDisplay] = useState("");
 
 	const [inputValues, setInputValues] = useState("");
 
