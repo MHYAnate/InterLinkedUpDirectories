@@ -283,9 +283,6 @@
 		margin-top: 5px;
 		margin-left: 0;
 	}
-	.flexControl{
-		box-shadow: 6px 12px rgba(0, 0, 0, 0.15); 
-	}
 }
 
 @media screen and (max-width: 453px) {
