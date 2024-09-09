@@ -253,6 +253,7 @@
   height: max-content;
   background-image: linear-gradient(to left,  rgba(255, 255, 255, 0.1), rgba(1, 128, 1, 0.1));
   border-radius: 10px;
+  box-shadow: 0 1.5px3px rgba(0, 0, 0, 0.15);
 }
 .stockRenderCover{
   display: flex;
@@ -1051,6 +1052,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
+ }
+ .qShopbtn:hover{
+  background-color:#ee9b00;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
  }
  .vShowbtn{
   border: none;
@@ -1067,6 +1073,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
+ }
+
+ .vShowbtn:hover{
+  background-color:#ee9b00;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
  }
 
  .btnUn{
@@ -1338,6 +1350,7 @@
   border-radius: 10px;
   overflow: hidden;
   user-select: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .shopItemImg{
@@ -1345,6 +1358,7 @@
   height: 70px;
   user-select: none;
 }
+
 .showMoreDetails{
   display: flex;
   align-items: flex-start;
