@@ -24,12 +24,12 @@ export default function AboutUs() {
 					</div>
 					<p className={styles.introHeader}>Inter Linked Up Directories</p>
 					<p className={styles.introText1}>
-						We are your one-stop platform designed to streamline your workforce
+						We are your one-stop platform designed to streamline The workforce
 						experience.
 					</p>
 					<div className={styles.inHighligthTextGold}>
 						{" "}
-						Your Simplified Workforce Solution.
+						A Simplified and Comprehensive Solution.
 					</div>
 				</div>
 			</div>
