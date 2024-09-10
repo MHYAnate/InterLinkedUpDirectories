@@ -264,6 +264,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: first baseline;
+  flex-direction: row-reverse;
 }
 
 .miniDiv{
@@ -489,7 +490,8 @@
 @media screen and (max-width: 800px) {
 
   .containDiv{
-  row-gap: 100px;
+   row-gap: 100px;
+   flex-direction: column-reverse;
   }
 
   .miniDiv{
