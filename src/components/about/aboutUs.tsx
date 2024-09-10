@@ -48,49 +48,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover1}>
-					<span className={styles.cardTitleSpan}>
-						Connecting You to What Matters
-					</span>
-					<p className={styles.para}>
-						Whether you require assistance with{" "}
-						<span className={styles.inHighligthTextGreen}>
-							automotive maintenance and repair, home improvement projects, or
-							personalized services
-						</span>
-						,
-					</p>{" "}
-					<p className={styles.para}>
-						<span className={styles.inHighligthTextBoldGreen}>
-							{" "}
-							Inter Linked Up Directories
-						</span>{" "}
-						has you covered. We connect you with qualified vendors, available
-						vacancies, and a user-friendly marketplace to address a wide range
-						of needs .
-					</p>
-					<span className={styles.inHighligthTextGold}>
-						{" "}
-						all tailored to your specific requirements
-					</span>
-				</div>
-			</div>
-
-			<div className={styles.rightContainer2}>
-				<div className={styles.rightImg2Cover}>
-					<Image
-						object-fit="cover"
-						className={styles.img2}
-						alt="Picture of the author"
-						quality={100}
-						width={100}
-						height={100}
-						src="/service/who.jpg"
-						priority={true}
-						unoptimized
-					/>
-				</div>
-				<div className={styles.rightTextCover2}>
-					<span className={styles.cardTitleSpan}>Our Services Cater for</span>
+				<span className={styles.cardTitleSpan}>Our Services Cater for</span>
 					<ol className={styles.para}>
 						<li>
 							<span className={styles.highlightedi}>Job Seekers</span> Find your
@@ -119,7 +77,6 @@ export default function AboutUs() {
 					</ol>
 				</div>
 			</div>
-
 			<div className={styles.containDiv}>
       
 				<div className={styles.miniDiv}>
@@ -482,7 +439,7 @@ export default function AboutUs() {
       <div className={styles.containDiv}>
       
       <div className={styles.miniDiv}>
-      <span className={styles.highlighted}>Post Individual Vacancies:</span>
+      <span className={styles.highlighted}>Post Individual Vacancies</span>
       <p>	Quickly list specific open positions with clear descriptions and requirements.</p>
       
         <Image
@@ -498,7 +455,7 @@ export default function AboutUs() {
         />
       </div>
       <div className={styles.miniDiv}>
-      <span className={styles.highlighted}>Build Your Company Profile:</span>
+      <span className={styles.highlighted}>Build Your Company Profile</span>
       <p>Showcase your company culture, values, and career opportunities to attract top talent.</p>
       
         <Image
@@ -514,7 +471,7 @@ export default function AboutUs() {
         />
       </div>
       <div className={styles.miniDiv}>
-      <span className={styles.highlighted}>Vast Job Search:</span>
+      <span className={styles.highlighted}>Vast Job Search</span>
       <p>	Explore a comprehensive database of job opportunities across diverse industries and locations.</p>
       
         <Image
