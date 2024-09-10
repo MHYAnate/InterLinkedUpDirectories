@@ -205,6 +205,33 @@ const Chat: React.FC<ChatProps> = ({
 		vAssist.current?.scrollIntoView({ behavior: "smooth" });
 	};
 
+ const checkMsg = massages? massages: [];
+
+	const filteredMessageRoom =
+	checkMsg?.length > 0
+		? checkMsg.filter((eachItem) => {
+				const text = eachItem.roomName.toLowerCase();
+				return text.includes(roomName);
+			})
+		: [];
+		
+	const filteredMessageState =
+		filteredMessageRoom?.length > 0
+			? filteredMessageRoom.filter((eachItem) => {
+					const text = eachItem.contactName.toLowerCase();
+					return text.includes(stateName);
+				})
+			: [];
+
+			const filteredMessageLocation =
+			filteredMessageState?.length > 0
+				? filteredMessageState.filter((eachItem) => {
+						const text = eachItem.roomLocation.toLowerCase();
+						return text.includes(roomLocation);
+					})
+				: [];
+	
+
 	
 	return (
 		<div className={styles.chatMsgContainer}>

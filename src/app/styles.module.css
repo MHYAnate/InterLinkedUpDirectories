@@ -39,7 +39,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 98vw;
-  min-height: 530px;
+  min-height: 580px;
   max-height: fit-content;
 }
 /* .navHolder{
@@ -81,7 +81,7 @@
 
 .categoryCover{
   width: 98vw;
-  height: fit-content;
+  min-height: 666px;
   display: flex;
   align-items: first baseline;
   justify-content: space-around;
@@ -98,7 +98,7 @@
 
 .coverJobsMarket{
   width: 67vw;
-  height: fit-content;
+  min-height: 666px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,11 +261,13 @@
     height: max-content;
   }
   .categoryCover{
+    min-height: max-content;
    flex-direction: column-reverse;
   }
   .coverJobsMarket{
     width: 98vw;
     border-left: none;
+    min-height: fit-content;
   }
   .coverSelectJobsMarket{
     width: 98vw;

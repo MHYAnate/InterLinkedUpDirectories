@@ -282,13 +282,13 @@ const ChatNav: React.FC<ChatProps> = ({
 			const docRef = await addDoc(myConnectRef, {
 				contactId: `${data.contactId}`,
 				contactNumber: `${data.contactNumber}`,
-				// contactImg: `${data.}`,
-				// contactName: `${data.}`,
-				// contactAddress: `${data.}`,
-				// stateSelect: `${data.}`,
-				// areaSelect: `${data.}`,
-				// lastMsg: `${data.}`,
-				// docid: `${data.}`,
+				contactImg: `${data.contactImg}`,
+				contactName: `${data.	contactName}`,
+				contactAddress: `${data.contactAddress}`,
+				stateSelect: `${data.stateSelect}`,
+				areaSelect: `${data.areaSelect}`,
+				lastMsg: `${data.lastMsg}`,
+				docid: `${data.docid}`,
 			});
 			const docId = docRef.id;
 
