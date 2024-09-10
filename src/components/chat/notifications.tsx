@@ -41,81 +41,120 @@ import styles from "./styles.module.css";
 import ChatMessage from "./chatMessage";
 
 interface NoticeProps {
-  noticetId:string;
-  senderId:string;
-  senderArea:string;
-  senderName:string;
-  senderPic:string;
-  senderState:string;
-  seen:string;
-  status:string;
-  requesteeId:string;
-  noticeType:string;
-  noticeMsg:string;
+	noticetId: string;
+	senderId: string;
+	senderArea: string;
+	senderName: string;
+	senderPic: string;
+	senderState: string;
+	seen: string;
+	status: string;
+	requesteeId: string;
+	noticeType: string;
+	noticeMsg: string;
+	handleDeleteRequest: any;
+	contact: any;
 }
 
 const Notifications: React.FC<NoticeProps> = ({
-  noticetId,
-  senderId,
-  senderArea,
-  senderName,
-  senderPic,
-  senderState,
-  seen,
+	noticetId,
+	senderId,
+	senderArea,
+	senderName,
+	senderPic,
+	senderState,
+	seen,
 	status,
-  requesteeId,
+	requesteeId,
+	handleDeleteRequest,
+	contact,
+	noticeType,
 }) => {
+	const [isDelete, setIsDelete] = useState(false);
 
-	const [isdelete, setIsDelete] = useState(false);
+	const [isAccept, setIsAccept] = useState(false);
 
 	return (
-		<div className={ styles.highlightedContact}>
-			<div  className={styles.enterContainer}>
-			<div className={styles.ContactImgCover}>
-					<Image
-						className={styles.contactImg}
-						src={`${senderPic}`}
-						alt={`${ senderName}`}
-						quality={100}
-						width={500}
-						height={500}
-						// unoptimized
-					/>
-					</div>
-					<div className={styles.contactDetail}>
-						<div className={styles.ContactName}>
-							{senderName}
+		<>
+			{noticeType === `request` && (
+				<div className={styles.highlightedContact}>
+					<div className={styles.enterContainer}>
+						<div className={styles.ContactImgCover}>
+							<Image
+								className={styles.contactImg}
+								src={`${senderPic}`}
+								alt={`${senderName}`}
+								quality={100}
+								width={500}
+								height={500}
+								// unoptimized
+							/>
 						</div>
-            <div className={styles.ContactName}>
-							{senderState}
+						<div className={styles.contactDetail}>
+							<div className={styles.ContactName}>{senderName}</div>
+							<div className={styles.ContactName}>{senderState}</div>
+							<div className={styles.lastMsg}>{senderArea}</div>
 						</div>
-						<div className={styles.lastMsg}>
-							{senderArea}
+					</div>
+					<div className={styles.acceptBodyCover}>
+					<div
+							onClick={() => {
+								setIsAccept(true);
+							}}
+							className={isAccept ? styles.hide : styles.deleteContact}
+						>
+							<span> Accept Connection</span>
+							<RemoveUserSvg />
 						</div>
-						
+						<div className={isAccept ? styles.deleteCover : styles.hide}></div>
+						<div
+							onClick={() => {
+								handleDeleteRequest(contact);
+							}}
+							className={styles.confirmDelete}
+						>
+							Yes
+						</div>
+						<div
+							onClick={() => {
+								setIsAccept(false);
+							}}
+							className={styles.confirmDeleteNo}
+						>
+							No
+						</div>
 					</div>
-					</div>
-					<div className={styles.acceptBodyCover}></div>
 					<div className={styles.deleteBodyCover}>
-						<div onClick={()=>{
-							setIsDelete(true);
-						}} className={isdelete?styles.hide:styles.deleteContact}>
-							<span>Delete Contact</span>
-							<RemoveUserSvg/>
+						<div
+							onClick={() => {
+								setIsDelete(true);
+							}}
+							className={isDelete ? styles.hide : styles.deleteContact}
+						>
+							<span>Reject Connection</span>
+							<RemoveUserSvg />
 						</div>
-						<div className={isdelete?styles.deleteCover:styles.hide}>
-
+						<div className={isDelete ? styles.deleteCover : styles.hide}></div>
+						<div
+							onClick={() => {
+								handleDeleteRequest(contact);
+							}}
+							className={styles.confirmDelete}
+						>
+							Yes
 						</div>
-						<div onClick={()=>{
-							// handleDeleteContact(contact);
-							// setIsDelete(false);
-						}}  className={styles.confirmDelete}>Yes</div>
-						<div onClick={()=>{
-							setIsDelete(false);
-						}}  className={styles.confirmDeleteNo}>No</div>
-					di</div>
-					
-		</div>
+						<div
+							onClick={() => {
+								setIsDelete(false);
+							}}
+							className={styles.confirmDeleteNo}
+						>
+							No
+						</div>
+					</div>
+				</div>
+			)}
+		</>
 	);
 };
 

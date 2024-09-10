@@ -51,35 +51,36 @@ interface ChatProps {
 	senderName: string;
 	senderPic: string;
 	user: string;
-	senderState:string;
-	senderArea:string;
-	roomName:string;
+	senderState: string;
+	senderArea: string;
+	roomName: string;
 }
 
 interface ContactValue {
 	contactRoomId: string;
 	contactId: string;
-	contactNumber:string;
-	contactImg:string;
-	contactName:string;
-	contactAddress:string;
+	contactNumber: string;
+	contactImg: string;
+	contactName: string;
+	contactAddress: string;
 	stateSelect: string;
 	areaSelect: string;
-	lastMsg:string;
-	docid:string;
+	lastMsg: string;
+	docid: string;
 }
 
-
 interface noticeValue {
-  noticetId:string;
-  senderId:string;
-  senderArea:string;
-  senderName:string;
-  senderPic:string;
-  senderState:string;
-  seen:string;
-  status:string;
-  requesteeId:string;
+	noticetId: string;
+	senderId: string;
+	senderArea: string;
+	senderName: string;
+	senderPic: string;
+	senderState: string;
+	seen: string;
+	status: string;
+	requesteeId: string;
+	noticeType:string;
+  noticeMsg:string;
 }
 
 interface RetrievedContactValue {
@@ -89,7 +90,7 @@ interface RetrievedContactValue {
 	stateSelect: string;
 	areaSelect: string;
 	src: string;
-	docid:string;
+	docid: string;
 }
 
 interface FormValue {
@@ -109,17 +110,13 @@ const ChatNav: React.FC<ChatProps> = ({
 	senderArea,
 	roomName,
 }) => {
-
-
 	const {
 		register,
 		watch,
-		formState: {
-	
-		},
+		formState: {},
 	} = useForm<FormValue>({
 		defaultValues: {
-      noticeSelect:"",
+			noticeSelect: "",
 			stateSelect: "",
 			areaSelect: "",
 		},
@@ -138,43 +135,43 @@ const ChatNav: React.FC<ChatProps> = ({
 	const [SelectArea, setSelectArea] = useState(selectArea);
 
 	const stateValue =
-	typeof document !== "undefined"
-		? (document.querySelector('[name="stateSelect"]') as HTMLInputElement)
-				?.value || ""
-		: "";
+		typeof document !== "undefined"
+			? (document.querySelector('[name="stateSelect"]') as HTMLInputElement)
+					?.value || ""
+			: "";
 
-		const AreaList = StateData.find(
-			(areaList) => areaList.name === `${stateValue}`
-		);
+	const AreaList = StateData.find(
+		(areaList) => areaList.name === `${stateValue}`
+	);
 
-		function renderAvailableStates() {
-			if (!StateData) {
-				// Return a message or component indicating that the "Maintenance" category is not found
-				return null;
-			}
-	
-			return StateData.map((state) => (
-				<option
-					className={styles.renderCover}
-					key={state.name}
-					value={state.name}
-				>
-					{state.name}
-				</option>
-			));
+	function renderAvailableStates() {
+		if (!StateData) {
+			// Return a message or component indicating that the "Maintenance" category is not found
+			return null;
 		}
-	
-		function renderAvailableAreas() {
-			if (!AreaList) {
-				// Return a message or component indicating that the "Maintenance" category is not found
-				return null;
-			}
-			return AreaList.areaList.map((area) => (
-				<option className={styles.renderCover} key={area.id} value={area.name}>
-					{area.name}
-				</option>
-			));
+
+		return StateData.map((state) => (
+			<option
+				className={styles.renderCover}
+				key={state.name}
+				value={state.name}
+			>
+				{state.name}
+			</option>
+		));
+	}
+
+	function renderAvailableAreas() {
+		if (!AreaList) {
+			// Return a message or component indicating that the "Maintenance" category is not found
+			return null;
 		}
+		return AreaList.areaList.map((area) => (
+			<option className={styles.renderCover} key={area.id} value={area.name}>
+				{area.name}
+			</option>
+		));
+	}
 
 	const [switched, setSwitched] = useState("myContact");
 
@@ -191,14 +188,12 @@ const ChatNav: React.FC<ChatProps> = ({
 		setSearchName(event.target.value);
 		// handleSuggestionClick;
 	};
-	
 
 	const { auth, storage, database } = Firebase;
 
 	const noticeRef = collection(database, `notice`);
 
-
-	const [noticeDetail, setNoticeDetail] = useState< noticeValue[]>([]);
+	const [noticeDetail, setNoticeDetail] = useState<noticeValue[]>([]);
 
 	const handleGetContactDetail = async () => {
 		try {
@@ -209,9 +204,9 @@ const ChatNav: React.FC<ChatProps> = ({
 				return;
 			}
 
-			const retrievedData:  noticeValue[] = [];
+			const retrievedData: noticeValue[] = [];
 			querySnapshot.forEach((doc) => {
-				const docData = doc.data() as  noticeValue;
+				const docData = doc.data() as noticeValue;
 				retrievedData.push(docData);
 			});
 			setNoticeDetail(retrievedData);
@@ -225,89 +220,97 @@ const ChatNav: React.FC<ChatProps> = ({
 	}),
 		[];
 
-		const handleDeleteMyContact = async (data:  noticeValue) => {
-			try {
-				await deleteDoc(doc(noticeRef, data.noticetId)).then(() => {
-	
-					
-				});
-			} catch (error) {
-				console.error("Error adding profile detail:", error);
-			}
-		};
-
-		const filteredMyContactState= noticeDetail?.length > 0
-		? noticeDetail.filter((eachItem) => {
-			const text = eachItem.senderState.toLowerCase();
-			return (SelectState !==(null || undefined|| "" || "Select State")?text.includes(SelectState.toLowerCase()):text );
-		}):[];
-	
-		const filteredMyContactarea = filteredMyContactState?.length > 0 ?filteredMyContactState.filter((eachItem) => {
-			const text = eachItem.senderArea.toLowerCase();
-			return (SelectArea !==(null || undefined|| "" || "Select Area")?text.includes(SelectArea.toLowerCase()):text );
-		}):[];
-
-    const filteredNoticeType = filteredMyContactarea?.length > 0 ?filteredMyContactarea.filter((eachItem) => {
-			const text = eachItem.senderArea.toLowerCase();
-			return (SelectArea !==(null || undefined|| "" || "Select Area")?text.includes(SelectArea.toLowerCase()):text );
-		}):[];
-
-
-		
-
-		const  RenderMyContact:any=()=>{
-			if(noticeDetail.length === 0){
-				return(
-					<div>
-						<div>You Have No Available Contact</div>
-					</div>
-				)
-			}
-			return filteredNoticeType.map((notice)=>{
-				<div id={notice.noticetId} className={styles.contactCover}>
-					
-				</div>
-			})
+	const handleDeleteRequest = async (data: noticeValue) => {
+		try {
+			await deleteDoc(doc(noticeRef, data.noticetId)).then(() => {});
+		} catch (error) {
+			console.error("Error adding profile detail:", error);
 		}
+	};
 
-	
+	const filteredMyContactState =
+		noticeDetail?.length > 0
+			? noticeDetail.filter((eachItem) => {
+					const text = eachItem.senderState.toLowerCase();
+					return SelectState !== (null || undefined || "" || "Select State")
+						? text.includes(SelectState.toLowerCase())
+						: text;
+			  })
+			: [];
 
+	const filteredMyContactarea =
+		filteredMyContactState?.length > 0
+			? filteredMyContactState.filter((eachItem) => {
+					const text = eachItem.senderArea.toLowerCase();
+					return SelectArea !== (null || undefined || "" || "Select Area")
+						? text.includes(SelectArea.toLowerCase())
+						: text;
+			  })
+			: [];
 
-				const ContactRequest = async (data:RetrievedContactValue) => {
-					try {
-						const docRef = await addDoc(noticeRef, {
-							noticetId: "",
-							senderId: `${senderId}`,
-							senderArea: `${senderArea}`,
-							senderName: `${senderName}`,
-							senderPic: `${senderPic}`,
-							senderState: `${senderState}`,
-							seen: "notSeen",
-							status:"pending",
-							requesteeId: `${data.docid}`,
-              noticeType:`request`,
-              noticeMsg:`connection request`
-						});
-						const docId = docRef.id;
-						
-						await setDoc(
-							doc(noticeRef, docId),
-							{
-								noticetId: docId,
-							},
-							{ merge: true }
-						);
-			
-						console.log("Profile detail added successfully");
-					} catch (error) {
-						console.error("Error adding profile detail:", error);
-					}
-				};
+	const filteredNoticeType =
+		filteredMyContactarea?.length > 0
+			? filteredMyContactarea.filter((eachItem) => {
+					const text = eachItem.senderArea.toLowerCase();
+					return SelectArea !== (null || undefined || "" || "Select Area")
+						? text.includes(SelectArea.toLowerCase())
+						: text;
+			  })
+			: [];
 
+	const RenderMyContact: any = () => {
+		if (noticeDetail.length === 0) {
+			return (
+				<div>
+					<div>You Have No Available Contact</div>
+				</div>
+			);
+		}
+		return filteredNoticeType.map((notice) => {
+			<div id={notice.noticetId} className={styles.contactCover}></div>;
+		});
+	};
 
-		const profileDetailRef = collection(database, `profile`);
+	const myConnectRef = collection(database, `connection-${senderId}`);
 
-	const [retrivedContact, setRetrivedContact] = useState<RetrievedContactValue[]>([]);
+	const contactQuery = query(myConnectRef);
+
+	const [contactDetails, setContactDetails] = useState<noticeValue[]>([]);
+
+	const confirmRequestA = async (data: ContactValue) => {
+		try {
+			const docRef = await addDoc(myConnectRef, {
+				contactId: `${data.contactId}`,
+				contactNumber: `${data.contactNumber}`,
+				// contactImg: `${data.}`,
+				// contactName: `${data.}`,
+				// contactAddress: `${data.}`,
+				// stateSelect: `${data.}`,
+				// areaSelect: `${data.}`,
+				// lastMsg: `${data.}`,
+				// docid: `${data.}`,
+			});
+			const docId = docRef.id;
+
+			await setDoc(
+				doc(noticeRef, docId),
+				{
+					noticetId: docId,
+				},
+				{ merge: true }
+			);
+
+			console.log("Profile detail added successfully");
+		} catch (error) {
+			console.error("Error adding profile detail:", error);
+		}
+	};
+
+	const profileDetailRef = collection(database, `profile`);
+
+	const [retrivedContact, setRetrivedContact] = useState<
+		RetrievedContactValue[]
+	>([]);
 
 	const handleGetProfileDetail = async () => {
 		try {
@@ -333,92 +336,145 @@ const ChatNav: React.FC<ChatProps> = ({
 		handleGetProfileDetail();
 	}, []);
 
-	const filteredContactState= retrivedContact?.length > 0
-		? retrivedContact.filter((eachItem) => {
-			const text = eachItem.stateSelect.toLowerCase();
-			return (SelectState !==(null || undefined|| "" || "Select State")?text.includes(SelectState.toLowerCase()):text );
-		}):[];
-	
-		const filteredContactarea = filteredContactState?.length > 0 ?filteredContactState.filter((eachItem) => {
-			const text = eachItem.areaSelect.toLowerCase();
-			return (SelectArea !==(null || undefined|| "" || "Select Area")?text.includes(SelectArea.toLowerCase()):text );
-		}):[];
+	const filteredContactState =
+		retrivedContact?.length > 0
+			? retrivedContact.filter((eachItem) => {
+					const text = eachItem.stateSelect.toLowerCase();
+					return SelectState !== (null || undefined || "" || "Select State")
+						? text.includes(SelectState.toLowerCase())
+						: text;
+			  })
+			: [];
 
-		const filteredContactAddres =
+	const filteredContactarea =
+		filteredContactState?.length > 0
+			? filteredContactState.filter((eachItem) => {
+					const text = eachItem.areaSelect.toLowerCase();
+					return SelectArea !== (null || undefined || "" || "Select Area")
+						? text.includes(SelectArea.toLowerCase())
+						: text;
+			  })
+			: [];
+
+	const filteredContactAddres =
 		filteredContactarea?.length > 0
 			? filteredContactarea.filter((eachItem) => {
 					const text = eachItem.address.toLowerCase();
 					return text.includes(searchInput);
 			  })
 			: [];
-			
-		const filteredContactName =
-			filteredContactAddres?.length > 0
-				? filteredContactAddres.filter((eachItem) => {
-						const text = eachItem.name.toLowerCase();
-						return text.includes(searchName);
-					})
-				: [];
 
-				const  RenderContact: any=()=>{
-					if(noticeDetail.length === 0){
-						return(
-							<div>
-								<div> No Available Contact</div>
-							</div>
-						)
-					}
-					return filteredContactName.map((contact)=>{
-						<div id={contact.docid} className={styles.contactCover}>
-							<ContactComponent contactImg={contact.src} contactName={contact.name} handleRequestContact={ContactRequest} contact={contact}/>
-						</div>
-					})
-				}
+	const filteredNameTitle =
+		filteredContactAddres?.length > 0
+			? filteredContactAddres.filter((eachItem) => {
+					const text = eachItem.name.toLowerCase();
+					return text.includes(searchName);
+			  })
+			: [];
 
-				
+	const RenderNotice: any = () => {
+		if (noticeDetail.length === 0) {
+			return (
+				<div>
+					<div> No Available Contact</div>
+				</div>
+			);
+		}
+		return filteredNameTitle.map((notice) => {
+			<div id={notice.docid} className={styles.contactCover}></div>;
+		});
+	};
+
 	return (
 		<div className={styles.chatNavContainer}>
 			<div className={styles.filterCover}>
 				<form className={styles.filterContact}>
-				<div className={styles.selectCover}>
-						<select value={SelectState !==(undefined || null) ? SelectState:"Select State" } className={styles.select} {...register("stateSelect")}>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								SelectState !== (undefined || null)
+									? SelectState
+									: "Select State"
+							}
+							className={styles.select}
+							{...register("stateSelect")}
+						>
 							<option className={styles.option} value="Select State">
-							Select State
+								Select State
 							</option>
 							{renderAvailableStates()}
 						</select>
 					</div>
-				<div className={styles.selectCover}>
-						<select value={SelectArea!==(undefined || null)? SelectArea:(SelectState?"": "Select Area")} className={styles.select} {...register("areaSelect")}>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								SelectArea !== (undefined || null)
+									? SelectArea
+									: SelectState
+									? ""
+									: "Select Area"
+							}
+							className={styles.select}
+							{...register("areaSelect")}
+						>
 							<option className={styles.option} value="Select Area">
-							Select Area
+								Select Area
 							</option>
 							{SelectState === `${stateValue}` && renderAvailableAreas()}
 						</select>
 					</div>
-          <div className={styles.selectCover}>
-						<select value={SelectArea!==(undefined || null)? SelectArea:(SelectState?"": "Select Area")} className={styles.select} {...register("areaSelect")}>
+					<div className={styles.selectCover}>
+						<select
+							value={
+								SelectArea !== (undefined || null)
+									? SelectArea
+									: SelectState
+									? ""
+									: "Select Area"
+							}
+							className={styles.select}
+							{...register("areaSelect")}
+						>
 							<option className={styles.option} value="Select Area">
-							Select Area
+								Select Area
 							</option>
 							{SelectState === `${stateValue}` && renderAvailableAreas()}
 						</select>
 					</div>
 				</form>
 			</div>
-			
+
 			<div className={styles.contactCover}></div>
 			<div className={styles.contactCover}>
-				<div className={switched==="myContact"?styles.displayMyContact: styles.hide} onClick={()=>{
-					switched !== "myContact" ? ( setSwitched("myContact"), setSelectArea(""), setSearchInput(""), setSearchName("")): setSwitched("");
-				
-				}}>
-          <RenderMyContact/>
+				<div
+					className={
+						switched === "myContact" ? styles.displayMyContact : styles.hide
+					}
+					onClick={() => {
+						switched !== "myContact"
+							? (setSwitched("myContact"),
+							  setSelectArea(""),
+							  setSearchInput(""),
+							  setSearchName(""))
+							: setSwitched("");
+					}}
+				>
+					<RenderMyContact />
 				</div>
-				<div className={switched==="contact"?styles.displayMyContact: styles.hide} onClick={()=>{
-					switched !== "contact" ? ( setSwitched("contact"), setSelectArea(""), setSearchInput(""), setSearchName("")): setSwitched("");
-				}}>
-          <RenderContact/>
+				<div
+					className={
+						switched === "contact" ? styles.displayMyContact : styles.hide
+					}
+					onClick={() => {
+						switched !== "contact"
+							? (setSwitched("contact"),
+							  setSelectArea(""),
+							  setSearchInput(""),
+							  setSearchName(""))
+							: setSwitched("");
+					}}
+				>
+					<RenderNotice />
 				</div>
 			</div>
 		</div>

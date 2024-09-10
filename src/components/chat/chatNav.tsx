@@ -59,7 +59,6 @@ interface ChatProps {
 }
 
 interface ContactValue {
-	contactRoomId: string;
 	contactId: string;
 	contactNumber:string;
 	contactImg:string;
@@ -84,7 +83,6 @@ interface RetrievedContactValue {
 interface FormValue {
 	name: string;
 	address: string;
-	number: string;
 	stateSelect: string;
 	areaSelect: string;
 }
@@ -189,17 +187,17 @@ const ChatNav: React.FC<ChatProps> = ({
 
 	const { auth, storage, database } = Firebase;
 
-	const chatDetailRef = collection(database, `chatContact-${senderId}`);
+	const myConnectRef = collection(database, `connection-${senderId}`);
 
 	const contactQuery = query(
-		chatDetailRef
+		myConnectRef
 	);
 
 	const [contactDetails, setContactDetails] = useState<ContactValue[]>([]);
 
 	const handleGetContactDetail = async () => {
 		try {
-			const querySnapshot = await getDocs(contactQuery);
+			const querySnapshot = await getDocs(myConnectRef);
 
 			if (querySnapshot.empty) {
 				console.log("No profile details found");
@@ -224,7 +222,7 @@ const ChatNav: React.FC<ChatProps> = ({
 
 		const handleDeleteMyContact = async (data: ContactValue) => {
 			try {
-				await deleteDoc(doc(chatDetailRef, data.docid)).then(() => {
+				await deleteDoc(doc(myConnectRef, data.docid)).then(() => {
 	
 					
 				});
@@ -278,7 +276,7 @@ const ChatNav: React.FC<ChatProps> = ({
 		const noticeRef = collection(database, `notice`);
 
 
-				const ContactRequest = async (data:RetrievedContactValue) => {
+				const ConnectionRequest = async (data:RetrievedContactValue) => {
 					try {
 						const docRef = await addDoc(noticeRef, {
 							requestId: "",
@@ -289,12 +287,14 @@ const ChatNav: React.FC<ChatProps> = ({
 							senderState: `${senderState}`,
 							seen: "notSeen",
 							status:"pending",
-							requesteeId: `${data.docid}`
+							requesteeId: `${data.docid}`,
+							noticeType:`request`,
+              noticeMsg:`connection request`
 						});
 						const docId = docRef.id;
 						
 						await setDoc(
-							doc(chatDetailRef, docId),
+							doc(noticeRef, docId),
 							{
 								requestId: docId,
 							},
@@ -373,7 +373,7 @@ const ChatNav: React.FC<ChatProps> = ({
 					}
 					return filteredContactName.map((contact)=>{
 						<div id={contact.docid} className={styles.contactCover}>
-							<ContactComponent contactImg={contact.src} contactName={contact.name} handleRequestContact={ContactRequest} contact={contact}/>
+							<ContactComponent contactImg={contact.src} contactName={contact.name} handleRequestContact={ConnectionRequest} contact={contact}/>
 						</div>
 					})
 				}
@@ -433,7 +433,7 @@ const ChatNav: React.FC<ChatProps> = ({
           <RenderMyContact/>
 				</div>
 				<div className={switched==="contact"?styles.displayMyContact: styles.hide} onClick={()=>{
-					switched !== "contact" ? ( setSwitched("contact"), setSelectArea(""), setSearchInput(""), setSearchName("")): setSwitched("");
+					switched !== "contact" ? (setSwitched("contact"), setSelectArea(""), setSearchInput(""), setSearchName("")): setSwitched("");
 				}}>
           <RenderContact/>
 				</div>

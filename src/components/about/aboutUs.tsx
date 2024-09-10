@@ -315,7 +315,7 @@ export default function AboutUs() {
 				</div>
 				<div className={styles.rightTextCover1}>
         <span className={styles.cardTitleSpan}>
-							Comprehensive Vendor Space:
+							Comprehensive Vendor Space
 						</span>
             <p className={styles.para}>
 						Our directory boasts a diverse range of vendors categorized into
@@ -330,7 +330,7 @@ export default function AboutUs() {
       <div className={styles.containDiv}>
       
 				<div className={styles.miniDiv}>
-        <span className={styles.highlighted}>Personal Service Category</span>
+        <span className={styles.highlighted}>Other Personal Service Category</span>
         <p>This category encompasses a wide range of personal services tailored to meet your individual needs. Whether you&lsquo;re looking for home lessons, maid services, laundry services, or any other personalized service, our directory provides comprehensive listings with vendors&lsquo; names, addresses, and phone numbers.</p>
         
 					<Image
@@ -395,7 +395,7 @@ export default function AboutUs() {
 				</div>
 				<div className={styles.leftTextCover1}>
         <span className={styles.cardTitleSpan}>
-        Robust Market space:
+        Robust Market space
 						</span>
             <p className={styles.para}>
             Our Robust Market space empower individuals and businesses to connect and thrive through seamless buying, selling, and leasing experience 
@@ -471,7 +471,7 @@ export default function AboutUs() {
 				</div>
 				<div className={styles.rightTextCover2}>
         <span className={styles.cardTitleSpan}>
-        Extensive Job Board:
+        Extensive Job Board
 						</span>
             <p className={styles.para}>
             We connect talented individuals with exciting opportunities, empowering businesses of all sizes to build their dream teams.
