@@ -206,6 +206,9 @@
 		text-align: left;
 		margin-left: 15vw;
 	}
+	.callToAction{
+		margin-top: 15px;
+	}
 }
 
 @media screen and (max-width: 832px) {
