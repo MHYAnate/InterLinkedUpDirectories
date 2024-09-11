@@ -157,7 +157,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: cursive;
+	font-family: "NerkoOne";
 	background-color: #F39C12;/* Primary Green */
 	color: white;
 	padding: 10px 20px;
@@ -166,10 +166,9 @@
 	border-radius: 25px; /* Rounded corners */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 24px;
 	transition: all 0.3s ease; /* Smooth transition */
 	text-transform: uppercase;
-	font-weight: bold;
 }
 
 .registerBtn:hover {
@@ -254,12 +253,7 @@
 		font-size: 2.2rem;
 	}
 
-	.toWhat {
-		font-size: 2rem;
-	}
-	.matters {
-		font-size: 2rem;
-	}
+
 }
 @media screen and (max-width: 620px) {
 	.categoryImgCover {
@@ -293,7 +287,7 @@
 		font-size: 1.5rem;
 	}
 	.registerBtn {
-		font-size: 1.2rem;
+		font-size: 24px;
 	}
 }
 
@@ -304,6 +298,12 @@
 	.titleHero {
 		margin-top: 5px;
 		margin-left: 0;
+	}
+	.toWhat {
+		font-size: 1.7rem;
+	}
+	.matters {
+		font-size: 1.7rem;
 	}
 }
 
@@ -332,10 +332,10 @@
 	}
 
 	.toWhat {
-		font-size: 1.2rem;
+		font-size: 1.7rem;
 	}
 	.matters {
-		font-size: 1.2rem;
+		font-size: 1.7rem;
 	}
 }
 
