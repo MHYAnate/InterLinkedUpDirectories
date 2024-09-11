@@ -42,6 +42,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
 import ChatMessage from "./chatMessage";
+import ChatNotice from "./chatNotice";
 
 interface ChatProps {
 	setStateName: string;
@@ -85,6 +86,20 @@ interface FormValue {
 	address: string;
 	stateSelect: string;
 	areaSelect: string;
+}
+
+interface noticeValue {
+	noticetId: string;
+	senderId: string;
+	senderArea: string;
+	senderName: string;
+	senderPic: string;
+	senderState: string;
+	seen: string;
+	status: string;
+	requesteeId: string;
+	noticeType:string;
+  noticeMsg:string;
 }
 
 const ChatNav: React.FC<ChatProps> = ({
@@ -279,7 +294,7 @@ const ChatNav: React.FC<ChatProps> = ({
 				const ConnectionRequest = async (data:RetrievedContactValue) => {
 					try {
 						const docRef = await addDoc(noticeRef, {
-							requestId: "",
+							noticetId: "",
 							senderId: `${senderId}`,
 							senderArea: `${senderArea}`,
 							senderName: `${senderName}`,
@@ -296,7 +311,7 @@ const ChatNav: React.FC<ChatProps> = ({
 						await setDoc(
 							doc(noticeRef, docId),
 							{
-								requestId: docId,
+								noticetId: docId,
 							},
 							{ merge: true }
 						);
@@ -378,6 +393,47 @@ const ChatNav: React.FC<ChatProps> = ({
 					})
 				}
 
+				const [noticeDetails, setNoticeDetails] = useState<noticeValue[]>([]);
+
+				const handleGetNotifications = async () => {
+					try {
+						const querySnapshot = await getDocs(myConnectRef);
+			
+						if (querySnapshot.empty) {
+							console.log("No profile details found");
+							return;
+						}
+			
+						const retrievedData: noticeValue[] = [];
+						querySnapshot.forEach((doc) => {
+							const docData = doc.data() as noticeValue;
+							retrievedData.push(docData);
+						});
+						setNoticeDetails(retrievedData);
+					} catch (error) {
+						console.error("Error getting profile detail:", error);
+					}
+				};
+
+				useEffect(() => {
+					handleGetNotifications();
+				}, []);
+
+				const  RenderNotice: any=()=>{
+					if(noticeDetails.length === 0){
+						return(
+							<div>
+								<div> No Available Contact</div>
+							</div>
+						)
+					}
+					return noticeDetails.map((notice)=>{
+						<div id={notice.noticetId} className={styles.contactCover}>
+							<ChatNotice senderId={notice.senderId} senderName={notice.senderName} 	senderPic={notice.senderPic} senderState={notice.senderState} senderArea={notice.senderArea} requesteeId={notice.requesteeId}  />
+						</div>
+					})
+				}
+
 				
 	return (
 		<div className={styles.chatNavContainer}>
@@ -424,7 +480,9 @@ const ChatNav: React.FC<ChatProps> = ({
 				</form>
 			</div>
 			
-			<div className={styles.contactCover}></div>
+			<div className={styles.contactCover}>
+				
+			</div>
 			<div className={styles.contactCover}>
 				<div className={switched==="myContact"?styles.displayMyContact: styles.hide} onClick={()=>{
 					switched !== "myContact" ? ( setSwitched("myContact"), setSelectArea(""), setSearchInput(""), setSearchName("")): setSwitched("");

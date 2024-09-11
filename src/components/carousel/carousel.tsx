@@ -3,6 +3,9 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
 import Pagination from "@/components/btn/paginationBtn";
+import MaintainacSvg from "@/components/btn/maintainersSvg";
+import AutomotiveSvg from "@/components/btn/automotiveSvg";
+import OthersSvg from "@/components/btn/othersSvg";
 
 interface CarouselProps {
 	Services: {
@@ -337,7 +340,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 							setAutomativeHover(true);
 						}}
 					>
-						<span className={styles.catSpan}> {Services[0].category}</span>
+						<AutomotiveSvg state={automativeHover}/><span className={styles.catSpan}> {Services[0].category}</span>
 					</div>
 					<div
 						onClick={() => {
@@ -354,7 +357,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 							setMaintainaceHover(true);
 						}}
 					>
-						<span className={styles.catSpan}> {Services[1].category}</span>
+						<MaintainacSvg state={maintainaceHover}/><span className={styles.catSpan}> {Services[1].category}</span>
 					</div>
 					<div
 						onClick={() => {
@@ -371,7 +374,7 @@ const Carousel: React.FC<CarouselProps> = memo(({ Services }) => {
 							setPeronalHover(true);
 						}}
 					>
-						<span className={styles.catSpan}> {Services[2].category}</span>
+						<OthersSvg state={peronalHover}/><span className={styles.catSpan}> {Services[2].category}</span>
 					</div>
 				</div>
 				<div className={styles.mainBody}>

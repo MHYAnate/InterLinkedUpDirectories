@@ -493,13 +493,13 @@
   padding-right: 5px;
   min-height: 190px;
   max-height: max-content;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   border: 1px solid silver;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out 0.1s, box-shadow 0.3s ease-in-out 0.1s;
 }
 .VendorRenderCoverC:hover{
-  box-shadow: 0px 0px 1px silver, 0 0 3px green, 0 0 7px silver;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgb(237, 255, 237)); 
 }
 .imgCover{

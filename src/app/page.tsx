@@ -14,7 +14,10 @@ import ShopsFilter from "@/components/filters/singularFilter/filterShops";
 import CompanyFilter from "@/components/filters/singularFilter/filterCompany";
 import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies";
 import Hero from "@/components/hero/hero";
-
+import ItemSvg from "@/components/btn/itemSvg";
+import ShopSvg from "@/components/btn/shopSvg";
+import VacancySvg from "@/components/btn/vacancySvg";
+import OfficeSvg from "@/components/btn/officeSvg";
 export default function Home() {
 	
 	useEffect(() => {
@@ -24,6 +27,8 @@ export default function Home() {
 	const pathname = usePathname();
 
 	const [selector, setSelector] = useState("Items");
+
+
 
 	return (
 		<main
@@ -51,13 +56,17 @@ export default function Home() {
 												? () => setSelector("vacancies")
 												: () => setSelector("")
 										}
+										onMouseEnter={()=>{
+											setSelector("vacancies")
+										}}
 										className={
 											selector !== "vacancies"
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									>
-										Vacancies
+									><VacancySvg selector={selector} />
+										<span className={styles.catSpan}>Vacancies</span>
+										
 									</div>
 									<div
 										onClick={
@@ -65,13 +74,16 @@ export default function Home() {
 												? () => setSelector("Companies")
 												: () => setSelector("")
 										}
+										onMouseEnter={()=>{
+											setSelector("Companies")
+										}}
 										className={
 											selector !== "Companies"
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									>
-										Companies
+									><OfficeSvg selector={selector} />	
+										<span className={styles.catSpan}>Companies</span>
 									</div>
 								</div>
 							</div>
@@ -84,13 +96,17 @@ export default function Home() {
 												? () => setSelector("Items")
 												: () => setSelector("")
 										}
+										onMouseEnter={()=>{
+											setSelector("Items")
+										}}
 										className={
 											selector !== "Items"
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									>
-										Items
+									><ItemSvg selector={selector}/>
+									<span className={styles.catSpan}>Items</span>
+										
 									</div>
 									<div
 										onClick={
@@ -98,13 +114,17 @@ export default function Home() {
 												? () => setSelector("Shops")
 												: () => setSelector("")
 										}
+										onMouseEnter={()=>{
+											setSelector("Shops")
+										}}
 										className={
 											selector !== "Shops"
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									>
-										Shops
+									><ShopSvg selector={selector} />
+									<span className={styles.catSpan}>Shops</span>
+										
 									</div>
 								</div>
 							</div>

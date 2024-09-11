@@ -167,6 +167,55 @@
   background-color: none;
   border: none;
 }
+.svgSizeB{
+  width: 19.2px;
+  height: 19.2px;
+  background-color: none;
+  border: none;
+}
+
+.svgSizeBHigh{
+  width: 19.2px;
+  height: 19.2px;
+  background-color: none;
+  border: none;
+  color: darkgreen;
+}
+.svgSizeB:hover{
+  color: darkgreen;
+}
+
+.activeSvgNav{
+  width: 16px;
+  height: 16px;
+  background-color: none;
+  border: none;
+  color: green;
+}
+
+.activeSvgNavH{
+  width: 16px;
+  height: 16px;
+  background-color: none;
+  border: none;
+  color: white;
+}
+
+.inActiveSvgNav{
+  width: 16px;
+  height: 16px;
+  background-color: none;
+  border: none;
+  color: green;
+}
+
+.inActiveSvgNavH{
+  width: 16px;
+  height: 16px;
+  background-color: none;
+  border: none;
+  color: white;
+}
 
  .rateUsContainer{
   width: 210px;

@@ -44,16 +44,12 @@ import styles from "./styles.module.css";
 import ChatMessage from "./chatMessage";
 
 interface ChatProps {
-	setStateName: string;
-	setRoomName: string;
-	setRoomLocation: string;
 	senderId: string;
 	senderName: string;
 	senderPic: string;
-	user: string;
 	senderState: string;
 	senderArea: string;
-	roomName: string;
+	requesteeId:string;
 }
 
 interface ContactValue {
@@ -99,16 +95,13 @@ interface FormValue {
 	areaSelect: string;
 }
 
-const ChatNav: React.FC<ChatProps> = ({
-	setRoomName,
-	setRoomLocation,
+const ChatNotice: React.FC<ChatProps> = ({
 	senderId,
 	senderName,
 	senderPic,
-	setStateName,
 	senderState,
 	senderArea,
-	roomName,
+	requesteeId
 }) => {
 	const {
 		register,
@@ -271,31 +264,57 @@ const ChatNav: React.FC<ChatProps> = ({
 		});
 	};
 
-	const myConnectRef = collection(database, `connection-${senderId}`);
+	const myConnectRef = collection(database, `connection-${requesteeId}`);
+	const connectRef = collection(database, `connection-${senderId}`);
 
-	const contactQuery = query(myConnectRef);
+	const contactQuery = query(connectRef);
 
 	const [contactDetails, setContactDetails] = useState<noticeValue[]>([]);
 
-	const confirmRequestA = async (data: ContactValue) => {
+	const confirmMyRequest = async (data: noticeValue) => {
 		try {
 			const docRef = await addDoc(myConnectRef, {
-				contactId: `${data.contactId}`,
-				contactNumber: `${data.contactNumber}`,
-				contactImg: `${data.contactImg}`,
-				contactName: `${data.	contactName}`,
-				contactAddress: `${data.contactAddress}`,
-				stateSelect: `${data.stateSelect}`,
-				areaSelect: `${data.areaSelect}`,
-				lastMsg: `${data.lastMsg}`,
-				docid: `${data.docid}`,
+				connectedId: "",
+				connectId: `${data.requesteeId}`,
+				senderArea: `${senderArea}`,
+				senderName: `${senderName}`,
+				senderPic: `${senderPic}`,
+				senderState: `${senderState}`,
+				connectionId: `${senderId}`,
 			});
 			const docId = docRef.id;
 
 			await setDoc(
 				doc(noticeRef, docId),
 				{
-					noticetId: docId,
+					connectedId: docId,
+				},
+				{ merge: true }
+			);
+
+			console.log("Profile detail added successfully");
+		} catch (error) {
+			console.error("Error adding profile detail:", error);
+		}
+	};
+
+	const confirmRequest = async (data: noticeValue) => {
+		try {
+			const docRef = await addDoc(connectRef, {
+				connectedId: "",
+				connectId: `${senderId}`,
+				senderArea: `${senderArea}`,
+				senderName: `${senderName}`,
+				senderPic: `${senderPic}`,
+				senderState: `${senderState}`,
+				connectionId: `${data.requesteeId}`,
+			});
+			const docId = docRef.id;
+
+			await setDoc(
+				doc(noticeRef, docId),
+				{
+					connectedId: docId,
 				},
 				{ merge: true }
 			);
@@ -386,7 +405,7 @@ const ChatNav: React.FC<ChatProps> = ({
 	};
 
 	return (
-		<div className={styles.chatNavContainer}>
+		<div className={styles.chatNoticeContainer}>
 			<div className={styles.filterCover}>
 				<form className={styles.filterContact}>
 					<div className={styles.selectCover}>
@@ -481,5 +500,5 @@ const ChatNav: React.FC<ChatProps> = ({
 	);
 };
 
-ChatNav.displayName = "ChatNav";
-export default ChatNav;
+ChatNotice.displayName = "ChatNotice";
+export default ChatNotice;
