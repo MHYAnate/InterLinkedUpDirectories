@@ -11,7 +11,7 @@ const LogInSvg: React.FC<any> = () => {
 				xmlns="http://www.w3.org/2000/svg"
 				fill={`${pathname === "/login" ? "lightgreen" :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  "lightblue" : "lightblue"}`}
 				viewBox="0 0 24 24"
-				strokeWidth={1}
+				strokeWidth={`${pathname === "/login" ? 1 :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  0.5 : 1}`}
 				stroke={`${pathname === "/login" ? "green" :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  "blue" : "white"}`}
         className={`${pathname === "/login" ? styles.activeSvgNav :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  styles.inActiveSvgNav : styles.inActiveSvgNavH}`}
 				// className={styles.svgSizeB}

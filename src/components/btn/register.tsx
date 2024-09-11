@@ -11,7 +11,7 @@ const RegisterSvg: React.FC<any> = () => {
 				xmlns="http://www.w3.org/2000/svg"
 				fill={`${pathname === "/register" ? "lightgreen" :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  "lightblue" : "lightblue"}`}
 				viewBox="0 0 24 24"
-				strokeWidth={1.5}
+				strokeWidth={`${pathname === "/register" ? 1.5 :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  1 : 1.5}`}
 				stroke={`${pathname === "/register" ? "green" :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  "blue" : "white"}`}
         className={`${pathname === "/register" ? styles.activeSvgNav :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  styles.inActiveSvgNav : styles.inActiveSvgNavH}`}
 				// className={styles.svgSizeB}
