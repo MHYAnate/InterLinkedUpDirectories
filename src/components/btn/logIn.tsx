@@ -9,10 +9,10 @@ const LogInSvg: React.FC<any> = () => {
 		<div className={styles.chatCoverBtnC}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				fill={"none"}
+				fill={`${pathname === "/login" ? "lightgreen" :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  "lightblue" : "lightblue"}`}
 				viewBox="0 0 24 24"
-				strokeWidth={2}
-				stroke="currentColor"
+				strokeWidth={1}
+				stroke={`${pathname === "/login" ? "green" :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  "blue" : "white"}`}
         className={`${pathname === "/login" ? styles.activeSvgNav :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  styles.inActiveSvgNav : styles.inActiveSvgNavH}`}
 				// className={styles.svgSizeB}
 			>

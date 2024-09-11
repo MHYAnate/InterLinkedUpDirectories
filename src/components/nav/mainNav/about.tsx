@@ -13,7 +13,8 @@ export default function About() {
 			className={`${pathname === "/about" ? styles.activeBtn :pathname !== "/" &&pathname === "/register" || pathname === "/login" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
 			onClick={()=>router.push('/about')} 
 		><AboutSvg/>
-			ABOUT US
+		<span className={styles.navSpan}>ABOUT US</span>
+			
 		</div>
 	);
 }

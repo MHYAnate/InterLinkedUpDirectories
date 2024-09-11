@@ -13,7 +13,8 @@ export default function Register() {
 			className={`${pathname === "/register" ? styles.activeBtn :pathname !== "/" && pathname === "/about" || pathname === "/login" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
 			onClick={()=>router.push('/register')} 
 		><RegisterSvg/>
-			REGISTER
+		<span className={styles.navSpan}>REGISTER</span>
+			
 		</div>
 	);
 }

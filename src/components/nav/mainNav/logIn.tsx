@@ -15,7 +15,7 @@ export default function LogIn() {
 			className={`${pathname === "/login" ? styles.activeBtn :pathname !== "/" && pathname === "/about" || pathname === "/register" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
 			onClick={()=>router.push('/login')} 
 		><LogInSvg/>
-			LOG IN
+			<span className={styles.navSpan}>LOG IN</span>
 		</div>
 	);
 }
