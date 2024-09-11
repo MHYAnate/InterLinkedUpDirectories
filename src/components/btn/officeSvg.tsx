@@ -7,7 +7,7 @@ const OfficeSvg: React.FC<any> = ({selector}) => {
 				xmlns="http://www.w3.org/2000/svg"
 				fill={selector==="Companies"?"lightgreen":"lightblue"}
 				viewBox="0 0 24 24"
-				strokeWidth={0.5}
+				strokeWidth={selector === "Companies"?1.5:0.5}
 				stroke={selector==="Companies"?"green":"blue"}
 				className={selector !== "Companies"?styles.svgSizeB:styles.svgSizeBHigh}
 			>

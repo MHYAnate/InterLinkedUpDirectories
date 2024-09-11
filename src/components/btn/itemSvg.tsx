@@ -7,7 +7,7 @@ const ItemSvg: React.FC<any> = ({selector}) => {
 				xmlns="http://www.w3.org/2000/svg"
 				fill={selector === "Items"?"lightgreen":"lightblue"}
 				viewBox="0 0 24 24"
-				strokeWidth={0.5}
+				strokeWidth={selector === "Items"?1.5:0.5}
 				stroke={selector === "Items"?"green":"blue"}
 				className={selector !== "Items"?styles.svgSizeB:styles.svgSizeBHigh}
 			>

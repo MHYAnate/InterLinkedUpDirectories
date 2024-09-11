@@ -7,7 +7,7 @@ const VacancySvg: React.FC<any> = ({selector}) => {
 				xmlns="http://www.w3.org/2000/svg"
 				fill={selector === "vacancies"?"lightgreen":"lightblue"}
 				viewBox="0 0 24 24"
-				strokeWidth={0.5}
+				strokeWidth={selector === "vacancies"?1.5:0.5}
 				stroke={selector === "vacancies"?"green":"blue"}
 				className={selector !== "vacancies"?styles.svgSizeB: styles.svgSizeBHigh}
 			>

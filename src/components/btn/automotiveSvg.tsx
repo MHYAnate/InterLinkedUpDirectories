@@ -7,7 +7,7 @@ const AutomotiveSvg: React.FC<any> = ({state}) => {
 				xmlns="http://www.w3.org/2000/svg"
 				fill={state?"lightgreen":"lightblue"}
 				viewBox="0 0 24 24"
-				strokeWidth={0.5}
+				strokeWidth={state?1.5:0.5}
 				stroke={state?"green":"blue"}
 				className={state?styles.svgSizeBHigh:styles.svgSizeB}
 			>
