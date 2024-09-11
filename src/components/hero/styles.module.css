@@ -1,3 +1,21 @@
+
+@font-face {
+	font-family: 'ProtestGuerrilla';
+	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'NerkoOne';
+	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
 .titleCover {
 	width: 98vw;
 	height: 300px;
@@ -85,7 +103,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 3px;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "ProtestGuerrilla", Times, serif;
 	text-align: center;
 	/* background-color:rgb(192, 192, 192, 0.7); */
 	width: 100%;
@@ -101,7 +119,7 @@
 	color: rgb(89, 135, 9);
 	/* background-color: rgba(235, 235, 231, 0.7); */
 	border-radius: 3px;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "ProtestGuerrilla";
 	text-align: center;
 	/* background-color:rgb(192, 192, 192, 0.7); */
 	margin-bottom: 10px;
@@ -117,7 +135,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 3px;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+	font-family: "NerkoOne",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 	text-align: center;
 	/* background-color:rgb(192, 192, 192, 0.7); */
