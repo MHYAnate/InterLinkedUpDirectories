@@ -140,8 +140,7 @@
 	align-items: center;
 	justify-content: center;
 	font-family: cursive;
-	font-weight: 700;
-  background-color: rgb(64, 134, 143);/* Primary Green */
+	background-color: #F39C12;/* Primary Green */
 	color: white;
 	padding: 10px 20px;
 	border: none;
@@ -151,10 +150,12 @@
 	cursor: pointer;
 	font-size: 16px;
 	transition: all 0.3s ease; /* Smooth transition */
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .registerBtn:hover {
-	background-color:   rgb(36, 74, 79); /* Darker shade on hover */
+	background-color:   #d78b10; /* Darker shade on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
 }
 
