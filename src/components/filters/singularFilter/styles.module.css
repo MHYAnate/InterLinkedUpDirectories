@@ -869,23 +869,23 @@
 
 .enterWorkSpace{
   width: fit-content;
+  padding-top: 0.5px;
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 35px;
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-family: 'Poppins-Bold';
   font-size: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 20px;
+  height: 25px;
   font-weight: bold;
   text-transform: capitalize;
   background-color: #28A745;
   margin-top: 10px;
-  padding-bottom: 2px;
   user-select: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1524,7 +1524,7 @@
 .enterShop{
   color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    background-color: #28A745;
+  background-color: #28A745;
   width: fit-content;
   height: 25px;
   padding-left: 15px;
@@ -1537,14 +1537,14 @@
   border-radius: 35px;
   margin-top: 7px;
   text-align: center;
- padding-bottom: 0.5px;
   user-select: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-
+  box-sizing: border-box;
+  padding-top: 0.5px;
 }
 
 .enterShop:hover{
@@ -2153,9 +2153,6 @@ font-family: 'Poppins-SemiBold';
   }
 
 
-  .enterShop{
-    padding-bottom: 0;
-  }
 
   .renderVacancyInnerCover{
     height:fit-content;
