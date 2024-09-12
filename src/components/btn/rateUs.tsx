@@ -224,7 +224,7 @@ const RateUs: React.FC<RateUsProps> = ({
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="gold"
-								viewBox="0 0 24 24"
+								viewBox="0 0 25 24"
 								strokeWidth={1.5}
 								stroke="gold"
 								className={styles.svgSizeR}
@@ -293,7 +293,7 @@ const RateUs: React.FC<RateUsProps> = ({
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="gold"
-						viewBox="0 0 24 24"
+						viewBox="0 0 24 27"
 						strokeWidth={1.5}
 						stroke="gold"
 						className={styles.svgSizeR}
