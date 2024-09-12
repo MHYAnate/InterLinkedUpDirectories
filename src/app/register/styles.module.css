@@ -70,7 +70,7 @@
 
 .titleCover{
   width: 30vw;
-  height: 85vh;
+  min-height: 85vh;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -87,20 +87,20 @@
 .categoryCover{
   position: relative;
   width: 30vw;
-  height: 85vh;
+  min-height: 85vh;
 }
 
 
 .categoryImgCover{
   width: 30vw;
-  height: 83vh;
+  min-height: 83vh;
   transition: transform 1s ease-in-out 0.2s;
 }
 
 
 .categoryImg{
   width: 30vw;
-  height: 83vh;
+  min-height: 83vh;
   border-radius: 10px;
   transition: transform 1s ease-in-out 0.2s;
 }
@@ -235,7 +235,7 @@
   justify-content: center;
   align-items: center;
   width: 68vw;
-  height: 78vh;
+  min-height: 78vh;
 }
 
 .innerFormCover{
@@ -244,7 +244,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 68vw;
-  height: max-content;
+  min-height: 400px;
 }
 
 .formCoverLeft{
@@ -254,7 +254,7 @@
   justify-content: space-between;
   align-items: center;
   width: max-content;
-  height: 55vh;
+  min-height: 400px;
 }
 
 .formCoverRight{
@@ -264,8 +264,8 @@
   justify-content: space-between;
   align-items: center;
   width: max-content;
-  height: max-content;
-  height: 55vh;
+  max-height: max-content;
+  min-height: 400px;
  }
 
 .selectCover{
@@ -436,7 +436,7 @@
 
   .innerFormCover{
     width: 98vw;
-    height: max-content;
+    min-height: 400px;
     padding-top: 50px;
   }
 
@@ -486,11 +486,11 @@
     row-gap: 0;
     align-items: center;
     width: 98vw;
-    height: max-content;
+   min-height: 400px;
   }
   
   .formCoverLeft{
-    height: max-content;
+    min-height: 400px;
     row-gap: 30px;
   }
   

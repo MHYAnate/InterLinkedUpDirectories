@@ -1,3 +1,56 @@
+@font-face {
+	font-family: 'ProtestGuerrilla';
+	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'NerkoOne';
+	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'PlaywriteCU';
+	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
 .Main{
   display: flex;
   flex-direction: column;
