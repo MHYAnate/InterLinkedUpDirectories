@@ -1,3 +1,58 @@
+
+@font-face {
+	font-family: 'ProtestGuerrilla';
+	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'NerkoOne';
+	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'PlaywriteCU';
+	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
 .aboutUsBodyCover{
   display: flex;
   flex-wrap: wrap;
@@ -227,11 +282,11 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:'ProtestGuerrilla';
 }
 .seperatorDiv2{
   width: 90vw;
@@ -253,6 +308,7 @@
 .noteP{
   color: #1F8B38;
   margin: 0;
+  font-family: 'ProtestGuerrilla';
 }
 
 .containDiv{
@@ -283,7 +339,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 10px;
   border-radius: 10px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:'Poppins-Regular';
   font-size: 14px;
   font-weight: 500;
   line-height: 22.4px;
@@ -320,7 +376,7 @@
 .cardTitleSpan{
   font-size: 28px;
   color: green;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins-Bold';
   font-weight: 700;
   width: max-content;
   height: max-content;
@@ -332,36 +388,37 @@
   align-items: center;
   flex-wrap: wrap;
   text-transform: uppercase;
-  line-height: 44.8px;
+  line-height: 20.8px;
 }
 
 .introHeader{
   color: green;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'ProtestGuerrilla';
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
-  line-height: 57.6px;
+  line-height: 40px;
 }
 .introText{
   color:goldenrod;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:'Poppins-Regular';
   font-size: 1.5rem;
 }
 
 .introText1{
   color: #333333;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:'Poppins-Bold';
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;
   line-height: 44.8px;
+  font-weight: 700;
 }
 
 .para{
   color: #333333;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:'Poppins-Regular';
   font-size: 18px;
   line-height: 29px;
 }
@@ -369,7 +426,7 @@
   color: rgb(1, 84, 1);
   font-weight: 500;
   text-transform: uppercase;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:'Poppins-Bold';
   font-size: 16px;
 }
 .highlightedi{
@@ -377,6 +434,7 @@
   font-size: 17.3px;
   text-transform: uppercase;
   color: #333333;
+  font-family:'Poppins-SemiBold';
 }
 .inHighligthTextGreen{
   color: rgb(0, 47, 0);
@@ -395,7 +453,7 @@
   font-size: 18px;
   text-transform: uppercase;
   text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'NerkoOne';
 }
 
 .standAlone{
@@ -410,6 +468,7 @@
   text-transform: uppercase;
   color: green;
   font-weight: 700;
+  font-family: 'NerkoOne';
 }
 
 @keyframes appearRight {
@@ -490,9 +549,15 @@
 
 @media screen and (max-width: 800px) {
 
+  .introHeader{
+    line-height: 50.2px;
+  }
+
   .containDiv{
    row-gap: 100px;
    flex-direction: column-reverse;
+   justify-content: center;
+   align-items: center;
   }
 
   .miniDiv{
@@ -608,6 +673,14 @@
     margin-top: 20px; 
     min-height: fit-content;
   }
+  .cardTitleSpan{
+    margin-top: 30px;
+    line-height: 50px;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -656,7 +729,7 @@
 
 @media screen and (max-width: 400px) {
   .cardTitleSpan{
-    line-height: 50px;
+    line-height: 40px;
   }
   .imgMiniDiv{
     width: 80vw;

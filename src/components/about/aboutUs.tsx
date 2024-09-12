@@ -29,7 +29,7 @@ export default function AboutUs() {
 					</p>
 					<div className={styles.inHighligthTextGold}>
 						{" "}
-						A Simplified and Comprehensive Solution.
+						A Simplified and Comprehensive Business Solution.
 					</div>
 				</div>
 			</div>
@@ -48,7 +48,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover1}>
-				<span className={styles.cardTitleSpan}>Our Services Cater for</span>
+				<div className={styles.cardTitleSpan}>Our Services Cater for</div>
 					<ol className={styles.para}>
 						<li>
 							<span className={styles.highlightedi}>Job Seekers</span> Find your
@@ -141,7 +141,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover2}>
-        <span className={styles.cardTitleSpan}>Our Vision</span>
+        <div className={styles.cardTitleSpan}>Our Vision</div>
         <p className={styles.para}>
 					We envision a world where seamless connections empower individuals and businesses to achieve their goals. Through our platform, users can effortlessly discover trusted service providers, explore a vibrant marketplace, and access a comprehensive job board, ultimately simplifying daily tasks, strengthening the professional landscape, and unlocking human potential.
 					</p>
@@ -163,7 +163,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.rightTextCover3}>
-        <span className={styles.cardTitleSpan}>Our Mission</span>
+        <div className={styles.cardTitleSpan}>Our Mission</div>
         <p className={styles.para}>
 						Our mission is to simplify and streamline the process of finding trusted Goods or Service vendors and employers to potential clients and job seakers.
 					</p>
@@ -187,7 +187,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover3}>
-        <p className={styles.cardTitleSpan}>We strive to</p>
+        <div className={styles.cardTitleSpan}>We strive to</div>
         <ol className={styles.para}>
 						<li>
 							Connect individuals  and employers with reliable, skilled vendors and Job Seakers within their locality.
@@ -271,9 +271,9 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.rightTextCover1}>
-        <span className={styles.cardTitleSpan}>
+        <div className={styles.cardTitleSpan}>
 							Comprehensive Vendor Space
-						</span>
+						</div>
             <p className={styles.para}>
 						Our directory boasts a diverse range of vendors categorized into
 						three main sections, Each category further expands into specific
@@ -351,9 +351,9 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover1}>
-        <span className={styles.cardTitleSpan}>
+        <div className={styles.cardTitleSpan}>
         Robust Market space
-						</span>
+						</div>
             <p className={styles.para}>
             Our Robust Market space empower individuals and businesses to connect and thrive through seamless buying, selling, and leasing experience 
 					</p>
@@ -427,9 +427,9 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.rightTextCover2}>
-        <span className={styles.cardTitleSpan}>
+        <div className={styles.cardTitleSpan}>
         Extensive Job Board
-						</span>
+						</div>
             <p className={styles.para}>
             We connect talented individuals with exciting opportunities, empowering businesses of all sizes to build their dream teams.
 					</p>
@@ -502,7 +502,7 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div className={styles.leftTextCover3}>
-				<span className={styles.cardTitleSpan}>Contact Us </span>
+				<div className={styles.cardTitleSpan}>Contact Us </div>
         <p className={styles.para}>
 					Join us on our mission to empower individuals and businesses through seamless connections!
 					</p>

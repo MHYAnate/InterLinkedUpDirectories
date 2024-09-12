@@ -1,3 +1,57 @@
+@font-face {
+	font-family: 'ProtestGuerrilla';
+	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'NerkoOne';
+	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
+@font-face {
+	font-family: 'PlaywriteCU';
+	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
+
+	font-weight: normal;
+	font-style: normal; 
+
+}
+
 .parent{
   width: 320px;
   height: fit-content;
@@ -112,7 +166,7 @@
  }
 
 .catSpan{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Poppins-SemiBold';
   font-weight: 500;
   user-select: none;
   font-size: 11px;
@@ -200,9 +254,9 @@
   box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.15);
 }
 .sname{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins-SemiBold';
   user-select: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .slider{
