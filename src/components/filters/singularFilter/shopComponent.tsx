@@ -169,7 +169,7 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
-							<span className={styles.shopVacancyDetailAbtUs}>{props.email} </span>
+							<span className={styles.shopVacancyDetailAbtUsE}>{props.email} </span>
 						</div>
 
 						<div className={styles.showCompanyVacanciesAbtUs}>

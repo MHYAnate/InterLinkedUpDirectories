@@ -24,7 +24,6 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import GifIntro from "@/components/vidIntro/gifIntro";
 import { Services } from "@/database/data";
 import styles from "./styles.module.css";
 
@@ -288,7 +287,7 @@ export default function Profile() {
 									<div className={styles.profileBodyCategoryCover}>
 										<div className={styles.profileBodyCover}>
 											<div className={styles.flexControl}>
-												<GifIntro />
+												
 												<div
 													className={styles.flexVendorCategoryControl}
 													onClick={() =>

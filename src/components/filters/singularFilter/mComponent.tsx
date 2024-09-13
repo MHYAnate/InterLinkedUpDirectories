@@ -201,7 +201,7 @@ const CompanyM: React.FC<CompanyProps> = (props:CompanyProps) => {
 						</div>
 						<div className={styles.showCompanyVacanciesAbtUs}>
 							<span className={styles.companyVacancyTitleAbtUS}>Email</span>
-							<span className={styles.companyVacancyDetailAbtUs}>{props.email} </span>
+							<span className={styles.companyVacancyDetailAbtUsE}>{props.email} </span>
 						</div>
 				</div>:<></>}
 				<div 
