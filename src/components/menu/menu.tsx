@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo, memo, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import VidIntro from "../vidIntro/vidIntro";
 import styles from "./styles.module.css";
 
 interface CarouselProps {
@@ -35,7 +34,7 @@ const Menu: React.FC<CarouselProps> = memo(({ Services }) => {
 	return (
 		<main className={styles.menuCover}>
 			<div className={styles.menuBody}>
-			<VidIntro/>
+	
 				<div
 					className={styles.flexControl}
 					onClick={() =>
