@@ -1911,10 +1911,11 @@ font-family: 'Poppins-SemiBold';
   width: 100%;
   text-align: left;
   font-family: 'Poppins-Regular';
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   text-transform: capitalize;
   color: #333333;
+  user-select: all;
 }
 
 .shopVacancyDetailAbtUs{
@@ -1932,11 +1933,12 @@ font-family: 'Poppins-SemiBold';
   width: 100%;
   text-align: left;
 	font-family: 'Poppins-Regular';
-  font-size: 12px;
+  font-size: 10px;
   color: #606060;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 22.4px;
+  user-select: all;
 }
 
 .companyBodyDivied{

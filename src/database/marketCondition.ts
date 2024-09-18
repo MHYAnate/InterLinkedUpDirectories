@@ -24,4 +24,14 @@ export const MarketCondition = [
     "condition": "Used with Issues",
     
   },
+  {
+    "id": 6,
+    "condition": "Very fresh",
+    
+  },
+  {
+    "id": 7,
+    "condition": "Fresh",
+    
+  },
 ];
