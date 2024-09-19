@@ -80,6 +80,7 @@
 	align-items: center;
 	justify-content: space-around;
 	user-select: none;
+	
 }
 
 .header {
@@ -98,7 +99,6 @@
 	font-size: 5rem;
 	font-weight: 400;
 	/* color:  rgb(102, 102, 102); */
-	color: rgb(89, 135, 9);
 	/* background-color: rgba(235, 235, 231, 0.7); */
 	padding-left: 10px;
 	padding-right: 10px;
@@ -110,6 +110,8 @@
 	margin-left: 1.5vw;
 	margin-top: 20px;
 	/* text-decoration: underline; */
+	color: #8A2BE2;
+
 }
 .age {
 	user-select: none;
@@ -124,6 +126,9 @@
 	/* background-color:rgb(192, 192, 192, 0.7); */
 	margin-bottom: 10px;
 	width: 100%;
+	background-image: linear-gradient(to right , #8A2BE2, #1F8B38);
+	background-clip: text;
+	color: transparent;
 }
 .titleHero2 {
 	user-select: none;
@@ -188,9 +193,11 @@
 }
 
 .toWhat {
-	color: darkolivegreen;
 	font-weight: 400;
 	font-size: 3rem;
+	background-image: linear-gradient(to right , #8A2BE2,  yellow);
+	background-clip: text;
+	color: transparent;
 }
 .matters {
 	color: rgb(66, 104, 2);
@@ -200,6 +207,9 @@
 	font-weight: 400;
 	font-size: 3rem;
 	text-transform: uppercase;
+	background-image: linear-gradient(to left , #8A2BE2,  yellow);
+	background-clip: text;
+	color: transparent;
 }
 .slogan {
 	user-select: none;
