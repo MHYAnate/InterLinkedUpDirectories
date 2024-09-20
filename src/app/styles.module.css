@@ -94,10 +94,12 @@
   min-height: 580px;
   max-height: fit-content;
 }
-/* .navHolder{
-  padding-bottom: 10px;
-  border-bottom: 1px solid silver;
-} */
+.navHolderFix{
+position: fixed;
+top: 0;
+left: 5px;
+z-index: 3;
+}
 
 .header{
   margin-top: 20px;

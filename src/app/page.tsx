@@ -18,6 +18,9 @@ import ItemSvg from "@/components/btn/itemSvg";
 import ShopSvg from "@/components/btn/shopSvg";
 import VacancySvg from "@/components/btn/vacancySvg";
 import OfficeSvg from "@/components/btn/officeSvg";
+import 'intersection-observer';
+
+
 export default function Home() {
 	
 	useEffect(() => {
@@ -28,7 +31,39 @@ export default function Home() {
 
 	const [selector, setSelector] = useState("Items");
 
+	const [intersector, setIntersector] = useState(false);
 
+	useEffect(() => {
+    // Check if `IntersectionObserver` is supported (it won't be on the server)
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      const targetElement = document.getElementById('target-element');
+
+      if (targetElement) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.intersectionRatio >= 0.7) {
+								setIntersector(true);
+							}
+							
+            }
+          });
+					
+        },{
+					root: null,
+					rootMargin: "0px",
+					threshold: [0.0, 1],
+				});
+
+        observer.observe(targetElement);
+        
+        // Cleanup the observer when component is unmounted
+        return () => observer.disconnect();
+      }
+    } else {
+      console.warn('IntersectionObserver is not supported');
+    }
+  }, []);
 
 	return (
 		<main
@@ -36,7 +71,7 @@ export default function Home() {
 				pathname === "/register" ? styles.regNavBodyCover : styles.Main
 			}`}
 		>
-			<nav className={styles.navHolder}>
+			<nav id='target-element' className={styles.navHolder}>
 				<Nav />
 			</nav>
 			<div className={styles.body}>
