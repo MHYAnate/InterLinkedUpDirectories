@@ -8,11 +8,9 @@ import Image from "next/image";
 import ChatImageBtn from "../btn/chatImgBtn";
 import ChatBtn from "../btn/chatBtn";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
-import BreketeSvg from "../btn/publicSvg";
-import RoomSvg from "../btn/roomSvg";
-import StateSvg from "../btn/stateSvg";
-import AreaSvg from "../btn/areaSvg";
-import RemoveUserSvg from "../btn/removeUserSvg";
+import AcceptConnectSvg from "../btn/acceptConnectSvg";
+import RejectConnectSvg from "../btn/rejectConnectSvg";
+
 import {
 	deleteDoc,
 	collection,
@@ -54,6 +52,7 @@ interface NoticeProps {
 	noticeMsg: string;
 	handleDeleteRequest: any;
 	contact: any;
+	onConfirm : any;
 }
 
 const Notifications: React.FC<NoticeProps> = ({
@@ -67,6 +66,7 @@ const Notifications: React.FC<NoticeProps> = ({
 	status,
 	requesteeId,
 	handleDeleteRequest,
+	onConfirm,
 	contact,
 	noticeType,
 }) => {
@@ -104,12 +104,12 @@ const Notifications: React.FC<NoticeProps> = ({
 							className={isAccept ? styles.hide : styles.deleteContact}
 						>
 							<span> Accept Connection</span>
-							<RemoveUserSvg />
+							<AcceptConnectSvg />
 						</div>
 						<div className={isAccept ? styles.deleteCover : styles.hide}></div>
 						<div
 							onClick={() => {
-								handleDeleteRequest(contact);
+								onConfirm(contact);
 							}}
 							className={styles.confirmDelete}
 						>
@@ -132,7 +132,7 @@ const Notifications: React.FC<NoticeProps> = ({
 							className={isDelete ? styles.hide : styles.deleteContact}
 						>
 							<span>Reject Connection</span>
-							<RemoveUserSvg />
+							<RejectConnectSvg />
 						</div>
 						<div className={isDelete ? styles.deleteCover : styles.hide}></div>
 						<div

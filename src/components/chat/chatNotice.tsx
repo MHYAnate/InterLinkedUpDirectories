@@ -404,6 +404,10 @@ const ChatNotice: React.FC<ChatProps> = ({
 		});
 	};
 
+	const onConfirm = (data:noticeValue) => {
+		confirmMyRequest(data);
+		confirmRequest(data);
+	};
 	return (
 		<div className={styles.chatNoticeContainer}>
 			<div className={styles.filterCover}>

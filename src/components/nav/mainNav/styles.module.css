@@ -83,7 +83,7 @@
 	justify-content: space-between;
 	align-items: center;
 	width: inherit;
-	padding-left: 10px;
+	padding-left: 30px;
 	padding-right: 10px;
 }
 
@@ -474,6 +474,9 @@ div.inActiveBtnH:hover {
 		border: 1px solid silver;
 		border-radius: 25px;
 	}
+	.navBody {
+		padding-left: 20px;
+	}
 }
 @media screen and (max-width: 790px) {
 	.search {
@@ -660,6 +663,7 @@ div.inActiveBtnH:hover {
 		justify-content: space-between;
 		align-items: center;
 		width: inherit;
+		padding-left: 10px;
 	}
 	.search {
 		width: 50vw;
