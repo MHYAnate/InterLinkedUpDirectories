@@ -110,7 +110,7 @@
 	margin-left: 1.5vw;
 	margin-top: 20px;
 	/* text-decoration: underline; */
-	color: #8A2BE2;
+	color: #1F8B38;
 
 }
 .age {
@@ -126,7 +126,7 @@
 	/* background-color:rgb(192, 192, 192, 0.7); */
 	margin-bottom: 10px;
 	width: 100%;
-	background-image: linear-gradient(to right , #8A2BE2, #1F8B38);
+	background-image: linear-gradient(to left , darkolivegreen, #1F8B38);
 	background-clip: text;
 	color: transparent;
 }
