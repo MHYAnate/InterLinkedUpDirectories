@@ -94,11 +94,23 @@
   min-height: 580px;
   max-height: fit-content;
 }
+.bodyFix{
+  display: flex;
+  align-items:center baseline;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98vw;
+  min-height: 580px;
+  max-height: fit-content;
+  margin-top: 60px;
+}
 .navHolderFix{
-position: fixed;
-top: 0;
-left: 5px;
-z-index: 3;
+  position: fixed;
+  top: 0;
+  left: calc((100vw-98vw)/2);
+  z-index: 3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header{

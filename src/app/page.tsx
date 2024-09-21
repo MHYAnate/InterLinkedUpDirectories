@@ -7,7 +7,7 @@ import { Services } from "@/database/data";
 import Menu from "@/components/menu/menu";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 import Nav from "@/components/nav/mainNav/nav";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import ItemsFilter from "@/components/filters/singularFilter/filterItems";
 import ShopsFilter from "@/components/filters/singularFilter/filterShops";
@@ -18,7 +18,8 @@ import ItemSvg from "@/components/btn/itemSvg";
 import ShopSvg from "@/components/btn/shopSvg";
 import VacancySvg from "@/components/btn/vacancySvg";
 import OfficeSvg from "@/components/btn/officeSvg";
-import 'intersection-observer';
+
+
 
 
 export default function Home() {
@@ -31,39 +32,26 @@ export default function Home() {
 
 	const [selector, setSelector] = useState("Items");
 
-	const [intersector, setIntersector] = useState(false);
+	const [isSticky, setIsSticky] = useState(false);
+
 
 	useEffect(() => {
-    // Check if `IntersectionObserver` is supported (it won't be on the server)
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const targetElement = document.getElementById('target-element');
 
-      if (targetElement) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              if (entry.intersectionRatio >= 0.7) {
-								setIntersector(true);
-							}
-							
-            }
-          });
-					
-        },{
-					root: null,
-					rootMargin: "0px",
-					threshold: [0.0, 1],
-				});
-
-        observer.observe(targetElement);
-        
-        // Cleanup the observer when component is unmounted
-        return () => observer.disconnect();
-      }
-    } else {
-      console.warn('IntersectionObserver is not supported');
-    }
-  }, []);
+		const handleScroll = () => {
+			if (window.scrollY > 1) {
+				setIsSticky(true);
+			} else {
+				setIsSticky(false);
+			}
+		};
+	
+		window.addEventListener('scroll', handleScroll);
+	
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+	
 
 	return (
 		<main
@@ -71,10 +59,10 @@ export default function Home() {
 				pathname === "/register" ? styles.regNavBodyCover : styles.Main
 			}`}
 		>
-			<nav id='target-element' className={styles.navHolder}>
-				<Nav />
+			<nav className={isSticky?styles.navHolderFix:styles.navHolder}>
+					<Nav />
 			</nav>
-			<div className={styles.body}>
+			<div className={isSticky?styles.bodyFix:styles.body}>
 			<Hero />	
 				<div className={styles.categoryCover}>
 					<div className={styles.coverVendors}>
