@@ -90,7 +90,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 98vw;
+  width: 98.5vw;
   min-height: 580px;
   max-height: fit-content;
 }
@@ -100,7 +100,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 98vw;
+  width: 98.5vw;
   min-height: 580px;
   max-height: fit-content;
   margin-top: 60px;
@@ -108,14 +108,14 @@
 .navHolderFix{
   position: fixed;
   top: 0;
-  left: calc((100vw-98vw)/2);
+  left: calc((100vw-98.5vw)/2);
   z-index: 3;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header{
   margin-top: 20px;
-  width: 98vw;
+  width: 98.5vw;
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -146,7 +146,7 @@
 
 
 .categoryCover{
-  width: 98vw;
+  width: 98.5vw;
   min-height: 666px;
   display: flex;
   align-items: first baseline;
@@ -279,17 +279,17 @@ font-family: 'Poppins-SemiBold';
 
 
 .categoryImgCover{
-  width: 98vw;
+  width: 98.5vw;
   height: 150px;
 }
 
 .categoryImg{
-  width: 98vw;
+  width: 98.5vw;
   height: 150px;
   opacity: 0.48;
 }
 .newsLetter{
-  width: 98vw;
+  width: 98.5vw;
   min-height: 170px;
   max-height: max-content;
   display: flex;
@@ -304,7 +304,7 @@ font-family: 'Poppins-SemiBold';
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 98vw;
+    width: 98.5vw;
     min-height: max-content;
     max-height: max-content;
   }
@@ -313,7 +313,7 @@ font-family: 'Poppins-SemiBold';
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 98vw;
+    width: 98.5vw;
     min-height: max-content;
     max-height: max-content;
     background-image: linear-gradient(to right, rgb(241, 243, 241), white);
@@ -323,7 +323,7 @@ font-family: 'Poppins-SemiBold';
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 98vw;
+    width: 98.5vw;
     height: max-content;
   }
   .categoryCover{
@@ -331,12 +331,12 @@ font-family: 'Poppins-SemiBold';
    flex-direction: column-reverse;
   }
   .coverJobsMarket{
-    width: 98vw;
+    width: 98.5vw;
     border-left: none;
     min-height: fit-content;
   }
   .coverSelectJobsMarket{
-    width: 98vw;
+    width: 98.5vw;
   
   }
   
@@ -352,7 +352,7 @@ font-family: 'Poppins-SemiBold';
     width: 49vw;
   }
   .categoryBody{
-    width: 98vw;
+    width: 98.5vw;
     min-height: max-content;
     max-height: max-content;
     display: flex;
@@ -360,32 +360,32 @@ font-family: 'Poppins-SemiBold';
     justify-content: center;
   }
   .carouselBody{
-    width: 98vw;
+    width: 98.5vw;
     min-height: max-content;
     max-height: max-content;
   }
   .categoryImgCover{
-    width: 98vw;
+    width: 98.5vw;
     height: 125px;
   }
   .categoryImg{
-    width: 98vw;
+    width: 98.5vw;
     height: 125px;
     opacity: 0.5;
   }
   .coverVendors{
-    width: 98vw;
+    width: 98.5vw;
     margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .categoryImgCover{
-    width: 98vw;
+    width: 98.5vw;
     height: 100px;
   }
   .categoryImg{
-    width: 98vw;
+    width: 98.5vw;
     height: 100px;
     opacity: 0.5;
   }

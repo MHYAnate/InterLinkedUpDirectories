@@ -17,7 +17,7 @@
 
 }
 .titleCover {
-	width: 98vw;
+	width: 98.5vw;
 	height: 300px;
 	cursor: pointer;
 	overflow: hidden;
@@ -27,11 +27,11 @@
 
 .categoryCover {
 	position: relative;
-	width: 98vw;
+	width: 98.5vw;
 	height: 300px;
 }
 .catFlex {
-	width: 98vw;
+	width: 98.5vw;
 	height: 300px;
 	display: flex;
 	justify-content: center;
@@ -135,7 +135,7 @@
 
 	font-weight: 400;
 	/* color:  rgb(102, 102, 102); */
-	color: rgb(103, 105, 98);
+	color: rgb(103, 105, 98.5);
 	/* background-color: rgba(235, 235, 231, 0.7); */
 	padding-left: 10px;
 	padding-right: 10px;
