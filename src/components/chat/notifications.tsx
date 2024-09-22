@@ -154,6 +154,10 @@ const Notifications: React.FC<NoticeProps> = ({
 					</div>
 				</div>
 			)}
+			{noticeType === "admin" && (
+			<div className={styles.adminNotice}>
+				
+			</div>)}
 		</>
 	);
 };

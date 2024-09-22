@@ -66,7 +66,7 @@
 	align-items: center;
 	width: 98.5vw;
 	height: 70px;
- background-color: #4CAF50;
+  background-color: #f9f9f9f9;
 }
 
 .regNavBodyCover {
@@ -136,7 +136,7 @@
 	align-items: center;
 	width: max-content;
 	height: max-content;
-	color:white;
+	color:#4CAF50;
 	font-size: 2em;
 	font-family: 'Poppins-Bold';
 	text-shadow: 1px 1px 2px white, 0 0 5px white, 0 0 2 5px rgb(149, 149, 149);
@@ -215,7 +215,7 @@
 	align-items: center;
 	width: max-content;
 	height: max-content;
-	color: dodgerblue;
+	color: #333333;
 	font-size: 11px;
 	font-family: 'Poppins-Bold';
 	border-bottom: 2px solid white;
@@ -234,10 +234,10 @@
 	align-items: center;
 	width: max-content;
 	height: max-content;
-	color: white;
+	color: #333333;
 	font-size: 11px;
 	font-family: 'Poppins-Bold';
-	border-bottom: 2px solid #4CAF50;
+	border-bottom: 2px solid #f9f9f9f9;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 2px;
@@ -271,10 +271,10 @@ div.inActiveBtn:hover {
 
 div.inActiveBtnH:hover {
 	cursor: pointer;
-	background-color: #4CAF50;
-	color: white;
+	background-color: #f9f9f9f9;
+	color: #333333;
 	border-radius: 5px;
-	border-bottom: 2px solid #4CAF50;
+	border-bottom: 2px solid #f9f9f9f9;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
