@@ -249,6 +249,10 @@
 		text-align: left;
 		margin-left: 35px;
 	}
+	.registerBtn {
+
+		transform: translateX(0px);
+	}
 }
 
 @media screen and (max-width: 802px) {
