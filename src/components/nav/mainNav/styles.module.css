@@ -57,7 +57,7 @@
 	align-items: center;
 	width: 98.5vw;
 	height: 70px;
- background-color: white;
+ background-color: rgba(255, 255, 255, 0.436);
 }
 
 .navBodyCoverH {
@@ -66,7 +66,8 @@
 	align-items: center;
 	width: 98.5vw;
 	height: 70px;
-  background-color: #f9f9f9f9;
+  background-color: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(7.7px);
 }
 
 .regNavBodyCover {
@@ -237,7 +238,7 @@
 	color: #333333;
 	font-size: 11px;
 	font-family: 'Poppins-Bold';
-	border-bottom: 2px solid #f9f9f9f9;
+	border-bottom: 2px solid transparent;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 2px;

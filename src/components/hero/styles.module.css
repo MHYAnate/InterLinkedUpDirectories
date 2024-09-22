@@ -174,7 +174,7 @@
 	font-size: 24px;
 	transition: all 0.3s ease; /* Smooth transition */
 	text-transform: uppercase;
-	transform: translateX(9px);
+	transform: translateX(7px);
 }
 
 .registerBtn:hover {
