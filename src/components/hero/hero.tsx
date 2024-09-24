@@ -19,8 +19,6 @@ export default function Hero() {
 					<div className={styles.categoryCover}>
 						<div className={styles.catFlex}>
 							<div className={styles.flexControl}>
-
-							
 						<div className={styles.categoryImgCover}>
 							<Image
 								object-fit="cover"
