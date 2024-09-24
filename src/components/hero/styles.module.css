@@ -275,8 +275,11 @@
 		}
 	
 		.header {
-			transform: translateX(0) translateY(-50px);
+			transform: translateX(-30px) translateY(-50px);
 			line-height: 130px;
+		}
+		.registerBtn {
+			transform: translateX(30px) translateY(10px);
 		}
 	
 }
@@ -284,5 +287,12 @@
 @media screen and (max-width:400px) {
 	.categoryImg {
 		transform: translateX(30px);
+		}
+	
+		.header {
+			transform: translateX(0px);
+		}
+		.registerBtn {
+			transform: translateY(10px);
 		}
 }
