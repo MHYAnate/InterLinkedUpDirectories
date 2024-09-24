@@ -311,7 +311,7 @@
 		}
 	
 		.header {
-			transform: translateX(-30px);
+			transform: translateX(-30px) translateY(-50px);
 		}
 }
 
