@@ -56,7 +56,6 @@
   justify-content: space-around;
   flex-wrap: wrap;
   width: 98vw;
-  background-color:#f9f9f9;
 }
 
 .shopDetailCover{
@@ -154,7 +153,7 @@
   border-radius: 5px;
   justify-content: flex-start;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #f9f9f9;
   overflow: hidden;
   padding-bottom: 10px;
   

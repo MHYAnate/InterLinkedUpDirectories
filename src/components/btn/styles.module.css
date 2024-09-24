@@ -81,7 +81,14 @@
   column-gap: 7px;
 	display: flex;
 	justify-content: space-around;
-	align-items: last baseline;
+	align-items: center;
+}
+.paginationCover{
+  height: 30px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn{
@@ -93,7 +100,6 @@
   padding-right: 10px;
   border-radius: 5px;
   user-select: none;
-  margin-top: 10px;
   width: fit-content;
   box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
   cursor: pointer;
@@ -108,7 +114,6 @@
   padding-right: 10px;
   border-radius: 5px;
   user-select: none;
-  margin-top: 10px;
   width: fit-content;
   cursor: pointer;
   user-select: none;
@@ -212,6 +217,9 @@
   background-color: none;
   border: none;
   color: rgb(84, 84, 84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .svgSizeC{

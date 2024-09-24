@@ -267,6 +267,7 @@ export default function ItemsFilter() {
 
 	const [currentPage, setCurrentPage] = useState(1);
 	const [postsPerPage] = useState(6);
+	const [visiblePageRange, setVisiblePageRange] = useState([1, 5]);
 
 	// Get current posts
 	const indexOfLastPost = currentPage * postsPerPage;
@@ -274,7 +275,13 @@ export default function ItemsFilter() {
 	const currentPosts = filteredList.slice(indexOfFirstPost, indexOfLastPost);
 
 	// Change page
-	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+	const paginate = (pageNumber: number) => {
+
+		setCurrentPage(pageNumber);
+		
+	}
+
+
 
 	function RenderAvailableModelGoods() {
 		if (filteredList.length === 0) {

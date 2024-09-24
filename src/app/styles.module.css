@@ -80,7 +80,7 @@
   width: 100vw;
   min-height: 100vh;
   max-height: fit-content;
-	background-image: linear-gradient(to right, rgb(241, 243, 241), white);
+	background-color: #f9f9f9;
  
 }
 

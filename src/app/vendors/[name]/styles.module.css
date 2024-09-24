@@ -56,14 +56,17 @@
   flex-direction: column;
   width: max-content;
   height: max-content;
-  background-color:#f9f9f9;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f9f9f9f9;
 }
 .pageBodyCover{
   width: 98vw;
-  background-color:#f9f9f9;
   z-index: 3;
   height: max-content;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .idBody{
   width: 30vw;

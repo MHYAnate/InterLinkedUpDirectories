@@ -106,9 +106,6 @@ export default function Shop() {
 		<Suspense fallback={<Loading />}>
 			<div>
 				<div className={styles.nav}>{user ? <VendorNav /> : <Nav />}</div>
-				<div>
-					<Hero/>
-				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
 						<HeroDetail user={user}  img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} address={profileDetails?.address}  shopMg={profileDetails?.name}
