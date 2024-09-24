@@ -167,7 +167,7 @@
 	align-items: center;
 	justify-content: center;
 	font-family: "NerkoOne";
-	background-color: #1F8B38;/* Primary Green */
+	background-color: #FFA500;/* Primary Green */
 	color: white;
 	padding: 10px 20px;
 	border: none;
@@ -182,7 +182,7 @@
 }
 
 .registerBtn:hover {
-	background-color:   #145b25; /* Darker shade on hover */
+	background-color:   #df9101; /* Darker shade on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
 }
 
