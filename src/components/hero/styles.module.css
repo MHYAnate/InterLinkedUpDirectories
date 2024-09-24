@@ -290,9 +290,9 @@
 		}
 	
 		.header {
-			transform: translateX(0px);
+			transform: translateX(0px) translateY(-50px);
 		}
 		.registerBtn {
-			transform: translateY(10px);
+			transform: translateX(0) translateY(20px);
 		}
 }
