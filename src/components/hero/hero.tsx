@@ -29,7 +29,7 @@ export default function Hero() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/background1.jpg"
+								src="/service/b7.jpg"
 								priority={true}
 								unoptimized
 							/>
