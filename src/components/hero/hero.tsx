@@ -36,7 +36,7 @@ export default function Hero() {
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
 								<div className={styles.titleHero2}>
-									 <span className={styles.titleend}>Simplify your network</span> <span className={styles.titleend}> Amplify your reach.</span>
+									 <span className={styles.titleend}>Simplify Your Network and</span> <span className={styles.titleend}> Amplify Your Reach.</span>
 									</div>
 									<div className={styles.titleHero}>C<span className={styles.age}>ONNECTIONS</span> 
 									</div>
