@@ -111,7 +111,7 @@
 	width: 100%;
 	margin-left: 1.5vw;
 	/* text-decoration: underline; */
-	color: #1F8B38;
+	color: #34A853;
 
 }
 .age {
@@ -127,7 +127,7 @@
 	/* background-color:rgb(192, 192, 192, 0.7); */
 	margin-bottom: 10px;
 	width: 100%;
-	background-image: linear-gradient(to left , darkolivegreen, #1F8B38);
+	background-image: linear-gradient(to right , #34A853, #1F8B38);
 	background-clip: text;
 	color: transparent;
 }
@@ -136,7 +136,7 @@
 
 	font-weight: 400;
 	/* color:  rgb(102, 102, 102); */
-	color: rgb(103, 105, 98.5);
+	color: #6B7280;
 	/* background-color: rgba(235, 235, 231, 0.7); */
 	padding-left: 10px;
 	padding-right: 10px;
@@ -163,7 +163,7 @@
 	align-items: center;
 	justify-content: center;
 	font-family: "NerkoOne";
-	background-color: #FFA500;/* Primary Green */
+	background-color: #FF6F00;/* Primary Green */
 	color: white;
 	padding: 10px 20px;
 	border: none;
@@ -178,7 +178,7 @@
 }
 
 .registerBtn:hover {
-	background-color:   #df9101; /* Darker shade on hover */
+	background-color:   #f36a01; /* Darker shade on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevated shadow on hover */
 }
 
@@ -196,7 +196,8 @@
 .toWhat {
 	font-weight: 400;
 	font-size: 3rem;
-	background-image: linear-gradient(to right , #8A2BE2,  yellow);
+	background-image: linear-gradient(to right ,  #1F2937,
+	#6B7280);
 	background-clip: text;
 	color: transparent;
 }
@@ -208,7 +209,8 @@
 	font-weight: 400;
 	font-size: 3rem;
 	text-transform: uppercase;
-	background-image: linear-gradient(to left , #8A2BE2,  yellow);
+	background-image: linear-gradient(to left ,  #1F2937,
+	#6B7280);
 	background-clip: text;
 	color: transparent;
 }
