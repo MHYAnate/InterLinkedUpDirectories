@@ -69,7 +69,7 @@ const Pagination: React.FC<PaginationProps> = ({ postsPerPage, totalPosts, pagin
           </div>
         ))}
         <div onClick={()=>handleNext()}><NextSvg/></div>
-        {indexOfLastPageInRange < totalPages && (<div onClick={()=>handleNextRange()}><NextPageSvg/></div>)}
+        {indexOfLastPageInRange < totalPages && (<div onClick={()=>{handleNextRange();paginate(indexOfLastPageInRange)}}><NextPageSvg/></div>)}
       </div>
     </nav>
   );

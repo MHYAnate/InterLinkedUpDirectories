@@ -35,11 +35,16 @@ export default function Hero() {
 						<div className={styles.title}>
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
+								<div className={styles.titleHero2}>
+									 <span className={styles.titleend}>Simplify your network</span> <span className={styles.titleend}> Amplify your reach.</span>
+									</div>
 									<div className={styles.titleHero}>C<span className={styles.age}>ONNECTIONS</span> 
 									</div>
 									<div className={styles.titleHero2}>
 									 <span className={styles.toWhat}>MADE</span> <span className={styles.matters}>Easy</span>
 									</div>
+								
+									
 									<div className={styles.callToAction}>
 										<div onClick={()=>router.push('/register')} className={styles.registerBtn}>
 											{"Register Now!"}
