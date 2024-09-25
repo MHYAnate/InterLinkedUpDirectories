@@ -57,7 +57,7 @@
   flex-direction: column;
   width: max-content;
   height: max-content;
-  background-color: #f9f9f9f9;
+  background-color: white;
 }
 .formContainer{
   display: flex;

@@ -68,7 +68,7 @@
   width: 100vw;
   min-height: 100vh;
   max-height: fit-content;
-  background-color:#f9f9f9;
+  background-color:white;
 }
 
 
@@ -80,7 +80,7 @@
   width: 100vw;
   min-height: 100vh;
   max-height: fit-content;
-	background-color: #f9f9f9;
+	background-color: white;
  
 }
 
@@ -111,6 +111,10 @@
   left: calc((100vw-98.5vw)/2);
   z-index: 3;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navHolder{
+  background-color: white;
 }
 
 .header{
@@ -316,7 +320,7 @@ font-family: 'Poppins-SemiBold';
     width: 98.5vw;
     min-height: max-content;
     max-height: max-content;
-    background-image: linear-gradient(to right, rgb(241, 243, 241), white);
+    background-image: linear-gradient(to right, white, white);
   }
   .body{
     display: flex;

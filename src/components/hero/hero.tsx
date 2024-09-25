@@ -27,7 +27,7 @@ export default function Hero() {
 								quality={100}
 								width={100}
 								height={100}
-								src="/service/b7.jpg"
+								src="/service/c2.jpg"
 								priority={true}
 								unoptimized
 							/>

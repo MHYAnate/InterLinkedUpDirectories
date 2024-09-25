@@ -130,9 +130,6 @@ export default function WorkSpace() {
 		<Suspense fallback={<Loading />}>
 			<div>
 				<div className={styles.nav}>{user ? <VendorNav /> : <Nav />}</div>
-				<div>
-					<Hero />
-				</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
 					<HeroDetail imgM={src} img={profileDetails?.src} vendorNameM={vendorName} vendorName={profileDetails?.name} addressM={address} address={profileDetails?.address} serviceCatM={cat} serviceCat={profileDetails?.selectCategory} contactM={phone} contact={profileDetails?.number} actNumM={actNum} actNum={profileDetails?.account} bnkNameM={bnk} 	bnkName={profileDetails?.bankName} actNameM={actName} actName={profileDetails?.accountName} serviceNameM={vendorService} serviceName={profileDetails?.selectService} specialityM={spec} speciality={profileDetails?.speciality} idM={vendorName} id={vendorId} />

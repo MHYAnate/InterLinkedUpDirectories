@@ -22,7 +22,7 @@
 	cursor: pointer;
 	overflow: hidden;
 	border-bottom: 1px solid silver;
-	background-color: #f9f9f9f9;
+	background-color: white;
 }
 
 .categoryCover {
@@ -43,7 +43,7 @@
 	height: 300px;
 	display: flex;
 	justify-content: center;
-	background-color: #f9f9f9f9;
+	background-color: white;
 	border-radius: 10px;
   /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);  */
 }
@@ -59,10 +59,10 @@
 }
 .categoryImg {
 	width: 500px;
-	height: 700px;
+	height: 1000px;
 	opacity: 1;
 	border-radius: 5px;
-	transform: translateY(-30px) translateX(170px);
+	transform: translateY(-425px) translateX(170px);
 }
 
 .title {
@@ -136,7 +136,7 @@
 
 	font-weight: 400;
 	/* color:  rgb(102, 102, 102); */
-	color: #6B7280;
+	color: #1F2937;
 	/* background-color: rgba(235, 235, 231, 0.7); */
 	padding-left: 10px;
 	padding-right: 10px;

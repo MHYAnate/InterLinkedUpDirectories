@@ -16,7 +16,7 @@ export default function Nav() {
 	return (
 		<div
 			className={`${
-				pathname === "/register" ? styles.regNavBodyCover : pathname !== "/" && pathname === "/shop"  || pathname === "/company" ?styles.navBodyCover: pathname === "/"? styles.navBodyCoverH: styles.navBodyCoverH
+				pathname === "/register" ? styles.regNavBodyCover : pathname !== "/" && pathname === "/shop"  || pathname === "/company" ?styles.navBodyCover: pathname === "/" || pathname === "/login" || pathname === "/about"? styles.navBodyCoverH: styles.navBodyCover
 			}`}
 		>
 			<div className={styles.navBody}>

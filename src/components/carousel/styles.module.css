@@ -196,7 +196,7 @@
   height: 560px;
   overflow-y: auto;
   z-index: 2;
-  background-color:#f9f9f9;
+  background-color:white;
 }
 .carouselPagi{
   width: 310px;
@@ -222,7 +222,7 @@
   align-items: center;
   padding-bottom: 10px;
   row-gap: 10px;
-  background-color:#f9f9f9;
+  background-color:white;
 }
 
 .renderCover{

@@ -20,9 +20,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 			<nav className={styles.navHolder}>
 				<Nav />
 			</nav>
-			<div>
-				<Hero/>
-			</div>
 			<div className={styles.pageBodyCover}>
 				<div className={styles.idBody}>
 					<div className={styles.idName}>{name} Vendors</div>
