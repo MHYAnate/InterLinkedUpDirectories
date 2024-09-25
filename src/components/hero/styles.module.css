@@ -100,32 +100,24 @@
 	user-select: none;
 	font-size: 5rem;
 	font-weight: 400;
-	/* color:  rgb(102, 102, 102); */
-	/* background-color: rgba(235, 235, 231, 0.7); */
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 3px;
 	font-family: "ProtestGuerrilla", Times, serif;
 	text-align: center;
-	/* background-color:rgb(192, 192, 192, 0.7); */
 	width: 100%;
 	margin-left: 1.5vw;
-	/* text-decoration: underline; */
 	color: #34A853;
-
+	line-height: 1;
 }
 .age {
 	user-select: none;
 	font-size: 3.3rem;
 	font-weight: 500;
-	/* color:  rgb(102, 102, 102); */
 	color: rgb(89, 135, 9);
-	/* background-color: rgba(235, 235, 231, 0.7); */
 	border-radius: 3px;
 	font-family: "ProtestGuerrilla";
 	text-align: center;
-	/* background-color:rgb(192, 192, 192, 0.7); */
-	margin-bottom: 10px;
 	width: 100%;
 	background-image: linear-gradient(to right , #34A853, #1F8B38);
 	background-clip: text;
@@ -133,21 +125,30 @@
 }
 .titleHero2 {
 	user-select: none;
-
 	font-weight: 400;
-	/* color:  rgb(102, 102, 102); */
 	color: #1F2937;
-	/* background-color: rgba(235, 235, 231, 0.7); */
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 3px;
 	font-family: "NerkoOne",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 	text-align: center;
-	/* background-color:rgb(192, 192, 192, 0.7); */
 	width: 100%;
 	margin-left: 1.5vw;
-	/* text-decoration: underline; */
+	margin-bottom: 20px;
+}
+.titleHero3 {
+	user-select: none;
+	font-weight: 400;
+	color: #1F2937;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	font-family: "NerkoOne",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	text-align: center;
+	width: 100%;
+	margin-left: 1.5vw;
 }
 
 .callToAction {
@@ -214,19 +215,13 @@
 	background-clip: text;
 	color: transparent;
 }
-.slogan {
+.titleend {
 	user-select: none;
-	font-size: 1.5rem;
+	font-size: 14px;
 	font-weight: 400;
-	color: white;
+	color: #6B7280;
+	font-family: 'Poppins-bold';
 	text-align: center;
-	/* background-color: rgba(235, 235, 231, 0.7); */
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 3px;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-	background-color: silver;
 }
 
 
@@ -238,7 +233,7 @@
 	}
 
 	.header {
-		transform:translateX(-150px);
+		transform:translateX(-120px);
 	}
 	.registerBtn {
 		transform: translateX(0);
@@ -252,7 +247,7 @@
 		}
 	
 		.header {
-			transform:translateX(-120px);
+			transform:translateX(-110px);
 		}
 		.registerBtn {
 			transform: translateX(0);
@@ -268,7 +263,7 @@
 		}
 	
 		.header {
-			transform:translateX(-100px);
+			transform:translateX(-90px);
 		}
 		.registerBtn {
 			transform: translateX(0);
@@ -282,7 +277,7 @@
 		}
 	
 		.header {
-			transform:translateX(-100px);
+			transform:translateX(-80px);
 		}
 		.registerBtn {
 			transform: translateX(0);
@@ -296,7 +291,7 @@
 		}
 	
 		.header {
-			transform:translateX(-80px);
+			transform:translateX(-40px);
 		}
 		.registerBtn {
 			transform: translateX(0);
@@ -315,4 +310,13 @@
 		.registerBtn {
 			transform: translateX(0);
 		}
+}
+
+@media screen and (max-width:345px) {
+	.titleHero {
+		font-size: 4.5rem;
+	}
+	.age {
+		font-size: 2.8rem;
+	}
 }

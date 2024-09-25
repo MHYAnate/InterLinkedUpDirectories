@@ -35,13 +35,15 @@ export default function Hero() {
 						<div className={styles.title}>
 							<div className={styles.flextitle}>
 								<div className={styles.header}>
-								<div className={styles.titleHero2}>
-									 <span className={styles.titleend}>Simplify Your Network and</span> <span className={styles.titleend}> Amplify Your Reach.</span>
-									</div>
+								
 									<div className={styles.titleHero}>C<span className={styles.age}>ONNECTIONS</span> 
 									</div>
 									<div className={styles.titleHero2}>
 									 <span className={styles.toWhat}>MADE</span> <span className={styles.matters}>Easy</span>
+									</div>
+
+									<div className={styles.titleHero3}>
+									 <span className={styles.titleend}>A Simplified Business Network with an Amplified  Reach.</span>
 									</div>
 								
 									
