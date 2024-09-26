@@ -339,13 +339,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 98.5vw;
+  width: 100vw;
   height: 100vh;
   background-color: white;
   z-index: 9;
 }
 .mainView{
-  width: 98.5vw;
+  width: 100vw;
   height: 99vh;
   display: flex;
   flex-direction: column;
@@ -2570,6 +2570,7 @@ font-family: 'Poppins-SemiBold';
     width: 98vw;
    
   }
+
   .idiImgV{
     max-width: 90vw;
     min-width: 90vw;
