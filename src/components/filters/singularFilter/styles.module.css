@@ -335,13 +335,67 @@
   padding-bottom: 7px;
   border-radius: 7px;
 }
+.mainViewCover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98.5vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 9;
+}
+.mainView{
+  width: 98.5vw;
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.idiImgVCover{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgb(0, 0, 0, 0.4);
+}
+
+.idiImgV{
+  max-width: 700px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 200px;
+}
+
+.selectViewPicture{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  user-select: none;
+}
 
 .picSelCover{
- width: 220px;
+ width: 30px;
  height: fit-content;
  position: absolute;
- bottom: 1px;
- left: 0;
+ top: 0;
+ right: 0;
+ border-bottom-left-radius: 7px;
+ overflow: hidden;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.picSelCover:hover{
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .condition{
   position: absolute;
@@ -364,6 +418,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 5px;
+  background-color: transparent;
 }
 
 
@@ -380,7 +435,7 @@
 
 
 .picL{
-   width: 103px;
+   width: fit-content;
   height: 23px;
   display: flex;
   align-items: center;
@@ -394,10 +449,12 @@
   color: white;
   border: 1px solid silver;
   transition: all 0.3s ease;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .picR{
-   width: 103px;
+   width: fit-content;
   height: 23px;
   display: flex;
   align-items: center;
@@ -411,10 +468,14 @@
   color: white;
   border: 1px solid silver;
   transition: all 0.3s ease;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 .picHL{
-  width: 103px;
+  width: fit-content;
   height: 23px;
+  padding-left: 7px;
+  padding-right: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,8 +489,10 @@
 }
 
 .picHR{
-  width: 103px;
+  width: fit-content;
   height: 23px;
+  padding-left: 7px;
+  padding-right: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2506,6 +2569,12 @@ font-family: 'Poppins-SemiBold';
     justify-content: center;
     width: 98vw;
    
+  }
+  .idiImgV{
+    max-width: 90vw;
+    min-width: 90vw;
+    max-height: 300px;
+    min-height: 200px;
   }
 
 }

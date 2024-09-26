@@ -4,6 +4,8 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import RateUs from "@/components/btn/rateUs";
 import { useRouter, useSearchParams } from "next/navigation";
+import ViewBtn from "@/components/btn/viewPicSvg";
+import CloseViewBtn from "@/components/btn/viewPicSvgC";
 
 
 interface ItemProps {
@@ -31,6 +33,8 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
   const [more, setMore] = useState("");
 
   const [img, setImg] = useState("");
+
+	const [view, setView] = useState(false);
 
   const [isPending, startTransition] = useTransition();
 
@@ -61,11 +65,7 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 						<Image
 							className={styles.idiImg}
 							src={
-								img === `${1}`
-									? `${props.image}`
-									: img === `${2}`
-									? `${props.image2}`
-									: `${props.image}`
+								`${props.image}`
 							}
 							alt={`${props.title}`}
 							quality={100}
@@ -77,23 +77,9 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 								<div>{props.condition}</div>
 						</div>
 						<div className={styles.picSelCover}>
-						<div className={styles.picSel}>
-						<div
-							className={img === `${1}` ? styles.picHL : styles.picL}
-							onClick={() => {
-								setImg(`${1}`);
-							}}
-						>
-							{`FRONT`}
-						</div>
-						<div
-							className={img === `${2}` ? styles.picHR : styles.picR}
-							onClick={() => {
-								setImg(`${2}`);
-							}}
-						>
-							{`SIDE`}
-						</div>
+						
+						<div onClick={()=>{setView(true)}} className={styles.picSel}>
+						<ViewBtn/>
 					</div>
 					</div>
 					</div>
@@ -145,7 +131,39 @@ const Item: React.FC<ItemProps> = (props:ItemProps) => {
 				>
 					{more === `${props.id}` ? "Less" : "More Details"}
 				</button>
+			{view && (
+			<div className={styles.mainViewCover}>
 			
+				<div className={styles.mainView}>
+				<div onClick={()=> setView(false)}>
+					<CloseViewBtn/>
+				</div>
+					<div className={styles.idiImgVCover}>
+					<Image
+							className={styles.idiImgV}
+							src={
+								img === "1"
+									? `${props.image}`
+									: img === "2"
+									? `${props.image2}`
+									: `${props.image}`
+							}
+							alt={`${props.title}`}
+							quality={100}
+							width={500}
+							height={500}
+							// unoptimized
+						/>
+					</div>
+					<div className={styles.selectViewPicture}>
+				<div className={img === "1"? styles.picHL:styles.picL} onClick={()=>{setImg("1")}}>front</div>
+				<div className={img === "2"?styles.picHR:styles.picR} onClick={()=>setImg("2")}>side</div>
+				</div>
+			
+				</div>
+				
+			</div>
+			)}
 		</div>
 	);
 };
