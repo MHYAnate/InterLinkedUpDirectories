@@ -282,7 +282,14 @@
 		.registerBtn {
 			transform: translateX(0);
 		}
-	
+		.catFlex {
+			width: 100vw;
+		}
+		.flexControl {
+			width: 100vw;
+		
+			/* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);  */
+		}
 }
 
 @media screen and (max-width: 550px) {

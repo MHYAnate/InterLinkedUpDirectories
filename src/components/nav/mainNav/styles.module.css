@@ -626,9 +626,9 @@ div.inActiveBtnH:hover {
     width: 50vw;
     height: max-content;
     position: absolute;
-    top: 70px;
-    right: 0.001px;
-		z-index: 9;
+    top: 60px;
+    right: 10px;
+		z-index: 999;
   }
 
   .flexMenu{

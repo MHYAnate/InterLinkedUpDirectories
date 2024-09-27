@@ -2270,6 +2270,7 @@ font-family: 'Poppins-SemiBold';
     align-items: first baseline;
     padding-left: 10px;
     padding-top: 10;
+    margin-bottom: 20px;
   }
   
   .renderVendorInnerCoverC{
@@ -2520,7 +2521,6 @@ font-family: 'Poppins-SemiBold';
     height: fit-content;
     overflow-x: auto;
     padding-bottom: 35px; 
-    border: 1px solid silver;
     margin-top: 10px;
     border-radius: 5px;
     background-color: white;
