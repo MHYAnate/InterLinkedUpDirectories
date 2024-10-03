@@ -16,7 +16,7 @@ const CommunityComponent: React.FC<Community> = ({
 
 	return (
 		<div className={styles.communityCover}>
-
+      
 		</div>
 	);
 };

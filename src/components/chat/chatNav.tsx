@@ -282,7 +282,7 @@ const ChatNav: React.FC<ChatProps> = ({
 			<>
 				{filteredMyContactName.map((contact) => {
 					return (
-						<div id={contact.contactId} className={styles.contactCover}>
+						<div id={contact.contactId} key={contact.contactId} className={styles.contactCover}>
 							<MyContactComponent
 								contactNumber={contact.contactNumber}
 								contactImg={contact.contactImg}
@@ -495,7 +495,7 @@ const ChatNav: React.FC<ChatProps> = ({
 			<>
 				{noticeDetails.map((notice) => {
 					return (
-						<div id={notice.noticetId} className={styles.contactCover}>
+						<div id={notice.noticetId} key={notice.noticetId} className={styles.contactCover}>
 							<ChatNotice
 								senderId={notice.senderId}
 								senderName={notice.senderName}
