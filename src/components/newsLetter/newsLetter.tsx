@@ -88,22 +88,21 @@ export default function NewsLetter() {
 								</div>
 								<div className={styles.innerCover}>
 								<div className={styles.boldPSub}>
-										Subscribe to our newsletter and receive exclusive updates.
+										For Any Suggestions, Observations and Complaint Post.
 									</div>
 									<div className={styles.innerFormCover}>
 									<div className={styles.inputCover}>
-										<input
-											type="text"
-											className={styles.input}
+										<textarea
+											className={styles.textarea}
 											{...register("email", {
 												required: "Required",
 											})}
 											id="email"
-											placeholder={"Email"}
+											placeholder={"Feed Backs"}
 										/>
 									</div>
-									<button className={styles.subscribe} type="submit">
-                  subscribe
+									<button className={styles.post} type="submit">
+                  Post
 									</button>
 									</div>
 								</div>

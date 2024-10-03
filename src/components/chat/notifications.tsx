@@ -1,53 +1,16 @@
 "use client";
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { Suspense } from "react";
-import Loading from "@/app/register/logo";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import ChatImageBtn from "../btn/chatImgBtn";
-import ChatBtn from "../btn/chatBtn";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import AcceptConnectSvg from "../btn/acceptConnectSvg";
-import RejectConnectSvg from "../btn/rejectConnectSvg";
-
-import {
-	deleteDoc,
-	collection,
-	setDoc,
-	doc,
-	getDocs,
-	query,
-	where,
-	CollectionReference,
-	onSnapshot,
-	orderBy,
-	limit,
-	startAt,
-	startAfter,
-	endAt,
-	endBefore,
-	addDoc,
-	serverTimestamp,
-} from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import Firebase from "@/firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { useForm } from "react-hook-form";
+import RejectConnectSvg from "../btn/rejectConnectSvg"; 
 import styles from "./styles.module.css";
-import ChatMessage from "./chatMessage";
+
 
 interface NoticeProps {
-	noticetId: string;
-	senderId: string;
 	senderArea: string;
 	senderName: string;
 	senderPic: string;
 	senderState: string;
-	seen: string;
-	status: string;
-	requesteeId: string;
 	noticeType: string;
 	noticeMsg: string;
 	handleDeleteRequest: any;
@@ -56,19 +19,15 @@ interface NoticeProps {
 }
 
 const Notifications: React.FC<NoticeProps> = ({
-	noticetId,
-	senderId,
 	senderArea,
 	senderName,
 	senderPic,
 	senderState,
-	seen,
-	status,
-	requesteeId,
 	handleDeleteRequest,
 	onConfirm,
 	contact,
 	noticeType,
+	noticeMsg,
 }) => {
 	const [isDelete, setIsDelete] = useState(false);
 
@@ -156,7 +115,8 @@ const Notifications: React.FC<NoticeProps> = ({
 			)}
 			{noticeType === "admin" && (
 			<div className={styles.adminNotice}>
-				
+				<div className={styles.noticeTopic}>{noticeType}</div>
+				<div className={styles.adimNotice}>{	noticeMsg}</div>
 			</div>)}
 		</>
 	);

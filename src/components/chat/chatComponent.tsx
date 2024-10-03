@@ -260,7 +260,7 @@ const Chat: React.FC<ChatProps> = ({
 				</div>
 				<div className={styles.massages}>
 					{loading? <Loader/>:massages &&
-						massages.map((msg) => (
+						filteredMessageLocation.map((msg) => (
 							<ChatMessage
 								key={msg.docid}
 								chat={msg.chat}

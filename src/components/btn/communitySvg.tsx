@@ -1,14 +1,14 @@
 import styles from "./styles.module.css";
 
-const PublicSvg: React.FC<any> = () => {
+const CommunitySvg: React.FC<any> = ({state}) => {
 	return (
 		<div className={styles.chatCoverBtnC}>
-		<svg
+			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
+				fill={state !== "community"?"lightblue":"lightgreen"}
 				viewBox="0 0 24 24"
-				strokeWidth={1.5}
-				stroke="green"
+				strokeWidth={1}
+				stroke={state !== "community"?"blue":"green"}
 				className={styles.svgSizeC}
 			>
 				<path
@@ -21,5 +21,5 @@ const PublicSvg: React.FC<any> = () => {
 	);
 };
 
-PublicSvg.displayName = "PublicSvg";
-export default PublicSvg;
+CommunitySvg.displayName = "CommunitySvg";
+export default CommunitySvg;

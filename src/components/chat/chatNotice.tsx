@@ -1,20 +1,5 @@
 "use client";
-import React, { useRef, useState, useEffect, useCallback } from "react";
-import { Suspense } from "react";
-import Loading from "@/app/register/logo";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
-import ChatImageBtn from "../btn/chatImgBtn";
-import ChatBtn from "../btn/chatBtn";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
-import BreketeSvg from "../btn/publicSvg";
-import RoomSvg from "../btn/roomSvg";
-import StateSvg from "../btn/stateSvg";
-import AreaSvg from "../btn/areaSvg";
-import RemoveUserSvg from "../btn/removeUserSvg";
-import MyContactComponent from "./myContactComponent";
-import ContactComponent from "./contactComponent";
+import React, {useState, useEffect} from "react";
 import { StateData } from "@/database/stateData";
 import {
 	deleteDoc,
@@ -22,26 +7,12 @@ import {
 	setDoc,
 	doc,
 	getDocs,
-	query,
-	where,
-	CollectionReference,
-	onSnapshot,
-	orderBy,
-	limit,
-	startAt,
-	startAfter,
-	endAt,
-	endBefore,
 	addDoc,
-	serverTimestamp,
 } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
-import ChatMessage from "./chatMessage";
+import Notifications from "./notifications";
 
 interface ChatProps {
 	senderId: string;
@@ -50,19 +21,10 @@ interface ChatProps {
 	senderState: string;
 	senderArea: string;
 	requesteeId:string;
-}
-
-interface ContactValue {
-	contactRoomId: string;
-	contactId: string;
-	contactNumber: string;
-	contactImg: string;
-	contactName: string;
-	contactAddress: string;
-	stateSelect: string;
-	areaSelect: string;
-	lastMsg: string;
-	docid: string;
+	requesteeName: string;
+	requesteePic: string;
+	requesteeArea: string;
+	requesteeState: string;
 }
 
 interface noticeValue {
@@ -75,6 +37,10 @@ interface noticeValue {
 	seen: string;
 	status: string;
 	requesteeId: string;
+	requesteeName: string;
+	requesteePic: string;
+	requesteeArea: string;
+	requesteeState: string;
 	noticeType:string;
   noticeMsg:string;
 }
@@ -101,7 +67,11 @@ const ChatNotice: React.FC<ChatProps> = ({
 	senderPic,
 	senderState,
 	senderArea,
-	requesteeId
+	requesteeId,
+	requesteeName,
+	requesteePic,
+	requesteeArea,
+	requesteeState,
 }) => {
 	const {
 		register,
@@ -188,7 +158,7 @@ const ChatNotice: React.FC<ChatProps> = ({
 
 	const [noticeDetail, setNoticeDetail] = useState<noticeValue[]>([]);
 
-	const handleGetContactDetail = async () => {
+	const handleGetNoticeDetail = async () => {
 		try {
 			const querySnapshot = await getDocs(noticeRef);
 
@@ -209,7 +179,7 @@ const ChatNotice: React.FC<ChatProps> = ({
 	};
 
 	useEffect(() => {
-		handleGetContactDetail();
+		handleGetNoticeDetail();
 	}),
 		[];
 
@@ -221,7 +191,7 @@ const ChatNotice: React.FC<ChatProps> = ({
 		}
 	};
 
-	const filteredMyContactState =
+	const filteredMyNoticeState =
 		noticeDetail?.length > 0
 			? noticeDetail.filter((eachItem) => {
 					const text = eachItem.senderState.toLowerCase();
@@ -231,9 +201,9 @@ const ChatNotice: React.FC<ChatProps> = ({
 			  })
 			: [];
 
-	const filteredMyContactarea =
-		filteredMyContactState?.length > 0
-			? filteredMyContactState.filter((eachItem) => {
+	const filteredMyNoticeArea =
+		filteredMyNoticeState?.length > 0
+			? filteredMyNoticeState.filter((eachItem) => {
 					const text = eachItem.senderArea.toLowerCase();
 					return SelectArea !== (null || undefined || "" || "Select Area")
 						? text.includes(SelectArea.toLowerCase())
@@ -242,8 +212,8 @@ const ChatNotice: React.FC<ChatProps> = ({
 			: [];
 
 	const filteredNoticeType =
-		filteredMyContactarea?.length > 0
-			? filteredMyContactarea.filter((eachItem) => {
+		filteredMyNoticeArea?.length > 0
+			? filteredMyNoticeArea.filter((eachItem) => {
 					const text = eachItem.senderArea.toLowerCase();
 					return SelectArea !== (null || undefined || "" || "Select Area")
 						? text.includes(SelectArea.toLowerCase())
@@ -251,27 +221,25 @@ const ChatNotice: React.FC<ChatProps> = ({
 			  })
 			: [];
 
-	const RenderMyContact: any = () => {
+	const RenderMyNotice: any = () => {
 		if (noticeDetail.length === 0) {
 			return (
 				<div>
-					<div>You Have No Available Contact</div>
+					<div>You Have No Available Notice</div>
 				</div>
 			);
 		}
 		return filteredNoticeType.map((notice) => {
-			<div id={notice.noticetId} className={styles.contactCover}></div>;
+			<div id={notice.noticetId} className={styles.contactCover}>
+				<Notifications senderArea={senderArea} senderName={senderName} senderPic={senderPic} senderState={senderState} handleDeleteRequest={handleDeleteRequest} onConfirm={onConfirm} contact={notice} noticeType={notice.noticeType} noticeMsg={notice.noticeMsg}/>
+			</div>;
 		});
 	};
 
 	const myConnectRef = collection(database, `connection-${requesteeId}`);
 	const connectRef = collection(database, `connection-${senderId}`);
 
-	const contactQuery = query(connectRef);
-
-	const [contactDetails, setContactDetails] = useState<noticeValue[]>([]);
-
-	const confirmMyRequest = async (data: noticeValue) => {
+	const confirmTheRequest = async (data: noticeValue) => {
 		try {
 			const docRef = await addDoc(myConnectRef, {
 				connectedId: "",
@@ -303,10 +271,10 @@ const ChatNotice: React.FC<ChatProps> = ({
 			const docRef = await addDoc(connectRef, {
 				connectedId: "",
 				connectId: `${senderId}`,
-				senderArea: `${senderArea}`,
-				senderName: `${senderName}`,
-				senderPic: `${senderPic}`,
-				senderState: `${senderState}`,
+				senderArea: `${requesteeArea}`,
+				senderName: `${requesteeName}`,
+				senderPic: `${requesteePic}`,
+				senderState: `${requesteeState}`,
 				connectionId: `${data.requesteeId}`,
 			});
 			const docId = docRef.id;
@@ -359,8 +327,8 @@ const ChatNotice: React.FC<ChatProps> = ({
 		retrivedContact?.length > 0
 			? retrivedContact.filter((eachItem) => {
 					const text = eachItem.stateSelect.toLowerCase();
-					return SelectState !== (null || undefined || "" || "Select State")
-						? text.includes(SelectState.toLowerCase())
+					return selectState !== (null || undefined || "" || "Select State")
+						? text.includes(selectState.toLowerCase())
 						: text;
 			  })
 			: [];
@@ -369,8 +337,8 @@ const ChatNotice: React.FC<ChatProps> = ({
 		filteredContactState?.length > 0
 			? filteredContactState.filter((eachItem) => {
 					const text = eachItem.areaSelect.toLowerCase();
-					return SelectArea !== (null || undefined || "" || "Select Area")
-						? text.includes(SelectArea.toLowerCase())
+					return selectArea !== (null || undefined || "" || "Select Area")
+						? text.includes(selectArea.toLowerCase())
 						: text;
 			  })
 			: [];
@@ -405,7 +373,7 @@ const ChatNotice: React.FC<ChatProps> = ({
 	};
 
 	const onConfirm = (data:noticeValue) => {
-		confirmMyRequest(data);
+		confirmTheRequest(data);
 		confirmRequest(data);
 	};
 	return (
@@ -482,7 +450,7 @@ const ChatNotice: React.FC<ChatProps> = ({
 							: setSwitched("");
 					}}
 				>
-					<RenderMyContact />
+					<RenderMyNotice />
 				</div>
 				<div
 					className={

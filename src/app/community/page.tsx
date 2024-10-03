@@ -5,21 +5,11 @@ import Image from "next/image";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
 	collection,
-	setDoc,
-	doc,
 	getDocs,
 	query,
 	where,
-	addDoc,
-	CollectionReference,
-	onSnapshot,
-	deleteDoc,
-	updateDoc,
-	deleteField,
 } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
 import Chat from "@/components/chat/chatComponent";
@@ -27,6 +17,7 @@ import ChatNav from "@/components/chat/chatNav";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
+
 
 
 
@@ -114,7 +105,7 @@ const router = useRouter();
 		<Suspense fallback={<Loading/>}>
 			<div className={styles.chatContainer}>
 				<div className={styles.chatNav}>
-
+					<ChatNav setRoomName={setRoomName} setRoomLocation={setRoomLocation} senderId={`${profileDetails?.docid}`} senderName={`${profileDetails?.name}`} senderPic={`${profileDetails?.src}`} 	setStateName={setRoomState} senderState={`${profileDetails?.stateSelect}`} senderArea={`${profileDetails?.areaSelect}`}  roomName={roomName} setContactNameDisplay={setContactNameDisplay} setContactContactDisplay={setContactContactDisplay}/>
 				</div>
 				<div className={styles.chat}>
 				  <Chat stateName={roomState} roomName={roomName} roomLocation={roomLocation} senderId={`${profileDetails?.docid}`} senderName={`${profileDetails?.name}`} senderPic={`${profileDetails?.src}`} user={`${profileDetails?.docid}`} contactName={contactName} contactContact={contactContact} />

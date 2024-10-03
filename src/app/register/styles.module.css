@@ -292,11 +292,13 @@
 }
 
 .select{
-  width: 300px;
-  height: 50px;
-  padding-left: 5px;
-  border-radius: 5px;
-  border: none;
+  width: 100%;
+  height: 100%;
+  border: none; /* No visible borders */
+  padding: 8px;
+  box-sizing: border-box;
+  outline: none; /* Disable focus outline */
+  border-radius: 5px; /* Match the wrapper */
 }
 
 .option{
@@ -308,40 +310,30 @@
   user-select: none;
 }
 .textCover{
-  position: relative;
   overflow: hidden;
   width: 295px;
   height: 45px;
   box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
   border-radius: 5px;
   padding-left: -3px;
-  z-index: 3;
 }
 .textarea{
-  position: absolute;
-  left: -2px;
-  top: -2px;
-  border: none;
-  width: 300px;
-  height: 49px;
-  font-weight: 400;
-  padding-left: 15px;
-  transform: translateY(-2px);
-  font-family: 'Poppins-Regular';
-  font-size: 1rem;
-  padding-top: 10px;
-  padding-right: 10px;
+  width: 100%;
+  height: 100%;
+  border: none; /* No visible borders */
+  padding: 8px;
+  box-sizing: border-box;
+  outline: none; /* Disable focus outline */
+  border-radius: 5px; /* Match the wrapper */
 }
 
 .inputCover{
-  position: relative;
   overflow: hidden;
   width: 295px;
   height: 45px;
   box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
   border-radius: 5px;
   padding-left: -3px;
-  z-index: 3;
 }
 
 .inputImageCover{
@@ -357,15 +349,13 @@
 }
 
 .input{
-  position: absolute;
-  left: -2px;
-  top: -2px;
-  border: none;
-  width: 300px;
-  height: 49px;
-  font-weight: 400;
-  padding-left: 15px;
-  transform: translateY(-2px);
+  width: 100%;
+  height: 100%;
+  border: none; /* No visible borders */
+  padding: 8px;
+  box-sizing: border-box;
+  outline: none; /* Disable focus outline */
+  border-radius: 5px; /* Match the wrapper */
 }
 
 .inputImg{
@@ -380,7 +370,6 @@
   box-shadow: 0px 0px 1px silver, 0 0 1px black, 0 0 2.5px silver;
   border-radius: 5px;
   padding-left: -3px;
-  z-index: 3;
 }
 
 .input1{
@@ -508,7 +497,8 @@
   inset: 0;
   background-image: linear-gradient(to right, rgba(3, 135, 3, 0.7), rgba(1, 51, 1, 0.7));
   display: grid;
-  place-content: center  ;
+  place-content:center;
+  z-index: 9999;
 }
 
 

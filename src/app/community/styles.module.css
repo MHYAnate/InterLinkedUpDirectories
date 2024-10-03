@@ -54,9 +54,9 @@
 
 .chatContainer{
   display: flex;
-  width: 98vw;
+  width: 99vw;
   height: 97.5vh;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -67,6 +67,7 @@
   height: 97.5vh;
   justify-content: flex-start;
   align-items: center;
+	overflow: hidden;
 }
 
 .chatBody{
@@ -75,4 +76,11 @@
   justify-content: center;
   width: calc(98vw - 310px);
   height: 97.5vh;
+}
+
+.chatNavLogo{
+	display: flex;
+	width: 310px;
+	justify-content: flex-start;
+	align-items: center;
 }

@@ -121,7 +121,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 	);
 
 	const personalCategory = Services.find(
-		(category) => category.category === "Personal"
+		(category) => category.category === "Others"
 	);
 
 	function renderAvailableStates() {
@@ -332,7 +332,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 							<option className={styles.option} value="Maintenance">
 								{maintenanceCategory?.category}
 							</option>
-							<option className={styles.option} value="Personal">
+							<option className={styles.option} value="Others">
 								{personalCategory?.category}
 							</option>
 						</select>
@@ -357,7 +357,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 							</option>
 							{selectService === "Automotive" && renderAutomotiveServices()}
 							{selectService === "Maintenance" && renderMaintenance1Services()}
-							{selectService === "Personal" && renderPersonalServices()}
+							{selectService === "Others" && renderPersonalServices()}
 						</select>
 					</div>
 					<div className={styles.selectCover}>
