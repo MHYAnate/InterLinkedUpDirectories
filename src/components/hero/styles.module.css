@@ -370,7 +370,7 @@
 	transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+
 	height: 100%;
 	width: 100%;
 }
@@ -378,11 +378,7 @@
 .carouselImageFix{
 	position: absolute;
 	inset: 0px;
-	background-image: linear-gradient(to right, var(--tw-gradient-stops));
-	--tw-gradient-from: #111827 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(17 24 39 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-	--tw-gradient-to: transparent var(--tw-gradient-to-position);
+	
 }
 .arrow{
 	position: absolute;
