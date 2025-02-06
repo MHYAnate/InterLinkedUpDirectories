@@ -3,7 +3,13 @@ import { TabButton } from "./tabBtn";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 
-export const MenuTab = () => {
+
+interface Props {
+	setQNav: (value: string) => void;
+	
+}
+
+export const MenuTab = ({setQNav}:Props) => {
 	const [tab, setTab] = useState("");
 
   function MenuList() {
@@ -13,7 +19,7 @@ export const MenuTab = () => {
     return (
       <div className={styles.menuCover}>
         <div className={styles.flexMenu}>
-          <div className={styles.menuList} onClick={() => (router.push("/about"), setTab(""))}>ABOUT US</div>
+          <div className={styles.menuList} onClick={() => (setQNav("features"), setTab(""))}>FEATURES</div>
   
           <div className={styles.menuList} onClick={() => (router.push("/login"), setTab(""))}>LOG IN</div>
   

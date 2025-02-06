@@ -306,7 +306,9 @@
   width: 210px;
   height: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-left: 10px;
   align-items: center;
  }
 

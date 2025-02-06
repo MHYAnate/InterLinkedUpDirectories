@@ -1,10 +1,5 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import styles from "./styles.module.css";
-import Carousel from "@/components/carousel/carousel";
-import { Services } from "@/database/data";
-import Menu from "@/components/menu/menu";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 import Nav from "@/components/nav/mainNav/nav";
 import { useEffect, useState, useRef } from "react";
@@ -14,16 +9,13 @@ import ShopsFilter from "@/components/filters/singularFilter/filterShops";
 import CompanyFilter from "@/components/filters/singularFilter/filterCompany";
 import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies";
 import Hero from "@/components/hero/hero";
-import ItemSvg from "@/components/btn/itemSvg";
-import ShopSvg from "@/components/btn/shopSvg";
-import VacancySvg from "@/components/btn/vacancySvg";
-import OfficeSvg from "@/components/btn/officeSvg";
 
 
 
 
 export default function Home() {
 	
+	const [qNav, setQNav] = useState("")
 	useEffect(() => {
 		window.location.pathname;
 	});
@@ -51,24 +43,40 @@ export default function Home() {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
+
+	const q1 = useRef<HTMLDivElement>(null);
+
+	const q2 = useRef<HTMLDivElement>(null);
+
+	const qView1 = () => q1.current?.scrollIntoView({ behavior: "smooth" });
+
+	const qView2 = () => q2.current?.scrollIntoView({ behavior: "smooth" });
+
+	useEffect(() => {
+		if (qNav === "home") {
+			qView1();
+		}
+		if (qNav === "features") {
+			qView2();
+		}
+	}, [qNav, setQNav]);
 	
 
 	return (
 		<main
+		ref={q1}
 			className={`${styles.link} ${
 				pathname === "/register" ? styles.regNavBodyCover : styles.Main
 			}`}
 		>
 			<nav className={isSticky?styles.navHolderFix:styles.navHolder}>
-					<Nav />
+					<Nav setQNav={setQNav} qNav={qNav} />
 			</nav>
 			<div className={isSticky?styles.bodyFix:styles.body}>
-			<Hero />	
-				<div className={styles.categoryCover}>
-					<div className={styles.coverVendors}>
-						<Carousel Services={Services} />
-					</div>
-					<div className={styles.coverJobsMarket}>
+			<Hero setQNav={setQNav} qNav={qNav} />	
+			<div ref={q2} className={styles.features}> Features</div>
+				<div  className={styles.categoryCover}>
+					<div  className={styles.coverJobsMarket}>
 						<div className={styles.coverSelectJobsMarket}>
 							<div className={styles.coverSelect}>
 							
@@ -87,7 +95,7 @@ export default function Home() {
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									><VacancySvg selector={selector} />
+									><div className={styles.Icon}>💼</div>
 										<span className={styles.catSpan}>Vacancies</span>
 										
 									</div>
@@ -105,7 +113,7 @@ export default function Home() {
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									><OfficeSvg selector={selector} />	
+									><div className={styles.Icon}>🏢</div>	
 										<span className={styles.catSpan}>Companies</span>
 									</div>
 								</div>
@@ -127,7 +135,7 @@ export default function Home() {
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									><ItemSvg selector={selector}/>
+									><div className={styles.Icon}>📦</div>
 									<span className={styles.catSpan}>Items</span>
 										
 									</div>
@@ -145,7 +153,7 @@ export default function Home() {
 												? styles.selectBtn
 												: styles.selectBtnHighlighted
 										}
-									><ShopSvg selector={selector} />
+									><div className={styles.Icon}>🏪</div>
 									<span className={styles.catSpan}>Shops</span>
 										
 									</div>

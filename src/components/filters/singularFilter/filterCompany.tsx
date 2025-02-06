@@ -263,7 +263,7 @@ export default function CompanyFilter() {
 			: [];
 
 			const [currentPage, setCurrentPage] = useState(1);
-			const [postsPerPage] = useState(6);
+			const [postsPerPage] = useState(10);
 		
 			// Get current posts
 			const indexOfLastPost = currentPage * postsPerPage;
@@ -408,7 +408,7 @@ export default function CompanyFilter() {
 				<div className={styles.selectGroup}>
 					<div className={styles.selectCover}>
 						<select value={selectState !==(undefined || null)? selectState: (selectCountry === "Nigeria"?"": "select state")} className={styles.select} {...register("stateSelect")}>
-							<option className={styles.option} value="select State">
+							<option className={styles.option} value="Select State">
 							Select State
 							</option>
 							{renderAvailableStates()}

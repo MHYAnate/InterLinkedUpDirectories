@@ -1,6 +1,5 @@
 "use client";
-import React, { useRef } from "react";
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import firebase from "@/firebase/firebase";
@@ -9,7 +8,6 @@ import {
 	createUserWithEmailAndPassword,
 	updateProfile,
 	updateEmail,
-	sendEmailVerification,
 } from "firebase/auth";
 import { collection, addDoc, setDoc, doc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -65,6 +63,8 @@ const Vendor: React.FC<any> = ({ state }) => {
 		shouldUseNativeValidation: true,
 		mode: "onChange",
 	});
+
+	
 
 	const { auth, storage, database } = firebase;
 
@@ -148,7 +148,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 		}
 		return AreaList.areaList.map((area) => (
 			<option className={styles.renderCover} key={area.id} value={area.name}>
-				{area.name}
+				{area.name} Area
 			</option>
 		));
 	}
@@ -204,6 +204,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 				email: `${UserEmail}`,
 				src: "",
 				docid: "",
+				isVendor:"isVendor",
 			});
 			const docId = docRef.id;
 			setProfileDetails(docId);
@@ -235,7 +236,7 @@ const Vendor: React.FC<any> = ({ state }) => {
 
 				updateEmail(user, `${data.email}`);
 
-				router.push("dashboard");
+				router.push("/dashboard");
 			})
 			.catch((error) => {
 				const errorCode = error.code;

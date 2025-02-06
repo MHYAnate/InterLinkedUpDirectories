@@ -114,6 +114,7 @@ const CompanyM: React.FC<CompanyProps> = (props:CompanyProps) => {
 
 	return (
 		<div className={styles.shopRenderCover}>
+			<div className={styles.coverBtn}>
    			<div className={styles.shopName}>{props.companyName} </div>
 				<div className={styles.shopNavBtnCover}>
 				<div
@@ -137,7 +138,7 @@ const CompanyM: React.FC<CompanyProps> = (props:CompanyProps) => {
 					{more === `${props.companyName}` ? "DETAILS" : "details"}
 				</div>
 				</div>
-	
+				</div>
 				<div className={more !== `${props.id}`?styles.companyBodyDivied : styles.hide}>
 					<div className={styles.companyImgCover}>
 						<Image

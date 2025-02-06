@@ -4,15 +4,15 @@ import { usePathname } from "next/navigation";
 import { useRouter } from 'next/navigation'
 
 
-export default function About() {
+export default function Features() {
 	const pathname = usePathname();
   const router = useRouter()
 	return (
 		<div
 			className={`${pathname === "/about" ? styles.activeBtn :pathname !== "/" &&pathname === "/register" || pathname === "/login" ?  styles.inActiveBtn : styles.inActiveBtnH}`}
-			onClick={()=>router.push('/about')} 
+		
 		>
-		<span className={styles.navSpan}>ABOUT US</span>
+		<span className={styles.navSpan}>FEATURES</span>
 			
 		</div>
 	);

@@ -17,13 +17,16 @@ interface deleteData {
 
 // Initialize Firebase
 const firebaseConfig = initializeApp( {
-  apiKey: "AIzaSyDRxik4s83-F-f4taA5EGpdSatM9LYwaBY",
-  authDomain: "clicktolinkup.firebaseapp.com",
-  projectId: "clicktolinkup",
-  storageBucket: "clicktolinkup.appspot.com",
-  messagingSenderId: "360567440194",
-  appId: "1:360567440194:web:b40faf072a6e4892533edb"
+	apiKey: "AIzaSyAKWctb4m4IcjciteN6wOhSBjmWHKAutqA",
+  authDomain: "seed1-48a42.firebaseapp.com",
+  projectId: "seed1-48a42",
+  storageBucket: "seed1-48a42.appspot.com",
+  messagingSenderId: "229209699727",
+  appId: "1:229209699727:web:719bd75b0e082ddb3607fa",
+  measurementId: "G-5Q92YV3M7C"
 });
+  
+
  const faceredirect ="//clict2link.firebaseapp.com/__/auth/handler";
  const auth = getAuth(firebaseConfig);
 

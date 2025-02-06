@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 const NoticeSvg: React.FC<any> = ({ lenght, state }) => {
 	return (
 		<div className={styles.chatCoverBtnC}>
-			{lenght > 0 ? (
+			{lenght ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill={state !== "notice"?"lightblue":"lightgreen"}

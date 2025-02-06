@@ -65,7 +65,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 98.5vw;
   min-height: 100vh;
   max-height: fit-content;
   background-color:white;
@@ -77,11 +77,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 98.5vw;
   min-height: 100vh;
   max-height: fit-content;
 	background-color: white;
- 
 }
 
 .body{
@@ -114,7 +113,7 @@
 }
 
 .navHolder{
-  background-color: white;
+  background-image:  linear-gradient(to right , #ebebeb, #efefef);
   z-index: 9;
 }
 
@@ -168,7 +167,7 @@
 }
 
 .coverJobsMarket{
-  width: 67vw;
+  width: 100%;
   min-height: 666px;
   display: flex;
   flex-direction: column;
@@ -180,7 +179,7 @@
 }
 
 .coverSelectJobsMarket{
-  width: 60vw;
+  width: 100%;
   margin-top: 10px;
   padding-bottom: 5px;
   height: fit-content;
@@ -188,11 +187,12 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-font-family: 'Poppins-SemiBold';
+ font-family: 'Poppins-SemiBold';
+ background-image: linear-gradient(to top, white, silver);
 }
 
 .coverSelect{
-  width: 30vw;
+  width: 49vw;
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -204,7 +204,7 @@ font-family: 'Poppins-SemiBold';
 
 .coverSelectTitle{
   user-select: none;
-  width: 30vw;
+  width: 49vw;
   height: 33px;
   display: flex;
   align-items: first baseline;
@@ -223,7 +223,7 @@ font-family: 'Poppins-SemiBold';
 
 .coverSelectTitleHighlighted{
   user-select: none;
-  width: 30vw;
+  width: 49vw;
   height: 33px;
   display: flex;
   align-items: first baseline;
@@ -238,13 +238,14 @@ font-family: 'Poppins-SemiBold';
 
 .coverSelectBtn{
   user-select: none;
-  width: 30vw;
+  width: 49vw;
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-font-family: 'Poppins-SemiBold';
+  font-family: 'Poppins-SemiBold';
+ 
 }
 .selectBtn{
   user-select: none;
@@ -261,11 +262,14 @@ font-family: 'Poppins-SemiBold';
   font-weight: 500;
   padding-bottom: 9px;
   cursor: pointer;
+  overflow: hidden;
+  padding-top: 10px;
 }
 
 
 
 .selectBtnHighlighted{
+  padding-top: 10px;
   user-select: none;
   width: 50%;
   height: max-content;
@@ -274,12 +278,19 @@ font-family: 'Poppins-SemiBold';
   align-items: center;
   justify-content: center;
   color: green;
-  border-bottom: 1.8px solid green;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 11px;
   padding-bottom: 9px;
   cursor: pointer;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, white, rgb(247, 247, 247));
+}
+
+.Icon{
+  transform: scale(2);
 }
 
 
@@ -300,6 +311,17 @@ font-family: 'Poppins-SemiBold';
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.features{
+  font-family: 'NerkoOne';
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 77px;
+  font-size: 3rem;
+  color: rgb(135, 135, 135);
+  user-select: none;
 }
 
 @media screen and (max-width: 770px) {

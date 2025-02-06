@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-
 import { StateData } from "@/database/stateData";
 import { MarketData } from "@/database/marketData";
 import { MarketStatus } from "@/database/marketStatus";
@@ -266,7 +265,7 @@ export default function ItemsFilter() {
 			: [];
 
 	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage] = useState(6);
+	const [postsPerPage] = useState(10);
 	const [visiblePageRange, setVisiblePageRange] = useState([1, 5]);
 
 	// Get current posts

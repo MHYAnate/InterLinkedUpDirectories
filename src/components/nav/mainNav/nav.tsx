@@ -4,13 +4,18 @@ import Logo from "./logo";
 import Register from "./signUp";
 import LogIn from "./logIn";
 import About from "./about";
-import Search from "./search";
-import { Vendors } from "@/database/serviceData";
 import { MenuTab } from "./menuTab";
-import Shop from "./shop";
 import { usePathname } from "next/navigation";
+import Features from "./features";
 
-export default function Nav() {
+
+interface Props {
+	setQNav: (value: string) => void;
+	qNav: string;
+}
+
+
+export default function Nav({setQNav, qNav}:Props) {
 	const pathname = usePathname();
 
 	return (
@@ -20,16 +25,22 @@ export default function Nav() {
 			}`}
 		>
 			<div className={styles.navBody}>
-				<div className={styles.logo}>
+				<div onClick={()=>{qNav !== "home" ? setQNav("home") : setQNav("")}} className={styles.logo}>
 					<Logo />
 				</div>
 				<div className={styles.links}>
-					<About />
-					<LogIn />
-					<Register />
+					<div onClick={()=>{qNav !== "features"?setQNav("features"): setQNav("")}}>
+						<Features/>
+					</div>
+					<div>
+						<LogIn />
+					</div>
+					<div>
+						<Register />
+					</div>
 				</div>
 				<div className={styles.menu}>
-					<MenuTab />
+					<MenuTab setQNav={setQNav} />
 				</div>
 			</div>
 		</div>

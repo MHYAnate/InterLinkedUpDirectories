@@ -73,6 +73,7 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 
 	return (
 		<div className={styles.shopRenderCover}>
+			<div className={styles.coverBtn}>
       <div className={styles.shopName}>{props.shopName} </div>
 				<div className={styles.shopNavBtnCover}>
 				<div
@@ -94,6 +95,7 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 					}
 				>
 					{more === `${props.shopName}` ? "DETAILS" : "details"}
+				</div>
 				</div>
 				</div>
 	

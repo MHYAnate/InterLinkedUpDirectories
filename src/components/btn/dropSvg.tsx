@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const DropSvg: React.FC<any> = () => {
+const DropSvg: React.FC = () => {
 	return (
 		<div className={styles.chatCoverBtnC}>
       arrowDown
