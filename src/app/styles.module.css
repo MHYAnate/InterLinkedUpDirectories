@@ -1,419 +1,406 @@
 @font-face {
-	font-family: 'ProtestGuerrilla';
-	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+	font-family: "ProtestGuerrilla";
+	src: url("/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf")
+		format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'NerkoOne';
-	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+	font-family: "NerkoOne";
+	src: url("/fonts/NerkoOne-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-Bold';
-	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
+	font-family: "Poppins-Bold";
+	src: url("/fonts/Poppins-Bold.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-SemiBold';
-	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
+	font-family: "Poppins-SemiBold";
+	src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-Regular';
-	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
+	font-family: "Poppins-Regular";
+	src: url("/fonts/Poppins-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'PlaywriteCU';
-	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
+	font-family: "PlaywriteCU";
+	src: url("/fonts/PlaywriteCU-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
-.children{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100vw;
-  max-height: fit-content;
+.children {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100vw;
+	max-height: fit-content;
 }
 
-.Main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 98.5vw;
-  min-height: 100vh;
-  max-height: fit-content;
-  background-color:white;
-}
-
-
-.regNavBodyCover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 98.5vw;
-  min-height: 100vh;
-  max-height: fit-content;
+.Main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 98.5vw;
+	min-height: 100vh;
+	max-height: fit-content;
 	background-color: white;
 }
 
-.body{
-  display: flex;
-  align-items:center baseline;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 98.5vw;
-  min-height: 580px;
-  max-height: fit-content;
-}
-.bodyFix{
-  display: flex;
-  align-items:center baseline;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 98.5vw;
-  min-height: 580px;
-  max-height: fit-content;
-  margin-top: 60px;
-}
-.navHolderFix{
-  position: fixed;
-  top: 0;
-  left: calc((100vw-98.5vw)/2);
-  z-index: 3;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.regNavBodyCover {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 98.5vw;
+	min-height: 100vh;
+	max-height: fit-content;
+	background-color: white;
 }
 
-.navHolder{
-  background-image:  linear-gradient(to right , #ebebeb, #efefef);
-  z-index: 9;
+.body {
+	display: flex;
+	align-items: center baseline;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 98.5vw;
+	min-height: 580px;
+	max-height: fit-content;
+}
+.bodyFix {
+	display: flex;
+	align-items: center baseline;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 98.5vw;
+	min-height: 580px;
+	max-height: fit-content;
+	margin-top: 60px;
+}
+.navHolderFix {
+	position: fixed;
+	top: 0;
+	left: calc((100vw-98.5vw) / 2);
+	z-index: 3;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.header{
-  margin-top: 20px;
-  width: 98.5vw;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.navHolder {
+	background-image: linear-gradient(to right, #ebebeb, #efefef);
+	z-index: 9;
 }
 
-.gifIntro{
-  margin-left: 10px;
-  margin-right: 10px;
-  width: fit-content;
-  height: fit-content;
+.header {
+	margin-top: 20px;
+	width: 98.5vw;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-.headIntro{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 180px;
-  width: 70%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.gifIntro {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: fit-content;
+	height: fit-content;
 }
 
-
-
-.categoryCover{
-  width: 98.5vw;
-  min-height: 666px;
-  display: flex;
-  align-items: first baseline;
-  justify-content: space-around;
+.headIntro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 180px;
+	width: 70%;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.coverVendors{
-  width: 320px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+.categoryCover {
+	width: 98.5vw;
+	min-height: 666px;
+	display: flex;
+	align-items: first baseline;
+	justify-content: space-around;
 }
 
-.coverJobsMarket{
-  width: 100%;
-  min-height: 666px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-left: 1px solid silver;
+.coverVendors {
+	width: 320px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
-.coverSelectJobsMarket{
-  width: 100%;
-  margin-top: 10px;
-  padding-bottom: 5px;
-  height: fit-content;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
- font-family: 'Poppins-SemiBold';
- background-image: linear-gradient(to top, white, silver);
+.coverJobsMarket {
+	width: 100%;
+	min-height: 666px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 1px solid silver;
 }
 
-.coverSelect{
-  width: 49vw;
-  margin-top: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.coverSelectJobsMarket {
+	width: 100%;
+	margin-top: 10px;
+	padding-bottom: 5px;
+	height: fit-content;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins-SemiBold";
+	background-image: linear-gradient(to top, white, silver);
 }
 
-.coverSelectTitle{
-  user-select: none;
-  width: 49vw;
-  height: 33px;
-  display: flex;
-  align-items: first baseline;
-  justify-content: center;
-  color: rgb(102, 102, 102);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: 500;
-font-family: 'Poppins-SemiBold';
-  cursor: pointer;
+.coverSelect {
+	width: 49vw;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.coverSelectTitle:hover{
-  font-weight: 700;
+.coverSelectTitle {
+	user-select: none;
+	width: 49vw;
+	height: 33px;
+	display: flex;
+	align-items: first baseline;
+	justify-content: center;
+	color: rgb(102, 102, 102);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: "Poppins-SemiBold";
+	cursor: pointer;
 }
 
-.coverSelectTitleHighlighted{
-  user-select: none;
-  width: 49vw;
-  height: 33px;
-  display: flex;
-  align-items: first baseline;
-  justify-content: center;
-  color: green;
-  font-size: 0.8rem;
-  font-weight: 700;
-  font-family: 'Poppins-SemiBold';
-  text-transform: uppercase;
-  cursor: pointer;
+.coverSelectTitle:hover {
+	font-weight: 700;
 }
 
-.coverSelectBtn{
-  user-select: none;
-  width: 49vw;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins-SemiBold';
- 
-}
-.selectBtn{
-  user-select: none;
-  width: 50%;
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1.8px solid silver;
-  color: rgb(102, 102, 102);
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 500;
-  padding-bottom: 9px;
-  cursor: pointer;
-  overflow: hidden;
-  padding-top: 10px;
+.coverSelectTitleHighlighted {
+	user-select: none;
+	width: 49vw;
+	height: 33px;
+	display: flex;
+	align-items: first baseline;
+	justify-content: center;
+	color: green;
+	font-size: 0.8rem;
+	font-weight: 700;
+	font-family: "Poppins-SemiBold";
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
-
-
-.selectBtnHighlighted{
-  padding-top: 10px;
-  user-select: none;
-  width: 50%;
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: green;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 11px;
-  padding-bottom: 9px;
-  cursor: pointer;
-  overflow: hidden;
-  background-image: linear-gradient(to bottom, white, rgb(247, 247, 247));
+.coverSelectBtn {
+	user-select: none;
+	width: 49vw;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins-SemiBold";
+}
+.selectBtn {
+	user-select: none;
+	width: 50%;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1.8px solid silver;
+	color: rgb(102, 102, 102);
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 500;
+	padding-bottom: 9px;
+	cursor: pointer;
+	overflow: hidden;
+	padding-top: 10px;
 }
 
-.Icon{
-  transform: scale(2);
+.selectBtnHighlighted {
+	padding-top: 10px;
+	user-select: none;
+	width: 50%;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: green;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 11px;
+	padding-bottom: 9px;
+	cursor: pointer;
+	overflow: hidden;
+	background-image: linear-gradient(to bottom, white, rgb(247, 247, 247));
 }
 
-
-.categoryImgCover{
-  width: 98.5vw;
-  height: 150px;
+.Icon {
+	transform: scale(2);
 }
 
-.categoryImg{
-  width: 98.5vw;
-  height: 150px;
-  opacity: 0.48;
+.categoryImgCover {
+	width: 98.5vw;
+	height: 150px;
 }
-.newsLetter{
-  width: 98.5vw;
-  min-height: 170px;
-  max-height: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.categoryImg {
+	width: 98.5vw;
+	height: 150px;
+	opacity: 0.48;
 }
-.features{
-  font-family: 'NerkoOne';
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 77px;
-  font-size: 3rem;
-  color: rgb(135, 135, 135);
-  user-select: none;
+.newsLetter {
+	width: 98.5vw;
+	min-height: 170px;
+	max-height: max-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.features {
+	font-family: "NerkoOne";
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 77px;
+	font-size: 3rem;
+	color: rgb(135, 135, 135);
+	user-select: none;
 }
 
 @media screen and (max-width: 770px) {
+	.Main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 98.5vw;
+		min-height: max-content;
+		max-height: max-content;
+	}
+	.regNavBodyCover {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 98.5vw;
+		min-height: max-content;
+		max-height: max-content;
+		background-image: linear-gradient(to right, white, white);
+	}
+	.body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 98.5vw;
+		height: max-content;
+	}
+	.categoryCover {
+		min-height: max-content;
+		flex-direction: column-reverse;
+	}
+	.coverJobsMarket {
+		width: 98.5vw;
+		border-left: none;
+		min-height: fit-content;
+	}
+	.coverSelectJobsMarket {
+		width: 98.5vw;
+	}
 
-  .Main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 98.5vw;
-    min-height: max-content;
-    max-height: max-content;
-  }
-  .regNavBodyCover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 98.5vw;
-    min-height: max-content;
-    max-height: max-content;
-    background-image: linear-gradient(to right, white, white);
-  }
-  .body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 98.5vw;
-    height: max-content;
-  }
-  .categoryCover{
-    min-height: max-content;
-   flex-direction: column-reverse;
-  }
-  .coverJobsMarket{
-    width: 98.5vw;
-    border-left: none;
-    min-height: fit-content;
-  }
-  .coverSelectJobsMarket{
-    width: 98.5vw;
-  
-  }
-  
-  .coverSelect{
-    width: 49vw;
-  }
-  
-  .coverSelectTitle{
-    width: 49vw;
-  }
-  
-  .coverSelectBtn{
-    width: 49vw;
-  }
-  .categoryBody{
-    width: 98.5vw;
-    min-height: max-content;
-    max-height: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .carouselBody{
-    width: 98.5vw;
-    min-height: max-content;
-    max-height: max-content;
-  }
-  .categoryImgCover{
-    width: 98.5vw;
-    height: 125px;
-  }
-  .categoryImg{
-    width: 98.5vw;
-    height: 125px;
-    opacity: 0.5;
-  }
-  .coverVendors{
-    width: 98.5vw;
-    margin-top: 20px;
-  }
+	.coverSelect {
+		width: 49vw;
+	}
+
+	.coverSelectTitle {
+		width: 49vw;
+	}
+
+	.coverSelectBtn {
+		width: 49vw;
+	}
+	.categoryBody {
+		width: 98.5vw;
+		min-height: max-content;
+		max-height: max-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.carouselBody {
+		width: 98.5vw;
+		min-height: max-content;
+		max-height: max-content;
+	}
+	.categoryImgCover {
+		width: 98.5vw;
+		height: 125px;
+	}
+	.categoryImg {
+		width: 98.5vw;
+		height: 125px;
+		opacity: 0.5;
+	}
+	.coverVendors {
+		width: 98.5vw;
+		margin-top: 20px;
+	}
 }
 
 @media screen and (max-width: 425px) {
-  .categoryImgCover{
-    width: 98.5vw;
-    height: 100px;
-  }
-  .categoryImg{
-    width: 98.5vw;
-    height: 100px;
-    opacity: 0.5;
-  }
+	.categoryImgCover {
+		width: 98.5vw;
+		height: 100px;
+	}
+	.categoryImg {
+		width: 98.5vw;
+		height: 100px;
+		opacity: 0.5;
+	}
 }

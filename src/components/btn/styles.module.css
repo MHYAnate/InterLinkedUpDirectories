@@ -1,55 +1,50 @@
 @font-face {
-	font-family: 'ProtestGuerrilla';
-	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+	font-family: "ProtestGuerrilla";
+	src: url("/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf")
+		format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'NerkoOne';
-	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+	font-family: "NerkoOne";
+	src: url("/fonts/NerkoOne-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-Bold';
-	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
+	font-family: "Poppins-Bold";
+	src: url("/fonts/Poppins-Bold.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-SemiBold';
-	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
+	font-family: "Poppins-SemiBold";
+	src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-Regular';
-	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
+	font-family: "Poppins-Regular";
+	src: url("/fonts/Poppins-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'PlaywriteCU';
-	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
+	font-family: "PlaywriteCU";
+	src: url("/fonts/PlaywriteCU-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 .svg {
 	width: 20px;
@@ -67,402 +62,402 @@
 	right: 7px;
 }
 
-.chatCoverBtn{
-  width: max-content;
-  height: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.chatCoverBtn {
+	width: max-content;
+	height: max-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .pagination {
 	width: max-content;
-  height: fit-content;
-  column-gap: 7px;
+	height: fit-content;
+	column-gap: 7px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
-.paginationCover{
-  height: 30px;
-  width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.paginationCover {
+	height: 30px;
+	width: max-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.btn{
-  border: none;
-  color: white;
-  background-color: rgb(92, 92, 92);
-  padding: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-  user-select: none;
-  width: fit-content;
-  box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
-  cursor: pointer;
-  user-select: none;
- }
-
- .btnUn{
-  border: none;
-  color:rgb(92, 92, 92);
-  padding: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-  user-select: none;
-  width: fit-content;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.3s ease;
- }
-
- .btnUn:hover{
-  font-weight: 700;
- }
-
- .feedBack{
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color:  transparent;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 1px;
-  color:  rgba(111, 111, 111, 0.7);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-family: 'Poppins-Regular';
-  font-size: 0.7rem;
-  user-select: none;
-  cursor: pointer;
-  border: 1px solid silver;
-  transition: all 0.3s ease;
- }
- .feedBack:hover{
-  box-shadow: 0px 0px 0.5px silver, 0 0 1px green, 0 0 2.5px silver;
- }
-
- .feedBackCover{
-  width: 210px;
-  height: max-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
- }
-
- .feedBackImgCover{
-  overflow: hidden;
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- }
-
- .feedBackImg{
-  width: 50px;
-  height: 50px;
- }
-
- .feedBackDetailCover{
-  width: 150px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
- }
-
- .feedBackDetails{
-  width: 130px;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  column-gap: 3px;
-	font-family: 'Poppins-Regular';
-  font-size: 0.7rem;
-  font-weight: 400;
- }
-
- .svgCover{
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- }
-
- .svgSize{
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
+.btn {
+	border: none;
+	color: white;
+	background-color: rgb(92, 92, 92);
+	padding: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	user-select: none;
+	width: fit-content;
+	box-shadow: 0px 0px 1px silver, 0 0 1.5px silver, 0 0 3.75px silver;
+	cursor: pointer;
+	user-select: none;
 }
 
-.svgSizeR{
-  width: 15px;
-  height: 15px;
-  background-color: none;
+.btnUn {
+	border: none;
+	color: rgb(92, 92, 92);
+	padding: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	user-select: none;
+	width: fit-content;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3s ease;
 }
 
-.chatCoverBtnC{
-  background-color: none;
-  border: none;
-  color: rgb(84, 84, 84);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btnUn:hover {
+	font-weight: 700;
 }
 
-.CoverBtnV{
-  background-color: none;
-  border: none;
-  color: rgb(84, 84, 84);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 30px;
-  height: 25px;
+.feedBack {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: transparent;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 1px;
+	color: rgba(111, 111, 111, 0.7);
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-family: "Poppins-Regular";
+	font-size: 0.7rem;
+	user-select: none;
+	cursor: pointer;
+	border: 1px solid silver;
+	transition: all 0.3s ease;
+}
+.feedBack:hover {
+	box-shadow: 0px 0px 0.5px silver, 0 0 1px green, 0 0 2.5px silver;
 }
 
-.svgSizeC{
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  border: none;
+.feedBackCover {
+	width: 210px;
+	height: max-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
-.svgSizeB{
-  width: 19.2px;
-  height: 19.2px;
-  background-color: none;
-  border: none;
+.feedBackImgCover {
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.svgSizeBHigh{
-  width: 19.2px;
-  height: 19.2px;
-  background-color: none;
-  border: none;
-  color: darkgreen;
-}
-.svgSizeB:hover{
-  color: darkgreen;
+.feedBackImg {
+	width: 50px;
+	height: 50px;
 }
 
-.activeSvgNav{
-  width: 23px;
-  height: 23px;
-  background-color: none;
-  border: none;
-  color: green;
+.feedBackDetailCover {
+	width: 150px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 }
 
-.activeSvgNavH{
-  width: 23px;
-  height: 23px;
-  background-color: none;
-  border: none;
-  color: white;
+.feedBackDetails {
+	width: 130px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 3px;
+	font-family: "Poppins-Regular";
+	font-size: 0.7rem;
+	font-weight: 400;
 }
 
-.inActiveSvgNav{
-  width: 23px;
-  height: 23px;
-  background-color: none;
-  border: none;
-  color: green;
+.svgCover {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.inActiveSvgNavH{
-  width: 23px;
-  height: 23px;
-  background-color: none;
-  border: none;
-  color: white;
+.svgSize {
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
 }
 
- .rateUsContainer{
-  width: 210px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  row-gap: 10px;
-  margin-bottom: 10px;
- }
+.svgSizeR {
+	width: 15px;
+	height: 15px;
+	background-color: none;
+}
 
- .currentRate{
-  width: 210px;
-  height: fit-content;
-  display: flex;
-  justify-content: flex-start;
-  gap: 12px;
-  padding-left: 10px;
-  align-items: center;
- }
+.chatCoverBtnC {
+	background-color: none;
+	border: none;
+	color: rgb(84, 84, 84);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
- .rate{
-  max-width: 80px;
-  min-width: fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins-SemiBold';
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgb(70, 70, 70);
- }
+.CoverBtnV {
+	background-color: none;
+	border: none;
+	color: rgb(84, 84, 84);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 30px;
+	height: 25px;
+}
 
- .figure{
-  max-width: 40px;
-  min-width: fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
- }
+.svgSizeC {
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+}
 
- .view{
-  max-width: 80px;
-  min-width: fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins-SemiBold';
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgb(70, 70, 70);
- }
+.svgSizeB {
+	width: 19.2px;
+	height: 19.2px;
+	background-color: none;
+	border: none;
+}
 
- .openRateUs{
-  font-family: 'Poppins-SemiBold';
-  font-size: 0.666rem;
-  font-weight: 400;
-  color: white;
-  background-color:rgb(92, 92, 92);
-  border-radius: 55px;
-  padding-left: 10px;
-  padding-right: 7px;
-  padding-top: 4px;
-  padding-bottom: 2.5px;
-  text-transform: uppercase;
-  user-select: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 2px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
- }
- .openRateUs:hover{
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
- }
+.svgSizeBHigh {
+	width: 19.2px;
+	height: 19.2px;
+	background-color: none;
+	border: none;
+	color: darkgreen;
+}
+.svgSizeB:hover {
+	color: darkgreen;
+}
 
- .plsRateUs{
-  width: 180px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  justify-content: flex-start;
-  align-items: center;
- }
- .rateExpTitle{
-  color: darkgreen;
-  width: 180px;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins-Regular';
-  font-size: 0.7rem;
-  font-weight: 400;
- }
+.activeSvgNav {
+	width: 23px;
+	height: 23px;
+	background-color: none;
+	border: none;
+	color: green;
+}
 
- .rateHolder{
-  width: 180px;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
- }
+.activeSvgNavH {
+	width: 23px;
+	height: 23px;
+	background-color: none;
+	border: none;
+	color: white;
+}
 
- .gold{
-  color: gold;
-  border: none;
-  background-color: white;
- }
+.inActiveSvgNav {
+	width: 23px;
+	height: 23px;
+	background-color: none;
+	border: none;
+	color: green;
+}
 
- .grey{
-  color: grey;
-  border: none;
-  background-color: white;
- }
+.inActiveSvgNavH {
+	width: 23px;
+	height: 23px;
+	background-color: none;
+	border: none;
+	color: white;
+}
 
- .form{
-  width: 180px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  row-gap: 10px;
- }
+.rateUsContainer {
+	width: 210px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	row-gap: 10px;
+	margin-bottom: 10px;
+}
 
- .feedbackInput{
-  width: 180px;
-  height: fit-content;
-  border-radius: 5px;
- }
+.currentRate {
+	width: 210px;
+	height: fit-content;
+	display: flex;
+	justify-content: flex-start;
+	gap: 12px;
+	padding-left: 10px;
+	align-items: center;
+}
 
- .rateBtn{
-  width: 180px;
-  height: 30px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-	font-family: 'Poppins-SemiBold';
-  font-size:12px;
-  font-weight: 500;
-  background-color:#8A2BE2;
-  border: none;
-  color: white;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
- }
+.rate {
+	max-width: 80px;
+	min-width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins-SemiBold";
+	font-size: 0.7rem;
+	font-weight: 500;
+	color: rgb(70, 70, 70);
+}
 
- .rateBtn:hover{
-  background-color: #6A0DAD;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
- }
+.figure {
+	max-width: 40px;
+	min-width: fit-content;
+	height: fit-content;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
 
- .renderFeedBackBody{
-  min-height: fit-content;
-  max-height: 300px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  width: fit-content;
-  justify-content: flex-start;
-  align-items: center;
- }
+.view {
+	max-width: 80px;
+	min-width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins-SemiBold";
+	font-size: 0.7rem;
+	font-weight: 500;
+	color: rgb(70, 70, 70);
+}
 
- .hide{
-  display: none;
- }
+.openRateUs {
+	font-family: "Poppins-SemiBold";
+	font-size: 0.666rem;
+	font-weight: 400;
+	color: white;
+	background-color: rgb(92, 92, 92);
+	border-radius: 55px;
+	padding-left: 10px;
+	padding-right: 7px;
+	padding-top: 4px;
+	padding-bottom: 2.5px;
+	text-transform: uppercase;
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 2px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease;
+}
+.openRateUs:hover {
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.plsRateUs {
+	width: 180px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	justify-content: flex-start;
+	align-items: center;
+}
+.rateExpTitle {
+	color: darkgreen;
+	width: 180px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins-Regular";
+	font-size: 0.7rem;
+	font-weight: 400;
+}
+
+.rateHolder {
+	width: 180px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.gold {
+	color: gold;
+	border: none;
+	background-color: white;
+}
+
+.grey {
+	color: grey;
+	border: none;
+	background-color: white;
+}
+
+.form {
+	width: 180px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	row-gap: 10px;
+}
+
+.feedbackInput {
+	width: 180px;
+	height: fit-content;
+	border-radius: 5px;
+}
+
+.rateBtn {
+	width: 180px;
+	height: 30px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins-SemiBold";
+	font-size: 12px;
+	font-weight: 500;
+	background-color: #8a2be2;
+	border: none;
+	color: white;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease;
+}
+
+.rateBtn:hover {
+	background-color: #6a0dad;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.renderFeedBackBody {
+	min-height: fit-content;
+	max-height: 300px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	width: fit-content;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}

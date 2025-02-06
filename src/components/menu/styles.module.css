@@ -1,55 +1,50 @@
 @font-face {
-	font-family: 'ProtestGuerrilla';
-	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
+	font-family: "ProtestGuerrilla";
+	src: url("/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf")
+		format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'NerkoOne';
-	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
+	font-family: "NerkoOne";
+	src: url("/fonts/NerkoOne-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-Bold';
-	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
+	font-family: "Poppins-Bold";
+	src: url("/fonts/Poppins-Bold.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-SemiBold';
-	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
+	font-family: "Poppins-SemiBold";
+	src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Poppins-Regular';
-	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
+	font-family: "Poppins-Regular";
+	src: url("/fonts/Poppins-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'PlaywriteCU';
-	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
+	font-family: "PlaywriteCU";
+	src: url("/fonts/PlaywriteCU-Regular.ttf") format("truetype");
 
 	font-weight: normal;
-	font-style: normal; 
-
+	font-style: normal;
 }
 .menuCover {
 	width: 27.5vw;
@@ -135,7 +130,7 @@
 
 .flexCategoryName {
 	color: black;
-	font-family: 'Poppins-SemiBold';
+	font-family: "Poppins-SemiBold";
 	font-size: 1.1rem;
 	font-weight: 500;
 	width: 23vw;
@@ -150,7 +145,8 @@
 
 .flexCategoryName:hover {
 	transform: scale(0.9);
-	text-shadow: 0.5px 0.5px 1px black, 0.5px 0.5px 1px black,0.5px 0.5px 1px black;
+	text-shadow: 0.5px 0.5px 1px black, 0.5px 0.5px 1px black,
+		0.5px 0.5px 1px black;
 	color: rgb(69, 69, 69);
 }
 .bright {
@@ -232,7 +228,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 	.bright {
 		display: none;
 	}
