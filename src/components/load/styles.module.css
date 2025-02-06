@@ -1,4 +1,4 @@
-/* .loaderContainer {
+.loaderContainer {
 	position: fixed;
 	inset: 0;
 	background-image: linear-gradient(
@@ -82,4 +82,4 @@
 		stroke-dashoffset: -25%;
 		stroke-dasharray: 32%, 0;
 	}
-} */
+}
