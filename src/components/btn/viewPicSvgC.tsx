@@ -1,8 +1,8 @@
 import styles from "./styles.module.css";
 
-import { useState, useEffect, useCallback } from "react";
 
-const CloseViewBtn: React.FC<any> = ({  }) => {
+
+const CloseViewBtn: React.FC= () => {
   
  
   return(

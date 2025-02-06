@@ -1,7 +1,5 @@
 import styles from "./styles.module.css";
 
-import { useState, useEffect, useCallback } from "react";
-
 const VisibilityBtn: React.FC<any> = ({ state, setState }) => {
   
   const handleTogglePassword = () => {

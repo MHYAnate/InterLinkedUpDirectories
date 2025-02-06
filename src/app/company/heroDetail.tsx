@@ -3,10 +3,6 @@ import Image from "next/image";
 import { CompanyData } from "@/database/companyData";
 import {
 	collection,
-	collectionGroup,
-	doc,
-	setDoc,
-	addDoc,
 	getDocs,
 	query,
 	where,

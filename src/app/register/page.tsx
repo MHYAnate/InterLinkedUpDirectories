@@ -26,7 +26,7 @@ export default function Register() {
 				) : (
 					<div className={styles.Main}>
 						<nav className={styles.navHolder}>
-							<Nav />
+							<Nav setQNav={setIsVendorTab} qNav="" />
 						</nav>
 						<div className={styles.formContainer}>
 							<div className={styles.titleCover}>

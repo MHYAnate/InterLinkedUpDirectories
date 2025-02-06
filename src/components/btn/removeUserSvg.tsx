@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const RemoveUserSvg: React.FC<any> = () => {
+const RemoveUserSvg: React.FC = () => {
 	return (
 		<div className={styles.chatCoverBtnC}>
 			<svg

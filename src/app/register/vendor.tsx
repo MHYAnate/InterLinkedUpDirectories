@@ -13,10 +13,6 @@ import { collection, addDoc, setDoc, doc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { Services } from "@/database/data";
 import { StateData } from "@/database/stateData";
-import Nav from "@/components/nav/mainNav/nav";
-import Loader from "@/components/load/load";
-import { Suspense } from "react";
-import Loading from "../register/logo";
 import VisibilityBtn from "@/components/btn/visibilityBtn";
 import styles from "./styles.module.css";
 

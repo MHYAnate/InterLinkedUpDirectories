@@ -1,13 +1,12 @@
 "use client";
 import styles from "./styles.module.css";
-import { useRouter } from "next/navigation";
-import { usePathname, useSearchParams } from "next/navigation";
+import {useSearchParams } from "next/navigation";
 import { Suspense, useState } from 'react'
 import Loading from "@/app/register/logo";
 import Image from "next/image";
 import Nav from "@/components/nav/mainNav/nav";
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Page() {
 	const searchParams = useSearchParams();
 	const src = searchParams.get("isrc");
 	const name = searchParams.get("name");

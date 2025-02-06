@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const SearchSvg: React.FC<any> = () => {
+const SearchSvg: React.FC= () => {
 	return (
 		<div className={styles.chatCoverBtnC}>
 			<svg

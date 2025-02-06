@@ -1,22 +1,19 @@
 "use client";
 import styles from "./styles.module.css";
-import { useRouter } from "next/navigation";
-import { usePathname, useSearchParams } from "next/navigation";
+import {useState} from 'react'
 import Image from "next/image";
 import VacanciesFilter from "@/components/filters/singularFilter/filterVacancies";
 import Nav from "@/components/nav/mainNav/nav";
 import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
 
-export default function Page({ params }: { params: { slug: string } }) {
-	const searchParams = useSearchParams();
-	const src = searchParams.get("isrc");
-	const name = searchParams.get("name");
+export default function Page() {
+	const [a,sa]= useState("");
 	return (
 		<Suspense fallback={<Loading/>}>
 		<div className={styles.Main}>
 		<nav className={styles.navHolder}>
-				<Nav />
+				<Nav setQNav={sa} qNav="" />
 			</nav>
 		<div className={styles.pageBodyCover}>
 			<div className={styles.idBody}>

@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation";
 
-const LogInSvg: React.FC<any> = () => {
+const LogInSvg: React.FC = () => {
 
   const pathname = usePathname();
 

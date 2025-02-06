@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const MoreSvg: React.FC<any> = () => {
+const MoreSvg: React.FC = () => {
 	return (
 		<div className={styles.chatCoverBtnC}>
 			<svg

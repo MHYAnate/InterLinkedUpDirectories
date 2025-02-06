@@ -1,8 +1,7 @@
 import styles from "./styles.module.css";
 
-import { useState, useEffect, useCallback } from "react";
 
-const ViewBtn: React.FC<any> = ({ state, setState }) => {
+const ViewBtn: React.FC = () => {
   
 
   return(

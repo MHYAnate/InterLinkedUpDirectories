@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const NextPageSvg: React.FC<any> = () => {
+const NextPageSvg: React.FC = () => {
 	return (
 		<div className={styles.chatCoverBtnC}>
 			<svg

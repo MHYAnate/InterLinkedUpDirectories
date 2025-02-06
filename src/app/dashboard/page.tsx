@@ -6,8 +6,7 @@ import VendorNav from "@/components/nav/userNav/nav";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import NewsLetter from "@/components/newsLetter/newsLetter";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import {
 	collection,
 	setDoc,
@@ -15,15 +14,12 @@ import {
 	getDocs,
 	query,
 	where, 
-	CollectionReference,
-	onSnapshot,
 } from "firebase/firestore";
 import JobsFilter from "@/components/filters/userFilters/filterjobs";
 import FilterItems from "@/components/filters/userFilters/filterItems";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
 import { Services } from "@/database/data";
 import styles from "./styles.module.css";
 

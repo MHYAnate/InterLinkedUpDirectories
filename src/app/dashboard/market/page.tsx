@@ -11,11 +11,6 @@ import {
 	query,
 	where,
 	addDoc,
-	CollectionReference,
-	onSnapshot,
-	deleteDoc,
-	updateDoc,
-	deleteField,
 } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";

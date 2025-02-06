@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { useState } from "react";
 import UserNav from "@/components/nav/userNav/nav";
 import { useRouter } from "next/navigation";
@@ -9,7 +9,6 @@ import { Suspense } from 'react'
 import Loading from "@/app/register/logo";
 import {
 	collection,
-	addDoc,
 	setDoc,
 	doc,
 	getDocs,

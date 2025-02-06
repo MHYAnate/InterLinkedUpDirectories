@@ -2,17 +2,13 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import {
 	collection,
-	collectionGroup,
-	doc,
-	setDoc,
-	addDoc,
 	getDocs,
 	query,
 	where,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
 import RateUs from "@/components/btn/rateUs";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { onAuthStateChanged} from "firebase/auth";
 import { ShopData } from "@/database/shopData";
 
 interface RaterValue {
@@ -21,10 +17,10 @@ interface RaterValue {
 	src:string;
 }
 
-const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+const { auth, database} =
 	firebase;
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
 const HeroDetail: React.FC<any> = ({
 	img,

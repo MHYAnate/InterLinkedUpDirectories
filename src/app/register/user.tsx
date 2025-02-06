@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import firebase from "@/firebase/firebase";
@@ -43,7 +43,7 @@ const User : React.FC<any> = ({ state })=>{
 		watch,
 		reset,
 		getFieldState,
-		formState: { isSubmitSuccessful, isDirty, isSubmitting },
+		formState: { isSubmitSuccessful },
 	} = useForm<FormValue>({
 		defaultValues: {
 			name: "",

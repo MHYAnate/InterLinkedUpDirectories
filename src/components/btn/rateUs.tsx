@@ -1,12 +1,7 @@
 "use client";
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, {  useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import { Suspense } from "react";
-import Loading from "@/app/register/logo";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import {
 	collection,
 	setDoc,
@@ -14,26 +9,13 @@ import {
 	getDocs,
 	query,
 	where,
-	CollectionReference,
-	onSnapshot,
-	orderBy,
-	limit,
-	startAt,
-	startAfter,
-	endAt,
-	endBefore,
 	addDoc,
-	serverTimestamp,
-  arrayUnion,
-  updateDoc,
+	serverTimestamp
 } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Firebase from "@/firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useForm } from "react-hook-form";
 
-const { auth, storage, database } = Firebase;
+const {  database } = Firebase;
 
 interface RateUsProps {
 	rateeId: string;
