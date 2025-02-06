@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React from "react";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";

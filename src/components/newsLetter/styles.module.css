@@ -1,322 +1,331 @@
 @font-face {
-	font-family: "ProtestGuerrilla";
-	src: url("/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf")
-		format("truetype");
+	font-family: 'ProtestGuerrilla';
+	src: url('/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf') format('truetype'); 
 
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal; 
+
 }
 
 @font-face {
-	font-family: "NerkoOne";
-	src: url("/fonts/NerkoOne-Regular.ttf") format("truetype");
+	font-family: 'NerkoOne';
+	src: url('/fonts/NerkoOne-Regular.ttf') format('truetype'); 
 
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal; 
+
 }
 
 @font-face {
-	font-family: "Poppins-Bold";
-	src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+	font-family: 'Poppins-Bold';
+	src: url('/fonts/Poppins-Bold.ttf') format('truetype'); 
 
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal; 
+
 }
 
 @font-face {
-	font-family: "Poppins-SemiBold";
-	src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+	font-family: 'Poppins-SemiBold';
+	src: url('/fonts/Poppins-SemiBold.ttf') format('truetype'); 
 
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal; 
+
 }
 
 @font-face {
-	font-family: "Poppins-Regular";
-	src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+	font-family: 'Poppins-Regular';
+	src: url('/fonts/Poppins-Regular.ttf') format('truetype'); 
 
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal; 
+
 }
 
 @font-face {
-	font-family: "PlaywriteCU";
-	src: url("/fonts/PlaywriteCU-Regular.ttf") format("truetype");
+	font-family: 'PlaywriteCU';
+	src: url('/fonts/PlaywriteCU-Regular.ttf') format('truetype'); 
 
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal; 
+
 }
-.textarea {
-	border: none;
-	border-radius: 10px;
-	width: 300px;
-	height: 49px;
-	font-weight: 400;
-	padding-left: 15px;
-	font-family: "Poppins-Regular";
+.textarea{
+  border: none;
+  border-radius: 10px;
+  width: 300px;
+  height: 49px;
+  font-weight: 400;
+  padding-left: 15px;
+  font-family: 'Poppins-Regular';
 }
-.titleCover {
-	width: 98vw;
-	height: 170px;
-	cursor: pointer;
-	border-top: 1px solid silver;
+.titleCover{
+  width: 98vw;
+  height: 170px;
+  cursor: pointer;
+  border-top: 1px solid silver;
 }
 
-.categoryCover {
-	position: relative;
-	width: 98vw;
-	height: 170px;
+.categoryCover{
+  position: relative;
+  width: 98vw;
+  height: 170px;
 }
 
-.categoryImgCover {
-	width: 98vw;
-	height: 170px;
-	background-color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.categoryImgCover{
+  width: 98vw;
+  height: 170px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.categoryImg {
-	width: 98vw;
-	height: 170px;
-	opacity: 0.2;
+.categoryImg{
+  width: 98vw;
+  height: 170px;
+  opacity: 0.2;
 }
 
-.title {
-	position: absolute;
-	top: 0.001px;
-	width: 98vw;
-	height: 170px;
+.title{
+  position: absolute;
+  top: 0.001px;
+  width: 98vw;
+  height: 170px;
 }
 
-.flextitle {
-	color: rgb(48, 48, 48);
-	font-family: "Poppins-Regular";
-	font-size: 15px;
-	width: 98vw;
-	height: 170px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	user-select: none;
+.flextitle{
+  color: rgb(48, 48, 48);
+	font-family: 'Poppins-Regular';
+  font-size: 15px;
+  width: 98vw;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
 }
 
-.cardBody {
-	width: 57vw;
-	height: 170px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.cardBody{
+  width: 57vw;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.innerCover {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 10px;
-	justify-content: center;
-	width: 35vw;
+.innerCover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  justify-content: center;
+  width: 35vw;
 }
 
-.innerFormCover {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-around;
-	width: 26vw;
+.innerFormCover{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 26vw;
 }
 
-.input {
-	width: 17vw;
-	height: 20px;
-	border-radius: 30px;
-	padding-left: 5px;
-	border: none;
+
+.input{
+  width: 17vw;
+  height: 20px;
+  border-radius: 30px;
+  padding-left: 5px;
+  border: none;
 }
 
-.post {
-	width: max-content;
-	height: 20px;
-	border-radius: 30px;
-	background-color: green;
-	color: white;
-	padding-left: 10px;
-	padding-right: 10px;
-	border: none;
-	display: flex;
-	align-items: center;
-	user-select: none;
-	margin-left: 5px;
-	font-family: "Poppins-Regular";
+.post{
+  width: max-content;
+  height: 20px;
+  border-radius: 30px;
+  background-color:green;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  margin-left: 5px;
+  font-family: "Poppins-Regular";
 }
-.post:hover {
-	box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+.post:hover{
+  box-shadow:0 2px 4px rgb(0, 0, 0, 0.5);
+ 
 }
 
-.boldP {
-	font-weight: 400;
-	font-size: 13px;
-	user-select: none;
+.boldP{
+  font-weight: 400;
+  font-size: 13px;
+  user-select: none;
 }
-.boldPSub {
-	display: flex;
-	justify-content: center;
-	width: 30vw;
-	font-weight: 400;
-	font-size: 13px;
-	user-select: none;
-	color: rgb(48, 48, 48);
-	font-family: "Poppins-SemiBold";
-	padding-bottom: 2px;
-	border-radius: 3px;
-	font-weight: 500;
+.boldPSub{
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  font-weight: 400;
+  font-size: 13px;
+  user-select: none;
+  color: rgb(48, 48, 48);
+	font-family: 'Poppins-SemiBold';
+  padding-bottom: 2px;
+  border-radius: 3px;
+  font-weight: 500;
 }
 @media screen and (max-width: 770px) {
-	.titleCover {
-		width: 98vw;
-		height: 170px;
-		cursor: pointer;
-		border-top: none;
-	}
-	.titleCover {
-		width: 98vw;
-		height: 200px;
-		cursor: pointer;
-	}
+  .titleCover{
+    width: 98vw;
+    height: 170px;
+    cursor: pointer;
+    border-top: none;
+  }
+  .titleCover{
+    width: 98vw;
+    height: 200px;
+    cursor: pointer;
+  }
 
-	.categoryCover {
-		position: relative;
-		width: 98vw;
-		height: 200px;
-	}
+  .categoryCover{
+    position: relative;
+    width: 98vw;
+    height: 200px;
+  }
+  
+  .categoryImgCover{
+    width: 98vw;
+    height: 200px;
+  }
+  
+  .categoryImg{
+    width: 98vw;
+    height: 200px;
+    opacity: 0.2;
+  }
+  .flextitle{
+    font-size: 15px;
+    width: 98vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cardBody{
+    width: 98vw;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .innerFormCover{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 98vw;
+  }
+  
+  .innerCover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+  }
+  .input{
+    width: 60vw;
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 5px;
+    border: none;
+  }
+  
+  .post{
+    width: max-content;
+    height: 20px;
+    border-radius: 30px;
+    background-color:green;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
 
-	.categoryImgCover {
-		width: 98vw;
-		height: 200px;
-	}
-
-	.categoryImg {
-		width: 98vw;
-		height: 200px;
-		opacity: 0.25;
-	}
-	.flextitle {
-		font-size: 15px;
-		width: 98vw;
-		height: 200px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.cardBody {
-		width: 98vw;
-		height: 130px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.innerFormCover {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		width: 98vw;
-	}
-
-	.innerCover {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: inherit;
-	}
-	.input {
-		width: 60vw;
-		height: 20px;
-		border-radius: 30px;
-		padding-left: 5px;
-		border: none;
-	}
-
-	.post {
-		width: max-content;
-		height: 20px;
-		border-radius: 30px;
-		background-color: green;
-		color: white;
-		padding-left: 10px;
-		padding-right: 10px;
-
-		border: none;
-		display: flex;
-		align-items: center;
-		user-select: none;
-		margin-left: 5px;
-	}
-	.post:hover {
-		box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
-	}
-
-	.boldP {
-		font-weight: 400;
-		font-size: 13px;
-		padding-left: 15px;
-	}
-	.boldPSub {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: 400;
-		font-size: 13px;
-		padding-left: 15px;
-		width: inherit;
-	}
+    border: none;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    margin-left: 5px;
+  }
+  .post:hover{
+    box-shadow:0 2px 4px rgb(0, 0, 0, 0.5);
+   
+  }
+  
+  .boldP{
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 15px;
+  }
+  .boldPSub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 15px;
+    width: inherit;
+  }
 }
 @media screen and (max-width: 330px) {
-	.boldP {
-		font-weight: 400;
-		font-size: 13px;
-		padding-left: 7px;
-	}
-	.titleCover {
-		width: 98vw;
-		height: 220px;
-		cursor: pointer;
-	}
+  .boldP{
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 7px;
+  }
+  .titleCover{
+    width: 98vw;
+    height: 220px;
+    cursor: pointer;
+  }
 
-	.categoryCover {
-		position: relative;
-		width: 98vw;
-		height: 220px;
-	}
-
-	.categoryImgCover {
-		width: 98vw;
-		height: 220px;
-	}
-
-	.categoryImg {
-		width: 98vw;
-		height: 220px;
-		opacity: 0.2;
-	}
-	.flextitle {
-		font-size: 15px;
-		width: 98vw;
-		height: 220px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	.cardBody {
-		width: 98vw;
-		height: 150px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+  .categoryCover{
+    position: relative;
+    width: 98vw;
+    height: 220px;
+  }
+  
+  .categoryImgCover{
+    width: 98vw;
+    height: 220px;
+  }
+  
+  .categoryImg{
+    width: 98vw;
+    height: 220px;
+    opacity: 0.2;
+  }
+  .flextitle{
+    font-size: 15px;
+    width: 98vw;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardBody{
+    width: 98vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
