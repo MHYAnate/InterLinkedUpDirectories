@@ -221,11 +221,6 @@
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	font-weight: 900;
 	color: white;
-	/* background-image: linear-gradient(
-		to right,
-		rgba(1, 141, 1, 0.7),
-		rgba(1, 40, 1, 0.7)
-	); */
 	width: 290px;
 	min-height: 25px;
 	max-height: max-content;

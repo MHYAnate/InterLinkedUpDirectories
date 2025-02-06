@@ -205,7 +205,7 @@
 	color: black;
 	font-family: "NerkoOne";
 	transform: translateY(30px);
-	animation: appear s linear;
+	animation: appear 5s linear;
 }
 .matters {
 	color: rgb(66, 104, 2);

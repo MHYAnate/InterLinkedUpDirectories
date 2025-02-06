@@ -1,7 +1,6 @@
 @font-face {
 	font-family: "ProtestGuerrilla";
-	src: url("/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf")
-		format("truetype");
+	src: url("/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf") format("truetype");
 
 	font-weight: normal;
 	font-style: normal;
@@ -46,6 +45,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 .menuCover {
 	width: 27.5vw;
 	height: 530px;
@@ -149,9 +149,11 @@
 		0.5px 0.5px 1px black;
 	color: rgb(69, 69, 69);
 }
+
 .bright {
 	display: none;
 }
+
 @media screen and (max-width: 1230px) {
 	.flexCategoryName {
 		font-size: 0.7rem;
@@ -163,6 +165,7 @@
 		font-size: 0.6rem;
 	}
 }
+
 @media screen and (max-width: 770px) {
 	.menuCover {
 		width: 98vw;
@@ -256,11 +259,13 @@
 		text-shadow: none;
 	}
 }
+
 @media screen and (max-width: 640px) {
 	.flexCategoryName {
 		font-size: 0.9rem;
 	}
 }
+
 @media screen and (max-width: 540px) {
 	.flexCategoryName {
 		font-size: 0.85rem;
@@ -294,6 +299,7 @@
 	.categoryImg {
 		width: 28.5vw;
 	}
+
 	.categoryImgP {
 		width: 23.5vw;
 	}
@@ -358,6 +364,7 @@
 		height: 155px;
 		opacity: 0.15;
 	}
+
 	.categoryImgP {
 		width: 85vw;
 		height: 140px;
@@ -386,11 +393,13 @@
 		margin-top: 3px;
 	}
 }
+
 @media screen and (max-width: 405px) {
 	.flexCategoryName {
 		font-size: 1.5rem;
 	}
 }
+
 @media screen and (max-width: 365px) {
 	.flexCategoryName {
 		font-size: 1.5rem;
