@@ -231,7 +231,6 @@
 	padding-right: 10px;
 	padding-top: 2px;
 	font-weight: 400;
-	transition: background-color 1s ease-in-out 0.2s, border-bottom 1s ease-in-out 0.2s, box-shadow .1s ease-in-out 0.1s;
 	user-select: none;
 	column-gap: 5px;
 }
