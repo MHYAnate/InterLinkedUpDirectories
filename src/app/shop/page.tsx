@@ -1,29 +1,22 @@
 "use client";
-import React, {  useState,  useCallback } from "react";
+import React, {  useState} from "react";
 import { onAuthStateChanged} from "firebase/auth";
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
 import { Suspense } from "react";
 import Loading from "../register/logo";
 import Nav from "@/components/nav/mainNav/nav";
 import VendorNav from "@/components/nav/userNav/nav";
 import HeroDetail from "./heroDetail";
-import Hero from "@/components/hero/hero";
 import NewsLetter from "@/components/newsLetter/newsLetter";
 
 import {
 	collection,
-	collectionGroup,
-	doc,
-	setDoc,
-	addDoc,
 	getDocs,
 	query,
 	where,
 } from "firebase/firestore";
 import firebase from "@/firebase/firebase";
 import { ref, getDownloadURL } from "firebase/storage";
-import Firebase from "@/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import ShopModelStock from "@/components/filters/singularFilter/filterShopModelItems";
@@ -46,11 +39,11 @@ type ShopValues = {
 	market:string;
 };
 
-const { auth, storage, database, clientColRef, add, getClientDoc, Delete } =
+const { auth, storage, database} =
 	firebase;
 
 export default function Shop() {
-	const [user, loading, error] = useAuthState(auth);
+	const [user] = useAuthState(auth);
 
 	const [profileDetails, setProfileDetails] = useState<ShopValues | null>(null);
 
@@ -105,7 +98,7 @@ export default function Shop() {
 	return (
 		<Suspense fallback={<Loading />}>
 			<div>
-				<div className={styles.nav}>{user ? <VendorNav /> : <Nav />}</div>
+				<div className={styles.nav}>{user ? <VendorNav /> : <Nav setQNav={setImageUrl} qNav="" />}</div>
 				<div className={styles.shopContainer}>
 					<div className={styles.shopDetailCover}>
 						<HeroDetail user={user}  img={profileDetails?.shopSrc} shopNameM={shopName} shopName={profileDetails?.shopName} address={profileDetails?.address}  shopMg={profileDetails?.name}
