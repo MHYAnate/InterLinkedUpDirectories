@@ -73,9 +73,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transform: translateX(-170px);
 	transition: all;
-	/* animation: bounce 4.6s 1.5 linear; */
+	
 }
 .titleHero {
 	user-select: none;
@@ -88,7 +87,7 @@
 	text-align: center;
 	width: 100%;
 	margin-left: 1.5vw;
-	color: rgb(123, 123, 123);
+	color:  rgb(14, 0, 103);
 	line-height: 1;
 	animation: appear 1s linear;
 }
@@ -101,7 +100,7 @@
 	font-family: "NerkoOne";
 	text-align: center;
 	width: 100%;
-	background-image: linear-gradient(to right, rgb(123, 123, 123), silver);
+	background-image: linear-gradient(to left, rgb(14, 0, 103), rgb(10, 1, 70));
 	background-clip: text;
 	color: transparent;
 }
@@ -114,7 +113,7 @@
 	font-family: "NerkoOne";
 	text-align: center;
 	width: 100%;
-	background-image: linear-gradient(to left, rgb(123, 123, 123), silver);
+	background-image: linear-gradient(to left, rgb(14, 0, 103), rgb(10, 1, 70));
 	background-clip: text;
 	color: transparent;
 }
@@ -143,7 +142,7 @@
 	text-align: center;
 	width: 100%;
 	margin-left: 1.5vw;
-	animation: appear 4.5s linear;
+	/* animation: appear 4.5s linear; */
 }
 
 .callToAction {
@@ -205,7 +204,7 @@
 	color: black;
 	font-family: "NerkoOne";
 	transform: translateY(30px);
-	animation: appear 5s linear;
+	/* animation: appear .5s linear; */
 }
 .matters {
 	color: rgb(66, 104, 2);
@@ -353,7 +352,7 @@
 
 .carouselImageCover {
 	position: relative;
-	width: 50vw;
+	width: fill;
 	overflow: hidden;
 	height: 100vh;
 }

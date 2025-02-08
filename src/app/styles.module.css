@@ -107,7 +107,7 @@
 }
 
 .navHolder {
-	background-image: linear-gradient(to right, #ebebeb, #efefef);
+	background-color: rgb(255, 255, 255);
 	z-index: 9;
 }
 

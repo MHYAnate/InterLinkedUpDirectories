@@ -1,6 +1,11 @@
 export const Cards = [
 
+		
+  {
 	
+		image: "/white.gif",
+	
+	},
   {
 	
 		image: "/globe.jpg",
