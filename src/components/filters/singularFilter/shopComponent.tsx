@@ -112,7 +112,7 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 						/>
 					</div>
 					<div>
-						<RateUs rateeId={`${props.id}`} raterId={`${props?.docid}`} raterName={`${props?.name}`} raterImg={`${props?.src}`} />
+						
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
 							<div className={styles.shopTag}>{props.shopTag}</div>
@@ -144,6 +144,8 @@ const Shop: React.FC<ShopProps> = (props:ShopProps) => {
 					</div>
 					</form>
 				</div> : <></>}
+				{more === `${props.id}` ? 
+				<RateUs rateeId={`${props.id}`} raterId={`${props?.docid}`} raterName={`${props?.name}`} raterImg={`${props?.src}`} />:<></>}
 
 				{more === `${props.id}` ? <div className={styles.displayShopItems}>{props.check !==(undefined || null || 0)?<ShopItemsComponent shopId={props.id} value={shopSearchInput}/>:<ShopModelItems shopName={props.namei} value={shopSearchInput}/>} </div> : <></>}
 

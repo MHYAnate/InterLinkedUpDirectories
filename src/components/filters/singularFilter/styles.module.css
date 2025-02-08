@@ -1340,6 +1340,7 @@
 	font-weight: 500;
 	color: #000000;
 	text-transform: capitalize;
+  margin-top: 10px;
 }
 .shopcontact {
 	display: flex;

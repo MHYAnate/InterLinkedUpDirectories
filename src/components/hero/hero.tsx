@@ -31,10 +31,10 @@ export default function Hero({ setQNav, qNav }: Props) {
 												<div className={styles.biz}>BUSINESS</div>
 												
 											
-											<div className={styles.titleHero}>
+											{/* <div className={styles.titleHero}>
 												C<span className={styles.age}>ONNEC</span>
 												<span className={styles.age1}>TIONS</span>
-											</div>
+											</div> */}
 											<div className={styles.titleHero2}>
 												<span className={styles.toWhat}>MADE</span>{" "}
 												<span className={styles.matters}>Easy</span>

@@ -5,10 +5,7 @@ import Image from "next/image";
 import RateUs from "@/components/btn/rateUs";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
-import ShopModelItems from "./modelShopItemQ";
 import CompanyModelVacancy from "./modelCompanyVacancyQ";
-import ShopItemsComponent from "./fBIShopItem";
-import CompanyVacanciesComponent from "./fBICompanyVacancy";
 
 import { onAuthStateChanged } from "firebase/auth";
 import {
@@ -152,7 +149,7 @@ const Company: React.FC<CompanyProps> = (props:CompanyProps) => {
 						/>
 					</div>
 					<div>
-						<RateUs rateeId={`${props.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} />
+					
 					</div>
 					<div className={styles.showCompanyVacanciesTag}>
 		
@@ -184,6 +181,8 @@ const Company: React.FC<CompanyProps> = (props:CompanyProps) => {
 					</div>
 					</form>
 				</div> : <></>}
+				{more === `${props.id}` ? <div className={styles.displayShopItems}>
+				<RateUs rateeId={`${props.id}`} raterId={`${raterDetail?.docid}`} raterName={`${raterDetail?.name}`} raterImg={`${raterDetail?.src}`} /></div>:<></>}
 
 				{more === `${props.id}` ? <div className={styles.displayShopItems}><CompanyModelVacancy companyName={props.companyName} value={shopSearchInput}/></div> : <></>}
 

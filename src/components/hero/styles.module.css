@@ -129,7 +129,7 @@
 	width: 100%;
 	margin-left: 1.5vw;
 	margin-bottom: 20px;
-	animation: appear 3s linear;
+	animation: appear 1.5s linear;
 }
 .titleHero3 {
 	user-select: none;
@@ -151,7 +151,7 @@
 	align-items: center;
 	justify-content: center;
 	margin-top: 20px;
-	animation: appear 13.3s linear;
+	animation: appear 3s linear;
 }
 
 .registerBtn {
@@ -198,12 +198,12 @@
 }
 .biz {
 	font-weight: 400;
-	font-size: 3rem;
+	font-size: 5rem;
 	background-image: linear-gradient(to right, #1f2937, #6b7280);
 	background-clip: text;
 	color: black;
 	font-family: "NerkoOne";
-	transform: translateY(30px);
+	
 	/* animation: appear .5s linear; */
 }
 .matters {
@@ -303,6 +303,9 @@
 
 .heroCarouselBody {
 	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
 	height: calc(100vh - 70px);
@@ -431,8 +434,24 @@
 	}
 }
 @media screen and (max-width: 777px) {
-	.header {
-		transform: translateX(-120px);
+	.biz{
+		transform: translateY(0);
+	}
+
+	.titleHero{
+		font-size: 5rem;
+	}
+	.age{
+		font-size: 4rem;
+	}
+	.age1{
+		font-size: 4rem;
+	}
+	.header{
+		padding-top: 30vh;
+		justify-content: flex-start;
+		gap: 5vh;
+		/* align-items: flex-start; */
 	}
 	.registerBtn {
 		transform: translateX(0);
@@ -447,35 +466,23 @@
 		width: 65vw;
 	}
 
-	.header {
-		transform: translateX(-110px);
-	}
+
 	.registerBtn {
 		transform: translateX(0);
 	}
 }
 
 @media screen and (max-width: 620px) {
-	.carouselImageCover {
-		width: 65vw;
-	}
 
-	.header {
-		transform: translateX(-90px);
-	}
+
+
 	.registerBtn {
 		transform: translateX(0);
 	}
 }
 
 @media screen and (max-width: 580px) {
-	.carouselImageCover {
-		width: 70vw;
-	}
 
-	.header {
-		transform: translateX(-80px);
-	}
 	.registerBtn {
 		transform: translateX(0);
 	}
@@ -490,18 +497,14 @@
 }
 
 @media screen and (max-width: 550px) {
-	.header {
-		transform: translateX(-40px);
-	}
+
 	.registerBtn {
 		transform: translateX(0);
 	}
 }
 
 @media screen and (max-width: 500px) {
-	.carouselImageCover {
-		width: 100vh;
-	}
+
 
 	.header {
 		transform: translateX(-15px);

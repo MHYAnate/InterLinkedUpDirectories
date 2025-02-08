@@ -13,8 +13,8 @@ export default function Logo() {
 			className={`${pathname === "/"|| pathname !== "/about" && pathname !== "/login" && pathname !== "/register" ? styles.activeH : styles.active}`}
 			onClick={()=>router.push('/')} 
 		>
-			<div className={styles.logoHead}>easy</div>
-			<div className={styles.logoTail}>Bizzy</div>
+			<div className={styles.logoHead}>B</div>
+			<div className={styles.logoTail}>Easy</div>
 		</div>
 	);
 }
