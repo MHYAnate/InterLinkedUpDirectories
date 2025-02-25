@@ -87,9 +87,9 @@ export default function Home() {
 												? () => setSelector("vacancies")
 												: () => setSelector("")
 										}
-										onMouseEnter={()=>{
-											setSelector("vacancies")
-										}}
+										// onMouseEnter={()=>{
+										// 	setSelector("vacancies")
+										// }}
 										className={
 											selector !== "vacancies"
 												? styles.selectBtn
@@ -105,9 +105,9 @@ export default function Home() {
 												? () => setSelector("Companies")
 												: () => setSelector("")
 										}
-										onMouseEnter={()=>{
-											setSelector("Companies")
-										}}
+										// onMouseEnter={()=>{
+										// 	setSelector("Companies")
+										// }}
 										className={
 											selector !== "Companies"
 												? styles.selectBtn
@@ -127,9 +127,9 @@ export default function Home() {
 												? () => setSelector("Items")
 												: () => setSelector("")
 										}
-										onMouseEnter={()=>{
-											setSelector("Items")
-										}}
+										// onMouseEnter={()=>{
+										// 	setSelector("Items")
+										// }}
 										className={
 											selector !== "Items"
 												? styles.selectBtn
@@ -145,9 +145,9 @@ export default function Home() {
 												? () => setSelector("Shops")
 												: () => setSelector("")
 										}
-										onMouseEnter={()=>{
-											setSelector("Shops")
-										}}
+										// onMouseEnter={()=>{
+										// 	setSelector("Shops")
+										// }}
 										className={
 											selector !== "Shops"
 												? styles.selectBtn

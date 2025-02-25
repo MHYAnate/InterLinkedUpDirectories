@@ -21,7 +21,7 @@ export default function Nav({setQNav, qNav}:Props) {
 	return (
 		<div
 			className={`${
-				pathname === "/register" ? styles.regNavBodyCover : pathname !== "/" && pathname === "/shop"  || pathname === "/company" ?styles.navBodyCover: pathname === "/" || pathname === "/login" || pathname === "/about"? styles.navBodyCoverH: styles.navBodyCover
+				pathname === "/register" ? styles.navBodyCoverH : pathname !== "/" && pathname === "/shop"  || pathname === "/company" ?styles.navBodyCover: pathname === "/" || pathname === "/login" || pathname === "/about"? styles.navBodyCoverH: styles.navBodyCover
 			}`}
 		>
 			<div className={styles.navBody}>
@@ -30,7 +30,8 @@ export default function Nav({setQNav, qNav}:Props) {
 				</div>
 				<div className={styles.links}>
 					<div onClick={()=>{qNav !== "features"?setQNav("features"): setQNav("")}}>
-						<Features/>
+						<div className={pathname !== "/"? styles.hide:""}>	<Features/></div>
+					
 					</div>
 					<div>
 						<LogIn />

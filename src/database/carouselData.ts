@@ -1,29 +1,35 @@
 export const Cards = [
 
 		
-  {
+
+	{
 	
-		image: "/white.gif",
-	
-	},
-  {
-	
-		image: "/globe.jpg",
-	
-	},
-  {
-	
-		image: "/phone.jpg",
-	
-	},
-  {
-	
-		image: "/laptop.jpg",
+		image: "/bg1.jpg",
 	
 	},
 	{
 	
-		image: "/plane4.jpg",
+		image: "/bg3.jpg",
+	
+	},
+	{
+	
+		image: "/bg5.jpg",
+	
+	},
+	{
+	
+		image: "/bg.jpg",
+	
+	},
+	{
+	
+		image: "/bg4.jpg",
+	
+	},
+	{
+	
+		image: "/bg8.jpg",
 	
 	},
 ];

@@ -30,42 +30,39 @@ export default function HeroCarousel({ setQNav, qNav }: Props) {
 	return (
 		<div className={styles.heroCarouselCover}>
 			<div className={styles.heroCarouselBody}>
-				<Image
-					src={"/white.gif"}
-					alt={"nill"}
-					// layout="fill"
-					// objectFit="cover"
-					height={400}
-					width={400}
-					className={styles.carouselImage}
-				/>
-				{/* <div className={styles.heroCarousel}>
-          {Cards.map((card, index) => (
-            <div
-              key={index}
-              className={index === currentIndex? styles.carouselCardCover1:styles.carouselCardCover2}
-              style={{ backfaceVisibility: "hidden" }}
-            >
-              <div className={styles.carouselBody}>
-                
-                <div className={styles.carouselImageCover}>
-                  <Image
-                    src={card.image}
-                    alt={"nill"}
-                    // layout="fill"
-                    // objectFit="cover"
-                    height={400}
-                    width={400}
-                    className={styles.carouselImage}
-                  />
-                  <div className={styles.carouselImageFix}></div>
-                </div>
-          
-              </div>
-            </div>
-          ))}
-        </div> */}
-			</div>
+				
+					{Cards.map((card, index) => (
+						<div
+							key={index}
+							className={
+								index === currentIndex
+									? styles.carouselCardCover1
+									: styles.carouselCardCover2
+							}
+							style={{ backfaceVisibility: "hidden" }}
+						>
+							<div className={styles.imgCover}>
+							<div className={styles.carouselBody}>
+								<div className={styles.carouselImageCover}>
+									<div className={styles.imageSetter}>
+										<Image
+										src={card.image}
+										alt={"nill"}
+										// layout="fill"
+										// objectFit="cover"
+										height={400}
+										width={400}
+										className={styles.carouselImage}
+									/>
+									</div>
+									<div className={styles.carouselImageFix}></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+		
 		</div>
 	);
 }

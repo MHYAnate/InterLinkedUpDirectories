@@ -168,7 +168,6 @@
 	justify-content: flex-start;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border-left: 1px solid silver;
 }
 
 .coverSelectJobsMarket {
@@ -181,7 +180,7 @@
 	align-items: center;
 	justify-content: center;
 	font-family: "Poppins-SemiBold";
-	background-image: linear-gradient(to top, white, silver);
+	background-image: linear-gradient(to top, white, rgb(227, 227, 227));
 }
 
 .coverSelect {
@@ -258,6 +257,13 @@
 	padding-top: 10px;
 }
 
+.selectBtn:hover {
+	background-color: aliceblue;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: green;
+}
+
 .selectBtnHighlighted {
 	padding-top: 10px;
 	user-select: none;
@@ -270,13 +276,17 @@
 	color: green;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+	border-top: 1px solid silver;
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
 	font-weight: 500;
 	text-transform: uppercase;
 	font-size: 11px;
 	padding-bottom: 9px;
 	cursor: pointer;
 	overflow: hidden;
-	background-image: linear-gradient(to bottom, white, rgb(247, 247, 247));
+	/* background-image: linear-gradient(to bottom, white, rgb(247, 247, 247)); */
+	background-color: white;
 }
 
 .Icon {
