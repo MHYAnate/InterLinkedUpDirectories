@@ -178,7 +178,30 @@
   border-radius: 3px;
   font-weight: 500;
 }
+@media screen and (max-width: 1100px) {
+  .textarea{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .textarea{
+    width: 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .textarea{
+    width: 150px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .textarea{
+    width: 150px;
+  }
+}
 @media screen and (max-width: 770px) {
+  .textarea{
+    width: 300px;
+  }
   .titleCover{
     width: 98vw;
     height: 170px;
@@ -282,6 +305,10 @@
     width: inherit;
   }
 }
+@media screen and (max-width: 770px) {
+  .textarea{
+    width: 250px;
+  }}
 @media screen and (max-width: 330px) {
   .boldP{
     font-weight: 400;

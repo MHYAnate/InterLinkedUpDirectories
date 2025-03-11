@@ -65,9 +65,9 @@ export default function Home() {
 	return (
 		<main
 		ref={q1}
-			className={`${styles.link} ${
+			className={
 				pathname === "/register" ? styles.regNavBodyCover : styles.Main
-			}`}
+			}
 		>
 			<nav className={isSticky?styles.navHolderFix:styles.navHolder}>
 					<Nav setQNav={setQNav} qNav={qNav} />
@@ -78,9 +78,9 @@ export default function Home() {
 				<div  className={styles.categoryCover}>
 					<div  className={styles.coverJobsMarket}>
 						<div className={styles.coverSelectJobsMarket}>
-							<div className={styles.coverSelect}>
 							
-								<div className={styles.coverSelectBtn}>
+							
+								<div className={styles.cover}>
 									<div
 										onClick={
 											selector !== "vacancies"
@@ -92,11 +92,11 @@ export default function Home() {
 										// }}
 										className={
 											selector !== "vacancies"
-												? styles.selectBtn
-												: styles.selectBtnHighlighted
+												? styles.coverBody
+												: styles.coverBodySelect
 										}
 									><div className={styles.Icon}>💼</div>
-										<span className={styles.catSpan}>Vacancies</span>
+										<span className={styles.text}>Vacancies</span>
 										
 									</div>
 									<div
@@ -110,17 +110,14 @@ export default function Home() {
 										// }}
 										className={
 											selector !== "Companies"
-												? styles.selectBtn
-												: styles.selectBtnHighlighted
+												? styles.coverBody
+												: styles.coverBodySelect
 										}
 									><div className={styles.Icon}>🏢</div>	
-										<span className={styles.catSpan}>Companies</span>
+										<span className={styles.text}>Companies</span>
 									</div>
-								</div>
-							</div>
-							<div className={styles.coverSelect}>
 							
-								<div className={styles.coverSelectBtn}>
+							
 									<div
 										onClick={
 											selector !== "Items"
@@ -132,11 +129,11 @@ export default function Home() {
 										// }}
 										className={
 											selector !== "Items"
-												? styles.selectBtn
-												: styles.selectBtnHighlighted
+												? styles.coverBody
+												: styles.coverBodySelect
 										}
 									><div className={styles.Icon}>📦</div>
-									<span className={styles.catSpan}>Items</span>
+									<span className={styles.text}>Items</span>
 										
 									</div>
 									<div
@@ -150,14 +147,14 @@ export default function Home() {
 										// }}
 										className={
 											selector !== "Shops"
-												? styles.selectBtn
-												: styles.selectBtnHighlighted
+												? styles.coverBody
+												: styles.coverBodySelect
 										}
 									><div className={styles.Icon}>🏪</div>
-									<span className={styles.catSpan}>Shops</span>
+									<span className={styles.text}>Shops</span>
 										
 									</div>
-								</div>
+							
 							</div>
 						</div>
 						<div className={styles.coverRenderSelectCategory}>
